@@ -16,7 +16,7 @@ git clone https://github.com/O1amide-F/COS333-TigerArt
 ## 2. Run Frontend
 
 ```bash
-cd tigerArt
+cd frontend
 npm install
 npm run dev
 ```
@@ -28,7 +28,7 @@ Open the URL shown in terminal.
 If you only want the UI, this is enough:
 
 ```bash
-cd tigerArt
+cd frontend
 npm install (only the first time)
 npm run dev
 ```
@@ -56,6 +56,6 @@ curl http://localhost:4000/api/survey
 ## 5. Build Frontend for Production
 
 ```bash
-cd tigerArt
+cd frontend
 npm run build
 ```
