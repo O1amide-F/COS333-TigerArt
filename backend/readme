@@ -1,0 +1,11 @@
+TigerArt Backend (Simple)
+
+Run:
+node backend.js
+
+Default port:
+http://localhost:4000
+
+Test endpoints:
+http://localhost:4000/api/health
+http://localhost:4000/api/survey
