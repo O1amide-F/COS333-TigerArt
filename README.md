@@ -9,6 +9,10 @@ Backend is optional right now. The frontend works by itself.
 - Node.js 18+
 - npm
 
+```bash
+git clone https://github.com/O1amide-F/COS333-TigerArt
+```
+
 ## 2. Run Frontend
 
 ```bash
@@ -24,7 +28,6 @@ Open the URL shown in terminal.
 If you only want the UI, this is enough:
 
 ```bash
-git clone https://github.com/O1amide-F/COS333-TigerArt
 cd tigerArt
 npm install (only the first time)
 npm run dev
