@@ -21,7 +21,14 @@ def main():
     )
     cur = conn.cursor()
 
-    objects = requests.get(OBJECTS_URL).json()
+    objects_response = requests.get(OBJECTS_URL)
+
+    if objects_response.status_code != 200:
+        print("Error getting objects:", objects_response.status_code)
+        print(objects_response.text)
+        return
+
+    objects = objects_response.json()
 
     for obj in objects:
         objectid = obj.get("objectid")
@@ -58,7 +65,14 @@ def main():
                 VALUES (%s, %s, %s);
             """, (objectid, "medium", medium))
 
-    makers = requests.get(MAKERS_URL).json()
+    makers_response = requests.get(MAKERS_URL)
+
+    if makers_response.status_code != 200:
+        print("Error getting makers:", makers_response.status_code)
+        print(makers_response.text)
+        return
+
+    makers = makers_response.json()
 
     for maker in makers:
         makerid = maker.get("makerid")
