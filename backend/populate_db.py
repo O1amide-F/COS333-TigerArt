@@ -7,9 +7,8 @@ DB_PASSWORD = "cos333"
 DB_HOST = "localhost"
 DB_PORT = "5432"
 
-OBJECTS_URL = "https://static.artmuseum.princeton.edu/objects.json"
-MAKERS_URL = "https://static.artmuseum.princeton.edu/makers.json"
-
+OBJECTS_URL = "https://static.artmuseum.princeton.edu/collection-data-sets/objects.zip"
+MAKERS_URL = "https://static.artmuseum.princeton.edu/collection-data-sets/makers.zip"
 def main():
     conn = psycopg2.connect(
         dbname=DB_NAME,
