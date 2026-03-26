@@ -31,6 +31,7 @@ export function SurveyScreen({
     <div
       style={{ padding: "24px 20px 100px", overflowY: "auto", height: "100%" }}
     >
+      {/* Header cluster component (avatar, username badge, title). */}
       <div
         style={{
           display: "flex",
@@ -40,6 +41,7 @@ export function SurveyScreen({
           marginBottom: 24,
         }}
       >
+        {/* Profile avatar component with fallback text when no image exists. */}
         <div
           style={{
             width: 64,
@@ -73,6 +75,7 @@ export function SurveyScreen({
           )}
         </div>
 
+        {/* Username badge component. */}
         <div
           style={{
             background: C.surface,
@@ -86,6 +89,7 @@ export function SurveyScreen({
           {username || "Username"}
         </div>
 
+        {/* Survey title component. */}
         <h2
           style={{
             margin: 0,
@@ -99,6 +103,7 @@ export function SurveyScreen({
         </h2>
       </div>
 
+      {/* Instruction banner component showing remaining required selections. */}
       <div
         style={{
           background: C.surface,
@@ -116,6 +121,7 @@ export function SurveyScreen({
         journey
       </div>
 
+      {/* Selectable survey image grid component. */}
       <div
         style={{
           display: "grid",
@@ -127,6 +133,7 @@ export function SurveyScreen({
         {SURVEY_IMAGES.map((id) => {
           const isSelected = selected.includes(id);
           return (
+            // Selectable survey card component.
             <div
               key={id}
               onClick={() => toggle(id)}
@@ -159,6 +166,7 @@ export function SurveyScreen({
                     borderRadius: 3,
                   }}
                 />
+                {/* Selected-state icon component. */}
                 {isSelected && (
                   <Check size={14} strokeWidth={2.5} color={C.navy} />
                 )}
@@ -168,6 +176,7 @@ export function SurveyScreen({
         })}
       </div>
 
+      {/* Continue action component enabled once exactly three images are selected. */}
       <div style={{ display: "flex", justifyContent: "flex-end" }}>
         <button
           onClick={() => selected.length === 3 && onContinue(selected)}

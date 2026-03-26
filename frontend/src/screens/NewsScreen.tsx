@@ -7,6 +7,7 @@ export function NewsScreen() {
     <div
       style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}
     >
+      {/* Page title component for the news feed. */}
       <h1
         style={{
           margin: "0 0 20px",
@@ -25,11 +26,14 @@ export function NewsScreen() {
         LATEST NEWS
       </h1>
 
+      {/* News list component rendered from data items. */}
       <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
         {NEWS_ITEMS.map((item, index) => (
+          // One news article card component.
           <div key={item.id}>
             <Placeholder label="Image" aspectRatio="16/7" />
             <div style={{ padding: "12px 0 16px" }}>
+              {/* News headline badge component. */}
               <div
                 style={{
                   background: C.surface,
@@ -45,6 +49,7 @@ export function NewsScreen() {
               >
                 {item.name}
               </div>
+              {/* Decorative metadata line component under headline. */}
               <div
                 style={{
                   width: 100,
@@ -54,6 +59,7 @@ export function NewsScreen() {
                 }}
               />
             </div>
+            {/* Divider component between articles. */}
             {index < NEWS_ITEMS.length - 1 && (
               <div
                 style={{ borderTop: `1px solid ${C.border}`, marginBottom: 16 }}

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import "./App.css";
 import { BottomNav } from "./components/BottomNav";
 import { ExploreScreen } from "./screens/ExploreScreen";
@@ -10,7 +10,16 @@ import { SettingsScreen } from "./screens/SettingsScreen";
 import { SurveyScreen } from "./screens/SurveyScreen";
 import type { ExhibitSection, NavId, Screen } from "./types";
 
+const NAV_TO_SCREEN: Record<NavId, Screen> = {
+  home: "home",
+  explore: "explore",
+  favorites: "favorites",
+  news: "news",
+  settings: "settings",
+};
+
 export default function TigerArt() {
+  // App-level state acts like Flask view context shared across templates.
   const [screen, setScreen] = useState<Screen>("survey");
   const [favorites, setFavorites] = useState<number[]>([]);
   const [activeSection, setActiveSection] = useState<ExhibitSection | null>(
@@ -28,12 +37,9 @@ export default function TigerArt() {
   };
 
   const handleNav = (id: NavId) => {
+    // Route lookup table mirrors Flask's URL -> view mapping.
     setActiveNav(id);
-    if (id === "home") setScreen("home");
-    else if (id === "explore") setScreen("explore");
-    else if (id === "favorites") setScreen("favorites");
-    else if (id === "news") setScreen("news");
-    else if (id === "settings") setScreen("settings");
+    setScreen(NAV_TO_SCREEN[id]);
   };
 
   const toggleSurveySelection = (id: number) => {
@@ -51,6 +57,86 @@ export default function TigerArt() {
     setScreen("exhibitDetail");
   };
 
+  // Template context: one object keeps all values/actions each screen might need.
+  const templateContext = {
+    favorites,
+    activeSection,
+    surveySelections,
+    username,
+    profileImage,
+    toggleFavorite,
+    toggleSurveySelection,
+    handleSectionClick,
+    setScreen,
+    setActiveNav,
+    setSurveySelections,
+    setUsername,
+    setProfileImage,
+  };
+
+  // Template renderer map: each entry returns the screen body for a "route".
+  const templates: Record<Screen, ReactNode> = {
+    // Onboarding survey component shown first.
+    survey: (
+      <SurveyScreen
+        onContinue={(selected) => {
+          templateContext.setSurveySelections(selected);
+          templateContext.setScreen("home");
+          templateContext.setActiveNav("home");
+        }}
+        username={templateContext.username}
+        profileImage={templateContext.profileImage}
+      />
+    ),
+    // Main home feed component (For You).
+    home: (
+      <ForYouScreen
+        favorites={templateContext.favorites}
+        onToggleFavorite={templateContext.toggleFavorite}
+      />
+    ),
+    // Explore list component with section previews.
+    explore: (
+      <ExploreScreen onSectionClick={templateContext.handleSectionClick} />
+    ),
+    // Detail component for the currently selected exhibit section.
+    exhibitDetail: templateContext.activeSection ? (
+      <ExhibitDetailScreen
+        section={templateContext.activeSection}
+        onBack={() => templateContext.setScreen("explore")}
+      />
+    ) : null,
+    // Favorites component for saved exhibits.
+    favorites: (
+      <FavoritesScreen
+        favorites={templateContext.favorites}
+        onNavHome={() => {
+          templateContext.setScreen("home");
+          templateContext.setActiveNav("home");
+        }}
+      />
+    ),
+    // News component for museum updates.
+    news: <NewsScreen />,
+    // Settings component for profile and survey preferences.
+    settings: (
+      <SettingsScreen
+        username={templateContext.username}
+        onUsernameChange={templateContext.setUsername}
+        profileImage={templateContext.profileImage}
+        onProfileImageChange={templateContext.setProfileImage}
+        selected={templateContext.surveySelections}
+        onToggleSelection={templateContext.toggleSurveySelection}
+        onSave={() => {
+          if (templateContext.surveySelections.length === 3) {
+            templateContext.setScreen("home");
+            templateContext.setActiveNav("home");
+          }
+        }}
+      />
+    ),
+  };
+
   return (
     <>
       <link
@@ -60,67 +146,10 @@ export default function TigerArt() {
 
       <div className="tiger-art-app">
         <div className="tiger-art-shell">
-          <div className="tiger-art-content">
-            {screen === "survey" && (
-              <SurveyScreen
-                onContinue={(selected) => {
-                  setSurveySelections(selected);
-                  setScreen("home");
-                  setActiveNav("home");
-                }}
-                username={username}
-                profileImage={profileImage}
-              />
-            )}
+          {/* Active screen outlet component (like a Flask template render target). */}
+          <div className="tiger-art-content">{templates[screen]}</div>
 
-            {screen === "home" && (
-              <ForYouScreen
-                favorites={favorites}
-                onToggleFavorite={toggleFavorite}
-              />
-            )}
-
-            {screen === "explore" && (
-              <ExploreScreen onSectionClick={handleSectionClick} />
-            )}
-
-            {screen === "exhibitDetail" && activeSection && (
-              <ExhibitDetailScreen
-                section={activeSection}
-                onBack={() => setScreen("explore")}
-              />
-            )}
-
-            {screen === "favorites" && (
-              <FavoritesScreen
-                favorites={favorites}
-                onNavHome={() => {
-                  setScreen("home");
-                  setActiveNav("home");
-                }}
-              />
-            )}
-
-            {screen === "news" && <NewsScreen />}
-
-            {screen === "settings" && (
-              <SettingsScreen
-                username={username}
-                onUsernameChange={setUsername}
-                profileImage={profileImage}
-                onProfileImageChange={setProfileImage}
-                selected={surveySelections}
-                onToggleSelection={toggleSurveySelection}
-                onSave={() => {
-                  if (surveySelections.length === 3) {
-                    setScreen("home");
-                    setActiveNav("home");
-                  }
-                }}
-              />
-            )}
-          </div>
-
+          {/* Bottom navigation component stays hidden during onboarding survey. */}
           {screen !== "survey" && (
             <BottomNav activeNav={activeNav} onNavigate={handleNav} />
           )}

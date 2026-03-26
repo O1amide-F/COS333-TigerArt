@@ -17,7 +17,9 @@ export function ForYouScreen({
     <div
       style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}
     >
+      {/* Search component at the top of the personalized feed. */}
       <SearchBar />
+      {/* Feed title component. */}
       <h1
         style={{
           margin: "0 0 4px",
@@ -29,6 +31,7 @@ export function ForYouScreen({
       >
         For You Page
       </h1>
+      {/* Subtitle component describing recommendation logic. */}
       <p
         style={{
           margin: "0 0 20px",
@@ -44,8 +47,10 @@ export function ForYouScreen({
         Curated according to your preferences
       </p>
 
+      {/* Vertical feed list component. */}
       <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
         {FOR_YOU_ITEMS.map((item) => (
+          // Recommendation card component for one artwork.
           <div
             key={item.id}
             style={{
@@ -88,6 +93,7 @@ export function ForYouScreen({
                     {item.title}
                   </span>
                 </div>
+                {/* Favorite toggle component for this artwork card. */}
                 <button
                   onClick={() => onToggleFavorite(item.id)}
                   style={{
@@ -108,6 +114,7 @@ export function ForYouScreen({
                   />
                 </button>
               </div>
+              {/* Artwork detail text component. */}
               <div
                 style={{
                   background: C.surface,

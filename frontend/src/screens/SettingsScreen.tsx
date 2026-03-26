@@ -26,6 +26,7 @@ export function SettingsScreen({
     <div
       style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}
     >
+      {/* Page title component for user settings. */}
       <h1
         style={{
           margin: "0 0 20px",
@@ -43,6 +44,7 @@ export function SettingsScreen({
         SETTINGS
       </h1>
 
+      {/* Profile settings card component (avatar upload + username input). */}
       <div
         style={{
           border: `1px solid ${C.border}`,
@@ -53,6 +55,7 @@ export function SettingsScreen({
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+          {/* Avatar preview component showing uploaded image or initials. */}
           <div
             style={{
               width: 72,
@@ -80,6 +83,7 @@ export function SettingsScreen({
             )}
           </div>
 
+          {/* File upload trigger component for profile photo changes. */}
           <label
             style={{
               display: "inline-flex",
@@ -96,6 +100,7 @@ export function SettingsScreen({
           >
             <Camera size={15} strokeWidth={2} />
             Upload Photo
+            {/* Hidden input component that captures image selection events. */}
             <input
               type="file"
               accept="image/*"
@@ -109,6 +114,7 @@ export function SettingsScreen({
           </label>
         </div>
 
+        {/* Username form field component. */}
         <div style={{ marginTop: 14 }}>
           <div
             style={{
@@ -138,6 +144,7 @@ export function SettingsScreen({
         </div>
       </div>
 
+      {/* Survey status banner component showing selected-count progress. */}
       <div
         style={{
           background: C.surface,
@@ -153,6 +160,7 @@ export function SettingsScreen({
         Update your survey preferences ({selected.length}/3 selected)
       </div>
 
+      {/* Preference image grid component for survey choices. */}
       <div
         style={{
           display: "grid",
@@ -164,6 +172,7 @@ export function SettingsScreen({
         {SURVEY_IMAGES.map((id) => {
           const isSelected = selected.includes(id);
           return (
+            // Selectable preference card component.
             <div
               key={id}
               onClick={() => onToggleSelection(id)}
@@ -196,6 +205,7 @@ export function SettingsScreen({
                     borderRadius: 3,
                   }}
                 />
+                {/* Selected-state icon component. */}
                 {isSelected && (
                   <Check size={14} strokeWidth={2.5} color={C.navy} />
                 )}
@@ -205,6 +215,7 @@ export function SettingsScreen({
         })}
       </div>
 
+      {/* Save action component enabled only when selection count is valid. */}
       <div style={{ display: "flex", justifyContent: "flex-end" }}>
         <button
           onClick={onSave}

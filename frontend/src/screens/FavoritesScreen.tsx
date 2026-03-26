@@ -17,7 +17,9 @@ export function FavoritesScreen({
     <div
       style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}
     >
+      {/* Search component for consistency with other catalog screens. */}
       <SearchBar />
+      {/* Page title component for Favorites. */}
       <h1
         style={{
           margin: "0 0 24px",
@@ -36,6 +38,7 @@ export function FavoritesScreen({
       </h1>
 
       {favorites.length === 0 ? (
+        // Empty-state component shown when no artwork has been saved.
         <div
           style={{
             border: `1px solid ${C.border}`,
@@ -69,6 +72,7 @@ export function FavoritesScreen({
           >
             Click the heart icon to save pieces
           </div>
+          {/* Primary action component that routes back to Home feed. */}
           <button
             onClick={onNavHome}
             style={{
@@ -89,11 +93,13 @@ export function FavoritesScreen({
           </button>
         </div>
       ) : (
+        // Favorites grid component shown when saved items exist.
         <div
           style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}
         >
           {FOR_YOU_ITEMS.filter((item) => favorites.includes(item.id)).map(
             (item) => (
+              // Saved artwork card component.
               <div key={item.id}>
                 <Placeholder label="Image" aspectRatio="3/4" />
                 <div
