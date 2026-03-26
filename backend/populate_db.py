@@ -1,14 +1,18 @@
 import requests
 import psycopg2
+import zipfile
+import json
 
 DB_NAME = "museum_app"
 DB_USER = "postgres"
-DB_PASSWORD = "cos333"
+DB_PASSWORD = "..."
 DB_HOST = "localhost"
 DB_PORT = "5432"
 
 OBJECTS_URL = "https://static.artmuseum.princeton.edu/collection-data-sets/objects.zip"
 MAKERS_URL = "https://static.artmuseum.princeton.edu/collection-data-sets/makers.zip"
+
+
 def main():
     conn = psycopg2.connect(
         dbname=DB_NAME,
@@ -19,14 +23,21 @@ def main():
     )
     cur = conn.cursor()
 
-    objects_response = requests.get(OBJECTS_URL)
+    # -------- OBJECTS --------
+    response = requests.get(OBJECTS_URL)
 
-    if objects_response.status_code != 200:
-        print("Error getting objects:", objects_response.status_code)
-        print(objects_response.text)
+    if response.status_code != 200:
+        print("Error downloading objects:", response.status_code)
         return
 
-    objects = objects_response.json()
+    with open("objects.zip", "wb") as f:
+        f.write(response.content)
+
+    with zipfile.ZipFile("objects.zip", "r") as zip_ref:
+        zip_ref.extractall(".")
+
+    with open("objects.json", "r", encoding="utf-8") as f:
+        objects = json.load(f)
 
     for obj in objects:
         objectid = obj.get("objectid")
@@ -63,14 +74,21 @@ def main():
                 VALUES (%s, %s, %s);
             """, (objectid, "medium", medium))
 
-    makers_response = requests.get(MAKERS_URL)
+    # -------- MAKERS --------
+    response = requests.get(MAKERS_URL)
 
-    if makers_response.status_code != 200:
-        print("Error getting makers:", makers_response.status_code)
-        print(makers_response.text)
+    if response.status_code != 200:
+        print("Error downloading makers:", response.status_code)
         return
 
-    makers = makers_response.json()
+    with open("makers.zip", "wb") as f:
+        f.write(response.content)
+
+    with zipfile.ZipFile("makers.zip", "r") as zip_ref:
+        zip_ref.extractall(".")
+
+    with open("makers.json", "r", encoding="utf-8") as f:
+        makers = json.load(f)
 
     for maker in makers:
         makerid = maker.get("makerid")
@@ -87,6 +105,7 @@ def main():
             ON CONFLICT (makerid) DO NOTHING;
         """, (makerid, displayname, nationality, begin_date, end_date, bio))
 
+    # -------- TEST DATA --------
     cur.execute("""
         INSERT INTO users (name)
         VALUES (%s);
