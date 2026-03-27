@@ -8,6 +8,13 @@ Backend is optional right now. The frontend works by itself.
 
 - Node.js 18+
 - npm
+- PostgreSQL
+- Git LFS (for large files)
+
+- Install Git LFS: https://git-lfs.github.com/
+
+Then run: git lfs install
+
 
 ```bash
 git clone https://github.com/O1amide-F/COS333-TigerArt
@@ -19,6 +26,7 @@ git clone https://github.com/O1amide-F/COS333-TigerArt
 cd frontend
 npm install
 npm run dev
+
 ```
 
 Open the URL shown in terminal.
@@ -35,14 +43,17 @@ npm run dev
 
 ## 3. Run Backend
 
-(Optional)
+Each person must create the same local database:
 
-Open a second terminal from the project root:
+createdb museum_app
 
-```bash
-cd ..
-node backend/backend.js
-```
+Create tables: python create_tables.py
+
+Load data (if applicable): python load_data.py
+
+Make sure your DB credentials in the code match your local setup: -
+DB_NAME = museum_app - DB_USER = your postgres user - DB_PASSWORD = your
+password
 
 Backend runs on http://localhost:4000 by default.
 
