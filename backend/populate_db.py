@@ -6,7 +6,7 @@ import os
 
 DB_NAME = "museum_app"
 DB_USER = "postgres"
-DB_PASSWORD = "..."
+DB_PASSWORD = "cos333"
 DB_HOST = "localhost"
 DB_PORT = "5432"
 
