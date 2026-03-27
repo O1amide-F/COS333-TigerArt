@@ -4,11 +4,11 @@ import psycopg2
 
 DB_NAME = "museum_app"
 DB_USER = "postgres"
-DB_PASSWORD = "YOUR_PASSWORD"
+DB_PASSWORD = "cos333"
 DB_HOST = "localhost"
 DB_PORT = "5432"
 
-CLOUD_NAME = "YOUR_CLOUD_NAME"
+CLOUD_NAME = "dfftqt3zi"
 
 app = Flask(__name__)
 CORS(app)
@@ -33,7 +33,7 @@ def get_for_you():
         SELECT
             a.objectid AS id,
             a.title AS title,
-            a.caption AS about
+            CONCAT_WS(' - ', a.medium, a.displaydate, a.displaymaker) AS about
         FROM recommendation_cache rc
         JOIN artworks a
             ON rc.objectid = a.objectid
@@ -47,15 +47,10 @@ def get_for_you():
 
     items = []
     for row in rows:
-        objectid = row[0]
-
-        image_url = f"https://res.cloudinary.com/{CLOUD_NAME}/image/upload/artworks/{objectid}.jpg"
-
         items.append({
-            "id": objectid,
+            "id": row[0],
             "title": row[1],
-            "about": row[2],
-            "image_url": image_url
+            "about": row[2]
         })
 
     return jsonify(items)
