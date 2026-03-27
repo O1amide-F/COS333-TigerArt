@@ -1,7 +1,9 @@
+import { useEffect, useState } from "react";
 import { Heart } from "lucide-react";
 import { Placeholder } from "../components/Placeholder";
 import { SearchBar } from "../components/SearchBar";
-import { FOR_YOU_ITEMS } from "../data";
+import { getForYouItems } from "../new_data";
+import type { ForYouItem } from "../types";
 import { C } from "../theme";
 
 type ForYouScreenProps = {
@@ -13,13 +15,20 @@ export function ForYouScreen({
   favorites,
   onToggleFavorite,
 }: ForYouScreenProps) {
+  const [items, setItems] = useState<ForYouItem[]>([]);
+
+  useEffect(() => {
+    getForYouItems()
+      .then((data) => setItems(data))
+      .catch((error) => console.error("Error fetching For You items:", error));
+  }, []);
+
   return (
     <div
       style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}
     >
-      {/* Search component at the top of the personalized feed. */}
       <SearchBar />
-      {/* Feed title component. */}
+
       <h1
         style={{
           margin: "0 0 4px",
@@ -31,7 +40,7 @@ export function ForYouScreen({
       >
         For You Page
       </h1>
-      {/* Subtitle component describing recommendation logic. */}
+
       <p
         style={{
           margin: "0 0 20px",
@@ -47,10 +56,8 @@ export function ForYouScreen({
         Curated according to your preferences
       </p>
 
-      {/* Vertical feed list component. */}
       <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-        {FOR_YOU_ITEMS.map((item) => (
-          // Recommendation card component for one artwork.
+        {items.map((item) => (
           <div
             key={item.id}
             style={{
@@ -65,6 +72,7 @@ export function ForYouScreen({
               aspectRatio="4/3"
               style={{ borderRadius: 0 }}
             />
+
             <div style={{ padding: "10px 12px" }}>
               <div
                 style={{
@@ -93,7 +101,7 @@ export function ForYouScreen({
                     {item.title}
                   </span>
                 </div>
-                {/* Favorite toggle component for this artwork card. */}
+
                 <button
                   onClick={() => onToggleFavorite(item.id)}
                   style={{
@@ -114,7 +122,7 @@ export function ForYouScreen({
                   />
                 </button>
               </div>
-              {/* Artwork detail text component. */}
+
               <div
                 style={{
                   background: C.surface,

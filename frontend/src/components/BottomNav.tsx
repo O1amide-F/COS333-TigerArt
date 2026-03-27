@@ -1,4 +1,4 @@
-import { NAV_ITEMS } from "../data";
+import { NAV_ITEMS } from "../new_data";
 import { C } from "../theme";
 import type { NavId } from "../types";
 
