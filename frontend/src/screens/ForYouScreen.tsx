@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Heart } from "lucide-react";
-import { Placeholder } from "../components/Placeholder";
 import { SearchBar } from "../components/SearchBar";
 import { getForYouItems } from "../new_data";
 import type { ForYouItem } from "../types";
@@ -67,11 +66,27 @@ export function ForYouScreen({
               background: "#fff",
             }}
           >
-            <Placeholder
-              label="Image"
-              aspectRatio="4/3"
-              style={{ borderRadius: 0 }}
-            />
+            {/* REAL IMAGE */}
+            {item.image_url ? (
+              <img
+                src={item.image_url}
+                alt={item.title}
+                style={{
+                  width: "100%",
+                  aspectRatio: "4/3",
+                  objectFit: "cover",
+                  display: "block",
+                }}
+              />
+            ) : (
+              <div
+                style={{
+                  width: "100%",
+                  aspectRatio: "4/3",
+                  background: C.surface,
+                }}
+              />
+            )}
 
             <div style={{ padding: "10px 12px" }}>
               <div
