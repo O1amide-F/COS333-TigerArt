@@ -64,7 +64,7 @@ def main():
                 print(f"Uploaded image for artwork {objectid}")
 
             except Exception as e:
-                print(f"Could not upload image for artwork {objectid}: {e}")
+                print(f"Skipping artwork {objectid}")
 
     with open("cloudinary_images.json", "w", encoding="utf-8") as f:
         json.dump(saved_data, f, indent=4)
