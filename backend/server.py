@@ -55,13 +55,10 @@ def get_for_you():
 
     items = []
     for row in rows:
-        objectid = row[0]
-
         items.append({
-            "id": objectid,
+            "id": row[0],
             "title": row[1],
-            "about": row[2],
-            "image_url": image_map.get(objectid, "")
+            "about": row[2]
         })
 
     return jsonify(items)

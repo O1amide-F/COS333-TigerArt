@@ -62,94 +62,61 @@ export function ForYouScreen({
             style={{
               border: `1px solid ${C.border}`,
               borderRadius: 8,
-              overflow: "hidden",
               background: "#fff",
+              padding: "12px",
             }}
           >
-            {/* REAL IMAGE */}
-            {item.image_url ? (
-              <img
-                src={item.image_url}
-                alt={item.title}
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                marginBottom: 10,
+              }}
+            >
+              <span
                 style={{
-                  width: "100%",
-                  aspectRatio: "4/3",
-                  objectFit: "cover",
-                  display: "block",
-                }}
-              />
-            ) : (
-              <div
-                style={{
-                  width: "100%",
-                  aspectRatio: "4/3",
-                  background: C.surface,
-                }}
-              />
-            )}
-
-            <div style={{ padding: "10px 12px" }}>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  marginBottom: 6,
-                }}
-              >
-                <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                  <div
-                    style={{
-                      width: 70,
-                      height: 6,
-                      background: C.border,
-                      borderRadius: 3,
-                    }}
-                  />
-                  <span
-                    style={{
-                      fontSize: 12,
-                      color: C.muted,
-                      fontFamily: "'DM Sans', sans-serif",
-                    }}
-                  >
-                    {item.title}
-                  </span>
-                </div>
-
-                <button
-                  onClick={() => onToggleFavorite(item.id)}
-                  style={{
-                    background: "none",
-                    border: "none",
-                    cursor: "pointer",
-                    transition: "color 0.2s, transform 0.15s",
-                    transform: favorites.includes(item.id)
-                      ? "scale(1.2)"
-                      : "scale(1)",
-                  }}
-                >
-                  <Heart
-                    size={18}
-                    strokeWidth={2.2}
-                    color={favorites.includes(item.id) ? "#E53935" : C.border}
-                    fill={favorites.includes(item.id) ? "#E53935" : "none"}
-                  />
-                </button>
-              </div>
-
-              <div
-                style={{
-                  background: C.surface,
-                  borderRadius: 4,
-                  padding: "8px 10px",
-                  fontSize: 13,
+                  fontSize: 16,
+                  fontWeight: 600,
+                  color: C.text,
                   fontFamily: "'DM Sans', sans-serif",
-                  color: C.muted,
                 }}
               >
-                {item.about}
-              </div>
+                {item.title}
+              </span>
+
+              <button
+                onClick={() => onToggleFavorite(item.id)}
+                style={{
+                  background: "none",
+                  border: "none",
+                  cursor: "pointer",
+                  transition: "color 0.2s, transform 0.15s",
+                  transform: favorites.includes(item.id)
+                    ? "scale(1.2)"
+                    : "scale(1)",
+                }}
+              >
+                <Heart
+                  size={18}
+                  strokeWidth={2.2}
+                  color={favorites.includes(item.id) ? "#E53935" : C.border}
+                  fill={favorites.includes(item.id) ? "#E53935" : "none"}
+                />
+              </button>
+            </div>
+
+            <div
+              style={{
+                background: C.surface,
+                borderRadius: 4,
+                padding: "8px 10px",
+                fontSize: 13,
+                fontFamily: "'DM Sans', sans-serif",
+                color: C.muted,
+              }}
+            >
+              {item.about}
             </div>
           </div>
         ))}
