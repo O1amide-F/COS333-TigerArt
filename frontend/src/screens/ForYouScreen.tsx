@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Heart } from "lucide-react";
 import { SearchBar } from "../components/SearchBar";
+import { Placeholder } from "../components/Placeholder";
 import { getForYouItems } from "../new_data";
 import type { ForYouItem } from "../types";
 import { C } from "../theme";
@@ -62,61 +63,69 @@ export function ForYouScreen({
             style={{
               border: `1px solid ${C.border}`,
               borderRadius: 8,
+              overflow: "hidden",
               background: "#fff",
-              padding: "12px",
             }}
           >
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                marginBottom: 10,
-              }}
-            >
-              <span
+            <Placeholder
+              label="Image"
+              aspectRatio="4/3"
+              style={{ borderRadius: 0 }}
+            />
+
+            <div style={{ padding: "10px 12px" }}>
+              <div
                 style={{
-                  fontSize: 16,
-                  fontWeight: 600,
-                  color: C.text,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  marginBottom: 6,
+                }}
+              >
+                <span
+                  style={{
+                    fontSize: 16,
+                    fontWeight: 600,
+                    color: C.text,
+                    fontFamily: "'DM Sans', sans-serif",
+                  }}
+                >
+                  {item.title}
+                </span>
+
+                <button
+                  onClick={() => onToggleFavorite(item.id)}
+                  style={{
+                    background: "none",
+                    border: "none",
+                    cursor: "pointer",
+                    transition: "color 0.2s, transform 0.15s",
+                    transform: favorites.includes(item.id)
+                      ? "scale(1.2)"
+                      : "scale(1)",
+                  }}
+                >
+                  <Heart
+                    size={18}
+                    strokeWidth={2.2}
+                    color={favorites.includes(item.id) ? "#E53935" : C.border}
+                    fill={favorites.includes(item.id) ? "#E53935" : "none"}
+                  />
+                </button>
+              </div>
+
+              <div
+                style={{
+                  background: C.surface,
+                  borderRadius: 4,
+                  padding: "8px 10px",
+                  fontSize: 13,
                   fontFamily: "'DM Sans', sans-serif",
+                  color: C.muted,
                 }}
               >
-                {item.title}
-              </span>
-
-              <button
-                onClick={() => onToggleFavorite(item.id)}
-                style={{
-                  background: "none",
-                  border: "none",
-                  cursor: "pointer",
-                  transition: "color 0.2s, transform 0.15s",
-                  transform: favorites.includes(item.id)
-                    ? "scale(1.2)"
-                    : "scale(1)",
-                }}
-              >
-                <Heart
-                  size={18}
-                  strokeWidth={2.2}
-                  color={favorites.includes(item.id) ? "#E53935" : C.border}
-                  fill={favorites.includes(item.id) ? "#E53935" : "none"}
-                />
-              </button>
-            </div>
-
-            <div
-              style={{
-                background: C.surface,
-                borderRadius: 4,
-                padding: "8px 10px",
-                fontSize: 13,
-                fontFamily: "'DM Sans', sans-serif",
-                color: C.muted,
-              }}
-            >
-              {item.about}
+                {item.about}
+              </div>
             </div>
           </div>
         ))}
