@@ -99,6 +99,11 @@ def main():
                 maker = json.load(f)
 
             makerid = maker.get("makerid")
+
+            if makerid is None:
+                print("Skipping maker with no makerid:", maker.get("displayname"))
+                continue
+
             displayname = maker.get("displayname")
             nationality = maker.get("nationality")
             begin_date = maker.get("begindate")
@@ -111,7 +116,6 @@ def main():
                 VALUES (%s, %s, %s, %s, %s, %s)
                 ON CONFLICT (makerid) DO NOTHING;
             """, (makerid, displayname, nationality, begin_date, end_date, bio))
-
     # -------- TEST DATA --------
     cur.execute("""
         INSERT INTO users (name)
