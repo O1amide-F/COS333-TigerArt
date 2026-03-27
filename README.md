@@ -6,6 +6,11 @@ Backend is optional right now. The frontend works by itself.
 
 ## 1. Requirements
 
+```bash
+git clone https://github.com/O1amide-F/COS333-TigerArt
+```
+
+### Necessary Libraries
 - Node.js 18+
 - npm
 - PostgreSQL
@@ -15,32 +20,45 @@ Backend is optional right now. The frontend works by itself.
 - requests
 - cloudinary
 
+Can run:
+```bash
+pip install flask flask-cors psycopg2 requests cloudinary
+```
+
 - Git LFS (for large files)
-
-- Install Git LFS: https://git-lfs.github.com/
-
-Then run: git lfs install
-
-
-
 ```bash
-git clone https://github.com/O1amide-F/COS333-TigerArt
+sudo apt install git-lfs
+git lfs install
 ```
 
-## 2. Run Frontend
+## 2. Run Backend
+If first time set up is complete:
+```bash
+cd backend
+python3 server.py
+```
+Keep the server running in the terminal
+
+### First time set up
+Each person must create the same local database:
 
 ```bash
-cd frontend
-npm install
-npm run dev
-
+createdb museum_app
+python setup_museum_db.py
+python populate_db.py
 ```
 
-Open the URL shown in terminal.
+Make sure your DB credentials in the code match your local setup: -
+DB_NAME = museum_app - DB_USER = your postgres user - DB_PASSWORD = your
+password
 
-## Frontend Only (Quickest)
+- If your PostgreSQL password is different, run 
+```bash
+sudo -u postgres psql -c "ALTER USER postgres WITH PASSWORD 'cos333';"
+```
 
-If you only want the UI, this is enough:
+
+## 3. Run Frontend
 
 ```bash
 cd frontend
@@ -48,34 +66,5 @@ npm install (only the first time)
 npm run dev
 ```
 
-## 3. Run Backend
+Open the URL shown in terminal.
 
-Each person must create the same local database:
-
-createdb museum_app
-
-Create tables: python setup_museum_db.py
-
-Load data: python populate_db.py
-
-Make sure your DB credentials in the code match your local setup: -
-DB_NAME = museum_app - DB_USER = your postgres user - DB_PASSWORD = your
-password
-
-Backend runs on http://localhost:4000 by default.
-
-Then run python3 server.py (make sure you've changed into the /backend folder)
-
-## 4. Test Backend Quickly
-
-```bash
-curl http://localhost:4000/api/health
-curl http://localhost:4000/api/survey
-```
-
-## 5. Build Frontend for Production
-
-```bash
-cd frontend
-npm run build
-```
