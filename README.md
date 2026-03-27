@@ -64,6 +64,8 @@ password
 
 Backend runs on http://localhost:4000 by default.
 
+Then run python3 server.py (make sure you've changed into the /backend folder)
+
 ## 4. Test Backend Quickly
 
 ```bash
