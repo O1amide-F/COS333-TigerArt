@@ -2,6 +2,7 @@ import requests
 import psycopg2
 import zipfile
 import json
+import os
 
 DB_NAME = "museum_app"
 DB_USER = "postgres"
@@ -34,45 +35,48 @@ def main():
         f.write(response.content)
 
     with zipfile.ZipFile("objects.zip", "r") as zip_ref:
-        zip_ref.extractall(".")
+        zip_ref.extractall("objects_data")
 
-    with open("objects.json", "r", encoding="utf-8") as f:
-        objects = json.load(f)
+    for filename in os.listdir("objects_data"):
+        if filename.endswith(".json"):
+            filepath = os.path.join("objects_data", filename)
 
-    for obj in objects:
-        objectid = obj.get("objectid")
-        title = obj.get("displaytitle")
-        displaymaker = obj.get("displaymaker")
-        department = obj.get("department")
-        classification = obj.get("classification")
-        medium = obj.get("medium")
-        displaydate = obj.get("displaydate")
-        on_view = obj.get("on_view")
+            with open(filepath, "r", encoding="utf-8") as f:
+                obj = json.load(f)
 
-        cur.execute("""
-            INSERT INTO artworks
-            (objectid, title, displaymaker, department, classification, medium, displaydate, on_view)
-            VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
-            ON CONFLICT (objectid) DO NOTHING;
-        """, (objectid, title, displaymaker, department, classification, medium, displaydate, on_view))
+            objectid = obj.get("objectid")
+            title = obj.get("displaytitle")
+            displaymaker = obj.get("displaymaker")
+            department = obj.get("department")
+            classification = obj.get("classification")
+            medium = obj.get("medium")
+            displaydate = obj.get("displaydate")
+            on_view = obj.get("on_view")
 
-        if classification:
             cur.execute("""
-                INSERT INTO artwork_tags (objectid, tag_type, tag_value)
-                VALUES (%s, %s, %s);
-            """, (objectid, "classification", classification))
+                INSERT INTO artworks
+                (objectid, title, displaymaker, department, classification, medium, displaydate, on_view)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+                ON CONFLICT (objectid) DO NOTHING;
+            """, (objectid, title, displaymaker, department, classification, medium, displaydate, on_view))
 
-        if department:
-            cur.execute("""
-                INSERT INTO artwork_tags (objectid, tag_type, tag_value)
-                VALUES (%s, %s, %s);
-            """, (objectid, "department", department))
+            if classification:
+                cur.execute("""
+                    INSERT INTO artwork_tags (objectid, tag_type, tag_value)
+                    VALUES (%s, %s, %s);
+                """, (objectid, "classification", classification))
 
-        if medium:
-            cur.execute("""
-                INSERT INTO artwork_tags (objectid, tag_type, tag_value)
-                VALUES (%s, %s, %s);
-            """, (objectid, "medium", medium))
+            if department:
+                cur.execute("""
+                    INSERT INTO artwork_tags (objectid, tag_type, tag_value)
+                    VALUES (%s, %s, %s);
+                """, (objectid, "department", department))
+
+            if medium:
+                cur.execute("""
+                    INSERT INTO artwork_tags (objectid, tag_type, tag_value)
+                    VALUES (%s, %s, %s);
+                """, (objectid, "medium", medium))
 
     # -------- MAKERS --------
     response = requests.get(MAKERS_URL)
@@ -85,25 +89,28 @@ def main():
         f.write(response.content)
 
     with zipfile.ZipFile("makers.zip", "r") as zip_ref:
-        zip_ref.extractall(".")
+        zip_ref.extractall("makers_data")
 
-    with open("makers.json", "r", encoding="utf-8") as f:
-        makers = json.load(f)
+    for filename in os.listdir("makers_data"):
+        if filename.endswith(".json"):
+            filepath = os.path.join("makers_data", filename)
 
-    for maker in makers:
-        makerid = maker.get("makerid")
-        displayname = maker.get("displayname")
-        nationality = maker.get("nationality")
-        begin_date = maker.get("begindate")
-        end_date = maker.get("enddate")
-        bio = maker.get("displaybio")
+            with open(filepath, "r", encoding="utf-8") as f:
+                maker = json.load(f)
 
-        cur.execute("""
-            INSERT INTO makers
-            (makerid, displayname, nationality, begin_date, end_date, bio)
-            VALUES (%s, %s, %s, %s, %s, %s)
-            ON CONFLICT (makerid) DO NOTHING;
-        """, (makerid, displayname, nationality, begin_date, end_date, bio))
+            makerid = maker.get("makerid")
+            displayname = maker.get("displayname")
+            nationality = maker.get("nationality")
+            begin_date = maker.get("begindate")
+            end_date = maker.get("enddate")
+            bio = maker.get("displaybio")
+
+            cur.execute("""
+                INSERT INTO makers
+                (makerid, displayname, nationality, begin_date, end_date, bio)
+                VALUES (%s, %s, %s, %s, %s, %s)
+                ON CONFLICT (makerid) DO NOTHING;
+            """, (makerid, displayname, nationality, begin_date, end_date, bio))
 
     # -------- TEST DATA --------
     cur.execute("""
