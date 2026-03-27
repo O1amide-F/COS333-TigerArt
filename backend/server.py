@@ -49,7 +49,8 @@ def get_for_you():
         items.append({
             "id": row[0],
             "title": row[1],
-            "about": row[2]
+            "about": row[2],
+            "image_url": f"https://res.cloudinary.com/{CLOUD_NAME}/image/upload/artworks/{row[0]}.jpg"
         })
 
     return jsonify(items)
