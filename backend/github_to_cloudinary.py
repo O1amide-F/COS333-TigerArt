@@ -51,8 +51,7 @@ def main():
             if not base_uri:
                 continue
 
-            # FIX: build real image URL
-            image_link = base_uri + "/full/full/0/default.jpg"
+            image_link = base_uri + "/full/max/0/default.jpg"
 
             try:
                 result = cloudinary.uploader.upload(image_link)
