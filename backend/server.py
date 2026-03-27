@@ -1,6 +1,8 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
 import psycopg2
+import json
+
 
 DB_NAME = "museum_app"
 DB_USER = "postgres"
@@ -10,9 +12,16 @@ DB_PORT = "5432"
 
 CLOUD_NAME = "dfftqt3zi"
 
+with open("cloudinary_images.json", "r", encoding="utf-8") as f:
+    cloudinary_data = json.load(f)
+
+image_map = {}
+for item in cloudinary_data:
+    image_map[item["objectid"]] = item["image_url"]
+
+
 app = Flask(__name__)
 CORS(app)
-
 
 def get_connection():
     return psycopg2.connect(
@@ -46,11 +55,13 @@ def get_for_you():
 
     items = []
     for row in rows:
+        objectid = row[0]
+
         items.append({
-            "id": row[0],
+            "id": objectid,
             "title": row[1],
             "about": row[2],
-            "image_url": f"https://res.cloudinary.com/{CLOUD_NAME}/image/upload/artworks/{row[0]}.jpg"
+            "image_url": image_map.get(objectid, "")
         })
 
     return jsonify(items)
