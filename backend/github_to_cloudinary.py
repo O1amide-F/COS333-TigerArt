@@ -46,10 +46,13 @@ def main():
                 continue
 
             first_media = media[0]
-            image_link = first_media.get("uri")
+            base_uri = first_media.get("uri")
 
-            if not image_link:
+            if not base_uri:
                 continue
+
+            # FIX: build real image URL
+            image_link = base_uri + "/full/full/0/default.jpg"
 
             try:
                 result = cloudinary.uploader.upload(image_link)
@@ -64,7 +67,8 @@ def main():
                 print(f"Uploaded image for artwork {objectid}")
 
             except Exception as e:
-                print(f"Skipping artwork {objectid}")
+                # FIX: show real error
+                print(f"Skipping artwork {objectid}: {e}")
 
     with open("cloudinary_images.json", "w", encoding="utf-8") as f:
         json.dump(saved_data, f, indent=4)
