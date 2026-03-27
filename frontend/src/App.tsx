@@ -97,13 +97,19 @@ export default function TigerArt() {
     ),
     // Explore list component with section previews.
     explore: (
-      <ExploreScreen onSectionClick={templateContext.handleSectionClick} />
+      <ExploreScreen
+        onSectionClick={templateContext.handleSectionClick}
+        favorites={templateContext.favorites}
+        onToggleFavorite={templateContext.toggleFavorite}
+      />
     ),
     // Detail component for the currently selected exhibit section.
     exhibitDetail: templateContext.activeSection ? (
       <ExhibitDetailScreen
         section={templateContext.activeSection}
         onBack={() => templateContext.setScreen("explore")}
+        favorites={templateContext.favorites}
+        onToggleFavorite={templateContext.toggleFavorite}
       />
     ) : null,
     // Favorites component for saved exhibits.

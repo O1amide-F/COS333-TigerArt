@@ -1,3 +1,4 @@
+import { Heart } from "lucide-react";
 import { Placeholder } from "../components/Placeholder";
 import { SearchBar } from "../components/SearchBar";
 import { EXHIBIT_SECTIONS } from "../data";
@@ -6,6 +7,8 @@ import type { ExhibitSection } from "../types";
 
 type ExploreScreenProps = {
   onSectionClick: (section: ExhibitSection) => void;
+  favorites: number[];
+  onToggleFavorite: (id: number) => void;
 };
 
 // Shared inline styles keep the JSX "template" concise and easier to scan.
@@ -36,8 +39,15 @@ const styles = {
     display: "inline-block",
     cursor: "pointer",
   },
-  sectionGrid: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 },
+  sectionRow: {
+    display: "flex",
+    gap: 10,
+    overflowX: "auto",
+    paddingBottom: 4,
+    scrollbarWidth: "thin",
+  },
   card: { cursor: "pointer" },
+  cardInner: { width: 150, flex: "0 0 auto" },
   cardTextWrap: { paddingTop: 6 },
   itemName: {
     fontSize: 13,
@@ -55,9 +65,13 @@ const styles = {
 function ExploreSectionCard({
   section,
   onSectionClick,
+  favorites,
+  onToggleFavorite,
 }: {
   section: ExhibitSection;
   onSectionClick: (section: ExhibitSection) => void;
+  favorites: number[];
+  onToggleFavorite: (id: number) => void;
 }) {
   return (
     <div style={styles.sectionBlock}>
@@ -66,13 +80,13 @@ function ExploreSectionCard({
         {section.name}
       </div>
 
-      {/* Two-card preview grid, similar to a Jinja for-loop over section items. */}
-      <div style={styles.sectionGrid}>
-        {section.items.slice(0, 2).map((item) => (
+      {/* Horizontal carousel with all items from the selected collection. */}
+      <div style={styles.sectionRow}>
+        {section.items.map((item) => (
           <div
             key={item.id}
             onClick={() => onSectionClick(section)}
-            style={styles.card}
+            style={{ ...styles.card, ...styles.cardInner }}
           >
             {/* Shared placeholder image component for exhibit thumbnails. */}
             <Placeholder label="Image" aspectRatio="3/4" />
@@ -82,6 +96,30 @@ function ExploreSectionCard({
               {/* Exhibit description text component area. */}
               <div style={styles.itemDesc}>{item.desc}</div>
             </div>
+            <button
+              onClick={(event) => {
+                event.stopPropagation();
+                onToggleFavorite(item.id);
+              }}
+              style={{
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                transition: "color 0.2s, transform 0.15s",
+                padding: "6px 0 0",
+                transform: favorites.includes(item.id)
+                  ? "scale(1.2)"
+                  : "scale(1)",
+              }}
+              aria-label={`Toggle favorite for ${item.name}`}
+            >
+              <Heart
+                size={18}
+                strokeWidth={2.2}
+                color={favorites.includes(item.id) ? "#E53935" : C.border}
+                fill={favorites.includes(item.id) ? "#E53935" : "none"}
+              />
+            </button>
           </div>
         ))}
       </div>
@@ -89,7 +127,11 @@ function ExploreSectionCard({
   );
 }
 
-export function ExploreScreen({ onSectionClick }: ExploreScreenProps) {
+export function ExploreScreen({
+  onSectionClick,
+  favorites,
+  onToggleFavorite,
+}: ExploreScreenProps) {
   return (
     // The screen body acts like a Jinja template loop over section data.
     <div style={styles.page}>
@@ -104,6 +146,8 @@ export function ExploreScreen({ onSectionClick }: ExploreScreenProps) {
           key={section.name}
           section={section}
           onSectionClick={onSectionClick}
+          favorites={favorites}
+          onToggleFavorite={onToggleFavorite}
         />
       ))}
     </div>

@@ -1,7 +1,5 @@
 import { Heart } from "lucide-react";
-import { Placeholder } from "../components/Placeholder";
 import { SearchBar } from "../components/SearchBar";
-import { FOR_YOU_ITEMS } from "../data";
 import { C } from "../theme";
 
 type FavoritesScreenProps = {
@@ -10,7 +8,7 @@ type FavoritesScreenProps = {
 };
 
 export function FavoritesScreen({
-  favorites,
+  favorites: _favorites,
   onNavHome,
 }: FavoritesScreenProps) {
   return (
@@ -37,86 +35,60 @@ export function FavoritesScreen({
         FAVORITES
       </h1>
 
-      {favorites.length === 0 ? (
-        // Empty-state component shown when no artwork has been saved.
+      {/* Empty-state component shown intentionally while Favorites is disabled. */}
+      <div
+        style={{
+          border: `1px solid ${C.border}`,
+          borderRadius: 10,
+          padding: "48px 24px",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: 12,
+          background: "#fff",
+        }}
+      >
+        <Heart size={48} strokeWidth={1.7} color={C.border} />
         <div
           style={{
-            border: `1px solid ${C.border}`,
-            borderRadius: 10,
-            padding: "48px 24px",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: 12,
-            background: "#fff",
+            fontSize: 16,
+            fontFamily: "'Playfair Display', serif",
+            fontWeight: 700,
+            color: C.text,
           }}
         >
-          <Heart size={48} strokeWidth={1.7} color={C.border} />
-          <div
-            style={{
-              fontSize: 16,
-              fontFamily: "'Playfair Display', serif",
-              fontWeight: 700,
-              color: C.text,
-            }}
-          >
-            No favorites yet
-          </div>
-          <div
-            style={{
-              fontSize: 13,
-              fontFamily: "'DM Sans', sans-serif",
-              color: C.muted,
-              textAlign: "center",
-            }}
-          >
-            Click the heart icon to save pieces
-          </div>
-          {/* Primary action component that routes back to Home feed. */}
-          <button
-            onClick={onNavHome}
-            style={{
-              marginTop: 8,
-              background: C.navy,
-              color: "#fff",
-              border: "none",
-              borderRadius: 6,
-              padding: "12px 28px",
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 14,
-              fontWeight: 600,
-              cursor: "pointer",
-              letterSpacing: "0.02em",
-            }}
-          >
-            Explore Art
-          </button>
+          Favorites are unavailable
         </div>
-      ) : (
-        // Favorites grid component shown when saved items exist.
         <div
-          style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}
+          style={{
+            fontSize: 13,
+            fontFamily: "'DM Sans', sans-serif",
+            color: C.muted,
+            textAlign: "center",
+          }}
         >
-          {FOR_YOU_ITEMS.filter((item) => favorites.includes(item.id)).map(
-            (item) => (
-              // Saved artwork card component.
-              <div key={item.id}>
-                <Placeholder label="Image" aspectRatio="3/4" />
-                <div
-                  style={{
-                    paddingTop: 6,
-                    fontSize: 13,
-                    fontFamily: "'DM Sans', sans-serif",
-                    color: C.text,
-                  }}
-                >
-                  {item.title}
-                </div>
-              </div>
-            ),
-          )}
+          This tab is intentionally empty for now
         </div>
-      )}
+        {/* Primary action component that routes back to Home feed. */}
+        <button
+          onClick={onNavHome}
+          style={{
+            marginTop: 8,
+            background: C.navy,
+            color: "#fff",
+            border: "none",
+            borderRadius: 6,
+            padding: "12px 28px",
+            fontFamily: "'DM Sans', sans-serif",
+            fontSize: 14,
+            fontWeight: 600,
+            cursor: "pointer",
+            letterSpacing: "0.02em",
+          }}
+        >
+          Explore Art
+        </button>
+      </div>
     </div>
   );
 }

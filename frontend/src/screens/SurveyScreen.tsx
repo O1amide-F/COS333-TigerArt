@@ -116,9 +116,20 @@ export function SurveyScreen({
           marginBottom: 20,
         }}
       >
-        Select {3 - selected.length > 0 ? `${3 - selected.length} more` : "3"}{" "}
-        image{3 - selected.length !== 1 ? "s" : ""} to get started with your art
-        journey
+        {selected.length != 3 && (
+          <p>
+            Select{" "}
+            {3 - selected.length > 0 ? `${3 - selected.length} more` : "3"}{" "}
+            image{3 - selected.length !== 1 ? "s" : ""} to get started with your
+            art journey
+          </p>
+        )}
+        {selected.length === 3 && (
+          <p>
+            Great choices! Click continue to explore your personalized art
+            experience.
+          </p>
+        )}
       </div>
 
       {/* Selectable survey image grid component. */}

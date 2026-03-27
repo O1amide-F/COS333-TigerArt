@@ -1,3 +1,4 @@
+import { Heart } from "lucide-react";
 import { Placeholder } from "../components/Placeholder";
 import { C } from "../theme";
 import type { ExhibitSection } from "../types";
@@ -5,12 +6,18 @@ import type { ExhibitSection } from "../types";
 type ExhibitDetailScreenProps = {
   section: ExhibitSection;
   onBack: () => void;
+  favorites: number[];
+  onToggleFavorite: (id: number) => void;
 };
 
 export function ExhibitDetailScreen({
   section,
   onBack,
+  favorites,
+  onToggleFavorite,
 }: ExhibitDetailScreenProps) {
+  const featuredItem = section.items[0];
+
   return (
     <div
       style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}
@@ -55,26 +62,57 @@ export function ExhibitDetailScreen({
       {/* Featured artwork component showing the first item in the section. */}
       <div style={{ marginBottom: 10 }}>
         <Placeholder label="Image" aspectRatio="16/9" />
-        <div style={{ paddingTop: 8 }}>
-          <div
-            style={{
-              fontSize: 14,
-              fontFamily: "'DM Sans', sans-serif",
-              fontWeight: 600,
-              color: C.text,
-              marginBottom: 4,
-            }}
-          >
-            {section.items[0].name}
+        <div
+          style={{
+            paddingTop: 8,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            gap: 12,
+          }}
+        >
+          <div style={{ flex: 1 }}>
+            <div
+              style={{
+                fontSize: 14,
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 600,
+                color: C.text,
+                marginBottom: 4,
+              }}
+            >
+              {featuredItem.name}
+            </div>
+            <div
+              style={{
+                width: 80,
+                height: 5,
+                background: C.border,
+                borderRadius: 3,
+              }}
+            />
           </div>
-          <div
+          <button
+            onClick={() => onToggleFavorite(featuredItem.id)}
             style={{
-              width: 80,
-              height: 5,
-              background: C.border,
-              borderRadius: 3,
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              padding: 0,
+              transition: "transform 0.15s",
+              transform: favorites.includes(featuredItem.id)
+                ? "scale(1.2)"
+                : "scale(1)",
             }}
-          />
+            aria-label={`Toggle favorite for ${featuredItem.name}`}
+          >
+            <Heart
+              size={18}
+              strokeWidth={2.2}
+              color={favorites.includes(featuredItem.id) ? "#E53935" : C.border}
+              fill={favorites.includes(featuredItem.id) ? "#E53935" : "none"}
+            />
+          </button>
         </div>
       </div>
 
@@ -94,26 +132,57 @@ export function ExhibitDetailScreen({
           // Gallery card component for one additional artwork.
           <div key={item.id}>
             <Placeholder label="Image" aspectRatio="1/1" />
-            <div style={{ paddingTop: 6 }}>
-              <div
-                style={{
-                  fontSize: 13,
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontWeight: 600,
-                  color: C.text,
-                }}
-              >
-                {item.name}
+            <div
+              style={{
+                paddingTop: 6,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                gap: 10,
+              }}
+            >
+              <div style={{ flex: 1 }}>
+                <div
+                  style={{
+                    fontSize: 13,
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontWeight: 600,
+                    color: C.text,
+                  }}
+                >
+                  {item.name}
+                </div>
+                <div
+                  style={{
+                    width: 50,
+                    height: 5,
+                    background: C.border,
+                    borderRadius: 3,
+                    marginTop: 4,
+                  }}
+                />
               </div>
-              <div
+              <button
+                onClick={() => onToggleFavorite(item.id)}
                 style={{
-                  width: 50,
-                  height: 5,
-                  background: C.border,
-                  borderRadius: 3,
-                  marginTop: 4,
+                  background: "none",
+                  border: "none",
+                  cursor: "pointer",
+                  padding: 0,
+                  transition: "transform 0.15s",
+                  transform: favorites.includes(item.id)
+                    ? "scale(1.2)"
+                    : "scale(1)",
                 }}
-              />
+                aria-label={`Toggle favorite for ${item.name}`}
+              >
+                <Heart
+                  size={18}
+                  strokeWidth={2.2}
+                  color={favorites.includes(item.id) ? "#E53935" : C.border}
+                  fill={favorites.includes(item.id) ? "#E53935" : "none"}
+                />
+              </button>
             </div>
           </div>
         ))}
