@@ -31,13 +31,12 @@ def get_for_you():
 
     cur.execute("""
         SELECT
-            a.objectid AS id,
-            a.title AS title,
-            CONCAT_WS(' - ', a.medium, a.displaydate, a.displaymaker) AS about
-        FROM recommendation_cache rc
-        JOIN artworks a
-            ON rc.objectid = a.objectid
-        ORDER BY rc.score DESC;
+            objectid AS id,
+            title,
+            CONCAT_WS(' - ', medium, displaydate, displaymaker) AS about
+        FROM artworks
+        WHERE title IS NOT NULL
+        LIMIT 20;
     """)
 
     rows = cur.fetchall()
