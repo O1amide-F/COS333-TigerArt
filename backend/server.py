@@ -12,14 +12,6 @@ DB_PORT = "5432"
 
 CLOUD_NAME = "dfftqt3zi"
 
-with open("cloudinary_images.json", "r", encoding="utf-8") as f:
-    cloudinary_data = json.load(f)
-
-image_map = {}
-for item in cloudinary_data:
-    image_map[item["objectid"]] = item["image_url"]
-
-
 app = Flask(__name__)
 CORS(app)
 
