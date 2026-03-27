@@ -9,11 +9,18 @@ Backend is optional right now. The frontend works by itself.
 - Node.js 18+
 - npm
 - PostgreSQL
+- flask
+- flask-cors
+- psycopg2
+- requests
+- cloudinary
+
 - Git LFS (for large files)
 
 - Install Git LFS: https://git-lfs.github.com/
 
 Then run: git lfs install
+
 
 
 ```bash
