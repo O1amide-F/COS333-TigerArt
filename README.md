@@ -54,9 +54,9 @@ Each person must create the same local database:
 
 createdb museum_app
 
-Create tables: python create_tables.py
+Create tables: python setup_museum_db.py
 
-Load data (if applicable): python load_data.py
+Load data: python populate_db.py
 
 Make sure your DB credentials in the code match your local setup: -
 DB_NAME = museum_app - DB_USER = your postgres user - DB_PASSWORD = your
