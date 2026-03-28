@@ -1,7 +1,7 @@
 import { Camera, Check } from "lucide-react";
 import { Placeholder } from "../components/Placeholder";
 import { SURVEY_IMAGES } from "../data";
-import { C } from "../theme";
+import { theme } from "../theme";
 
 type SettingsScreenProps = {
   username: string;
@@ -34,8 +34,8 @@ export function SettingsScreen({
           fontFamily: "'Playfair Display', serif",
           fontWeight: 900,
           letterSpacing: "0.06em",
-          color: C.text,
-          background: C.surface,
+          color: theme.components.badge.text,
+          background: theme.components.badge.background,
           display: "inline-block",
           padding: "6px 12px",
           borderRadius: 4,
@@ -47,10 +47,10 @@ export function SettingsScreen({
       {/* Profile settings card component (avatar upload + username input). */}
       <div
         style={{
-          border: `1px solid ${C.border}`,
+          border: `1px solid ${theme.components.card.border}`,
           borderRadius: 10,
           padding: 16,
-          background: "#fff",
+          background: theme.components.card.background,
           marginBottom: 18,
         }}
       >
@@ -62,12 +62,12 @@ export function SettingsScreen({
               height: 72,
               borderRadius: "50%",
               overflow: "hidden",
-              background: C.surface,
-              border: `2px solid ${C.border}`,
+              background: theme.components.badge.background,
+              border: `2px solid ${theme.components.card.border}`,
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              color: C.muted,
+              color: theme.components.badge.mutedText,
               fontWeight: 700,
               fontFamily: "'DM Sans', sans-serif",
             }}
@@ -89,8 +89,8 @@ export function SettingsScreen({
               display: "inline-flex",
               alignItems: "center",
               gap: 8,
-              background: C.surface,
-              color: C.text,
+              background: theme.components.badge.background,
+              color: theme.components.badge.text,
               borderRadius: 6,
               padding: "8px 12px",
               cursor: "pointer",
@@ -119,7 +119,7 @@ export function SettingsScreen({
           <div
             style={{
               fontSize: 12,
-              color: C.muted,
+              color: theme.components.input.mutedText,
               marginBottom: 6,
               fontFamily: "'DM Sans', sans-serif",
             }}
@@ -132,13 +132,13 @@ export function SettingsScreen({
             placeholder="Enter username"
             style={{
               width: "100%",
-              border: `1px solid ${C.border}`,
+              border: `1px solid ${theme.components.input.border}`,
               borderRadius: 8,
               padding: "10px 12px",
               fontSize: 14,
               fontFamily: "'DM Sans', sans-serif",
-              color: C.text,
-              background: C.bg,
+              color: theme.components.input.text,
+              background: theme.components.input.background,
             }}
           />
         </div>
@@ -147,13 +147,13 @@ export function SettingsScreen({
       {/* Survey status banner component showing selected-count progress. */}
       <div
         style={{
-          background: C.surface,
+          background: theme.components.badge.background,
           borderRadius: 6,
           padding: "10px 14px",
           textAlign: "center",
           fontSize: 13,
           fontFamily: "'DM Sans', sans-serif",
-          color: C.text,
+          color: theme.components.badge.text,
           marginBottom: 20,
         }}
       >
@@ -180,12 +180,12 @@ export function SettingsScreen({
                 borderRadius: 8,
                 overflow: "hidden",
                 border: isSelected
-                  ? `2px solid ${C.navy}`
-                  : `2px solid ${C.border}`,
+                  ? `2px solid ${theme.components.button.primaryBackground}`
+                  : `2px solid ${theme.components.card.border}`,
                 cursor: "pointer",
                 transition: "border-color 0.2s, transform 0.15s",
                 transform: isSelected ? "scale(0.97)" : "scale(1)",
-                background: "#fff",
+                background: theme.components.card.background,
               }}
             >
               <Placeholder label={`Image ${id}`} aspectRatio="4/3" />
@@ -201,13 +201,17 @@ export function SettingsScreen({
                   style={{
                     width: 48,
                     height: 6,
-                    background: C.border,
+                    background: theme.components.divider.color,
                     borderRadius: 3,
                   }}
                 />
                 {/* Selected-state icon component. */}
                 {isSelected && (
-                  <Check size={14} strokeWidth={2.5} color={C.navy} />
+                  <Check
+                    size={14}
+                    strokeWidth={2.5}
+                    color={theme.components.button.primaryBackground}
+                  />
                 )}
               </div>
             </div>
@@ -220,9 +224,15 @@ export function SettingsScreen({
         <button
           onClick={onSave}
           style={{
-            background: selected.length === 3 ? C.navy : C.surface,
-            color: selected.length === 3 ? "#fff" : C.muted,
-            border: "none",
+            background:
+              selected.length === 3
+                ? theme.components.button.primaryBackground
+                : theme.components.button.disabledBackground,
+            color:
+              selected.length === 3
+                ? theme.components.button.primaryText
+                : theme.components.button.disabledText,
+            border: theme.components.button.ghostBorder,
             borderRadius: 6,
             padding: "10px 24px",
             fontFamily: "'DM Sans', sans-serif",

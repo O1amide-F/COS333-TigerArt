@@ -1,6 +1,6 @@
 import { Heart } from "lucide-react";
 import { Placeholder } from "../components/Placeholder";
-import { C } from "../theme";
+import { theme } from "../theme";
 import type { ExhibitSection } from "../types";
 
 type ExhibitDetailScreenProps = {
@@ -26,15 +26,15 @@ export function ExhibitDetailScreen({
       <button
         onClick={onBack}
         style={{
-          background: "none",
-          border: "none",
+          background: theme.components.button.ghostBackground,
+          border: theme.components.button.ghostBorder,
           cursor: "pointer",
           display: "flex",
           alignItems: "center",
           gap: 6,
           fontSize: 14,
           fontFamily: "'DM Sans', sans-serif",
-          color: C.text,
+          color: theme.components.badge.text,
           marginBottom: 12,
           padding: 0,
         }}
@@ -45,13 +45,13 @@ export function ExhibitDetailScreen({
       {/* Section title badge component for the selected exhibit group. */}
       <div
         style={{
-          background: C.surface,
+          background: theme.components.badge.background,
           borderRadius: 4,
           padding: "6px 12px",
           fontSize: 14,
           fontFamily: "'DM Sans', sans-serif",
           fontWeight: 600,
-          color: C.text,
+          color: theme.components.badge.text,
           marginBottom: 14,
           textAlign: "center",
         }}
@@ -77,7 +77,7 @@ export function ExhibitDetailScreen({
                 fontSize: 14,
                 fontFamily: "'DM Sans', sans-serif",
                 fontWeight: 600,
-                color: C.text,
+                color: theme.components.badge.text,
                 marginBottom: 4,
               }}
             >
@@ -87,7 +87,7 @@ export function ExhibitDetailScreen({
               style={{
                 width: 80,
                 height: 5,
-                background: C.border,
+                background: theme.components.divider.color,
                 borderRadius: 3,
               }}
             />
@@ -95,8 +95,8 @@ export function ExhibitDetailScreen({
           <button
             onClick={() => onToggleFavorite(featuredItem.id)}
             style={{
-              background: "none",
-              border: "none",
+              background: theme.components.button.ghostBackground,
+              border: theme.components.button.ghostBorder,
               cursor: "pointer",
               padding: 0,
               transition: "transform 0.15s",
@@ -109,15 +109,28 @@ export function ExhibitDetailScreen({
             <Heart
               size={18}
               strokeWidth={2.2}
-              color={favorites.includes(featuredItem.id) ? "#E53935" : C.border}
-              fill={favorites.includes(featuredItem.id) ? "#E53935" : "none"}
+              color={
+                favorites.includes(featuredItem.id)
+                  ? theme.components.favorite.active
+                  : theme.components.favorite.inactive
+              }
+              fill={
+                favorites.includes(featuredItem.id)
+                  ? theme.components.favorite.active
+                  : "none"
+              }
             />
           </button>
         </div>
       </div>
 
       {/* Divider component separating featured content from the gallery grid. */}
-      <div style={{ borderTop: `1px solid ${C.border}`, paddingTop: 14 }} />
+      <div
+        style={{
+          borderTop: `1px solid ${theme.components.divider.color}`,
+          paddingTop: 14,
+        }}
+      />
 
       {/* Gallery grid component for the remaining section items. */}
       <div
@@ -147,7 +160,7 @@ export function ExhibitDetailScreen({
                     fontSize: 13,
                     fontFamily: "'DM Sans', sans-serif",
                     fontWeight: 600,
-                    color: C.text,
+                    color: theme.components.badge.text,
                   }}
                 >
                   {item.name}
@@ -156,7 +169,7 @@ export function ExhibitDetailScreen({
                   style={{
                     width: 50,
                     height: 5,
-                    background: C.border,
+                    background: theme.components.divider.color,
                     borderRadius: 3,
                     marginTop: 4,
                   }}
@@ -165,8 +178,8 @@ export function ExhibitDetailScreen({
               <button
                 onClick={() => onToggleFavorite(item.id)}
                 style={{
-                  background: "none",
-                  border: "none",
+                  background: theme.components.button.ghostBackground,
+                  border: theme.components.button.ghostBorder,
                   cursor: "pointer",
                   padding: 0,
                   transition: "transform 0.15s",
@@ -179,8 +192,16 @@ export function ExhibitDetailScreen({
                 <Heart
                   size={18}
                   strokeWidth={2.2}
-                  color={favorites.includes(item.id) ? "#E53935" : C.border}
-                  fill={favorites.includes(item.id) ? "#E53935" : "none"}
+                  color={
+                    favorites.includes(item.id)
+                      ? theme.components.favorite.active
+                      : theme.components.favorite.inactive
+                  }
+                  fill={
+                    favorites.includes(item.id)
+                      ? theme.components.favorite.active
+                      : "none"
+                  }
                 />
               </button>
             </div>

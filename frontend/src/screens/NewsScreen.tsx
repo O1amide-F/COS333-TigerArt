@@ -1,6 +1,6 @@
 import { Placeholder } from "../components/Placeholder";
 import { NEWS_ITEMS } from "../data";
-import { C } from "../theme";
+import { theme } from "../theme";
 
 export function NewsScreen() {
   return (
@@ -15,8 +15,8 @@ export function NewsScreen() {
           fontFamily: "'Playfair Display', serif",
           fontWeight: 900,
           letterSpacing: "0.06em",
-          color: C.text,
-          background: C.surface,
+          color: theme.components.badge.text,
+          background: theme.components.badge.background,
           display: "block",
           padding: "8px 14px",
           borderRadius: 4,
@@ -36,14 +36,14 @@ export function NewsScreen() {
               {/* News headline badge component. */}
               <div
                 style={{
-                  background: C.surface,
+                  background: theme.components.badge.background,
                   display: "inline-block",
                   borderRadius: 4,
                   padding: "4px 10px",
                   fontSize: 13,
                   fontFamily: "'DM Sans', sans-serif",
                   fontWeight: 600,
-                  color: C.text,
+                  color: theme.components.badge.text,
                   marginBottom: 6,
                 }}
               >
@@ -54,7 +54,7 @@ export function NewsScreen() {
                 style={{
                   width: 100,
                   height: 5,
-                  background: C.border,
+                  background: theme.components.divider.color,
                   borderRadius: 3,
                 }}
               />
@@ -62,7 +62,10 @@ export function NewsScreen() {
             {/* Divider component between articles. */}
             {index < NEWS_ITEMS.length - 1 && (
               <div
-                style={{ borderTop: `1px solid ${C.border}`, marginBottom: 16 }}
+                style={{
+                  borderTop: `1px solid ${theme.components.divider.color}`,
+                  marginBottom: 16,
+                }}
               />
             )}
           </div>

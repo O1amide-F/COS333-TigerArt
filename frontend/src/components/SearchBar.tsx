@@ -1,11 +1,11 @@
 import { Search } from "lucide-react";
-import { C } from "../theme";
+import { theme } from "../theme";
 
 export function SearchBar() {
   return (
     <div
       style={{
-        background: C.surface,
+        background: theme.components.badge.background,
         borderRadius: 8,
         padding: "10px 14px",
         display: "flex",
@@ -14,10 +14,14 @@ export function SearchBar() {
         marginBottom: 16,
       }}
     >
-      <Search size={16} strokeWidth={2} color={C.muted} />
+      <Search
+        size={16}
+        strokeWidth={2}
+        color={theme.components.badge.mutedText}
+      />
       <span
         style={{
-          color: C.muted,
+          color: theme.components.badge.mutedText,
           fontSize: 14,
           fontFamily: "'DM Sans', sans-serif",
         }}

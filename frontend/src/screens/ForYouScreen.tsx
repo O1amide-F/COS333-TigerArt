@@ -4,7 +4,7 @@ import { SearchBar } from "../components/SearchBar";
 import { Placeholder } from "../components/Placeholder";
 import { getForYouItems } from "../new_data";
 import type { ForYouItem } from "../types";
-import { C } from "../theme";
+import { theme } from "../theme";
 
 type ForYouScreenProps = {
   favorites: number[];
@@ -35,7 +35,7 @@ export function ForYouScreen({
           fontSize: 24,
           fontFamily: "'Playfair Display', serif",
           fontWeight: 700,
-          color: C.text,
+          color: theme.components.badge.text,
         }}
       >
         For You Page
@@ -46,8 +46,8 @@ export function ForYouScreen({
           margin: "0 0 20px",
           fontSize: 13,
           fontFamily: "'DM Sans', sans-serif",
-          color: C.muted,
-          background: C.surface,
+          color: theme.components.badge.mutedText,
+          background: theme.components.badge.background,
           display: "inline-block",
           padding: "4px 10px",
           borderRadius: 4,
@@ -61,10 +61,10 @@ export function ForYouScreen({
           <div
             key={item.id}
             style={{
-              border: `1px solid ${C.border}`,
+              border: `1px solid ${theme.components.card.border}`,
               borderRadius: 8,
               overflow: "hidden",
-              background: "#fff",
+              background: theme.components.card.background,
             }}
           >
             <Placeholder
@@ -86,7 +86,7 @@ export function ForYouScreen({
                   style={{
                     fontSize: 16,
                     fontWeight: 600,
-                    color: C.text,
+                    color: theme.components.badge.text,
                     fontFamily: "'DM Sans', sans-serif",
                   }}
                 >
@@ -96,8 +96,8 @@ export function ForYouScreen({
                 <button
                   onClick={() => onToggleFavorite(item.id)}
                   style={{
-                    background: "none",
-                    border: "none",
+                    background: theme.components.button.ghostBackground,
+                    border: theme.components.button.ghostBorder,
                     cursor: "pointer",
                     transition: "color 0.2s, transform 0.15s",
                     transform: favorites.includes(item.id)
@@ -108,20 +108,28 @@ export function ForYouScreen({
                   <Heart
                     size={18}
                     strokeWidth={2.2}
-                    color={favorites.includes(item.id) ? "#E53935" : C.border}
-                    fill={favorites.includes(item.id) ? "#E53935" : "none"}
+                    color={
+                      favorites.includes(item.id)
+                        ? theme.components.favorite.active
+                        : theme.components.favorite.inactive
+                    }
+                    fill={
+                      favorites.includes(item.id)
+                        ? theme.components.favorite.active
+                        : "none"
+                    }
                   />
                 </button>
               </div>
 
               <div
                 style={{
-                  background: C.surface,
+                  background: theme.components.badge.background,
                   borderRadius: 4,
                   padding: "8px 10px",
                   fontSize: 13,
                   fontFamily: "'DM Sans', sans-serif",
-                  color: C.muted,
+                  color: theme.components.badge.mutedText,
                 }}
               >
                 {item.about}

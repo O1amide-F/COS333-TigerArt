@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Check } from "lucide-react";
 import { SURVEY_IMAGES } from "../data";
-import { C } from "../theme";
+import { theme } from "../theme";
 import { Placeholder } from "../components/Placeholder";
 
 type SurveyScreenProps = {
@@ -47,12 +47,12 @@ export function SurveyScreen({
             width: 64,
             height: 64,
             borderRadius: "50%",
-            background: C.surface,
-            border: `2px solid ${C.border}`,
+            background: theme.components.badge.background,
+            border: `2px solid ${theme.components.card.border}`,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            color: C.muted,
+            color: theme.components.badge.mutedText,
             fontSize: 11,
             fontFamily: "'DM Sans', sans-serif",
             textAlign: "center",
@@ -78,10 +78,10 @@ export function SurveyScreen({
         {/* Username badge component. */}
         <div
           style={{
-            background: C.surface,
+            background: theme.components.badge.background,
             borderRadius: 4,
             padding: "4px 16px",
-            color: C.muted,
+            color: theme.components.badge.mutedText,
             fontSize: 13,
             fontFamily: "'DM Sans', sans-serif",
           }}
@@ -96,7 +96,7 @@ export function SurveyScreen({
             fontSize: 18,
             fontFamily: "'Playfair Display', serif",
             fontWeight: 700,
-            color: C.text,
+            color: theme.components.badge.text,
           }}
         >
           Survey Preferences
@@ -106,13 +106,13 @@ export function SurveyScreen({
       {/* Instruction banner component showing remaining required selections. */}
       <div
         style={{
-          background: C.surface,
+          background: theme.components.badge.background,
           borderRadius: 6,
           padding: "10px 14px",
           textAlign: "center",
           fontSize: 13,
           fontFamily: "'DM Sans', sans-serif",
-          color: C.text,
+          color: theme.components.badge.text,
           marginBottom: 20,
         }}
       >
@@ -152,12 +152,12 @@ export function SurveyScreen({
                 borderRadius: 8,
                 overflow: "hidden",
                 border: isSelected
-                  ? `2px solid ${C.navy}`
-                  : `2px solid ${C.border}`,
+                  ? `2px solid ${theme.components.button.primaryBackground}`
+                  : `2px solid ${theme.components.card.border}`,
                 cursor: "pointer",
                 transition: "border-color 0.2s, transform 0.15s",
                 transform: isSelected ? "scale(0.97)" : "scale(1)",
-                background: "#fff",
+                background: theme.components.card.background,
               }}
             >
               <Placeholder label={`Image ${id}`} aspectRatio="4/3" />
@@ -173,13 +173,17 @@ export function SurveyScreen({
                   style={{
                     width: 48,
                     height: 6,
-                    background: C.border,
+                    background: theme.components.divider.color,
                     borderRadius: 3,
                   }}
                 />
                 {/* Selected-state icon component. */}
                 {isSelected && (
-                  <Check size={14} strokeWidth={2.5} color={C.navy} />
+                  <Check
+                    size={14}
+                    strokeWidth={2.5}
+                    color={theme.components.button.primaryBackground}
+                  />
                 )}
               </div>
             </div>
@@ -192,9 +196,15 @@ export function SurveyScreen({
         <button
           onClick={() => selected.length === 3 && onContinue(selected)}
           style={{
-            background: selected.length === 3 ? C.navy : C.surface,
-            color: selected.length === 3 ? "#fff" : C.muted,
-            border: "none",
+            background:
+              selected.length === 3
+                ? theme.components.button.primaryBackground
+                : theme.components.button.disabledBackground,
+            color:
+              selected.length === 3
+                ? theme.components.button.primaryText
+                : theme.components.button.disabledText,
+            border: theme.components.button.ghostBorder,
             borderRadius: 6,
             padding: "10px 24px",
             fontFamily: "'DM Sans', sans-serif",

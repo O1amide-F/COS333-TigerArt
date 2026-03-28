@@ -1,6 +1,6 @@
 import { Heart } from "lucide-react";
 import { SearchBar } from "../components/SearchBar";
-import { C } from "../theme";
+import { theme } from "../theme";
 
 type FavoritesScreenProps = {
   favorites: number[];
@@ -25,8 +25,8 @@ export function FavoritesScreen({
           fontFamily: "'Playfair Display', serif",
           fontWeight: 900,
           letterSpacing: "0.06em",
-          color: C.text,
-          background: C.surface,
+          color: theme.components.badge.text,
+          background: theme.components.badge.background,
           display: "inline-block",
           padding: "6px 12px",
           borderRadius: 4,
@@ -38,23 +38,27 @@ export function FavoritesScreen({
       {/* Empty-state component shown intentionally while Favorites is disabled. */}
       <div
         style={{
-          border: `1px solid ${C.border}`,
+          border: `1px solid ${theme.components.card.border}`,
           borderRadius: 10,
           padding: "48px 24px",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           gap: 12,
-          background: "#fff",
+          background: theme.components.card.background,
         }}
       >
-        <Heart size={48} strokeWidth={1.7} color={C.border} />
+        <Heart
+          size={48}
+          strokeWidth={1.7}
+          color={theme.components.favorite.inactive}
+        />
         <div
           style={{
             fontSize: 16,
             fontFamily: "'Playfair Display', serif",
             fontWeight: 700,
-            color: C.text,
+            color: theme.components.badge.text,
           }}
         >
           Favorites are unavailable
@@ -63,7 +67,7 @@ export function FavoritesScreen({
           style={{
             fontSize: 13,
             fontFamily: "'DM Sans', sans-serif",
-            color: C.muted,
+            color: theme.components.badge.mutedText,
             textAlign: "center",
           }}
         >
@@ -74,9 +78,9 @@ export function FavoritesScreen({
           onClick={onNavHome}
           style={{
             marginTop: 8,
-            background: C.navy,
-            color: "#fff",
-            border: "none",
+            background: theme.components.button.primaryBackground,
+            color: theme.components.button.primaryText,
+            border: theme.components.button.ghostBorder,
             borderRadius: 6,
             padding: "12px 28px",
             fontFamily: "'DM Sans', sans-serif",

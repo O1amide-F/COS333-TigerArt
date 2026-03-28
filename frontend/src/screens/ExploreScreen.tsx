@@ -2,7 +2,7 @@ import { Heart } from "lucide-react";
 import { Placeholder } from "../components/Placeholder";
 import { SearchBar } from "../components/SearchBar";
 import { EXHIBIT_SECTIONS } from "../data";
-import { C } from "../theme";
+import { theme } from "../theme";
 import type { ExhibitSection } from "../types";
 
 type ExploreScreenProps = {
@@ -20,21 +20,21 @@ const styles = {
     fontFamily: "'Playfair Display', serif",
     fontWeight: 900,
     letterSpacing: "0.06em",
-    color: C.text,
-    background: C.surface,
+    color: theme.components.badge.text,
+    background: theme.components.badge.background,
     display: "inline-block",
     padding: "6px 12px",
     borderRadius: 4,
   },
   sectionBlock: { marginBottom: 28 },
   sectionHeader: {
-    background: C.surface,
+    background: theme.components.badge.background,
     borderRadius: 4,
     padding: "8px 12px",
     fontSize: 14,
     fontFamily: "'DM Sans', sans-serif",
     fontWeight: 600,
-    color: C.text,
+    color: theme.components.badge.text,
     marginBottom: 12,
     display: "inline-block",
     cursor: "pointer",
@@ -53,12 +53,12 @@ const styles = {
     fontSize: 13,
     fontFamily: "'DM Sans', sans-serif",
     fontWeight: 600,
-    color: C.text,
+    color: theme.components.badge.text,
   },
   itemDesc: {
     fontSize: 12,
     fontFamily: "'DM Sans', sans-serif",
-    color: C.muted,
+    color: theme.components.badge.mutedText,
   },
 } as const;
 
@@ -102,8 +102,8 @@ function ExploreSectionCard({
                 onToggleFavorite(item.id);
               }}
               style={{
-                background: "none",
-                border: "none",
+                background: theme.components.button.ghostBackground,
+                border: theme.components.button.ghostBorder,
                 cursor: "pointer",
                 transition: "color 0.2s, transform 0.15s",
                 padding: "6px 0 0",
@@ -116,8 +116,16 @@ function ExploreSectionCard({
               <Heart
                 size={18}
                 strokeWidth={2.2}
-                color={favorites.includes(item.id) ? "#E53935" : C.border}
-                fill={favorites.includes(item.id) ? "#E53935" : "none"}
+                color={
+                  favorites.includes(item.id)
+                    ? theme.components.favorite.active
+                    : theme.components.favorite.inactive
+                }
+                fill={
+                  favorites.includes(item.id)
+                    ? theme.components.favorite.active
+                    : "none"
+                }
               />
             </button>
           </div>
