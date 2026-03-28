@@ -89,14 +89,29 @@ def get_exhibits():
     cur = conn.cursor()
 
     cur.execute("""
+        WITH ranked_artworks AS (
+            SELECT
+                objectid,
+                title,
+                medium,
+                department,
+                ROW_NUMBER() OVER (
+                    PARTITION BY department
+                    ORDER BY title
+                ) AS rn
+            FROM artworks
+            WHERE department IS NOT NULL
+              AND TRIM(department) <> ''
+              AND department <> '(not assigned)'
+        )
         SELECT
             objectid,
             title,
             medium,
             department
-        FROM artworks
-        WHERE department IS NOT NULL
-        ORDER BY department, title
+        FROM ranked_artworks
+        WHERE rn <= 5
+        ORDER BY department, rn
         LIMIT 40;
     """)
 

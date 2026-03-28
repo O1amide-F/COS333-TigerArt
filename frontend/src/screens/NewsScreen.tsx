@@ -1,8 +1,18 @@
+import { useEffect, useState } from "react";
 import { Placeholder } from "../components/Placeholder";
-import { NEWS_ITEMS } from "../data";
+import { getNewsItems } from "../new_data";
+import type { NewsItem } from "../types";
 import { theme } from "../theme";
 
 export function NewsScreen() {
+  const [items, setItems] = useState<NewsItem[]>([]);
+
+  useEffect(() => {
+    getNewsItems()
+      .then((data) => setItems(data))
+      .catch((error) => console.error("Error fetching news items:", error));
+  }, []);
+
   return (
     <div
       style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}
@@ -26,9 +36,9 @@ export function NewsScreen() {
         LATEST NEWS
       </h1>
 
-      {/* News list component rendered from data items. */}
+      {/* News list component rendered from API data items. */}
       <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
-        {NEWS_ITEMS.map((item, index) => (
+        {items.map((item, index) => (
           // One news article card component.
           <div key={item.id}>
             <Placeholder label="Image" aspectRatio="16/7" />
@@ -60,7 +70,7 @@ export function NewsScreen() {
               />
             </div>
             {/* Divider component between articles. */}
-            {index < NEWS_ITEMS.length - 1 && (
+            {index < items.length - 1 && (
               <div
                 style={{
                   borderTop: `1px solid ${theme.components.divider.color}`,

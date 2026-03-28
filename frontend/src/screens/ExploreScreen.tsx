@@ -1,7 +1,8 @@
+import { useEffect, useState } from "react";
 import { Heart } from "lucide-react";
 import { Placeholder } from "../components/Placeholder";
 import { SearchBar } from "../components/SearchBar";
-import { EXHIBIT_SECTIONS } from "../data";
+import { getExhibitSections } from "../new_data";
 import { theme } from "../theme";
 import type { ExhibitSection } from "../types";
 
@@ -140,6 +141,16 @@ export function ExploreScreen({
   favorites,
   onToggleFavorite,
 }: ExploreScreenProps) {
+  const [sections, setSections] = useState<ExhibitSection[]>([]);
+
+  useEffect(() => {
+    getExhibitSections()
+      .then((data) => setSections(data))
+      .catch((error) =>
+        console.error("Error fetching exhibit sections:", error),
+      );
+  }, []);
+
   return (
     // The screen body acts like a Jinja template loop over section data.
     <div style={styles.page}>
@@ -149,7 +160,7 @@ export function ExploreScreen({
       <h1 style={styles.title}>EXPLORE</h1>
 
       {/* Section-list component loop: each section renders one card block. */}
-      {EXHIBIT_SECTIONS.map((section) => (
+      {sections.map((section) => (
         <ExploreSectionCard
           key={section.name}
           section={section}
