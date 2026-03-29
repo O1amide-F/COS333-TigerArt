@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import "./App.css";
 import { BottomNav } from "./components/BottomNav";
 import { ExploreScreen } from "./screens/ExploreScreen";
@@ -18,10 +18,30 @@ const NAV_TO_SCREEN: Record<NavId, Screen> = {
   settings: "settings",
 };
 
+const FAVORITES_STORAGE_KEY = "tigerart:favorites";
+
+function getInitialFavorites(): number[] {
+  try {
+    const saved = localStorage.getItem(FAVORITES_STORAGE_KEY);
+    if (!saved) {
+      return [];
+    }
+
+    const parsed = JSON.parse(saved);
+    if (!Array.isArray(parsed)) {
+      return [];
+    }
+
+    return parsed.filter((value): value is number => Number.isInteger(value));
+  } catch {
+    return [];
+  }
+}
+
 export default function TigerArt() {
   // App-level state acts like Flask view context shared across templates.
   const [screen, setScreen] = useState<Screen>("survey");
-  const [favorites, setFavorites] = useState<number[]>([]);
+  const [favorites, setFavorites] = useState<number[]>(getInitialFavorites);
   const [activeSection, setActiveSection] = useState<ExhibitSection | null>(
     null,
   );
@@ -35,6 +55,10 @@ export default function TigerArt() {
       prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id],
     );
   };
+
+  useEffect(() => {
+    localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify(favorites));
+  }, [favorites]);
 
   const handleNav = (id: NavId) => {
     // Route lookup table mirrors Flask's URL -> view mapping.
@@ -116,6 +140,7 @@ export default function TigerArt() {
     favorites: (
       <FavoritesScreen
         favorites={templateContext.favorites}
+        onToggleFavorite={templateContext.toggleFavorite}
         onNavHome={() => {
           templateContext.setScreen("home");
           templateContext.setActiveNav("home");
