@@ -14,7 +14,7 @@ type ExploreScreenProps = {
 
 // Shared inline styles keep the JSX "template" concise and easier to scan.
 const styles = {
-  page: { padding: "16px 20px 100px", overflowY: "auto", height: "100%" },
+  page: { padding: "16px 20px 100px", overflowY: "auto", height: "100%"},
   title: {
     margin: "0 0 20px",
     fontSize: 22,

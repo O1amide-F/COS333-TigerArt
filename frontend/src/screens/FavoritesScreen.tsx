@@ -245,14 +245,14 @@ export function FavoritesScreen({
         // Branch 3: empty state when the user has no likes.
         <div
           style={{
-            border: `1px solid ${theme.components.card.border}`,
+            border: `1px solid ${theme.components.favorites_card.border}`,
             borderRadius: 10,
             padding: "48px 24px",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
             gap: 12,
-            background: theme.components.card.background,
+            background: theme.components.favorites_card.background,
           }}
         >
           <Heart

@@ -7,6 +7,7 @@ const colors = {
   accent: "#1A1A18",
   navy: "#0F1923",
   white: "#FFFFFF",
+  card_color: "#E87928",
   danger: "#E53935",
   placeholderGradientEnd: "#E8E6E1",
 } as const;
@@ -27,8 +28,12 @@ export const theme = {
       disabledBackground: colors.surface,
       disabledText: colors.muted,
     },
-    card: {
+    favorites_card: {
       background: colors.white,
+      border: colors.border,
+    },
+    card: {
+      background: colors.card_color,
       border: colors.border,
     },
     badge: {
