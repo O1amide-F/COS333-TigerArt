@@ -1,5 +1,5 @@
 const colors = {
-  bg: "#FAFAF8", // background color for the app
+  bg: "#f0ede9", // background color for the app
   surface: "#F2F1EE",
   border: "#E0DED9",
   text: "#1A1A18",
