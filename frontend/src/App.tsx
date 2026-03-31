@@ -8,6 +8,7 @@ import { ForYouScreen } from "./screens/ForYouScreen";
 import { NewsScreen } from "./screens/NewsScreen";
 import { SettingsScreen } from "./screens/SettingsScreen";
 import { SurveyScreen } from "./screens/SurveyScreen";
+import { theme } from "./theme";
 import type { ExhibitSection, NavId, Screen } from "./types";
 
 const NAV_TO_SCREEN: Record<NavId, Screen> = {
@@ -176,7 +177,10 @@ export default function TigerArt() {
       />
 
       <div className="tiger-art-app">
-        <div className="tiger-art-shell">
+        <div
+          className="tiger-art-shell"
+          style={{ backgroundColor: theme.colors.bg }}
+        >
           {/* Active screen outlet component (like a Flask template render target). */}
           <div className="tiger-art-content">{templates[screen]}</div>
 
