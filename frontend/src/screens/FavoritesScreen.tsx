@@ -7,11 +7,8 @@ import { theme } from "../theme";
 import type { ExhibitSection, ForYouItem } from "../types";
 
 type FavoritesScreenProps = {
-  // Array of artwork IDs the user has liked.
   favorites: number[];
-  // Callback to like/unlike an artwork by ID.
   onToggleFavorite: (id: number) => void;
-  // Navigation callback used when empty-state button is clicked.
   onNavHome: () => void;
 };
 
@@ -20,16 +17,11 @@ export function FavoritesScreen({
   onToggleFavorite,
   onNavHome,
 }: FavoritesScreenProps) {
-  // "For You" data source used to resolve favorites into display cards.
   const [forYouItems, setForYouItems] = useState<ForYouItem[]>([]);
-  // Explore section data source used as a fallback if an ID is not in For You.
   const [sections, setSections] = useState<ExhibitSection[]>([]);
-  // Drives loading UI while we fetch sources needed to build favorite cards.
   const [isLoading, setIsLoading] = useState(false);
-  // Only one card is expanded at a time; null means all cards are collapsed.
   const [expandedId, setExpandedId] = useState<number | null>(null);
 
-  // Initial data load: fetch both sources in parallel so favorites can be resolved.
   useEffect(() => {
     setIsLoading(true);
     Promise.all([getForYouItems(), getExhibitSections()])
@@ -45,31 +37,27 @@ export function FavoritesScreen({
       });
   }, []);
 
-  // If an expanded card gets unliked and removed, collapse it to avoid stale UI.
   useEffect(() => {
     if (expandedId !== null && !favorites.includes(expandedId)) {
       setExpandedId(null);
     }
   }, [favorites, expandedId]);
 
-  // Build a merged lookup map from both data sources, then project only liked IDs.
   const favoriteCards = useMemo(() => {
-    // Map gives O(1) access by ID when converting favorites to renderable cards.
     const byId = new Map<
       number,
-      { id: number; title: string; subtitle: string }
+      { id: number; title: string; subtitle: string; imageUrl?: string }
     >();
 
-    // Prefer For You content for title/description when IDs overlap.
     for (const item of forYouItems) {
       byId.set(item.id, {
         id: item.id,
         title: item.title,
         subtitle: item.about,
+        imageUrl: item.imageUrl,
       });
     }
 
-    // Fill in any missing IDs from Explore sections.
     for (const section of sections) {
       for (const item of section.items) {
         if (!byId.has(item.id)) {
@@ -77,17 +65,23 @@ export function FavoritesScreen({
             id: item.id,
             title: item.name,
             subtitle: item.desc,
+            imageUrl: item.imageUrl,
           });
         }
       }
     }
 
-    // Keep favorites in user-selected order and drop unresolved IDs safely.
     return favorites
       .map((favoriteId) => byId.get(favoriteId))
       .filter(
-        (card): card is { id: number; title: string; subtitle: string } =>
-          card !== undefined,
+        (
+          card,
+        ): card is {
+          id: number;
+          title: string;
+          subtitle: string;
+          imageUrl?: string;
+        } => card !== undefined,
       );
   }, [favorites, forYouItems, sections]);
 
@@ -95,9 +89,8 @@ export function FavoritesScreen({
     <div
       style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}
     >
-      {/* Search bar is decorative/consistent with the rest of the app shell. */}
       <SearchBar />
-      {/* Screen heading. */}
+
       <h1
         style={{
           margin: "0 0 24px",
@@ -115,7 +108,6 @@ export function FavoritesScreen({
         FAVORITES
       </h1>
 
-      {/* Branch 1: user has likes but data is still loading. */}
       {favorites.length > 0 && isLoading ? (
         <div
           style={{
@@ -130,11 +122,9 @@ export function FavoritesScreen({
         >
           Loading your favorites...
         </div>
-      ) : // Branch 2: we have resolved cards, so render masonry-style gallery.
-      favoriteCards.length > 0 ? (
+      ) : favoriteCards.length > 0 ? (
         <div
           style={{
-            // CSS columns create a lightweight Pinterest-like staggered feed.
             columnCount: 2,
             columnGap: 12,
           }}
@@ -142,12 +132,10 @@ export function FavoritesScreen({
           {favoriteCards.map((card, index) => (
             <div
               key={card.id}
-              // Clicking a tile toggles expanded metadata under the image.
               onClick={() =>
                 setExpandedId((prev) => (prev === card.id ? null : card.id))
               }
               style={{
-                // Prevent cards from splitting across columns.
                 breakInside: "avoid",
                 marginBottom: 12,
                 border: `1px solid ${theme.components.card.border}`,
@@ -158,24 +146,44 @@ export function FavoritesScreen({
                 transition: "all 180ms ease",
               }}
             >
-              <Placeholder
-                label="Image"
-                // Rotate through ratios for visual rhythm similar to masonry boards.
-                aspectRatio={
-                  index % 5 === 0
-                    ? "3/4"
-                    : index % 5 === 1
-                      ? "1/1"
-                      : index % 5 === 2
-                        ? "4/5"
-                        : index % 5 === 3
-                          ? "2/3"
-                          : "4/3"
-                }
-                style={{ borderRadius: 0 }}
-              />
+              {card.imageUrl ? (
+                <img
+                  src={card.imageUrl}
+                  alt={card.title}
+                  style={{
+                    width: "100%",
+                    aspectRatio:
+                      index % 5 === 0
+                        ? "3 / 4"
+                        : index % 5 === 1
+                          ? "1 / 1"
+                          : index % 5 === 2
+                            ? "4 / 5"
+                            : index % 5 === 3
+                              ? "2 / 3"
+                              : "4 / 3",
+                    objectFit: "cover",
+                    display: "block",
+                  }}
+                />
+              ) : (
+                <Placeholder
+                  label="Unable to Render Image"
+                  aspectRatio={
+                    index % 5 === 0
+                      ? "3/4"
+                      : index % 5 === 1
+                        ? "1/1"
+                        : index % 5 === 2
+                          ? "4/5"
+                          : index % 5 === 3
+                            ? "2/3"
+                            : "4/3"
+                  }
+                  style={{ borderRadius: 0 }}
+                />
+              )}
 
-              {/* Expanded panel reveals metadata only for the selected card. */}
               {expandedId === card.id && (
                 <div
                   style={{
@@ -204,9 +212,7 @@ export function FavoritesScreen({
                     </div>
                     <button
                       onClick={(event) => {
-                        // Keep heart click from also toggling card expansion.
                         event.stopPropagation();
-                        // Remove from favorites directly from this screen.
                         onToggleFavorite(card.id);
                       }}
                       aria-label="Remove favorite"
@@ -242,7 +248,6 @@ export function FavoritesScreen({
           ))}
         </div>
       ) : (
-        // Branch 3: empty state when the user has no likes.
         <div
           style={{
             border: `1px solid ${theme.components.favorites_card.border}`,
@@ -280,7 +285,6 @@ export function FavoritesScreen({
           >
             Tap hearts on artworks to see them here
           </div>
-          {/* Primary action sends user back to discover artwork to like. */}
           <button
             onClick={onNavHome}
             style={{

@@ -7,7 +7,7 @@ const colors = {
   accent: "#1A1A18",
   navy: "#0F1923",
   white: "#FFFFFF",
-  card_color: "#E87928",
+  card_color: "#e3a06f",
   danger: "#E53935",
   placeholderGradientEnd: "#E8E6E1",
 } as const;
