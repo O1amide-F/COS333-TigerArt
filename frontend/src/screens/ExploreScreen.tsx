@@ -12,9 +12,8 @@ type ExploreScreenProps = {
   onToggleFavorite: (id: number) => void;
 };
 
-// Shared inline styles keep the JSX "template" concise and easier to scan.
 const styles = {
-  page: { padding: "16px 20px 100px", overflowY: "auto", height: "100%"},
+  page: { padding: "16px 20px 100px", overflowY: "auto", height: "100%" },
   title: {
     margin: "0 0 20px",
     fontSize: 22,
@@ -49,6 +48,13 @@ const styles = {
   },
   card: { cursor: "pointer" },
   cardInner: { width: 150, flex: "0 0 auto" },
+  image: {
+    width: "100%",
+    aspectRatio: "3 / 4",
+    objectFit: "cover" as const,
+    borderRadius: 8,
+    display: "block",
+  },
   cardTextWrap: { paddingTop: 6 },
   itemName: {
     fontSize: 13,
@@ -76,12 +82,10 @@ function ExploreSectionCard({
 }) {
   return (
     <div style={styles.sectionBlock}>
-      {/* Clickable section title that routes to section detail. */}
       <div style={styles.sectionHeader} onClick={() => onSectionClick(section)}>
         {section.name}
       </div>
 
-      {/* Horizontal carousel with all items from the selected collection. */}
       <div style={styles.sectionRow}>
         {section.items.map((item) => (
           <div
@@ -89,14 +93,17 @@ function ExploreSectionCard({
             onClick={() => onSectionClick(section)}
             style={{ ...styles.card, ...styles.cardInner }}
           >
-            {/* Shared placeholder image component for exhibit thumbnails. */}
-            <Placeholder label="Image" aspectRatio="3/4" />
+            {item.imageUrl ? (
+              <img src={item.imageUrl} alt={item.name} style={styles.image} />
+            ) : (
+              <Placeholder label="Unable to Render Image" aspectRatio="3/4" />
+            )}
+
             <div style={styles.cardTextWrap}>
-              {/* Exhibit name text component area. */}
               <div style={styles.itemName}>{item.name}</div>
-              {/* Exhibit description text component area. */}
               <div style={styles.itemDesc}>{item.desc}</div>
             </div>
+
             <button
               onClick={(event) => {
                 event.stopPropagation();
@@ -152,14 +159,10 @@ export function ExploreScreen({
   }, []);
 
   return (
-    // The screen body acts like a Jinja template loop over section data.
     <div style={styles.page}>
-      {/* Reusable search component shown at the top of Explore. */}
       <SearchBar />
-      {/* Page title component for this screen. */}
       <h1 style={styles.title}>EXPLORE</h1>
 
-      {/* Section-list component loop: each section renders one card block. */}
       {sections.map((section) => (
         <ExploreSectionCard
           key={section.name}

@@ -20,6 +20,7 @@ export function Placeholder({
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        textAlign: "center",
         color: theme.components.placeholder.label,
         fontSize: 13,
         fontFamily: "'DM Sans', sans-serif",

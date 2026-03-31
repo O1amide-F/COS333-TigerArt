@@ -21,6 +21,7 @@ export type ExhibitItem = {
   id: number;
   name: string;
   desc: string;
+  imageUrl?: string;
 };
 
 export type ExhibitSection = {
@@ -32,6 +33,7 @@ export type ForYouItem = {
   id: number;
   title: string;
   about: string;
+  imageUrl?: string;
 };
 
 export type NewsItem = {

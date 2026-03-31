@@ -32,11 +32,14 @@ def get_for_you():
 
     cur.execute("""
         SELECT
-            objectid AS id,
-            title,
-            CONCAT_WS(' - ', medium, displaydate, displaymaker) AS about
-        FROM artworks
-        WHERE title IS NOT NULL
+            a.objectid AS id,
+            a.title,
+            CONCAT_WS(' - ', a.medium, a.displaydate, a.displaymaker) AS about,
+            ai.image_url
+        FROM artworks a
+        LEFT JOIN artwork_images ai
+        ON a.objectid = ai.objectid
+        WHERE a.title IS NOT NULL
         LIMIT 20;
     """)
 
@@ -50,7 +53,8 @@ def get_for_you():
         items.append({
             "id": row[0],
             "title": row[1],
-            "about": row[2]
+            "about": row[2],
+            "imageUrl": row[3],  # ⭐ THIS IS THE KEY LINE
         })
 
     return jsonify(items)
@@ -91,24 +95,28 @@ def get_exhibits():
     cur.execute("""
         WITH ranked_artworks AS (
             SELECT
-                objectid,
-                title,
-                medium,
-                department,
+                a.objectid,
+                a.title,
+                a.medium,
+                a.department,
+                ai.image_url,
                 ROW_NUMBER() OVER (
-                    PARTITION BY department
-                    ORDER BY title
+                    PARTITION BY a.department
+                    ORDER BY a.title
                 ) AS rn
-            FROM artworks
-            WHERE department IS NOT NULL
-              AND TRIM(department) <> ''
-              AND department <> '(not assigned)'
+            FROM artworks a
+            LEFT JOIN artwork_images ai
+                ON a.objectid = ai.objectid
+            WHERE a.department IS NOT NULL
+              AND TRIM(a.department) <> ''
+              AND a.department <> '(not assigned)'
         )
         SELECT
             objectid,
             title,
             medium,
-            department
+            department,
+            image_url
         FROM ranked_artworks
         WHERE rn <= 5
         ORDER BY department, rn
@@ -127,8 +135,7 @@ def get_exhibits():
         title = row[1]
         medium = row[2]
         department = row[3]
-
-        image_url = f"https://res.cloudinary.com/{CLOUD_NAME}/image/upload/artworks/{objectid}.jpg"
+        image_url = row[4]
 
         if department not in sections_dict:
             sections_dict[department] = []
@@ -137,7 +144,7 @@ def get_exhibits():
             "id": objectid,
             "name": title,
             "desc": medium,
-            "image_url": image_url
+            "imageUrl": image_url
         })
 
     sections = []

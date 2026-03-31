@@ -67,11 +67,24 @@ export function ForYouScreen({
               background: theme.components.card.background,
             }}
           >
-            <Placeholder
-              label="Image"
-              aspectRatio="4/3"
-              style={{ borderRadius: 0 }}
-            />
+            {item.imageUrl ? (
+              <img
+                src={item.imageUrl}
+                alt={item.title}
+                style={{
+                  width: "100%",
+                  aspectRatio: "4 / 3",
+                  objectFit: "cover",
+                  display: "block",
+                }}
+              />
+            ) : (
+              <Placeholder
+                label="Unable to Render Image"
+                aspectRatio="4/3"
+                style={{ borderRadius: 0 }}
+              />
+            )}
 
             <div style={{ padding: "10px 12px" }}>
               <div
