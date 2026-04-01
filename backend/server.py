@@ -2,6 +2,7 @@ from flask import Flask, jsonify
 from flask_cors import CORS
 import psycopg2
 import json
+import re
 
 
 DB_NAME = "museum_app"
@@ -15,6 +16,245 @@ CLOUD_NAME = "dfftqt3zi"
 app = Flask(__name__)
 CORS(app)
 
+# ---------------------------------------------------------------------------
+# Feature vector layout (21 dimensions, in this exact order)
+# ---------------------------------------------------------------------------
+FEATURE_DIMS = [
+    # daterange (6)
+    "ancient", "medieval", "early_modern", "19th_century", "early_20th", "modern",
+    # classification (8)
+    "painting", "sculpture", "drawing", "print", "photography",
+    "textile", "decorative", "artifact",
+    # geography (7)
+    "european", "asian", "african_oceanic", "american",
+    "ancient_americas", "ancient_mediterranean_islamic", "modern_global",
+]
+DIM_INDEX = {dim: i for i, dim in enumerate(FEATURE_DIMS)}
+N_DIMS = len(FEATURE_DIMS)  # 21
+
+# ---------------------------------------------------------------------------
+# Mapping helpers
+# ---------------------------------------------------------------------------
+ 
+def parse_era(displaydate: str) -> str | None:
+    """
+    Extract the most representative year from a displaydate string and
+    map it to one of the six era tags.
+ 
+    Handles the formats actually found in the PUAM dataset:
+      - "18th century", "19th century", "early 20th century"
+      - "mid 19th-mid 20th century", "late 19th-early 20th century"
+      - "early 7th century BCE", "3rd century BCE", "ca. 580 BCE"
+      - "1977", "ca. 1880", "1850-1900", "1938, printed 1980s"
+      - "1960s", "1980s"
+      - "before 1885", "before 1914"
+    """
+    if not displaydate:
+        return None
+ 
+    text = displaydate.strip()
+ 
+    # --- BC / BCE → always ancient ---
+    if re.search(r'\bB\.?C\.?(E\.?)?\b', text, re.IGNORECASE):
+        return "ancient"
+ 
+    # --- Named-century patterns (must come before generic digit extraction) ---
+    # Maps written century numbers to approximate midpoint years.
+    # Handles qualifiers: "early", "mid", "late" shift the midpoint.
+    # We collect all century references in the string and average them,
+    # which handles ranges like "mid 19th–early 20th century".
+ 
+    CENTURY_WORD = {
+        "first": 1, "second": 2, "third": 3, "fourth": 4, "fifth": 5,
+        "sixth": 6, "seventh": 7, "eighth": 8, "ninth": 9, "tenth": 10,
+        "eleventh": 11, "twelfth": 12, "thirteenth": 13, "fourteenth": 14,
+        "fifteenth": 15, "sixteenth": 16, "seventeenth": 17,
+        "eighteenth": 18, "nineteenth": 19, "twentieth": 20,
+        "twenty-first": 21,
+    }
+ 
+    QUALIFIER_OFFSET = {"early": -25, "mid": 0, "late": 25}
+ 
+    def _century_to_year(qualifier: str | None, n: int) -> int:
+        base = (n - 1) * 100 + 50
+        offset = QUALIFIER_OFFSET.get(qualifier.lower(), 0) if qualifier else 0
+        return base + offset
+ 
+    century_years = []
+ 
+    # "early/mid/late Nth century" (numeric ordinal)
+    for m in re.finditer(
+        r'\b(early|mid|late)?\s*(\d{1,2})(st|nd|rd|th)\s+century',
+        text, re.IGNORECASE
+    ):
+        qualifier, n = m.group(1), int(m.group(2))
+        century_years.append(_century_to_year(qualifier, n))
+ 
+    # "early/mid/late [written ordinal] century" e.g. "nineteenth century"
+    word_pattern = '|'.join(CENTURY_WORD.keys())
+    for m in re.finditer(
+        rf'\b(early|mid|late)?\s*({word_pattern})\s+century',
+        text, re.IGNORECASE
+    ):
+        qualifier = m.group(1)
+        n = CENTURY_WORD[m.group(2).lower()]
+        century_years.append(_century_to_year(qualifier, n))
+ 
+    if century_years:
+        return _year_to_era(round(sum(century_years) / len(century_years)))
+ 
+    # --- Decade strings: "1960s", "1980s" ---
+    decade_matches = re.findall(r'\b(1\d{2}0)s\b', text)
+    if decade_matches:
+        avg = round(sum(int(d) + 5 for d in decade_matches) / len(decade_matches))
+        return _year_to_era(avg)
+ 
+    # --- Plain 4-digit years (handles "ca. 1880", "1850-1900", "1938, printed 1985") ---
+    years = [int(y) for y in re.findall(r'\b(1\d{3}|20\d{2})\b', text)]
+    if years:
+        return _year_to_era(round(sum(years) / len(years)))
+ 
+    # --- Short AD years e.g. "850 AD", "1st century CE" already caught above ---
+    short_years = [int(y) for y in re.findall(r'\b([1-9]\d{1,2})\b', text)]
+    if short_years:
+        return _year_to_era(round(sum(short_years) / len(short_years)))
+ 
+    return None
+ 
+def _year_to_era(year: int) -> str:
+    if year < 500:
+        return "ancient"
+    if year < 1500:
+        return "medieval"
+    if year < 1800:
+        return "early_modern"
+    if year < 1900:
+        return "19th_century"
+    if year < 1945:
+        return "early_20th"
+    return "modern"
+ 
+ 
+# Raw classification → cleaned tag
+CLASSIFICATION_MAP = {
+    "paintings":        "painting",
+    "painting":         "painting",
+    "sculpture":        "sculpture",
+    "drawings":         "drawing",
+    "drawing":          "drawing",
+    "prints":           "print",
+    "print":            "print",
+    "photographs":      "photography",
+    "photography":      "photography",
+    "textiles":         "textile",
+    "textile":          "textile",
+    "masks":            "artifact",
+    "ceramic":          "decorative",
+    "ceramics":         "decorative",
+    "metal":            "decorative",
+    "ivories":          "artifact",
+    "faience":          "artifact",
+    "glass":            "decorative",
+    "weapons and armor":"artifact",
+    "bone":             "artifact",
+    "time-based works": "artifact",
+}
+ 
+# Raw department → cleaned geography tag
+DEPARTMENT_MAP = {
+    "prints and drawings":               "european",
+    "european painting and sculpture":   "european",
+    "asian art":                         "asian",
+    "photography":                       "modern_global",
+    "photography archives":              "modern_global",
+    "african and oceanic art":           "african_oceanic",
+    "ancient, byzantine, and islamic art": "ancient_mediterranean_islamic",
+    "american art":                      "american",
+    "modern and contemporary art":       "modern_global",
+    "art of the ancient americas":       "ancient_americas",
+}
+ 
+ 
+def tag_object(objectid, classification, department, displaydate) -> list[float]:
+    """
+    Build a 21-dim binary feature vector for a single artwork.
+    Multiple 1s are allowed (multi-hot encoding).
+    """
+    vec = [0.0] * N_DIMS
+ 
+    # Era
+    era = parse_era(displaydate)
+    if era and era in DIM_INDEX:
+        vec[DIM_INDEX[era]] = 1.0
+ 
+    # Classification
+    clf_key = (classification or "").strip().lower()
+    clf_tag = CLASSIFICATION_MAP.get(clf_key)
+    if clf_tag:
+        vec[DIM_INDEX[clf_tag]] = 1.0
+ 
+    # Geography
+    dept_key = (department or "").strip().lower()
+    geo_tag = DEPARTMENT_MAP.get(dept_key)
+    if geo_tag:
+        vec[DIM_INDEX[geo_tag]] = 1.0
+ 
+    return vec
+
+# ---------------------------------------------------------------------------
+# Survey configuration
+# ---------------------------------------------------------------------------
+# Each question lists the tag dimension that the nth image represents.
+# The frontend must display images in this exact order for the mapping to work.
+# Use GET /api/survey/config to let the frontend know which objectid maps to
+# which tag slot — see below.
+ 
+SURVEY_QUESTIONS = [
+    {
+        "id": "era",
+        "prompt": "Which of these artworks speak to you?",
+        "tags": ["ancient", "medieval", "early_modern", "19th_century", "early_20th", "modern"],
+    },
+    {
+        "id": "classification",
+        "prompt": "What kinds of art do you enjoy most?",
+        "tags": ["painting", "sculpture", "drawing", "print", "photography", "textile", "decorative", "artifact"],
+    },
+    {
+        "id": "geography",
+        "prompt": "Which cultural traditions interest you?",
+        "tags": ["european", "asian", "african_oceanic", "american", "ancient_americas", "ancient_mediterranean_islamic", "modern_global"],
+    },
+]
+ 
+ 
+def build_user_vector(survey_answers: dict) -> list[float]:
+    """
+    survey_answers: {
+        "era":            ["early_20th", "modern", "medieval"],
+        "classification": ["painting", "photography", "sculpture"],
+        "geography":      ["asian", "european", "modern_global"]
+    }
+    Each list contains exactly 3 selected tag names.
+    Each selected tag gets 1/3 ≈ 0.333; unselected tags stay 0.
+    """
+    vec = [0.0] * N_DIMS
+    weight = 1.0 / 3.0
+ 
+    for question in SURVEY_QUESTIONS:
+        qid = question["id"]
+        selected_tags = survey_answers.get(qid, [])
+        for tag in selected_tags:
+            if tag in DIM_INDEX:
+                vec[DIM_INDEX[tag]] = weight
+ 
+    return vec
+ 
+ 
+def dot_product(u: list[float], v: list[float]) -> float:
+    return sum(a * b for a, b in zip(u, v))
+
+
 def get_connection():
     return psycopg2.connect(
         dbname=DB_NAME,
@@ -24,6 +264,30 @@ def get_connection():
         port=DB_PORT
     )
 
+def save_user_vector(cur, user_id: int, vector: list[float]):
+    """
+    Upsert the feature vector into user_preferences.
+    preference_type = 'feature_vector'
+    preference_value = JSON array string
+    """
+    cur.execute("""
+        INSERT INTO user_preferences (userid, preference_type, preference_value)
+        VALUES (%s, 'feature_vector', %s)
+        ON CONFLICT (userid, preference_type)
+        DO UPDATE SET preference_value = EXCLUDED.preference_value;
+    """, (user_id, json.dumps(vector)))
+ 
+ 
+def load_user_vector(cur, user_id: int) -> list[float] | None:
+    cur.execute("""
+        SELECT preference_value FROM user_preferences
+        WHERE userid = %s AND preference_type = 'feature_vector';
+    """, (user_id,))
+    row = cur.fetchone()
+    if row is None:
+        return None
+    return json.loads(row[0])
+ 
 
 @app.route("/api/for-you")
 def get_for_you():
@@ -156,6 +420,187 @@ def get_exhibits():
 
     return jsonify(sections)
 
+# ---------------------------------------------------------------------------
+# New endpoints
+# ---------------------------------------------------------------------------
+ 
+@app.route("/api/survey/config")
+def get_survey_config():
+    """
+    Returns the survey question structure so the frontend knows which
+    objectids to display and which tag each image slot represents.
+ 
+    You must pre-select one representative artwork per tag and store their
+    objectids in the SURVEY_IMAGE_MAP below. Update that map with real
+    objectids from your database.
+    """
+    # -----------------------------------------------------------------------
+    # TODO: replace these placeholder objectids with real ones from your DB.
+    # Pick one visually representative artwork per tag.
+    # -----------------------------------------------------------------------
+    SURVEY_IMAGE_MAP = {
+        # era
+        "ancient":       54820,
+        "medieval":      29646,
+        "early_modern":  4557,
+        "19th_century":  101153,
+        "early_20th":    134421,
+        "modern":        140430,
+        # classification
+        "painting":      45156,
+        "sculpture":     39326,
+        "drawing":       11091,
+        "print":         108756,
+        "photography":   14521,
+        "textile":       27751,
+        "decorative":    142436,
+        "artifact":      93317,
+        # geography
+        "european":                      47583,
+        "asian":                         23500,
+        "african_oceanic":               36735,
+        "american":                      45195,
+        "ancient_americas":              62610,
+        "ancient_mediterranean_islamic": 23313,
+        "modern_global":                 135255,
+    }
+ 
+    # Fetch image URLs for the mapped objectids (skip Nones)
+    objectids = [oid for oid in SURVEY_IMAGE_MAP.values() if oid is not None]
+    image_lookup = {}
+ 
+    if objectids:
+        conn = get_connection()
+        cur = conn.cursor()
+        cur.execute(
+            "SELECT objectid, image_url FROM artwork_images WHERE objectid = ANY(%s);",
+            (objectids,)
+        )
+        for row in cur.fetchall():
+            image_lookup[row[0]] = row[1]
+        cur.close()
+        conn.close()
+ 
+    questions = []
+    for q in SURVEY_QUESTIONS:
+        options = []
+        for tag in q["tags"]:
+            oid = SURVEY_IMAGE_MAP.get(tag)
+            options.append({
+                "tag": tag,
+                "objectid": oid,
+                "imageUrl": image_lookup.get(oid) if oid else None,
+            })
+        questions.append({
+            "id": q["id"],
+            "prompt": q["prompt"],
+            "options": options,
+            "selectCount": 3,
+        })
+ 
+    return jsonify({"questions": questions, "dims": FEATURE_DIMS})
+ 
+ 
+@app.route("/api/survey/submit", methods=["POST"])
+def submit_survey():
+    """
+    Accepts survey answers, builds the user feature vector, and saves it.
+ 
+    Expected JSON body:
+    {
+        "userId": 42,
+        "answers": {
+            "era":            ["early_20th", "modern", "medieval"],
+            "classification": ["painting", "photography", "sculpture"],
+            "geography":      ["asian", "european", "modern_global"]
+        }
+    }
+    """
+    body = request.get_json(force=True)
+    user_id = body.get("userId")
+    answers = body.get("answers", {})
+ 
+    if not user_id:
+        return jsonify({"error": "userId is required"}), 400
+ 
+    # Validate: each question must have exactly 3 selections
+    for q in SURVEY_QUESTIONS:
+        qid = q["id"]
+        selected = answers.get(qid, [])
+        if len(selected) != 3:
+            return jsonify({
+                "error": f"Question '{qid}' requires exactly 3 selections, got {len(selected)}"
+            }), 400
+        valid_tags = set(q["tags"])
+        for tag in selected:
+            if tag not in valid_tags:
+                return jsonify({"error": f"Invalid tag '{tag}' for question '{qid}'"}), 400
+ 
+    user_vector = build_user_vector(answers)
+ 
+    conn = get_connection()
+    cur = conn.cursor()
+    save_user_vector(cur, user_id, user_vector)
+    conn.commit()
+    cur.close()
+    conn.close()
+ 
+    return jsonify({"success": True, "vector": user_vector, "dims": FEATURE_DIMS})
+ 
+ 
+@app.route("/api/for-you/<int:user_id>")
+def get_for_you_personalised(user_id):
+    """
+    Personalised feed: dot-product the user vector against all object
+    vectors and return the top 10 artworks.
+    """
+    conn = get_connection()
+    cur = conn.cursor()
+ 
+    # Load user vector
+    user_vec = load_user_vector(cur, user_id)
+    if user_vec is None:
+        cur.close()
+        conn.close()
+        return jsonify({"error": "No survey data found for this user. Please complete the survey."}), 404
+ 
+    # Load all artworks with the fields needed for tagging
+    cur.execute("""
+        SELECT
+            a.objectid,
+            a.title,
+            CONCAT_WS(' - ', a.medium, a.displaydate, a.displaymaker) AS about,
+            ai.image_url,
+            a.classification,
+            a.department,
+            a.displaydate
+        FROM artworks a
+        LEFT JOIN artwork_images ai ON a.objectid = ai.objectid
+        WHERE a.title IS NOT NULL;
+    """)
+    rows = cur.fetchall()
+    cur.close()
+    conn.close()
+ 
+    # Score each artwork
+    scored = []
+    for row in rows:
+        objectid, title, about, image_url, classification, department, displaydate = row
+        obj_vec = tag_object(objectid, classification, department, displaydate)
+        score = dot_product(user_vec, obj_vec)
+        scored.append((score, {
+            "id": objectid,
+            "title": title,
+            "about": about,
+            "imageUrl": image_url,
+            "score": round(score, 4),
+        }))
+ 
+    # Return top 10
+    scored.sort(key=lambda x: x[0], reverse=True)
+    top10 = [item for _, item in scored[:10]]
+ 
+    return jsonify(top10)
 
 if __name__ == "__main__":
     app.run(debug=True, port=5001)
