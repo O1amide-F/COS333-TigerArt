@@ -6,6 +6,8 @@ import { getExhibitSections, getForYouItems } from "../new_data";
 import { theme } from "../theme";
 import type { ExhibitSection, ForYouItem } from "../types";
 
+// const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:5001/api";
+
 type FavoritesScreenProps = {
   favorites: number[];
   onToggleFavorite: (id: number) => void;

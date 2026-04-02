@@ -24,15 +24,9 @@ const FAVORITES_STORAGE_KEY = "tigerart:favorites";
 function getInitialFavorites(): number[] {
   try {
     const saved = localStorage.getItem(FAVORITES_STORAGE_KEY);
-    if (!saved) {
-      return [];
-    }
-
+    if (!saved) return [];
     const parsed = JSON.parse(saved);
-    if (!Array.isArray(parsed)) {
-      return [];
-    }
-
+    if (!Array.isArray(parsed)) return [];
     return parsed.filter((value): value is number => Number.isInteger(value));
   } catch {
     return [];
@@ -40,12 +34,9 @@ function getInitialFavorites(): number[] {
 }
 
 export default function TigerArt() {
-  // App-level state acts like Flask view context shared across templates.
   const [screen, setScreen] = useState<Screen>("survey");
   const [favorites, setFavorites] = useState<number[]>(getInitialFavorites);
-  const [activeSection, setActiveSection] = useState<ExhibitSection | null>(
-    null,
-  );
+  const [activeSection, setActiveSection] = useState<ExhibitSection | null>(null);
   const [activeNav, setActiveNav] = useState<NavId>("home");
   const [surveySelections, setSurveySelections] = useState<number[]>([]);
   const [username, setUsername] = useState("Username");
@@ -62,7 +53,6 @@ export default function TigerArt() {
   }, [favorites]);
 
   const handleNav = (id: NavId) => {
-    // Route lookup table mirrors Flask's URL -> view mapping.
     setActiveNav(id);
     setScreen(NAV_TO_SCREEN[id]);
   };
@@ -82,26 +72,13 @@ export default function TigerArt() {
     setScreen("exhibitDetail");
   };
 
-  // Template context: one object keeps all values/actions each screen might need.
   const templateContext = {
-    favorites,
-    activeSection,
-    surveySelections,
-    username,
-    profileImage,
-    toggleFavorite,
-    toggleSurveySelection,
-    handleSectionClick,
-    setScreen,
-    setActiveNav,
-    setSurveySelections,
-    setUsername,
-    setProfileImage,
+    favorites, activeSection, surveySelections, username, profileImage,
+    toggleFavorite, toggleSurveySelection, handleSectionClick,
+    setScreen, setActiveNav, setSurveySelections, setUsername, setProfileImage,
   };
 
-  // Template renderer map: each entry returns the screen body for a "route".
   const templates: Record<Screen, ReactNode> = {
-    // Onboarding survey component shown first.
     survey: (
       <SurveyScreen
         onContinue={(selected) => {
@@ -113,14 +90,12 @@ export default function TigerArt() {
         profileImage={templateContext.profileImage}
       />
     ),
-    // Main home feed component (For You).
     home: (
       <ForYouScreen
         favorites={templateContext.favorites}
         onToggleFavorite={templateContext.toggleFavorite}
       />
     ),
-    // Explore list component with section previews.
     explore: (
       <ExploreScreen
         onSectionClick={templateContext.handleSectionClick}
@@ -128,7 +103,6 @@ export default function TigerArt() {
         onToggleFavorite={templateContext.toggleFavorite}
       />
     ),
-    // Detail component for the currently selected exhibit section.
     exhibitDetail: templateContext.activeSection ? (
       <ExhibitDetailScreen
         section={templateContext.activeSection}
@@ -137,7 +111,6 @@ export default function TigerArt() {
         onToggleFavorite={templateContext.toggleFavorite}
       />
     ) : null,
-    // Favorites component for saved exhibits.
     favorites: (
       <FavoritesScreen
         favorites={templateContext.favorites}
@@ -148,9 +121,7 @@ export default function TigerArt() {
         }}
       />
     ),
-    // News component for museum updates.
     news: <NewsScreen />,
-    // Settings component for profile and survey preferences.
     settings: (
       <SettingsScreen
         username={templateContext.username}
@@ -175,19 +146,21 @@ export default function TigerArt() {
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap"
         rel="stylesheet"
       />
-
       <div className="tiger-art-app">
-        <div
-          className="tiger-art-shell"
-          style={{ backgroundColor: theme.colors.bg }}
-        >
-          {/* Active screen outlet component (like a Flask template render target). */}
-          <div className="tiger-art-content">{templates[screen]}</div>
+        <div className="tiger-art-shell" style={{ backgroundColor: theme.colors.bg }}>
 
-          {/* Bottom navigation component stays hidden during onboarding survey. */}
+          {/* Sidebar / bottom nav — hidden during survey */}
           {screen !== "survey" && (
-            <BottomNav activeNav={activeNav} onNavigate={handleNav} />
+            <div className="tiger-art-bottom-nav">
+              <BottomNav activeNav={activeNav} onNavigate={handleNav} />
+            </div>
           )}
+
+          {/* Main content */}
+          <div className="tiger-art-content">
+            {templates[screen]}
+          </div>
+
         </div>
       </div>
     </>

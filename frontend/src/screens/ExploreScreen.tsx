@@ -7,6 +7,7 @@ import { theme } from "../theme";
 import type { ExhibitSection, ForYouItem } from "../types";
 
 const API_BASE = "http://localhost:5001/api";
+// const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:5001/api";
 
 type ExploreScreenProps = {
   onSectionClick: (section: ExhibitSection) => void;

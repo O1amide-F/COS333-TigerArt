@@ -682,7 +682,6 @@ def search():
     results.sort(key=lambda x: x[0], reverse=True)
     return jsonify([item for _, item in results[:30]])
 
+## Changed to also run on phone using ip address
 if __name__ == "__main__":
-    app.run(debug=True, port=5001)
-
-
+    app.run(debug=True, port=5001, host='0.0.0.0')

@@ -5,7 +5,8 @@ import { Placeholder } from "../components/Placeholder";
 import type { ForYouItem } from "../types";
 import { theme } from "../theme";
 
-const API_BASE = "http://localhost:5001/api";
+// const API_BASE = "http://localhost:5001/api";
+const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:5001/api";
 const USER_ID = 1; // TODO: replace with real auth user ID
 
 type ForYouScreenProps = {
