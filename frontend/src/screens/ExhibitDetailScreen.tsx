@@ -22,7 +22,6 @@ export function ExhibitDetailScreen({
     <div
       style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}
     >
-      {/* Back navigation component to return to the Explore screen. */}
       <button
         onClick={onBack}
         style={{
@@ -42,7 +41,6 @@ export function ExhibitDetailScreen({
         ← Back to Explore
       </button>
 
-      {/* Section title badge component for the selected exhibit group. */}
       <div
         style={{
           background: theme.components.badge.background,
@@ -59,9 +57,23 @@ export function ExhibitDetailScreen({
         {section.name}
       </div>
 
-      {/* Featured artwork component showing the first item in the section. */}
       <div style={{ marginBottom: 10 }}>
-        <Placeholder label="Image" aspectRatio="16/9" />
+        {featuredItem.imageUrl ? (
+          <img
+            src={featuredItem.imageUrl}
+            alt={featuredItem.name}
+            style={{
+              width: "100%",
+              aspectRatio: "16 / 9",
+              objectFit: "cover",
+              display: "block",
+              borderRadius: 4,
+            }}
+          />
+        ) : (
+          <Placeholder label="Unable to Render Image" aspectRatio="16/9" />
+        )}
+
         <div
           style={{
             paddingTop: 8,
@@ -124,7 +136,6 @@ export function ExhibitDetailScreen({
         </div>
       </div>
 
-      {/* Divider component separating featured content from the gallery grid. */}
       <div
         style={{
           borderTop: `1px solid ${theme.components.divider.color}`,
@@ -132,7 +143,6 @@ export function ExhibitDetailScreen({
         }}
       />
 
-      {/* Gallery grid component for the remaining section items. */}
       <div
         style={{
           display: "grid",
@@ -142,9 +152,23 @@ export function ExhibitDetailScreen({
         }}
       >
         {section.items.slice(1).map((item) => (
-          // Gallery card component for one additional artwork.
           <div key={item.id}>
-            <Placeholder label="Image" aspectRatio="1/1" />
+            {item.imageUrl ? (
+              <img
+                src={item.imageUrl}
+                alt={item.name}
+                style={{
+                  width: "100%",
+                  aspectRatio: "1 / 1",
+                  objectFit: "cover",
+                  display: "block",
+                  borderRadius: 4,
+                }}
+              />
+            ) : (
+              <Placeholder label="Unable to Render Image" aspectRatio="1/1" />
+            )}
+
             <div
               style={{
                 paddingTop: 6,
