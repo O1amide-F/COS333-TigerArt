@@ -328,7 +328,7 @@ export function SurveyScreen({
                 <span style={{
                   fontSize: 11,
                   fontFamily: "'DM Sans', sans-serif",
-                  color: theme.components.badge.mutedText,
+                  color: theme.components.badge.text,
                   textTransform: "capitalize",
                   letterSpacing: "0.02em",
                 }}>
