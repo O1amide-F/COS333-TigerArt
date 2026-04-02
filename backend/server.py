@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from flask_cors import CORS
 import psycopg2
 import json
@@ -32,15 +32,16 @@ FEATURE_DIMS = [
 DIM_INDEX = {dim: i for i, dim in enumerate(FEATURE_DIMS)}
 N_DIMS = len(FEATURE_DIMS)  # 21
 
+
 # ---------------------------------------------------------------------------
 # Mapping helpers
 # ---------------------------------------------------------------------------
- 
+
 def parse_era(displaydate: str) -> str | None:
     """
     Extract the most representative year from a displaydate string and
     map it to one of the six era tags.
- 
+
     Handles the formats actually found in the PUAM dataset:
       - "18th century", "19th century", "early 20th century"
       - "mid 19th-mid 20th century", "late 19th-early 20th century"
@@ -51,19 +52,19 @@ def parse_era(displaydate: str) -> str | None:
     """
     if not displaydate:
         return None
- 
+
     text = displaydate.strip()
- 
+
     # --- BC / BCE → always ancient ---
     if re.search(r'\bB\.?C\.?(E\.?)?\b', text, re.IGNORECASE):
         return "ancient"
- 
+
     # --- Named-century patterns (must come before generic digit extraction) ---
     # Maps written century numbers to approximate midpoint years.
     # Handles qualifiers: "early", "mid", "late" shift the midpoint.
     # We collect all century references in the string and average them,
     # which handles ranges like "mid 19th–early 20th century".
- 
+
     CENTURY_WORD = {
         "first": 1, "second": 2, "third": 3, "fourth": 4, "fifth": 5,
         "sixth": 6, "seventh": 7, "eighth": 8, "ninth": 9, "tenth": 10,
@@ -72,16 +73,16 @@ def parse_era(displaydate: str) -> str | None:
         "eighteenth": 18, "nineteenth": 19, "twentieth": 20,
         "twenty-first": 21,
     }
- 
+
     QUALIFIER_OFFSET = {"early": -25, "mid": 0, "late": 25}
- 
+
     def _century_to_year(qualifier: str | None, n: int) -> int:
         base = (n - 1) * 100 + 50
         offset = QUALIFIER_OFFSET.get(qualifier.lower(), 0) if qualifier else 0
         return base + offset
- 
+
     century_years = []
- 
+
     # "early/mid/late Nth century" (numeric ordinal)
     for m in re.finditer(
         r'\b(early|mid|late)?\s*(\d{1,2})(st|nd|rd|th)\s+century',
@@ -89,7 +90,7 @@ def parse_era(displaydate: str) -> str | None:
     ):
         qualifier, n = m.group(1), int(m.group(2))
         century_years.append(_century_to_year(qualifier, n))
- 
+
     # "early/mid/late [written ordinal] century" e.g. "nineteenth century"
     word_pattern = '|'.join(CENTURY_WORD.keys())
     for m in re.finditer(
@@ -99,28 +100,29 @@ def parse_era(displaydate: str) -> str | None:
         qualifier = m.group(1)
         n = CENTURY_WORD[m.group(2).lower()]
         century_years.append(_century_to_year(qualifier, n))
- 
+
     if century_years:
         return _year_to_era(round(sum(century_years) / len(century_years)))
- 
+
     # --- Decade strings: "1960s", "1980s" ---
     decade_matches = re.findall(r'\b(1\d{2}0)s\b', text)
     if decade_matches:
         avg = round(sum(int(d) + 5 for d in decade_matches) / len(decade_matches))
         return _year_to_era(avg)
- 
+
     # --- Plain 4-digit years (handles "ca. 1880", "1850-1900", "1938, printed 1985") ---
     years = [int(y) for y in re.findall(r'\b(1\d{3}|20\d{2})\b', text)]
     if years:
         return _year_to_era(round(sum(years) / len(years)))
- 
+
     # --- Short AD years e.g. "850 AD", "1st century CE" already caught above ---
     short_years = [int(y) for y in re.findall(r'\b([1-9]\d{1,2})\b', text)]
     if short_years:
         return _year_to_era(round(sum(short_years) / len(short_years)))
- 
+
     return None
- 
+
+
 def _year_to_era(year: int) -> str:
     if year < 500:
         return "ancient"
@@ -133,8 +135,8 @@ def _year_to_era(year: int) -> str:
     if year < 1945:
         return "early_20th"
     return "modern"
- 
- 
+
+
 # Raw classification → cleaned tag
 CLASSIFICATION_MAP = {
     "paintings":        "painting",
@@ -159,7 +161,7 @@ CLASSIFICATION_MAP = {
     "bone":             "artifact",
     "time-based works": "artifact",
 }
- 
+
 # Raw department → cleaned geography tag
 DEPARTMENT_MAP = {
     "prints and drawings":               "european",
@@ -173,33 +175,34 @@ DEPARTMENT_MAP = {
     "modern and contemporary art":       "modern_global",
     "art of the ancient americas":       "ancient_americas",
 }
- 
- 
+
+
 def tag_object(objectid, classification, department, displaydate) -> list[float]:
     """
     Build a 21-dim binary feature vector for a single artwork.
     Multiple 1s are allowed (multi-hot encoding).
     """
     vec = [0.0] * N_DIMS
- 
+
     # Era
     era = parse_era(displaydate)
     if era and era in DIM_INDEX:
         vec[DIM_INDEX[era]] = 1.0
- 
+
     # Classification
     clf_key = (classification or "").strip().lower()
     clf_tag = CLASSIFICATION_MAP.get(clf_key)
     if clf_tag:
         vec[DIM_INDEX[clf_tag]] = 1.0
- 
+
     # Geography
     dept_key = (department or "").strip().lower()
     geo_tag = DEPARTMENT_MAP.get(dept_key)
     if geo_tag:
         vec[DIM_INDEX[geo_tag]] = 1.0
- 
+
     return vec
+
 
 # ---------------------------------------------------------------------------
 # Survey configuration
@@ -208,7 +211,7 @@ def tag_object(objectid, classification, department, displaydate) -> list[float]
 # The frontend must display images in this exact order for the mapping to work.
 # Use GET /api/survey/config to let the frontend know which objectid maps to
 # which tag slot — see below.
- 
+
 SURVEY_QUESTIONS = [
     {
         "id": "era",
@@ -226,8 +229,8 @@ SURVEY_QUESTIONS = [
         "tags": ["european", "asian", "african_oceanic", "american", "ancient_americas", "ancient_mediterranean_islamic", "modern_global"],
     },
 ]
- 
- 
+
+
 def build_user_vector(survey_answers: dict) -> list[float]:
     """
     survey_answers: {
@@ -240,20 +243,24 @@ def build_user_vector(survey_answers: dict) -> list[float]:
     """
     vec = [0.0] * N_DIMS
     weight = 1.0 / 3.0
- 
+
     for question in SURVEY_QUESTIONS:
         qid = question["id"]
         selected_tags = survey_answers.get(qid, [])
         for tag in selected_tags:
             if tag in DIM_INDEX:
                 vec[DIM_INDEX[tag]] = weight
- 
+
     return vec
- 
- 
+
+
 def dot_product(u: list[float], v: list[float]) -> float:
     return sum(a * b for a, b in zip(u, v))
 
+
+# ---------------------------------------------------------------------------
+# DB helpers
+# ---------------------------------------------------------------------------
 
 def get_connection():
     return psycopg2.connect(
@@ -263,6 +270,7 @@ def get_connection():
         host=DB_HOST,
         port=DB_PORT
     )
+
 
 def save_user_vector(cur, user_id: int, vector: list[float]):
     """
@@ -276,8 +284,8 @@ def save_user_vector(cur, user_id: int, vector: list[float]):
         ON CONFLICT (userid, preference_type)
         DO UPDATE SET preference_value = EXCLUDED.preference_value;
     """, (user_id, json.dumps(vector)))
- 
- 
+
+
 def load_user_vector(cur, user_id: int) -> list[float] | None:
     cur.execute("""
         SELECT preference_value FROM user_preferences
@@ -287,10 +295,15 @@ def load_user_vector(cur, user_id: int) -> list[float] | None:
     if row is None:
         return None
     return json.loads(row[0])
- 
+
+
+# ---------------------------------------------------------------------------
+# Existing endpoints (unchanged)
+# ---------------------------------------------------------------------------
 
 @app.route("/api/for-you")
 def get_for_you():
+    """Original non-personalised feed (kept for backwards compatibility)."""
     conn = get_connection()
     cur = conn.cursor()
 
@@ -308,7 +321,6 @@ def get_for_you():
     """)
 
     rows = cur.fetchall()
-
     cur.close()
     conn.close()
 
@@ -318,7 +330,7 @@ def get_for_you():
             "id": row[0],
             "title": row[1],
             "about": row[2],
-            "imageUrl": row[3],  # ⭐ THIS IS THE KEY LINE
+            "imageUrl": row[3],
         })
 
     return jsonify(items)
@@ -329,26 +341,12 @@ def get_news():
     conn = get_connection()
     cur = conn.cursor()
 
-    cur.execute("""
-        SELECT id, name, sub
-        FROM news_items
-        ORDER BY id;
-    """)
-
+    cur.execute("SELECT id, name, sub FROM news_items ORDER BY id;")
     rows = cur.fetchall()
-
     cur.close()
     conn.close()
 
-    news = []
-    for row in rows:
-        news.append({
-            "id": row[0],
-            "name": row[1],
-            "sub": row[2]
-        })
-
-    return jsonify(news)
+    return jsonify([{"id": r[0], "name": r[1], "sub": r[2]} for r in rows])
 
 
 @app.route("/api/exhibits")
@@ -375,12 +373,7 @@ def get_exhibits():
               AND TRIM(a.department) <> ''
               AND a.department <> '(not assigned)'
         )
-        SELECT
-            objectid,
-            title,
-            medium,
-            department,
-            image_url
+        SELECT objectid, title, medium, department, image_url
         FROM ranked_artworks
         WHERE rn <= 5
         ORDER BY department, rn
@@ -388,48 +381,31 @@ def get_exhibits():
     """)
 
     rows = cur.fetchall()
-
     cur.close()
     conn.close()
 
     sections_dict = {}
-
     for row in rows:
-        objectid = row[0]
-        title = row[1]
-        medium = row[2]
-        department = row[3]
-        image_url = row[4]
-
-        if department not in sections_dict:
-            sections_dict[department] = []
-
-        sections_dict[department].append({
-            "id": objectid,
-            "name": title,
-            "desc": medium,
-            "imageUrl": image_url
+        dept = row[3]
+        if dept not in sections_dict:
+            sections_dict[dept] = []
+        sections_dict[dept].append({
+            "id": row[0], "name": row[1], "desc": row[2], "imageUrl": row[4]
         })
 
-    sections = []
-    for department, items in sections_dict.items():
-        sections.append({
-            "name": department,
-            "items": items
-        })
+    return jsonify([{"name": k, "items": v} for k, v in sections_dict.items()])
 
-    return jsonify(sections)
 
 # ---------------------------------------------------------------------------
 # New endpoints
 # ---------------------------------------------------------------------------
- 
+
 @app.route("/api/survey/config")
 def get_survey_config():
     """
     Returns the survey question structure so the frontend knows which
     objectids to display and which tag each image slot represents.
- 
+
     You must pre-select one representative artwork per tag and store their
     objectids in the SURVEY_IMAGE_MAP below. Update that map with real
     objectids from your database.
@@ -464,11 +440,11 @@ def get_survey_config():
         "ancient_mediterranean_islamic": 23313,
         "modern_global":                 135255,
     }
- 
+
     # Fetch image URLs for the mapped objectids (skip Nones)
     objectids = [oid for oid in SURVEY_IMAGE_MAP.values() if oid is not None]
     image_lookup = {}
- 
+
     if objectids:
         conn = get_connection()
         cur = conn.cursor()
@@ -480,7 +456,7 @@ def get_survey_config():
             image_lookup[row[0]] = row[1]
         cur.close()
         conn.close()
- 
+
     questions = []
     for q in SURVEY_QUESTIONS:
         options = []
@@ -497,15 +473,15 @@ def get_survey_config():
             "options": options,
             "selectCount": 3,
         })
- 
+
     return jsonify({"questions": questions, "dims": FEATURE_DIMS})
- 
- 
+
+
 @app.route("/api/survey/submit", methods=["POST"])
 def submit_survey():
     """
     Accepts survey answers, builds the user feature vector, and saves it.
- 
+
     Expected JSON body:
     {
         "userId": 42,
@@ -519,10 +495,10 @@ def submit_survey():
     body = request.get_json(force=True)
     user_id = body.get("userId")
     answers = body.get("answers", {})
- 
+
     if not user_id:
         return jsonify({"error": "userId is required"}), 400
- 
+
     # Validate: each question must have exactly 3 selections
     for q in SURVEY_QUESTIONS:
         qid = q["id"]
@@ -535,19 +511,19 @@ def submit_survey():
         for tag in selected:
             if tag not in valid_tags:
                 return jsonify({"error": f"Invalid tag '{tag}' for question '{qid}'"}), 400
- 
+
     user_vector = build_user_vector(answers)
- 
+
     conn = get_connection()
     cur = conn.cursor()
     save_user_vector(cur, user_id, user_vector)
     conn.commit()
     cur.close()
     conn.close()
- 
+
     return jsonify({"success": True, "vector": user_vector, "dims": FEATURE_DIMS})
- 
- 
+
+
 @app.route("/api/for-you/<int:user_id>")
 def get_for_you_personalised(user_id):
     """
@@ -556,14 +532,14 @@ def get_for_you_personalised(user_id):
     """
     conn = get_connection()
     cur = conn.cursor()
- 
+
     # Load user vector
     user_vec = load_user_vector(cur, user_id)
     if user_vec is None:
         cur.close()
         conn.close()
         return jsonify({"error": "No survey data found for this user. Please complete the survey."}), 404
- 
+
     # Load all artworks with the fields needed for tagging
     cur.execute("""
         SELECT
@@ -581,7 +557,7 @@ def get_for_you_personalised(user_id):
     rows = cur.fetchall()
     cur.close()
     conn.close()
- 
+
     # Score each artwork
     scored = []
     for row in rows:
@@ -595,12 +571,118 @@ def get_for_you_personalised(user_id):
             "imageUrl": image_url,
             "score": round(score, 4),
         }))
- 
+
     # Return top 10
     scored.sort(key=lambda x: x[0], reverse=True)
     top10 = [item for _, item in scored[:10]]
- 
+
     return jsonify(top10)
+
+@app.route("/api/search")
+def search():
+    """
+    Search artworks by title keyword and/or tag.
+    GET /api/search?q=<query>
+    Returns up to 30 results ranked: tag matches (x2 weight) then keyword matches.
+    """
+    q = (request.args.get("q") or "").strip().lower()
+    if not q:
+        return jsonify([])
+
+    tokens = set(re.split(r"[\s,]+", q))
+
+    SYNONYM_MAP = {
+        "old": "ancient", "antique": "ancient", "classical": "ancient",
+        "byzantine": "ancient_mediterranean_islamic",
+        "islamic": "ancient_mediterranean_islamic",
+        "renaissance": "early_modern", "baroque": "early_modern",
+        "victorian": "19th_century",
+        "contemporary": "modern", "recent": "modern",
+        "paintings": "painting", "painted": "painting",
+        "sculptures": "sculpture", "statue": "sculpture", "statues": "sculpture",
+        "drawings": "drawing", "sketch": "drawing", "sketches": "drawing",
+        "prints": "print", "etching": "print", "lithograph": "print",
+        "photos": "photography", "photo": "photography",
+        "photograph": "photography", "photographs": "photography",
+        "textiles": "textile", "fabric": "textile", "weaving": "textile",
+        "cloth": "textile", "tapestry": "textile",
+        "ceramics": "decorative", "ceramic": "decorative", "pottery": "decorative",
+        "glass": "decorative", "vessel": "decorative",
+        "mask": "artifact", "masks": "artifact", "weapon": "artifact",
+        "weapons": "artifact", "ivory": "artifact",
+        "europe": "european", "french": "european", "italian": "european",
+        "dutch": "european", "german": "european", "british": "european",
+        "english": "european", "spanish": "european",
+        "asia": "asian", "chinese": "asian", "japanese": "asian",
+        "korean": "asian", "indian": "asian",
+        "africa": "african_oceanic", "african": "african_oceanic",
+        "oceanic": "african_oceanic",
+        "america": "american", "usa": "american",
+        "americas": "ancient_americas", "mayan": "ancient_americas",
+        "aztec": "ancient_americas", "inca": "ancient_americas",
+        "greek": "ancient_mediterranean_islamic",
+        "roman": "ancient_mediterranean_islamic",
+        "egyptian": "ancient_mediterranean_islamic",
+        "global": "modern_global",
+    }
+
+    matched_tags = set()
+    for token in tokens:
+        if token in DIM_INDEX:
+            matched_tags.add(token)
+        elif token in SYNONYM_MAP:
+            matched_tags.add(SYNONYM_MAP[token])
+
+    conn = get_connection()
+    cur = conn.cursor()
+    cur.execute("""
+        SELECT
+            a.objectid,
+            a.title,
+            CONCAT_WS(' - ', a.medium, a.displaydate, a.displaymaker) AS about,
+            ai.image_url,
+            a.classification,
+            a.department,
+            a.displaydate
+        FROM artworks a
+        LEFT JOIN artwork_images ai ON a.objectid = ai.objectid
+        WHERE a.title IS NOT NULL;
+    """)
+    rows = cur.fetchall()
+    cur.close()
+    conn.close()
+
+    results = []
+    for row in rows:
+        objectid, title, about, image_url, classification, department, displaydate = row
+        title_lower = (title or "").lower()
+        about_lower = (about or "").lower()
+        obj_vec = tag_object(objectid, classification, department, displaydate)
+
+        tag_score = sum(
+            obj_vec[DIM_INDEX[tag]]
+            for tag in matched_tags
+            if tag in DIM_INDEX
+        )
+        keyword_score = sum(
+            1 for token in tokens
+            if token in title_lower or token in about_lower
+        )
+
+        total_score = (tag_score * 2) + keyword_score
+        if total_score > 0:
+            results.append((total_score, {
+                "id": objectid,
+                "title": title,
+                "about": about,
+                "imageUrl": image_url,
+                "score": round(total_score, 4),
+            }))
+
+    results.sort(key=lambda x: x[0], reverse=True)
+    return jsonify([item for _, item in results[:30]])
 
 if __name__ == "__main__":
     app.run(debug=True, port=5001)
+
+
