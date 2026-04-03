@@ -3,14 +3,19 @@ from flask_cors import CORS
 import psycopg2
 import json
 import re
+import os
 
+# DB_NAME = "museum_app"
+# DB_USER = "postgres"
+# DB_PASSWORD = "cos333"
+# DB_HOST = "localhost"
+# DB_PORT = "5432"
 
-DB_NAME = "museum_app"
-DB_USER = "postgres"
-DB_PASSWORD = "cos333"
-DB_HOST = "localhost"
-DB_PORT = "5432"
-
+DB_NAME = os.getenv("DB_NAME", "museum_app")
+DB_USER = os.getenv("DB_USER", "postgres")
+DB_PASSWORD = os.getenv("DB_PASSWORD", "cos333")
+DB_HOST = os.getenv("DB_HOST", "localhost")
+DB_PORT = os.getenv("DB_PORT", "5432")
 CLOUD_NAME = "dfftqt3zi"
 
 app = Flask(__name__)
