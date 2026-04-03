@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { Check, ChevronRight } from "lucide-react";
 import { theme } from "../theme";
 
-const API_BASE = "http://localhost:5001/api";
-// const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:5001/api";
+//const API_BASE = "http://localhost:5001/api";
+ const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:5001/api";
 
 // --------------------------------------------------------------------------
 // Types matching the shape returned by GET /api/survey/config

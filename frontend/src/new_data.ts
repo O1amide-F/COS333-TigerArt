@@ -11,7 +11,7 @@ export const NAV_ITEMS: NavItem[] = [
 
 export const SURVEY_IMAGES = [1, 2, 3, 4, 5, 6];
 
-const API_BASE = "http://localhost:5001/api";
+const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:5001/api";
 
 export async function getForYouItems(): Promise<ForYouItem[]> {
   const response = await fetch(`${API_BASE}/for-you`);
