@@ -1,5 +1,6 @@
 import { useEffect, useState, type ReactNode } from "react";
 import "./App.css";
+import { MsalProvider, AuthenticatedTemplate, UnauthenticatedTemplate } from "@azure/msal-react";
 import { BottomNav } from "./components/BottomNav";
 import { ExploreScreen } from "./screens/ExploreScreen";
 import { ExhibitDetailScreen } from "./screens/ExhibitDetailScreen";
@@ -8,6 +9,8 @@ import { ForYouScreen } from "./screens/ForYouScreen";
 import { NewsScreen } from "./screens/NewsScreen";
 import { SettingsScreen } from "./screens/SettingsScreen";
 import { SurveyScreen } from "./screens/SurveyScreen";
+import { LoginScreen } from "./screens/LoginScreen";
+import { msalInstance, msalInitPromise, getUserProfile } from "./auth"; 
 import { theme } from "./theme";
 import type { ExhibitSection, NavId, Screen } from "./types";
 
@@ -33,7 +36,7 @@ function getInitialFavorites(): number[] {
   }
 }
 
-export default function TigerArt() {
+function TigerArtAuthenticated() {
   const [screen, setScreen] = useState<Screen>("survey");
   const [favorites, setFavorites] = useState<number[]>(getInitialFavorites);
   const [activeSection, setActiveSection] = useState<ExhibitSection | null>(null);
@@ -41,6 +44,13 @@ export default function TigerArt() {
   const [surveySelections, setSurveySelections] = useState<number[]>([]);
   const [username, setUsername] = useState("Username");
   const [profileImage, setProfileImage] = useState<string | null>(null);
+
+  useEffect(() => {
+    getUserProfile().then((profile) => {
+      if (!profile) return;
+      setUsername(profile.displayName);
+    });
+  }, []);
 
   const toggleFavorite = (id: number) => {
     setFavorites((prev) =>
@@ -79,6 +89,7 @@ export default function TigerArt() {
   };
 
   const templates: Record<Screen, ReactNode> = {
+    login: null,
     survey: (
       <SurveyScreen
         onContinue={(selected) => {
@@ -164,5 +175,34 @@ export default function TigerArt() {
         </div>
       </div>
     </>
+  );
+}
+
+// ── Root export — waits for MSAL to initialize before rendering ──────
+export default function TigerArt() {
+  const [msalReady, setMsalReady] = useState(false); 
+
+useEffect(() => {
+  msalInitPromise
+    .then(() => {
+      setMsalReady(true);
+    })
+    .catch((error) => {
+      console.error("MSAL init error:", error);
+      setMsalReady(true); // still render the app even if init fails
+    });
+}, []);                                          
+
+  if (!msalReady) return null;                       
+
+  return (
+    <MsalProvider instance={msalInstance}>
+      <UnauthenticatedTemplate>
+        <LoginScreen />
+      </UnauthenticatedTemplate>
+      <AuthenticatedTemplate>
+        <TigerArtAuthenticated />
+      </AuthenticatedTemplate>
+    </MsalProvider>
   );
 }

@@ -3,6 +3,7 @@ import type { LucideIcon } from "lucide-react";
 export type NavId = "home" | "explore" | "favorites" | "news" | "settings";
 
 export type Screen =
+  | "login"
   | "survey"
   | "home"
   | "explore"
