@@ -279,9 +279,9 @@ def save_user_vector(cur, user_id: int, vector: list[float]):
     preference_value = JSON array string
     """
     cur.execute("""
-        INSERT INTO user_preferences (userid, preference_type, preference_value)
+        INSERT INTO user_preferences (user_id, preference_type, preference_value)
         VALUES (%s, 'feature_vector', %s)
-        ON CONFLICT (userid, preference_type)
+        ON CONFLICT (user_id, preference_type)
         DO UPDATE SET preference_value = EXCLUDED.preference_value;
     """, (user_id, json.dumps(vector)))
 
@@ -289,7 +289,7 @@ def save_user_vector(cur, user_id: int, vector: list[float]):
 def load_user_vector(cur, user_id: int) -> list[float] | None:
     cur.execute("""
         SELECT preference_value FROM user_preferences
-        WHERE userid = %s AND preference_type = 'feature_vector';
+        WHERE user_id = %s AND preference_type = 'feature_vector';
     """, (user_id,))
     row = cur.fetchone()
     if row is None:
