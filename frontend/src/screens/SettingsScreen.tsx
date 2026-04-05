@@ -143,7 +143,7 @@ export function SettingsScreen({
               border: "none",
             }}
           >
-            Sign Out
+            Log Out
           </button>
 
         </div>
