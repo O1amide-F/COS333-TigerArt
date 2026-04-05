@@ -58,73 +58,47 @@ export function ExhibitDetailScreen({
       </div>
 
       <div style={{ marginBottom: 10 }}>
-        {featuredItem.imageUrl ? (
-          <img
-            src={featuredItem.imageUrl}
-            alt={featuredItem.name}
-            style={{
-              width: "100%",
-              aspectRatio: "16 / 9",
-              objectFit: "cover",
-              display: "block",
-              borderRadius: 4,
-            }}
-          />
-        ) : (
-          <Placeholder label="Unable to Render Image" aspectRatio="16/9" />
-        )}
-
-        <div
-          style={{
-            paddingTop: 8,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            gap: 12,
-          }}
-        >
-          <div style={{ flex: 1 }}>
-            <div
+        <div style={{ position: "relative" }}>
+          {featuredItem.imageUrl ? (
+            <img
+              src={featuredItem.imageUrl}
+              alt={featuredItem.name}
               style={{
-                fontSize: 14,
-                fontFamily: "'DM Sans', sans-serif",
-                fontWeight: 600,
-                color: theme.components.badge.text,
-                marginBottom: 4,
-              }}
-            >
-              {featuredItem.name}
-            </div>
-            <div
-              style={{
-                width: 80,
-                height: 5,
-                background: theme.components.divider.color,
-                borderRadius: 3,
+                width: "100%",
+                aspectRatio: "16 / 9",
+                objectFit: "cover",
+                display: "block",
+                borderRadius: 4,
               }}
             />
-          </div>
+          ) : (
+            <Placeholder label="Unable to Render Image" aspectRatio="16/9" />
+          )}
           <button
             onClick={() => onToggleFavorite(featuredItem.id)}
             style={{
-              background: theme.components.button.ghostBackground,
-              border: theme.components.button.ghostBorder,
+              position: "absolute",
+              top: 8,
+              right: 8,
+              background: "rgba(0,0,0,0.35)",
+              backdropFilter: "blur(4px)",
+              border: "none",
+              borderRadius: "50%",
+              width: 32,
+              height: 32,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
               cursor: "pointer",
-              padding: 0,
-              transition: "transform 0.15s",
-              transform: favorites.includes(featuredItem.id)
-                ? "scale(1.2)"
-                : "scale(1)",
             }}
-            aria-label={`Toggle favorite for ${featuredItem.name}`}
           >
             <Heart
-              size={18}
+              size={16}
               strokeWidth={2.2}
               color={
                 favorites.includes(featuredItem.id)
                   ? theme.components.favorite.active
-                  : theme.components.favorite.inactive
+                  : "#fff"
               }
               fill={
                 favorites.includes(featuredItem.id)
@@ -133,6 +107,28 @@ export function ExhibitDetailScreen({
               }
             />
           </button>
+        </div>
+
+        <div style={{ paddingTop: 8 }}>
+          <div
+            style={{
+              fontSize: 14,
+              fontFamily: "'DM Sans', sans-serif",
+              fontWeight: 600,
+              color: theme.components.badge.text,
+              marginBottom: 4,
+            }}
+          >
+            {featuredItem.name}
+          </div>
+          <div
+            style={{
+              width: 80,
+              height: 5,
+              background: theme.components.divider.color,
+              borderRadius: 3,
+            }}
+          />
         </div>
       </div>
 
@@ -153,73 +149,47 @@ export function ExhibitDetailScreen({
       >
         {section.items.slice(1).map((item) => (
           <div key={item.id}>
-            {item.imageUrl ? (
-              <img
-                src={item.imageUrl}
-                alt={item.name}
-                style={{
-                  width: "100%",
-                  aspectRatio: "1 / 1",
-                  objectFit: "cover",
-                  display: "block",
-                  borderRadius: 4,
-                }}
-              />
-            ) : (
-              <Placeholder label="Unable to Render Image" aspectRatio="1/1" />
-            )}
-
-            <div
-              style={{
-                paddingTop: 6,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                gap: 10,
-              }}
-            >
-              <div style={{ flex: 1 }}>
-                <div
+            <div style={{ position: "relative" }}>
+              {item.imageUrl ? (
+                <img
+                  src={item.imageUrl}
+                  alt={item.name}
                   style={{
-                    fontSize: 13,
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontWeight: 600,
-                    color: theme.components.badge.text,
-                  }}
-                >
-                  {item.name}
-                </div>
-                <div
-                  style={{
-                    width: 50,
-                    height: 5,
-                    background: theme.components.divider.color,
-                    borderRadius: 3,
-                    marginTop: 4,
+                    width: "100%",
+                    aspectRatio: "1 / 1",
+                    objectFit: "cover",
+                    display: "block",
+                    borderRadius: 4,
                   }}
                 />
-              </div>
+              ) : (
+                <Placeholder label="Unable to Render Image" aspectRatio="1/1" />
+              )}
               <button
                 onClick={() => onToggleFavorite(item.id)}
                 style={{
-                  background: theme.components.button.ghostBackground,
-                  border: theme.components.button.ghostBorder,
+                  position: "absolute",
+                  top: 8,
+                  right: 8,
+                  background: "rgba(0,0,0,0.35)",
+                  backdropFilter: "blur(4px)",
+                  border: "none",
+                  borderRadius: "50%",
+                  width: 32,
+                  height: 32,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                   cursor: "pointer",
-                  padding: 0,
-                  transition: "transform 0.15s",
-                  transform: favorites.includes(item.id)
-                    ? "scale(1.2)"
-                    : "scale(1)",
                 }}
-                aria-label={`Toggle favorite for ${item.name}`}
               >
                 <Heart
-                  size={18}
+                  size={16}
                   strokeWidth={2.2}
                   color={
                     favorites.includes(item.id)
                       ? theme.components.favorite.active
-                      : theme.components.favorite.inactive
+                      : "#fff"
                   }
                   fill={
                     favorites.includes(item.id)
@@ -228,6 +198,27 @@ export function ExhibitDetailScreen({
                   }
                 />
               </button>
+            </div>
+            <div style={{ paddingTop: 6 }}>
+              <div
+                style={{
+                  fontSize: 13,
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontWeight: 600,
+                  color: theme.components.badge.text,
+                }}
+              >
+                {item.name}
+              </div>
+              <div
+                style={{
+                  width: 50,
+                  height: 5,
+                  background: theme.components.divider.color,
+                  borderRadius: 3,
+                  marginTop: 4,
+                }}
+              />
             </div>
           </div>
         ))}
