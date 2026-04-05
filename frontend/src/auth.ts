@@ -7,13 +7,14 @@ const msalConfig = {
     redirectUri: import.meta.env.VITE_REDIRECT_URI ?? "http://localhost:5173",
   },
   cache: {
-    cacheLocation: "sessionStorage",
+    cacheLocation: "localStorage",
     storeAuthStateInCookie: false,
   },
 };
 
 export const loginRequest = {
   scopes: ["openid", "profile", "email", "User.Read"],
+  prompt: "login",
 };
 
 export const msalInstance = new PublicClientApplication(msalConfig);
