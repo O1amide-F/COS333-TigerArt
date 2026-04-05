@@ -2,6 +2,7 @@ import { Camera, Check } from "lucide-react";
 import { Placeholder } from "../components/Placeholder";
 import { SURVEY_IMAGES } from "../data";
 import { theme } from "../theme";
+import { useMsal } from "@azure/msal-react";
 
 type SettingsScreenProps = {
   username: string;
@@ -13,6 +14,7 @@ type SettingsScreenProps = {
   onSave: () => void;
 };
 
+
 export function SettingsScreen({
   username,
   onUsernameChange,
@@ -22,6 +24,9 @@ export function SettingsScreen({
   onToggleSelection,
   onSave,
 }: SettingsScreenProps) {
+  
+  const msal = useMsal();
+  const instance = msal.instance;
   return (
     <div
       style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}
@@ -54,37 +59,76 @@ export function SettingsScreen({
           marginBottom: 18,
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-          {/* Avatar preview component showing uploaded image or initials. */}
-          <div
-            style={{
-              width: 72,
-              height: 72,
-              borderRadius: "50%",
-              overflow: "hidden",
-              background: theme.components.badge.background,
-              border: `2px solid ${theme.components.card.border}`,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              color: theme.components.badge.mutedText,
-              fontWeight: 700,
-              fontFamily: "'DM Sans', sans-serif",
-            }}
-          >
-            {profileImage ? (
-              <img
-                src={profileImage}
-                alt="Profile"
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+
+          {/* Left — Avatar + Upload Photo */}
+          <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+            {/* Avatar preview component showing uploaded image or initials. */}
+            <div
+              style={{
+                width: 72,
+                height: 72,
+                borderRadius: "50%",
+                overflow: "hidden",
+                background: theme.components.badge.background,
+                border: `2px solid ${theme.components.card.border}`,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: theme.components.badge.mutedText,
+                fontWeight: 700,
+                fontFamily: "'DM Sans', sans-serif",
+              }}
+            >
+              {profileImage ? (
+                <img
+                  src={profileImage}
+                  alt="Profile"
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                />
+              ) : (
+                (username || "U").slice(0, 2).toUpperCase()
+              )}
+            </div>
+
+            {/* File upload trigger component for profile photo changes. */}
+            <label
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+                background: theme.components.badge.background,
+                color: theme.components.badge.text,
+                borderRadius: 6,
+                padding: "8px 12px",
+                cursor: "pointer",
+                fontSize: 13,
+                fontFamily: "'DM Sans', sans-serif",
+              }}
+            >
+              <Camera size={15} strokeWidth={2} />
+              Upload Photo
+            {/* Hidden input component that captures image selection events. */}              
+              <input
+                type="file"
+                accept="image/*"
+                style={{ display: "none" }}
+                onChange={(e) => {
+                  const file = e.target.files?.[0];
+                  if (!file) return;
+                  onProfileImageChange(URL.createObjectURL(file));
+                }}
               />
-            ) : (
-              (username || "U").slice(0, 2).toUpperCase()
-            )}
+            </label>
           </div>
 
-          {/* File upload trigger component for profile photo changes. */}
-          <label
+          {/* Right — Log Out */}
+          <button
+            //onClick={() => instance.logoutRedirect()}    
+            onClick={async () => {
+              await instance.clearCache();
+              window.location.reload();
+            }}
             style={{
               display: "inline-flex",
               alignItems: "center",
@@ -96,24 +140,13 @@ export function SettingsScreen({
               cursor: "pointer",
               fontSize: 13,
               fontFamily: "'DM Sans', sans-serif",
+              border: "none",
             }}
           >
-            <Camera size={15} strokeWidth={2} />
-            Upload Photo
-            {/* Hidden input component that captures image selection events. */}
-            <input
-              type="file"
-              accept="image/*"
-              style={{ display: "none" }}
-              onChange={(e) => {
-                const file = e.target.files?.[0];
-                if (!file) return;
-                onProfileImageChange(URL.createObjectURL(file));
-              }}
-            />
-          </label>
-        </div>
+            Log Out
+          </button>
 
+        </div>
         {/* Username form field component. */}
         <div style={{ marginTop: 14 }}>
           <div
