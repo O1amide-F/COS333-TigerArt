@@ -1,7 +1,7 @@
 import json
 import psycopg2
 
-DB_NAME = "museum_app"
+DB_NAME = "tigerart_db"
 DB_USER = "postgres"
 DB_PASSWORD = "cos333"
 DB_HOST = "localhost"
@@ -18,7 +18,7 @@ def main():
     )
     cur = conn.cursor()
 
-    with open("cloudinary_images.json", "r") as f:
+    with open("on_display_cloudinary_images.json", "r") as f:
         images = json.load(f)
 
     for item in images:
