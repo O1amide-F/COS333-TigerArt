@@ -20,6 +20,8 @@ git clone https://github.com/O1amide-F/COS333-TigerArt
 - requests
 - cloudinary
 
+- ** Note: depending on python library downloaded, run all "python" commands as either "python3" or "python"
+
 Can run:
 ```bash
 pip install flask flask-cors psycopg2 requests cloudinary
@@ -29,7 +31,10 @@ pip install flask flask-cors psycopg2 requests cloudinary
 ```bash
 sudo apt install git-lfs
 git lfs install
+git lfs track "*.json"
+git lfs track "*.zip"
 ```
+
 
 ## 2. Run Backend
 If first time set up is complete:
@@ -43,9 +48,11 @@ Keep the server running in the terminal
 Each person must create the same local database:
 
 ```bash
-createdb museum_app
-python setup_museum_db.py
-python populate_db.py
+createdb tigerart_db
+python3 setup_museum_db.py
+python3 populate_db.py
+python3 github_to_cloudinary.py
+python3 cloudinary_imgs_to_db.py
 ```
 
 Make sure your DB credentials in the code match your local setup: -
