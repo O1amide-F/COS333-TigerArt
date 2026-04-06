@@ -15,6 +15,11 @@ for filename in os.listdir("objects_data"):
         if not media:
             continue
 
+        # checking how many on_view objects there are
+        on_view = obj.get("on_view")
+        if not on_view:
+            continue
+
         first_media = media[0]
         base_uri = first_media.get("uri")
 

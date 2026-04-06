@@ -6,9 +6,9 @@ import zipfile
 import os
 
 cloudinary.config(
-    cloud_name="dfftqt3zi",
-    api_key="964161348152656",
-    api_secret="NiUZN41Ik-peCXJoDvQpZ1s-NFU"
+    cloud_name="dc4nhrcsm",
+    api_key="558446319571127",
+    api_secret="cpYBOlbPSCOgAP4nl2d3nqviOlI"
 )
 
 OBJECTS_URL = "https://static.artmuseum.princeton.edu/collection-data-sets/objects.zip"
@@ -40,6 +40,12 @@ def main():
             if objectid is None:
                 continue
 
+            # only generating Cloudinary image links for artworks that are currently on display
+            on_view = obj.get("on_view")
+
+            if not on_view:
+                continue
+
             media = obj.get("media", [])
 
             if not media:
@@ -69,7 +75,7 @@ def main():
                 # FIX: show real error
                 print(f"Skipping artwork {objectid}: {e}")
 
-    with open("cloudinary_images.json", "w", encoding="utf-8") as f:
+    with open("on_display_cloudinary_images.json", "w", encoding="utf-8") as f:
         json.dump(saved_data, f, indent=4)
 
     print("Done uploading all artwork images to Cloudinary!")

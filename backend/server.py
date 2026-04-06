@@ -5,18 +5,12 @@ import json
 import re
 import os
 
-# DB_NAME = "museum_app"
-# DB_USER = "postgres"
-# DB_PASSWORD = "cos333"
-# DB_HOST = "localhost"
-# DB_PORT = "5432"
-
-DB_NAME = os.getenv("DB_NAME", "museum_app")
+DB_NAME = os.getenv("DB_NAME", "tigerart_db")
 DB_USER = os.getenv("DB_USER", "postgres")
 DB_PASSWORD = os.getenv("DB_PASSWORD", "cos333")
 DB_HOST = os.getenv("DB_HOST", "localhost")
 DB_PORT = os.getenv("DB_PORT", "5432")
-CLOUD_NAME = "dfftqt3zi"
+CLOUD_NAME = "dc4nhrcsm"
 
 app = Flask(__name__)
 CORS(app)

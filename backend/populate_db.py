@@ -53,6 +53,10 @@ def main():
             displaydate = obj.get("displaydate")
             on_view = obj.get("on_view")
 
+            # Only populating database for artworks/pieces that are on view currently
+            if not on_view:
+                continue
+
             cur.execute("""
                 INSERT INTO artworks
                 (objectid, title, displaymaker, department, classification, medium, displaydate, on_view)
@@ -117,43 +121,12 @@ def main():
                 ON CONFLICT (makerid) DO NOTHING;
             """, (makerid, displayname, nationality, begin_date, end_date, bio))
     # -------- TEST DATA --------
-    cur.execute("""
-        INSERT INTO users (name)
-        VALUES (%s);
-    """, ("Test User",))
-
-    cur.execute("""
-        INSERT INTO user_preferences (user_id, preference_type, preference_value)
-        VALUES (%s, %s, %s);
-    """, (1, "classification", "Painting"))
-
-    cur.execute("""
-        INSERT INTO user_preferences (user_id, preference_type, preference_value)
-        VALUES (%s, %s, %s);
-    """, (1, "department", "European Art"))
-
-    cur.execute("""
-        INSERT INTO saved_artworks (user_id, objectid)
-        VALUES (%s, %s);
-    """, (1, 1))
-
-    cur.execute("""
-        INSERT INTO recommendation_cache (user_id, objectid, reason, score)
-        VALUES (%s, %s, %s, %s);
-    """, (1, 1, "matches Painting", 0.95))
-
     news_data = [
         ("Princeton Art Museum Opens New Wing", "Featuring contemporary works from emerging artists"),
         ("Student Exhibition: Semester Showcase", "Over 40 students present original work this Friday"),
         ("Artist Talk: Digital Futures", "Panel discussion on AI and artistic practice"),
         ("New Acquisitions Announced", "Museum collection grows with 12 new pieces")
     ]
-
-    for name, sub in news_data:
-        cur.execute("""
-            INSERT INTO news_items (name, sub)
-            VALUES (%s, %s);
-        """, (name, sub))
 
     conn.commit()
     cur.close()
