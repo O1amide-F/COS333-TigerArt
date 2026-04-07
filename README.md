@@ -51,7 +51,6 @@ Each person must create the same local database:
 createdb tigerart_db
 python3 setup_museum_db.py
 python3 populate_db.py
-python3 github_to_cloudinary.py
 python3 cloudinary_imgs_to_db.py
 ```
 
