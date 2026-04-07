@@ -4,7 +4,7 @@ import zipfile
 import json
 import os
 
-DB_NAME = "museum_app"
+DB_NAME = "tigerart_db"
 DB_USER = "postgres"
 DB_PASSWORD = "cos333"
 DB_HOST = "localhost"
