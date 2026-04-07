@@ -18,6 +18,11 @@ def main():
     )
     cur = conn.cursor()
 
+    cur.execute('''
+    TRUNCATE artwork_images;
+    DELETE FROM artwork_images;
+    ''')
+
     with open("on_display_cloudinary_images.json", "r") as f:
         images = json.load(f)
 

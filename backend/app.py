@@ -4,9 +4,9 @@ import psycopg2.extras
 
 app = Flask(__name__)
 
-DB_NAME = "museum_app"
+DB_NAME = "tigerart_db"
 DB_USER = "postgres"
-DB_PASSWORD = "your_password"
+DB_PASSWORD = "cos333"
 DB_HOST = "localhost"
 DB_PORT = "5432"
 
