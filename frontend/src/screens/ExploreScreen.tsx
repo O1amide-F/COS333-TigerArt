@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Heart } from "lucide-react";
+import { Heart, Pin } from "lucide-react";
 import { Placeholder } from "../components/Placeholder";
 import { SearchBar } from "../components/SearchBar";
 import { getExhibitSections } from "../new_data";
@@ -7,6 +7,8 @@ import { theme } from "../theme";
 import type { ExhibitSection, ForYouItem } from "../types";
 
 const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:5001/api";
+
+const PINNED_SECTIONS_KEY = "tigerart_pinned_sections";
 
 type ExploreScreenProps = {
   onSectionClick: (section: ExhibitSection) => void;
@@ -32,6 +34,23 @@ const styles = {
     padding: "6px 12px",
     borderRadius: 4,
   },
+  pinnedLabel: {
+    margin: "0 0 12px",
+    fontSize: 11,
+    fontFamily: "'DM Sans', sans-serif",
+    fontWeight: 700,
+    letterSpacing: "0.1em",
+    textTransform: "uppercase" as const,
+    color: theme.components.badge.mutedText,
+    display: "flex",
+    alignItems: "center",
+    gap: 5,
+  },
+  divider: {
+    border: "none",
+    borderTop: `1px solid ${theme.components.card.border}`,
+    margin: "20px 0",
+  },
   sectionBlock: { marginBottom: 28 },
   sectionHeader: {
     background: theme.components.badge.background,
@@ -42,8 +61,22 @@ const styles = {
     fontWeight: 600,
     color: theme.components.badge.text,
     marginBottom: 12,
-    display: "inline-block",
+    display: "inline-flex",
+    alignItems: "center",
+    gap: 6,
     cursor: "pointer",
+  },
+  pinButton: {
+    background: "none",
+    border: "none",
+    padding: "2px 4px",
+    cursor: "pointer",
+    display: "inline-flex",
+    alignItems: "center",
+    borderRadius: 4,
+    marginLeft: 2,
+    opacity: 0.55,
+    transition: "opacity 0.15s",
   },
   sectionRow: {
     display: "flex",
@@ -179,17 +212,55 @@ function ExploreSectionCard({
   onSectionClick,
   favorites,
   onToggleFavorite,
+  isPinned,
+  onTogglePin,
 }: {
   section: ExhibitSection;
   onSectionClick: (s: ExhibitSection) => void;
   favorites: number[];
   onToggleFavorite: (id: number) => void;
+  isPinned: boolean;
+  onTogglePin: (name: string) => void;
 }) {
+  const [pinHovered, setPinHovered] = useState(false);
+
   return (
     <div style={styles.sectionBlock}>
-      <div style={styles.sectionHeader} onClick={() => onSectionClick(section)}>
-        {section.name}
+      <div style={{ display: "flex", alignItems: "center", marginBottom: 12 }}>
+        {/* Pin/unpin toggle button — sits to the LEFT of the badge */}
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            onTogglePin(section.name);
+          }}
+          onMouseEnter={() => setPinHovered(true)}
+          onMouseLeave={() => setPinHovered(false)}
+          title={isPinned ? "Unpin section" : "Pin to top"}
+          style={{
+            ...styles.pinButton,
+            opacity: isPinned || pinHovered ? 1 : 0.35,
+            marginLeft: 0,
+            marginRight: 6,
+            color: theme.components.badge.text,
+          }}
+        >
+          <Pin
+            size={15}
+            strokeWidth={2}
+            color={theme.components.badge.text}
+            fill={isPinned ? theme.components.badge.text : "none"}
+          />
+        </button>
+
+        {/* Section name badge — identical style whether pinned or not */}
+        <div
+          style={{ ...styles.sectionHeader, marginBottom: 0 }}
+          onClick={() => onSectionClick(section)}
+        >
+          {section.name}
+        </div>
       </div>
+
       <div style={styles.sectionRow}>
         {section.items.map((item) => (
           <div
@@ -259,12 +330,32 @@ export function ExploreScreen({
   const [sections, setSections] = useState<ExhibitSection[]>([]);
   const [searchResults, setSearchResults] = useState<ForYouItem[] | null>(null);
   const [searchLoading, setSearchLoading] = useState(false);
+  const [pinnedSections, setPinnedSections] = useState<string[]>(() => {
+    try {
+      const stored = localStorage.getItem(PINNED_SECTIONS_KEY);
+      return stored ? JSON.parse(stored) : [];
+    } catch {
+      return [];
+    }
+  });
 
   useEffect(() => {
     getExhibitSections()
       .then((data) => setSections(data))
       .catch((e) => console.error("Error fetching sections:", e));
   }, []);
+
+  const handleTogglePin = (sectionName: string) => {
+    setPinnedSections((prev) => {
+      const updated = prev.includes(sectionName)
+        ? prev.filter((n) => n !== sectionName)
+        : [...prev, sectionName];
+      try {
+        localStorage.setItem(PINNED_SECTIONS_KEY, JSON.stringify(updated));
+      } catch {}
+      return updated;
+    });
+  };
 
   const handleSearch = (query: string) => {
     setSearchLoading(true);
@@ -279,6 +370,22 @@ export function ExploreScreen({
 
   const handleClear = () => setSearchResults(null);
   const isSearching = searchResults !== null;
+
+  // Split sections into pinned and unpinned, preserving pin order
+  const pinnedList = pinnedSections
+    .map((name) => sections.find((s) => s.name === name))
+    .filter((s): s is ExhibitSection => Boolean(s));
+
+  const unpinnedList = sections.filter((s) => !pinnedSections.includes(s.name));
+
+  const sharedCardProps = (section: ExhibitSection) => ({
+    section,
+    onSectionClick,
+    favorites,
+    onToggleFavorite,
+    isPinned: pinnedSections.includes(section.name),
+    onTogglePin: handleTogglePin,
+  });
 
   return (
     <div style={styles.page}>
@@ -358,16 +465,34 @@ export function ExploreScreen({
         </div>
       )}
 
-      {!isSearching &&
-        sections.map((section) => (
-          <ExploreSectionCard
-            key={section.name}
-            section={section}
-            onSectionClick={onSectionClick}
-            favorites={favorites}
-            onToggleFavorite={onToggleFavorite}
-          />
-        ))}
+      {!isSearching && (
+        <>
+          {/* ── Pinned sections ── */}
+          {pinnedList.length > 0 && (
+            <>
+              <div style={styles.pinnedLabel}>
+                <Pin size={11} strokeWidth={2.5} />
+                Pinned
+              </div>
+              {pinnedList.map((section) => (
+                <ExploreSectionCard
+                  key={section.name}
+                  {...sharedCardProps(section)}
+                />
+              ))}
+              <hr style={styles.divider} />
+            </>
+          )}
+
+          {/* ── Remaining sections ── */}
+          {unpinnedList.map((section) => (
+            <ExploreSectionCard
+              key={section.name}
+              {...sharedCardProps(section)}
+            />
+          ))}
+        </>
+      )}
     </div>
   );
 }
