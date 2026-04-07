@@ -355,7 +355,7 @@ def get_exhibits():
 
     cur.execute("""
         WITH ranked_artworks AS (
-            SELECT
+            SELECT DISTINCT ON (a.objectid)
                 a.objectid,
                 a.title,
                 a.medium,
@@ -374,9 +374,8 @@ def get_exhibits():
         )
         SELECT objectid, title, medium, department, image_url
         FROM ranked_artworks
-        WHERE rn <= 5
+        WHERE rn <= 21
         ORDER BY department, rn
-        LIMIT 40;
     """)
 
     rows = cur.fetchall()

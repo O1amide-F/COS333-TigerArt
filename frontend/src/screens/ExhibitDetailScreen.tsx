@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { Heart } from "lucide-react";
 import { Placeholder } from "../components/Placeholder";
 import { theme } from "../theme";
@@ -16,7 +17,12 @@ export function ExhibitDetailScreen({
   favorites,
   onToggleFavorite,
 }: ExhibitDetailScreenProps) {
-  const featuredItem = section.items[0];
+  const shuffledItems = useMemo(
+    () => [...section.items].sort(() => Math.random() - 0.5),
+    [section]
+  );
+
+  const featuredItem = shuffledItems[0];
 
   return (
     <div
@@ -57,80 +63,82 @@ export function ExhibitDetailScreen({
         {section.name}
       </div>
 
-      <div style={{ marginBottom: 10 }}>
-        <div style={{ position: "relative" }}>
-          {featuredItem.imageUrl ? (
-            <img
-              src={featuredItem.imageUrl}
-              alt={featuredItem.name}
+      {featuredItem && (
+        <div style={{ marginBottom: 10 }}>
+          <div style={{ position: "relative" }}>
+            {featuredItem.imageUrl ? (
+              <img
+                src={featuredItem.imageUrl}
+                alt={featuredItem.name}
+                style={{
+                  width: "100%",
+                  aspectRatio: "16 / 9",
+                  objectFit: "cover",
+                  display: "block",
+                  borderRadius: 4,
+                }}
+              />
+            ) : (
+              <Placeholder label="Unable to Render Image" aspectRatio="16/9" />
+            )}
+            <button
+              onClick={() => onToggleFavorite(featuredItem.id)}
               style={{
-                width: "100%",
-                aspectRatio: "16 / 9",
-                objectFit: "cover",
-                display: "block",
-                borderRadius: 4,
+                position: "absolute",
+                top: 8,
+                right: 8,
+                background: "rgba(0,0,0,0.35)",
+                backdropFilter: "blur(4px)",
+                border: "none",
+                borderRadius: "50%",
+                width: 32,
+                height: 32,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                cursor: "pointer",
+              }}
+            >
+              <Heart
+                size={16}
+                strokeWidth={2.2}
+                color={
+                  favorites.includes(featuredItem.id)
+                    ? theme.components.favorite.active
+                    : "#fff"
+                }
+                fill={
+                  favorites.includes(featuredItem.id)
+                    ? theme.components.favorite.active
+                    : "none"
+                }
+              />
+            </button>
+          </div>
+
+          <div style={{ paddingTop: 8 }}>
+            <div
+              style={{
+                fontSize: 14,
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 600,
+                color: theme.components.badge.text,
+                marginBottom: 4,
+              }}
+            >
+              {featuredItem.name}
+            </div>
+            <div
+              style={{
+                width: 80,
+                height: 5,
+                background: theme.components.divider.color,
+                borderRadius: 3,
               }}
             />
-          ) : (
-            <Placeholder label="Unable to Render Image" aspectRatio="16/9" />
-          )}
-          <button
-            onClick={() => onToggleFavorite(featuredItem.id)}
-            style={{
-              position: "absolute",
-              top: 8,
-              right: 8,
-              background: "rgba(0,0,0,0.35)",
-              backdropFilter: "blur(4px)",
-              border: "none",
-              borderRadius: "50%",
-              width: 32,
-              height: 32,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              cursor: "pointer",
-            }}
-          >
-            <Heart
-              size={16}
-              strokeWidth={2.2}
-              color={
-                favorites.includes(featuredItem.id)
-                  ? theme.components.favorite.active
-                  : "#fff"
-              }
-              fill={
-                favorites.includes(featuredItem.id)
-                  ? theme.components.favorite.active
-                  : "none"
-              }
-            />
-          </button>
-        </div>
-
-        <div style={{ paddingTop: 8 }}>
-          <div
-            style={{
-              fontSize: 14,
-              fontFamily: "'DM Sans', sans-serif",
-              fontWeight: 600,
-              color: theme.components.badge.text,
-              marginBottom: 4,
-            }}
-          >
-            {featuredItem.name}
           </div>
-          <div
-            style={{
-              width: 80,
-              height: 5,
-              background: theme.components.divider.color,
-              borderRadius: 3,
-            }}
-          />
         </div>
-      </div>
+      )}
 
       <div
         style={{
@@ -147,7 +155,7 @@ export function ExhibitDetailScreen({
           marginTop: 4,
         }}
       >
-        {section.items.slice(1).map((item) => (
+        {shuffledItems.slice(1).map((item) => (
           <div key={item.id}>
             <div style={{ position: "relative" }}>
               {item.imageUrl ? (
