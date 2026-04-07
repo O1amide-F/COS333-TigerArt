@@ -20,6 +20,7 @@ type FavoriteCard = {
   subtitle: string;
   imageUrl?: string;
 };
+type SortOption = "recency" | "az" | "za";
 
 export function FavoritesScreen({
   favorites,
@@ -31,6 +32,8 @@ export function FavoritesScreen({
   const [isLoading, setIsLoading] = useState(false);
   const [expandedId, setExpandedId] = useState<number | null>(null);
   const [searchQuery, setSearchQuery] = useState<string | null>(null);
+  const [sortBy, setSortBy] = useState<SortOption>("recency");
+  const [showSortMenu, setShowSortMenu] = useState(false);
 
   useEffect(() => {
     setIsLoading(true);
@@ -83,18 +86,32 @@ export function FavoritesScreen({
     [favorites, allCards],
   );
 
-  // Client-side filter by search query (title + subtitle)
+  const sortedCards = useMemo(() => {
+    const cards = [...favoriteCards];
+    if (sortBy === "az")
+      return cards.sort((a, b) => a.title.localeCompare(b.title));
+    if (sortBy === "za")
+      return cards.sort((a, b) => b.title.localeCompare(a.title));
+    return cards.reverse(); // "recency" = order added (favorites array order)
+  }, [favoriteCards, sortBy]);
+
   const displayCards = useMemo(() => {
-    if (!searchQuery) return favoriteCards;
+    if (!searchQuery) return sortedCards;
     const q = searchQuery.toLowerCase();
-    return favoriteCards.filter(
+    return sortedCards.filter(
       (c) =>
         c.title.toLowerCase().includes(q) ||
         c.subtitle.toLowerCase().includes(q),
     );
-  }, [favoriteCards, searchQuery]);
+  }, [sortedCards, searchQuery]);
 
   const isSearching = searchQuery !== null;
+
+  const sortLabels: Record<SortOption, string> = {
+    recency: "Recently Liked",
+    az: "A → Z",
+    za: "Z → A",
+  };
 
   return (
     <div
@@ -106,22 +123,103 @@ export function FavoritesScreen({
         isSearching={isSearching}
       />
 
-      <h1
+      {/* Header row with title + sort button */}
+      <div
         style={{
-          margin: "0 0 24px",
-          fontSize: 22,
-          fontFamily: "'Playfair Display', serif",
-          fontWeight: 900,
-          letterSpacing: "0.06em",
-          color: theme.components.badge.text,
-          background: theme.components.badge.background,
-          display: "inline-block",
-          padding: "6px 12px",
-          borderRadius: 4,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          marginBottom: 24,
         }}
       >
-        {isSearching ? "SEARCH RESULTS" : "FAVORITES"}
-      </h1>
+        <h1
+          style={{
+            margin: 0,
+            fontSize: 22,
+            fontFamily: "'Playfair Display', serif",
+            fontWeight: 900,
+            letterSpacing: "0.06em",
+            color: theme.components.badge.text,
+            background: theme.components.badge.background,
+            display: "inline-block",
+            padding: "6px 12px",
+            borderRadius: 4,
+          }}
+        >
+          {isSearching ? "SEARCH RESULTS" : "FAVORITES"}
+        </h1>
+
+        {/* Sort control */}
+        <div style={{ position: "relative" }}>
+          <button
+            onClick={() => setShowSortMenu((prev) => !prev)}
+            style={{
+              background: theme.components.badge.background,
+              border: `1px solid ${theme.components.card.border}`,
+              borderRadius: 6,
+              padding: "6px 10px",
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: 12,
+              color: theme.components.badge.text,
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              gap: 5,
+            }}
+          >
+            <span>⇅</span>
+            <span>{sortLabels[sortBy]}</span>
+          </button>
+
+          {showSortMenu && (
+            <div
+              style={{
+                position: "absolute",
+                top: "calc(100% + 6px)",
+                right: 0,
+                background: theme.components.card.background,
+                border: `1px solid ${theme.components.card.border}`,
+                borderRadius: 8,
+                overflow: "hidden",
+                boxShadow: "0 4px 16px rgba(0,0,0,0.12)",
+                zIndex: 100,
+                minWidth: 160,
+              }}
+            >
+              {(["recency", "az", "za"] as SortOption[]).map((option) => (
+                <button
+                  key={option}
+                  onClick={() => {
+                    setSortBy(option);
+                    setShowSortMenu(false);
+                  }}
+                  style={{
+                    display: "block",
+                    width: "100%",
+                    textAlign: "left",
+                    padding: "10px 14px",
+                    border: "none",
+                    cursor: "pointer",
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontSize: 13,
+                    background:
+                      sortBy === option
+                        ? theme.components.badge.background
+                        : theme.components.card.background,
+                    color:
+                      sortBy === option
+                        ? theme.components.badge.text
+                        : theme.components.badge.mutedText,
+                    fontWeight: sortBy === option ? 600 : 400,
+                  }}
+                >
+                  {sortLabels[option]}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
 
       {favorites.length > 0 && isLoading ? (
         <div
@@ -270,24 +368,15 @@ export function FavoritesScreen({
                   <div style={{ padding: "12px" }}>
                     <div
                       style={{
-                        display: "flex",
-                        alignItems: "start",
-                        justifyContent: "space-between",
-                        gap: 10,
+                        fontSize: 14,
+                        fontWeight: 700,
+                        color: theme.components.badge.text,
+                        fontFamily: "'DM Sans', sans-serif",
+                        lineHeight: 1.2,
                         marginBottom: 8,
                       }}
                     >
-                      <div
-                        style={{
-                          fontSize: 18,
-                          fontWeight: 700,
-                          color: theme.components.badge.text,
-                          fontFamily: "'DM Sans', sans-serif",
-                          lineHeight: 1.2,
-                        }}
-                      >
-                        {card.title}
-                      </div>
+                      {card.title}
                     </div>
                     <div
                       style={{
