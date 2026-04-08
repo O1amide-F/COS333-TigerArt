@@ -3,6 +3,7 @@ import psycopg2
 import zipfile
 import json
 import os
+import shutil
 
 DB_NAME = "tigerart_db"
 DB_USER = "postgres"
@@ -24,6 +25,20 @@ def main():
     )
     cur = conn.cursor()
 
+    # Clear old data first
+    cur.execute("TRUNCATE TABLE artwork_tags, artwork_images, makers, artworks RESTART IDENTITY CASCADE;")
+    conn.commit()
+
+    # Remove old extracted folders/files if they exist
+    if os.path.exists("objects_data"):
+        shutil.rmtree("objects_data")
+    if os.path.exists("makers_data"):
+        shutil.rmtree("makers_data")
+    if os.path.exists("objects.zip"):
+        os.remove("objects.zip")
+    if os.path.exists("makers.zip"):
+        os.remove("makers.zip")
+
     # -------- OBJECTS --------
     response = requests.get(OBJECTS_URL)
 
@@ -37,7 +52,7 @@ def main():
     with zipfile.ZipFile("objects.zip", "r") as zip_ref:
         zip_ref.extractall("objects_data")
 
-    for filename in os.listdir("objects_data"):
+    for filename in sorted(os.listdir("objects_data")):
         if filename.endswith(".json"):
             filepath = os.path.join("objects_data", filename)
 
@@ -53,15 +68,13 @@ def main():
             displaydate = obj.get("displaydate")
             on_view = obj.get("on_view")
 
-            # Only populating database for artworks/pieces that are on view currently
             if not on_view:
                 continue
 
             cur.execute("""
                 INSERT INTO artworks
                 (objectid, title, displaymaker, department, classification, medium, displaydate, on_view)
-                VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
-                ON CONFLICT (objectid) DO NOTHING;
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s);
             """, (objectid, title, displaymaker, department, classification, medium, displaydate, on_view))
 
             if classification:
@@ -95,7 +108,7 @@ def main():
     with zipfile.ZipFile("makers.zip", "r") as zip_ref:
         zip_ref.extractall("makers_data")
 
-    for filename in os.listdir("makers_data"):
+    for filename in sorted(os.listdir("makers_data")):
         if filename.endswith(".json"):
             filepath = os.path.join("makers_data", filename)
 
@@ -117,16 +130,8 @@ def main():
             cur.execute("""
                 INSERT INTO makers
                 (makerid, displayname, nationality, begin_date, end_date, bio)
-                VALUES (%s, %s, %s, %s, %s, %s)
-                ON CONFLICT (makerid) DO NOTHING;
+                VALUES (%s, %s, %s, %s, %s, %s);
             """, (makerid, displayname, nationality, begin_date, end_date, bio))
-    # -------- TEST DATA --------
-    news_data = [
-        ("Princeton Art Museum Opens New Wing", "Featuring contemporary works from emerging artists"),
-        ("Student Exhibition: Semester Showcase", "Over 40 students present original work this Friday"),
-        ("Artist Talk: Digital Futures", "Panel discussion on AI and artistic practice"),
-        ("New Acquisitions Announced", "Museum collection grows with 12 new pieces")
-    ]
 
     conn.commit()
     cur.close()
