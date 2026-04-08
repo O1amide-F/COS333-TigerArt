@@ -374,7 +374,7 @@ def get_exhibits():
         )
         SELECT objectid, title, medium, department, image_url
         FROM ranked_artworks
-        WHERE rn <= 21
+        WHERE rn <= 10
         ORDER BY department, rn
     """)
 
