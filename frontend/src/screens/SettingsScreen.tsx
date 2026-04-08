@@ -1,4 +1,4 @@
-import { Camera, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import { Placeholder } from "../components/Placeholder";
 import { SURVEY_IMAGES } from "../data";
 import { theme } from "../theme";
@@ -17,14 +17,11 @@ type SettingsScreenProps = {
 
 export function SettingsScreen({
   username,
-  onUsernameChange,
-  profileImage,
-  onProfileImageChange,
   selected,
   onToggleSelection,
   onSave,
 }: SettingsScreenProps) {
-  
+
   const msal = useMsal();
   const instance = msal.instance;
   return (
@@ -49,7 +46,7 @@ export function SettingsScreen({
         SETTINGS
       </h1>
 
-      {/* Profile settings card component (avatar upload + username input). */}
+      {/* Profile settings card component */}
       <div
         style={{
           border: `1px solid ${theme.components.card.border}`,
@@ -60,71 +57,18 @@ export function SettingsScreen({
         }}
       >
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          {/* username as plain text */}
+          <span style={{
+            fontSize: 18,
+            fontFamily: "'DM Sans', sans-serif",
+            color: theme.colors.text,
+            fontWeight: 1000,
+          }}>
+            {username}
+          </span>
 
-          {/* Left — Avatar + Upload Photo */}
-          <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-            {/* Avatar preview component showing uploaded image or initials. */}
-            <div
-              style={{
-                width: 72,
-                height: 72,
-                borderRadius: "50%",
-                overflow: "hidden",
-                background: theme.components.badge.background,
-                border: `2px solid ${theme.components.card.border}`,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: theme.components.badge.mutedText,
-                fontWeight: 700,
-                fontFamily: "'DM Sans', sans-serif",
-              }}
-            >
-              {profileImage ? (
-                <img
-                  src={profileImage}
-                  alt="Profile"
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                />
-              ) : (
-                (username || "U").slice(0, 2).toUpperCase()
-              )}
-            </div>
-
-            {/* File upload trigger component for profile photo changes. */}
-            <label
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 8,
-                background: theme.components.badge.background,
-                color: theme.components.badge.text,
-                borderRadius: 6,
-                padding: "8px 12px",
-                cursor: "pointer",
-                fontSize: 13,
-                fontFamily: "'DM Sans', sans-serif",
-              }}
-            >
-              <Camera size={15} strokeWidth={2} />
-              Upload Photo
-            {/* Hidden input component that captures image selection events. */}              
-              <input
-                type="file"
-                accept="image/*"
-                style={{ display: "none" }}
-                onChange={(e) => {
-                  const file = e.target.files?.[0];
-                  if (!file) return;
-                  onProfileImageChange(URL.createObjectURL(file));
-                }}
-              />
-            </label>
-          </div>
-
-          {/* Right — Log Out */}
+          {/* Sign Out button */}
           <button
-            //onClick={() => instance.logoutRedirect()}    
             onClick={async () => {
               await instance.clearCache();
               window.location.reload();
@@ -143,37 +87,8 @@ export function SettingsScreen({
               border: "none",
             }}
           >
-            Log Out
+            Sign Out
           </button>
-
-        </div>
-        {/* Username form field component. */}
-        <div style={{ marginTop: 14 }}>
-          <div
-            style={{
-              fontSize: 12,
-              color: theme.components.input.mutedText,
-              marginBottom: 6,
-              fontFamily: "'DM Sans', sans-serif",
-            }}
-          >
-            Username
-          </div>
-          <input
-            value={username}
-            onChange={(e) => onUsernameChange(e.target.value)}
-            placeholder="Enter username"
-            style={{
-              width: "100%",
-              border: `1px solid ${theme.components.input.border}`,
-              borderRadius: 8,
-              padding: "10px 12px",
-              fontSize: 14,
-              fontFamily: "'DM Sans', sans-serif",
-              color: theme.components.input.text,
-              background: theme.components.input.background,
-            }}
-          />
         </div>
       </div>
 
