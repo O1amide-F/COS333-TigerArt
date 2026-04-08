@@ -32,7 +32,6 @@ type SurveyConfig = {
 type SurveyScreenProps = {
   onContinue: (selected: number[]) => void;
   username: string;
-  profileImage: string | null;
 };
 
 // --------------------------------------------------------------------------
@@ -41,7 +40,6 @@ type SurveyScreenProps = {
 export function SurveyScreen({
   onContinue,
   username,
-  profileImage,
 }: SurveyScreenProps) {
   const [config, setConfig] = useState<SurveyConfig | null>(null);
   const [loading, setLoading] = useState(true);
@@ -150,38 +148,14 @@ export function SurveyScreen({
         gap: 8,
         marginBottom: 24,
       }}>
-        {/* Avatar */}
-        <div style={{
-          width: 64,
-          height: 64,
-          borderRadius: "50%",
-          background: theme.components.badge.background,
-          border: `2px solid ${theme.components.card.border}`,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          color: theme.components.badge.mutedText,
-          fontSize: 11,
-          fontFamily: "'DM Sans', sans-serif",
-          textAlign: "center",
-          lineHeight: 1.3,
-          overflow: "hidden",
-        }}>
-          {profileImage ? (
-            <img src={profileImage} alt="Profile"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-          ) : (
-            <>{`Profile\nPic`}</>
-          )}
-        </div>
-
+        
         {/* Username badge */}
         <div style={{
           background: theme.components.badge.background,
           borderRadius: 4,
           padding: "4px 16px",
-          color: theme.components.badge.mutedText,
-          fontSize: 13,
+          color: theme.components.badge.text,
+          fontSize: 17,
           fontFamily: "'DM Sans', sans-serif",
         }}>
           {username || "Username"}

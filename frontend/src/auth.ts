@@ -13,7 +13,7 @@ const msalConfig = {
 };
 
 export const loginRequest = {
-  scopes: ["openid", "profile", "email", "User.Read"],
+  scopes: ["openid", "profile", "User.Read"],
   prompt: "login",
 };
 
@@ -41,8 +41,8 @@ async function getAccessToken(): Promise<string | null> {
 }
 
 export interface UserProfile {
+  userid:string;
   displayName: string;
-  email: string;
 }
 
 export async function getUserProfile(): Promise<UserProfile | null> {
@@ -54,10 +54,11 @@ export async function getUserProfile(): Promise<UserProfile | null> {
   const profileRes = await fetch("https://graph.microsoft.com/v1.0/me", { headers });
   if (!profileRes.ok) return null;
   const profile = await profileRes.json();
+  //console.log("profile is ", profile)
 
   return {
     displayName: profile.displayName ?? "",
-    email: profile.mail ?? profile.userPrincipalName ?? "",
+    userid:profile.id,
   };
 }
 
