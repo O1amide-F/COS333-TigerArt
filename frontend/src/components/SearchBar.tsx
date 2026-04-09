@@ -73,7 +73,15 @@ export function SearchBar({ onSearch, onClear, isSearching }: SearchBarProps) {
   const hasValue = value.trim().length > 0;
 
   return (
-    <div style={{ marginBottom: 16 }}>
+    <div style={{ 
+      position: "sticky",
+      top: 0,
+      zIndex: 10,
+      background: theme.components.badge.background,
+      paddingTop: 2,
+      paddingBottom: 0,
+      marginBottom: 8,
+      }}>
       {/* Input row */}
       <div style={{
         background: theme.components.badge.background,
