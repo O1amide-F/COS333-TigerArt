@@ -1,7 +1,6 @@
-import { Check } from "lucide-react";
-import { Placeholder } from "../components/Placeholder";
-import { SURVEY_IMAGES } from "../data";
+import { useState } from "react";
 import { theme } from "../theme";
+import { SurveyFlow } from "../components/SurveyFlow";
 import { useMsal } from "@azure/msal-react";
 
 type SettingsScreenProps = {
@@ -12,79 +11,57 @@ type SettingsScreenProps = {
   selected: number[];
   onToggleSelection: (id: number) => void;
   onSave: () => void;
+  userId: number | null;
 };
-
 
 export function SettingsScreen({
   username,
-  selected,
-  onToggleSelection,
   onSave,
+  userId,
 }: SettingsScreenProps) {
+  const { instance } = useMsal();
+  const [showSurvey, setShowSurvey] = useState(false);
+  const [savedMessage, setSavedMessage] = useState(false);
 
-  const msal = useMsal();
-  const instance = msal.instance;
+  const handleSurveySaved = () => {
+    setShowSurvey(false);
+    setSavedMessage(true);
+    setTimeout(() => setSavedMessage(false), 3000);
+    onSave();
+  };
+
   return (
-    <div
-      style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}
-    >
-      {/* Page title component for user settings. */}
-      <h1
-        style={{
-          margin: "0 0 20px",
-          fontSize: 22,
-          fontFamily: "'Playfair Display', serif",
-          fontWeight: 900,
-          letterSpacing: "0.06em",
-          color: theme.components.badge.text,
-          background: theme.components.badge.background,
-          display: "inline-block",
-          padding: "6px 12px",
-          borderRadius: 4,
-        }}
-      >
+    <div style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}>
+
+      {/* Title */}
+      <h1 style={{
+        margin: "0 0 20px", fontSize: 22,
+        fontFamily: "'Playfair Display', serif", fontWeight: 900,
+        letterSpacing: "0.06em", color: theme.components.badge.text,
+        background: theme.components.badge.background,
+        display: "inline-block", padding: "6px 12px", borderRadius: 4,
+      }}>
         SETTINGS
       </h1>
 
-      {/* Profile settings card component */}
-      <div
-        style={{
-          border: `1px solid ${theme.components.card.border}`,
-          borderRadius: 10,
-          padding: 16,
-          background: theme.components.card.background,
-          marginBottom: 18,
-        }}
-      >
+      {/* Profile card */}
+      <div style={{
+        border: `1px solid ${theme.components.card.border}`, borderRadius: 10,
+        padding: 16, background: theme.components.card.background, marginBottom: 18,
+      }}>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          {/* username as plain text */}
-          <span style={{
-            fontSize: 18,
-            fontFamily: "'DM Sans', sans-serif",
-            color: theme.colors.text,
-            fontWeight: 1000,
-          }}>
+          <span style={{ fontSize: 18, fontFamily: "'DM Sans', sans-serif",
+            color: theme.colors.text, fontWeight: 600 }}>
             {username}
           </span>
-
-          {/* Sign Out button */}
           <button
-            onClick={async () => {
-              await instance.clearCache();
-              window.location.reload();
-            }}
+            onClick={async () => { await instance.clearCache(); window.location.reload(); }}
             style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 8,
+              display: "inline-flex", alignItems: "center", gap: 8,
               background: theme.components.badge.background,
-              color: theme.components.badge.text,
-              borderRadius: 6,
-              padding: "8px 12px",
-              cursor: "pointer",
-              fontSize: 13,
-              fontFamily: "'DM Sans', sans-serif",
-              border: "none",
+              color: theme.components.badge.text, borderRadius: 6,
+              padding: "8px 12px", cursor: "pointer", fontSize: 13,
+              fontFamily: "'DM Sans', sans-serif", border: "none",
             }}
           >
             Sign Out
@@ -92,106 +69,63 @@ export function SettingsScreen({
         </div>
       </div>
 
-      {/* Survey status banner component showing selected-count progress. */}
-      <div
-        style={{
-          background: theme.components.badge.background,
-          borderRadius: 6,
-          padding: "10px 14px",
-          textAlign: "center",
-          fontSize: 13,
-          fontFamily: "'DM Sans', sans-serif",
-          color: theme.components.badge.text,
-          marginBottom: 20,
-        }}
-      >
-        Update your survey preferences ({selected.length}/3 selected)
-      </div>
-
-      {/* Preference image grid component for survey choices. */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: 14,
-          marginBottom: 20,
-        }}
-      >
-        {SURVEY_IMAGES.map((id) => {
-          const isSelected = selected.includes(id);
-          return (
-            // Selectable preference card component.
-            <div
-              key={id}
-              onClick={() => onToggleSelection(id)}
-              style={{
-                borderRadius: 8,
-                overflow: "hidden",
-                border: isSelected
-                  ? `2px solid ${theme.components.button.primaryBackground}`
-                  : `2px solid ${theme.components.card.border}`,
-                cursor: "pointer",
-                transition: "border-color 0.2s, transform 0.15s",
-                transform: isSelected ? "scale(0.97)" : "scale(1)",
-                background: theme.components.card.background,
-              }}
-            >
-              <Placeholder label={`Image ${id}`} aspectRatio="4/3" />
-              <div
-                style={{
-                  padding: "8px 10px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                }}
-              >
-                <div
-                  style={{
-                    width: 48,
-                    height: 6,
-                    background: theme.components.divider.color,
-                    borderRadius: 3,
-                  }}
-                />
-                {/* Selected-state icon component. */}
-                {isSelected && (
-                  <Check
-                    size={14}
-                    strokeWidth={2.5}
-                    color={theme.components.button.primaryBackground}
-                  />
-                )}
-              </div>
+      {/* Survey section */}
+      <div style={{
+        border: `1px solid ${theme.components.card.border}`, borderRadius: 10,
+        padding: 16, background: theme.components.card.background, marginBottom: 18,
+      }}>
+        <div style={{ display: "flex", alignItems: "center",
+          justifyContent: "space-between", marginBottom: showSurvey ? 20 : 0 }}>
+          <div>
+            <div style={{ fontSize: 15, fontWeight: 600, fontFamily: "'DM Sans', sans-serif",
+              color: theme.components.badge.text, marginBottom: 2 }}>
+              Art Preferences
             </div>
-          );
-        })}
-      </div>
+            <div style={{ fontSize: 12, fontFamily: "'DM Sans', sans-serif",
+              color: theme.components.badge.mutedText }}>
+              {showSurvey ? "Select 3 images per question" : "Retake the survey to update your For You feed"}
+            </div>
+          </div>
+          <button
+            onClick={() => setShowSurvey((v) => !v)}
+            style={{
+              background: showSurvey
+                ? theme.components.badge.background
+                : theme.components.button.primaryBackground,
+              color: showSurvey
+                ? theme.components.badge.mutedText
+                : theme.components.button.primaryText,
+              border: "none", borderRadius: 6, padding: "8px 14px",
+              fontFamily: "'DM Sans', sans-serif", fontSize: 13,
+              fontWeight: 500, cursor: "pointer", whiteSpace: "nowrap",
+              flexShrink: 0, marginLeft: 12,
+            }}
+          >
+            {showSurvey ? "Cancel" : "Retake Survey"}
+          </button>
+        </div>
 
-      {/* Save action component enabled only when selection count is valid. */}
-      <div style={{ display: "flex", justifyContent: "flex-end" }}>
-        <button
-          onClick={onSave}
-          style={{
-            background:
-              selected.length === 3
-                ? theme.components.button.primaryBackground
-                : theme.components.button.disabledBackground,
-            color:
-              selected.length === 3
-                ? theme.components.button.primaryText
-                : theme.components.button.disabledText,
-            border: theme.components.button.ghostBorder,
-            borderRadius: 6,
-            padding: "10px 24px",
-            fontFamily: "'DM Sans', sans-serif",
-            fontSize: 14,
-            fontWeight: 500,
-            cursor: selected.length === 3 ? "pointer" : "default",
-            transition: "background 0.2s, color 0.2s",
-          }}
-        >
-          Save Changes
-        </button>
+        {/* Saved confirmation */}
+        {savedMessage && (
+          <div style={{
+            marginTop: 12, padding: "8px 12px", borderRadius: 6,
+            background: "#e8f5e9", color: "#2e7d32",
+            fontSize: 13, fontFamily: "'DM Sans', sans-serif", textAlign: "center",
+          }}>
+            Preferences saved! Your For You feed will update.
+          </div>
+        )}
+
+        {/* Inline survey flow */}
+        {showSurvey && (
+          <div style={{ marginTop: 4 }}>
+            <SurveyFlow
+              userId={userId}
+              onComplete={handleSurveySaved}
+              completeLabel="Save Changes"
+            />
+          </div>
+        )}
       </div>
     </div>
   );

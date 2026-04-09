@@ -271,7 +271,7 @@ def get_connection():
     )
 
 
-def save_user_vector(cur, user_id: int, vector: list[float]):
+def save_user_vector(cur, user_id: str, vector: list[float]):
     """
     Upsert the feature vector into user_preferences.
     preference_type = 'feature_vector'
@@ -285,7 +285,7 @@ def save_user_vector(cur, user_id: int, vector: list[float]):
     """, (user_id, json.dumps(vector)))
 
 
-def load_user_vector(cur, user_id: int) -> list[float] | None:
+def load_user_vector(cur, user_id: str) -> list[float] | None:
     cur.execute("""
         SELECT preference_value FROM user_preferences
         WHERE user_id = %s AND preference_type = 'feature_vector';
@@ -544,8 +544,7 @@ def submit_survey():
 
     return jsonify({"success": True, "vector": user_vector, "dims": FEATURE_DIMS})
 
-
-@app.route("/api/for-you/<int:user_id>")
+@app.route("/api/for-you/<string:user_id>")
 def get_for_you_personalised(user_id):
     """
     Personalised feed: dot-product the user vector against all object
