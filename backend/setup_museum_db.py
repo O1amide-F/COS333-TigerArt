@@ -69,7 +69,7 @@ def main():
     cur.execute("""
         CREATE TABLE IF NOT EXISTS user_preferences (
             id SERIAL PRIMARY KEY,
-            user_id INTEGER,
+            user_id TEXT,
             preference_type TEXT,
             preference_value TEXT
         );
@@ -78,7 +78,7 @@ def main():
     cur.execute("""
         CREATE TABLE IF NOT EXISTS saved_artworks (
             id SERIAL PRIMARY KEY,
-            user_id INTEGER,
+            user_id TEXT,
             objectid BIGINT
         );
     """)
