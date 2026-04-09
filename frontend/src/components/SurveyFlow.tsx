@@ -28,7 +28,7 @@ export type SurveyConfig = {
 export type SurveyAnswers = Record<string, string[]>;
 
 type SurveyFlowProps = {
-  userId: number | null;
+  userId: string | null;
   // Called after successful submission with the selected objectids
   onComplete: (objectIds: number[]) => void;
   // Label for the final button — "Continue" on onboarding, "Save Changes" in settings
@@ -79,7 +79,7 @@ export function SurveyFlow({ userId, onComplete, completeLabel = "Continue" }: S
     setSubmitting(true);
 
     const payload = {
-      userId: userId ?? 1,
+      userId: userId,
       answers: {
         era: answers["era"] ?? [],
         classification: answers["classification"] ?? [],

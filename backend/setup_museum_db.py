@@ -72,6 +72,7 @@ def main():
             user_id TEXT,
             preference_type TEXT,
             preference_value TEXT
+            UNIQUE (user_id, preference_type)
         );
     """)
 

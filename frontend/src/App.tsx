@@ -10,9 +10,11 @@ import { NewsScreen } from "./screens/NewsScreen";
 import { SettingsScreen } from "./screens/SettingsScreen";
 import { SurveyScreen } from "./screens/SurveyScreen";
 import { LoginScreen } from "./screens/LoginScreen";
-import { msalInstance, msalInitPromise, getUserProfile } from "./auth"; 
+import { msalInstance, msalInitPromise, getUserProfile } from "./auth";
 import { theme } from "./theme";
 import type { ExhibitSection, NavId, Screen } from "./types";
+
+const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:5001/api";
 
 const NAV_TO_SCREEN: Record<NavId, Screen> = {
   home: "home",
@@ -44,11 +46,27 @@ function TigerArtAuthenticated() {
   const [surveySelections, setSurveySelections] = useState<number[]>([]);
   const [username, setUsername] = useState("Username");
   const [profileImage, setProfileImage] = useState<string | null>(null);
+  // ── NEW: userId state holds the Entra ID string after login ──
+  const [userId, setUserId] = useState<string | null>(null);
 
   useEffect(() => {
-    getUserProfile().then((profile) => {
+    getUserProfile().then(async (profile) => {
       if (!profile) return;
       setUsername(profile.displayName);
+      setUserId(profile.userid);
+
+      // Check if returning user by seeing if they have a feature vector
+      try {
+        const res = await fetch(`${API_BASE}/for-you/${profile.userid}`);
+        if (res.ok) {
+          // Has a vector — returning user, skip survey
+          setScreen("home");
+          setActiveNav("home");
+        }
+        // 404 means no vector yet — new user, stay on survey
+      } catch (e) {
+        console.error("Failed to check user preferences:", e);
+      }
     });
   }, []);
 
@@ -82,8 +100,9 @@ function TigerArtAuthenticated() {
     setScreen("exhibitDetail");
   };
 
+  // ── userId is now included in templateContext ──
   const templateContext = {
-    favorites, activeSection, surveySelections, username, profileImage,
+    favorites, activeSection, surveySelections, username, profileImage, userId,
     toggleFavorite, toggleSurveySelection, handleSectionClick,
     setScreen, setActiveNav, setSurveySelections, setUsername, setProfileImage,
   };
@@ -99,12 +118,14 @@ function TigerArtAuthenticated() {
         }}
         username={templateContext.username}
         profileImage={templateContext.profileImage}
+        userId={templateContext.userId}
       />
     ),
     home: (
       <ForYouScreen
         favorites={templateContext.favorites}
         onToggleFavorite={templateContext.toggleFavorite}
+        userId={templateContext.userId}
       />
     ),
     explore: (
@@ -141,6 +162,7 @@ function TigerArtAuthenticated() {
         onProfileImageChange={templateContext.setProfileImage}
         selected={templateContext.surveySelections}
         onToggleSelection={templateContext.toggleSurveySelection}
+        userId={templateContext.userId}
         onSave={() => {
           if (templateContext.surveySelections.length === 3) {
             templateContext.setScreen("home");
@@ -159,41 +181,33 @@ function TigerArtAuthenticated() {
       />
       <div className="tiger-art-app">
         <div className="tiger-art-shell" style={{ backgroundColor: theme.colors.bg }}>
-
-          {/* Sidebar / bottom nav — hidden during survey */}
           {screen !== "survey" && (
             <div className="tiger-art-bottom-nav">
               <BottomNav activeNav={activeNav} onNavigate={handleNav} />
             </div>
           )}
-
-          {/* Main content */}
           <div className="tiger-art-content">
             {templates[screen]}
           </div>
-
         </div>
       </div>
     </>
   );
 }
 
-// ── Root export — waits for MSAL to initialize before rendering ──────
 export default function TigerArt() {
-  const [msalReady, setMsalReady] = useState(false); 
+  const [msalReady, setMsalReady] = useState(false);
 
-useEffect(() => {
-  msalInitPromise
-    .then(() => {
-      setMsalReady(true);
-    })
-    .catch((error) => {
-      console.error("MSAL init error:", error);
-      setMsalReady(true); // still render the app even if init fails
-    });
-}, []);                                          
+  useEffect(() => {
+    msalInitPromise
+      .then(() => setMsalReady(true))
+      .catch((error) => {
+        console.error("MSAL init error:", error);
+        setMsalReady(true);
+      });
+  }, []);
 
-  if (!msalReady) return null;                       
+  if (!msalReady) return null;
 
   return (
     <MsalProvider instance={msalInstance}>

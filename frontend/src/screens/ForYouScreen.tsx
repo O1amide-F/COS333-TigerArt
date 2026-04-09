@@ -7,9 +7,9 @@ import type { ForYouItem, ExhibitItem } from "../types";
 import { theme } from "../theme";
 
 const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:5001/api";
-const USER_ID = 1;
 
 type ForYouScreenProps = {
+  userId: string | null;
   favorites: number[];
   onToggleFavorite: (id: number) => void;
 };
@@ -17,7 +17,9 @@ type ForYouScreenProps = {
 export function ForYouScreen({
   favorites,
   onToggleFavorite,
+  userId,
 }: ForYouScreenProps) {
+  console.log("ForYouScreen userId:", userId);
   const [items, setItems] = useState<ForYouItem[]>([]);
   const [searchResults, setSearchResults] = useState<ForYouItem[] | null>(null);
   const [loading, setLoading] = useState(true);
@@ -26,7 +28,9 @@ export function ForYouScreen({
   const [modalItem, setModalItem] = useState<ExhibitItem | null>(null);
 
   useEffect(() => {
-    fetch(`${API_BASE}/for-you/${USER_ID}`)
+    if (!userId) return;
+    setLoading(true);
+    fetch(`${API_BASE}/for-you/${userId}`)
       .then((r) => {
         if (!r.ok) throw new Error("fallback");
         return r.json();
@@ -47,7 +51,7 @@ export function ForYouScreen({
             setLoading(false);
           });
       });
-  }, []);
+  }, [userId]);
 
   const handleSearch = (query: string) => {
     setSearchLoading(true);
@@ -77,6 +81,19 @@ export function ForYouScreen({
     displaymaker: item.displaymaker,
     on_view: item.on_view,
   });
+
+  // userId not ready yet — wait for Entra login to resolve
+  if (!userId) {
+    return (
+      <div style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}>
+        <div style={{ textAlign: "center", padding: "40px 0",
+          fontFamily: "'DM Sans', sans-serif",
+          color: theme.components.badge.mutedText, fontSize: 14 }}>
+          Loading your feed…
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div

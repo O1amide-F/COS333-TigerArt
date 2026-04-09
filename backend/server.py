@@ -13,7 +13,8 @@ DB_PORT = os.getenv("DB_PORT", "5432")
 CLOUD_NAME = "dc4nhrcsm"
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/api/*": {"origins": "*"}}, supports_credentials=False)
+
 
 # ---------------------------------------------------------------------------
 # Feature vector layout (21 dimensions, in this exact order)
