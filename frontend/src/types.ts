@@ -23,6 +23,12 @@ export type ExhibitItem = {
   name: string;
   desc: string;
   imageUrl?: string;
+  // new detail fields for modal
+  department?: string;
+  classification?: string;
+  displaydate?: string;
+  displaymaker?: string;
+  on_view?: boolean;
 };
 
 export type ExhibitSection = {
@@ -35,6 +41,12 @@ export type ForYouItem = {
   title: string;
   about: string;
   imageUrl?: string;
+  // new — matches ExhibitItem detail fields
+  department?: string;
+  classification?: string;
+  displaydate?: string;
+  displaymaker?: string;
+  on_view?: boolean;
 };
 
 export type NewsItem = {

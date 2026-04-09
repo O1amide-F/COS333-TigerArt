@@ -297,7 +297,7 @@ def load_user_vector(cur, user_id: int) -> list[float] | None:
 
 
 # ---------------------------------------------------------------------------
-# Existing endpoints (unchanged)
+# Existing endpoints (unchanged-ish)
 # ---------------------------------------------------------------------------
 
 @app.route("/api/for-you")
@@ -311,7 +311,12 @@ def get_for_you():
             a.objectid AS id,
             a.title,
             CONCAT_WS(' - ', a.medium, a.displaydate, a.displaymaker) AS about,
-            ai.image_url
+                ai.image_url,
+                a.department,
+                a.classification,
+                a.displaydate,
+                a.displaymaker,
+                a.on_view
         FROM artworks a
         LEFT JOIN artwork_images ai
         ON a.objectid = ai.objectid
@@ -330,6 +335,11 @@ def get_for_you():
             "title": row[1],
             "about": row[2],
             "imageUrl": row[3],
+            "department": row[4],
+            "classification": row[5],
+            "displaydate": row[6],
+            "displaymaker": row[7],
+            "on_view": row[8],
         })
 
     return jsonify(items)
@@ -360,6 +370,10 @@ def get_exhibits():
                 a.title,
                 a.medium,
                 a.department,
+                a.classification,
+                a.displaydate,
+                a.displaymaker,
+                a.on_view,
                 ai.image_url,
                 ROW_NUMBER() OVER (
                     PARTITION BY a.department
@@ -372,7 +386,8 @@ def get_exhibits():
               AND TRIM(a.department) <> ''
               AND a.department <> '(not assigned)'
         )
-        SELECT objectid, title, medium, department, image_url
+        SELECT objectid, title, medium, department, classification,
+               displaydate, displaymaker, on_view, image_url
         FROM ranked_artworks
         WHERE rn <= 10
         ORDER BY department, rn
@@ -388,7 +403,15 @@ def get_exhibits():
         if dept not in sections_dict:
             sections_dict[dept] = []
         sections_dict[dept].append({
-            "id": row[0], "name": row[1], "desc": row[2], "imageUrl": row[4]
+            "id":           row[0],
+            "name":         row[1],
+            "desc":         row[2],
+            "department":   row[3],
+            "classification": row[4],
+            "displaydate":  row[5],
+            "displaymaker": row[6],
+            "on_view":      row[7],
+            "imageUrl":     row[8],
         })
 
     return jsonify([{"name": k, "items": v} for k, v in sections_dict.items()])
@@ -547,7 +570,9 @@ def get_for_you_personalised(user_id):
             ai.image_url,
             a.classification,
             a.department,
-            a.displaydate
+            a.displaydate,
+            a.displaymaker,
+            a.on_view
         FROM artworks a
         LEFT JOIN artwork_images ai ON a.objectid = ai.objectid
         WHERE a.title IS NOT NULL;
@@ -559,7 +584,7 @@ def get_for_you_personalised(user_id):
     # Score each artwork
     scored = []
     for row in rows:
-        objectid, title, about, image_url, classification, department, displaydate = row
+        objectid, title, about, image_url, classification, department, displaydate, displaymaker, on_view = row
         obj_vec = tag_object(objectid, classification, department, displaydate)
         score = dot_product(user_vec, obj_vec)
         scored.append((score, {
@@ -568,6 +593,11 @@ def get_for_you_personalised(user_id):
             "about": about,
             "imageUrl": image_url,
             "score": round(score, 4),
+            "department": department,
+            "classification": classification,
+            "displaydate": displaydate,
+            "displaymaker": displaymaker,
+            "on_view": on_view,
         }))
 
     # Return top 10
