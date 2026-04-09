@@ -421,6 +421,52 @@ def get_exhibits():
 # ---------------------------------------------------------------------------
 # New endpoints
 # ---------------------------------------------------------------------------
+@app.route("/api/exhibits/<path:department>")
+def get_exhibit_detail(department):
+    conn = get_connection()
+    cur = conn.cursor()
+
+    cur.execute("""
+        SELECT *
+        FROM (
+            SELECT DISTINCT ON (a.objectid)
+                a.objectid AS id,
+                a.title AS name,
+                a.medium AS desc,
+                a.department,
+                a.classification,
+                a.displaydate,
+                a.displaymaker,
+                a.on_view,
+                ai.image_url AS "imageUrl"
+            FROM artworks a
+            LEFT JOIN artwork_images ai
+                ON a.objectid = ai.objectid
+            WHERE a.department = %s
+            ORDER BY a.objectid
+        ) AS unique_artworks
+        ORDER BY RANDOM();
+    """, (department,))
+
+    rows = cur.fetchall()
+    cur.close()
+    conn.close()
+
+    items = []
+    for row in rows:
+        items.append({
+            "id": row[0],
+            "name": row[1],
+            "desc": row[2],
+            "department": row[3],
+            "classification": row[4],
+            "displaydate": row[5],
+            "displaymaker": row[6],
+            "on_view": row[7],
+            "imageUrl": row[8],
+        })
+
+    return jsonify(items)
 
 @app.route("/api/survey/config")
 def get_survey_config():

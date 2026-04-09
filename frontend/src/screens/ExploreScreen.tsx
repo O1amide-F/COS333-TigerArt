@@ -262,7 +262,7 @@ function ExploreSectionCard({
       </div>
 
       <div style={styles.sectionRow}>
-        {section.items.slice(0, 4).map((item) => (
+        {section.items.slice(0, 6).map((item) => (
           <div
             key={item.id}
             style={styles.cardInner}

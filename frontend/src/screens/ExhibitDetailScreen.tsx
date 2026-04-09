@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Heart } from "lucide-react";
 import { Placeholder } from "../components/Placeholder";
 import { ArtworkModal } from "../components/ArtworkModal";
@@ -19,13 +19,28 @@ export function ExhibitDetailScreen({
   onToggleFavorite,
 }: ExhibitDetailScreenProps) {
   const [modalItem, setModalItem] = useState<ExhibitItem | null>(null);
+  const [detailItems, setDetailItems] = useState<ExhibitItem[]>([]);
+  const [visibleCount, setVisibleCount] = useState(4);
+
+  useEffect(() => {
+    fetch(`http://localhost:5001/api/exhibits/${encodeURIComponent(section.name)}`)
+      .then((res) => res.json())
+      .then((data) => setDetailItems(data))
+      .catch(() => setDetailItems(section.items));
+  }, [section]);
+
+  useEffect(() => {
+    setVisibleCount(4);
+  }, [section]);
 
   const shuffledItems = useMemo(
-    () => [...section.items].sort(() => Math.random() - 0.5),
-    [section],
+    () => [...detailItems].sort(() => Math.random() - 0.5),
+    [detailItems],
   );
 
   const featuredItem = shuffledItems[0];
+  const gridItems = shuffledItems.slice(1, 1 + visibleCount);
+  const hasMore = shuffledItems.length - 1 > visibleCount;
 
   return (
     <div
@@ -164,7 +179,7 @@ export function ExhibitDetailScreen({
           marginTop: 4,
         }}
       >
-        {shuffledItems.slice(1).map((item) => (
+        {gridItems.map((item) => (
           <div
             key={item.id}
             style={{ cursor: "pointer" }}
@@ -247,6 +262,27 @@ export function ExhibitDetailScreen({
           </div>
         ))}
       </div>
+
+      {hasMore && (
+        <div style={{ marginTop: 16, display: "flex", justifyContent: "center" }}>
+          <button
+            onClick={() => setVisibleCount((prev) => prev + 6)}
+            style={{
+              padding: "10px 16px",
+              borderRadius: 6,
+              border: "none",
+              cursor: "pointer",
+              fontSize: 14,
+              fontFamily: "'DM Sans', sans-serif",
+              fontWeight: 600,
+              background: theme.components.badge.background,
+              color: theme.components.badge.text,
+            }}
+          >
+            Click here to view more images
+          </button>
+        </div>
+      )}
 
       {modalItem && (
         <ArtworkModal
