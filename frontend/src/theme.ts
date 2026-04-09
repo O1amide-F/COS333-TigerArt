@@ -3,7 +3,7 @@ const colors = {
   surface: "#F2F1EE",
   border: "#E0DED9",
   text: "#1A1A18",
-  muted: "#888882",
+  muted_orange: "#7d471f",
   accent: "#1A1A18",
   navy: "#0F1923",
   white: "#FFFFFF",
@@ -26,7 +26,7 @@ export const theme = {
       primaryBackground: colors.navy,
       primaryText: colors.white,
       disabledBackground: colors.surface,
-      disabledText: colors.muted,
+      disabledText: colors.muted_orange,
     },
     favorites_card: {
       background: colors.white,
@@ -39,13 +39,13 @@ export const theme = {
     badge: {
       background: colors.surface,
       text: colors.text,
-      mutedText: colors.muted,
+      mutedText: colors.muted_orange,
     },
     input: {
       background: colors.bg,
       border: colors.border,
       text: colors.text,
-      mutedText: colors.muted,
+      mutedText: colors.muted_orange,
     },
     favorite: {
       active: colors.danger,
@@ -54,7 +54,7 @@ export const theme = {
     placeholder: {
       gradientStart: colors.surface,
       gradientEnd: colors.placeholderGradientEnd,
-      label: colors.muted,
+      label: colors.muted_orange,
     },
     divider: {
       color: colors.border,
