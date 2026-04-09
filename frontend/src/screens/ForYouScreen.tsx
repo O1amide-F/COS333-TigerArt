@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { Heart } from "lucide-react";
 import { SearchBar } from "../components/SearchBar";
 import { Placeholder } from "../components/Placeholder";
-import type { ForYouItem } from "../types";
+import { ArtworkModal } from "../components/ArtworkModal";
+import type { ForYouItem, ExhibitItem } from "../types";
 import { theme } from "../theme";
 
 const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:5001/api";
@@ -22,7 +23,7 @@ export function ForYouScreen({
   const [loading, setLoading] = useState(true);
   const [searchLoading, setSearchLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [expandedId, setExpandedId] = useState<number | null>(null);
+  const [modalItem, setModalItem] = useState<ExhibitItem | null>(null);
 
   useEffect(() => {
     fetch(`${API_BASE}/for-you/${USER_ID}`)
@@ -63,6 +64,19 @@ export function ForYouScreen({
 
   const displayItems = searchResults ?? items;
   const isSearching = searchResults !== null;
+
+  // Map ForYouItem → ExhibitItem for the shared modal
+  const toExhibitItem = (item: ForYouItem): ExhibitItem => ({
+    id: item.id,
+    name: item.title,
+    desc: item.about,
+    imageUrl: item.imageUrl,
+    department: item.department,
+    classification: item.classification,
+    displaydate: item.displaydate,
+    displaymaker: item.displaymaker,
+    on_view: item.on_view,
+  });
 
   return (
     <div
@@ -172,137 +186,103 @@ export function ForYouScreen({
         <div
           style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}
         >
-          {displayItems.map((item) => {
-            const aspectRatio = "1/1";
-
-            const isExpanded = expandedId === item.id;
-
-            return (
-              <div
-                key={item.id}
-                style={{
-                  breakInside: "avoid",
-                  marginBottom: 12,
-                  border: `1px solid ${theme.components.card.border}`,
-                  borderRadius: 8,
-                  overflow: "hidden",
-                  background: theme.components.card.background,
-                }}
-              >
-                {/* Image with heart overlaid top-right */}
-                <div style={{ position: "relative" }}>
-                  {item.imageUrl ? (
-                    <img
-                      src={item.imageUrl}
-                      alt={item.title}
-                      style={{
-                        width: "100%",
-                        aspectRatio,
-                        objectFit: "cover",
-                        display: "block",
-                      }}
-                    />
-                  ) : (
-                    <Placeholder
-                      label="Unable to Render Image"
-                      aspectRatio={aspectRatio}
-                      style={{ borderRadius: 0 }}
-                    />
-                  )}
-                  <button
-                    onClick={() => onToggleFavorite(item.id)}
+          {displayItems.map((item) => (
+            <div
+              key={item.id}
+              onClick={() => setModalItem(toExhibitItem(item))}
+              style={{
+                breakInside: "avoid",
+                marginBottom: 12,
+                border: `1px solid ${theme.components.card.border}`,
+                borderRadius: 8,
+                overflow: "hidden",
+                background: theme.components.card.background,
+                cursor: "pointer",
+              }}
+            >
+              <div style={{ position: "relative" }}>
+                {item.imageUrl ? (
+                  <img
+                    src={item.imageUrl}
+                    alt={item.title}
                     style={{
-                      position: "absolute",
-                      top: 8,
-                      right: 8,
-                      background: "rgba(0,0,0,0.35)",
-                      backdropFilter: "blur(4px)",
-                      border: "none",
-                      borderRadius: "50%",
-                      width: 32,
-                      height: 32,
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      cursor: "pointer",
-                      flexShrink: 0,
+                      width: "100%",
+                      aspectRatio: "1/1",
+                      objectFit: "cover",
+                      display: "block",
                     }}
-                  >
-                    <Heart
-                      size={16}
-                      strokeWidth={2.2}
-                      color={
-                        favorites.includes(item.id)
-                          ? theme.components.favorite.active
-                          : "#fff"
-                      }
-                      fill={
-                        favorites.includes(item.id)
-                          ? theme.components.favorite.active
-                          : "none"
-                      }
-                    />
-                  </button>
-                </div>
-
-                {/* Title always visible, tapping toggles details */}
-                <div
-                  onClick={() =>
-                    setExpandedId((prev) => (prev === item.id ? null : item.id))
-                  }
+                  />
+                ) : (
+                  <Placeholder
+                    label="Unable to Render Image"
+                    aspectRatio="1/1"
+                    style={{ borderRadius: 0 }}
+                  />
+                )}
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onToggleFavorite(item.id);
+                  }}
                   style={{
-                    padding: "8px 10px",
-                    cursor: "pointer",
+                    position: "absolute",
+                    top: 8,
+                    right: 8,
+                    background: "rgba(0,0,0,0.35)",
+                    backdropFilter: "blur(4px)",
+                    border: "none",
+                    borderRadius: "50%",
+                    width: 32,
+                    height: 32,
                     display: "flex",
                     alignItems: "center",
-                    justifyContent: "space-between",
-                    gap: 6,
+                    justifyContent: "center",
+                    cursor: "pointer",
+                    flexShrink: 0,
                   }}
                 >
-                  <div
-                    style={{
-                      fontSize: 13,
-                      fontWeight: 600,
-                      color: theme.components.badge.text,
-                      fontFamily: "'DM Sans', sans-serif",
-                      lineHeight: 1.3,
-                    }}
-                  >
-                    {item.title}
-                  </div>
-                  <span
-                    style={{
-                      fontSize: 10,
-                      color: theme.components.badge.mutedText,
-                      flexShrink: 0,
-                      transition: "transform 180ms",
-                      transform: isExpanded ? "rotate(180deg)" : "rotate(0deg)",
-                    }}
-                  >
-                    ▼
-                  </span>
-                </div>
-
-                {/* Expandable details */}
-                {isExpanded && (
-                  <div
-                    style={{
-                      padding: "0 10px 10px",
-                      fontSize: 12,
-                      fontFamily: "'DM Sans', sans-serif",
-                      color: theme.components.badge.mutedText,
-                      lineHeight: 1.5,
-                      borderTop: `1px solid ${theme.components.card.border}`,
-                      paddingTop: 8,
-                    }}
-                  >
-                    {item.about}
-                  </div>
-                )}
+                  <Heart
+                    size={16}
+                    strokeWidth={2.2}
+                    color={
+                      favorites.includes(item.id)
+                        ? theme.components.favorite.active
+                        : "#fff"
+                    }
+                    fill={
+                      favorites.includes(item.id)
+                        ? theme.components.favorite.active
+                        : "none"
+                    }
+                  />
+                </button>
               </div>
-            );
-          })}
+
+              {/* Title only shown on card — full details in modal */}
+              <div
+                style={{
+                  padding: "8px 10px",
+                  fontSize: 13,
+                  fontWeight: 600,
+                  color: theme.components.badge.text,
+                  fontFamily: "'DM Sans', sans-serif",
+                  lineHeight: 1.3,
+                }}
+              >
+                {item.title}
+              </div>
+            </div>
+          ))}
         </div>
+      )}
+
+      {modalItem && (
+        <ArtworkModal
+          item={modalItem}
+          favorites={favorites}
+          onToggleFavorite={onToggleFavorite}
+          onClose={() => setModalItem(null)}
+        />
       )}
     </div>
   );

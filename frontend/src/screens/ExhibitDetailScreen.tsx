@@ -1,8 +1,9 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { Heart } from "lucide-react";
 import { Placeholder } from "../components/Placeholder";
+import { ArtworkModal } from "../components/ArtworkModal";
 import { theme } from "../theme";
-import type { ExhibitSection } from "../types";
+import type { ExhibitItem, ExhibitSection } from "../types";
 
 type ExhibitDetailScreenProps = {
   section: ExhibitSection;
@@ -17,9 +18,11 @@ export function ExhibitDetailScreen({
   favorites,
   onToggleFavorite,
 }: ExhibitDetailScreenProps) {
+  const [modalItem, setModalItem] = useState<ExhibitItem | null>(null);
+
   const shuffledItems = useMemo(
     () => [...section.items].sort(() => Math.random() - 0.5),
-    [section]
+    [section],
   );
 
   const featuredItem = shuffledItems[0];
@@ -64,7 +67,10 @@ export function ExhibitDetailScreen({
       </div>
 
       {featuredItem && (
-        <div style={{ marginBottom: 10 }}>
+        <div
+          style={{ marginBottom: 10, cursor: "pointer" }}
+          onClick={() => setModalItem(featuredItem)}
+        >
           <div style={{ position: "relative" }}>
             {featuredItem.imageUrl ? (
               <img
@@ -82,7 +88,10 @@ export function ExhibitDetailScreen({
               <Placeholder label="Unable to Render Image" aspectRatio="16/9" />
             )}
             <button
-              onClick={() => onToggleFavorite(featuredItem.id)}
+              onClick={(e) => {
+                e.stopPropagation();
+                onToggleFavorite(featuredItem.id);
+              }}
               style={{
                 position: "absolute",
                 top: 8,
@@ -156,7 +165,11 @@ export function ExhibitDetailScreen({
         }}
       >
         {shuffledItems.slice(1).map((item) => (
-          <div key={item.id}>
+          <div
+            key={item.id}
+            style={{ cursor: "pointer" }}
+            onClick={() => setModalItem(item)}
+          >
             <div style={{ position: "relative" }}>
               {item.imageUrl ? (
                 <img
@@ -174,7 +187,10 @@ export function ExhibitDetailScreen({
                 <Placeholder label="Unable to Render Image" aspectRatio="1/1" />
               )}
               <button
-                onClick={() => onToggleFavorite(item.id)}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onToggleFavorite(item.id);
+                }}
                 style={{
                   position: "absolute",
                   top: 8,
@@ -231,6 +247,15 @@ export function ExhibitDetailScreen({
           </div>
         ))}
       </div>
+
+      {modalItem && (
+        <ArtworkModal
+          item={modalItem}
+          favorites={favorites}
+          onToggleFavorite={onToggleFavorite}
+          onClose={() => setModalItem(null)}
+        />
+      )}
     </div>
   );
 }
