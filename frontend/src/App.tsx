@@ -146,7 +146,6 @@ function TigerArtAuthenticated() {
           templateContext.setActiveNav("home");
         }}
         username={templateContext.username}
-        profileImage={templateContext.profileImage}
         userId={templateContext.userId}
       />
     ),
