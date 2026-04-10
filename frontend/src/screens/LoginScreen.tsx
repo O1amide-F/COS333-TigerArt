@@ -25,7 +25,7 @@ export function LoginScreen() {
       <h1 style={{ fontFamily: "'Playfair Display', serif", marginBottom: 8 }}>
         Welcome to TigerArt
       </h1>
-      <p style={{ color: theme.colors.muted, marginBottom: 24 }}>
+      <p style={{ color: theme.colors.text, marginBottom: 24 }}>
         Please log in to continue
       </p>
       <button
