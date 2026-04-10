@@ -25,7 +25,6 @@ export function ExhibitDetailScreen({
   const [modalItem, setModalItem] = useState<ExhibitItem | null>(null);
   const [detailItems, setDetailItems] = useState<ExhibitItem[]>([]);
   const [visibleCount, setVisibleCount] = useState(4);
-  const [pendingIds, setPendingIds] = useState<Set<number>>(new Set());
 
   useEffect(() => {
     fetch(`${API_BASE}/exhibits/${encodeURIComponent(section.name)}`)
@@ -47,49 +46,15 @@ export function ExhibitDetailScreen({
   const gridItems = shuffledItems.slice(1, 1 + visibleCount);
   const hasMore = shuffledItems.length - 1 > visibleCount;
 
-  // Calls backend then syncs parent state
-  const handleToggle = async (artworkId: number) => {
-    if (pendingIds.has(artworkId)) return; // debounce double-taps
-    setPendingIds((prev) => new Set(prev).add(artworkId));
-
-    const isFavorited = favorites.includes(artworkId);
-    const method = isFavorited ? "DELETE" : "POST";
-
-    try {
-      const res = await fetch(`${API_BASE}/favorites/${userId}/${artworkId}`, {
-        method,
-      });
-      if (!res.ok) throw new Error(`Server error: ${res.status}`);
-      // Only update parent state after confirmed backend write
-      onToggleFavorite(artworkId);
-    } catch (e) {
-      console.error("Failed to toggle favorite:", e);
-      // Optionally show a toast/snackbar here
-    } finally {
-      setPendingIds((prev) => {
-        const s = new Set(prev);
-        s.delete(artworkId);
-        return s;
-      });
-    }
-  };
-
-  const HeartButton = ({
-    itemId,
-    style,
-  }: {
-    itemId: number;
-    style?: React.CSSProperties;
-  }) => {
+  // Shared heart button — delegates entirely to onToggleFavorite (App.tsx hits backend)
+  const HeartButton = ({ itemId }: { itemId: number }) => {
     const isFavorited = favorites.includes(itemId);
-    const isPending = pendingIds.has(itemId);
     return (
       <button
         onClick={(e) => {
           e.stopPropagation();
-          handleToggle(itemId);
+          onToggleFavorite(itemId);
         }}
-        disabled={isPending}
         style={{
           position: "absolute",
           top: 8,
@@ -103,10 +68,7 @@ export function ExhibitDetailScreen({
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          cursor: isPending ? "default" : "pointer",
-          opacity: isPending ? 0.6 : 1,
-          transition: "opacity 150ms ease",
-          ...style,
+          cursor: "pointer",
         }}
       >
         <Heart
@@ -158,7 +120,6 @@ export function ExhibitDetailScreen({
         {section.name}
       </div>
 
-      {/* Featured item */}
       {featuredItem && (
         <div
           style={{ marginBottom: 10, cursor: "pointer" }}
@@ -182,7 +143,6 @@ export function ExhibitDetailScreen({
             )}
             <HeartButton itemId={featuredItem.id} />
           </div>
-
           <div style={{ paddingTop: 8 }}>
             <div
               style={{
@@ -214,7 +174,6 @@ export function ExhibitDetailScreen({
         }}
       />
 
-      {/* Grid */}
       <div
         style={{
           display: "grid",
@@ -299,7 +258,7 @@ export function ExhibitDetailScreen({
         <ArtworkModal
           item={modalItem}
           favorites={favorites}
-          onToggleFavorite={handleToggle}
+          onToggleFavorite={onToggleFavorite}
           onClose={() => setModalItem(null)}
         />
       )}
