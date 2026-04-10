@@ -1,6 +1,10 @@
 import { useEffect, useState, type ReactNode } from "react";
 import "./App.css";
-import { MsalProvider, AuthenticatedTemplate, UnauthenticatedTemplate } from "@azure/msal-react";
+import {
+  MsalProvider,
+  AuthenticatedTemplate,
+  UnauthenticatedTemplate,
+} from "@azure/msal-react";
 import { BottomNav } from "./components/BottomNav";
 import { ExploreScreen } from "./screens/ExploreScreen";
 import { ExhibitDetailScreen } from "./screens/ExhibitDetailScreen";
@@ -24,38 +28,39 @@ const NAV_TO_SCREEN: Record<NavId, Screen> = {
   settings: "settings",
 };
 
-const FAVORITES_STORAGE_KEY = "tigerart:favorites";
-
-function getInitialFavorites(): number[] {
-  try {
-    const saved = localStorage.getItem(FAVORITES_STORAGE_KEY);
-    if (!saved) return [];
-    const parsed = JSON.parse(saved);
-    if (!Array.isArray(parsed)) return [];
-    return parsed.filter((value): value is number => Number.isInteger(value));
-  } catch {
-    return [];
-  }
-}
-
 function TigerArtAuthenticated() {
   const [screen, setScreen] = useState<Screen>("survey");
-  const [favorites, setFavorites] = useState<number[]>(getInitialFavorites);
-  const [activeSection, setActiveSection] = useState<ExhibitSection | null>(null);
+  const [favorites, setFavorites] = useState<number[]>([]);
+  const [activeSection, setActiveSection] = useState<ExhibitSection | null>(
+    null,
+  );
   const [activeNav, setActiveNav] = useState<NavId>("home");
   const [surveySelections, setSurveySelections] = useState<number[]>([]);
   const [username, setUsername] = useState("Username");
   const [profileImage, setProfileImage] = useState<string | null>(null);
-  // ── NEW: userId state holds the Entra ID string after login ──
   const [userId, setUserId] = useState<string | null>(null);
 
+  // On login: load userId, favorites from backend, skip survey if returning user
   useEffect(() => {
     getUserProfile().then(async (profile) => {
       if (!profile) return;
       setUsername(profile.displayName);
       setUserId(profile.userid);
 
-      // Check if returning user by seeing if they have a feature vector
+      // Load this user's favorited artwork IDs from the backend
+      try {
+        const favRes = await fetch(
+          `${API_BASE}/favorites/${profile.userid}/ids`,
+        );
+        if (favRes.ok) {
+          const ids: number[] = await favRes.json();
+          setFavorites(ids);
+        }
+      } catch (e) {
+        console.error("Failed to load favorites:", e);
+      }
+
+      // Skip survey if user already has a feature vector
       try {
         const res = await fetch(`${API_BASE}/for-you/${profile.userid}`);
         if (res.ok) {
@@ -70,15 +75,29 @@ function TigerArtAuthenticated() {
     });
   }, []);
 
-  const toggleFavorite = (id: number) => {
-    setFavorites((prev) =>
-      prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id],
-    );
+  // ── Single source of truth for toggling favorites ──
+  // Hits the backend first, then updates local state on success.
+  // All screens call this via onToggleFavorite — no screen needs its own fetch.
+  const toggleFavorite = async (id: number) => {
+    if (!userId) {
+      console.warn("toggleFavorite called before userId resolved");
+      return;
+    }
+    const isFavorited = favorites.includes(id);
+    const method = isFavorited ? "DELETE" : "POST";
+    try {
+      const res = await fetch(`${API_BASE}/favorites/${userId}/${id}`, {
+        method,
+      });
+      if (!res.ok) throw new Error(`Server error: ${res.status}`);
+      // Update local state only after backend confirms
+      setFavorites((prev) =>
+        isFavorited ? prev.filter((x) => x !== id) : [...prev, id],
+      );
+    } catch (e) {
+      console.error("Failed to toggle favorite:", e);
+    }
   };
-
-  useEffect(() => {
-    localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify(favorites));
-  }, [favorites]);
 
   const handleNav = (id: NavId) => {
     setActiveNav(id);
@@ -100,11 +119,21 @@ function TigerArtAuthenticated() {
     setScreen("exhibitDetail");
   };
 
-  // ── userId is now included in templateContext ──
   const templateContext = {
-    favorites, activeSection, surveySelections, username, profileImage, userId,
-    toggleFavorite, toggleSurveySelection, handleSectionClick,
-    setScreen, setActiveNav, setSurveySelections, setUsername, setProfileImage,
+    favorites,
+    activeSection,
+    surveySelections,
+    username,
+    profileImage,
+    userId,
+    toggleFavorite,
+    toggleSurveySelection,
+    handleSectionClick,
+    setScreen,
+    setActiveNav,
+    setSurveySelections,
+    setUsername,
+    setProfileImage,
   };
 
   const templates: Record<Screen, ReactNode> = {
@@ -130,13 +159,17 @@ function TigerArtAuthenticated() {
     ),
     explore: (
       <ExploreScreen
+        userId={templateContext.userId}
         onSectionClick={templateContext.handleSectionClick}
         favorites={templateContext.favorites}
         onToggleFavorite={templateContext.toggleFavorite}
       />
     ),
     exhibitDetail: templateContext.activeSection ? (
+      // ExhibitDetailScreen has its own handleToggle that also calls the backend
+      // directly — pass onToggleFavorite so local state stays in sync after
       <ExhibitDetailScreen
+        userId={templateContext.userId}
         section={templateContext.activeSection}
         onBack={() => templateContext.setScreen("explore")}
         favorites={templateContext.favorites}
@@ -145,6 +178,7 @@ function TigerArtAuthenticated() {
     ) : null,
     favorites: (
       <FavoritesScreen
+        userId={templateContext.userId}
         favorites={templateContext.favorites}
         onToggleFavorite={templateContext.toggleFavorite}
         onNavHome={() => {
@@ -180,15 +214,16 @@ function TigerArtAuthenticated() {
         rel="stylesheet"
       />
       <div className="tiger-art-app">
-        <div className="tiger-art-shell" style={{ backgroundColor: theme.colors.bg }}>
+        <div
+          className="tiger-art-shell"
+          style={{ backgroundColor: theme.colors.bg }}
+        >
           {screen !== "survey" && (
             <div className="tiger-art-bottom-nav">
               <BottomNav activeNav={activeNav} onNavigate={handleNav} />
             </div>
           )}
-          <div className="tiger-art-content">
-            {templates[screen]}
-          </div>
+          <div className="tiger-art-content">{templates[screen]}</div>
         </div>
       </div>
     </>

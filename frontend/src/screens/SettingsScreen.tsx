@@ -11,7 +11,7 @@ type SettingsScreenProps = {
   selected: number[];
   onToggleSelection: (id: number) => void;
   onSave: () => void;
-  userId: number | null;
+  userId: string | null;
 };
 
 export function SettingsScreen({

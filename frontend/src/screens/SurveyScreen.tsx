@@ -4,7 +4,7 @@ import { SurveyFlow } from "../components/SurveyFlow";
 type SurveyScreenProps = {
   onContinue: (selected: number[]) => void;
   username: string;
-  userId: number | null;
+  userId: string | null;
 };
 
 export function SurveyScreen({ onContinue, username, userId }: SurveyScreenProps) {

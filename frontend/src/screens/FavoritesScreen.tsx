@@ -2,16 +2,22 @@ import { useEffect, useMemo, useState } from "react";
 import { Heart } from "lucide-react";
 import { Placeholder } from "../components/Placeholder";
 import { SearchBar } from "../components/SearchBar";
-import { getExhibitSections, getForYouItems } from "../new_data";
 import { theme } from "../theme";
-import type { ExhibitSection, ForYouItem } from "../types";
 
-// const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:5001/api";
+const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:5001/api";
 
 type FavoritesScreenProps = {
+  userId: string | null;
   favorites: number[];
   onToggleFavorite: (id: number) => void;
   onNavHome: () => void;
+};
+
+type ArtworkFromAPI = {
+  artwork_id: number;
+  title: string;
+  description?: string;
+  image_url?: string;
 };
 
 type FavoriteCard = {
@@ -20,70 +26,54 @@ type FavoriteCard = {
   subtitle: string;
   imageUrl?: string;
 };
+
 type SortOption = "recency" | "az" | "za";
 
 export function FavoritesScreen({
+  userId,
   favorites,
   onToggleFavorite,
   onNavHome,
 }: FavoritesScreenProps) {
-  const [forYouItems, setForYouItems] = useState<ForYouItem[]>([]);
-  const [sections, setSections] = useState<ExhibitSection[]>([]);
+  const [artworks, setArtworks] = useState<ArtworkFromAPI[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [expandedId, setExpandedId] = useState<number | null>(null);
   const [searchQuery, setSearchQuery] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState<SortOption>("recency");
   const [showSortMenu, setShowSortMenu] = useState(false);
 
   useEffect(() => {
+    if (!userId) return;
     setIsLoading(true);
-    Promise.all([getForYouItems(), getExhibitSections()])
-      .then(([forYou, exhibitSections]) => {
-        setForYouItems(forYou);
-        setSections(exhibitSections);
+    setError(null);
+    fetch(`${API_BASE}/favorites/${userId}`)
+      .then((res) => {
+        if (!res.ok) throw new Error(`Server error: ${res.status}`);
+        return res.json();
       })
-      .catch((e) => console.error("Error fetching favorites data:", e))
+      .then((data: ArtworkFromAPI[]) => setArtworks(data))
+      .catch((e) => {
+        console.error("Error fetching favorites:", e);
+        setError("Could not load favorites. Is the server running?");
+      })
       .finally(() => setIsLoading(false));
-  }, []);
+  }, [userId, favorites]); // re-fetch when favorites toggle so removals reflect immediately
 
   useEffect(() => {
     if (expandedId !== null && !favorites.includes(expandedId))
       setExpandedId(null);
   }, [favorites, expandedId]);
 
-  // Build a lookup of all known items by id
-  const allCards = useMemo(() => {
-    const byId = new Map<number, FavoriteCard>();
-    for (const item of forYouItems) {
-      byId.set(item.id, {
-        id: item.id,
-        title: item.title,
-        subtitle: item.about,
-        imageUrl: item.imageUrl,
-      });
-    }
-    for (const section of sections) {
-      for (const item of section.items) {
-        if (!byId.has(item.id)) {
-          byId.set(item.id, {
-            id: item.id,
-            title: item.name,
-            subtitle: item.desc,
-            imageUrl: item.imageUrl,
-          });
-        }
-      }
-    }
-    return byId;
-  }, [forYouItems, sections]);
-
-  // All favorited cards
-  const favoriteCards = useMemo(
+  const favoriteCards = useMemo<FavoriteCard[]>(
     () =>
-      favorites
-        .map((id) => allCards.get(id))
-        .filter((c): c is FavoriteCard => c !== undefined),
-    [favorites, allCards],
+      artworks.map((a) => ({
+        id: a.artwork_id,
+        title: a.title ?? "Untitled",
+        subtitle: a.description ?? "",
+        imageUrl: a.image_url,
+      })),
+    [artworks],
   );
 
   const sortedCards = useMemo(() => {
@@ -92,7 +82,8 @@ export function FavoritesScreen({
       return cards.sort((a, b) => a.title.localeCompare(b.title));
     if (sortBy === "za")
       return cards.sort((a, b) => b.title.localeCompare(a.title));
-    return cards.reverse(); // "recency" = order added (favorites array order)
+    // "recency": backend returns ORDER BY sa.id DESC (newest first) — preserve that order
+    return cards;
   }, [favoriteCards, sortBy]);
 
   const displayCards = useMemo(() => {
@@ -106,7 +97,6 @@ export function FavoritesScreen({
   }, [sortedCards, searchQuery]);
 
   const isSearching = searchQuery !== null;
-
   const sortLabels: Record<SortOption, string> = {
     recency: "Recently Liked",
     az: "A → Z",
@@ -123,7 +113,6 @@ export function FavoritesScreen({
         isSearching={isSearching}
       />
 
-      {/* Header row with title + sort button */}
       <div
         style={{
           display: "flex",
@@ -149,10 +138,9 @@ export function FavoritesScreen({
           {isSearching ? "SEARCH RESULTS" : "FAVORITES"}
         </h1>
 
-        {/* Sort control */}
         <div style={{ position: "relative" }}>
           <button
-            onClick={() => setShowSortMenu((prev) => !prev)}
+            onClick={() => setShowSortMenu((p) => !p)}
             style={{
               background: theme.components.badge.background,
               border: `1px solid ${theme.components.card.border}`,
@@ -170,7 +158,6 @@ export function FavoritesScreen({
             <span>⇅</span>
             <span>{sortLabels[sortBy]}</span>
           </button>
-
           {showSortMenu && (
             <div
               style={{
@@ -221,7 +208,7 @@ export function FavoritesScreen({
         </div>
       </div>
 
-      {favorites.length > 0 && isLoading ? (
+      {isLoading ? (
         <div
           style={{
             border: `1px solid ${theme.components.card.border}`,
@@ -234,6 +221,20 @@ export function FavoritesScreen({
           }}
         >
           Loading your favorites...
+        </div>
+      ) : error ? (
+        <div
+          style={{
+            border: `1px solid ${theme.components.card.border}`,
+            borderRadius: 10,
+            padding: "20px 24px",
+            background: theme.components.card.background,
+            fontSize: 13,
+            fontFamily: "'DM Sans', sans-serif",
+            color: "#c0392b",
+          }}
+        >
+          {error}
         </div>
       ) : isSearching && displayCards.length === 0 ? (
         <div

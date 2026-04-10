@@ -2,15 +2,16 @@ import { useEffect, useState } from "react";
 import { Heart, Pin } from "lucide-react";
 import { Placeholder } from "../components/Placeholder";
 import { SearchBar } from "../components/SearchBar";
+import { ArtworkModal } from "../components/ArtworkModal";
 import { getExhibitSections } from "../new_data";
 import { theme } from "../theme";
-import type { ExhibitSection, ForYouItem } from "../types";
+import type { ExhibitSection, ExhibitItem, ForYouItem } from "../types";
 
 const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:5001/api";
-
 const PINNED_SECTIONS_KEY = "tigerart_pinned_sections";
 
 type ExploreScreenProps = {
+  userId: string | null;
   onSectionClick: (section: ExhibitSection) => void;
   favorites: number[];
   onToggleFavorite: (id: number) => void;
@@ -107,22 +108,42 @@ const styles = {
   },
 } as const;
 
+const heartButtonStyle = {
+  position: "absolute" as const,
+  top: 8,
+  right: 8,
+  background: "rgba(0,0,0,0.35)",
+  backdropFilter: "blur(4px)",
+  border: "none",
+  borderRadius: "50%",
+  width: 32,
+  height: 32,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  cursor: "pointer",
+};
+
 function SearchResultCard({
   item,
   favorites,
   onToggleFavorite,
+  onCardClick,
 }: {
   item: ForYouItem;
   favorites: number[];
   onToggleFavorite: (id: number) => void;
+  onCardClick: (item: ForYouItem) => void;
 }) {
   return (
     <div
+      onClick={() => onCardClick(item)}
       style={{
         border: `1px solid ${theme.components.card.border}`,
         borderRadius: 8,
         overflow: "hidden",
         background: theme.components.card.background,
+        cursor: "pointer",
       }}
     >
       <div style={{ position: "relative" }}>
@@ -145,22 +166,11 @@ function SearchResultCard({
           />
         )}
         <button
-          onClick={() => onToggleFavorite(item.id)}
-          style={{
-            position: "absolute",
-            top: 8,
-            right: 8,
-            background: "rgba(0,0,0,0.35)",
-            backdropFilter: "blur(4px)",
-            border: "none",
-            borderRadius: "50%",
-            width: 32,
-            height: 32,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            cursor: "pointer",
+          onClick={(e) => {
+            e.stopPropagation();
+            onToggleFavorite(item.id);
           }}
+          style={heartButtonStyle}
         >
           <Heart
             size={16}
@@ -214,6 +224,7 @@ function ExploreSectionCard({
   onToggleFavorite,
   isPinned,
   onTogglePin,
+  onCardClick,
 }: {
   section: ExhibitSection;
   onSectionClick: (s: ExhibitSection) => void;
@@ -221,13 +232,12 @@ function ExploreSectionCard({
   onToggleFavorite: (id: number) => void;
   isPinned: boolean;
   onTogglePin: (name: string) => void;
+  onCardClick: (item: ExhibitItem) => void;
 }) {
   const [pinHovered, setPinHovered] = useState(false);
-
   return (
     <div style={styles.sectionBlock}>
       <div style={{ display: "flex", alignItems: "center", marginBottom: 12 }}>
-        {/* Pin/unpin toggle button — sits to the LEFT of the badge */}
         <button
           onClick={(e) => {
             e.stopPropagation();
@@ -251,8 +261,6 @@ function ExploreSectionCard({
             fill={isPinned ? theme.components.badge.text : "none"}
           />
         </button>
-
-        {/* Section name badge — identical style whether pinned or not */}
         <div
           style={{ ...styles.sectionHeader, marginBottom: 0 }}
           onClick={() => onSectionClick(section)}
@@ -260,13 +268,12 @@ function ExploreSectionCard({
           {section.name}
         </div>
       </div>
-
       <div style={styles.sectionRow}>
         {section.items.slice(0, 6).map((item) => (
           <div
             key={item.id}
             style={styles.cardInner}
-            onClick={() => onSectionClick(section)}
+            onClick={() => onCardClick(item)}
           >
             <div style={{ position: "relative" }}>
               {item.imageUrl ? (
@@ -279,21 +286,7 @@ function ExploreSectionCard({
                   e.stopPropagation();
                   onToggleFavorite(item.id);
                 }}
-                style={{
-                  position: "absolute",
-                  top: 8,
-                  right: 8,
-                  background: "rgba(0,0,0,0.35)",
-                  backdropFilter: "blur(4px)",
-                  border: "none",
-                  borderRadius: "50%",
-                  width: 32,
-                  height: 32,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  cursor: "pointer",
-                }}
+                style={heartButtonStyle}
               >
                 <Heart
                   size={16}
@@ -323,6 +316,7 @@ function ExploreSectionCard({
 }
 
 export function ExploreScreen({
+  userId,
   onSectionClick,
   favorites,
   onToggleFavorite,
@@ -330,10 +324,11 @@ export function ExploreScreen({
   const [sections, setSections] = useState<ExhibitSection[]>([]);
   const [searchResults, setSearchResults] = useState<ForYouItem[] | null>(null);
   const [searchLoading, setSearchLoading] = useState(false);
+  const [modalItem, setModalItem] = useState<ExhibitItem | null>(null);
   const [pinnedSections, setPinnedSections] = useState<string[]>(() => {
     try {
-      const stored = localStorage.getItem(PINNED_SECTIONS_KEY);
-      return stored ? JSON.parse(stored) : [];
+      const s = localStorage.getItem(PINNED_SECTIONS_KEY);
+      return s ? JSON.parse(s) : [];
     } catch {
       return [];
     }
@@ -341,7 +336,7 @@ export function ExploreScreen({
 
   useEffect(() => {
     getExhibitSections()
-      .then((data) => setSections(data))
+      .then(setSections)
       .catch((e) => console.error("Error fetching sections:", e));
   }, []);
 
@@ -368,16 +363,23 @@ export function ExploreScreen({
       .catch(() => setSearchLoading(false));
   };
 
-  const handleClear = () => setSearchResults(null);
-  const isSearching = searchResults !== null;
+  const forYouToExhibitItem = (item: ForYouItem): ExhibitItem => ({
+    id: item.id,
+    name: item.title,
+    desc: item.about,
+    imageUrl: item.imageUrl,
+    department: item.department,
+    classification: item.classification,
+    displaydate: item.displaydate,
+    displaymaker: item.displaymaker,
+    on_view: item.on_view,
+  });
 
-  // Split sections into pinned and unpinned, preserving pin order
+  const isSearching = searchResults !== null;
   const pinnedList = pinnedSections
     .map((name) => sections.find((s) => s.name === name))
     .filter((s): s is ExhibitSection => Boolean(s));
-
   const unpinnedList = sections.filter((s) => !pinnedSections.includes(s.name));
-
   const sharedCardProps = (section: ExhibitSection) => ({
     section,
     onSectionClick,
@@ -385,13 +387,14 @@ export function ExploreScreen({
     onToggleFavorite,
     isPinned: pinnedSections.includes(section.name),
     onTogglePin: handleTogglePin,
+    onCardClick: (item: ExhibitItem) => setModalItem(item),
   });
 
   return (
     <div style={styles.page}>
       <SearchBar
         onSearch={handleSearch}
-        onClear={handleClear}
+        onClear={() => setSearchResults(null)}
         isSearching={isSearching}
       />
       <h1 style={styles.title}>{isSearching ? "SEARCH RESULTS" : "EXPLORE"}</h1>
@@ -460,6 +463,7 @@ export function ExploreScreen({
               item={item}
               favorites={favorites}
               onToggleFavorite={onToggleFavorite}
+              onCardClick={(item) => setModalItem(forYouToExhibitItem(item))}
             />
           ))}
         </div>
@@ -467,7 +471,6 @@ export function ExploreScreen({
 
       {!isSearching && (
         <>
-          {/* ── Pinned sections ── */}
           {pinnedList.length > 0 && (
             <>
               <div style={styles.pinnedLabel}>
@@ -483,8 +486,6 @@ export function ExploreScreen({
               <hr style={styles.divider} />
             </>
           )}
-
-          {/* ── Remaining sections ── */}
           {unpinnedList.map((section) => (
             <ExploreSectionCard
               key={section.name}
@@ -492,6 +493,15 @@ export function ExploreScreen({
             />
           ))}
         </>
+      )}
+
+      {modalItem && (
+        <ArtworkModal
+          item={modalItem}
+          favorites={favorites}
+          onToggleFavorite={onToggleFavorite}
+          onClose={() => setModalItem(null)}
+        />
       )}
     </div>
   );
