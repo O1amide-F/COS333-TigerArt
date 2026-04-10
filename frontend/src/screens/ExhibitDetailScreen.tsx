@@ -5,7 +5,10 @@ import { ArtworkModal } from "../components/ArtworkModal";
 import { theme } from "../theme";
 import type { ExhibitItem, ExhibitSection } from "../types";
 
+const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:5001/api";
+
 type ExhibitDetailScreenProps = {
+  userId: string | null;
   section: ExhibitSection;
   onBack: () => void;
   favorites: number[];
@@ -13,6 +16,7 @@ type ExhibitDetailScreenProps = {
 };
 
 export function ExhibitDetailScreen({
+  userId,
   section,
   onBack,
   favorites,
@@ -21,9 +25,10 @@ export function ExhibitDetailScreen({
   const [modalItem, setModalItem] = useState<ExhibitItem | null>(null);
   const [detailItems, setDetailItems] = useState<ExhibitItem[]>([]);
   const [visibleCount, setVisibleCount] = useState(4);
+  const [pendingIds, setPendingIds] = useState<Set<number>>(new Set());
 
   useEffect(() => {
-    fetch(`http://localhost:5001/api/exhibits/${encodeURIComponent(section.name)}`)
+    fetch(`${API_BASE}/exhibits/${encodeURIComponent(section.name)}`)
       .then((res) => res.json())
       .then((data) => setDetailItems(data))
       .catch(() => setDetailItems(section.items));
@@ -41,6 +46,78 @@ export function ExhibitDetailScreen({
   const featuredItem = shuffledItems[0];
   const gridItems = shuffledItems.slice(1, 1 + visibleCount);
   const hasMore = shuffledItems.length - 1 > visibleCount;
+
+  // Calls backend then syncs parent state
+  const handleToggle = async (artworkId: number) => {
+    if (pendingIds.has(artworkId)) return; // debounce double-taps
+    setPendingIds((prev) => new Set(prev).add(artworkId));
+
+    const isFavorited = favorites.includes(artworkId);
+    const method = isFavorited ? "DELETE" : "POST";
+
+    try {
+      const res = await fetch(`${API_BASE}/favorites/${userId}/${artworkId}`, {
+        method,
+      });
+      if (!res.ok) throw new Error(`Server error: ${res.status}`);
+      // Only update parent state after confirmed backend write
+      onToggleFavorite(artworkId);
+    } catch (e) {
+      console.error("Failed to toggle favorite:", e);
+      // Optionally show a toast/snackbar here
+    } finally {
+      setPendingIds((prev) => {
+        const s = new Set(prev);
+        s.delete(artworkId);
+        return s;
+      });
+    }
+  };
+
+  const HeartButton = ({
+    itemId,
+    style,
+  }: {
+    itemId: number;
+    style?: React.CSSProperties;
+  }) => {
+    const isFavorited = favorites.includes(itemId);
+    const isPending = pendingIds.has(itemId);
+    return (
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
+          handleToggle(itemId);
+        }}
+        disabled={isPending}
+        style={{
+          position: "absolute",
+          top: 8,
+          right: 8,
+          background: "rgba(0,0,0,0.35)",
+          backdropFilter: "blur(4px)",
+          border: "none",
+          borderRadius: "50%",
+          width: 32,
+          height: 32,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          cursor: isPending ? "default" : "pointer",
+          opacity: isPending ? 0.6 : 1,
+          transition: "opacity 150ms ease",
+          ...style,
+        }}
+      >
+        <Heart
+          size={16}
+          strokeWidth={2.2}
+          color={isFavorited ? theme.components.favorite.active : "#fff"}
+          fill={isFavorited ? theme.components.favorite.active : "none"}
+        />
+      </button>
+    );
+  };
 
   return (
     <div
@@ -81,6 +158,7 @@ export function ExhibitDetailScreen({
         {section.name}
       </div>
 
+      {/* Featured item */}
       {featuredItem && (
         <div
           style={{ marginBottom: 10, cursor: "pointer" }}
@@ -102,42 +180,7 @@ export function ExhibitDetailScreen({
             ) : (
               <Placeholder label="Unable to Render Image" aspectRatio="16/9" />
             )}
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                onToggleFavorite(featuredItem.id);
-              }}
-              style={{
-                position: "absolute",
-                top: 8,
-                right: 8,
-                background: "rgba(0,0,0,0.35)",
-                backdropFilter: "blur(4px)",
-                border: "none",
-                borderRadius: "50%",
-                width: 32,
-                height: 32,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                cursor: "pointer",
-              }}
-            >
-              <Heart
-                size={16}
-                strokeWidth={2.2}
-                color={
-                  favorites.includes(featuredItem.id)
-                    ? theme.components.favorite.active
-                    : "#fff"
-                }
-                fill={
-                  favorites.includes(featuredItem.id)
-                    ? theme.components.favorite.active
-                    : "none"
-                }
-              />
-            </button>
+            <HeartButton itemId={featuredItem.id} />
           </div>
 
           <div style={{ paddingTop: 8 }}>
@@ -171,6 +214,7 @@ export function ExhibitDetailScreen({
         }}
       />
 
+      {/* Grid */}
       <div
         style={{
           display: "grid",
@@ -201,42 +245,7 @@ export function ExhibitDetailScreen({
               ) : (
                 <Placeholder label="Unable to Render Image" aspectRatio="1/1" />
               )}
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onToggleFavorite(item.id);
-                }}
-                style={{
-                  position: "absolute",
-                  top: 8,
-                  right: 8,
-                  background: "rgba(0,0,0,0.35)",
-                  backdropFilter: "blur(4px)",
-                  border: "none",
-                  borderRadius: "50%",
-                  width: 32,
-                  height: 32,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  cursor: "pointer",
-                }}
-              >
-                <Heart
-                  size={16}
-                  strokeWidth={2.2}
-                  color={
-                    favorites.includes(item.id)
-                      ? theme.components.favorite.active
-                      : "#fff"
-                  }
-                  fill={
-                    favorites.includes(item.id)
-                      ? theme.components.favorite.active
-                      : "none"
-                  }
-                />
-              </button>
+              <HeartButton itemId={item.id} />
             </div>
             <div style={{ paddingTop: 6 }}>
               <div
@@ -264,7 +273,9 @@ export function ExhibitDetailScreen({
       </div>
 
       {hasMore && (
-        <div style={{ marginTop: 16, display: "flex", justifyContent: "center" }}>
+        <div
+          style={{ marginTop: 16, display: "flex", justifyContent: "center" }}
+        >
           <button
             onClick={() => setVisibleCount((prev) => prev + 6)}
             style={{
@@ -288,7 +299,7 @@ export function ExhibitDetailScreen({
         <ArtworkModal
           item={modalItem}
           favorites={favorites}
-          onToggleFavorite={onToggleFavorite}
+          onToggleFavorite={handleToggle}
           onClose={() => setModalItem(null)}
         />
       )}

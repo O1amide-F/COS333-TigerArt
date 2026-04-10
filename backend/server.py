@@ -756,6 +756,86 @@ def search():
     results.sort(key=lambda x: x[0], reverse=True)
     return jsonify([item for _, item in results[:30]])
 
+@app.route('/api/favorites/<string:user_id>', methods=['GET'])
+def get_favorites(user_id):
+    """Return full artwork details for all of a user's saved pieces."""
+    conn = get_connection()
+    cur = conn.cursor()
+    cur.execute("""
+        SELECT a.objectid, a.title, a.medium, a.department, a.classification,
+               a.displaydate, a.displaymaker, a.on_view, ai.image_url
+        FROM artworks a
+        JOIN saved_artworks sa ON a.objectid = sa.objectid
+        LEFT JOIN artwork_images ai ON a.objectid = ai.objectid
+        WHERE sa.user_id = %s
+        ORDER BY sa.id DESC
+    """, (user_id,))
+    rows = cur.fetchall()
+    cur.close()
+    conn.close()
+    items = []
+    for row in rows:
+        items.append({
+            "artwork_id":     row[0],
+            "title":          row[1],
+            "description":    row[2],
+            "department":     row[3],
+            "classification": row[4],
+            "displaydate":    row[5],
+            "displaymaker":   row[6],
+            "on_view":        row[7],
+            "image_url":      row[8],
+        })
+    return jsonify(items)
+ 
+ 
+@app.route('/api/favorites/<string:user_id>/<int:objectid>', methods=['POST'])
+def add_favorite(user_id, objectid):
+    """Save an artwork to a user's favorites."""
+    conn = get_connection()
+    cur = conn.cursor()
+    try:
+        cur.execute("""
+            INSERT INTO saved_artworks (user_id, objectid)
+            VALUES (%s, %s)
+            ON CONFLICT DO NOTHING
+        """, (user_id, objectid))
+        conn.commit()
+        return jsonify({"status": "saved"}), 201
+    except Exception as e:
+        conn.rollback()
+        return jsonify({"error": str(e)}), 400
+    finally:
+        cur.close()
+        conn.close()
+ 
+ 
+@app.route('/api/favorites/<string:user_id>/<int:objectid>', methods=['DELETE'])
+def remove_favorite(user_id, objectid):
+    """Remove an artwork from a user's favorites."""
+    conn = get_connection()
+    cur = conn.cursor()
+    cur.execute("""
+        DELETE FROM saved_artworks
+        WHERE user_id = %s AND objectid = %s
+    """, (user_id, objectid))
+    conn.commit()
+    cur.close()
+    conn.close()
+    return jsonify({"status": "removed"}), 200
+ 
+ 
+@app.route('/api/favorites/<string:user_id>/ids', methods=['GET'])
+def get_favorite_ids(user_id):
+    """Lightweight endpoint — returns just the saved objectids."""
+    conn = get_connection()
+    cur = conn.cursor()
+    cur.execute("SELECT objectid FROM saved_artworks WHERE user_id = %s", (user_id,))
+    ids = [row[0] for row in cur.fetchall()]
+    cur.close()
+    conn.close()
+    return jsonify(ids)
+
 ## Changed to also run on phone using ip address
 if __name__ == "__main__":
     app.run(debug=True, port=5001, host='0.0.0.0')

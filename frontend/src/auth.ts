@@ -3,7 +3,8 @@ import { PublicClientApplication } from "@azure/msal-browser";
 const msalConfig = {
   auth: {
     clientId: "c0ea8c66-e7fb-4645-9b3d-7b0ec20ee496",
-    authority: "https://login.microsoftonline.com/2ff60116-7431-425d-b5af-077d7791bda4",
+    authority:
+      "https://login.microsoftonline.com/2ff60116-7431-425d-b5af-077d7791bda4",
     redirectUri: import.meta.env.VITE_REDIRECT_URI ?? "http://localhost:5173",
   },
   cache: {
@@ -41,7 +42,7 @@ async function getAccessToken(): Promise<string | null> {
 }
 
 export interface UserProfile {
-  userid:string;
+  userid: string;
   displayName: string;
 }
 
@@ -51,14 +52,16 @@ export async function getUserProfile(): Promise<UserProfile | null> {
 
   const headers = { Authorization: `Bearer ${token}` };
 
-  const profileRes = await fetch("https://graph.microsoft.com/v1.0/me", { headers });
+  const profileRes = await fetch("https://graph.microsoft.com/v1.0/me", {
+    headers,
+  });
   if (!profileRes.ok) return null;
   const profile = await profileRes.json();
   //console.log("profile is ", profile)
 
   return {
     displayName: profile.displayName ?? "",
-    userid:profile.id,
+    userid: profile.id,
   };
 }
 
@@ -66,4 +69,3 @@ export function getActiveAccount() {
   const accounts = msalInstance.getAllAccounts();
   return accounts.length > 0 ? accounts[0] : null;
 }
-
