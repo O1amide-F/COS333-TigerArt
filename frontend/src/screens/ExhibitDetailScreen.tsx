@@ -16,7 +16,6 @@ type ExhibitDetailScreenProps = {
 };
 
 export function ExhibitDetailScreen({
-  userId,
   section,
   onBack,
   favorites,

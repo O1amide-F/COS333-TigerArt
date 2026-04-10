@@ -316,7 +316,6 @@ function ExploreSectionCard({
 }
 
 export function ExploreScreen({
-  userId,
   onSectionClick,
   favorites,
   onToggleFavorite,
