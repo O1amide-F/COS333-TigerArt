@@ -109,7 +109,7 @@ def get_news_items(cur):
     return items
 
 
-@app.route("/api/home")
+@app.route("/home")
 def home_data():
     conn = get_connection()
     cur = conn.cursor()
