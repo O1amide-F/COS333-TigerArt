@@ -324,6 +324,7 @@ function ExploreSectionCard({
   onCardClick: (item: ExhibitItem) => void;
 }) {
   const [pinHovered, setPinHovered] = useState(false);
+  const [sectionHovered, setSectionHovered] = useState(false);
 
   return (
     <div style={styles.sectionBlock}>
@@ -352,8 +353,19 @@ function ExploreSectionCard({
           />
         </button>
         <div
-          style={{ ...styles.sectionHeader, marginBottom: 0 }}
+          style={{
+            ...styles.sectionHeader,
+            marginBottom: 0,
+            color: sectionHovered ? "#fff" : theme.components.badge.text,
+            background: sectionHovered
+              ? theme.components.badge.text
+              : theme.components.badge.background,
+            border: `1px solid ${sectionHovered ? "transparent" : "#000"}`,
+            transition: "background 0.2s, color 0.2s, border-color 0.2s",
+          }}
           onClick={() => onSectionClick(section)}
+          onMouseEnter={() => setSectionHovered(true)}
+          onMouseLeave={() => setSectionHovered(false)}
         >
           {section.name}
         </div>
