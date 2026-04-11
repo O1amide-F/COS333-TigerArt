@@ -27,7 +27,7 @@ export type ExhibitItem = {
   department?: string;
   classification?: string;
   displaydate?: string;
-  displaymaker?: string;
+  displaymaker?: string | "Unknown";
   on_view?: boolean;
 };
 
@@ -45,7 +45,7 @@ export type ForYouItem = {
   department?: string;
   classification?: string;
   displaydate?: string;
-  displaymaker?: string;
+  displaymaker?: string | "Unknown";
   on_view?: boolean;
 };
 

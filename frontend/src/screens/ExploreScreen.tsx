@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Heart, Pin } from "lucide-react";
+import { Heart, Pin, ArrowRight } from "lucide-react";
 import { Placeholder } from "../components/Placeholder";
 import { SearchBar } from "../components/SearchBar";
 import { ArtworkModal } from "../components/ArtworkModal";
@@ -124,6 +124,95 @@ const heartButtonStyle = {
   cursor: "pointer",
 };
 
+function ViewMoreCard({
+  section,
+  onSectionClick,
+}: {
+  section: ExhibitSection;
+  onSectionClick: (s: ExhibitSection) => void;
+}) {
+  const [hovered, setHovered] = useState(false);
+
+  return (
+    <div
+      style={styles.cardInner}
+      onClick={() => onSectionClick(section)}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      <div
+        style={{
+          width: "100%",
+          aspectRatio: "3 / 4",
+          borderRadius: 8,
+          background: hovered
+            ? theme.components.badge.text
+            : theme.components.badge.background,
+          border: `2px solid ${theme.components.card.border}`,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: 10,
+          transition: "background 0.2s, border-color 0.2s",
+          cursor: "pointer",
+        }}
+      >
+        <span
+          style={{
+            fontSize: 12,
+            fontFamily: "'DM Sans', sans-serif",
+            fontWeight: 700,
+            color: hovered ? "#fff" : theme.components.badge.text,
+            textAlign: "center",
+            letterSpacing: "0.03em",
+            lineHeight: 1.4,
+            padding: "0 12px",
+            transition: "color 0.2s",
+          }}
+        >
+          Click here to view more
+        </span>
+        <div
+          style={{
+            width: 32,
+            height: 32,
+            borderRadius: "50%",
+            background: hovered
+              ? "rgba(255,255,255,0.2)"
+              : theme.components.card.border,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            transition: "background 0.2s, transform 0.2s",
+            transform: hovered ? "translateX(3px)" : "none",
+          }}
+        >
+          <ArrowRight
+            size={16}
+            strokeWidth={2.2}
+            color={hovered ? "#fff" : theme.components.badge.text}
+          />
+        </div>
+      </div>
+      <div style={styles.cardTextWrap}>
+        <div
+          style={{
+            ...styles.itemName,
+            color: hovered
+              ? theme.components.badge.text
+              : theme.components.badge.mutedText,
+            fontSize: 12,
+            transition: "color 0.2s",
+          }}
+        >
+          See all in {section.name}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function SearchResultCard({
   item,
   favorites,
@@ -235,6 +324,7 @@ function ExploreSectionCard({
   onCardClick: (item: ExhibitItem) => void;
 }) {
   const [pinHovered, setPinHovered] = useState(false);
+
   return (
     <div style={styles.sectionBlock}>
       <div style={{ display: "flex", alignItems: "center", marginBottom: 12 }}>
@@ -268,8 +358,10 @@ function ExploreSectionCard({
           {section.name}
         </div>
       </div>
+
       <div style={styles.sectionRow}>
-        {section.items.slice(0, 6).map((item) => (
+        {/* Show exactly 4 artwork cards */}
+        {section.items.slice(0, 4).map((item) => (
           <div
             key={item.id}
             style={styles.cardInner}
@@ -310,6 +402,9 @@ function ExploreSectionCard({
             </div>
           </div>
         ))}
+
+        {/* 5th card: "View More" CTA linking to section details */}
+        <ViewMoreCard section={section} onSectionClick={onSectionClick} />
       </div>
     </div>
   );
