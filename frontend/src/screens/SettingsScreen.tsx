@@ -12,12 +12,14 @@ type SettingsScreenProps = {
   onToggleSelection: (id: number) => void;
   onSave: () => void;
   userId: string | null;
+  onStartTour: () => void;
 };
 
 export function SettingsScreen({
   username,
   onSave,
   userId,
+  onStartTour,
 }: SettingsScreenProps) {
   const { instance } = useMsal();
   const [showSurvey, setShowSurvey] = useState(false);
@@ -31,37 +33,71 @@ export function SettingsScreen({
   };
 
   return (
-    <div style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}>
-
+    <div
+      style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}
+    >
       {/* Title */}
-      <h1 style={{
-        margin: "0 0 20px", fontSize: 22,
-        fontFamily: "'Playfair Display', serif", fontWeight: 900,
-        letterSpacing: "0.06em", color: theme.components.badge.text,
-        background: theme.components.badge.background,
-        display: "inline-block", padding: "6px 12px", borderRadius: 4,
-      }}>
+      <h1
+        style={{
+          margin: "0 0 20px",
+          fontSize: 22,
+          fontFamily: "'Playfair Display', serif",
+          fontWeight: 900,
+          letterSpacing: "0.06em",
+          color: theme.components.badge.text,
+          background: theme.components.badge.background,
+          display: "inline-block",
+          padding: "6px 12px",
+          borderRadius: 4,
+        }}
+      >
         SETTINGS
       </h1>
 
       {/* Profile card */}
-      <div style={{
-        border: `1px solid ${theme.components.card.border}`, borderRadius: 10,
-        padding: 16, background: theme.components.card.background, marginBottom: 18,
-      }}>
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          <span style={{ fontSize: 18, fontFamily: "'DM Sans', sans-serif",
-            color: theme.colors.text, fontWeight: 600 }}>
+      <div
+        style={{
+          border: `1px solid ${theme.components.card.border}`,
+          borderRadius: 10,
+          padding: 16,
+          background: theme.components.card.background,
+          marginBottom: 18,
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          <span
+            style={{
+              fontSize: 18,
+              fontFamily: "'DM Sans', sans-serif",
+              color: theme.colors.text,
+              fontWeight: 600,
+            }}
+          >
             {username}
           </span>
           <button
-            onClick={async () => { await instance.clearCache(); window.location.reload(); }}
+            onClick={async () => {
+              await instance.clearCache();
+              window.location.reload();
+            }}
             style={{
-              display: "inline-flex", alignItems: "center", gap: 8,
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 8,
               background: theme.components.badge.background,
-              color: theme.components.badge.text, borderRadius: 6,
-              padding: "8px 12px", cursor: "pointer", fontSize: 13,
-              fontFamily: "'DM Sans', sans-serif", border: "none",
+              color: theme.components.badge.text,
+              borderRadius: 6,
+              padding: "8px 12px",
+              cursor: "pointer",
+              fontSize: 13,
+              fontFamily: "'DM Sans', sans-serif",
+              border: "none",
             }}
           >
             Sign Out
@@ -70,20 +106,45 @@ export function SettingsScreen({
       </div>
 
       {/* Survey section */}
-      <div style={{
-        border: `1px solid ${theme.components.card.border}`, borderRadius: 10,
-        padding: 16, background: theme.components.card.background, marginBottom: 18,
-      }}>
-        <div style={{ display: "flex", alignItems: "center",
-          justifyContent: "space-between", marginBottom: showSurvey ? 20 : 0 }}>
+      <div
+        style={{
+          border: `1px solid ${theme.components.card.border}`,
+          borderRadius: 10,
+          padding: 16,
+          background: theme.components.card.background,
+          marginBottom: 18,
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            marginBottom: showSurvey ? 20 : 0,
+          }}
+        >
           <div>
-            <div style={{ fontSize: 15, fontWeight: 600, fontFamily: "'DM Sans', sans-serif",
-              color: theme.components.badge.text, marginBottom: 2 }}>
+            <div
+              style={{
+                fontSize: 15,
+                fontWeight: 600,
+                fontFamily: "'DM Sans', sans-serif",
+                color: theme.components.badge.text,
+                marginBottom: 2,
+              }}
+            >
               Art Preferences
             </div>
-            <div style={{ fontSize: 12, fontFamily: "'DM Sans', sans-serif",
-              color: theme.components.badge.mutedText }}>
-              {showSurvey ? "Select 3 images per question" : "Retake the survey to update your For You feed"}
+            <div
+              style={{
+                fontSize: 12,
+                fontFamily: "'DM Sans', sans-serif",
+                color: theme.components.badge.mutedText,
+              }}
+            >
+              {showSurvey
+                ? "Select 3 images per question"
+                : "Retake the survey to update your For You feed"}
             </div>
           </div>
           <button
@@ -95,10 +156,16 @@ export function SettingsScreen({
               color: showSurvey
                 ? theme.components.badge.mutedText
                 : theme.components.button.primaryText,
-              border: "none", borderRadius: 6, padding: "8px 14px",
-              fontFamily: "'DM Sans', sans-serif", fontSize: 13,
-              fontWeight: 500, cursor: "pointer", whiteSpace: "nowrap",
-              flexShrink: 0, marginLeft: 12,
+              border: "none",
+              borderRadius: 6,
+              padding: "8px 14px",
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: 13,
+              fontWeight: 500,
+              cursor: "pointer",
+              whiteSpace: "nowrap",
+              flexShrink: 0,
+              marginLeft: 12,
             }}
           >
             {showSurvey ? "Cancel" : "Retake Survey"}
@@ -107,11 +174,18 @@ export function SettingsScreen({
 
         {/* Saved confirmation */}
         {savedMessage && (
-          <div style={{
-            marginTop: 12, padding: "8px 12px", borderRadius: 6,
-            background: "#e8f5e9", color: "#2e7d32",
-            fontSize: 13, fontFamily: "'DM Sans', sans-serif", textAlign: "center",
-          }}>
+          <div
+            style={{
+              marginTop: 12,
+              padding: "8px 12px",
+              borderRadius: 6,
+              background: "#e8f5e9",
+              color: "#2e7d32",
+              fontSize: 13,
+              fontFamily: "'DM Sans', sans-serif",
+              textAlign: "center",
+            }}
+          >
             Preferences saved! Your For You feed will update.
           </div>
         )}
@@ -126,6 +200,60 @@ export function SettingsScreen({
             />
           </div>
         )}
+      </div>
+
+      <div
+        style={{
+          border: `1px solid ${theme.components.card.border}`,
+          borderRadius: 10,
+          padding: 16,
+          background: theme.components.card.background,
+          marginBottom: 18,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
+      >
+        <div>
+          <div
+            style={{
+              fontSize: 15,
+              fontWeight: 600,
+              fontFamily: "'DM Sans', sans-serif",
+              color: theme.components.badge.text,
+              marginBottom: 2,
+            }}
+          >
+            App Tour
+          </div>
+          <div
+            style={{
+              fontSize: 12,
+              fontFamily: "'DM Sans', sans-serif",
+              color: theme.components.badge.mutedText,
+            }}
+          >
+            Replay the guided walkthrough
+          </div>
+        </div>
+        <button
+          onClick={onStartTour}
+          style={{
+            background: theme.components.button.primaryBackground,
+            color: theme.components.button.primaryText,
+            border: "none",
+            borderRadius: 6,
+            padding: "8px 14px",
+            fontFamily: "'DM Sans', sans-serif",
+            fontSize: 13,
+            fontWeight: 500,
+            cursor: "pointer",
+            flexShrink: 0,
+            marginLeft: 12,
+          }}
+        >
+          Take the tour
+        </button>
       </div>
     </div>
   );
