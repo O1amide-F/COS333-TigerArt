@@ -102,6 +102,16 @@ def main():
         );
     """)
 
+    cur.execute("""
+        CREATE TABLE IF NOT EXISTS recently_viewed (
+            id        SERIAL PRIMARY KEY,
+            user_id   TEXT NOT NULL,
+            objectid  INT NOT NULL,
+            viewed_at TIMESTAMP DEFAULT NOW(),
+            UNIQUE (user_id, objectid)
+        );
+    """)
+
     conn.commit()
     cur.close()
     conn.close()
