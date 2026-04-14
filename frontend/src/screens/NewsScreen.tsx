@@ -17,7 +17,6 @@ export function NewsScreen() {
     <div
       style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}
     >
-      {/* Page title component for the news feed. */}
       <h1
         style={{
           margin: "0 0 20px",
@@ -36,14 +35,45 @@ export function NewsScreen() {
         LATEST NEWS
       </h1>
 
-      {/* News list component rendered from API data items. */}
       <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
         {items.map((item, index) => (
-          // One news article card component.
           <div key={item.id}>
-            <Placeholder label="Image" aspectRatio="16/7" />
+            <div style={{ position: "relative" }}>
+              {item.imageUrl ? (
+                <>
+                  <img
+                    src={item.imageUrl.replace("http://", "https://")}
+                    alt={item.title}
+                    style={{
+                      width: "100%",
+                      aspectRatio: "16/7",
+                      objectFit: "cover",
+                      display: "block",
+                    }}
+                    onError={(e) => {
+                      e.currentTarget.style.display = "none";
+                      const fallback = e.currentTarget.nextElementSibling as HTMLElement | null;
+                      if (fallback) fallback.style.display = "block";
+                    }}
+                  />
+                  <div style={{ display: "none" }}>
+                    <Placeholder
+                      label="Unable to Render Image"
+                      aspectRatio="16 / 7"
+                      style={{ borderRadius: 0 }}
+                    />
+                  </div>
+                </>
+              ) : (
+                <Placeholder
+                  label="Unable to Render Image"
+                  aspectRatio="16 / 7"
+                  style={{ borderRadius: 0 }}
+                />
+              )}
+            </div>
+
             <div style={{ padding: "12px 0 16px" }}>
-              {/* News headline badge component. */}
               <div
                 style={{
                   background: theme.components.badge.background,
@@ -57,9 +87,41 @@ export function NewsScreen() {
                   marginBottom: 6,
                 }}
               >
-                {item.name}
+                {item.title}
               </div>
-              {/* Decorative metadata line component under headline. */}
+
+              {item.publishedDate && (
+                <div
+                  style={{
+                    fontSize: 13,
+                    fontFamily: "'DM Sans', sans-serif",
+                    color: "#666",
+                    marginBottom: 8,
+                  }}
+                >
+                  {item.publishedDate}
+                </div>
+              )}
+
+              {item.articleUrl && (
+                <a
+                  href={item.articleUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{
+                    display: "inline-block",
+                    fontSize: 14,
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontWeight: 600,
+                    color: theme.components.badge.text,
+                    textDecoration: "none",
+                    marginBottom: 8,
+                  }}
+                >
+                  Read Article
+                </a>
+              )}
+
               <div
                 style={{
                   width: 100,
@@ -69,7 +131,7 @@ export function NewsScreen() {
                 }}
               />
             </div>
-            {/* Divider component between articles. */}
+
             {index < items.length - 1 && (
               <div
                 style={{

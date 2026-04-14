@@ -1,9 +1,12 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+from datetime import datetime
 import psycopg2
 import json
 import re
 import os
+import requests
+
 
 DB_NAME = os.getenv("DB_NAME", "tigerart_db")
 DB_USER = os.getenv("DB_USER", "postgres")
@@ -11,6 +14,7 @@ DB_PASSWORD = os.getenv("DB_PASSWORD", "cos333")
 DB_HOST = os.getenv("DB_HOST", "localhost")
 DB_PORT = os.getenv("DB_PORT", "5432")
 CLOUD_NAME = "dc4nhrcsm"
+NEWS_URL = "https://artmuseum.princeton.edu/api/tiger-art-news"
 
 app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": "*"}}, supports_credentials=False)
@@ -271,6 +275,44 @@ def get_connection():
         port=DB_PORT
     )
 
+def refresh_news_data():
+    response = requests.get(NEWS_URL, timeout=20)
+    response.raise_for_status()
+    items = response.json()
+
+    conn = get_connection()
+    cur = conn.cursor()
+
+    # simplest: clear and fully reload
+    cur.execute("TRUNCATE TABLE news_items RESTART IDENTITY;")
+
+    for item in items:
+        published_raw = (item.get("published") or "").strip()
+        published_date = None
+
+        if published_raw:
+            published_date = datetime.strptime(published_raw, "%Y-%m-%d").date()
+
+        cur.execute("""
+            INSERT INTO news_items (
+                uuid,
+                title,
+                published_date,
+                image_url,
+                article_url
+            )
+            VALUES (%s, %s, %s, %s, %s);
+        """, (
+            item.get("uuid"),
+            item.get("title"),
+            published_date,
+            item.get("image"),
+            item.get("url"),
+        ))
+
+    conn.commit()
+    cur.close()
+    conn.close()
 
 def save_user_vector(cur, user_id: str, vector: list[float]):
     """
@@ -351,12 +393,35 @@ def get_news():
     conn = get_connection()
     cur = conn.cursor()
 
-    cur.execute("SELECT id, name, sub FROM news_items ORDER BY id;")
+    cur.execute("""
+        SELECT id, uuid, title, published_date, image_url, article_url
+        FROM news_items
+        ORDER BY published_date DESC NULLS LAST, id DESC;
+    """)
+
     rows = cur.fetchall()
     cur.close()
     conn.close()
 
-    return jsonify([{"id": r[0], "name": r[1], "sub": r[2]} for r in rows])
+    return jsonify([
+        {
+            "id": r[0],
+            "uuid": r[1],
+            "title": r[2],
+            "publishedDate": r[3].isoformat() if r[3] else None,
+            "imageUrl": r[4],
+            "articleUrl": r[5],
+        }
+        for r in rows
+    ])
+
+@app.route("/api/refresh-news", methods=["POST", "GET"])
+def refresh_news():
+    try:
+        refresh_news_data()
+        return jsonify({"status": "success"})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 
 @app.route("/api/exhibits")

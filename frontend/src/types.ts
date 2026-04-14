@@ -58,6 +58,9 @@ export type ForYouItem = {
 
 export type NewsItem = {
   id: number;
-  name: string;
-  sub: string;
+  uuid: string;
+  title: string;
+  publishedDate: string | null;
+  imageUrl: string | null;
+  articleUrl: string | null;
 };
