@@ -2,8 +2,9 @@ import { useEffect, useMemo, useState } from "react";
 import { Heart, Clock } from "lucide-react";
 import { Placeholder } from "../components/Placeholder";
 import { SearchBar } from "../components/SearchBar";
+import { ArtworkModal } from "../components/ArtworkModal";
 import { theme } from "../theme";
-import type { ExhibitSection } from "../types";
+import type { ExhibitSection, ExhibitItem } from "../types";
 
 const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:5001/api";
 
@@ -42,8 +43,8 @@ export function RecentlyViewedScreen({
   const [artworks, setArtworks] = useState<ArtworkFromAPI[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [expandedId, setExpandedId] = useState<number | null>(null);
   const [searchQuery, setSearchQuery] = useState<string | null>(null);
+  const [modalItem, setModalItem] = useState<ExhibitItem | null>(null);
 
   useEffect(() => {
     if (!userId) return;
@@ -83,35 +84,24 @@ export function RecentlyViewedScreen({
     );
   }, [recentCards, searchQuery]);
 
-  // Build a minimal ExhibitSection so onSectionClick works the same as Explore
-  const handleCardClick = (card: RecentCard) => {
-    if (expandedId === card.id) {
-      setExpandedId(null);
-      return;
-    }
-    setExpandedId(card.id);
+  // Convert artwork to ExhibitItem for modal
+  const toExhibitItem = (artwork: ArtworkFromAPI): ExhibitItem => ({
+    id: artwork.artwork_id,
+    name: artwork.title ?? "Untitled",
+    desc: artwork.description ?? "",
+    imageUrl: artwork.image_url,
+    department: artwork.department,
+    classification: artwork.classification,
+    displaydate: artwork.displaydate,
+    displaymaker: artwork.displaymaker,
+    on_view: artwork.on_view,
+  });
 
-    // Find the full artwork to build the section
+  // Open modal when card is clicked
+  const handleCardClick = (card: RecentCard) => {
     const artwork = artworks.find((a) => a.artwork_id === card.id);
     if (!artwork) return;
-
-    const section: ExhibitSection = {
-      name: artwork.title ?? "Untitled",
-      items: [
-        {
-          id: artwork.artwork_id,
-          name: artwork.title ?? "Untitled",
-          desc: artwork.description ?? "",
-          imageUrl: artwork.image_url,
-          department: artwork.department,
-          classification: artwork.classification,
-          displaydate: artwork.displaydate,
-          displaymaker: artwork.displaymaker,
-          on_view: artwork.on_view,
-        },
-      ],
-    };
-    onSectionClick(section);
+    setModalItem(toExhibitItem(artwork));
   };
 
   const isSearching = searchQuery !== null;
@@ -354,9 +344,18 @@ export function RecentlyViewedScreen({
               textAlign: "center",
             }}
           >
-            Artworks you tap will appear here
+            Artworks you tap to learn more about will appear here!
           </div>
         </div>
+      )}
+
+      {modalItem && (
+        <ArtworkModal
+          item={modalItem}
+          favorites={favorites}
+          onToggleFavorite={onToggleFavorite}
+          onClose={() => setModalItem(null)}
+        />
       )}
     </div>
   );
