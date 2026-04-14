@@ -1,6 +1,12 @@
 import type { LucideIcon } from "lucide-react";
 
-export type NavId = "home" | "explore" | "favorites" | "news" | "settings";
+export type NavId =
+  | "home"
+  | "explore"
+  | "favorites"
+  | "news"
+  | "settings"
+  | "recently_viewed";
 
 export type Screen =
   | "login"
@@ -10,7 +16,8 @@ export type Screen =
   | "exhibitDetail"
   | "favorites"
   | "news"
-  | "settings";
+  | "settings"
+  | "recently_viewed";
 
 export type NavItem = {
   id: NavId;

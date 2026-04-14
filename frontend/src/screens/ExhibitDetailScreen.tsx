@@ -16,6 +16,7 @@ type ExhibitDetailScreenProps = {
 };
 
 export function ExhibitDetailScreen({
+  userId,
   section,
   onBack,
   favorites,
@@ -259,6 +260,7 @@ export function ExhibitDetailScreen({
           favorites={favorites}
           onToggleFavorite={onToggleFavorite}
           onClose={() => setModalItem(null)}
+          userId={userId}
         />
       )}
     </div>

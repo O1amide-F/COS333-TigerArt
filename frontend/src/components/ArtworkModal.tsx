@@ -1,13 +1,17 @@
+import { useEffect } from "react";
 import { Heart } from "lucide-react";
 import { Placeholder } from "./Placeholder";
 import { theme } from "../theme";
 import type { ExhibitItem } from "../types";
+
+const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:5001/api";
 
 type ArtworkModalProps = {
   item: ExhibitItem;
   favorites: number[];
   onToggleFavorite: (id: number) => void;
   onClose: () => void;
+  userId?: string | null;
 };
 
 export function ArtworkModal({
@@ -15,7 +19,16 @@ export function ArtworkModal({
   favorites,
   onToggleFavorite,
   onClose,
+  userId,
 }: ArtworkModalProps) {
+  // Record view once when modal opens
+  useEffect(() => {
+    if (!userId) return;
+    fetch(`${API_BASE}/recently-viewed/${userId}/${item.id}`, {
+      method: "POST",
+    }).catch(console.error);
+  }, []);
+
   return (
     <div
       onClick={onClose}
@@ -139,7 +152,6 @@ export function ArtworkModal({
           >
             {item.name}
           </div>
-
 
           {[
             { label: "Artist", value: item.displaymaker },

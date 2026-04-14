@@ -1,10 +1,18 @@
-import { Compass, Heart, House, Newspaper, Settings } from "lucide-react";
+import {
+  Clock,
+  Compass,
+  Heart,
+  House,
+  Newspaper,
+  Settings,
+} from "lucide-react";
 import type { ExhibitSection, ForYouItem, NavItem, NewsItem } from "./types";
 
 export const NAV_ITEMS: NavItem[] = [
   { id: "home", icon: House, label: "Home" },
   { id: "explore", icon: Compass, label: "Explore" },
   { id: "favorites", icon: Heart, label: "Favorites" },
+  { id: "recently_viewed", icon: Clock, label: "Recently Viewed" },
   { id: "news", icon: Newspaper, label: "News" },
   { id: "settings", icon: Settings, label: "Settings" },
 ];

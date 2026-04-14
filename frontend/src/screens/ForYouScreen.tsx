@@ -275,7 +275,6 @@ export function ForYouScreen({
                 </button>
               </div>
 
-              {/* Title only shown on card — full details in modal */}
               <div
                 style={{
                   padding: "8px 10px",
@@ -299,6 +298,7 @@ export function ForYouScreen({
           favorites={favorites}
           onToggleFavorite={onToggleFavorite}
           onClose={() => setModalItem(null)}
+          userId={userId}
         />
       )}
     </div>

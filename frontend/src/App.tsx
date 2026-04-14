@@ -5,10 +5,13 @@ import {
   AuthenticatedTemplate,
   UnauthenticatedTemplate,
 } from "@azure/msal-react";
+import { useTour } from "./hooks/useTour";
+import "./tour.css";
 import { BottomNav } from "./components/BottomNav";
 import { ExploreScreen } from "./screens/ExploreScreen";
 import { ExhibitDetailScreen } from "./screens/ExhibitDetailScreen";
 import { FavoritesScreen } from "./screens/FavoritesScreen";
+import { RecentlyViewedScreen } from "./screens/RecentlyViewedScreen";
 import { ForYouScreen } from "./screens/ForYouScreen";
 import { NewsScreen } from "./screens/NewsScreen";
 import { SettingsScreen } from "./screens/SettingsScreen";
@@ -26,11 +29,13 @@ const NAV_TO_SCREEN: Record<NavId, Screen> = {
   favorites: "favorites",
   news: "news",
   settings: "settings",
+  recently_viewed: "recently_viewed",
 };
 
 function TigerArtAuthenticated() {
   const [screen, setScreen] = useState<Screen>("survey");
   const [favorites, setFavorites] = useState<number[]>([]);
+  const [recentlyViewed, setRecentlyViewed] = useState<number[]>([]);
   const [activeSection, setActiveSection] = useState<ExhibitSection | null>(
     null,
   );
@@ -39,15 +44,16 @@ function TigerArtAuthenticated() {
   const [username, setUsername] = useState("Username");
   const [profileImage, setProfileImage] = useState<string | null>(null);
   const [userId, setUserId] = useState<string | null>(null);
+  const { startTour } = useTour({ autoStart: true });
 
-  // On login: load userId, favorites from backend, skip survey if returning user
+  // On login: load userId, favorites, recently viewed from backend
   useEffect(() => {
     getUserProfile().then(async (profile) => {
       if (!profile) return;
       setUsername(profile.displayName);
       setUserId(profile.userid);
 
-      // Load this user's favorited artwork IDs from the backend
+      // Load favorited artwork IDs
       try {
         const favRes = await fetch(
           `${API_BASE}/favorites/${profile.userid}/ids`,
@@ -60,24 +66,33 @@ function TigerArtAuthenticated() {
         console.error("Failed to load favorites:", e);
       }
 
+      // Load recently viewed artwork IDs
+      try {
+        const rvRes = await fetch(
+          `${API_BASE}/recently-viewed/${profile.userid}/ids`,
+        );
+        if (rvRes.ok) {
+          const ids: number[] = await rvRes.json();
+          setRecentlyViewed(ids);
+        }
+      } catch (e) {
+        console.error("Failed to load recently viewed:", e);
+      }
+
       // Skip survey if user already has a feature vector
       try {
         const res = await fetch(`${API_BASE}/for-you/${profile.userid}`);
         if (res.ok) {
-          // Has a vector — returning user, skip survey
           setScreen("home");
           setActiveNav("home");
         }
-        // 404 means no vector yet — new user, stay on survey
       } catch (e) {
         console.error("Failed to check user preferences:", e);
       }
     });
   }, []);
 
-  // ── Single source of truth for toggling favorites ──
-  // Hits the backend first, then updates local state on success.
-  // All screens call this via onToggleFavorite — no screen needs its own fetch.
+  // Single source of truth for toggling favorites
   const toggleFavorite = async (id: number) => {
     if (!userId) {
       console.warn("toggleFavorite called before userId resolved");
@@ -90,13 +105,30 @@ function TigerArtAuthenticated() {
         method,
       });
       if (!res.ok) throw new Error(`Server error: ${res.status}`);
-      // Update local state only after backend confirms
       setFavorites((prev) =>
         isFavorited ? prev.filter((x) => x !== id) : [...prev, id],
       );
     } catch (e) {
       console.error("Failed to toggle favorite:", e);
     }
+  };
+
+  // Records the view on the backend + updates local state, then navigates
+  const handleSectionClick = (section: ExhibitSection) => {
+    if (userId) {
+      fetch(`${API_BASE}/recently-viewed/${userId}/${section.items[0]?.id}`, {
+        method: "POST",
+      }).catch(console.error); // fire-and-forget
+    }
+    // Update local state: prepend, dedupe, cap at 15
+    setRecentlyViewed((prev) =>
+      [
+        section.items[0]?.id,
+        ...prev.filter((id) => id !== section.items[0]?.id),
+      ].slice(0, 15),
+    );
+    setActiveSection(section);
+    setScreen("exhibitDetail");
   };
 
   const handleNav = (id: NavId) => {
@@ -114,13 +146,9 @@ function TigerArtAuthenticated() {
     );
   };
 
-  const handleSectionClick = (section: ExhibitSection) => {
-    setActiveSection(section);
-    setScreen("exhibitDetail");
-  };
-
   const templateContext = {
     favorites,
+    recentlyViewed,
     activeSection,
     surveySelections,
     username,
@@ -165,8 +193,6 @@ function TigerArtAuthenticated() {
       />
     ),
     exhibitDetail: templateContext.activeSection ? (
-      // ExhibitDetailScreen has its own handleToggle that also calls the backend
-      // directly — pass onToggleFavorite so local state stays in sync after
       <ExhibitDetailScreen
         userId={templateContext.userId}
         section={templateContext.activeSection}
@@ -196,12 +222,21 @@ function TigerArtAuthenticated() {
         selected={templateContext.surveySelections}
         onToggleSelection={templateContext.toggleSurveySelection}
         userId={templateContext.userId}
+        onStartTour={startTour}
         onSave={() => {
           if (templateContext.surveySelections.length === 3) {
             templateContext.setScreen("home");
             templateContext.setActiveNav("home");
           }
         }}
+      />
+    ),
+    recently_viewed: (
+      <RecentlyViewedScreen
+        userId={templateContext.userId}
+        onSectionClick={templateContext.handleSectionClick}
+        favorites={templateContext.favorites}
+        onToggleFavorite={templateContext.toggleFavorite}
       />
     ),
   };

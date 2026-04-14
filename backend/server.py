@@ -836,6 +836,77 @@ def get_favorite_ids(user_id):
     conn.close()
     return jsonify(ids)
 
+@app.route('/api/recently-viewed/<string:user_id>/ids', methods=['GET'])
+def get_recently_viewed_ids(user_id):
+    """Lightweight endpoint — returns just the objectids in recency order."""
+    conn = get_connection()
+    cur = conn.cursor()
+    cur.execute("""
+        SELECT objectid FROM recently_viewed
+        WHERE user_id = %s
+        ORDER BY viewed_at DESC
+        LIMIT 20
+    """, (user_id,))
+    ids = [row[0] for row in cur.fetchall()]
+    cur.close()
+    conn.close()
+    return jsonify(ids)
+
+
+@app.route('/api/recently-viewed/<string:user_id>', methods=['GET'])
+def get_recently_viewed(user_id):
+    """Return full artwork details for a user's recently viewed pieces (max 20)."""
+    conn = get_connection()
+    cur = conn.cursor()
+    cur.execute("""
+        SELECT a.objectid, a.title, a.medium, a.department, a.classification,
+               a.displaydate, a.displaymaker, a.on_view, ai.image_url
+        FROM artworks a
+        JOIN recently_viewed rv ON a.objectid = rv.objectid
+        LEFT JOIN artwork_images ai ON a.objectid = ai.objectid
+        WHERE rv.user_id = %s
+        ORDER BY rv.viewed_at DESC
+        LIMIT 20
+    """, (user_id,))
+    rows = cur.fetchall()
+    cur.close()
+    conn.close()
+    items = []
+    for row in rows:
+        items.append({
+            "artwork_id":     row[0],
+            "title":          row[1],
+            "description":    row[2],
+            "department":     row[3],
+            "classification": row[4],
+            "displaydate":    row[5],
+            "displaymaker":   row[6],
+            "on_view":        row[7],
+            "image_url":      row[8],
+        })
+    return jsonify(items)
+
+
+@app.route('/api/recently-viewed/<string:user_id>/<int:objectid>', methods=['POST'])
+def add_recently_viewed(user_id, objectid):
+    """Record an artwork as recently viewed. Re-viewing bumps it to the top."""
+    conn = get_connection()
+    cur = conn.cursor()
+    try:
+        cur.execute("""
+            INSERT INTO recently_viewed (user_id, objectid, viewed_at)
+            VALUES (%s, %s, NOW())
+            ON CONFLICT (user_id, objectid) DO UPDATE SET viewed_at = NOW()
+        """, (user_id, objectid))
+        conn.commit()
+        return jsonify({"status": "recorded"}), 201
+    except Exception as e:
+        conn.rollback()
+        return jsonify({"error": str(e)}), 400
+    finally:
+        cur.close()
+        conn.close()
+
 ## Changed to also run on phone using ip address
 if __name__ == "__main__":
     app.run(debug=True, port=5001, host='0.0.0.0')

@@ -423,6 +423,7 @@ function ExploreSectionCard({
 }
 
 export function ExploreScreen({
+  userId,
   onSectionClick,
   favorites,
   onToggleFavorite,
@@ -607,6 +608,7 @@ export function ExploreScreen({
           favorites={favorites}
           onToggleFavorite={onToggleFavorite}
           onClose={() => setModalItem(null)}
+          userId={userId}
         />
       )}
     </div>
