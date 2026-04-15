@@ -6,7 +6,9 @@
    ========================================================================== */
 
 /* ── Reset / base ── */
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 .tiger-art-app {
   min-height: 100dvh;
@@ -19,13 +21,15 @@
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
+  width: 100%;
   background: #fafaf8;
 }
 
 /* ── Content area: scrollable main region ── */
 .tiger-art-content {
   flex: 1;
-  overflow-y: auto;
+  min-width: 0;
+  overflow-y: visible;
   /* On mobile the bottom nav is fixed, so add padding so content isn't hidden behind it */
   padding-bottom: 72px;
 }
@@ -75,7 +79,7 @@
     left: 0;
     bottom: unset;
     right: unset;
-    width: 220px;
+    width: 250px;
     height: 100dvh;
     flex-shrink: 0;
     /* Nav component needs .sidebar class added — see BottomNav note below */
@@ -86,13 +90,14 @@
     flex: 1;
     padding-bottom: 0;
     padding-top: 0;
-    overflow-y: auto;
-    height: 100dvh;
+    overflow-y: visible;
+    height: auto;
   }
 
-  /* Constrain content width nicely on very wide screens */
+  /* Keep actual content centered while right pane still fills full app width */
   .tiger-art-content > * {
     max-width: 760px;
+    width: 100%;
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -103,7 +108,7 @@
    ========================================================================== */
 @media (min-width: 1440px) {
   .tiger-art-bottom-nav {
-    width: 260px;
+    width: 250px;
   }
 
   .tiger-art-content > * {
