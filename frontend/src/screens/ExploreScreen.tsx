@@ -480,6 +480,7 @@ export function ExploreScreen({
     displaydate: item.displaydate,
     displaymaker: item.displaymaker,
     on_view: item.on_view,
+    gallery_label_text: item.gallery_label_text,
   });
 
   const isSearching = searchResults !== null;

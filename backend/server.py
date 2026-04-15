@@ -359,6 +359,7 @@ def get_for_you():
                 a.classification,
                 a.displaydate,
                 a.displaymaker,
+                a.gallery_label_text,
                 a.on_view
         FROM artworks a
         LEFT JOIN artwork_images ai
@@ -382,7 +383,8 @@ def get_for_you():
             "classification": row[5],
             "displaydate": row[6],
             "displaymaker": row[7],
-            "on_view": row[8],
+            "gallery_label_text": row[8],
+            "on_view": row[9],
         })
 
     return jsonify(items)
@@ -439,6 +441,7 @@ def get_exhibits():
                 a.classification,
                 a.displaydate,
                 a.displaymaker,
+                a.gallery_label_text,
                 a.on_view,
                 ai.image_url,
                 ROW_NUMBER() OVER (
@@ -449,11 +452,11 @@ def get_exhibits():
             LEFT JOIN artwork_images ai
                 ON a.objectid = ai.objectid
             WHERE a.department IS NOT NULL
-              AND TRIM(a.department) <> ''
-              AND a.department <> '(not assigned)'
+            AND TRIM(a.department) <> ''
+            AND a.department <> '(not assigned)'
         )
         SELECT objectid, title, medium, department, classification,
-               displaydate, displaymaker, on_view, image_url
+            displaydate, displaymaker, gallery_label_text, on_view, image_url
         FROM ranked_artworks
         WHERE rn <= 5
         ORDER BY department, rn
@@ -476,8 +479,9 @@ def get_exhibits():
             "classification": row[4],
             "displaydate":  row[5],
             "displaymaker": row[6],
-            "on_view":      row[7],
-            "imageUrl":     row[8],
+            "gallery_label_text": row[7],
+            "on_view":      row[8],
+            "imageUrl":     row[9],
         })
 
     return jsonify([{"name": k, "items": v} for k, v in sections_dict.items()])
@@ -502,6 +506,7 @@ def get_exhibit_detail(department):
                 a.classification,
                 a.displaydate,
                 a.displaymaker,
+                a.gallery_label_text,
                 a.on_view,
                 ai.image_url AS "imageUrl"
             FROM artworks a
@@ -527,8 +532,9 @@ def get_exhibit_detail(department):
             "classification": row[4],
             "displaydate": row[5],
             "displaymaker": row[6],
-            "on_view": row[7],
-            "imageUrl": row[8],
+            "gallery_label_text": row[7],
+            "on_view": row[8],
+            "imageUrl": row[9],
         })
 
     return jsonify(items)
@@ -683,6 +689,7 @@ def get_for_you_personalised(user_id):
             a.department,
             a.displaydate,
             a.displaymaker,
+            a.gallery_label_text,
             a.on_view
         FROM artworks a
         LEFT JOIN artwork_images ai ON a.objectid = ai.objectid
@@ -695,7 +702,7 @@ def get_for_you_personalised(user_id):
     # Score each artwork
     scored = []
     for row in rows:
-        objectid, title, about, image_url, classification, department, displaydate, displaymaker, on_view = row
+        objectid, title, about, image_url, classification, department, displaydate, displaymaker, gallery_label_text, on_view = row
         obj_vec = tag_object(objectid, classification, department, displaydate)
         score = dot_product(user_vec, obj_vec)
         scored.append((score, {
@@ -708,6 +715,7 @@ def get_for_you_personalised(user_id):
             "classification": classification,
             "displaydate": displaydate,
             "displaymaker": displaymaker,
+            "gallery_label_text": gallery_label_text,
             "on_view": on_view,
         }))
 
@@ -782,7 +790,10 @@ def search():
             ai.image_url,
             a.classification,
             a.department,
-            a.displaydate
+            a.displaydate,
+            a.displaymaker,
+            a.gallery_label_text,
+            a.on_view
         FROM artworks a
         LEFT JOIN artwork_images ai ON a.objectid = ai.objectid
         WHERE a.title IS NOT NULL;
@@ -793,7 +804,7 @@ def search():
 
     results = []
     for row in rows:
-        objectid, title, about, image_url, classification, department, displaydate = row
+        objectid, title, about, image_url, classification, department, displaydate, displaymaker, gallery_label_text, on_view = row
         title_lower = (title or "").lower()
         about_lower = (about or "").lower()
         obj_vec = tag_object(objectid, classification, department, displaydate)
@@ -816,6 +827,12 @@ def search():
                 "about": about,
                 "imageUrl": image_url,
                 "score": round(total_score, 4),
+                "department": department,
+                "classification": classification,
+                "displaydate": displaydate,
+                "displaymaker": displaymaker,
+                "gallery_label_text": gallery_label_text,
+                "on_view": on_view,
             }))
 
     results.sort(key=lambda x: x[0], reverse=True)
@@ -828,7 +845,7 @@ def get_favorites(user_id):
     cur = conn.cursor()
     cur.execute("""
         SELECT a.objectid, a.title, a.medium, a.department, a.classification,
-               a.displaydate, a.displaymaker, a.on_view, ai.image_url
+            a.displaydate, a.displaymaker, a.gallery_label_text, a.on_view, ai.image_url
         FROM artworks a
         JOIN saved_artworks sa ON a.objectid = sa.objectid
         LEFT JOIN artwork_images ai ON a.objectid = ai.objectid
@@ -848,8 +865,9 @@ def get_favorites(user_id):
             "classification": row[4],
             "displaydate":    row[5],
             "displaymaker":   row[6],
-            "on_view":        row[7],
-            "image_url":      row[8],
+            "gallery_label_text": row[7],
+            "on_view":        row[8],
+            "image_url":      row[9],
         })
     return jsonify(items)
  
@@ -907,9 +925,13 @@ def get_recently_viewed_ids(user_id):
     conn = get_connection()
     cur = conn.cursor()
     cur.execute("""
-        SELECT objectid FROM recently_viewed
-        WHERE user_id = %s
-        ORDER BY viewed_at DESC
+        SELECT a.objectid, a.title, a.medium, a.department, a.classification,
+            a.displaydate, a.displaymaker, a.gallery_label_text, a.on_view, ai.image_url
+        FROM artworks a
+        JOIN recently_viewed rv ON a.objectid = rv.objectid
+        LEFT JOIN artwork_images ai ON a.objectid = ai.objectid
+        WHERE rv.user_id = %s
+        ORDER BY rv.viewed_at DESC
         LIMIT 20
     """, (user_id,))
     ids = [row[0] for row in cur.fetchall()]
@@ -925,7 +947,7 @@ def get_recently_viewed(user_id):
     cur = conn.cursor()
     cur.execute("""
         SELECT a.objectid, a.title, a.medium, a.department, a.classification,
-               a.displaydate, a.displaymaker, a.on_view, ai.image_url
+            a.displaydate, a.displaymaker, a.gallery_label_text, a.on_view, ai.image_url
         FROM artworks a
         JOIN recently_viewed rv ON a.objectid = rv.objectid
         LEFT JOIN artwork_images ai ON a.objectid = ai.objectid
@@ -946,8 +968,9 @@ def get_recently_viewed(user_id):
             "classification": row[4],
             "displaydate":    row[5],
             "displaymaker":   row[6],
-            "on_view":        row[7],
-            "image_url":      row[8],
+            "gallery_label_text": row[7],
+            "on_view":        row[8],
+            "image_url":      row[9],
         })
     return jsonify(items)
 

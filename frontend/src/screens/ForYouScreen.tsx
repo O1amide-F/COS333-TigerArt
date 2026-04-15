@@ -69,17 +69,21 @@ export function ForYouScreen({
   const displayItems = searchResults ?? items;
   const isSearching = searchResults !== null;
 
-  const toExhibitItem = (item: ForYouItem): ExhibitItem => ({
-    id: item.id,
-    name: item.title,
-    desc: item.about,
-    imageUrl: item.imageUrl,
-    department: item.department,
-    classification: item.classification,
-    displaydate: item.displaydate,
-    displaymaker: item.displaymaker,
-    on_view: item.on_view,
-  });
+  const toExhibitItem = (item: ForYouItem): ExhibitItem => {
+    console.log("FOR YOU clicked item:", item);
+    return {
+      id: item.id,
+      name: item.title,
+      desc: item.about,
+      imageUrl: item.imageUrl,
+      department: item.department,
+      classification: item.classification,
+      displaydate: item.displaydate,
+      displaymaker: item.displaymaker,
+      on_view: item.on_view,
+      gallery_label_text: item.gallery_label_text,
+    };
+  };
 
   if (!userId) {
     return (

@@ -78,6 +78,7 @@ export function ForYouScreen({
     classification: item.classification,
     displaydate: item.displaydate,
     displaymaker: item.displaymaker,
+    gallery_label_text: item.gallery_label_text,
     on_view: item.on_view,
   });
 
@@ -307,6 +308,7 @@ export function ForYouScreen({
           favorites={favorites}
           onToggleFavorite={onToggleFavorite}
           onClose={() => setModalItem(null)}
+          userId={userId}
         />
       )}
     </div>

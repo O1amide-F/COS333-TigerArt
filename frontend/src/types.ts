@@ -35,6 +35,7 @@ export type ExhibitItem = {
   classification?: string;
   displaydate?: string;
   displaymaker?: string | "Unknown";
+  gallery_label_text?: string;
   on_view?: boolean;
 };
 
@@ -53,6 +54,7 @@ export type ForYouItem = {
   classification?: string;
   displaydate?: string;
   displaymaker?: string | "Unknown";
+  gallery_label_text?: string;
   on_view?: boolean;
 };
 

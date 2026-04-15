@@ -25,6 +25,7 @@ type ArtworkFromAPI = {
   displaymaker?: string;
   on_view?: boolean;
   image_url?: string;
+  gallery_label_text?: string;
 };
 
 type RecentCard = {
@@ -95,8 +96,10 @@ export function RecentlyViewedScreen({
     displaydate: artwork.displaydate,
     displaymaker: artwork.displaymaker,
     on_view: artwork.on_view,
+    gallery_label_text: artwork.gallery_label_text,
   });
 
+  
   // Open modal when card is clicked
   const handleCardClick = (card: RecentCard) => {
     const artwork = artworks.find((a) => a.artwork_id === card.id);

@@ -187,6 +187,31 @@ export function ArtworkModal({
                 </span>
               </div>
             ))}
+      {item.gallery_label_text && (
+        <div style={{ marginTop: 16 }}>
+          <div
+            style={{
+              marginBottom: 8,
+              fontSize: 13,
+              fontFamily: "'DM Sans', sans-serif",
+              fontWeight: 600,
+              color: theme.components.badge.mutedText,
+            }}
+          >
+            Description
+          </div>
+
+          <div
+            style={{
+              color: theme.components.badge.text,
+              fontSize: 13,
+              fontFamily: "'DM Sans', sans-serif",
+              lineHeight: 1.6,
+            }}
+            dangerouslySetInnerHTML={{ __html: item.gallery_label_text }}
+          />
+        </div>
+      )}
         </div>
       </div>
     </div>
