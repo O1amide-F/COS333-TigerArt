@@ -25,7 +25,6 @@ type ArtworkFromAPI = {
   displaymaker?: string;
   on_view?: boolean;
   image_url?: string;
-  gallery_label_text?: string;
 };
 
 type RecentCard = {
@@ -37,7 +36,6 @@ type RecentCard = {
 
 export function RecentlyViewedScreen({
   userId,
-  onSectionClick,
   favorites,
   onToggleFavorite,
 }: RecentlyViewedScreenProps) {
@@ -46,6 +44,7 @@ export function RecentlyViewedScreen({
   const [error, setError] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState<string | null>(null);
   const [modalItem, setModalItem] = useState<ExhibitItem | null>(null);
+  const [visibleCount, setVisibleCount] = useState(4);
 
   useEffect(() => {
     if (!userId) return;
@@ -63,6 +62,11 @@ export function RecentlyViewedScreen({
       })
       .finally(() => setIsLoading(false));
   }, [userId]);
+
+  // Reset visible count when search changes
+  useEffect(() => {
+    setVisibleCount(4);
+  }, [searchQuery]);
 
   const recentCards = useMemo<RecentCard[]>(
     () =>
@@ -96,18 +100,55 @@ export function RecentlyViewedScreen({
     displaydate: artwork.displaydate,
     displaymaker: artwork.displaymaker,
     on_view: artwork.on_view,
-    gallery_label_text: artwork.gallery_label_text,
   });
 
-  
-  // Open modal when card is clicked
   const handleCardClick = (card: RecentCard) => {
     const artwork = artworks.find((a) => a.artwork_id === card.id);
     if (!artwork) return;
     setModalItem(toExhibitItem(artwork));
   };
 
+  // Shared heart button
+  const HeartButton = ({ itemId }: { itemId: number }) => {
+    const isFavorited = favorites.includes(itemId);
+    return (
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
+          onToggleFavorite(itemId);
+        }}
+        style={{
+          position: "absolute",
+          top: 8,
+          right: 8,
+          background: "rgba(0,0,0,0.35)",
+          backdropFilter: "blur(4px)",
+          border: "none",
+          borderRadius: "50%",
+          width: 32,
+          height: 32,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          cursor: "pointer",
+        }}
+      >
+        <Heart
+          size={16}
+          strokeWidth={2.2}
+          color={isFavorited ? theme.components.favorite.active : "#fff"}
+          fill={isFavorited ? theme.components.favorite.active : "none"}
+        />
+      </button>
+    );
+  };
+
   const isSearching = searchQuery !== null;
+
+  // Featured = first card, grid = rest up to visibleCount
+  const featuredCard = displayCards[0];
+  const gridCards = displayCards.slice(1, 1 + visibleCount);
+  const hasMore = displayCards.length - 1 > visibleCount;
 
   return (
     <div
@@ -119,22 +160,21 @@ export function RecentlyViewedScreen({
         isSearching={isSearching}
       />
 
-      <h1
+      <div
         style={{
-          margin: "0 0 24px",
-          fontSize: 22,
-          fontFamily: "'Playfair Display', serif",
-          fontWeight: 900,
-          letterSpacing: "0.06em",
-          color: theme.components.badge.text,
           background: theme.components.badge.background,
-          display: "inline-block",
-          padding: "6px 12px",
           borderRadius: 4,
+          padding: "6px 12px",
+          fontSize: 14,
+          fontFamily: "'DM Sans', sans-serif",
+          fontWeight: 600,
+          color: theme.components.badge.text,
+          marginBottom: 14,
+          textAlign: "center",
         }}
       >
         {isSearching ? "SEARCH RESULTS" : "RECENTLY VIEWED"}
-      </h1>
+      </div>
 
       {isLoading ? (
         <div
@@ -208,19 +248,79 @@ export function RecentlyViewedScreen({
               found
             </p>
           )}
-          <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-            {displayCards.map((card) => (
+
+          {/* Featured hero card */}
+          {featuredCard && (
+            <div
+              style={{ marginBottom: 10, cursor: "pointer" }}
+              onClick={() => handleCardClick(featuredCard)}
+            >
+              <div style={{ position: "relative" }}>
+                {featuredCard.imageUrl ? (
+                  <img
+                    src={featuredCard.imageUrl}
+                    alt={featuredCard.title}
+                    style={{
+                      width: "100%",
+                      aspectRatio: "16 / 9",
+                      objectFit: "cover",
+                      display: "block",
+                      borderRadius: 4,
+                    }}
+                  />
+                ) : (
+                  <Placeholder
+                    label="Unable to Render Image"
+                    aspectRatio="16/9"
+                  />
+                )}
+                <HeartButton itemId={featuredCard.id} />
+              </div>
+              <div style={{ paddingTop: 8 }}>
+                <div
+                  style={{
+                    fontSize: 14,
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontWeight: 600,
+                    color: theme.components.badge.text,
+                    marginBottom: 4,
+                  }}
+                >
+                  {featuredCard.title}
+                </div>
+                <div
+                  style={{
+                    width: 80,
+                    height: 5,
+                    background: theme.components.divider.color,
+                    borderRadius: 3,
+                  }}
+                />
+              </div>
+            </div>
+          )}
+
+          <div
+            style={{
+              borderTop: `1px solid ${theme.components.divider.color}`,
+              paddingTop: 14,
+            }}
+          />
+
+          {/* 2-column grid */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: 12,
+              marginTop: 4,
+            }}
+          >
+            {gridCards.map((card) => (
               <div
                 key={card.id}
+                style={{ cursor: "pointer" }}
                 onClick={() => handleCardClick(card)}
-                style={{
-                  border: `1px solid ${theme.components.card.border}`,
-                  borderRadius: 10,
-                  overflow: "hidden",
-                  background: theme.components.card.background,
-                  cursor: "pointer",
-                  transition: "all 180ms ease",
-                }}
               >
                 <div style={{ position: "relative" }}>
                   {card.imageUrl ? (
@@ -229,86 +329,71 @@ export function RecentlyViewedScreen({
                       alt={card.title}
                       style={{
                         width: "100%",
-                        aspectRatio: "4/3",
+                        aspectRatio: "1 / 1",
                         objectFit: "cover",
                         display: "block",
+                        borderRadius: 4,
                       }}
                     />
                   ) : (
                     <Placeholder
                       label="Unable to Render Image"
-                      aspectRatio="4/3"
-                      style={{ borderRadius: 0 }}
+                      aspectRatio="1/1"
                     />
                   )}
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      onToggleFavorite(card.id);
-                    }}
-                    style={{
-                      position: "absolute",
-                      top: 8,
-                      right: 8,
-                      background: "rgba(0,0,0,0.35)",
-                      backdropFilter: "blur(4px)",
-                      border: "none",
-                      borderRadius: "50%",
-                      width: 32,
-                      height: 32,
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      cursor: "pointer",
-                    }}
-                  >
-                    <Heart
-                      size={16}
-                      strokeWidth={2.2}
-                      color={
-                        favorites.includes(card.id)
-                          ? theme.components.favorite.active
-                          : "#fff"
-                      }
-                      fill={
-                        favorites.includes(card.id)
-                          ? theme.components.favorite.active
-                          : "none"
-                      }
-                    />
-                  </button>
+                  <HeartButton itemId={card.id} />
                 </div>
-
-                {/* Title always visible below image */}
-                <div style={{ padding: "10px 12px 12px" }}>
+                <div style={{ paddingTop: 6 }}>
                   <div
                     style={{
-                      fontSize: 14,
-                      fontWeight: 700,
-                      color: theme.components.badge.text,
+                      fontSize: 13,
                       fontFamily: "'DM Sans', sans-serif",
-                      lineHeight: 1.2,
-                      marginBottom: card.subtitle ? 6 : 0,
+                      fontWeight: 600,
+                      color: theme.components.badge.text,
                     }}
                   >
                     {card.title}
                   </div>
-                  {card.subtitle && (
-                    <div
-                      style={{
-                        fontSize: 12,
-                        fontFamily: "'DM Sans', sans-serif",
-                        color: theme.components.badge.mutedText,
-                        lineHeight: 1.5,
-                      }}
-                    >
-                      {card.subtitle}
-                    </div>
-                  )}
+                  <div
+                    style={{
+                      width: 50,
+                      height: 5,
+                      background: theme.components.divider.color,
+                      borderRadius: 3,
+                      marginTop: 4,
+                    }}
+                  />
                 </div>
               </div>
             ))}
           </div>
+
+          {hasMore && (
+            <div
+              style={{
+                marginTop: 16,
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
+              <button
+                onClick={() => setVisibleCount((prev) => prev + 6)}
+                style={{
+                  padding: "10px 16px",
+                  borderRadius: 6,
+                  border: "none",
+                  cursor: "pointer",
+                  fontSize: 14,
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontWeight: 600,
+                  background: theme.components.badge.background,
+                  color: theme.components.badge.text,
+                }}
+              >
+                Click here to view more images
+              </button>
+            </div>
+          )}
         </>
       ) : (
         // Empty state
