@@ -838,6 +838,64 @@ def search():
     results.sort(key=lambda x: x[0], reverse=True)
     return jsonify([item for _, item in results[:30]])
 
+
+@app.route('/api/artworks/by-ids', methods=['GET'])
+def get_artworks_by_ids():
+    """Return artwork details for a client-provided list of object IDs."""
+    raw_ids = (request.args.get("ids") or "").strip()
+    if not raw_ids:
+        return jsonify([])
+
+    try:
+        object_ids = [int(value) for value in raw_ids.split(",") if value.strip()]
+    except ValueError:
+        return jsonify({"error": "ids must be a comma-separated list of integers"}), 400
+
+    if not object_ids:
+        return jsonify([])
+
+    conn = get_connection()
+    cur = conn.cursor()
+    try:
+        cur.execute("""
+            SELECT
+                a.objectid,
+                a.title,
+                a.medium,
+                a.department,
+                a.classification,
+                a.displaydate,
+                a.displaymaker,
+                a.gallery_label_text,
+                a.on_view,
+                ai.image_url
+            FROM artworks a
+            LEFT JOIN artwork_images ai ON a.objectid = ai.objectid
+            WHERE a.objectid = ANY(%s)
+            ORDER BY array_position(%s, a.objectid);
+        """, (object_ids, object_ids))
+        rows = cur.fetchall()
+    finally:
+        cur.close()
+        conn.close()
+
+    items = []
+    for row in rows:
+        items.append({
+            "artwork_id": row[0],
+            "title": row[1],
+            "description": row[2],
+            "department": row[3],
+            "classification": row[4],
+            "displaydate": row[5],
+            "displaymaker": row[6],
+            "gallery_label_text": row[7],
+            "on_view": row[8],
+            "image_url": row[9],
+        })
+
+    return jsonify(items)
+
 @app.route('/api/favorites/<string:user_id>', methods=['GET'])
 def get_favorites(user_id):
     """Return full artwork details for all of a user's saved pieces."""

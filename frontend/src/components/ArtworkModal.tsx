@@ -12,6 +12,7 @@ type ArtworkModalProps = {
   onToggleFavorite: (id: number) => void;
   onClose: () => void;
   userId?: string | null;
+  onRecordView?: (id: number) => void;
 };
 
 export function ArtworkModal({
@@ -20,14 +21,16 @@ export function ArtworkModal({
   onToggleFavorite,
   onClose,
   userId,
+  onRecordView,
 }: ArtworkModalProps) {
   // Record view once when modal opens
   useEffect(() => {
+    onRecordView?.(item.id);
     if (!userId) return;
     fetch(`${API_BASE}/recently-viewed/${userId}/${item.id}`, {
       method: "POST",
     }).catch(console.error);
-  }, []);
+  }, [item.id, onRecordView, userId]);
 
   return (
     <div

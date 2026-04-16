@@ -1,4 +1,4 @@
-import { PublicClientApplication } from "@azure/msal-browser";
+import { PublicClientApplication, type AccountInfo } from "@azure/msal-browser";
 
 const msalConfig = {
   auth: {
@@ -14,7 +14,7 @@ const msalConfig = {
 };
 
 export const loginRequest = {
-  scopes: ["openid", "profile", "User.Read"],
+  scopes: ["openid", "profile"],
   prompt: "login",
 };
 
@@ -24,44 +24,21 @@ export const msalInitPromise = msalInstance
   .initialize()
   .then(() => msalInstance.handleRedirectPromise());
 
-async function getAccessToken(): Promise<string | null> {
-  const accounts = msalInstance.getAllAccounts();
-  if (accounts.length === 0) return null;
-
-  const silentRequest = {
-    ...loginRequest,
-    account: accounts[0],
-  };
-
-  try {
-    const response = await msalInstance.acquireTokenSilent(silentRequest);
-    return response.accessToken;
-  } catch {
-    return null;
-  }
-}
-
 export interface UserProfile {
   userid: string;
   displayName: string;
 }
 
+// One-way: reads identity directly from the cached account — no token fetch, no Graph call
 export async function getUserProfile(): Promise<UserProfile | null> {
-  const token = await getAccessToken();
-  if (!token) return null;
+  const accounts = msalInstance.getAllAccounts();
+  if (accounts.length === 0) return null;
 
-  const headers = { Authorization: `Bearer ${token}` };
-
-  const profileRes = await fetch("https://graph.microsoft.com/v1.0/me", {
-    headers,
-  });
-  if (!profileRes.ok) return null;
-  const profile = await profileRes.json();
-  //console.log("profile is ", profile)
+  const account: AccountInfo = accounts[0];
 
   return {
-    displayName: profile.displayName ?? "",
-    userid: profile.id,
+    userid: account.localAccountId, // unique Azure AD object ID
+    displayName: account.name ?? account.username ?? "",
   };
 }
 

@@ -32,7 +32,7 @@ const NAV_TO_SCREEN: Record<NavId, Screen> = {
   recently_viewed: "recently_viewed",
 };
 
-function TigerArtAuthenticated() {
+function TigerArtAuthenticated({ isGuest = false }: { isGuest?: boolean }) {
   const [screen, setScreen] = useState<Screen>("survey");
   const [favorites, setFavorites] = useState<number[]>([]);
   const [recentlyViewed, setRecentlyViewed] = useState<number[]>([]);
@@ -48,6 +48,12 @@ function TigerArtAuthenticated() {
 
   // On login: load userId, favorites, recently viewed from backend
   useEffect(() => {
+    if (isGuest) {
+      // Skip auth fetches for guests and go straight to survey/home flow.
+      setScreen("survey");
+      return;
+    }
+
     getUserProfile().then(async (profile) => {
       if (!profile) return;
       setUsername(profile.displayName);
@@ -90,15 +96,25 @@ function TigerArtAuthenticated() {
         console.error("Failed to check user preferences:", e);
       }
     });
-  }, []);
+  }, [isGuest]);
 
   // Single source of truth for toggling favorites
   const toggleFavorite = async (id: number) => {
+    const isFavorited = favorites.includes(id);
+
+    if (isGuest) {
+      // Guest mode is local-only: keep interaction behavior but skip DB writes.
+      setFavorites((prev) =>
+        isFavorited ? prev.filter((x) => x !== id) : [...prev, id],
+      );
+      return;
+    }
+
     if (!userId) {
       console.warn("toggleFavorite called before userId resolved");
       return;
     }
-    const isFavorited = favorites.includes(id);
+
     const method = isFavorited ? "DELETE" : "POST";
     try {
       const res = await fetch(`${API_BASE}/favorites/${userId}/${id}`, {
@@ -113,20 +129,24 @@ function TigerArtAuthenticated() {
     }
   };
 
+  // Shared view recorder: guests update local state only; signed-in users also sync to backend.
+  const recordRecentlyViewed = (objectId?: number) => {
+    if (!objectId) return;
+
+    if (userId) {
+      fetch(`${API_BASE}/recently-viewed/${userId}/${objectId}`, {
+        method: "POST",
+      }).catch(console.error);
+    }
+
+    setRecentlyViewed((prev) =>
+      [objectId, ...prev.filter((id) => id !== objectId)].slice(0, 15),
+    );
+  };
+
   // Records the view on the backend + updates local state, then navigates
   const handleSectionClick = (section: ExhibitSection) => {
-    if (userId) {
-      fetch(`${API_BASE}/recently-viewed/${userId}/${section.items[0]?.id}`, {
-        method: "POST",
-      }).catch(console.error); // fire-and-forget
-    }
-    // Update local state: prepend, dedupe, cap at 15
-    setRecentlyViewed((prev) =>
-      [
-        section.items[0]?.id,
-        ...prev.filter((id) => id !== section.items[0]?.id),
-      ].slice(0, 15),
-    );
+    recordRecentlyViewed(section.items[0]?.id);
     setActiveSection(section);
     setScreen("exhibitDetail");
   };
@@ -182,6 +202,7 @@ function TigerArtAuthenticated() {
         favorites={templateContext.favorites}
         onToggleFavorite={templateContext.toggleFavorite}
         userId={templateContext.userId}
+        onRecordView={recordRecentlyViewed}
       />
     ),
     explore: (
@@ -190,6 +211,7 @@ function TigerArtAuthenticated() {
         onSectionClick={templateContext.handleSectionClick}
         favorites={templateContext.favorites}
         onToggleFavorite={templateContext.toggleFavorite}
+        onRecordView={recordRecentlyViewed}
       />
     ),
     exhibitDetail: templateContext.activeSection ? (
@@ -199,6 +221,7 @@ function TigerArtAuthenticated() {
         onBack={() => templateContext.setScreen("explore")}
         favorites={templateContext.favorites}
         onToggleFavorite={templateContext.toggleFavorite}
+        onRecordView={recordRecentlyViewed}
       />
     ) : null,
     favorites: (
@@ -222,6 +245,7 @@ function TigerArtAuthenticated() {
         selected={templateContext.surveySelections}
         onToggleSelection={templateContext.toggleSurveySelection}
         userId={templateContext.userId}
+        isGuest={isGuest}
         onStartTour={startTour}
         onSave={() => {
           if (templateContext.surveySelections.length === 3) {
@@ -234,9 +258,11 @@ function TigerArtAuthenticated() {
     recently_viewed: (
       <RecentlyViewedScreen
         userId={templateContext.userId}
+        recentIds={templateContext.recentlyViewed}
         onSectionClick={templateContext.handleSectionClick}
         favorites={templateContext.favorites}
         onToggleFavorite={templateContext.toggleFavorite}
+        onRecordView={recordRecentlyViewed}
       />
     ),
   };
@@ -266,6 +292,7 @@ function TigerArtAuthenticated() {
 
 export default function TigerArt() {
   const [msalReady, setMsalReady] = useState(false);
+  const [isGuest, setIsGuest] = useState(false);
 
   useEffect(() => {
     msalInitPromise
@@ -281,7 +308,11 @@ export default function TigerArt() {
   return (
     <MsalProvider instance={msalInstance}>
       <UnauthenticatedTemplate>
-        <LoginScreen />
+        {isGuest ? (
+          <TigerArtAuthenticated isGuest />
+        ) : (
+          <LoginScreen onGuestLogin={() => setIsGuest(true)} />
+        )}
       </UnauthenticatedTemplate>
       <AuthenticatedTemplate>
         <TigerArtAuthenticated />

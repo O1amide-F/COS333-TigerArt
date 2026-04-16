@@ -15,6 +15,7 @@ type ExploreScreenProps = {
   onSectionClick: (section: ExhibitSection) => void;
   favorites: number[];
   onToggleFavorite: (id: number) => void;
+  onRecordView: (id: number) => void;
 };
 
 const styles = {
@@ -427,6 +428,7 @@ export function ExploreScreen({
   onSectionClick,
   favorites,
   onToggleFavorite,
+  onRecordView,
 }: ExploreScreenProps) {
   const [sections, setSections] = useState<ExhibitSection[]>([]);
   const [searchResults, setSearchResults] = useState<ForYouItem[] | null>(null);
@@ -610,6 +612,7 @@ export function ExploreScreen({
           onToggleFavorite={onToggleFavorite}
           onClose={() => setModalItem(null)}
           userId={userId}
+          onRecordView={onRecordView}
         />
       )}
     </div>

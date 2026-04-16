@@ -10,9 +10,11 @@ const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:5001/api";
 
 type RecentlyViewedScreenProps = {
   userId: string | null;
+  recentIds: number[];
   onSectionClick: (section: ExhibitSection) => void;
   favorites: number[];
   onToggleFavorite: (id: number) => void;
+  onRecordView: (id: number) => void;
 };
 
 type ArtworkFromAPI = {
@@ -36,8 +38,10 @@ type RecentCard = {
 
 export function RecentlyViewedScreen({
   userId,
+  recentIds,
   favorites,
   onToggleFavorite,
+  onRecordView,
 }: RecentlyViewedScreenProps) {
   const [artworks, setArtworks] = useState<ArtworkFromAPI[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -47,10 +51,22 @@ export function RecentlyViewedScreen({
   const [visibleCount, setVisibleCount] = useState(4);
 
   useEffect(() => {
-    if (!userId) return;
     setIsLoading(true);
     setError(null);
-    fetch(`${API_BASE}/recently-viewed/${userId}`)
+
+    const endpoint = userId
+      ? `${API_BASE}/recently-viewed/${userId}`
+      : recentIds.length > 0
+        ? `${API_BASE}/artworks/by-ids?ids=${encodeURIComponent(recentIds.join(","))}`
+        : null;
+
+    if (!endpoint) {
+      setArtworks([]);
+      setIsLoading(false);
+      return;
+    }
+
+    fetch(endpoint)
       .then((res) => {
         if (!res.ok) throw new Error(`Server error: ${res.status}`);
         return res.json();
@@ -61,7 +77,7 @@ export function RecentlyViewedScreen({
         setError("Could not load recently viewed. Is the server running?");
       })
       .finally(() => setIsLoading(false));
-  }, [userId]);
+  }, [userId, recentIds]);
 
   // Reset visible count when search changes
   useEffect(() => {
@@ -444,6 +460,8 @@ export function RecentlyViewedScreen({
           favorites={favorites}
           onToggleFavorite={onToggleFavorite}
           onClose={() => setModalItem(null)}
+          userId={userId}
+          onRecordView={onRecordView}
         />
       )}
     </div>

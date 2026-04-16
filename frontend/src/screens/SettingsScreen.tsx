@@ -13,6 +13,7 @@ type SettingsScreenProps = {
   onSave: () => void;
   userId: string | null;
   onStartTour: () => void;
+  isGuest?: boolean;
 };
 
 export function SettingsScreen({
@@ -20,6 +21,7 @@ export function SettingsScreen({
   onSave,
   userId,
   onStartTour,
+  isGuest = false,
 }: SettingsScreenProps) {
   const { instance } = useMsal();
   const [showSurvey, setShowSurvey] = useState(false);
@@ -79,11 +81,13 @@ export function SettingsScreen({
               fontWeight: 600,
             }}
           >
-            {username}
+            {isGuest ? "Hi, Guest" : username}
           </span>
           <button
             onClick={async () => {
-              await instance.clearCache();
+              if (!isGuest) {
+                await instance.clearCache();
+              }
               window.location.reload();
             }}
             style={{
@@ -100,9 +104,23 @@ export function SettingsScreen({
               border: "none",
             }}
           >
-            Sign Out
+            {isGuest ? "Create Account" : "Sign Out"}
           </button>
         </div>
+        {isGuest && (
+          <div
+            style={{
+              marginTop: 8,
+              fontSize: 12,
+              fontFamily: "'DM Sans', sans-serif",
+              color: theme.components.badge.mutedText,
+              lineHeight: 1.5,
+            }}
+          >
+            Create an account to save favorites, recently viewed items, and your
+            preferences across sessions.
+          </div>
+        )}
       </div>
 
       {/* Survey section */}

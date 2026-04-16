@@ -13,6 +13,7 @@ type ExhibitDetailScreenProps = {
   onBack: () => void;
   favorites: number[];
   onToggleFavorite: (id: number) => void;
+  onRecordView: (id: number) => void;
 };
 
 export function ExhibitDetailScreen({
@@ -21,6 +22,7 @@ export function ExhibitDetailScreen({
   onBack,
   favorites,
   onToggleFavorite,
+  onRecordView,
 }: ExhibitDetailScreenProps) {
   const [modalItem, setModalItem] = useState<ExhibitItem | null>(null);
   const [detailItems, setDetailItems] = useState<ExhibitItem[]>([]);
@@ -261,6 +263,7 @@ export function ExhibitDetailScreen({
           onToggleFavorite={onToggleFavorite}
           onClose={() => setModalItem(null)}
           userId={userId}
+          onRecordView={onRecordView}
         />
       )}
     </div>

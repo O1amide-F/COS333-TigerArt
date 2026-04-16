@@ -2,7 +2,7 @@ import { useMsal } from "@azure/msal-react";
 import { loginRequest } from "../auth";
 import { theme } from "../theme";
 
-export function LoginScreen() {
+export function LoginScreen({ onGuestLogin }: { onGuestLogin?: () => void }) {
   const { instance } = useMsal();
 
   const handleLogin = () => {
@@ -10,18 +10,20 @@ export function LoginScreen() {
   };
 
   return (
-    <div style={{
-      minHeight: "100vh",
-      backgroundColor: theme.colors.bg,
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
-      fontFamily: "'DM Sans', sans-serif",
-      color: theme.colors.text,
-      textAlign: "center",
-      padding: "24px 20px",
-    }}>
+    <div
+      style={{
+        minHeight: "100vh",
+        backgroundColor: theme.colors.bg,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        fontFamily: "'DM Sans', sans-serif",
+        color: theme.colors.text,
+        textAlign: "center",
+        padding: "24px 20px",
+      }}
+    >
       <h1 style={{ fontFamily: "'Playfair Display', serif", marginBottom: 8 }}>
         Welcome to TigerArt
       </h1>
@@ -44,6 +46,25 @@ export function LoginScreen() {
       >
         Login with Microsoft
       </button>
+
+      {onGuestLogin && (
+        <div
+          style={{
+            marginTop: 14,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: 6,
+          }}
+        >
+          <button onClick={onGuestLogin} style={{ opacity: 0.7 }}>
+            Continue as guest
+          </button>
+          <p style={{ fontSize: 12, color: "gray", margin: 0 }}>
+            Guest mode: favorites and history won't be saved
+          </p>
+        </div>
+      )}
     </div>
   );
 }

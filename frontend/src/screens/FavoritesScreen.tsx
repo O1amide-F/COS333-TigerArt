@@ -44,10 +44,22 @@ export function FavoritesScreen({
   const [showSortMenu, setShowSortMenu] = useState(false);
 
   useEffect(() => {
-    if (!userId) return;
     setIsLoading(true);
     setError(null);
-    fetch(`${API_BASE}/favorites/${userId}`)
+
+    const endpoint = userId
+      ? `${API_BASE}/favorites/${userId}`
+      : favorites.length > 0
+        ? `${API_BASE}/artworks/by-ids?ids=${encodeURIComponent(favorites.join(","))}`
+        : null;
+
+    if (!endpoint) {
+      setArtworks([]);
+      setIsLoading(false);
+      return;
+    }
+
+    fetch(endpoint)
       .then((res) => {
         if (!res.ok) throw new Error(`Server error: ${res.status}`);
         return res.json();

@@ -12,11 +12,13 @@ type ForYouScreenProps = {
   userId: string | null;
   favorites: number[];
   onToggleFavorite: (id: number) => void;
+  onRecordView: (id: number) => void;
 };
 
 export function ForYouScreen({
   favorites,
   onToggleFavorite,
+  onRecordView,
   userId,
 }: ForYouScreenProps) {
   console.log("ForYouScreen userId:", userId);
@@ -28,9 +30,12 @@ export function ForYouScreen({
   const [modalItem, setModalItem] = useState<ExhibitItem | null>(null);
 
   useEffect(() => {
-    if (!userId) return;
     setLoading(true);
-    fetch(`${API_BASE}/for-you/${userId}`)
+    const initialEndpoint = userId
+      ? `${API_BASE}/for-you/${userId}`
+      : `${API_BASE}/for-you`;
+
+    fetch(initialEndpoint)
       .then((r) => {
         if (!r.ok) throw new Error("fallback");
         return r.json();
@@ -84,30 +89,6 @@ export function ForYouScreen({
       gallery_label_text: item.gallery_label_text,
     };
   };
-
-  if (!userId) {
-    return (
-      <div
-        style={{
-          padding: "16px 20px 100px",
-          overflowY: "auto",
-          height: "100%",
-        }}
-      >
-        <div
-          style={{
-            textAlign: "center",
-            padding: "40px 0",
-            fontFamily: "'DM Sans', sans-serif",
-            color: theme.components.badge.mutedText,
-            fontSize: 14,
-          }}
-        >
-          Loading your feed…
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div
@@ -324,6 +305,7 @@ export function ForYouScreen({
           onToggleFavorite={onToggleFavorite}
           onClose={() => setModalItem(null)}
           userId={userId}
+          onRecordView={onRecordView}
         />
       )}
     </div>
