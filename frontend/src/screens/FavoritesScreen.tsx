@@ -123,7 +123,7 @@ export function FavoritesScreen({
         onSearch={(q) => setSearchQuery(q)}
         onClear={() => setSearchQuery(null)}
         isSearching={isSearching}
-        placeholder = "Search your favorites..."
+        placeholder="Search your favorites..."
       />
 
       <div
