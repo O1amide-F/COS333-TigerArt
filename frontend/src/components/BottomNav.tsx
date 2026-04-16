@@ -81,7 +81,7 @@ function SidebarNav({ activeNav, onNavigate }: BottomNavProps) {
               padding: "12px 24px",
               borderRadius: 8,
               margin: "0 12px",
-              opacity: isActive ? 1 : theme.components.nav.inactiveOpacity,
+              opacity: 1,
               transition: "opacity 0.2s, background 0.2s",
             }}
           >

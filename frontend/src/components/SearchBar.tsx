@@ -30,9 +30,10 @@ type SearchBarProps = {
   onSearch: (query: string) => void;
   onClear: () => void;
   isSearching?: boolean;
+  placeholder?: string;
 };
 
-export function SearchBar({ onSearch, onClear, isSearching }: SearchBarProps) {
+export function SearchBar({ onSearch, onClear, isSearching, placeholder = "Search by title or tag…"  }: SearchBarProps) {
   const [value, setValue] = useState("");
   const [showChips, setShowChips] = useState(false);
   const [activeTag, setActiveTag] = useState<string | null>(null);
@@ -104,7 +105,7 @@ export function SearchBar({ onSearch, onClear, isSearching }: SearchBarProps) {
           onKeyDown={handleKeyDown}
           onFocus={() => setShowChips(true)}
           onBlur={handleBlur}
-          placeholder="Search by title or tag…"
+          placeholder={placeholder}
           style={{
             flex: 1,
             border: "none",

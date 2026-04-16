@@ -158,6 +158,7 @@ export function RecentlyViewedScreen({
         onSearch={(q) => setSearchQuery(q)}
         onClear={() => setSearchQuery(null)}
         isSearching={isSearching}
+        placeholder="Search recently viewed..."
       />
 
       <div
