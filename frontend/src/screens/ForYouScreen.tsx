@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { Heart } from "lucide-react";
-import { SearchBar } from "../components/SearchBar";
+import { SearchFilterBar } from "../components/SearchFilterBar";
+import { itemMatchesFilters } from "../utils/filterUtils";
 import { Placeholder } from "../components/Placeholder";
 import { ArtworkModal } from "../components/ArtworkModal";
 import type { ForYouItem, ExhibitItem } from "../types";
 import { theme } from "../theme";
+import { useMemo } from "react"
 
 const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:5001/api";
 
@@ -28,6 +30,7 @@ export function ForYouScreen({
   const [searchLoading, setSearchLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [modalItem, setModalItem] = useState<ExhibitItem | null>(null);
+  const [activeFilters, setActiveFilters] = useState<string[]>([]);
 
   useEffect(() => {
     setLoading(true);
@@ -71,7 +74,10 @@ export function ForYouScreen({
 
   const handleClear = () => setSearchResults(null);
 
-  const displayItems = searchResults ?? items;
+  const displayItems = useMemo(() => {
+    const base = searchResults ?? items;
+    return base.filter((item) => itemMatchesFilters(item, activeFilters));
+  }, [searchResults, items, activeFilters]);
   const isSearching = searchResults !== null;
 
   const toExhibitItem = (item: ForYouItem): ExhibitItem => {
@@ -96,10 +102,13 @@ export function ForYouScreen({
     >
       {/* ── data-tour="search" — highlights the search bar ── */}
       <div data-tour="search">
-        <SearchBar
+        <SearchFilterBar
           onSearch={handleSearch}
           onClear={handleClear}
           isSearching={isSearching}
+          placeholder="Search by title or tag…"
+          activeFilters={activeFilters}
+          onFiltersChange={setActiveFilters}
         />
       </div>
 

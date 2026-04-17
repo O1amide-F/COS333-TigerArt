@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { Heart, Clock } from "lucide-react";
 import { Placeholder } from "../components/Placeholder";
-import { SearchBar } from "../components/SearchBar";
+import { SearchFilterBar } from "../components/SearchFilterBar";
+import { itemMatchesFilters } from "../utils/filterUtils";
 import { ArtworkModal } from "../components/ArtworkModal";
 import { theme } from "../theme";
 import type { ExhibitSection, ExhibitItem } from "../types";
@@ -49,6 +50,7 @@ export function RecentlyViewedScreen({
   const [searchQuery, setSearchQuery] = useState<string | null>(null);
   const [modalItem, setModalItem] = useState<ExhibitItem | null>(null);
   const [visibleCount, setVisibleCount] = useState(4);
+  const [activeFilters, setActiveFilters] = useState<string[]>([]);
 
   useEffect(() => {
     setIsLoading(true);
@@ -96,14 +98,15 @@ export function RecentlyViewedScreen({
   );
 
   const displayCards = useMemo(() => {
-    if (!searchQuery) return recentCards;
-    const q = searchQuery.toLowerCase();
-    return recentCards.filter(
-      (c) =>
-        c.title.toLowerCase().includes(q) ||
-        c.subtitle.toLowerCase().includes(q),
-    );
-  }, [recentCards, searchQuery]);
+    let cards = recentCards;
+    if (searchQuery) {
+      const q = searchQuery.toLowerCase();
+      cards = cards.filter(
+        (c) => c.title.toLowerCase().includes(q) || c.subtitle.toLowerCase().includes(q),
+      );
+    }
+    return cards.filter((c) => itemMatchesFilters(c, activeFilters));
+  }, [recentCards, searchQuery, activeFilters]);
 
   // Convert artwork to ExhibitItem for modal
   const toExhibitItem = (artwork: ArtworkFromAPI): ExhibitItem => ({
@@ -166,15 +169,23 @@ export function RecentlyViewedScreen({
   const gridCards = displayCards.slice(1, 1 + visibleCount);
   const hasMore = displayCards.length - 1 > visibleCount;
 
+  const [sortBy, setSortBy] = useState<"recency" | "az" | "za">("recency");
+  const handleSearch = (q: string) => setSearchQuery(q);
+  const handleClear = () => setSearchQuery(null);
+
   return (
     <div
       style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}
     >
-      <SearchBar
-        onSearch={(q) => setSearchQuery(q)}
-        onClear={() => setSearchQuery(null)}
+      <SearchFilterBar
+        onSearch={handleSearch}
+        onClear={handleClear}
         isSearching={isSearching}
-        placeholder="Search recently viewed..."
+        placeholder="Search recently viewed…"
+        activeFilters={activeFilters}
+        onFiltersChange={setActiveFilters}
+        sortBy={sortBy}
+        onSortChange={setSortBy}
       />
 
       <div

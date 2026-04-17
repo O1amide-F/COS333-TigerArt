@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import { Heart, Pin, ArrowRight } from "lucide-react";
 import { Placeholder } from "../components/Placeholder";
-import { SearchBar } from "../components/SearchBar";
+import { SearchFilterBar } from "../components/SearchFilterBar";
+import { itemMatchesFilters } from "../utils/filterUtils";
 import { ArtworkModal } from "../components/ArtworkModal";
 import { getExhibitSections } from "../new_data";
 import { theme } from "../theme";
 import type { ExhibitSection, ExhibitItem, ForYouItem } from "../types";
+import { useMemo } from "react"
 
 const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:5001/api";
 const PINNED_SECTIONS_KEY = "tigerart_pinned_sections";
@@ -430,6 +432,7 @@ export function ExploreScreen({
   onToggleFavorite,
   onRecordView,
 }: ExploreScreenProps) {
+  const [activeFilters, setActiveFilters] = useState<string[]>([]);
   const [sections, setSections] = useState<ExhibitSection[]>([]);
   const [searchResults, setSearchResults] = useState<ForYouItem[] | null>(null);
   const [searchLoading, setSearchLoading] = useState(false);
@@ -485,11 +488,25 @@ export function ExploreScreen({
     gallery_label_text: item.gallery_label_text,
   });
 
-  const isSearching = searchResults !== null;
+  const filteredSearchResults = useMemo(() => {
+    if (!searchResults) return null;
+    return searchResults.filter((item) => itemMatchesFilters(item, activeFilters));
+  }, [searchResults, activeFilters]);
+  
+  const filteredSections = useMemo(() => {
+    if (activeFilters.length === 0) return sections;
+    return sections
+      .map((section) => ({
+        ...section,
+        items: section.items.filter((item) => itemMatchesFilters(item, activeFilters)),
+      }))
+      .filter((section) => section.items.length > 0);
+  }, [sections, activeFilters]);
+
   const pinnedList = pinnedSections
-    .map((name) => sections.find((s) => s.name === name))
+    .map((name) => filteredSections.find((s) => s.name === name))
     .filter((s): s is ExhibitSection => Boolean(s));
-  const unpinnedList = sections.filter((s) => !pinnedSections.includes(s.name));
+  const unpinnedList = filteredSections.filter((s) => !pinnedSections.includes(s.name));
   const sharedCardProps = (section: ExhibitSection) => ({
     section,
     onSectionClick,
@@ -500,12 +517,18 @@ export function ExploreScreen({
     onCardClick: (item: ExhibitItem) => setModalItem(item),
   });
 
+  const handleClear = () => setSearchResults(null);
+  const isSearching = searchResults !== null;
+
   return (
     <div style={styles.page}>
-      <SearchBar
+      <SearchFilterBar
         onSearch={handleSearch}
-        onClear={() => setSearchResults(null)}
+        onClear={handleClear}
         isSearching={isSearching}
+        placeholder="Search by title or tag…"
+        activeFilters={activeFilters}
+        onFiltersChange={setActiveFilters}
       />
       <h1 style={styles.title}>{isSearching ? "SEARCH RESULTS" : "EXPLORE"}</h1>
 
@@ -523,7 +546,7 @@ export function ExploreScreen({
         </div>
       )}
 
-      {isSearching && !searchLoading && searchResults!.length === 0 && (
+      {isSearching && !searchLoading && filteredSearchResults!.length === 0 && (
         <div
           style={{
             background: theme.components.badge.background,
@@ -554,7 +577,7 @@ export function ExploreScreen({
         </div>
       )}
 
-      {isSearching && !searchLoading && searchResults!.length > 0 && (
+      {isSearching && !searchLoading && filteredSearchResults!.length > 0 && (
         <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
           <p
             style={{
@@ -564,10 +587,10 @@ export function ExploreScreen({
               color: theme.components.badge.mutedText,
             }}
           >
-            {searchResults!.length} result
-            {searchResults!.length !== 1 ? "s" : ""} found
+            {filteredSearchResults!.length} result
+            {filteredSearchResults!.length !== 1 ? "s" : ""} found
           </p>
-          {searchResults!.map((item) => (
+          {filteredSearchResults!.map((item) => (
             <SearchResultCard
               key={item.id}
               item={item}

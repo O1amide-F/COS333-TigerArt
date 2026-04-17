@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { Heart } from "lucide-react";
 import { Placeholder } from "../components/Placeholder";
-import { SearchBar } from "../components/SearchBar";
+import { SearchFilterBar } from "../components/SearchFilterBar";
+import { itemMatchesFilters } from "../utils/filterUtils";
 import { theme } from "../theme";
 
 const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:5001/api";
@@ -27,7 +28,7 @@ type FavoriteCard = {
   imageUrl?: string;
 };
 
-type SortOption = "recency" | "az" | "za";
+// type SortOption = "recency" | "az" | "za";
 
 export function FavoritesScreen({
   userId,
@@ -42,6 +43,7 @@ export function FavoritesScreen({
   const [searchQuery, setSearchQuery] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState<SortOption>("recency");
   const [showSortMenu, setShowSortMenu] = useState(false);
+  const [activeFilters, setActiveFilters] = useState<string[]>([]);
 
   useEffect(() => {
     setIsLoading(true);
@@ -99,31 +101,34 @@ export function FavoritesScreen({
   }, [favoriteCards, sortBy]);
 
   const displayCards = useMemo(() => {
-    if (!searchQuery) return sortedCards;
-    const q = searchQuery.toLowerCase();
-    return sortedCards.filter(
-      (c) =>
-        c.title.toLowerCase().includes(q) ||
-        c.subtitle.toLowerCase().includes(q),
-    );
-  }, [sortedCards, searchQuery]);
+    let cards = sortedCards;
+    if (searchQuery) {
+      const q = searchQuery.toLowerCase();
+      cards = cards.filter(
+        (c) => c.title.toLowerCase().includes(q) || c.subtitle.toLowerCase().includes(q),
+      );
+    }
+    return cards.filter((c) => itemMatchesFilters(c, activeFilters));
+  }, [sortedCards, searchQuery, activeFilters]);
 
   const isSearching = searchQuery !== null;
-  const sortLabels: Record<SortOption, string> = {
-    recency: "Recently Liked",
-    az: "A → Z",
-    za: "Z → A",
-  };
+
+  const handleSearch = (q: string) => setSearchQuery(q);
+  const handleClear = () => setSearchQuery(null);
 
   return (
     <div
       style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}
     >
-      <SearchBar
-        onSearch={(q) => setSearchQuery(q)}
-        onClear={() => setSearchQuery(null)}
+      <SearchFilterBar
+        onSearch={handleSearch}
+        onClear={handleClear}
         isSearching={isSearching}
-        placeholder="Search your favorites..."
+        placeholder="Search your favorites…"
+        activeFilters={activeFilters}
+        onFiltersChange={setActiveFilters}
+        sortBy={sortBy}
+        onSortChange={setSortBy}
       />
 
       <div
@@ -150,75 +155,6 @@ export function FavoritesScreen({
         >
           {isSearching ? "SEARCH RESULTS" : "FAVORITES"}
         </h1>
-
-        <div style={{ position: "relative" }}>
-          <button
-            onClick={() => setShowSortMenu((p) => !p)}
-            style={{
-              background: theme.components.badge.background,
-              border: `1px solid ${theme.components.card.border}`,
-              borderRadius: 6,
-              padding: "6px 10px",
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 12,
-              color: theme.components.badge.text,
-              cursor: "pointer",
-              display: "flex",
-              alignItems: "center",
-              gap: 5,
-            }}
-          >
-            <span>⇅</span>
-            <span>{sortLabels[sortBy]}</span>
-          </button>
-          {showSortMenu && (
-            <div
-              style={{
-                position: "absolute",
-                top: "calc(100% + 6px)",
-                right: 0,
-                background: theme.components.card.background,
-                border: `1px solid ${theme.components.card.border}`,
-                borderRadius: 8,
-                overflow: "hidden",
-                boxShadow: "0 4px 16px rgba(0,0,0,0.12)",
-                zIndex: 100,
-                minWidth: 160,
-              }}
-            >
-              {(["recency", "az", "za"] as SortOption[]).map((option) => (
-                <button
-                  key={option}
-                  onClick={() => {
-                    setSortBy(option);
-                    setShowSortMenu(false);
-                  }}
-                  style={{
-                    display: "block",
-                    width: "100%",
-                    textAlign: "left",
-                    padding: "10px 14px",
-                    border: "none",
-                    cursor: "pointer",
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontSize: 13,
-                    background:
-                      sortBy === option
-                        ? theme.components.badge.background
-                        : theme.components.card.background,
-                    color:
-                      sortBy === option
-                        ? theme.components.badge.text
-                        : theme.components.badge.mutedText,
-                    fontWeight: sortBy === option ? 600 : 400,
-                  }}
-                >
-                  {sortLabels[option]}
-                </button>
-              ))}
-            </div>
-          )}
-        </div>
       </div>
 
       {isLoading ? (
