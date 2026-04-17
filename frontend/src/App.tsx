@@ -21,7 +21,7 @@ import { msalInstance, msalInitPromise, getUserProfile } from "./auth";
 import { theme } from "./theme";
 import type { ExhibitSection, NavId, Screen } from "./types";
 
-const API_BASE = '/api';
+const API_BASE = "/api";
 
 const NAV_TO_SCREEN: Record<NavId, Screen> = {
   home: "home",
@@ -44,7 +44,7 @@ function TigerArtAuthenticated({ isGuest = false }: { isGuest?: boolean }) {
   const [username, setUsername] = useState("Username");
   const [profileImage, setProfileImage] = useState<string | null>(null);
   const [userId, setUserId] = useState<string | null>(null);
-  const { startTour } = useTour({ autoStart: true });
+  const { startTour } = useTour({ autoStart: false });
 
   // On login: load userId, favorites, recently viewed from backend
   useEffect(() => {
@@ -192,6 +192,11 @@ function TigerArtAuthenticated({ isGuest = false }: { isGuest?: boolean }) {
           templateContext.setSurveySelections(selected);
           templateContext.setScreen("home");
           templateContext.setActiveNav("home");
+
+          // Launch the tour only after survey submission completes and home UI is rendered.
+          setTimeout(() => {
+            startTour();
+          }, 800);
         }}
         username={templateContext.username}
         userId={templateContext.userId}
