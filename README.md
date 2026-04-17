@@ -43,6 +43,7 @@ cd backend
 python3 server.py
 ```
 Keep the server running in the terminal
+Open URL shown in terminal (localhost:5001)
 
 ### First time set up
 Each person must create the same local database:
@@ -69,8 +70,6 @@ sudo -u postgres psql -c "ALTER USER postgres WITH PASSWORD 'cos333';"
 ```bash
 cd frontend
 npm install (only the first time)
-npm run dev
+npm run builddev
 ```
-
-Open the URL shown in terminal.
 
