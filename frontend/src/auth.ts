@@ -5,7 +5,7 @@ const msalConfig = {
     clientId: "c0ea8c66-e7fb-4645-9b3d-7b0ec20ee496",
     authority:
       "https://login.microsoftonline.com/2ff60116-7431-425d-b5af-077d7791bda4",
-    redirectUri: import.meta.env.VITE_REDIRECT_URI ?? "http://localhost:5173",
+    redirectUri: "http://localhost:5001",
   },
   cache: {
     cacheLocation: "localStorage",

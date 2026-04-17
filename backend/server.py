@@ -1,5 +1,4 @@
-from flask import Flask, jsonify, request
-from flask_cors import CORS
+from flask import Flask, jsonify, request, send_from_directory
 from datetime import datetime
 import psycopg2
 import json
@@ -16,8 +15,22 @@ DB_PORT = os.getenv("DB_PORT", "5432")
 CLOUD_NAME = "dc4nhrcsm"
 NEWS_URL = "https://artmuseum.princeton.edu/api/tiger-art-news"
 
-app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "*"}}, supports_credentials=False)
+app = Flask(__name__,
+    static_folder=os.path.join(os.path.dirname(__file__), 'static'),
+    static_url_path='/static')
+
+#-----------------------------------------------------------------------
+
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def serve_index(path):
+    # Serve API routes normally — only catch non-API paths
+    if path.startswith('api/'):
+        return jsonify({'error': 'Not found'}), 404
+    return send_from_directory(
+        os.path.join(os.path.dirname(__file__), 'static'),
+        'index.html'
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -340,7 +353,7 @@ def load_user_vector(cur, user_id: str) -> list[float] | None:
 
 
 # ---------------------------------------------------------------------------
-# Existing endpoints (unchanged-ish)
+# Endpoints
 # ---------------------------------------------------------------------------
 
 @app.route("/api/for-you")
@@ -486,10 +499,6 @@ def get_exhibits():
 
     return jsonify([{"name": k, "items": v} for k, v in sections_dict.items()])
 
-
-# ---------------------------------------------------------------------------
-# New endpoints
-# ---------------------------------------------------------------------------
 @app.route("/api/exhibits/<path:department>")
 def get_exhibit_detail(department):
     conn = get_connection()
@@ -549,10 +558,6 @@ def get_survey_config():
     objectids in the SURVEY_IMAGE_MAP below. Update that map with real
     objectids from your database.
     """
-    # -----------------------------------------------------------------------
-    # TODO: replace these placeholder objectids with real ones from your DB.
-    # Pick one visually representative artwork per tag.
-    # -----------------------------------------------------------------------
     SURVEY_IMAGE_MAP = {
         # era
         "ancient":       54820,

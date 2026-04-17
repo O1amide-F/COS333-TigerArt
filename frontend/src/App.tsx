@@ -6,7 +6,7 @@ import {
   UnauthenticatedTemplate,
 } from "@azure/msal-react";
 import { useTour } from "./hooks/useTour";
-import "./tour.css";
+import "./tour";
 import { BottomNav } from "./components/BottomNav";
 import { ExploreScreen } from "./screens/ExploreScreen";
 import { ExhibitDetailScreen } from "./screens/ExhibitDetailScreen";
@@ -21,7 +21,7 @@ import { msalInstance, msalInitPromise, getUserProfile } from "./auth";
 import { theme } from "./theme";
 import type { ExhibitSection, NavId, Screen } from "./types";
 
-const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:5001/api";
+const API_BASE = '/api';
 
 const NAV_TO_SCREEN: Record<NavId, Screen> = {
   home: "home",

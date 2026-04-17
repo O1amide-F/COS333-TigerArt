@@ -9,8 +9,8 @@ import { theme } from "../theme";
 import type { ExhibitSection, ExhibitItem, ForYouItem } from "../types";
 import { useMemo } from "react"
 
-const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:5001/api";
 const PINNED_SECTIONS_KEY = "tigerart_pinned_sections";
+const API_BASE = '/api';
 
 type ExploreScreenProps = {
   userId: string | null;

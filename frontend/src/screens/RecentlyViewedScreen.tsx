@@ -1,13 +1,13 @@
 import { useEffect, useMemo, useState } from "react";
 import { Heart, Clock } from "lucide-react";
 import { Placeholder } from "../components/Placeholder";
-import { SearchFilterBar } from "../components/SearchFilterBar";
+import { SearchFilterBar } from "../components/SearchFilterBar.tsx";
 import { itemMatchesFilters } from "../utils/filterUtils";
 import { ArtworkModal } from "../components/ArtworkModal";
 import { theme } from "../theme";
 import type { ExhibitSection, ExhibitItem } from "../types";
 
-const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:5001/api";
+const API_BASE = "/api";
 
 type RecentlyViewedScreenProps = {
   userId: string | null;
@@ -35,6 +35,9 @@ type RecentCard = {
   title: string;
   subtitle: string;
   imageUrl?: string;
+  classification?: string; 
+  department?: string;      
+  displaydate?: string
 };
 
 export function RecentlyViewedScreen({
@@ -93,6 +96,9 @@ export function RecentlyViewedScreen({
         title: a.title ?? "Untitled",
         subtitle: a.description ?? "",
         imageUrl: a.image_url,
+        classification: a.classification, 
+        department: a.department,         
+        displaydate: a.displaydate, 
       })),
     [artworks],
   );

@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
 import { Heart } from "lucide-react";
-import { SearchFilterBar } from "../components/SearchFilterBar.tsx";
-import { itemMatchesFilters } from "../utils/filterUtils";
-import { Placeholder } from "../components/Placeholder";
-import { ArtworkModal } from "../components/ArtworkModal";
-import type { ForYouItem, ExhibitItem } from "../types";
-import { theme } from "../theme";
-import { useMemo } from "react"
+import { SearchBar } from "./components/SearchBar";
+import { Placeholder } from "./components/Placeholder";
+import { ArtworkModal } from "./components/ArtworkModal";
+import type { ForYouItem, ExhibitItem } from "./types";
+import { theme } from "./theme";
 
 const API_BASE = '/api';
 
@@ -14,13 +12,11 @@ type ForYouScreenProps = {
   userId: string | null;
   favorites: number[];
   onToggleFavorite: (id: number) => void;
-  onRecordView: (id: number) => void;
 };
 
 export function ForYouScreen({
   favorites,
   onToggleFavorite,
-  onRecordView,
   userId,
 }: ForYouScreenProps) {
   console.log("ForYouScreen userId:", userId);
@@ -30,15 +26,11 @@ export function ForYouScreen({
   const [searchLoading, setSearchLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [modalItem, setModalItem] = useState<ExhibitItem | null>(null);
-  const [activeFilters, setActiveFilters] = useState<string[]>([]);
 
   useEffect(() => {
+    if (!userId) return;
     setLoading(true);
-    const initialEndpoint = userId
-      ? `${API_BASE}/for-you/${userId}`
-      : `${API_BASE}/for-you`;
-
-    fetch(initialEndpoint)
+    fetch(`${API_BASE}/for-you/${userId}`)
       .then((r) => {
         if (!r.ok) throw new Error("fallback");
         return r.json();
@@ -74,27 +66,33 @@ export function ForYouScreen({
 
   const handleClear = () => setSearchResults(null);
 
-  const displayItems = useMemo(() => {
-    const base = searchResults ?? items;
-    return base.filter((item) => itemMatchesFilters(item, activeFilters));
-  }, [searchResults, items, activeFilters]);
+  const displayItems = searchResults ?? items;
   const isSearching = searchResults !== null;
 
-  const toExhibitItem = (item: ForYouItem): ExhibitItem => {
-    console.log("FOR YOU clicked item:", item);
-    return {
-      id: item.id,
-      name: item.title,
-      desc: item.about,
-      imageUrl: item.imageUrl,
-      department: item.department,
-      classification: item.classification,
-      displaydate: item.displaydate,
-      displaymaker: item.displaymaker,
-      on_view: item.on_view,
-      gallery_label_text: item.gallery_label_text,
-    };
-  };
+  const toExhibitItem = (item: ForYouItem): ExhibitItem => ({
+    id: item.id,
+    name: item.title,
+    desc: item.about,
+    imageUrl: item.imageUrl,
+    department: item.department,
+    classification: item.classification,
+    displaydate: item.displaydate,
+    displaymaker: item.displaymaker,
+    gallery_label_text: item.gallery_label_text,
+    on_view: item.on_view,
+  });
+
+  if (!userId) {
+    return (
+      <div style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}>
+        <div style={{ textAlign: "center", padding: "40px 0",
+          fontFamily: "'DM Sans', sans-serif",
+          color: theme.components.badge.mutedText, fontSize: 14 }}>
+          Loading your feed…
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div
@@ -102,13 +100,10 @@ export function ForYouScreen({
     >
       {/* ── data-tour="search" — highlights the search bar ── */}
       <div data-tour="search">
-        <SearchFilterBar
+        <SearchBar
           onSearch={handleSearch}
           onClear={handleClear}
           isSearching={isSearching}
-          placeholder="Search by title or tag…"
-          activeFilters={activeFilters}
-          onFiltersChange={setActiveFilters}
         />
       </div>
 
@@ -314,7 +309,6 @@ export function ForYouScreen({
           onToggleFavorite={onToggleFavorite}
           onClose={() => setModalItem(null)}
           userId={userId}
-          onRecordView={onRecordView}
         />
       )}
     </div>

@@ -1,11 +1,11 @@
 import { useEffect, useMemo, useState } from "react";
 import { Heart } from "lucide-react";
 import { Placeholder } from "../components/Placeholder";
-import { SearchFilterBar } from "../components/SearchFilterBar";
+import { SearchFilterBar } from "../components/SearchFilterBar.tsx";
 import { itemMatchesFilters } from "../utils/filterUtils";
 import { theme } from "../theme";
 
-const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:5001/api";
+const API_BASE = '/api';
 
 type FavoritesScreenProps = {
   userId: string | null;
@@ -19,6 +19,9 @@ type ArtworkFromAPI = {
   title: string;
   description?: string;
   image_url?: string;
+  classification?: string;  
+  department?: string;      
+  displaydate?: string;
 };
 
 type FavoriteCard = {
@@ -26,9 +29,12 @@ type FavoriteCard = {
   title: string;
   subtitle: string;
   imageUrl?: string;
+  classification?: string;  
+  department?: string;      
+  displaydate?: string;
 };
 
-// type SortOption = "recency" | "az" | "za";
+type SortOption = "recency" | "az" | "za";
 
 export function FavoritesScreen({
   userId,
@@ -86,6 +92,9 @@ export function FavoritesScreen({
         title: a.title ?? "Untitled",
         subtitle: a.description ?? "",
         imageUrl: a.image_url,
+        classification: a.classification, 
+        department: a.department,           
+        displaydate: a.displaydate,
       })),
     [artworks],
   );

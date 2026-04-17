@@ -4,7 +4,7 @@ import { Placeholder } from "./Placeholder";
 import { theme } from "../theme";
 import type { ExhibitItem } from "../types";
 
-const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:5001/api";
+const API_BASE = '/api';
 
 type ArtworkModalProps = {
   item: ExhibitItem;
