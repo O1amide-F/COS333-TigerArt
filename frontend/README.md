@@ -14,10 +14,8 @@ Backend is optional right now. The frontend works by itself.
 ```bash
 cd tigerArt
 npm install
-npm run dev
+npm run builddev
 ```
-
-Open the URL shown in terminal.
 
 ## Frontend Only (Quickest)
 
@@ -40,7 +38,7 @@ cd ..
 node backend/backend.js
 ```
 
-Backend runs on http://localhost:4000 by default.
+Backend runs on http://localhost:5001 by default.
 
 ## 4. Test Backend Quickly
 
