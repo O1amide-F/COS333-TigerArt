@@ -1,10 +1,10 @@
-# TigerArt (Frontend + Simple Backend)
+# TigerArt
 
 Super simple setup for local development.
 
-Backend is optional right now. The frontend works by itself.
+As a one server system, the code needs to have the front end set up and run through the backend
 
-## 1. Requirements
+## 1. Requirements - First Time Set Up
 
 ```bash
 git clone https://github.com/O1amide-F/COS333-TigerArt
@@ -19,12 +19,14 @@ git clone https://github.com/O1amide-F/COS333-TigerArt
 - psycopg2
 - requests
 - cloudinary
+- dotenv
+- msal
 
 - ** Note: depending on python library downloaded, run all "python" commands as either "python3" or "python"
 
 Can run:
 ```bash
-pip install flask flask-cors psycopg2 requests cloudinary
+pip install flask flask-cors psycopg2 requests cloudinary dotenv msal
 ```
 
 - Git LFS (for large files)
@@ -35,19 +37,15 @@ git lfs track "*.json"
 git lfs track "*.zip"
 ```
 
+### Frontend Set Up
 
-## 2. Run Backend
-If first time set up is complete:
 ```bash
-cd backend
-python3 server.py
+cd frontend
+npm install
+npm run builddev
 ```
-Keep the server running in the terminal
-Open URL shown in terminal (localhost:5001)
 
-### First time set up
-Each person must create the same local database:
-
+### Backend Set Up
 ```bash
 createdb tigerart_db
 python3 setup_museum_db.py
@@ -64,12 +62,10 @@ password
 sudo -u postgres psql -c "ALTER USER postgres WITH PASSWORD 'cos333';"
 ```
 
-
-## 3. Run Frontend
-
+## Local Run
 ```bash
-cd frontend
-npm install (only the first time)
-npm run builddev
+cd backend
+python server.py
 ```
-
+Keep the server running in the terminal
+Open URL shown in terminal (localhost:5001)
