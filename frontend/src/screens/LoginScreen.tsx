@@ -1,12 +1,9 @@
-import { useMsal } from "@azure/msal-react";
-import { loginRequest } from "../auth";
 import { theme } from "../theme";
 
 export function LoginScreen({ onGuestLogin }: { onGuestLogin?: () => void }) {
-  const { instance } = useMsal();
 
   const handleLogin = () => {
-    instance.loginRedirect(loginRequest);
+    window.location.href = '/login';
   };
 
   return (

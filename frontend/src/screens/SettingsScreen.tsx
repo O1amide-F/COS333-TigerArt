@@ -1,15 +1,10 @@
 import { useState } from "react";
 import { theme } from "../theme";
 import { SurveyFlow } from "../components/SurveyFlow";
-import { useMsal } from "@azure/msal-react";
 
 type SettingsScreenProps = {
   username: string;
-  onUsernameChange: (value: string) => void;
-  profileImage: string | null;
-  onProfileImageChange: (value: string | null) => void;
-  selected: number[];
-  onToggleSelection: (id: number) => void;
+  displayName?: string;
   onSave: () => void;
   userId: string | null;
   onStartTour: () => void;
@@ -18,12 +13,12 @@ type SettingsScreenProps = {
 
 export function SettingsScreen({
   username,
+  displayName,
   onSave,
   userId,
   onStartTour,
   isGuest = false,
 }: SettingsScreenProps) {
-  const { instance } = useMsal();
   const [showSurvey, setShowSurvey] = useState(false);
   const [savedMessage, setSavedMessage] = useState(false);
 
@@ -81,14 +76,13 @@ export function SettingsScreen({
               fontWeight: 600,
             }}
           >
-            {isGuest ? "Hi, Guest" : username}
+            {isGuest ? "Hi, Guest" : (displayName || username)}
           </span>
           <button
-            onClick={async () => {
+            onClick={() => {
               if (!isGuest) {
-                await instance.clearCache();
+                window.location.href = '/logoutentra';
               }
-              window.location.reload();
             }}
             style={{
               display: "inline-flex",

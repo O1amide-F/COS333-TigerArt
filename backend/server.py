@@ -1,11 +1,12 @@
-from flask import Flask, jsonify, request, send_from_directory
+from flask import Flask, abort, jsonify, request, send_from_directory
 from datetime import datetime
 import psycopg2
 import json
 import re
 import os
 import requests
-
+import dotenv
+import auth
 
 DB_NAME = os.getenv("DB_NAME", "tigerart_db")
 DB_USER = os.getenv("DB_USER", "postgres")
@@ -21,6 +22,13 @@ app = Flask(__name__,
 
 #-----------------------------------------------------------------------
 
+dotenv.load_dotenv()
+_APP_SECRET_KEY = os.getenv('APP_SECRET_KEY')
+app.secret_key = _APP_SECRET_KEY
+auth.init(app)
+
+#-----------------------------------------------------------------------
+
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def serve_index(path):
@@ -31,6 +39,19 @@ def serve_index(path):
         os.path.join(os.path.dirname(__file__), 'static'),
         'index.html'
     )
+
+
+#-----------------------------------------------------------------------
+# Routes that return JSON documents (authentication required)
+#-----------------------------------------------------------------------
+
+@app.route('/api/getusername', methods=['GET'])
+def get_username():
+
+    if not auth.is_authenticated():
+        abort(403)
+    
+    return auth.get_username()
 
 
 # ---------------------------------------------------------------------------

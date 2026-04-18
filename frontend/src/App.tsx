@@ -1,10 +1,5 @@
 import { useEffect, useState, type ReactNode } from "react";
 import "./App.css";
-import {
-  MsalProvider,
-  AuthenticatedTemplate,
-  UnauthenticatedTemplate,
-} from "@azure/msal-react";
 import { useTour } from "./hooks/useTour";
 import "./tour";
 import { BottomNav } from "./components/BottomNav";
@@ -17,7 +12,6 @@ import { NewsScreen } from "./screens/NewsScreen";
 import { SettingsScreen } from "./screens/SettingsScreen";
 import { SurveyScreen } from "./screens/SurveyScreen";
 import { LoginScreen } from "./screens/LoginScreen";
-import { msalInstance, msalInitPromise, getUserProfile } from "./auth";
 import { theme } from "./theme";
 import type { ExhibitSection, NavId, Screen } from "./types";
 
@@ -32,7 +26,7 @@ const NAV_TO_SCREEN: Record<NavId, Screen> = {
   recently_viewed: "recently_viewed",
 };
 
-function TigerArtAuthenticated({ isGuest = false }: { isGuest?: boolean }) {
+function TigerArtAuthenticated({ isGuest = false, initialUsername = "", initialDisplayName = "" }: { isGuest?: boolean; initialUsername?: string; initialDisplayName?: string }) {
   const [screen, setScreen] = useState<Screen>("survey");
   const [favorites, setFavorites] = useState<number[]>([]);
   const [recentlyViewed, setRecentlyViewed] = useState<number[]>([]);
@@ -41,9 +35,9 @@ function TigerArtAuthenticated({ isGuest = false }: { isGuest?: boolean }) {
   );
   const [activeNav, setActiveNav] = useState<NavId>("home");
   const [surveySelections, setSurveySelections] = useState<number[]>([]);
-  const [username, setUsername] = useState("Username");
-  const [profileImage, setProfileImage] = useState<string | null>(null);
-  const [userId, setUserId] = useState<string | null>(null);
+  const username = initialUsername;
+  const displayName = initialDisplayName || initialUsername;
+  const userId = initialUsername || null;
   const { startTour } = useTour({ autoStart: false });
 
   // On login: load userId, favorites, recently viewed from backend
@@ -53,16 +47,12 @@ function TigerArtAuthenticated({ isGuest = false }: { isGuest?: boolean }) {
       setScreen("survey");
       return;
     }
-
-    getUserProfile().then(async (profile) => {
-      if (!profile) return;
-      setUsername(profile.displayName);
-      setUserId(profile.userid);
-
-      // Load favorited artwork IDs
+  if (!initialUsername) return;  
+  async function loadUserData() {
+        // Load favorited artwork IDs
       try {
         const favRes = await fetch(
-          `${API_BASE}/favorites/${profile.userid}/ids`,
+          `${API_BASE}/favorites/${initialUsername}/ids`,
         );
         if (favRes.ok) {
           const ids: number[] = await favRes.json();
@@ -75,7 +65,7 @@ function TigerArtAuthenticated({ isGuest = false }: { isGuest?: boolean }) {
       // Load recently viewed artwork IDs
       try {
         const rvRes = await fetch(
-          `${API_BASE}/recently-viewed/${profile.userid}/ids`,
+          `${API_BASE}/recently-viewed/${initialUsername}/ids`,
         );
         if (rvRes.ok) {
           const ids: number[] = await rvRes.json();
@@ -87,16 +77,19 @@ function TigerArtAuthenticated({ isGuest = false }: { isGuest?: boolean }) {
 
       // Skip survey if user already has a feature vector
       try {
-        const res = await fetch(`${API_BASE}/for-you/${profile.userid}`);
+        const res = await fetch(`${API_BASE}/for-you/${initialUsername}`);
         if (res.ok) {
           setScreen("home");
           setActiveNav("home");
         }
-      } catch (e) {
+      } 
+        
+      catch (e) {
         console.error("Failed to check user preferences:", e);
-      }
-    });
-  }, [isGuest]);
+      }      
+    }
+      loadUserData().catch(console.error);
+  }, [isGuest,initialUsername]);
 
   // Single source of truth for toggling favorites
   const toggleFavorite = async (id: number) => {
@@ -172,7 +165,7 @@ function TigerArtAuthenticated({ isGuest = false }: { isGuest?: boolean }) {
     activeSection,
     surveySelections,
     username,
-    profileImage,
+    displayName,
     userId,
     toggleFavorite,
     toggleSurveySelection,
@@ -180,8 +173,6 @@ function TigerArtAuthenticated({ isGuest = false }: { isGuest?: boolean }) {
     setScreen,
     setActiveNav,
     setSurveySelections,
-    setUsername,
-    setProfileImage,
   };
 
   const templates: Record<Screen, ReactNode> = {
@@ -199,6 +190,7 @@ function TigerArtAuthenticated({ isGuest = false }: { isGuest?: boolean }) {
           }, 800);
         }}
         username={templateContext.username}
+        displayName={templateContext.displayName}
         userId={templateContext.userId}
       />
     ),
@@ -244,11 +236,7 @@ function TigerArtAuthenticated({ isGuest = false }: { isGuest?: boolean }) {
     settings: (
       <SettingsScreen
         username={templateContext.username}
-        onUsernameChange={templateContext.setUsername}
-        profileImage={templateContext.profileImage}
-        onProfileImageChange={templateContext.setProfileImage}
-        selected={templateContext.surveySelections}
-        onToggleSelection={templateContext.toggleSurveySelection}
+        displayName={templateContext.displayName}
         userId={templateContext.userId}
         isGuest={isGuest}
         onStartTour={startTour}
@@ -296,32 +284,28 @@ function TigerArtAuthenticated({ isGuest = false }: { isGuest?: boolean }) {
 }
 
 export default function TigerArt() {
-  const [msalReady, setMsalReady] = useState(false);
+  const [username, setUsername] = useState<string | null>(null);
+  const [displayName, setDisplayName] = useState<string | null>(null);
+  const [ready, setReady] = useState(false);
+
   const [isGuest, setIsGuest] = useState(false);
 
-  useEffect(() => {
-    msalInitPromise
-      .then(() => setMsalReady(true))
-      .catch((error) => {
-        console.error("MSAL init error:", error);
-        setMsalReady(true);
-      });
+    useEffect(() => {
+    fetch('/api/getusername', { credentials: 'include' })
+      .then(res => {
+        if (!res.ok) { setReady(true); return null; }
+        return res.json();
+      })
+      .then(data => {
+        if (data?.username) setUsername(data.username);
+        if (data?.displayName) setDisplayName(data.displayName);
+        setReady(true);
+      })
+      .catch(() => setReady(true));
   }, []);
 
-  if (!msalReady) return null;
-
-  return (
-    <MsalProvider instance={msalInstance}>
-      <UnauthenticatedTemplate>
-        {isGuest ? (
-          <TigerArtAuthenticated isGuest />
-        ) : (
-          <LoginScreen onGuestLogin={() => setIsGuest(true)} />
-        )}
-      </UnauthenticatedTemplate>
-      <AuthenticatedTemplate>
-        <TigerArtAuthenticated />
-      </AuthenticatedTemplate>
-    </MsalProvider>
-  );
+  if (!ready) return null;
+  if (isGuest) return <TigerArtAuthenticated isGuest />;
+  if (!username) return <LoginScreen onGuestLogin={() => setIsGuest(true)} />;
+  return <TigerArtAuthenticated initialUsername={username} initialDisplayName={displayName ?? username} />;
 }
