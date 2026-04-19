@@ -1,0 +1,294 @@
+{
+    "type":"artobject",
+    "objectid":46477,
+    "objectnumber":"2016-1288",
+    "sortnumber":"2016 1288",
+    "displaytitle":"Decapitated head in the form of a turtle carapace",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ceramic",
+    "datebegin":-600,
+    "dateend":-400,
+    "datecomputed":-500,
+    "daterange":"1000 B.C.-A.D 1",
+    "displaydate":"600–400 BCE",
+    "medium":"Ceramic with white slip and traces of red pigment",
+    "dimensions":"9 × 6 × 4.3 cm (3 9/16 × 2 3/8 × 1 11/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Bequest of Gillett G. Griffin",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":"",
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2016-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Decapitated head in the form of a turtle carapace",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\tBy 2000, Gillett G. Griffin (1928-2016), Princeton, NJ [1]; 2016, bequeathed to the Princeton University Art Museum.\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] Griffin lent the work to the Museum in 2000 (L.2000.87).\n</p>",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"This ceramic pendant alludes to agricultural cycles. The human face is that of Jun Ixiim, the maize god; the scrolls ﬂowing from his neck indicate his decapitation, an allusion to Maya cosmovision, in which harvesting maize cobs was envisioned as decapitating the plant. The raised ridges at the top of the head and the incised pattern on the back of the object depict a turtle shell, a symbol of the earth, in which the “dead” maize seed would be planted. When Chahk, the rain god, struck the turtle-earth with his lightning axe, it cracked open, allowing the maize to emerge anew.\n",
+            "remarks":"AAA2_20-T6-2_CLA_FA_9_17_25.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":20197,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/L2000-87_LFT",
+            "isprimary":0,
+            "rank":3,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Bruce White Photography"
+        },
+        {
+            "id":20198,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/L2000-87_FRN",
+            "isprimary":1,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Bruce White Photography"
+        },
+        {
+            "id":49637,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV015832",
+            "isprimary":0,
+            "rank":4,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"Reiko Ishihara-Brito and Karl A. Taube, “Plaque Pendants,” in <em>Ancient Maya Art at Dumbarton Oaks</em>, edited by&nbsp;Joanne Pillsbury, Miriam Doutriaux, Reiko Ishihara-Brito, and Alexandre Tokovinine (Washington, D.C.: Dumbarton Oaks, 2012) <br>",
+            "citation":"Reiko Ishihara-Brito and Karl A. Taube, “Plaque Pendants,” in <em>Ancient Maya Art at Dumbarton Oaks</em>, edited by&nbsp;Joanne Pillsbury, Miriam Doutriaux, Reiko Ishihara-Brito, and Alexandre Tokovinine (Washington, D.C.: Dumbarton Oaks, 2012) <br>, pp. 245–247, fig. 144 (illus.)",
+            "date":2012,
+            "id":9678,
+            "uri":"https://search.worldcat.org/title/850076877"
+        },
+        {
+            "boilertext":"Bryan R. Just. \"Mysteries of the Maize God\", <em>Record of the Princeton University Art Museum </em>68 (2009): 2–15.",
+            "citation":"Bryan R. Just. \"Mysteries of the Maize God\", <em>Record of the Princeton University Art Museum </em>68 (2009): 2–15., figs. 9a, b, p. 8",
+            "date":2009,
+            "id":1362,
+            "uri":"https://www.jstor.org/stable/25747104"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, probably Guatemala, Maya area",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Mesoamerica",
+            "country":"probably Guatemala",
+            "region":"Maya area",
+            "state":null,
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3595528/republic-of-guatemala.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2055437,
+            "term":"figurines",
+            "aatid":300047455,
+            "termtype":"Classification"
+        },
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2158086,
+            "term":"heads",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2035652,
+            "term":"Middle Preclassic",
+            "aatid":300016973,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2035768,
+            "term":"Las Charcas",
+            "aatid":300017122,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2036114,
+            "term":"Maya",
+            "aatid":null,
+            "termtype":"Culture"
+        },
+        {
+            "id":2168423,
+            "term":"pigment",
+            "aatid":300013109,
+            "termtype":"Materials"
+        },
+        {
+            "id":2160397,
+            "term":"slip",
+            "aatid":300010459,
+            "termtype":"Materials"
+        },
+        {
+            "id":2160750,
+            "term":"ceramic",
+            "aatid":300235507,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2055437,
+            "classification":"figurines"
+        },
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        }
+    ],
+    "cultures":[
+        {
+            "id":12497,
+            "culture":"Maya",
+            "alphasort":"Maya",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Maya",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2036114,
+            "culture":"Maya"
+        }
+    ],
+    "periods":[
+        {
+            "id":24010,
+            "period":"Middle Formative Period",
+            "alphasort":"Formative Period, Middle",
+            "begindate":-1000,
+            "enddate":-400,
+            "displayperiod":"Middle Formative Period (Las Charcas phase)",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035652,
+            "period":"Middle Preclassic"
+        },
+        {
+            "id":2035768,
+            "period":"Las Charcas"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"9.00"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"6.00"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"4.30"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":210384,
+            "name":"TDC-Final [4]"
+        },
+        {
+            "packageid":208845,
+            "name":"2022_ART267_01_26"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/L2000-87_FRN"
+    ],
+    "displaymaker":null,
+    "displayculture":"Maya",
+    "displayperiod":"Middle Formative Period (Las Charcas phase)",
+    "caption":"Maya, Middle Formative Period (Las Charcas phase), 600–400 BCE, Maya area, probably Guatemala, Mesoamerica, Decapitated head in the form of a turtle carapace. Ceramic with white slip and traces of red pigment; 9 × 6 × 4.3 cm. Bequest of Gillett G. Griffin (2016-1288)",
+    "captionhtml":"Maya, Middle Formative Period (Las Charcas phase), 600–400 BCE, Maya area, probably Guatemala, Mesoamerica, <i>Decapitated head in the form of a turtle carapace</i>. Ceramic with white slip and traces of red pigment; 9 × 6 × 4.3 cm. Bequest of Gillett G. Griffin (2016-1288)",
+    "published_date":"2026-02-11 11:37:09.745222",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":true
+}

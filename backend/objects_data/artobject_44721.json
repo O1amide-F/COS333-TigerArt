@@ -1,0 +1,247 @@
+{
+    "type":"artobject",
+    "objectid":44721,
+    "objectnumber":"1996-1",
+    "sortnumber":"1996    1",
+    "displaytitle":"Gadrooned tecomate (gourd-shaped bowl)",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ceramic",
+    "datebegin":-1400,
+    "dateend":-1000,
+    "datecomputed":-1200,
+    "daterange":"2000-1000 B.C.",
+    "displaydate":"1400–1000 BCE",
+    "medium":"Ceramic with kaolin slip",
+    "dimensions":"h. 4.2, diam. 7.6 cm (1 5/8 × 3 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Gift of Jorge Feuchtwanger",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":"",
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"1996-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Gadrooned tecomate (gourd-shaped bowl)",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\tBy August 1969, Franz Feuchtwanger (1908-1991), Mexico [1]; by descent to his grandson, Jorge Feuchtwanger; 1996, Jorge Feuchtwanger gifted to the Princeton University Art Museum.\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] Slide GG90003179 in the Griffin archive identifies this object was with “Feutchwanger” on the given date.\n</p>",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"The complex and varied coloration of the outer surfaces of these objects is derived from their firing. The ceramics were fired in shallow pits at temperatures that did not exceed 1000 degrees Celsius. At such low temperatures, the colors of the clay and the slips—mineral or clay suspensions in water used to decorate vessels—will not change, limiting the potter’s palette to those natural pigments. If the pit\n\nis covered entirely near the end of the process, the lack of oxygen causes the pottery to turn black in a technique known as reduction firing. As seen in these examples, some early central Mexican potters experimented with this, producing patterned black or brown fire-clouds or smudges. The works thus suggest that their makers and users appreciated these unpredictable abstract decorative elements.\n",
+            "remarks":"AAA1_20-T6-3_CLA_FA_9_17_25.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":1265,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/1996-1_GS",
+            "isprimary":0,
+            "rank":10,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Luna Digitization Project"
+        },
+        {
+            "id":46781,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV012664",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"\"Acquisitions of the Art Museum 1996,\" <em>Record of the Art Museum, Princeton University</em> 56, no. 1/2 (1997): p. 75-115.",
+            "citation":"\"Acquisitions of the Art Museum 1996,\" <em>Record of the Art Museum, Princeton University</em> 56, no. 1/2 (1997): p. 75-115., p. 110",
+            "date":1997,
+            "id":3051,
+            "uri":"https://www.jstor.org/stable/3774760"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Mexico, Mexico City, Central Mexico, Tlatilco",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Mesoamerica",
+            "country":"Mexico",
+            "region":"Central Mexico",
+            "state":null,
+            "city":"Mexico City",
+            "county":null,
+            "subregion":null,
+            "locale":"Tlatilco",
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3515368/tlatilco.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2035652,
+            "term":"Middle Preclassic",
+            "aatid":300016973,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2035751,
+            "term":"Olmec",
+            "aatid":300017051,
+            "termtype":"Culture"
+        },
+        {
+            "id":2073226,
+            "term":"jars",
+            "aatid":300195347,
+            "termtype":"Classification"
+        },
+        {
+            "id":2160397,
+            "term":"slip",
+            "aatid":300010459,
+            "termtype":"Materials"
+        },
+        {
+            "id":2152702,
+            "term":"burnishing (polishing)",
+            "aatid":300053869,
+            "termtype":"Techniques"
+        },
+        {
+            "id":2160750,
+            "term":"ceramic",
+            "aatid":300235507,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2073226,
+            "classification":"jars"
+        },
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        }
+    ],
+    "cultures":[
+        {
+            "id":13858,
+            "culture":"Tlatilco",
+            "alphasort":"Tlatilco",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Tlatilco",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2035751,
+            "culture":"Olmec"
+        }
+    ],
+    "periods":[
+        {
+            "id":24008,
+            "period":"Early Formative Period",
+            "alphasort":"Formative Period, Early",
+            "begindate":0,
+            "enddate":0,
+            "displayperiod":"Early Formative Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035652,
+            "period":"Middle Preclassic"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"4.20"
+        },
+        {
+            "element":"Overall",
+            "type":"diam.",
+            "units":"centimeters",
+            "dimension":"7.60"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV012664"
+    ],
+    "displaymaker":null,
+    "displayculture":"Tlatilco",
+    "displayperiod":"Early Formative Period",
+    "caption":"Tlatilco, Early Formative Period, 1400–1000 BCE, Mexico City, Central Mexico, Mexico, Mesoamerica, Gadrooned tecomate (gourd-shaped bowl). Ceramic with kaolin slip; 4.2 × 7.6 cm. Gift of Jorge Feuchtwanger (1996-1)",
+    "captionhtml":"Tlatilco, Early Formative Period, 1400–1000 BCE, Mexico City, Central Mexico, Mexico, Mesoamerica, <i>Gadrooned tecomate (gourd-shaped bowl)</i>. Ceramic with kaolin slip; 4.2 × 7.6 cm. Gift of Jorge Feuchtwanger (1996-1)",
+    "published_date":"2026-02-11 11:24:44.427861",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

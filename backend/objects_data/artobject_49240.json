@@ -1,0 +1,222 @@
+{
+    "type":"artobject",
+    "objectid":49240,
+    "objectnumber":"1996-165",
+    "sortnumber":"1996  165",
+    "displaytitle":"Phiale (libation bowl)",
+    "department":"Ancient, Byzantine, and Islamic Art",
+    "classification":"Metal",
+    "datebegin":-549,
+    "dateend":-501,
+    "datecomputed":-525,
+    "daterange":"1000 B.C.-A.D 1",
+    "displaydate":"second half of 6th century BCE",
+    "medium":"Hammered and chased silver",
+    "dimensions":"h. 3.8 cm, diam. 17.0 cm (1 1/2 x 6 11/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Museum Purchase, Caroline G. Mather Fund",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":"",
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"1996-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Phiale (libation bowl)",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"Purchased from Fortuna Fine Arts, Ltd, New York in 1996.",
+            "remarks":null
+        }
+    ],
+    "media":[
+        {
+            "id":34930,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV003226",
+            "isprimary":0,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        },
+        {
+            "id":34931,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV003228",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"\"Acquisitions of the Art Museum 1996,\" <em>Record of the Art Museum, Princeton University</em> 56, no. 1/2 (1997): p. 75-115.",
+            "citation":"\"Acquisitions of the Art Museum 1996,\" <em>Record of the Art Museum, Princeton University</em> 56, no. 1/2 (1997): p. 75-115., p. 107; p. 104 (illus.)",
+            "date":1997,
+            "id":3051,
+            "uri":"https://www.jstor.org/stable/3774760"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: Asia Minor (Turkey)",
+            "code":"Place made",
+            "continent":null,
+            "subcontinent":null,
+            "country":null,
+            "region":null,
+            "state":null,
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":"Asia Minor (Turkey)",
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":null,
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2036526,
+            "term":"East Greek",
+            "aatid":300020146,
+            "termtype":"Culture"
+        },
+        {
+            "id":2159697,
+            "term":"running ornament",
+            "aatid":300165347,
+            "termtype":"Subject"
+        },
+        {
+            "id":2073425,
+            "term":"phialae",
+            "aatid":300198871,
+            "termtype":"Classification"
+        },
+        {
+            "id":2049420,
+            "term":"metalwork",
+            "aatid":300015336,
+            "termtype":"Classification"
+        },
+        {
+            "id":2162319,
+            "term":"silver",
+            "aatid":300011029,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2073425,
+            "classification":"phialae"
+        },
+        {
+            "id":2049420,
+            "classification":"metalwork"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[
+        {
+            "id":2036526,
+            "culture":"East Greek"
+        }
+    ],
+    "periods":[
+        {
+            "id":13625,
+            "period":"Archaic Period",
+            "alphasort":"Archaic Period",
+            "begindate":-600,
+            "enddate":-480,
+            "displayperiod":"Archaic Period, ca. 600–480 BCE",
+            "displaydate":"ca. 600–480 BCE"
+        }
+    ],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199316,
+            "term":"Ancient Mediterranean Art",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"3.80"
+        },
+        {
+            "element":"Overall",
+            "type":"diam.",
+            "units":"centimeters",
+            "dimension":"17.00"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":181973,
+            "name":"web_2020_Ancient"
+        },
+        {
+            "packageid":182063,
+            "name":"web_2020_ancient_greek"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":220207,
+            "name":"Gallery_22(Pavilion6)-AncientMed"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV003228"
+    ],
+    "displaymaker":null,
+    "displayculture":null,
+    "displayperiod":"Archaic Period, ca. 600–480 BCE",
+    "caption":"Archaic Period (ca. 600–480 BCE), second half of 6th century BCE, Phiale (libation bowl). Hammered and chased silver; 3.8 x 17 cm. Museum Purchase, Caroline G. Mather Fund (1996-165)",
+    "captionhtml":"Archaic Period (ca. 600–480 BCE), second half of 6th century BCE, <i>Phiale (libation bowl)</i>. Hammered and chased silver; 3.8 x 17 cm. Museum Purchase, Caroline G. Mather Fund (1996-165)",
+    "published_date":"2026-04-03 02:00:34.512425",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

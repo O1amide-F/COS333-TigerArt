@@ -1,0 +1,190 @@
+{
+    "type":"artobject",
+    "objectid":40491,
+    "objectnumber":"2001-187",
+    "sortnumber":"2001  187",
+    "displaytitle":"Vase",
+    "department":"European Painting and Sculpture ",
+    "classification":"Glass",
+    "datebegin":1895,
+    "dateend":1905,
+    "datecomputed":1900,
+    "daterange":"A.D. 1900-1945",
+    "displaydate":"ca. 1900",
+    "medium":"Glass",
+    "dimensions":"25.8 x diam. 10.1 cm (10 3/16 x 4 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Bequest of Merrill H. Gibbs, Jr., Class of 1954, by exchange",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2001-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Vase",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[
+        {
+            "id":740,
+            "displayname":"Johann Lötz Witwe",
+            "displaydate":"active 1836–1947, Klostermühle (Klášterský Mlýn), Czech Republic",
+            "datebegin":1836,
+            "dateend":1947,
+            "prefix":null,
+            "suffix":null,
+            "role":"Manufactory",
+            "displaymaker":"Johann Lötz Witwe, active 1836–1947, Klostermühle (Klášterský Mlýn), Czech Republic",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"Merrill H. Gibbs, Jr., class of 1954 (d. 2001); bequest to the Princeton University Art Museum, 2001.\n",
+            "remarks":null
+        }
+    ],
+    "media":[
+        {
+            "id":140655,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV62669",
+            "isprimary":0,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        },
+        {
+            "id":140656,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV62670",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"\"Acquisitions of the Princeton University Art Museum 2001,\" <EM>Record of the Princeton University Art Museum</EM> 61 (2002): p. 101-142.",
+            "citation":"\"Acquisitions of the Princeton University Art Museum 2001,\" <EM>Record of the Princeton University Art Museum</EM> 61 (2002): p. 101-142., p. 106",
+            "date":2002,
+            "id":3028,
+            "uri":"https://www.jstor.org/stable/3774768"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[],
+    "terms":[
+        {
+            "id":2049409,
+            "term":"glassware",
+            "aatid":300010898,
+            "termtype":"Classification"
+        },
+        {
+            "id":2073529,
+            "term":"vases",
+            "aatid":300132254,
+            "termtype":"Classification"
+        },
+        {
+            "id":2161148,
+            "term":"glass",
+            "aatid":300010797,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2049409,
+            "classification":"glassware"
+        },
+        {
+            "id":2073529,
+            "classification":"vases"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199321,
+            "term":"European Art",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"25.80"
+        },
+        {
+            "element":"Overall",
+            "type":"diam.",
+            "units":"centimeters",
+            "dimension":"10.10"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":277927,
+            "name":"EW-Artwalk_Materials&Surfaces_CaseA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":264608,
+            "name":"DenseDisplay_EPS_at_20250205"
+        },
+        {
+            "packageid":264600,
+            "name":"DenseDisplay_CompleteList_at_20250205"
+        },
+        {
+            "packageid":236377,
+            "name":"EW-Artwalk_Materials&Surfaces"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV62670"
+    ],
+    "displaymaker":"Johann Lötz Witwe, active 1836–1947, Klostermühle (Klášterský Mlýn), Czech Republic",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"Johann Lötz Witwe (active 1836–1947, Klostermühle (Klášterský Mlýn), Czech Republic), Vase, ca. 1900. Glass; 25.8 × 10.1 cm. Bequest of Merrill H. Gibbs, Jr., Class of 1954, by exchange (2001-187)",
+    "captionhtml":"Johann Lötz Witwe (active 1836–1947, Klostermühle (Klášterský Mlýn), Czech Republic), <i>Vase</i>, ca. 1900. Glass; 25.8 × 10.1 cm. Bequest of Merrill H. Gibbs, Jr., Class of 1954, by exchange (2001-187)",
+    "published_date":"2026-02-11 11:03:24.983662",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

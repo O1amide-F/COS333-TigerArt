@@ -1,0 +1,244 @@
+{
+    "type":"artobject",
+    "objectid":47601,
+    "objectnumber":"1995-380 a-b",
+    "sortnumber":"1995  380 a    b",
+    "displaytitle":"Dangles with bicephalic animals",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ornament",
+    "datebegin":-800,
+    "dateend":-200,
+    "datecomputed":-500,
+    "daterange":"1000 B.C.-A.D 1",
+    "displaydate":"800–200 BCE",
+    "medium":"Gold",
+    "dimensions":"a: 2.7 × 1.8 (1 1/16 × 11/16)\r\nb: 2.8 × 1.8 cm (1 1/16 × 3/4 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Anonymous gift",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"1995-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Dangles with bicephalic animals",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"1995, gift of Dr. Daniel Rifkin, Class of 1962, New York, to the Princeton University Art Museum.\n",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"In the Andes the last millennium BCE witnessed an explosive increase in art production and a consistent set of visual motifs across a variety of media. Fierce, fanged creatures, blending the qualities of humans and predatory animals, appear in abundance, brandishing long claws. Because the style was traditionally associated with the ritual center of Chavín de Huantar, objects encountered across Peru that share these visual qualities have been described as Chavín style. Artists across Peru, however, adapted the Chavín style to their own contexts and needs.\n",
+            "remarks":"AAA2_20-T6-1_CLA_FA.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":52191,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV019082",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"\"Acquisitions of the Art Museum 1995,\" <em>Record of the Art Museum, Princeton University</em> 56, no. 1/2 (1997): p. 36-74.",
+            "citation":"\"Acquisitions of the Art Museum 1995,\" <em>Record of the Art Museum, Princeton University</em> 56, no. 1/2 (1997): p. 36-74., p. 68",
+            "date":1997,
+            "id":3050,
+            "uri":"https://www.jstor.org/stable/3774759"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: South America, Peru, North coast",
+            "code":"Place made",
+            "continent":"South America",
+            "subcontinent":"Andes",
+            "country":"Peru",
+            "region":"North coast",
+            "state":null,
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3932488/republic-of-peru.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2048931,
+            "term":"ornament",
+            "aatid":300056258,
+            "termtype":"Classification"
+        },
+        {
+            "id":2157391,
+            "term":"repoussé",
+            "aatid":300054023,
+            "termtype":"Classification"
+        },
+        {
+            "id":2103920,
+            "term":"cats",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2158090,
+            "term":"faces",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2035982,
+            "term":"Chavín horizon",
+            "aatid":300017269,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2162191,
+            "term":"gold",
+            "aatid":300011021,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2157391,
+            "classification":"repoussé"
+        },
+        {
+            "id":2048931,
+            "classification":"ornament"
+        }
+    ],
+    "cultures":[
+        {
+            "id":13860,
+            "culture":"Chavín",
+            "alphasort":"Chavín",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Chavín style",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[],
+    "periods":[
+        {
+            "id":13505,
+            "period":"Early Horizon",
+            "alphasort":"Horizon, Early",
+            "begindate":-750,
+            "enddate":-100,
+            "displayperiod":"Early Horizon",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035982,
+            "period":"Chavín horizon"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"2.68"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"1.80"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"0.01"
+        },
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"2.76"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"1.83"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV019082"
+    ],
+    "displaymaker":null,
+    "displayculture":"Chavín style",
+    "displayperiod":"Early Horizon",
+    "caption":"Chavín style, Early Horizon, 800–200 BCE, North coast, Peru, Andes, Dangles with bicephalic animals. Gold; 2.7 × 1.8 (a), 2.8 × 1.8 cm (b). Anonymous gift (1995-380 a-b)",
+    "captionhtml":"Chavín style, Early Horizon, 800–200 BCE, North coast, Peru, Andes, <i>Dangles with bicephalic animals</i>. Gold; 2.7 × 1.8 (a), 2.8 × 1.8 cm (b). Anonymous gift (1995-380 a-b)",
+    "published_date":"2026-02-11 11:44:40.424896",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

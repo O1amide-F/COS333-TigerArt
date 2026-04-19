@@ -1,0 +1,247 @@
+{
+    "type":"artobject",
+    "objectid":42308,
+    "objectnumber":"2004-27",
+    "sortnumber":"2004   27",
+    "displaytitle":"Seated figure",
+    "department":"Art of the Ancient Americas",
+    "classification":"Sculpture",
+    "datebegin":1300,
+    "dateend":1521,
+    "datecomputed":1410,
+    "daterange":"A.D. 1000-1500",
+    "displaydate":"1300–1521",
+    "medium":"Greenstone, possibly jadeite",
+    "dimensions":"4.2 × 2.6 × 1.2 cm (1 5/8 × 1 × 1/2 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Museum purchase, Fowler McCormick, Class of 1921, Fund",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2004-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Seated figure",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\tBy 1989, John B. Rhoads, Mexico City [1]; 2004, sold to the Princeton University Art Museum.\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] Rhoads lent the work to the Museum in 1989 (L.1989.109). It remained on loan until purchased by the Museum.\n</p>\n<p>\n\t \n\t<br />\n</p>",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"Small stone sculptures of squatting or seated men, most often of marble, are thought to have been made by Ñuù Savi artists in the highlands of western Oaxaca, although they have been found throughout southcentral Mexico. The compact posture, with knees hugging the chest and arms tight against the body, have led scholars to compare their posture to Ñuù Savi funerary bundles. Precisely the same pose, however, was also used to depict living men, especially rulers, as they sat on mats of authority and other indicators of their status and geopolitical affiliation. Regardless of whether the individual depicted is alive or dead, semidivine ancestors were likely rendered as eternal and portable, to accompany their living descendants or imbue sacred offerings with ancestral potency. Differences in the color of the stone, the quality of the carving, and the size of the work may signal the relative importance of the ancestor depicted or of the intended owner.\n",
+            "remarks":"AAA3_20-T3G-7_CLA_FA.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":46106,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV0011317",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"\"Acquisitions of the Princeton University Art Museum 2004,\" <EM>Record of the Princeton University Art Museum</EM>&nbsp;64 (2005): p. 91-135.",
+            "citation":"\"Acquisitions of the Princeton University Art Museum 2004,\" <EM>Record of the Princeton University Art Museum</EM>&nbsp;64 (2005): p. 91-135., p. 134",
+            "date":2005,
+            "id":468,
+            "uri":"https://www.jstor.org/stable/3774838"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Mexico, probably Oaxaca, Central Mexico",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Mesoamerica",
+            "country":"Mexico",
+            "region":"Central Mexico",
+            "state":"probably Oaxaca",
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3996063/mexico.html",
+            "location":{
+                "lat":"23",
+                "lon":"-102"
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2040613,
+            "term":"Nahua",
+            "aatid":300017793,
+            "termtype":"Culture"
+        },
+        {
+            "id":2035674,
+            "term":"Postclassic",
+            "aatid":300016987,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2035681,
+            "term":"Late Postclassic",
+            "aatid":300134119,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2055657,
+            "term":"figures (representations)",
+            "aatid":300189808,
+            "termtype":"Subject"
+        },
+        {
+            "id":2055224,
+            "term":"jades",
+            "aatid":300184767,
+            "termtype":"Classification"
+        },
+        {
+            "id":2055437,
+            "term":"figurines",
+            "aatid":300047455,
+            "termtype":"Classification"
+        },
+        {
+            "id":2163406,
+            "term":"jade",
+            "aatid":300011119,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2055437,
+            "classification":"figurines"
+        },
+        {
+            "id":2055224,
+            "classification":"jades"
+        }
+    ],
+    "cultures":[
+        {
+            "id":13987,
+            "culture":"Ñuù Savi",
+            "alphasort":"Ñuù Savi",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Ñuù Savi or Eastern Nahua",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2040613,
+            "culture":"Nahua"
+        }
+    ],
+    "periods":[
+        {
+            "id":24018,
+            "period":"Late Postclassic Period",
+            "alphasort":"Postclassic Period, Late",
+            "begindate":1350,
+            "enddate":1521,
+            "displayperiod":"Late Postclassic Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035674,
+            "period":"Postclassic"
+        },
+        {
+            "id":2035681,
+            "period":"Late Postclassic"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"4.20"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"2.60"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"1.20"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV0011317"
+    ],
+    "displaymaker":null,
+    "displayculture":"Ñuù Savi or Eastern Nahua",
+    "displayperiod":"Late Postclassic Period",
+    "caption":"Ñuù Savi or Eastern Nahua, Late Postclassic Period, 1300–1521, probably Oaxaca, Central Mexico, Mexico, Mesoamerica, Seated figure. Greenstone, possibly jadeite; 4.2 × 2.6 × 1.2 cm. Museum purchase, Fowler McCormick, Class of 1921, Fund (2004-27)",
+    "captionhtml":"Ñuù Savi or Eastern Nahua, Late Postclassic Period, 1300–1521, probably Oaxaca, Central Mexico, Mexico, Mesoamerica, <i>Seated figure</i>. Greenstone, possibly jadeite; 4.2 × 2.6 × 1.2 cm. Museum purchase, Fowler McCormick, Class of 1921, Fund (2004-27)",
+    "published_date":"2026-03-05 09:15:58.567022",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

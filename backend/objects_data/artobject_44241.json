@@ -1,0 +1,217 @@
+{
+    "type":"artobject",
+    "objectid":44241,
+    "objectnumber":"2016-1199",
+    "sortnumber":"2016 1199",
+    "displaytitle":"Bead",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ornament",
+    "datebegin":-1000,
+    "dateend":-400,
+    "datecomputed":-700,
+    "daterange":"1000 B.C.-A.D 1",
+    "displaydate":"1000–400 BCE",
+    "medium":"Jadeite",
+    "dimensions":"h. 1.6, diam. 2.5 cm. (5/8 x 1 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Bequest of Gillett G. Griffin",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":"L.1995.208",
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2016-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Bead",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\tJanuary 22, 1970, sold by Jeanette M. Gillerman Pepper Bello (1918-2016), Mexico City, to Gillett G. Griffin (1928-2016), Princeton, NJ [1]; 2016, bequest of Gillett G. Griffin to the Princeton University Art Museum.\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] According to Griffin’s Notebook 5-7.\n</p>",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"Jade was the most prestigious material used to express religious ideology by the Olmec during the Middle Formative period (1000–400 BCE), when maize agriculture became the core source of the incipient state’s stability and wealth. The Olmec preference for blue-green jade, as exemplified by many of the works on view here, likely related to fecundity, whether through its similarity to plant life or to water, an association heightened by its high polish and translucency. Some objects, such as celts, mimic the form of maize cobs, while others seem to represent sprouting kernels. As one of the hardest materials available, jade was exceptionally difficult to shape. Powdered jade was used as an abrasive to allow slow grinding, sawing, drilling, and polishing, processes that could take years to complete for a single object.\n",
+            "remarks":"AAA3_20-T3B-8_CLA_FA.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":46143,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV0011230",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Mexico, possibly from Veracruz, Gulf Coast",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Mesoamerica",
+            "country":"Mexico",
+            "region":"Gulf Coast",
+            "state":"possibly from Veracruz",
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"www.geonames.org/3514780/estado-de-veracruz-llave.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2055224,
+            "term":"jades",
+            "aatid":300184767,
+            "termtype":"Classification"
+        },
+        {
+            "id":2035652,
+            "term":"Middle Preclassic",
+            "aatid":300016973,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2035751,
+            "term":"Olmec",
+            "aatid":300017051,
+            "termtype":"Culture"
+        },
+        {
+            "id":2048485,
+            "term":"beads",
+            "aatid":300234006,
+            "termtype":"Classification"
+        },
+        {
+            "id":2163406,
+            "term":"jade",
+            "aatid":300011119,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2055224,
+            "classification":"jades"
+        },
+        {
+            "id":2048485,
+            "classification":"beads"
+        }
+    ],
+    "cultures":[
+        {
+            "id":12498,
+            "culture":"Olmec",
+            "alphasort":"Olmec",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Olmec style",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2035751,
+            "culture":"Olmec"
+        }
+    ],
+    "periods":[
+        {
+            "id":24010,
+            "period":"Middle Formative Period",
+            "alphasort":"Formative Period, Middle",
+            "begindate":-1000,
+            "enddate":-400,
+            "displayperiod":"Middle Formative Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035652,
+            "period":"Middle Preclassic"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"1.60"
+        },
+        {
+            "element":"Overall",
+            "type":"diam.",
+            "units":"centimeters",
+            "dimension":"2.50"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV0011230"
+    ],
+    "displaymaker":null,
+    "displayculture":"Olmec style",
+    "displayperiod":"Middle Formative Period",
+    "caption":"Olmec style, Middle Formative Period, 1000–400 BCE, possibly from Veracruz, Gulf Coast, Mexico, Mesoamerica, Bead. Jadeite; 1.6 x 2.5 cm. Bequest of Gillett G. Griffin (2016-1199)",
+    "captionhtml":"Olmec style, Middle Formative Period, 1000–400 BCE, possibly from Veracruz, Gulf Coast, Mexico, Mesoamerica, <i>Bead</i>. Jadeite; 1.6 x 2.5 cm. Bequest of Gillett G. Griffin (2016-1199)",
+    "published_date":"2026-02-11 11:23:05.960918",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

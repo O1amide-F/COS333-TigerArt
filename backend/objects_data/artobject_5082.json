@@ -1,0 +1,240 @@
+{
+    "type":"artobject",
+    "objectid":5082,
+    "objectnumber":"1996-163",
+    "sortnumber":"1996  163",
+    "displaytitle":"Bridge-spout vessel with architectural forms",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ceramic",
+    "datebegin":-100,
+    "dateend":500,
+    "datecomputed":200,
+    "daterange":"A.D. 1-500",
+    "displaydate":"100 BCE–500 CE",
+    "medium":"Ceramic with red and white slip-paint",
+    "dimensions":"22.9 × 15.3 × 14.6 cm (9 × 6 × 5 3/4 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Museum purchase (in exchange for y1994-15)",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"1996-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Bridge-spout vessel with architectural forms",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\tSeptember 16, 1996, the Merrin Gallery, New York, sold to the Princeton University Art Museum [1].\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] According to receipt in the curatorial file.\n</p>",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"The western portion of present-day Colombia, comprising the northern end of the Andes and the Pacific coast, was home to five thousand years of highly varied artistic production prior to the sixteenth-century arrival of the Spanish. Some evidence of\n\ndurable architecture and monumental stone sculpture remains for certain cultures and time periods, but most ancient Colombian art that survives today is made of ceramic or metal. To the north, along Colombia’s Caribbean coast, other cultures, such as\n\nthe Tairona, developed their own artistic styles, some with strong connections to their neighbors in the Andes, and others with more notable relationships to art produced in present-day Panama and the Caribbean. Copper-gold alloys, known today as\n\ntumbaga, were worked into dazzling forms in all regions. A selection of such metalwork is on view in the display case behind you.\n",
+            "remarks":"AAA2_20-T6-2_CLA_FA_9_17_25.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":49861,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV016515",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"\"Acquisitions of the Art Museum 1996,\" <em>Record of the Art Museum, Princeton University</em> 56, no. 1/2 (1997): p. 75-115.",
+            "citation":"\"Acquisitions of the Art Museum 1996,\" <em>Record of the Art Museum, Princeton University</em> 56, no. 1/2 (1997): p. 75-115., pp. 113–114 (illus.)",
+            "date":1997,
+            "id":3051,
+            "uri":"https://www.jstor.org/stable/3774760"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: South America, Colombia, Valle de Cauca",
+            "code":"Place made",
+            "continent":"South America",
+            "subcontinent":"Intermediate area",
+            "country":"Colombia",
+            "region":null,
+            "state":"Valle de Cauca",
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3686110/republic-of-colombia.html",
+            "location":{
+                "lat":"4",
+                "lon":"-73.25"
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2072851,
+            "term":"vessels (containers)",
+            "aatid":300193015,
+            "termtype":"Classification"
+        },
+        {
+            "id":2035926,
+            "term":"Calima",
+            "aatid":300017424,
+            "termtype":"Culture"
+        },
+        {
+            "id":2107406,
+            "term":"architectural elements",
+            "aatid":300000885,
+            "termtype":"Classification"
+        },
+        {
+            "id":2160397,
+            "term":"slip",
+            "aatid":300010459,
+            "termtype":"Materials"
+        },
+        {
+            "id":2160750,
+            "term":"ceramic",
+            "aatid":300235507,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2072851,
+            "classification":"vessels (containers)"
+        },
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        },
+        {
+            "id":2107406,
+            "classification":"architectural elements"
+        }
+    ],
+    "cultures":[
+        {
+            "id":14085,
+            "culture":"Calima",
+            "alphasort":"Calima",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Calima",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2035926,
+            "culture":"Calima"
+        }
+    ],
+    "periods":[
+        {
+            "id":24115,
+            "period":"Yotoco Period",
+            "alphasort":"Yotoco Period",
+            "begindate":0,
+            "enddate":0,
+            "displayperiod":"Yotoco Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"22.90"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"15.30"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"14.60"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":207234,
+            "name":"SAB_Gala2021"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV016515"
+    ],
+    "displaymaker":null,
+    "displayculture":"Calima",
+    "displayperiod":"Yotoco Period",
+    "caption":"Calima, Yotoco Period, 100 BCE–500 CE, Valle de Cauca, Colombia, Intermediate area, Bridge-spout vessel with architectural forms. Ceramic with red and white slip-paint; 22.9 × 15.3 × 14.6 cm. Museum purchase (in exchange for y1994-15) (1996-163)",
+    "captionhtml":"Calima, Yotoco Period, 100 BCE–500 CE, Valle de Cauca, Colombia, Intermediate area, <i>Bridge-spout vessel with architectural forms</i>. Ceramic with red and white slip-paint; 22.9 × 15.3 × 14.6 cm. Museum purchase (in exchange for y1994-15) (1996-163)",
+    "published_date":"2026-02-11 07:37:27.052835",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

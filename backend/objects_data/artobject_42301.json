@@ -1,0 +1,269 @@
+{
+    "type":"artobject",
+    "objectid":42301,
+    "objectnumber":"2004-21",
+    "sortnumber":"2004   21",
+    "displaytitle":"Pendant in the form of a winged oyster shell",
+    "department":"Art of the Ancient Americas",
+    "classification":"Jades",
+    "datebegin":-1000,
+    "dateend":-400,
+    "datecomputed":-700,
+    "daterange":"1000 B.C.-A.D 1",
+    "displaydate":"1000–400 BCE",
+    "medium":"Jadeite",
+    "dimensions":"14.4 × 3.7 × 1.8 cm (5 11/16 × 1 7/16 × 11/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Museum purchase, Fowler McCormick, Class of 1921, Fund",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2004-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Pendant in the form of a winged oyster shell",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\tBy 1989, John B. Rhoads, Mexico City [1]; 2004, John B. Rhoads sold to the Princeton University Art Museum.\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] Lent to the Princeton University Art Museum in 1989 (L.1989.109.14).\n</p>",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"Jade was the most prestigious material used to express religious ideology by the Olmec during the Middle Formative period (1000–400 BCE), when maize agriculture became the core source of the incipient state’s stability and wealth. The Olmec preference for blue-green jade, as exemplified by many of the works on view here, likely related to fecundity, whether through its similarity to plant life or to water, an association heightened by its high polish and translucency. Some objects, such as celts, mimic the form of maize cobs, while others seem to represent sprouting kernels. As one of the hardest materials available, jade was exceptionally difficult to shape. Powdered jade was used as an abrasive to allow slow grinding, sawing, drilling, and polishing, processes that could take years to complete for a single object.\n",
+            "remarks":"AAA3_20-T3B-8_CLA_FA.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":46103,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV0011206",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"Michael D. Coe et al., <I>The Olmec World: Ritual and Rulership</I> (Princeton, Princeton University Art Museum, 1996)",
+            "citation":"Michael D. Coe et al., <I>The Olmec World: Ritual and Rulership</I> (Princeton, Princeton University Art Museum, 1996), cat. no. 71; fig. 16, p. 78",
+            "date":1996,
+            "id":2564,
+            "uri":"https://search.worldcat.org/title/34103154"
+        },
+        {
+            "boilertext":"Carolyn Tate and Gordon Bendersky, \"Olmec Sculptures of the Human Fetus,\" <i>Perspectives in Biology and Medicine </i>42, no. 3 (1999): 303-332.",
+            "citation":"Carolyn Tate and Gordon Bendersky, \"Olmec Sculptures of the Human Fetus,\" <i>Perspectives in Biology and Medicine </i>42, no. 3 (1999): 303-332., fig. 20, p. 329 (illus.)",
+            "date":1999,
+            "id":2706,
+            "uri":"https://search.worldcat.org/title/538145709"
+        },
+        {
+            "boilertext":"\"Acquisitions of the Princeton University Art Museum 2004,\" <EM>Record of the Princeton University Art Museum</EM>&nbsp;64 (2005): p. 91-135.",
+            "citation":"\"Acquisitions of the Princeton University Art Museum 2004,\" <EM>Record of the Princeton University Art Museum</EM>&nbsp;64 (2005): p. 91-135., p. 134",
+            "date":2005,
+            "id":468,
+            "uri":"https://www.jstor.org/stable/3774838"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Mexico, Guerrero",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Mesoamerica",
+            "country":"Mexico",
+            "region":null,
+            "state":"Guerrero",
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3527213/estado-de-guerrero.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2048931,
+            "term":"ornament",
+            "aatid":300056258,
+            "termtype":"Classification"
+        },
+        {
+            "id":2135992,
+            "term":"spoons",
+            "aatid":300043149,
+            "termtype":"Classification"
+        },
+        {
+            "id":2035652,
+            "term":"Middle Preclassic",
+            "aatid":300016973,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2035751,
+            "term":"Olmec",
+            "aatid":300017051,
+            "termtype":"Culture"
+        },
+        {
+            "id":2162892,
+            "term":"jadéite",
+            "aatid":300011121,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2135992,
+            "classification":"spoons"
+        },
+        {
+            "id":2048931,
+            "classification":"ornament"
+        }
+    ],
+    "cultures":[
+        {
+            "id":12498,
+            "culture":"Olmec",
+            "alphasort":"Olmec",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Olmec style",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2035751,
+            "culture":"Olmec"
+        }
+    ],
+    "periods":[
+        {
+            "id":24010,
+            "period":"Middle Formative Period",
+            "alphasort":"Formative Period, Middle",
+            "begindate":-1000,
+            "enddate":-400,
+            "displayperiod":"Middle Formative Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035652,
+            "period":"Middle Preclassic"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Length",
+            "units":"centimeters",
+            "dimension":"14.40"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"3.70"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"1.77"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":211958,
+            "name":"2022_FRS158_03_31"
+        },
+        {
+            "packageid":181974,
+            "name":"web_2020_AAA"
+        },
+        {
+            "packageid":210384,
+            "name":"TDC-Final [4]"
+        },
+        {
+            "packageid":152535,
+            "name":"web_seashells"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":223469,
+            "name":"2023_ART365/LAS370/ANT365_03_21"
+        },
+        {
+            "packageid":210235,
+            "name":"2022_ART267_02_09"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV0011206"
+    ],
+    "displaymaker":null,
+    "displayculture":"Olmec style",
+    "displayperiod":"Middle Formative Period",
+    "caption":"Olmec style, Middle Formative Period, 1000–400 BCE, Guerrero, Mexico, Mesoamerica, Pendant in the form of a winged oyster shell. Jadeite; 14.4 × 3.7 × 1.8 cm. Museum purchase, Fowler McCormick, Class of 1921, Fund (2004-21)",
+    "captionhtml":"Olmec style, Middle Formative Period, 1000–400 BCE, Guerrero, Mexico, Mesoamerica, <i>Pendant in the form of a winged oyster shell</i>. Jadeite; 14.4 × 3.7 × 1.8 cm. Museum purchase, Fowler McCormick, Class of 1921, Fund (2004-21)",
+    "published_date":"2026-02-11 11:13:45.190245",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}
