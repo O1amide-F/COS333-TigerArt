@@ -1,0 +1,145 @@
+{
+    "type":"artobject",
+    "objectid":65025,
+    "objectnumber":"x1983-1445",
+    "sortnumber":"1983 1445x",
+    "displaytitle":"Fifth Avenue and 53d Street, New York City",
+    "department":"Photography Archives",
+    "classification":"(not assigned)",
+    "datebegin":1905,
+    "dateend":1915,
+    "datecomputed":1910,
+    "daterange":"A.D. 1900-1945",
+    "displaydate":"ca. 1910",
+    "medium":"Platinum print",
+    "dimensions":"overall: 28 x 20.9 cm\r\nmount: 35 x 27.5 cm",
+    "dimensionsproposed":"",
+    "creditline":"The Clarence H. White Collection, assembled and organized by Professor Clarence H. White Jr., and given in memory of Lewis F. White, Dr. Maynard P. White Sr., and Clarence H. White Jr., the sons of Clarence H. White Sr. and Jane Felix White",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":"© Estate of Alvin Langon Coburn",
+    "restrictions":"Restricted",
+    "nowebuse":"False",
+    "secondaryobjectnumber":"CHW X34-3",
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"1983-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Fifth Avenue and 53d Street, New York City",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[
+        {
+            "id":6575,
+            "displayname":"Alvin Langdon Coburn",
+            "displaydate":"1882–1966; born Boston, MA; died Rhos-on-Sea, England; active London, England and New York, NY",
+            "datebegin":1882,
+            "dateend":1966,
+            "prefix":null,
+            "suffix":null,
+            "role":"Artist",
+            "displaymaker":"Alvin Langdon Coburn, 1882–1966; born Boston, MA; died Rhos-on-Sea, England; active London, England and New York, NY",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>The artist; acquired by Clarence H. White Sr., between ca. 1910 and July 7, 1925; by descent to Clarence H. White Jr., on or after July 8, 1925 [1]; by descent to Clarence H. White Jr.’s widow, Ruth Royer White, 1978 [2]; bequeathed to the Princeton University Art Museum, 1983 [3].</p><p> Notes:\n</p><p>\n\t[1]. Possibly on the occasion of Clarence H. White Sr.’s death, as part of the Clarence H. White Collection.\n\t<br />\n\t[2]. On the occasion of Clarence H. White Jr.’s death.\n\t<br />\n\t[3]. Carried out by Ruth Royer White on behalf of Clarence H. White Jr.\n</p>",
+            "remarks":"as per research by Grace Xiao & Cecilia Moore - Summer 2024"
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"\r\nCoburn, who along with Alfred Stieglitz was a key figure in the development of American pictorialism, later helped abstract photography emerge as a valid art form. Coburn’s early impressionistic cityscapes captured the evening light, when a mixture of street lamplight and the night air enveloped the city in a romantic, hazy fog. His interest in atmosphere rather than detail, as well as his developing concern for geometry and a desire to eliminate the horizon line, would eventually lead him to produce some of the first eentirely nonrepresentational photographs.</P></SPAN></SPAN>",
+            "remarks":"Photo Rotation Oct. 2016"
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"Between the many galleries overseen by Alfred Stieglitz from 1905 to 1946 and the Clarence H. White School, opened in 1914 as the first institution dedicated to teaching photography as an art in the United States, New York City was increasingly established as a center for modern art. In decades marked by the demolition of hundreds of old buildings to make way for dozens of new skyscrapers and a five-fold increase in population, the city held particular appeal to artists as a subject. While city streets have appeared in photographs since the inception of the medium in the early 1800s, it was not until the widespread practice of making photographs in city streets in the early 1900s that a new genre known as “street photography” emerged—and New York was its capital. These photographs might treat the location aesthetically or they might capture a scene of human interest, they might be taken by Kodak camera hobbyists, students at the White School, or even professional street photographers, but they always relied on a city perpetually in flux.\n",
+            "remarks":"AMER-STR_27-T5-1_CLA_02_FA01 Day 1 Cataloguing  Group chat for x1973-19, x1983-1445, 2004-399"
+        }
+    ],
+    "media":[
+        {
+            "id":122845,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV46024",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":"Restricted",
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[],
+    "terms":[],
+    "classifications":[],
+    "cultures":[],
+    "cultureterms":[],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199325,
+            "term":"North American Art",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199326,
+            "term":"Photography",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199334,
+            "term":"Clarence H. White Collection",
+            "termtype":"Archive | Collection"
+        }
+    ],
+    "dimensionelements":[],
+    "packages":[
+        {
+            "packageid":213904,
+            "name":"Gallery_23-27(Pavilion7)-American"
+        },
+        {
+            "packageid":137183,
+            "name":"web_chw_review"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV46024"
+    ],
+    "displaymaker":"Alvin Langdon Coburn, 1882–1966; born Boston, MA; died Rhos-on-Sea, England; active London, England and New York, NY",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"Alvin Langdon Coburn (1882–1966; born Boston, MA; died Rhos-on-Sea, England; active London, England and New York, NY), Fifth Avenue and 53d Street, New York City, ca. 1910. Platinum print. The Clarence H. White Collection, assembled and organized by Professor Clarence H. White Jr., and given in memory of Lewis F. White, Dr. Maynard P. White Sr., and Clarence H. White Jr., the sons of Clarence H. White Sr. and Jane Felix White (x1983-1445)",
+    "captionhtml":"Alvin Langdon Coburn (1882–1966; born Boston, MA; died Rhos-on-Sea, England; active London, England and New York, NY), <i>Fifth Avenue and 53d Street, New York City</i>, ca. 1910. Platinum print. The Clarence H. White Collection, assembled and organized by Professor Clarence H. White Jr., and given in memory of Lewis F. White, Dr. Maynard P. White Sr., and Clarence H. White Jr., the sons of Clarence H. White Sr. and Jane Felix White (x1983-1445)",
+    "published_date":"2026-03-25 09:33:56.186030",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

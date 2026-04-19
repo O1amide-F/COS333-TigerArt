@@ -1,0 +1,140 @@
+{
+    "type":"artobject",
+    "objectid":62905,
+    "objectnumber":"PP665",
+    "sortnumber":"P       665P",
+    "displaytitle":"Warbler Finch (Certhidea Olivacea)",
+    "department":"Modern and Contemporary Art",
+    "classification":"Glass",
+    "datebegin":2009,
+    "dateend":2009,
+    "datecomputed":2009,
+    "daterange":"A.D. 1945-present",
+    "displaydate":"2009",
+    "medium":"Cast glass",
+    "dimensions":"Need to open casework to measure. (Artist website: sculpture is 20 times lifesize)",
+    "dimensionsproposed":"",
+    "creditline":"Princeton University",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":"© Tolly Nason, Courtesy of The English Listed",
+    "restrictions":"Restricted",
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"true",
+    "on_view":false,
+    "accessionyear":null,
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Warbler Finch (Certhidea Olivacea)",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[
+        {
+            "id":17009,
+            "displayname":"Tolly Nason",
+            "displaydate":"British, born 1977",
+            "datebegin":1977,
+            "dateend":2100,
+            "prefix":null,
+            "suffix":null,
+            "role":"Artist",
+            "displaymaker":"Tolly Nason, British, born 1977",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[],
+    "media":[],
+    "hasimage":"false",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[],
+    "terms":[
+        {
+            "id":2056370,
+            "term":"red",
+            "aatid":300126225,
+            "termtype":"Subject"
+        },
+        {
+            "id":2055271,
+            "term":"sculptures",
+            "aatid":300047203,
+            "termtype":"Classification"
+        },
+        {
+            "id":2049409,
+            "term":"glassware",
+            "aatid":300010898,
+            "termtype":"Classification"
+        },
+        {
+            "id":2031586,
+            "term":"British",
+            "aatid":300111159,
+            "termtype":"Culture"
+        },
+        {
+            "id":2158039,
+            "term":"birds",
+            "aatid":null,
+            "termtype":"Subject"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2049409,
+            "classification":"glassware"
+        },
+        {
+            "id":2055271,
+            "classification":"sculptures"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[
+        {
+            "id":2031586,
+            "culture":"British"
+        }
+    ],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199321,
+            "term":"European Art",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199324,
+            "term":"Art Since 1945",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[],
+    "packages":[],
+    "primaryimage":"",
+    "displaymaker":"Tolly Nason, British, born 1977",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"Tolly Nason (British, born 1977), Warbler Finch (Certhidea Olivacea), 2009. Cast glass. Princeton University (PP665)",
+    "captionhtml":"Tolly Nason (British, born 1977), <i>Warbler Finch (Certhidea Olivacea)</i>, 2009. Cast glass. Princeton University (PP665)",
+    "published_date":"2026-03-31 02:46:14.637956",
+    "campusart":[
+        {
+            "campuscollections":"true",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}
