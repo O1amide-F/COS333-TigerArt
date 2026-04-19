@@ -1,0 +1,145 @@
+{
+    "type":"artobject",
+    "objectid":94027,
+    "objectnumber":"MWA X858",
+    "sortnumber":"WA    X    M  858",
+    "displaytitle":"Minor White",
+    "department":"Photography Archives",
+    "classification":"Photographs",
+    "datebegin":1955,
+    "dateend":1955,
+    "datecomputed":1955,
+    "daterange":"A.D. 1945-present",
+    "displaydate":"1955",
+    "medium":"Gelatin silver print",
+    "dimensions":"4.3 × 11.3 cm (1 11/16 × 4 7/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"The Minor White Archive, Princeton University Art Museum, bequest of Minor White",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":"Restricted Download - Under Copyright",
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":false,
+    "accessionyear":null,
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Minor White",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[
+        {
+            "id":22882,
+            "displayname":"Photographer unidentified",
+            "displaydate":null,
+            "datebegin":0,
+            "dateend":0,
+            "prefix":null,
+            "suffix":null,
+            "role":"Artist",
+            "displaymaker":"Photographer unidentified",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"By bequest to the Princeton University Art Museum from Minor White (1908–1976).",
+            "remarks":"Batch edit for Provenance publication project"
+        }
+    ],
+    "media":[
+        {
+            "id":125712,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV47975",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":"Restricted Download - Under Copyright",
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[],
+    "terms":[
+        {
+            "id":2038492,
+            "term":"American",
+            "aatid":300107956,
+            "termtype":"Culture"
+        }
+    ],
+    "classifications":[],
+    "cultures":[],
+    "cultureterms":[
+        {
+            "id":2038492,
+            "culture":"American"
+        }
+    ],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199324,
+            "term":"Art Since 1945",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199326,
+            "term":"Photography",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199336,
+            "term":"Minor White Archive",
+            "termtype":"Archive | Collection"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"4.30"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"11.30"
+        }
+    ],
+    "packages":[],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV47975"
+    ],
+    "displaymaker":"Photographer unidentified",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"Photographer unidentified, Minor White, 1955. Gelatin silver print; 4.3 × 11.3 cm. The Minor White Archive, Princeton University Art Museum, bequest of Minor White (MWA X858)",
+    "captionhtml":"Photographer unidentified, <i>Minor White</i>, 1955. Gelatin silver print; 4.3 × 11.3 cm. The Minor White Archive, Princeton University Art Museum, bequest of Minor White (MWA X858)",
+    "published_date":"2026-03-31 03:20:07.602672",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

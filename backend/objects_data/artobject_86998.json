@@ -1,0 +1,303 @@
+{
+    "type":"artobject",
+    "objectid":86998,
+    "objectnumber":"2013-80",
+    "sortnumber":"2013   80",
+    "displaytitle":"Mummy bundle head",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ceremonial Objects",
+    "datebegin":-300,
+    "dateend":-1,
+    "datecomputed":-150,
+    "daterange":"1000 B.C.-A.D 1",
+    "displaydate":"300–1 BCE",
+    "medium":"Ceramic with resin paint",
+    "dimensions":"27.9 × 27.6 × 18.4 cm (11 × 10 7/8 × 7 1/4 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Museum purchase, Fowler McCormick, Class of 1921, Fund",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2013-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Mummy bundle head",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"Jay C. Leff, Uniontown, PA, prior to 1966; Judy Nash, NY; David Bernstein, NY; Herbert L. Lucas, Los Angeles, CA, 1982-possibly 2004; private collection; purchased by the Princeton University Art Museum, 2013.",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"<p>The Paracas culture of the arid south coast of Peru flourished during the final millennium BCE, incorporating Chavín-style imagery and artistic techniques from its contemporaries in Peru’s central highlands into distinctly local styles. Although the culture is most famous for intricate embroidered textiles, wrapped in many layers around mummies, Paracas ceramics also merit appreciation. Paracas ceramics were incised with the outlines of their dense, often geometric designs while the clay was still leather-hard. After firing, the vessels were painted with mineral pigments suspended in plant resin. The resin may then have been carefully heated to smooth the surface, as no brush marks are evident. This technique allowed for brilliant coloration in a wide range of hues. Powerful animals and supernatural creatures—including the Oculate Being, so called because of its prominent eyes—appear with frequency.\n</p><p>This object presents the face of a character in Paracas art that scholars call the Oculate Being because of its oversize eyes. The Oculate Being was frequently depicted with undulating two-headed creatures extending across its face. These are likely inspired by armored sea robins, fish whose heads resemble those of the animals depicted on this bundle head. At the top of the mask, a reduced-scale version of the Oculate Being’s face appears but with a human body. Small perforations around the perimeter suggest that this ceramic object was once sewn to a substrate, likely a thickly wrapped bundle containing a deceased person. Paracas mummy bundles typically incorporate many layers of fine textiles, interspersed with other kinds of objects, presumably imbuing the whole with complex meanings.\n </p>",
+            "remarks":"AAA2_20-T6-1_CLA_FA.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":126181,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/2013-80_TOP",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Bruce White Photography"
+        },
+        {
+            "id":126182,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/2013-80_LFT",
+            "isprimary":0,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Bruce White Photography"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"Elizabeth K. Easby, <I>Ancient Art of Latin America from the Collection of Jay C. Leff </I>(Brooklyn, The Brooklyn Museum, 1966). ",
+            "citation":"Elizabeth K. Easby, <I>Ancient Art of Latin America from the Collection of Jay C. Leff </I>(Brooklyn, The Brooklyn Museum, 1966). , no. 547 (illus.)",
+            "date":1966,
+            "id":2581,
+            "uri":"https://search.worldcat.org/title/1857855"
+        },
+        {
+            "boilertext":"Alan Lapiner,<i> Pre-Columbian Art of South America</i> (New York: Harry N. Abrams, 1976).",
+            "citation":"Alan Lapiner,<i> Pre-Columbian Art of South America</i> (New York: Harry N. Abrams, 1976)., fig. 146, p. 80 (illus.)",
+            "date":1976,
+            "id":2793,
+            "uri":"https://search.worldcat.org/title/1177648"
+        },
+        {
+            "boilertext":"Jill Guthrie, ed., <em>In celebration: works of art from the Collections of Princeton Alumni and Friends of The Art Museum, Princeton University,&nbsp;</em>(Princeton, NJ: Princeton University Art Museum, 1997).",
+            "citation":"Jill Guthrie, ed., <em>In celebration: works of art from the Collections of Princeton Alumni and Friends of The Art Museum, Princeton University,&nbsp;</em>(Princeton, NJ: Princeton University Art Museum, 1997)., p. 96, cat. no. 97",
+            "date":1997,
+            "id":852,
+            "uri":"https://search.worldcat.org/title/231714876"
+        },
+        {
+            "boilertext":"<p>Andrew James Hamilton, \"New Horizons in Andean Art History,\" <em>Record of the Art Museum, Princeton University</em> 75/76 (2016-17): 42-101.<br></p>",
+            "citation":"<p>Andrew James Hamilton, \"New Horizons in Andean Art History,\" <em>Record of the Art Museum, Princeton University</em> 75/76 (2016-17): 42-101.<br></p>, p. 48, fig. 4; p. 52, figs. 7, 8",
+            "date":2016,
+            "id":9660,
+            "uri":"https://www.jstor.org/stable/i40228781"
+        },
+        {
+            "boilertext":"\"Acquisitions of the Princeton University Art Museum 2013,\"<em>&nbsp;Record of the Princeton University Art Museum</em> 73 (2014): p. 37-64.",
+            "citation":"\"Acquisitions of the Princeton University Art Museum 2013,\"<em>&nbsp;Record of the Princeton University Art Museum</em> 73 (2014): p. 37-64., p. 44 (illus.)",
+            "date":2014,
+            "id":2980,
+            "uri":"https://search.worldcat.org/title/61312705"
+        }
+    ],
+    "exhibitions":[
+        {
+            "exhibitionid":1699,
+            "citation":"Ancient Art of Latin America from the Collection of Jay C. Leff (November 22, 1966 - March 5, 1967)",
+            "isvirtual":true,
+            "begindate":"1966-11-22",
+            "enddate":"1967-03-05",
+            "uri":"https://artmuseum.princeton.edu/art/exhibitions/1699"
+        },
+        {
+            "exhibitionid":1282,
+            "citation":"In Celebration: Works of Art from the Collections of Princeton Alumni and Friends of the Art Museum (Saturday, February 22, 1997 - Sunday, June 08, 1997)",
+            "isvirtual":true,
+            "begindate":"1997-02-22",
+            "enddate":"1997-06-08",
+            "uri":"https://artmuseum.princeton.edu/art/exhibitions/1282"
+        }
+    ],
+    "geography":[
+        {
+            "displaygeography":"Place excavated: South America, Peru, Ica region, South coast, Chongos",
+            "code":"Place excavated",
+            "continent":"South America",
+            "subcontinent":"Andes",
+            "country":"Peru",
+            "region":"South coast",
+            "state":"Ica region",
+            "city":null,
+            "county":null,
+            "subregion":"Pisco valley",
+            "locale":"Chongos",
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/8349796/ica.html",
+            "location":{
+                "lat":"-14.21386",
+                "lon":"-75.90666"
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2048754,
+            "term":"ceremonial objects",
+            "aatid":300234117,
+            "termtype":"Classification"
+        },
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2129353,
+            "term":"masks (costume)",
+            "aatid":300138758,
+            "termtype":"Classification"
+        },
+        {
+            "id":2147420,
+            "term":"mythical or legendary beings",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2035998,
+            "term":"Paracas",
+            "aatid":300017276,
+            "termtype":"Culture"
+        },
+        {
+            "id":2160750,
+            "term":"ceramic",
+            "aatid":300235507,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2129353,
+            "classification":"masks (costume)"
+        },
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        },
+        {
+            "id":2048754,
+            "classification":"ceremonial objects"
+        }
+    ],
+    "cultures":[
+        {
+            "id":13503,
+            "culture":"Paracas",
+            "alphasort":"Paracas",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Paracas",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2035998,
+            "culture":"Paracas"
+        }
+    ],
+    "periods":[
+        {
+            "id":13505,
+            "period":"Early Horizon",
+            "alphasort":"Horizon, Early",
+            "begindate":-750,
+            "enddate":-100,
+            "displayperiod":"Early Horizon",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"27.90"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"27.60"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"18.40"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":181974,
+            "name":"web_2020_AAA"
+        },
+        {
+            "packageid":206417,
+            "name":"image_descriptions_top250"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":197269,
+            "name":"web_highlights -revised 2021"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/2013-80_TOP"
+    ],
+    "displaymaker":null,
+    "displayculture":"Paracas",
+    "displayperiod":"Early Horizon",
+    "caption":"Paracas, Early Horizon, 300–1 BCE, Pisco valley, Ica region, South coast, Peru, Andes, Mummy bundle head. Ceramic with resin paint; 27.9 × 27.6 × 18.4 cm. Museum purchase, Fowler McCormick, Class of 1921, Fund (2013-80)",
+    "captionhtml":"Paracas, Early Horizon, 300–1 BCE, Pisco valley, Ica region, South coast, Peru, Andes, <i>Mummy bundle head</i>. Ceramic with resin paint; 27.9 × 27.6 × 18.4 cm. Museum purchase, Fowler McCormick, Class of 1921, Fund (2013-80)",
+    "published_date":"2026-02-11 13:29:50.016320",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

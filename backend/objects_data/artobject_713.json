@@ -1,0 +1,253 @@
+{
+    "type":"artobject",
+    "objectid":713,
+    "objectnumber":"2016-1242",
+    "sortnumber":"2016 1242",
+    "displaytitle":"Coquero (coca-leaf chewer)",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ceramic",
+    "datebegin":800,
+    "dateend":1600,
+    "datecomputed":1200,
+    "daterange":"A.D. 1000-1500",
+    "displaydate":"800–1600",
+    "medium":"Ceramic with black resist decoration",
+    "dimensions":"18.1 × 8.7 × 8.9 cm (7 1/8 × 3 7/16 × 3 1/2 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Bequest of Gillett G. Griffin",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2016-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Coquero (coca-leaf chewer)",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\tBy November 1971, Gillett G. Griffin (1928-2016), Princeton, NJ [1]; 2016, bequeathed to the Princeton University Art Museum.\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] According to date-stamped slides in the Griffin archive.\n</p>",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"The western portion of present-day Colombia, comprising the northern end of the Andes and the Pacific coast, was home to five thousand years of highly varied artistic production prior to the sixteenth-century arrival of the Spanish. Some evidence of\n\ndurable architecture and monumental stone sculpture remains for certain cultures and time periods, but most ancient Colombian art that survives today is made of ceramic or metal. To the north, along Colombia’s Caribbean coast, other cultures, such as\n\nthe Tairona, developed their own artistic styles, some with strong connections to their neighbors in the Andes, and others with more notable relationships to art produced in present-day Panama and the Caribbean. Copper-gold alloys, known today as\n\ntumbaga, were worked into dazzling forms in all regions. A selection of such metalwork is on view in the display case behind you.\n",
+            "remarks":"AAA2_20-T6-2_CLA_FA_9_17_25.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":49891,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV016544",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"Harmer Johnson, ed. <i>Guide to the Arts of the Americas</i> (New York: Rizzoli, 1992)",
+            "citation":"Harmer Johnson, ed. <i>Guide to the Arts of the Americas</i> (New York: Rizzoli, 1992), p. 115 (illus.)",
+            "date":1992,
+            "id":1260,
+            "uri":"https://search.worldcat.org/title/25547967"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: South America, Colombia, Nariño",
+            "code":"Place made",
+            "continent":"South America",
+            "subcontinent":"Intermediate area",
+            "country":"Colombia",
+            "region":null,
+            "state":"Nariño",
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":null,
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        },
+        {
+            "displaygeography":"Place made: South America, Ecuador, Carchi",
+            "code":"Place made",
+            "continent":"South America",
+            "subcontinent":"Intermediate area",
+            "country":"Ecuador",
+            "region":null,
+            "state":"Carchi",
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":null,
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2055437,
+            "term":"figurines",
+            "aatid":300047455,
+            "termtype":"Classification"
+        },
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2055657,
+            "term":"figures (representations)",
+            "aatid":300189808,
+            "termtype":"Subject"
+        },
+        {
+            "id":2035924,
+            "term":"Pre-Columbian Colombian styles",
+            "aatid":300017422,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2160750,
+            "term":"ceramic",
+            "aatid":300235507,
+            "termtype":"Materials"
+        },
+        {
+            "id":2152702,
+            "term":"burnishing (polishing)",
+            "aatid":300053869,
+            "termtype":"Techniques"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2055437,
+            "classification":"figurines"
+        },
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        }
+    ],
+    "cultures":[
+        {
+            "id":24116,
+            "culture":"Capulí",
+            "alphasort":"Capulí",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Capulí",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[],
+    "periods":[
+        {
+            "id":24117,
+            "period":"Late Period",
+            "alphasort":"Late Period",
+            "begindate":0,
+            "enddate":0,
+            "displayperiod":"Late Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035924,
+            "period":"Pre-Columbian Colombian styles"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"18.10"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"8.66"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"8.86"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV016544"
+    ],
+    "displaymaker":null,
+    "displayculture":"Capulí",
+    "displayperiod":"Late Period",
+    "caption":"Capulí, Late Period, 800–1600, Nariño, Colombia, Intermediate area, Coquero (coca-leaf chewer). Ceramic with black resist decoration; 18.1 × 8.7 × 8.9 cm. Bequest of Gillett G. Griffin (2016-1242)",
+    "captionhtml":"Capulí, Late Period, 800–1600, Nariño, Colombia, Intermediate area, <i>Coquero (coca-leaf chewer)</i>. Ceramic with black resist decoration; 18.1 × 8.7 × 8.9 cm. Bequest of Gillett G. Griffin (2016-1242)",
+    "published_date":"2026-02-11 07:23:28.828604",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

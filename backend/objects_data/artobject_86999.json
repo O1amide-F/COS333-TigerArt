@@ -1,0 +1,321 @@
+{
+    "type":"artobject",
+    "objectid":86999,
+    "objectnumber":"2023-106",
+    "sortnumber":"2023  106",
+    "displaytitle":"Vessel in the form of a building",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ceramic",
+    "datebegin":-1400,
+    "dateend":-1000,
+    "datecomputed":-1200,
+    "daterange":"2000-1000 B.C.",
+    "displaydate":"1400–1000 BCE",
+    "medium":"Ceramic with white slip and fire-clouding",
+    "dimensions":"21.6 × 11.4 × 10.2 cm (8 1/2 × 4 1/2 × 4 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Museum purchase, Fowler McCormick, Class of 1921, Fund",
+    "markings":null,
+    "inscribed":"in white on bottom: LU5\r\non sticker on bottom: L10.85, O'Boyle, #123, L.1991.8",
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":"",
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2023-01-01",
+    "newaccession":1,
+    "titles":[
+        {
+            "title":"Vessel in the form of a building",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"This vessel is the earliest known architectural model from Mesoamerica, providing a glimpse of how ephemeral buildings may have looked in central Mexico some three thousand years ago. The solid rectangular base corresponds to the raised packed-earth platforms on which homes and other structures were erected, while the openwork of the central section may allude to poles lashed together to form the building’s walls, a technique still employed in Indigenous communities throughout the region. The roof, likely thatch, curls dramatically forward over the doorway. Although the openwork of the central section may seem to render this vessel impractical for holding substances, a solid conical interior form connects the base to the roof, creating a viable container for liquids poured into the mouth above the building’s thatched roof.\n",
+            "remarks":"AAA1_20-T6-3_CLA_FA_9_17_25.pdf - Day 1 installation"
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"&lt;1959 – 1974&gt; Jay C. Leff, Uniontown; 1974&gt; – &lt;1981 Judith Nash, New York; &lt;1981 – 1984 Peter G. Wray, Scottsdale (acquired from above); 11/27-8/1984 Sotheby's New York, November 27 and 28, 1984 (lot 272); 1984 – &lt;1986 William B. O'Boyle, New York (#123) [whether or not there was an intermediary is unknown]; &lt;1986 – 2003 Herbert L. Lucas, Los Angeles (#120); 2003 – 6/1/23 Private collection, acquired from above\n",
+            "remarks":null
+        }
+    ],
+    "media":[
+        {
+            "id":246988,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX23_102165",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":246989,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX23_102164",
+            "isprimary":0,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":246990,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX23_102160",
+            "isprimary":0,
+            "rank":6,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":246991,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX23_102159",
+            "isprimary":0,
+            "rank":5,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":246992,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX23_102158",
+            "isprimary":0,
+            "rank":4,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":246993,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX23_102145",
+            "isprimary":0,
+            "rank":10,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":246994,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX23_102143",
+            "isprimary":0,
+            "rank":8,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":246995,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX23_102142",
+            "isprimary":0,
+            "rank":7,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":247057,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX23_102157",
+            "isprimary":0,
+            "rank":3,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":247058,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX23_102144",
+            "isprimary":0,
+            "rank":9,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Mexico, Mexico City, Tlatilco",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Mesoamerica",
+            "country":"Mexico",
+            "region":null,
+            "state":null,
+            "city":"Mexico City",
+            "county":null,
+            "subregion":null,
+            "locale":"Tlatilco",
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":null,
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2035648,
+            "term":"Early Preclassic",
+            "aatid":300016970,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2035688,
+            "term":"Tlatilco",
+            "aatid":300017007,
+            "termtype":"Culture"
+        },
+        {
+            "id":2072851,
+            "term":"vessels (containers)",
+            "aatid":300193015,
+            "termtype":"Classification"
+        },
+        {
+            "id":2035751,
+            "term":"Olmec",
+            "aatid":300017051,
+            "termtype":"Culture"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        },
+        {
+            "id":2072851,
+            "classification":"vessels (containers)"
+        }
+    ],
+    "cultures":[
+        {
+            "id":12498,
+            "culture":"Olmec",
+            "alphasort":"Olmec",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Olmec style",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2035688,
+            "culture":"Tlatilco"
+        },
+        {
+            "id":2035751,
+            "culture":"Olmec"
+        }
+    ],
+    "periods":[
+        {
+            "id":24008,
+            "period":"Early Formative Period",
+            "alphasort":"Formative Period, Early",
+            "begindate":0,
+            "enddate":0,
+            "displayperiod":"Early Formative Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035648,
+            "period":"Early Preclassic"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"21.60"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"11.40"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"10.20"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":207234,
+            "name":"SAB_Gala2021"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX23_102165"
+    ],
+    "displaymaker":null,
+    "displayculture":"Olmec style",
+    "displayperiod":"Early Formative Period",
+    "caption":"Olmec style, Early Formative Period, 1400–1000 BCE, Mexico City, Mexico, Mesoamerica, Vessel in the form of a building. Ceramic with white slip and fire-clouding; 21.6 × 11.4 × 10.2 cm. Museum purchase, Fowler McCormick, Class of 1921, Fund (2023-106)",
+    "captionhtml":"Olmec style, Early Formative Period, 1400–1000 BCE, Mexico City, Mexico, Mesoamerica, <i>Vessel in the form of a building</i>. Ceramic with white slip and fire-clouding; 21.6 × 11.4 × 10.2 cm. Museum purchase, Fowler McCormick, Class of 1921, Fund (2023-106)",
+    "published_date":"2026-02-11 13:29:50.329327",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

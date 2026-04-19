@@ -1,0 +1,219 @@
+{
+    "type":"artobject",
+    "objectid":738,
+    "objectnumber":"2016-1243",
+    "sortnumber":"2016 1243",
+    "displaytitle":"Vessel in the form of a seated man",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ceramic",
+    "datebegin":-1600,
+    "dateend":-100,
+    "datecomputed":-850,
+    "daterange":"1000 B.C.-A.D 1",
+    "displaydate":"1600–100 BCE",
+    "medium":"Ceramic",
+    "dimensions":"",
+    "dimensionsproposed":"",
+    "creditline":"Bequest of Gillett G. Griffin",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2016-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Vessel in the form of a seated man",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\tBy 2000, Gillett G. Griffin (1928-2016), Princeton, NJ [1]; 2016, bequeathed to the Princeton University Art Museum.\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] Included in an inventory of the Griffin collection created in 2000 (G1070).\n</p>",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"The western portion of present-day Colombia, comprising the northern end of the Andes and the Pacific coast, was home to five thousand years of highly varied artistic production prior to the sixteenth-century arrival of the Spanish. Some evidence of\n\ndurable architecture and monumental stone sculpture remains for certain cultures and time periods, but most ancient Colombian art that survives today is made of ceramic or metal. To the north, along Colombia’s Caribbean coast, other cultures, such as\n\nthe Tairona, developed their own artistic styles, some with strong connections to their neighbors in the Andes, and others with more notable relationships to art produced in present-day Panama and the Caribbean. Copper-gold alloys, known today as\n\ntumbaga, were worked into dazzling forms in all regions. A selection of such metalwork is on view in the display case behind you.\n",
+            "remarks":"AAA2_20-T6-2_CLA_FA_9_17_25.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":161156,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/STU00877",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: South America, Colombia, Western Cordillera",
+            "code":"Place made",
+            "continent":"South America",
+            "subcontinent":"Intermediate area",
+            "country":"Colombia",
+            "region":null,
+            "state":null,
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":"Western Cordillera",
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/7871243/valle-de-la-cauca.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2055438,
+            "term":"figurines",
+            "aatid":300047455,
+            "termtype":"Classification"
+        },
+        {
+            "id":2039332,
+            "term":"Calima",
+            "aatid":300017424,
+            "termtype":"Culture"
+        },
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2088270,
+            "term":"men",
+            "aatid":300025928,
+            "termtype":"Subject"
+        },
+        {
+            "id":2055657,
+            "term":"figures (representations)",
+            "aatid":300189808,
+            "termtype":"Subject"
+        },
+        {
+            "id":2072851,
+            "term":"vessels (containers)",
+            "aatid":300193015,
+            "termtype":"Classification"
+        },
+        {
+            "id":2160750,
+            "term":"ceramic",
+            "aatid":300235507,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2055438,
+            "classification":"figurines"
+        },
+        {
+            "id":2072851,
+            "classification":"vessels (containers)"
+        },
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        }
+    ],
+    "cultures":[
+        {
+            "id":14085,
+            "culture":"Calima",
+            "alphasort":"Calima",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Calima",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2039332,
+            "culture":"Calima"
+        }
+    ],
+    "periods":[
+        {
+            "id":24114,
+            "period":"Ilama Period",
+            "alphasort":"Ilama Period",
+            "begindate":0,
+            "enddate":0,
+            "displayperiod":"Ilama Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":207234,
+            "name":"SAB_Gala2021"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/STU00877"
+    ],
+    "displaymaker":null,
+    "displayculture":"Calima",
+    "displayperiod":"Ilama Period",
+    "caption":"Calima, Ilama Period, 1600–100 BCE, Colombia, Intermediate area, Vessel in the form of a seated man. Ceramic. Bequest of Gillett G. Griffin (2016-1243)",
+    "captionhtml":"Calima, Ilama Period, 1600–100 BCE, Colombia, Intermediate area, <i>Vessel in the form of a seated man</i>. Ceramic. Bequest of Gillett G. Griffin (2016-1243)",
+    "published_date":"2026-02-11 07:23:32.211021",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}
