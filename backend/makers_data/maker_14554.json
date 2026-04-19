@@ -1,0 +1,47 @@
+{
+    "makerid":14554,
+    "published_date":"2025-12-09 02:03:02.629410",
+    "type":"maker",
+    "displayname":"Mo?-n Buluch Laj",
+    "makertype":"Individual",
+    "alphasort":"Moon Buluk Laj",
+    "lastname":"Moon Buluk Laj",
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"active mid-8th century CE, Ik'a (present-day Motul de San José or vicinity, Petén Guatemala)",
+    "begindate":0,
+    "enddate":0,
+    "nationality":"Mesoamerican",
+    "culturegroup":"Maya",
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Alternate",
+            "displayname":"Moon Buluk Laj",
+            "alphasort":"Moon Buluk Laj",
+            "lastname":"Moon Buluk Laj",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Primary Name",
+            "displayname":"Mo?-n Buluch Laj",
+            "alphasort":"Moon Buluk Laj",
+            "lastname":"Moon Buluk Laj",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":"Maya"
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

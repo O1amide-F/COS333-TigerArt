@@ -1,0 +1,36 @@
+{
+    "makerid":5252,
+    "published_date":"2026-01-06 02:01:39.040868",
+    "type":"maker",
+    "displayname":"Karl Hofer",
+    "makertype":"Individual",
+    "alphasort":"Hofer Karl",
+    "lastname":"Hofer",
+    "firstname":"Karl",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"German, 1878–1955",
+    "begindate":1878,
+    "enddate":1955,
+    "nationality":"German",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Karl Hofer",
+            "alphasort":"Hofer Karl",
+            "lastname":"Hofer",
+            "firstname":"Karl",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

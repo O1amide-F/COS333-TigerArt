@@ -1,0 +1,66 @@
+{
+    "makerid":21026,
+    "published_date":"2026-03-25 09:35:55.632983",
+    "type":"maker",
+    "displayname":"Postcommodity",
+    "makertype":"Individual",
+    "alphasort":"Postcommodity",
+    "lastname":"Postcommodity",
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"active 2007-",
+    "begindate":0,
+    "enddate":0,
+    "nationality":"Native American",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Postcommodity",
+            "alphasort":"Postcommodity",
+            "lastname":"Postcommodity",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Alternate",
+            "displayname":"Raven Chacon",
+            "alphasort":"Chacon, Raven",
+            "lastname":"Chacon",
+            "firstname":"Raven",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Alternate",
+            "displayname":"Cristobal Martinez",
+            "alphasort":"Martinez, Cristobal",
+            "lastname":"Martinez",
+            "firstname":"Cristobal",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Alternate",
+            "displayname":"Kade Twist",
+            "alphasort":"Twist, Kade",
+            "lastname":"Twist",
+            "firstname":"Kade",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[]
+}

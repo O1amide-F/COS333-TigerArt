@@ -1,0 +1,44 @@
+{
+    "makerid":18167,
+    "published_date":"2026-02-05 02:01:05.851454",
+    "type":"maker",
+    "displayname":"Katherine A. Bussard",
+    "makertype":"(not entered)",
+    "alphasort":"Bussard, Katherine A.",
+    "lastname":"Bussard",
+    "firstname":"Katherine",
+    "nametitle":null,
+    "middlename":"A.",
+    "suffix":null,
+    "displaybio":null,
+    "begindate":0,
+    "enddate":0,
+    "nationality":null,
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Alternate",
+            "displayname":"kbussard",
+            "alphasort":null,
+            "lastname":"kbussard",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Primary Name",
+            "displayname":"Katherine A. Bussard",
+            "alphasort":"Bussard, Katherine A.",
+            "lastname":"Bussard",
+            "firstname":"Katherine",
+            "nametitle":null,
+            "middlename":"A.",
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[]
+}

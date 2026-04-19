@@ -1,0 +1,60 @@
+{
+    "makerid":13856,
+    "published_date":"2026-01-08 14:04:42.558933",
+    "type":"maker",
+    "displayname":"Coclé",
+    "makertype":"Cultural Group",
+    "alphasort":"Coclé",
+    "lastname":null,
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":null,
+    "begindate":0,
+    "enddate":0,
+    "nationality":"Panamanian",
+    "culturegroup":"Coclé",
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Alternate",
+            "displayname":"Gran Coclé",
+            "alphasort":null,
+            "lastname":"Gran Coclé",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Alternate",
+            "displayname":"Coclé",
+            "alphasort":null,
+            "lastname":"Coclé",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Primary Name",
+            "displayname":"Greater Coclé",
+            "alphasort":"Greater Coclé",
+            "lastname":null,
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":"Greater Coclé"
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"AAT",
+            "id":"300017242"
+        }
+    ]
+}

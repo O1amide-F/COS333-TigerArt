@@ -1,0 +1,44 @@
+{
+    "makerid":13014,
+    "published_date":"2026-02-05 02:01:05.715173",
+    "type":"maker",
+    "displayname":"Karl Kusserow",
+    "makertype":"Individual",
+    "alphasort":"Kusserow, Karl",
+    "lastname":"Kusserow",
+    "firstname":"Karl",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":null,
+    "begindate":0,
+    "enddate":0,
+    "nationality":null,
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Alternate",
+            "displayname":"kusserow",
+            "alphasort":null,
+            "lastname":"kusserow",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Primary Name",
+            "displayname":"Karl Kusserow",
+            "alphasort":"Kusserow, Karl",
+            "lastname":"Kusserow",
+            "firstname":"Karl",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[]
+}

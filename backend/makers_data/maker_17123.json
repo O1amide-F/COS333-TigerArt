@@ -1,0 +1,36 @@
+{
+    "makerid":17123,
+    "published_date":"2026-01-06 02:01:39.135521",
+    "type":"maker",
+    "displayname":"George Henry Seeley",
+    "makertype":"Individual",
+    "alphasort":"Seeley, George Henry",
+    "lastname":"Seeley",
+    "firstname":"George",
+    "nametitle":null,
+    "middlename":"Henry",
+    "suffix":null,
+    "displaybio":"American, 1880–1955",
+    "begindate":1880,
+    "enddate":1955,
+    "nationality":"American",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"George Henry Seeley",
+            "alphasort":"Seeley, George Henry",
+            "lastname":"Seeley",
+            "firstname":"George",
+            "nametitle":null,
+            "middlename":"Henry",
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

@@ -1,0 +1,33 @@
+{
+    "makerid":18690,
+    "published_date":"2026-03-25 09:35:55.579782",
+    "type":"maker",
+    "displayname":"Sanmore Editions, Ltc.",
+    "makertype":"Institution",
+    "alphasort":"Sanmore Editions, Ltc.",
+    "lastname":"Sanmore Editions, Ltc.",
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"New York",
+    "begindate":0,
+    "enddate":0,
+    "nationality":"New York",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Sanmore Editions, Ltc.",
+            "alphasort":"Sanmore Editions, Ltc.",
+            "lastname":"Sanmore Editions, Ltc.",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[]
+}

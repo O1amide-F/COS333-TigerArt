@@ -1,0 +1,44 @@
+{
+    "makerid":1485,
+    "published_date":"2026-03-26 02:00:26.029588",
+    "type":"maker",
+    "displayname":"R. F. Ravenet",
+    "makertype":"Individual",
+    "alphasort":"Ravenet, R. F.",
+    "lastname":"Ravenet",
+    "firstname":"R.",
+    "nametitle":null,
+    "middlename":"F.",
+    "suffix":null,
+    "displaybio":null,
+    "begindate":0,
+    "enddate":0,
+    "nationality":null,
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Alternate",
+            "displayname":"R. F. Ravenet",
+            "alphasort":"Ravenet, R. F.",
+            "lastname":"Ravenet",
+            "firstname":"R. F.",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Primary Name",
+            "displayname":"Simon François Ravenet",
+            "alphasort":"Ravenet, Simon François",
+            "lastname":"Ravenet",
+            "firstname":"Simon",
+            "nametitle":null,
+            "middlename":"François",
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[]
+}

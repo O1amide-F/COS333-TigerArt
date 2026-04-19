@@ -1,0 +1,115 @@
+{
+    "makerid":14775,
+    "published_date":"2026-01-14 02:03:54.453609",
+    "type":"maker",
+    "displayname":"Zapotec",
+    "makertype":"Cultural Group",
+    "alphasort":"Zapotec",
+    "lastname":null,
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":null,
+    "begindate":0,
+    "enddate":0,
+    "nationality":"Mexico",
+    "culturegroup":"Zapotec",
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Beni Zaa",
+            "alphasort":"Beni Zaa",
+            "lastname":null,
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":"Beni Zaa"
+        },
+        {
+            "nametype":null,
+            "displayname":"Monte Alban",
+            "alphasort":"Monte Alban",
+            "lastname":null,
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":"Monte Alban"
+        },
+        {
+            "nametype":null,
+            "displayname":"Monte Albán",
+            "alphasort":"Monte Albán",
+            "lastname":null,
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":"Monte Albán"
+        },
+        {
+            "nametype":"Alternate",
+            "displayname":"Bën zaa",
+            "alphasort":null,
+            "lastname":"Bën zaa",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Alternate",
+            "displayname":"Zapotec",
+            "alphasort":null,
+            "lastname":"Zapotec",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Alternate",
+            "displayname":"Benizaa",
+            "alphasort":null,
+            "lastname":"Benizaa",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Alternate",
+            "displayname":"Be'ena'a",
+            "alphasort":null,
+            "lastname":"Be'ena'a",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Alternate",
+            "displayname":"Ben 'Zaa",
+            "alphasort":null,
+            "lastname":"Ben 'Zaa",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"AAT",
+            "id":"300017179"
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "makerid":866,
+    "published_date":"2026-02-07 02:00:56.773978",
+    "type":"maker",
+    "displayname":"Frank Gehry",
+    "makertype":"Individual",
+    "alphasort":"Gehry, Frank",
+    "lastname":"Gehry",
+    "firstname":"Frank",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"American, born 1929",
+    "begindate":1929,
+    "enddate":2100,
+    "nationality":"American",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Frank Gehry",
+            "alphasort":"Gehry, Frank",
+            "lastname":"Gehry",
+            "firstname":"Frank",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"ULAN",
+            "id":"500010962"
+        },
+        {
+            "source":"VIAF",
+            "id":"http://viaf.org/viaf/89113091"
+        }
+    ]
+}

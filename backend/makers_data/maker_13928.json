@@ -1,0 +1,71 @@
+{
+    "makerid":13928,
+    "published_date":"2026-01-08 14:04:42.620760",
+    "type":"maker",
+    "displayname":"La Tolita",
+    "makertype":"Cultural Group",
+    "alphasort":"La Tolita",
+    "lastname":null,
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":null,
+    "begindate":0,
+    "enddate":0,
+    "nationality":"Ecuador",
+    "culturegroup":"La Tolita",
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Alternate",
+            "displayname":"Tolita",
+            "alphasort":"Tolita",
+            "lastname":null,
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":"Tolita"
+        },
+        {
+            "nametype":"Alternate",
+            "displayname":"La Tolita",
+            "alphasort":null,
+            "lastname":"La Tolita",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Primary Name",
+            "displayname":"La Tolita-Tumaco",
+            "alphasort":"La Tolita-Tumaco",
+            "lastname":null,
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":"La Tolita-Tumaco"
+        },
+        {
+            "nametype":"Alternate",
+            "displayname":"Tumaco La Tolita",
+            "alphasort":null,
+            "lastname":null,
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":"Tumaco La Tolita"
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"AAT",
+            "id":"300386643"
+        }
+    ]
+}

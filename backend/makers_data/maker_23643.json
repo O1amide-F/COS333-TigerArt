@@ -1,0 +1,33 @@
+{
+    "makerid":23643,
+    "published_date":"2026-02-06 02:02:05.801477",
+    "type":"maker",
+    "displayname":"Seyni Awa Camara",
+    "makertype":"Individual",
+    "alphasort":"Camara, Seyni Awa",
+    "lastname":"Camara",
+    "firstname":"Seyni Awa",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"born 1945; Oussouye, Senegal; active Bignona, Senegal",
+    "begindate":1945,
+    "enddate":0,
+    "nationality":null,
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Seyni Awa Camara",
+            "alphasort":"Camara, Seyni Awa",
+            "lastname":"Camara",
+            "firstname":"Seyni Awa",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[]
+}

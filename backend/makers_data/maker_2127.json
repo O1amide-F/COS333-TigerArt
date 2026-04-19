@@ -1,0 +1,33 @@
+{
+    "makerid":2127,
+    "published_date":"2026-01-17 02:01:18.397051",
+    "type":"maker",
+    "displayname":"Filippino Lippi (?)",
+    "makertype":"Individual",
+    "alphasort":"Lippi (?) Filippino",
+    "lastname":"Lippi (?)",
+    "firstname":"Filippino",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":null,
+    "begindate":0,
+    "enddate":0,
+    "nationality":null,
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Filippino Lippi",
+            "alphasort":"Lippi Filippino",
+            "lastname":"Lippi",
+            "firstname":"Filippino",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[]
+}

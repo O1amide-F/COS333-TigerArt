@@ -1,0 +1,42 @@
+{
+    "makerid":13454,
+    "published_date":"2026-01-10 02:06:12.485899",
+    "type":"maker",
+    "displayname":"Ptolemaic",
+    "makertype":"Individual",
+    "alphasort":"Ptolemaic",
+    "lastname":null,
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"304 - 30 BCE",
+    "begindate":-304,
+    "enddate":-30,
+    "nationality":"Egyptian",
+    "culturegroup":"Ptolemaic",
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Ptolemaic Period",
+            "alphasort":"Ptolemaic Period",
+            "lastname":"Ptolemaic Period",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":"Ptolemaic"
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"AAT",
+            "id":"300020432"
+        },
+        {
+            "source":"ULAN",
+            "id":"500204100"
+        }
+    ]
+}

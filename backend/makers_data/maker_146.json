@@ -1,0 +1,56 @@
+{
+    "makerid":146,
+    "published_date":"2025-12-03 02:03:31.255896",
+    "type":"maker",
+    "displayname":"Cosmas Damian Asam",
+    "makertype":"Individual",
+    "alphasort":"Asam, Cosmas Damian",
+    "lastname":"Asam",
+    "firstname":"Cosmas Damian",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"German, 1686–1739",
+    "begindate":1686,
+    "enddate":1739,
+    "nationality":"German",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Cosmas Damian Asam",
+            "alphasort":"Asam, Cosmas Damian",
+            "lastname":"Asam",
+            "firstname":"Cosmas Damian",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Alternate",
+            "displayname":"Egid Quirin Asam",
+            "alphasort":"Asam, Egid Quirin",
+            "lastname":"Asam",
+            "firstname":"Egid Quirin",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"ULAN",
+            "id":"500021970"
+        },
+        {
+            "source":"VIAF",
+            "id":"http://viaf.org/viaf/20471140"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}
