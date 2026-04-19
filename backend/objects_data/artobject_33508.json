@@ -1,0 +1,275 @@
+{
+    "type":"artobject",
+    "objectid":33508,
+    "objectnumber":"y1991-16",
+    "sortnumber":"1991   16y",
+    "displaytitle":"Hacha",
+    "department":"Art of the Ancient Americas",
+    "classification":"Sculpture",
+    "datebegin":250,
+    "dateend":600,
+    "datecomputed":425,
+    "daterange":"A.D. 1-500",
+    "displaydate":"250–600 CE",
+    "medium":"Stone with shell teeth and traces of cinnabar",
+    "dimensions":"21.8 × 16.3 × 14.2 cm (8 9/16 × 6 7/16 × 5 9/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Museum purchase",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":"",
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"1991-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Hacha",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\tApril 1, 1991, sold by David Bramhall (-2012), New York, to the Princeton University Art Museum [1].\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] According to a handwritten Bramhall invoice in the curatorial file.\n</p>",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"<p>\n\tAlthough the ballgame was played throughout Mexico and Central America, no region gave it more attention than Veracruz—in part because the rubber-tree sap used to make the balls is prevalent in the humid tropical lowlands along the Mexican coast. Most regional variants of the game shared several basic features: a solid rubber ball; a ball court consisting of a narrow alleyway with sloped walls, occasionally with enclosed end zones; and two teams, each with two or three members who wore specialized protective gear. Only the upper arms, thighs, and torso of a player could strike the ball, and each of these areas bore its own type of protection made of stone, cloth, deer hide, or wood. This case presents examples of the basic forms of protective gear made in stone, as well as objects used in gladiatorial combat that occurred in the same ball courts.\n</p>\n<p>\n\tScholars have long thought that the heavy, sculptural stone ballgame gear from Mesoamerica served as trophies for the victors in the game and not as functional equipment. Frequently made of precious greenstone, this ballgame gear also may have been created for wager, as gambling was a signiﬁcant component of Mesoamerican ballgames. Recently, however, specialists determined that a Maya example of a stone “yoke” with inset carved shell hieroglyphs included the inscription ya’tuun, or “hip-stone,” implying that stone protective gear was worn on the hips. By extension, it is plausible that all ballgame-related stone sculptures were used in the game, or at least in ceremonial performances mimicking actual ball play. Some ballgame sculptures include elaborate relief carving, often portraying bruised and battered individuals who may represent captives forced to play as part of sacrificial rites. Others portray paired, youthful faces, possibly mythical hero twins who played the ballgame against lords of the underworld.\n</p>\n<p>\n\tBecause the vast majority of ballgame-related stone objects were looted, it has proven particularly challenging to date them or to corroborate proposals of stylistic changes. By some accounts, smaller, broader hachas, usually with a pronounced protrusion at the top, including the two displayed here, predate the larger, thinner examples. It is also possible, however, that differences in materials used, size, proportions, and details of fabrication show regional variations. The human head, often with details suggesting decapitation, is the most common subject represented. Each of these examples also exhibits traces of paint; while the greenstone used for some sculptures was prized and likely not concealed by paint, hachas made of less valuable materials, such as the elongated white limestone head displayed here, may have warranted color enhancement.\n</p>",
+            "remarks":"AAA3_20-T3B-9_CLA_FA_7_17_25.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":49820,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV016254",
+            "isprimary":1,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        },
+        {
+            "id":49821,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV016255",
+            "isprimary":0,
+            "rank":3,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"\"Acquisitions of the Art Museum 1991,\" <em>Record of the Art Museum, Princeton University </em>51, no. 1 (1992): p. 22-78.",
+            "citation":"\"Acquisitions of the Art Museum 1991,\" <em>Record of the Art Museum, Princeton University </em>51, no. 1 (1992): p. 22-78., p. 74",
+            "date":1992,
+            "id":3085,
+            "uri":"https://www.jstor.org/stable/3774711"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Mexico, Veracruz, Gulf Coast",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Mesoamerica",
+            "country":"Mexico",
+            "region":"Gulf Coast",
+            "state":"Veracruz",
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3514780/estado-de-veracruz-llave.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2048754,
+            "term":"ceremonial objects",
+            "aatid":300234117,
+            "termtype":"Classification"
+        },
+        {
+            "id":2055271,
+            "term":"sculptures",
+            "aatid":300047203,
+            "termtype":"Classification"
+        },
+        {
+            "id":2158086,
+            "term":"heads",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2135608,
+            "term":"hacha",
+            "aatid":null,
+            "termtype":"Classification"
+        },
+        {
+            "id":2035671,
+            "term":"Late Classic",
+            "aatid":300016986,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2035746,
+            "term":"Classic Veracruz",
+            "aatid":300017056,
+            "termtype":"Culture"
+        },
+        {
+            "id":2164290,
+            "term":"stone",
+            "aatid":300011176,
+            "termtype":"Materials"
+        },
+        {
+            "id":2166253,
+            "term":"shell",
+            "aatid":300011829,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2135608,
+            "classification":"hacha"
+        },
+        {
+            "id":2055271,
+            "classification":"sculptures"
+        },
+        {
+            "id":2048754,
+            "classification":"ceremonial objects"
+        }
+    ],
+    "cultures":[
+        {
+            "id":13849,
+            "culture":"Classic Veracruz",
+            "alphasort":"Classic Veracruz",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Classic Veracruz",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2035746,
+            "culture":"Classic Veracruz"
+        }
+    ],
+    "periods":[
+        {
+            "id":24014,
+            "period":"Early Classic Period",
+            "alphasort":"Classic Period, Early",
+            "begindate":0,
+            "enddate":0,
+            "displayperiod":"perhaps Early Classic Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035671,
+            "period":"Late Classic"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"21.80"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"16.30"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"14.20"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":181974,
+            "name":"web_2020_AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":141943,
+            "name":"Web_Ballgame_Paraphenalia"
+        },
+        {
+            "packageid":141941,
+            "name":"Web_Ballgame_all"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV016254"
+    ],
+    "displaymaker":null,
+    "displayculture":"Classic Veracruz",
+    "displayperiod":"perhaps Early Classic Period",
+    "caption":"Classic Veracruz, perhaps Early Classic Period, 250–600 CE, Veracruz, Gulf Coast, Mexico, Mesoamerica, Hacha. Stone with shell teeth and traces of cinnabar; 21.8 × 16.3 × 14.2 cm. Museum purchase (y1991-16)",
+    "captionhtml":"Classic Veracruz, perhaps Early Classic Period, 250–600 CE, Veracruz, Gulf Coast, Mexico, Mesoamerica, <i>Hacha</i>. Stone with shell teeth and traces of cinnabar; 21.8 × 16.3 × 14.2 cm. Museum purchase (y1991-16)",
+    "published_date":"2026-02-11 10:35:43.993893",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

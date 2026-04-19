@@ -1,0 +1,229 @@
+{
+    "type":"artobject",
+    "objectid":31440,
+    "objectnumber":"2016-1142",
+    "sortnumber":"2016 1142",
+    "displaytitle":"Coiled snake",
+    "department":"Art of the Ancient Americas",
+    "classification":"Sculpture",
+    "datebegin":-500,
+    "dateend":800,
+    "datecomputed":150,
+    "daterange":"A.D. 1-500",
+    "displaydate":"500 BCE–800 CE",
+    "medium":"Greenstone",
+    "dimensions":"7.5 × 5.4 × 1.6 cm (2 15/16 × 2 1/8 × 5/8 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Bequest of Gillett G. Griffin",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":"L.1990.113",
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2016-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Coiled snake",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\tJanuary 25, 1970, sold by Avelino Cárdenas, Iguala, Guerrero, Mexico, to Gillett G. Griffin (1928-2016), Princeton, NJ [1]; 2016, bequest of Gillett G. Griffin to the Princeton University Art Museum.\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] According to Gillet G. Griffin’s Notebook 5-9.\n</p>",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"<p>\n\tThe rugged terrain, relatively limited infrastructure, and general inhospitality to archaeological research of the region encompassed by the present-day Mexican state of Guerrero have left the state’s various ancient cultures less studied than those from other parts of Mesoamerica. At the same time, the region, particularly the towns of Iguala and Taxco, has long been an abundant font of ancient art that moved into both the Mexican and international markets.\n</p>\n<p>\n\tGillett Griffin (1928–2016), the Museum’s first curator of the art of the ancient Americas, regularly visited Guerrero and explored many of its ancient sites. Griffin acquired artifacts for his own and the Museum’s collections from Mexican dealers, American expatriate collectors, and Indigenous residents, among others. The Museum continues to research the collecting histories of these objects, examining the ethical implications of when and how objects were transferred from their sites of origin and asking critical questions about our continued stewardship.\n</p>",
+            "remarks":"AAA1_20-T6-3_CLA_FA_9_17_25.pdf - Day 1 installation - Group chat"
+        }
+    ],
+    "media":[
+        {
+            "id":48457,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV013717",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Mexico, Guerrero, upper Balsas region, reportedly from El Aguacatillo",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Mesoamerica",
+            "country":"Mexico",
+            "region":"upper Balsas region",
+            "state":"Guerrero",
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":"reportedly from El Aguacatillo",
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3533293/aguacatillo.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2054791,
+            "term":"sculpture",
+            "aatid":300047090,
+            "termtype":"Classification"
+        },
+        {
+            "id":2158076,
+            "term":"snakes",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2035643,
+            "term":"Preclassic",
+            "aatid":300016967,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2035648,
+            "term":"Early Preclassic",
+            "aatid":300016970,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2035843,
+            "term":"Mezcala",
+            "aatid":300017193,
+            "termtype":"Culture"
+        },
+        {
+            "id":2163044,
+            "term":"serpentine",
+            "aatid":300011627,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2054791,
+            "classification":"sculpture"
+        }
+    ],
+    "cultures":[
+        {
+            "id":13850,
+            "culture":"Mezcala",
+            "alphasort":"Mezcala",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Mezcala",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2035843,
+            "culture":"Mezcala"
+        }
+    ],
+    "periods":[
+        {
+            "id":24009,
+            "period":"Late Formative Period",
+            "alphasort":"Formative Period, Late",
+            "begindate":0,
+            "enddate":0,
+            "displayperiod":"Late Formative Period to Classic Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035643,
+            "period":"Preclassic"
+        },
+        {
+            "id":2035648,
+            "period":"Early Preclassic"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"7.50"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"5.40"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"1.60"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV013717"
+    ],
+    "displaymaker":null,
+    "displayculture":"Mezcala",
+    "displayperiod":"Late Formative Period to Classic Period",
+    "caption":"Mezcala, Late Formative Period to Classic Period, 500 BCE–800 CE, Guerrero, upper Balsas region, Mexico, Mesoamerica, Coiled snake. Greenstone; 7.5 × 5.4 × 1.6 cm. Bequest of Gillett G. Griffin (2016-1142)",
+    "captionhtml":"Mezcala, Late Formative Period to Classic Period, 500 BCE–800 CE, Guerrero, upper Balsas region, Mexico, Mesoamerica, <i>Coiled snake</i>. Greenstone; 7.5 × 5.4 × 1.6 cm. Bequest of Gillett G. Griffin (2016-1142)",
+    "published_date":"2026-02-11 10:24:31.584320",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

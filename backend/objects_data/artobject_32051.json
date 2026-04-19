@@ -1,0 +1,233 @@
+{
+    "type":"artobject",
+    "objectid":32051,
+    "objectnumber":"y1973-80",
+    "sortnumber":"1973   80y",
+    "displaytitle":"Vessel",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ceramic",
+    "datebegin":-700,
+    "dateend":300,
+    "datecomputed":-200,
+    "daterange":"1000 B.C.-A.D 1",
+    "displaydate":"700 BCE–300 CE",
+    "medium":"Ceramic with Usulután decoration",
+    "dimensions":"h. 15.8, diam. 16.7 cm. (6 1/4 in. x 6 9/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Gift of Dr. J. Monroe Thorington, Class of 1915",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"1973-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Vessel",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"1973, Dr. J. Monroe Thorington (1894-1989), Philadelphia, PA, gift to the Princeton University Art Museum\n",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"The art of ancient Honduras and El Salvador has long been considered in terms of its possible relationships to the more famous cultures of Mesoamerica. By the Early Formative period (1000–500 BCE), there is evidence of interaction with the Olmec of Mexico’s gulf coast and the southernmost Maya kingdom,\n\ncentered at Copán, in northwest Honduras. Indeed, the people of this region were never isolated from their neighbors. For example, local artists adopted\n\nthe tall, cylindrical form for chocolate-drinking vessels from the Maya, but their shorter marble vessels, also used for chocolate drinking, have no correlates in Mesoamerica. As more archaeological excavations are conducted in this region, scholars are learning that ancient Honduras and El Salvador had stronger cultural connections with peoples to the south and in the Caribbean than with Mesoamericans.\n",
+            "remarks":"AAA2_20-T6-2_CLA_FA_9_17_25.pdf - Day 1 installation"
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Multivocal Label",
+            "textentryhtml":"<p>\n\tUsulután was a style of pottery popular among the inhabitants of the southern Maya region in the Formative period. It has a distinctive bichrome pattern, often featuring parallel swirling lines in a yellow-on-orange design. The style originated in El Salvador around 700 BCE, after which it spread to other areas of Mesoamerica. The decoration on this pot was produced using a resist technique, in which a tool with multiple brushes was employed to paint a negative design. Pottery in this style has been found alongside jade, carved bones, and shell jewelry in elite burials in the Guatemalan Highlands, Pacific Coast, and Petén, indicating that it was a culturally meaningful object. The pottery may have also been used for feasting events, possibly for the consumption of chocolate. The undulating patterns that cover the vessel were not solely decorative but likely mesmerized and entranced the participants in these ritual events.\n</p>\n<p><b>\n\tCaitlin Reddington Davis</b>, PhD candidate, Yale University\n</p>",
+            "remarks":"AAA2_20-T6-2_CLA_FA_9_17_25.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":49748,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV016120",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, El Salvador, Usulután, Vicinity of Santa Elena",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Intermediate area",
+            "country":"El Salvador",
+            "region":null,
+            "state":"Usulután",
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":"Vicinity of Santa Elena",
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3583278/santa-elena.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2035652,
+            "term":"Middle Preclassic",
+            "aatid":300016973,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2035656,
+            "term":"Late Preclassic",
+            "aatid":300016976,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2036114,
+            "term":"Maya",
+            "aatid":null,
+            "termtype":"Culture"
+        },
+        {
+            "id":2073529,
+            "term":"vases",
+            "aatid":300132254,
+            "termtype":"Classification"
+        },
+        {
+            "id":2160750,
+            "term":"ceramic",
+            "aatid":300235507,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        },
+        {
+            "id":2073529,
+            "classification":"vases"
+        }
+    ],
+    "cultures":[
+        {
+            "id":12497,
+            "culture":"Maya",
+            "alphasort":"Maya",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Maya or Lenca",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2036114,
+            "culture":"Maya"
+        }
+    ],
+    "periods":[
+        {
+            "id":24009,
+            "period":"Late Formative Period",
+            "alphasort":"Formative Period, Late",
+            "begindate":0,
+            "enddate":0,
+            "displayperiod":"Middle to Late Formative Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035652,
+            "period":"Middle Preclassic"
+        },
+        {
+            "id":2035656,
+            "period":"Late Preclassic"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"15.80"
+        },
+        {
+            "element":"Overall",
+            "type":"diam.",
+            "units":"centimeters",
+            "dimension":"16.70"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV016120"
+    ],
+    "displaymaker":null,
+    "displayculture":"Maya or Lenca",
+    "displayperiod":"Middle to Late Formative Period",
+    "caption":"Maya or Lenca, Middle to Late Formative Period, 700 BCE–300 CE, Usulután, El Salvador, Intermediate area, Vessel. Ceramic with Usulután decoration; 15.8 x 16.7 cm. Gift of Dr. J. Monroe Thorington, Class of 1915 (y1973-80)",
+    "captionhtml":"Maya or Lenca, Middle to Late Formative Period, 700 BCE–300 CE, Usulután, El Salvador, Intermediate area, <i>Vessel</i>. Ceramic with Usulután decoration; 15.8 x 16.7 cm. Gift of Dr. J. Monroe Thorington, Class of 1915 (y1973-80)",
+    "published_date":"2026-02-11 10:27:31.576954",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

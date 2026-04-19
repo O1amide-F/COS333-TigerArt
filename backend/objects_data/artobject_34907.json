@@ -1,0 +1,265 @@
+{
+    "type":"artobject",
+    "objectid":34907,
+    "objectnumber":"y935 a-b",
+    "sortnumber":"935a    yb",
+    "displaytitle":"Teapot and lid",
+    "department":"European Painting and Sculpture ",
+    "classification":"Ceramics",
+    "datebegin":1785,
+    "dateend":1785,
+    "datecomputed":1785,
+    "daterange":"A.D. 1700-1800",
+    "displaydate":"1785",
+    "medium":"Hard-paste porcelain",
+    "dimensions":"h. 12.3 cm, diam. 9.7 cm (4 13/16 x 3 13/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Trumbull-Prime Collection",
+    "markings":null,
+    "inscribed":"Sèvres mark in underglaze blue on bottom center [see accession card for reproduction]",
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":null,
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Teapot and lid",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[
+        {
+            "id":14148,
+            "displayname":"Sèvres Porcelain Manufactory",
+            "displaydate":"established 1756, France",
+            "datebegin":1756,
+            "dateend":1756,
+            "prefix":null,
+            "suffix":null,
+            "role":"Manufactory",
+            "displaymaker":"Sèvres Porcelain Manufactory, established 1756, France",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"Mary Hollister Prime (née Trumbull) (1827-1872) and William Cowper Prime, Class of 1843 (1825-1905); 1890 gift to Princeton University Art Museum.",
+            "remarks":"Batch edit for Provenance publication project"
+        }
+    ],
+    "media":[
+        {
+            "id":21894,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/inv0185",
+            "isprimary":0,
+            "rank":3,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        },
+        {
+            "id":21895,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/inv0186",
+            "isprimary":0,
+            "rank":4,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        },
+        {
+            "id":21896,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/inv0187",
+            "isprimary":0,
+            "rank":5,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        },
+        {
+            "id":21897,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/inv0211",
+            "isprimary":0,
+            "rank":20,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        },
+        {
+            "id":137748,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV60027",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: Europe, France, Sèvres",
+            "code":"Place made",
+            "continent":"Europe",
+            "subcontinent":null,
+            "country":"France",
+            "region":null,
+            "state":null,
+            "city":"Sèvres",
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/maps/google_48.823_2.218.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2160764,
+            "term":"porcelain",
+            "aatid":300010662,
+            "termtype":"Classification"
+        },
+        {
+            "id":2077247,
+            "term":"teapots",
+            "aatid":300043022,
+            "termtype":"Classification"
+        },
+        {
+            "id":2031609,
+            "term":"French",
+            "aatid":300111188,
+            "termtype":"Culture"
+        },
+        {
+            "id":2159663,
+            "term":"allover patterns",
+            "aatid":300010143,
+            "termtype":"Subject"
+        },
+        {
+            "id":2159697,
+            "term":"running ornament",
+            "aatid":300165347,
+            "termtype":"Subject"
+        },
+        {
+            "id":2159813,
+            "term":"scalloping",
+            "aatid":300165381,
+            "termtype":"Subject"
+        },
+        {
+            "id":2159828,
+            "term":"floral patterns",
+            "aatid":300010135,
+            "termtype":"Subject"
+        },
+        {
+            "id":2160793,
+            "term":"hard paste porcelain",
+            "aatid":300010663,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2077247,
+            "classification":"teapots"
+        },
+        {
+            "id":2160764,
+            "classification":"porcelain"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[
+        {
+            "id":2031609,
+            "culture":"French"
+        }
+    ],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199321,
+            "term":"European Art",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"12.30"
+        },
+        {
+            "element":"Overall",
+            "type":"diam.",
+            "units":"centimeters",
+            "dimension":"9.70"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":215583,
+            "name":"VisibleStorage_GHC-A_Asian"
+        },
+        {
+            "packageid":264608,
+            "name":"DenseDisplay_EPS_at_20250205"
+        },
+        {
+            "packageid":264600,
+            "name":"DenseDisplay_CompleteList_at_20250205"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV60027"
+    ],
+    "displaymaker":"Sèvres Porcelain Manufactory, established 1756, France",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"Sèvres Porcelain Manufactory (established 1756, France), Teapot and lid, 1785. Hard-paste porcelain; 12.3 x 9.7 cm. Trumbull-Prime Collection (y935 a-b)",
+    "captionhtml":"Sèvres Porcelain Manufactory (established 1756, France), <i>Teapot and lid</i>, 1785. Hard-paste porcelain; 12.3 x 9.7 cm. Trumbull-Prime Collection (y935 a-b)",
+    "published_date":"2026-02-11 10:42:19.082771",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

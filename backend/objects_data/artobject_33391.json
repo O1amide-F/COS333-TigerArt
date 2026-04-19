@@ -1,0 +1,261 @@
+{
+    "type":"artobject",
+    "objectid":33391,
+    "objectnumber":"y1989-95",
+    "sortnumber":"1989   95y",
+    "displaytitle":"Labret",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ornament",
+    "datebegin":1350,
+    "dateend":1521,
+    "datecomputed":1436,
+    "daterange":"A.D. 1000-1500",
+    "displaydate":"1350–1521",
+    "medium":"Obsidian, gold, flint, and quartz",
+    "dimensions":"2.4 × 3.3 × 1.9 cm (15/16 × 1 5/16 × 3/4 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Museum purchase, gift of Herbert L. Lucas, Class of 1950",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"1989-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Labret",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"The ears and mouth were focal places for body ornament throughout Mesoamerica because they were believed to be the areas where the breath-soul emanated from the body and could be qualified as precious and pleasant. The Mexica emperors known as Hue Tlatoani, “Great Speakers,” were first and foremost orators, and their speech was inflected by their fine lip plugs. According to sixteenth-century accounts, the Mexica restricted who could wear ornaments of certain materials. Gold was limited to the nobility, while obsidian ornaments could be worn by commoners. The combination of gold and obsidian in the same objects, as seen in this case, seems at odds with these sumptuary restrictions. Perhaps they were made and worn by P’urépecha people, who did not abide by the same regulations as the Mexica. Excavations at their capital of Tzintzuntzan, Michoacán, reveal that they embellished fine, thin obsidian ornaments with exotic materials such as turquoise.\n",
+            "remarks":"AAA3_20-T3G-7_CLA_FA.pdf - Day 1 installation"
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"Paul Arany, New York, NY; purchased on November 9 1989 by the Princeton University Art Museum.",
+            "remarks":null
+        }
+    ],
+    "media":[
+        {
+            "id":49959,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV016384",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"\"Acquisitions of the Art Museum 1989,\" <EM>Record of the Art Museum, Princeton University </EM>49, no. 1 (1990): p. 24-57.",
+            "citation":"\"Acquisitions of the Art Museum 1989,\" <EM>Record of the Art Museum, Princeton University </EM>49, no. 1 (1990): p. 24-57., p. 56",
+            "date":1990,
+            "id":3099,
+            "uri":"https://www.jstor.org/stable/3774747"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Mexico, Central Mexico",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Mesoamerica",
+            "country":"Mexico",
+            "region":"Central Mexico",
+            "state":null,
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3996063/mexico.html",
+            "location":{
+                "lat":"23",
+                "lon":"-102"
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2048931,
+            "term":"ornament",
+            "aatid":300056258,
+            "termtype":"Classification"
+        },
+        {
+            "id":2035674,
+            "term":"Postclassic",
+            "aatid":300016987,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2035732,
+            "term":"Aztec",
+            "aatid":300017033,
+            "termtype":"Culture"
+        },
+        {
+            "id":2130715,
+            "term":"labrets",
+            "aatid":300211525,
+            "termtype":"Classification"
+        },
+        {
+            "id":2055657,
+            "term":"figures (representations)",
+            "aatid":300189808,
+            "termtype":"Subject"
+        },
+        {
+            "id":2162191,
+            "term":"gold",
+            "aatid":300011021,
+            "termtype":"Materials"
+        },
+        {
+            "id":2162971,
+            "term":"quartz",
+            "aatid":300011132,
+            "termtype":"Materials"
+        },
+        {
+            "id":2163364,
+            "term":"obsidian",
+            "aatid":300011254,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2048931,
+            "classification":"ornament"
+        },
+        {
+            "id":2130715,
+            "classification":"labrets"
+        }
+    ],
+    "cultures":[
+        {
+            "id":18505,
+            "culture":"P’urépecha",
+            "alphasort":"P’urépecha",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"P’urépecha, Mexica, or Ñuù Savi",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2035732,
+            "culture":"Aztec"
+        }
+    ],
+    "periods":[
+        {
+            "id":24018,
+            "period":"Late Postclassic Period",
+            "alphasort":"Postclassic Period, Late",
+            "begindate":1350,
+            "enddate":1521,
+            "displayperiod":"Late Postclassic Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035674,
+            "period":"Postclassic"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"2.40"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"3.30"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"1.90"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":210384,
+            "name":"TDC-Final [4]"
+        },
+        {
+            "packageid":208852,
+            "name":"2022_ART267_04_13"
+        },
+        {
+            "packageid":131333,
+            "name":"CRS_ART103_04_12-13"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV016384"
+    ],
+    "displaymaker":null,
+    "displayculture":"P’urépecha, Mexica, or Ñuù Savi",
+    "displayperiod":"Late Postclassic Period",
+    "caption":"P’urépecha, Mexica, or Ñuù Savi, Late Postclassic Period, 1350–1521, Central Mexico, Mexico, Mesoamerica, Labret. Obsidian, gold, flint, and quartz; 2.4 × 3.3 × 1.9 cm. Museum purchase, gift of Herbert L. Lucas, Class of 1950 (y1989-95)",
+    "captionhtml":"P’urépecha, Mexica, or Ñuù Savi, Late Postclassic Period, 1350–1521, Central Mexico, Mexico, Mesoamerica, <i>Labret</i>. Obsidian, gold, flint, and quartz; 2.4 × 3.3 × 1.9 cm. Museum purchase, gift of Herbert L. Lucas, Class of 1950 (y1989-95)",
+    "published_date":"2026-03-05 09:07:05.509989",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

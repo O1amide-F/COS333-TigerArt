@@ -1,0 +1,262 @@
+{
+    "type":"artobject",
+    "objectid":3277,
+    "objectnumber":"1995-213",
+    "sortnumber":"1995  213",
+    "displaytitle":"Sprinkler",
+    "department":"Ancient, Byzantine, and Islamic Art",
+    "classification":"Glass",
+    "datebegin":200,
+    "dateend":399,
+    "datecomputed":300,
+    "daterange":"A.D. 1-500",
+    "displaydate":"3rd–4th century CE",
+    "medium":"Transparent light green glass with no impurities",
+    "dimensions":"h. 11 cm, diam. rim 4.7 cm, diam. base 2.5 cm, max. diam. 7.2 cm (4 5/16 x 1 7/8 x 1 x 2 13/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Gift of Elliott M. Sanger and Kenneth E. Sanger in memory of Edward Naumburg Jr., Class of 1924",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":"",
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"1995-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Sprinkler",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Description",
+            "textentryhtml":"In-folded, tubular rim; flaring mouth; short cylindrical neck, strongly constricted internally at its base, forming a diaphragm; piriform body; flat, slightly concave bottom. Body covered with mold-blown decoration: three rows of adjoined\r\nhexagons. Each hexagon has a boss at its center, which is inscribed within two concentric circles. At the beveled sides of the hexagons are four lozengelike\r\nfields covered with a checkerboard pattern. Blown into a bipartite mold, which also covered the bottom of the vessel.",
+            "remarks":"Fire and Sand (2012)"
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"Formerly in the collection of Edward S. Naumburg, Jr. '24; given to the Museum in 1995 by Elliott M. Sanger and Kenneth E. Sanger",
+            "remarks":null
+        }
+    ],
+    "media":[
+        {
+            "id":74033,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/1995-213_2",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Bruce White Photography"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"Anastassios Antonaras,<em> Fire and Sand: Ancient Glass in the Princeton University Art Museum </em>(Princeton, NJ: Princeton University Art Museum, 2012)",
+            "citation":"Anastassios Antonaras,<em> Fire and Sand: Ancient Glass in the Princeton University Art Museum </em>(Princeton, NJ: Princeton University Art Museum, 2012), cat. no. 107 (illus.)",
+            "date":2012,
+            "id":1296,
+            "uri":"https://search.worldcat.org/title/794814337"
+        },
+        {
+            "boilertext":"\"Acquisitions of the Art Museum 1995,\" <em>Record of the Art Museum, Princeton University</em> 56, no. 1/2 (1997): p. 36-74.",
+            "citation":"\"Acquisitions of the Art Museum 1995,\" <em>Record of the Art Museum, Princeton University</em> 56, no. 1/2 (1997): p. 36-74., p. 66",
+            "date":1997,
+            "id":3050,
+            "uri":"https://www.jstor.org/stable/3774759"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: Asia, Syria",
+            "code":"Place made",
+            "continent":"Asia",
+            "subcontinent":null,
+            "country":"Syria",
+            "region":null,
+            "state":null,
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/maps/google_35_38.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2161148,
+            "term":"glass",
+            "aatid":300010797,
+            "termtype":"Classification"
+        },
+        {
+            "id":2098427,
+            "term":"spirals",
+            "aatid":300163114,
+            "termtype":"Subject"
+        },
+        {
+            "id":2036723,
+            "term":"Roman (style or period)",
+            "aatid":300020533,
+            "termtype":"Culture"
+        },
+        {
+            "id":2036735,
+            "term":"Imperial (Roman)",
+            "aatid":300020541,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2159254,
+            "term":"lozenges",
+            "aatid":300009791,
+            "termtype":"Subject"
+        },
+        {
+            "id":2072893,
+            "term":"bottles",
+            "aatid":300045627,
+            "termtype":"Classification"
+        },
+        {
+            "id":2161433,
+            "term":"mold-blown glass",
+            "aatid":300233433,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2161148,
+            "classification":"glass"
+        },
+        {
+            "id":2072893,
+            "classification":"bottles"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[
+        {
+            "id":2036723,
+            "culture":"Roman (style or period)"
+        }
+    ],
+    "periods":[
+        {
+            "id":12861,
+            "period":"Roman Imperial Period",
+            "alphasort":"Roman Imperial Period",
+            "begindate":-30,
+            "enddate":467,
+            "displayperiod":"Roman Imperial Period, ca. 30 BCE–476 CE",
+            "displaydate":"ca. 30 BCE–476 CE"
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2036735,
+            "period":"Imperial (Roman)"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199316,
+            "term":"Ancient Mediterranean Art",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"diam. rim",
+            "units":"centimeters",
+            "dimension":"4.70"
+        },
+        {
+            "element":"Overall",
+            "type":"diam. base",
+            "units":"centimeters",
+            "dimension":"2.50"
+        },
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"11.00"
+        },
+        {
+            "element":"Overall",
+            "type":"diam.",
+            "units":"centimeters",
+            "dimension":"7.20"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":264604,
+            "name":"DenseDisplay_AncientMed_at_20250205"
+        },
+        {
+            "packageid":264578,
+            "name":"VisibleStorage_DenseDisplay_G22_ABI_RomanGlass"
+        },
+        {
+            "packageid":220207,
+            "name":"Gallery_22(Pavilion6)-AncientMed"
+        },
+        {
+            "packageid":264600,
+            "name":"DenseDisplay_CompleteList_at_20250205"
+        },
+        {
+            "packageid":181991,
+            "name":"web_2020_ancient_study_corridor"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/1995-213_2"
+    ],
+    "displaymaker":null,
+    "displayculture":null,
+    "displayperiod":"Roman Imperial Period, ca. 30 BCE–476 CE",
+    "caption":"Roman Imperial Period (ca. 30 BCE–476 CE), Syria, 3rd–4th century CE, Sprinkler. Transparent light green glass with no impurities; 11 x 4.7 x 2.5 x 7.2 cm. Gift of Elliott M. Sanger and Kenneth E. Sanger in memory of Edward Naumburg Jr., Class of 1924 (1995-213)",
+    "captionhtml":"Roman Imperial Period (ca. 30 BCE–476 CE), Syria, 3rd–4th century CE, <i>Sprinkler</i>. Transparent light green glass with no impurities; 11 x 4.7 x 2.5 x 7.2 cm. Gift of Elliott M. Sanger and Kenneth E. Sanger in memory of Edward Naumburg Jr., Class of 1924 (1995-213)",
+    "published_date":"2026-02-11 07:28:10.407953",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

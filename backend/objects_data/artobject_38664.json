@@ -1,0 +1,221 @@
+{
+    "type":"artobject",
+    "objectid":38664,
+    "objectnumber":"2016-928",
+    "sortnumber":"2016  928",
+    "displaytitle":"Sketches of two male nudes",
+    "department":"Prints and Drawings",
+    "classification":"Drawings",
+    "datebegin":1545,
+    "dateend":1555,
+    "datecomputed":1550,
+    "daterange":"A.D. 1500-1600",
+    "displaydate":"ca. 1550",
+    "medium":"Pen and brown ink and brown wash",
+    "dimensions":"24 × 19.5 cm (9 7/16 × 7 11/16 in.)\r\nframe: 52.8 × 40.1 cm (20 13/16 × 15 13/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Bequest of Gillett G. Griffin",
+    "markings":null,
+    "inscribed":"In ink, lower left: schizzo de mano di peligrino da bologna [in 16th century hand]\r\nIn ink, center: guardo | el suuavi | stilla [or stillo]\r\n",
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":"L.1975.164",
+    "campuscollections":"false",
+    "on_view":false,
+    "accessionyear":"2016-01-01",
+    "newaccession":0,
+    "titles":[],
+    "makers":[
+        {
+            "id":645,
+            "displayname":"Pellegrino Tibaldi",
+            "displaydate":"1527–1596; born Puria di Valsolda, Italy, died Milan, Italy",
+            "datebegin":1527,
+            "dateend":1596,
+            "prefix":null,
+            "suffix":null,
+            "role":"Artist",
+            "displaymaker":"Pellegrino Tibaldi, 1527–1596; born Puria di Valsolda, Italy, died Milan, Italy",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"John Skippe (1742-1811). [Christie’s, London, November 20, 1958, lot 212]; [Mathias Komor, New York, February 29, 1964, $280]; purchased by Gillett Griffin (1928-2016); bequeathed to the Princeton University Art Museum, 2016.\n",
+            "remarks":"As per Giada Damen, IMLS Drawings 2018-2020. Reformatted by Emma Holter, summer 2025."
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"When Tibaldi arrived in Rome in 1547, a part of his education as a young artist was to copy major monuments, such as Michelangelo’s frescoes in the Sistine Chapel. This drawing is an adaptation of an idealized Ignudo (nude) found in the border of the ceiling panel that depicts Noah’s Sacrifice after the Flood. In the sixteenth century Michelangelo’s Ignudi were often copied by Mannerist artists, who were inspired by the dramatic gestures and sculptural magnificence of the figures.",
+            "remarks":"Tibaldi May 2012.pdf"
+        }
+    ],
+    "media":[
+        {
+            "id":115539,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV38006",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"<p>\"Acquisitions of the Princeton University Art Museum 2016,\" <em>Record of the Art Museum, Princeton University</em> 75/76 (2016-17): 126-157.</p>",
+            "citation":"<p>\"Acquisitions of the Princeton University Art Museum 2016,\" <em>Record of the Art Museum, Princeton University</em> 75/76 (2016-17): 126-157.</p>, p. 156; p. 157 (illus.)",
+            "date":2016,
+            "id":9662,
+            "uri":"https://www.jstor.org/stable/i40228781"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: Europe, Italy",
+            "code":"Place made",
+            "continent":"Europe",
+            "subcontinent":null,
+            "country":"Italy",
+            "region":null,
+            "state":null,
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"https://www.geonames.org/3175395/italian-republic.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2031625,
+            "term":"Italian",
+            "aatid":300111198,
+            "termtype":"Culture"
+        },
+        {
+            "id":2055517,
+            "term":"sketches",
+            "aatid":300015617,
+            "termtype":"Classification"
+        },
+        {
+            "id":2051964,
+            "term":"drawings",
+            "aatid":300033973,
+            "termtype":"Classification"
+        },
+        {
+            "id":2146985,
+            "term":"standing",
+            "aatid":300239500,
+            "termtype":"Subject"
+        },
+        {
+            "id":2055672,
+            "term":"nudes",
+            "aatid":300189568,
+            "termtype":"Subject"
+        },
+        {
+            "id":2088270,
+            "term":"men",
+            "aatid":300025928,
+            "termtype":"Subject"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2051964,
+            "classification":"drawings"
+        },
+        {
+            "id":2055517,
+            "classification":"sketches"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[
+        {
+            "id":2031625,
+            "culture":"Italian"
+        }
+    ],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199321,
+            "term":"European Art",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199327,
+            "term":"Prints and Drawings",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"frame",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"52.80"
+        },
+        {
+            "element":"frame",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"40.10"
+        },
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"24.00"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"19.50"
+        }
+    ],
+    "packages":[],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV38006"
+    ],
+    "displaymaker":"Pellegrino Tibaldi, 1527–1596; born Puria di Valsolda, Italy, died Milan, Italy",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"Pellegrino Tibaldi (1527–1596; born Puria di Valsolda, Italy, died Milan, Italy), Sketches of two male nudes, ca. 1550. Pen and brown ink and brown wash; 24 × 19.5 cm, 52.8 × 40.1 cm (frame). Bequest of Gillett G. Griffin (2016-928)",
+    "captionhtml":"Pellegrino Tibaldi (1527–1596; born Puria di Valsolda, Italy, died Milan, Italy), Sketches of two male nudes, ca. 1550. Pen and brown ink and brown wash; 24 × 19.5 cm, 52.8 × 40.1 cm (frame). Bequest of Gillett G. Griffin (2016-928)",
+    "published_date":"2026-02-11 10:57:29.271842",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

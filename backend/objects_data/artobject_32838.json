@@ -1,0 +1,281 @@
+{
+    "type":"artobject",
+    "objectid":32838,
+    "objectnumber":"y1984-24",
+    "sortnumber":"1984   24y",
+    "displaytitle":"Tripod cylinder vase",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ceramic",
+    "datebegin":600,
+    "dateend":900,
+    "datecomputed":750,
+    "daterange":"A.D. 500-1000",
+    "displaydate":"600–900",
+    "medium":"Ceramic with polychrome slip-paint",
+    "dimensions":"h. 25.2, diam. 15.6 cm. (9 15/16 x 6 1/8 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Gift of Robert C. Williamson",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":"",
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"1984-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Tripod cylinder vase",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"[Sotheby's Fine Pre-Columbian Art sale in November 5 1980, Lot 221]. Gift of Robert C. Williamson to the Princeton University Art Museum, 1984.",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"The art of ancient Honduras and El Salvador has long been considered in terms of its possible relationships to the more famous cultures of Mesoamerica. By the Early Formative period (1000–500 BCE), there is evidence of interaction with the Olmec of Mexico’s gulf coast and the southernmost Maya kingdom,\n\ncentered at Copán, in northwest Honduras. Indeed, the people of this region were never isolated from their neighbors. For example, local artists adopted\n\nthe tall, cylindrical form for chocolate-drinking vessels from the Maya, but their shorter marble vessels, also used for chocolate drinking, have no correlates in Mesoamerica. As more archaeological excavations are conducted in this region, scholars are learning that ancient Honduras and El Salvador had stronger cultural connections with peoples to the south and in the Caribbean than with Mesoamericans.\n",
+            "remarks":"AAA2_20-T6-2_CLA_FA_9_17_25.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":7801,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/y1984-24_SL",
+            "isprimary":0,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Luna Digitization Project"
+        },
+        {
+            "id":50008,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV016609",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"\"Acquisitions of the Art Museum 1984,\" <EM>Record of the Art Museum, Princeton University </EM>44, no. 1 (1985): p. 24-52.",
+            "citation":"\"Acquisitions of the Art Museum 1984,\" <EM>Record of the Art Museum, Princeton University </EM>44, no. 1 (1985): p. 24-52., pp. 50–51 (illus.)",
+            "date":1985,
+            "id":3134,
+            "uri":"https://www.jstor.org/stable/3774658"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Honduras, Ulúa River Valley",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Intermediate area",
+            "country":"Honduras",
+            "region":"Ulúa River Valley",
+            "state":null,
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3600520/rio-ulua.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2055657,
+            "term":"figures (representations)",
+            "aatid":300189808,
+            "termtype":"Subject"
+        },
+        {
+            "id":2055947,
+            "term":"polychrome",
+            "aatid":300252261,
+            "termtype":"Classification"
+        },
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2035671,
+            "term":"Late Classic",
+            "aatid":300016986,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2035873,
+            "term":"Ulúa",
+            "aatid":300017226,
+            "termtype":"Culture"
+        },
+        {
+            "id":2073529,
+            "term":"vases",
+            "aatid":300132254,
+            "termtype":"Classification"
+        },
+        {
+            "id":2096051,
+            "term":"mythology",
+            "aatid":300055985,
+            "termtype":"Subject"
+        },
+        {
+            "id":2096251,
+            "term":"iconography",
+            "aatid":300055859,
+            "termtype":"Subject"
+        },
+        {
+            "id":2168423,
+            "term":"pigment",
+            "aatid":300013109,
+            "termtype":"Materials"
+        },
+        {
+            "id":2160397,
+            "term":"slip",
+            "aatid":300010459,
+            "termtype":"Materials"
+        },
+        {
+            "id":2160750,
+            "term":"ceramic",
+            "aatid":300235507,
+            "termtype":"Materials"
+        },
+        {
+            "id":2055947,
+            "term":"polychrome",
+            "aatid":300252261,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        },
+        {
+            "id":2073529,
+            "classification":"vases"
+        },
+        {
+            "id":2055947,
+            "classification":"polychrome"
+        }
+    ],
+    "cultures":[
+        {
+            "id":13880,
+            "culture":"Ulúa",
+            "alphasort":"Ulúa",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Ulúa (Black group, Santana type, Santana cylinder variety)",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2035873,
+            "culture":"Ulúa"
+        }
+    ],
+    "periods":[
+        {
+            "id":24016,
+            "period":"Late Classic Period",
+            "alphasort":"Classic Period, Late",
+            "begindate":0,
+            "enddate":0,
+            "displayperiod":"Late Classic Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035671,
+            "period":"Late Classic"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"25.20"
+        },
+        {
+            "element":"Overall",
+            "type":"diam.",
+            "units":"centimeters",
+            "dimension":"15.60"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV016609"
+    ],
+    "displaymaker":null,
+    "displayculture":"Ulúa (Black group, Santana type, Santana cylinder variety)",
+    "displayperiod":"Late Classic Period",
+    "caption":"Ulúa (Black group, Santana type, Santana cylinder variety), Late Classic Period, 600–900, Ulúa River Valley, Honduras, Intermediate area, Tripod cylinder vase. Ceramic with polychrome slip-paint; 25.2 x 15.6 cm. Gift of Robert C. Williamson (y1984-24)",
+    "captionhtml":"Ulúa (Black group, Santana type, Santana cylinder variety), Late Classic Period, 600–900, Ulúa River Valley, Honduras, Intermediate area, <i>Tripod cylinder vase</i>. Ceramic with polychrome slip-paint; 25.2 x 15.6 cm. Gift of Robert C. Williamson (y1984-24)",
+    "published_date":"2026-02-11 10:31:49.967709",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

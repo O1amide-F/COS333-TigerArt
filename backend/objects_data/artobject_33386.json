@@ -1,0 +1,277 @@
+{
+    "type":"artobject",
+    "objectid":33386,
+    "objectnumber":"y1991-15",
+    "sortnumber":"1991   15y",
+    "displaytitle":"Celt",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ceremonial Objects",
+    "datebegin":-1000,
+    "dateend":-400,
+    "datecomputed":-700,
+    "daterange":"1000 B.C.-A.D 1",
+    "displaydate":"1000–400 BCE",
+    "medium":"Jadeite",
+    "dimensions":"22 × 7.1 × 5.7 cm (8 11/16 × 2 13/16 × 2 1/4 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Museum purchase",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":"",
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"1991-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Celt",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"David Bramhall; purchased by the Princeton University Art Museum, 1991.",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"Jade was the most prestigious material used to express religious ideology by the Olmec during the Middle Formative period (1000–400 BCE), when maize agriculture became the core source of the incipient state’s stability and wealth. The Olmec preference for blue-green jade, as exemplified by many of the works on view here, likely related to fecundity, whether through its similarity to plant life or to water, an association heightened by its high polish and translucency. Some objects, such as celts, mimic the form of maize cobs, while others seem to represent sprouting kernels. As one of the hardest materials available, jade was exceptionally difficult to shape. Powdered jade was used as an abrasive to allow slow grinding, sawing, drilling, and polishing, processes that could take years to complete for a single object.\n",
+            "remarks":"AAA3_20-T3B-8_CLA_FA.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":3575,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/y1991-15",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Luna Digitization Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"Michael D. Coe et al., <I>The Olmec World: Ritual and Rulership</I> (Princeton, Princeton University Art Museum, 1996)",
+            "citation":"Michael D. Coe et al., <I>The Olmec World: Ritual and Rulership</I> (Princeton, Princeton University Art Museum, 1996), cat. no. 123, pp. 226–227 (illus.)",
+            "date":1996,
+            "id":2564,
+            "uri":"https://search.worldcat.org/title/34103154"
+        },
+        {
+            "boilertext":"\"Acquisitions of the Art Museum 1991,\" <em>Record of the Art Museum, Princeton University </em>51, no. 1 (1992): p. 22-78.",
+            "citation":"\"Acquisitions of the Art Museum 1991,\" <em>Record of the Art Museum, Princeton University </em>51, no. 1 (1992): p. 22-78., p. 73",
+            "date":1992,
+            "id":3085,
+            "uri":"https://www.jstor.org/stable/3774711"
+        }
+    ],
+    "exhibitions":[
+        {
+            "exhibitionid":1682,
+            "citation":"The Olmec World: Ritual and Rulership (December 16, 1995 - June 9, 1996)",
+            "isvirtual":true,
+            "begindate":"1995-12-16",
+            "enddate":"1996-06-09",
+            "uri":"https://artmuseum.princeton.edu/art/exhibitions/1682"
+        }
+    ],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Mexico, Guerrero",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Mesoamerica",
+            "country":"Mexico",
+            "region":null,
+            "state":"Guerrero",
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3527213/estado-de-guerrero.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2048754,
+            "term":"ceremonial objects",
+            "aatid":300234117,
+            "termtype":"Classification"
+        },
+        {
+            "id":2199062,
+            "term":"greenstone (rock)",
+            "aatid":null,
+            "termtype":"Classification"
+        },
+        {
+            "id":2139834,
+            "term":"celts",
+            "aatid":300251881,
+            "termtype":"Classification"
+        },
+        {
+            "id":2035652,
+            "term":"Middle Preclassic",
+            "aatid":300016973,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2035751,
+            "term":"Olmec",
+            "aatid":300017051,
+            "termtype":"Culture"
+        },
+        {
+            "id":2199062,
+            "term":"greenstone (rock)",
+            "aatid":null,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2199062,
+            "classification":"greenstone (rock)"
+        },
+        {
+            "id":2139834,
+            "classification":"celts"
+        },
+        {
+            "id":2048754,
+            "classification":"ceremonial objects"
+        }
+    ],
+    "cultures":[
+        {
+            "id":12498,
+            "culture":"Olmec",
+            "alphasort":"Olmec",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Olmec style",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2035751,
+            "culture":"Olmec"
+        }
+    ],
+    "periods":[
+        {
+            "id":24010,
+            "period":"Middle Formative Period",
+            "alphasort":"Formative Period, Middle",
+            "begindate":-1000,
+            "enddate":-400,
+            "displayperiod":"Middle Formative Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035652,
+            "period":"Middle Preclassic"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"22.00"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"7.10"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"5.70"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":211958,
+            "name":"2022_FRS158_03_31"
+        },
+        {
+            "packageid":210384,
+            "name":"TDC-Final [4]"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":223469,
+            "name":"2023_ART365/LAS370/ANT365_03_21"
+        },
+        {
+            "packageid":208846,
+            "name":"2022_ART267_02_02"
+        },
+        {
+            "packageid":210235,
+            "name":"2022_ART267_02_09"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/y1991-15"
+    ],
+    "displaymaker":null,
+    "displayculture":"Olmec style",
+    "displayperiod":"Middle Formative Period",
+    "caption":"Olmec style, Middle Formative Period, 1000–400 BCE, Guerrero, Mexico, Mesoamerica, Celt. Jadeite; 22 × 7.1 × 5.7 cm. Museum purchase (y1991-15)",
+    "captionhtml":"Olmec style, Middle Formative Period, 1000–400 BCE, Guerrero, Mexico, Mesoamerica, <i>Celt</i>. Jadeite; 22 × 7.1 × 5.7 cm. Museum purchase (y1991-15)",
+    "published_date":"2026-02-11 10:34:47.634488",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

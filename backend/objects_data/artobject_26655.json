@@ -1,0 +1,234 @@
+{
+    "type":"artobject",
+    "objectid":26655,
+    "objectnumber":"2016-1237",
+    "sortnumber":"2016 1237",
+    "displaytitle":"Human head with an animal-head hat",
+    "department":"Art of the Ancient Americas",
+    "classification":"Sculpture",
+    "datebegin":-500,
+    "dateend":200,
+    "datecomputed":-150,
+    "daterange":"1000 B.C.-A.D 1",
+    "displaydate":"500 BCE–200 CE",
+    "medium":"Greenstone",
+    "dimensions":"6.2 × 4.5 × 3.5 cm (2 7/16 × 1 3/4 × 1 3/8 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Bequest of Gillett G. Griffin",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2016-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Human head with an animal-head hat",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\tBy April 1970, Gillett G. Griffin (1928-2016), Princeton, NJ [1]; 2016, bequest of Gillett G. Griffin to the Princeton University Art Museum.\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] According to dated slides (GGG2353ff) in the Griffin archive.\n</p>",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"<p>\n\tThe rugged terrain, relatively limited infrastructure, and general inhospitality to archaeological research of the region encompassed by the present-day Mexican state of Guerrero have left the state’s various ancient cultures less studied than those from other parts of Mesoamerica. At the same time, the region, particularly the towns of Iguala and Taxco, has long been an abundant font of ancient art that moved into both the Mexican and international markets.\n</p>\n<p>\n\tGillett Griffin (1928–2016), the Museum’s first curator of the art of the ancient Americas, regularly visited Guerrero and explored many of its ancient sites. Griffin acquired artifacts for his own and the Museum’s collections from Mexican dealers, American expatriate collectors, and Indigenous residents, among others. The Museum continues to research the collecting histories of these objects, examining the ethical implications of when and how objects were transferred from their sites of origin and asking critical questions about our continued stewardship.\n</p>",
+            "remarks":"AAA1_20-T6-3_CLA_FA_9_17_25.pdf - Day 1 installation - Group chat"
+        }
+    ],
+    "media":[
+        {
+            "id":48461,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV013689",
+            "isprimary":1,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Mexico, Guerrero, Upper Balsas region",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Mesoamerica",
+            "country":"Mexico",
+            "region":"Upper Balsas region",
+            "state":"Guerrero",
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3527213/estado-de-guerrero.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2055437,
+            "term":"figurines",
+            "aatid":300047455,
+            "termtype":"Classification"
+        },
+        {
+            "id":2158086,
+            "term":"heads",
+            "aatid":null,
+            "termtype":"Classification"
+        },
+        {
+            "id":2103920,
+            "term":"cats",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2090947,
+            "term":"shamans",
+            "aatid":300218522,
+            "termtype":"Subject"
+        },
+        {
+            "id":2035652,
+            "term":"Middle Preclassic",
+            "aatid":300016973,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2035656,
+            "term":"Late Preclassic",
+            "aatid":300016976,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2163406,
+            "term":"jade",
+            "aatid":300011119,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2158086,
+            "classification":"heads"
+        },
+        {
+            "id":2055437,
+            "classification":"figurines"
+        }
+    ],
+    "cultures":[
+        {
+            "id":13850,
+            "culture":"Mezcala",
+            "alphasort":"Mezcala",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Mezcala",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[],
+    "periods":[
+        {
+            "id":24009,
+            "period":"Late Formative Period",
+            "alphasort":"Formative Period, Late",
+            "begindate":0,
+            "enddate":0,
+            "displayperiod":"Late Formative Period to Classic Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035652,
+            "period":"Middle Preclassic"
+        },
+        {
+            "id":2035656,
+            "period":"Late Preclassic"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"6.20"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"4.50"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"3.50"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV013689"
+    ],
+    "displaymaker":null,
+    "displayculture":"Mezcala",
+    "displayperiod":"Late Formative Period to Classic Period",
+    "caption":"Mezcala, Late Formative Period to Classic Period, 500 BCE–200 CE, Guerrero, Upper Balsas region, Mexico, Mesoamerica, Human head with an animal-head hat. Greenstone; 6.2 × 4.5 × 3.5 cm. Bequest of Gillett G. Griffin (2016-1237)",
+    "captionhtml":"Mezcala, Late Formative Period to Classic Period, 500 BCE–200 CE, Guerrero, Upper Balsas region, Mexico, Mesoamerica, <i>Human head with an animal-head hat</i>. Greenstone; 6.2 × 4.5 × 3.5 cm. Bequest of Gillett G. Griffin (2016-1237)",
+    "published_date":"2026-02-11 10:07:23.957822",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

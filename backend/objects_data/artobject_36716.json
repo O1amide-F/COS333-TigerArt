@@ -1,0 +1,234 @@
+{
+    "type":"artobject",
+    "objectid":36716,
+    "objectnumber":"1998-453",
+    "sortnumber":"1998  453",
+    "displaytitle":"Pedestal plate",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ceramic",
+    "datebegin":950,
+    "dateend":1150,
+    "datecomputed":1050,
+    "daterange":"A.D. 1000-1500",
+    "displaydate":"950–1150",
+    "medium":"Ceramic with polychrome slip-paint",
+    "dimensions":"h. 17, diam. 29.1 cm (6 11/16 × 11 7/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Bequest of John B. Elliott, Class of 1951",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"1998-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Pedestal plate",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"1998, John B. Elliott (1928-1997), Princeton, NJ, bequeathed to the Princeton University Art Museum\n",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"Although several regional variants are known, ceramic vessels from central Panama share many traits, including the use of multiple slip-paint colors to create dense, dynamic designs, most of which include depictions of humans, animals, or fantastic combinations thereof. The examples here are especially elaborate vessels, likely part of the funerary assemblages of high-ranking individuals. In burials excavated by professional archaeologists, most ceramics have been found smashed, presumably in intentional acts of ceremonial transformation. The few objects that remain intact, such as the examples displayed here, were likely interred to provide sustenance in the afterlife or for other reasons related to their imagery. The use of purple slip-paint is relatively rare in the ancient Americas but common in Greater Coclé culture. The mineral used to produce this color remains unknown, awaiting scientific analysis.\n",
+            "remarks":"AAA2_20-T6-2_CLA_FA_9_17_25.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":233079,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMSTU2063444",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":233095,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMSTU2040550",
+            "isprimary":0,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"<p>\"The checklist of the John B. Elliott Bequest,\" <em>Record of the Princeton University Art Museum </em>61 (2002): p. 49-99.</p>",
+            "citation":"<p>\"The checklist of the John B. Elliott Bequest,\" <em>Record of the Princeton University Art Museum </em>61 (2002): p. 49-99.</p>, p. 99",
+            "date":2002,
+            "id":3025,
+            "uri":"https://www.jstor.org/stable/3774767"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Panama",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Intermediate area",
+            "country":"Panama",
+            "region":null,
+            "state":null,
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3703430/republic-of-panama.html",
+            "location":{
+                "lat":"9",
+                "lon":"-80"
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2055657,
+            "term":"figures (representations)",
+            "aatid":300189808,
+            "termtype":"Subject"
+        },
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2035899,
+            "term":"Coclé",
+            "aatid":300017242,
+            "termtype":"Culture"
+        },
+        {
+            "id":2075879,
+            "term":"plates (dishes)",
+            "aatid":300042991,
+            "termtype":"Classification"
+        },
+        {
+            "id":2160750,
+            "term":"ceramic",
+            "aatid":300235507,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        },
+        {
+            "id":2075879,
+            "classification":"plates (dishes)"
+        }
+    ],
+    "cultures":[
+        {
+            "id":13856,
+            "culture":"Greater Coclé",
+            "alphasort":"Greater Coclé",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Greater Coclé (Macaracas style)",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2035899,
+            "culture":"Coclé"
+        }
+    ],
+    "periods":[
+        {
+            "id":24120,
+            "period":"Late Ceramic B Phase",
+            "alphasort":"Late Ceramic B Phase",
+            "begindate":0,
+            "enddate":0,
+            "displayperiod":"Late Ceramic B Phase",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"17.00"
+        },
+        {
+            "element":"Overall",
+            "type":"diam.",
+            "units":"centimeters",
+            "dimension":"29.10"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":207234,
+            "name":"SAB_Gala2021"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMSTU2063444"
+    ],
+    "displaymaker":null,
+    "displayculture":"Greater Coclé (Macaracas style)",
+    "displayperiod":"Late Ceramic B Phase",
+    "caption":"Greater Coclé (Macaracas style), Late Ceramic B Phase, 950–1150, Panama, Intermediate area, Pedestal plate. Ceramic with polychrome slip-paint; 17 × 29.1 cm. Bequest of John B. Elliott, Class of 1951 (1998-453)",
+    "captionhtml":"Greater Coclé (Macaracas style), Late Ceramic B Phase, 950–1150, Panama, Intermediate area, <i>Pedestal plate</i>. Ceramic with polychrome slip-paint; 17 × 29.1 cm. Bequest of John B. Elliott, Class of 1951 (1998-453)",
+    "published_date":"2026-02-11 10:50:43.608989",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

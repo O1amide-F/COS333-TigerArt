@@ -1,0 +1,315 @@
+{
+    "type":"artobject",
+    "objectid":37441,
+    "objectnumber":"1997-608",
+    "sortnumber":"1997  608",
+    "displaytitle":"Xipe Totec",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ceramic",
+    "datebegin":600,
+    "dateend":900,
+    "datecomputed":750,
+    "daterange":"A.D. 500-1000",
+    "displaydate":"600–900",
+    "medium":"Ceramic with chapopote (bitumen)",
+    "dimensions":"69.3 × 28 × 22 cm (27 5/16 × 11 × 8 11/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Gift of Esther and Moshe Bronstein",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":"",
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"1997-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Xipe Totec",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"1997, gift of Esther and Moshe Bronstein to the Princeton University Art Museum.\n",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"This ceramic effigy represents the deity known in Mexica imperial religion as Xipe Totec (The Flayed One), who, along with his human impersonators, donned a ﬂayed human skin. On this earlier version from Veracruz, the expressionless face, with empty slit-eyes and gaping mouth, almost completely conceals the wearer of this flayed skin as only his hands and feet emerge. In contrast to the lifeless, hanging hands representing the skin, those of the deity consist of gracefully curving forms, providing a subtle yet effective sense of life. During the annual twenty-day-long festival dedicated to Xipe Totec, called Tlacaxipehualiztli, Mexica warriors wore the ﬂayed skins of sacriﬁced war captives until they rotted off. Occurring in the spring, the Tlacaxipehualiztli rites carried agricultural signiﬁcance: The shedding of the dead, ﬂayed skin paralleled the emergence of planted seeds from their dry, dead hulls. The Mexica adopted this deity and associated rites from communities in Veracruz who used this effigy.\n",
+            "remarks":"AAA3_20-T6-3_CLA_FA.pdf  - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":212645,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/1997-608",
+            "isprimary":1,
+            "rank":4,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Bruce M. White photography"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"<i>Princeton University Art Museum: Handbook of the Collection</i> (New Haven, CT: Yale University Press, 2007)",
+            "citation":"<i>Princeton University Art Museum: Handbook of the Collection</i> (New Haven, CT: Yale University Press, 2007), p. 132–133 (illus.)",
+            "date":2007,
+            "id":474,
+            "uri":"https://search.worldcat.org/title/191864564"
+        },
+        {
+            "boilertext":"<i>Princeton University Art Museum: Handbook of the Collections </i>(Princeton, NJ: Princeton University Art Museum, 2013)",
+            "citation":"<i>Princeton University Art Museum: Handbook of the Collections </i>(Princeton, NJ: Princeton University Art Museum, 2013), p. 134",
+            "date":2013,
+            "id":1994,
+            "uri":"https://search.worldcat.org/title/865020505"
+        },
+        {
+            "boilertext":"\"Acquisitions of the Art Museum 1997,\" in \"A Window into Collecting American Folk Art: The Edward Duff Balken Collection at Princeton,\" special issue, <em>Record of the Art Museum, Princeton University</em> 57, no. 1/2 (1998): p. 164-208.",
+            "citation":"\"Acquisitions of the Art Museum 1997,\" in \"A Window into Collecting American Folk Art: The Edward Duff Balken Collection at Princeton,\" special issue, <em>Record of the Art Museum, Princeton University</em> 57, no. 1/2 (1998): p. 164-208., p. 200, p. 202 (illus.)",
+            "date":1998,
+            "id":3048,
+            "uri":"https://www.jstor.org/stable/3774775"
+        }
+    ],
+    "exhibitions":[
+        {
+            "exhibitionid":961,
+            "citation":"An Educated Eye: The Princeton University Art Museum Collection (Friday, February 22, 2008 - Sunday, June 15, 2008)",
+            "isvirtual":true,
+            "begindate":"2008-02-22",
+            "enddate":"2008-06-15",
+            "uri":"https://artmuseum.princeton.edu/art/exhibitions/961"
+        }
+    ],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Mexico, Veracruz, Gulf Coast",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Mesoamerica",
+            "country":"Mexico",
+            "region":"Gulf Coast",
+            "state":"Veracruz",
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3514780/estado-de-veracruz-llave.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2171854,
+            "term":"deities",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2171854,
+            "term":"deities",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2135524,
+            "term":"rituals (events)",
+            "aatid":300065284,
+            "termtype":"Subject"
+        },
+        {
+            "id":2095141,
+            "term":"prisoners",
+            "aatid":300025933,
+            "termtype":"Subject"
+        },
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2039077,
+            "term":"Late Classic",
+            "aatid":300016986,
+            "termtype":"Culture"
+        },
+        {
+            "id":2039152,
+            "term":"Classic Veracruz",
+            "aatid":300017056,
+            "termtype":"Culture"
+        },
+        {
+            "id":2045342,
+            "term":"skin",
+            "aatid":300011840,
+            "termtype":"Subject"
+        },
+        {
+            "id":2055657,
+            "term":"figures (representations)",
+            "aatid":300189808,
+            "termtype":"Subject"
+        },
+        {
+            "id":2158100,
+            "term":"warriors",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2048811,
+            "term":"devotional objects",
+            "aatid":300234144,
+            "termtype":"Classification"
+        },
+        {
+            "id":2160750,
+            "term":"ceramic",
+            "aatid":300235507,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        },
+        {
+            "id":2048811,
+            "classification":"devotional objects"
+        }
+    ],
+    "cultures":[
+        {
+            "id":13849,
+            "culture":"Classic Veracruz",
+            "alphasort":"Classic Veracruz",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Classic Veracruz",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2039077,
+            "culture":"Late Classic"
+        },
+        {
+            "id":2039152,
+            "culture":"Classic Veracruz"
+        }
+    ],
+    "periods":[
+        {
+            "id":24016,
+            "period":"Late Classic Period",
+            "alphasort":"Classic Period, Late",
+            "begindate":0,
+            "enddate":0,
+            "displayperiod":"Late Classic Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"69.30"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"28.00"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"22.00"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":181974,
+            "name":"web_2020_AAA"
+        },
+        {
+            "packageid":197269,
+            "name":"web_highlights -revised 2021"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":206417,
+            "name":"image_descriptions_top250"
+        },
+        {
+            "packageid":167646,
+            "name":"web_highlights"
+        },
+        {
+            "packageid":207612,
+            "name":"2021_RosamundFitzmaurice_12_06-10"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/1997-608"
+    ],
+    "displaymaker":null,
+    "displayculture":"Classic Veracruz",
+    "displayperiod":"Late Classic Period",
+    "caption":"Classic Veracruz, Late Classic Period, 600–900, Veracruz, Gulf Coast, Mexico, Mesoamerica, Xipe Totec. Ceramic with chapopote (bitumen); 69.3 × 28 × 22 cm. Gift of Esther and Moshe Bronstein (1997-608)",
+    "captionhtml":"Classic Veracruz, Late Classic Period, 600–900, Veracruz, Gulf Coast, Mexico, Mesoamerica, <i>Xipe Totec</i>. Ceramic with chapopote (bitumen); 69.3 × 28 × 22 cm. Gift of Esther and Moshe Bronstein (1997-608)",
+    "published_date":"2026-03-05 09:08:10.791717",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

@@ -1,0 +1,284 @@
+{
+    "type":"artobject",
+    "objectid":36677,
+    "objectnumber":"1998-456",
+    "sortnumber":"1998  456",
+    "displaytitle":"Ocarina in the form of a crocodilian",
+    "department":"Art of the Ancient Americas",
+    "classification":"Musical Instruments",
+    "datebegin":800,
+    "dateend":1350,
+    "datecomputed":1075,
+    "daterange":"A.D. 1000-1500",
+    "displaydate":"800–1350",
+    "medium":"Ceramic",
+    "dimensions":"7.1 × 7.3 × 14.9 cm (2 13/16 × 2 7/8 × 5 7/8 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Bequest of John B. Elliott, Class of 1951",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":"",
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"1998-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Ocarina in the form of a crocodilian",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\tBy June 8, 1982, John B. Elliott (1928-1997), Princeton, NJ [1]; 1998, bequeathed to the Princeton University Art Museum.\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] Elliott lent the work to the Princeton University Art Museum in 1982 (L.1982.58)\n</p>",
+            "remarks":null
+        }
+    ],
+    "media":[
+        {
+            "id":262197,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX25_250403_20560",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":262198,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX25_250403_20564",
+            "isprimary":0,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":262199,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX25_250403_20582",
+            "isprimary":0,
+            "rank":3,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":262200,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX25_250403_20603",
+            "isprimary":0,
+            "rank":4,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":262201,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX25_250403_20605",
+            "isprimary":0,
+            "rank":5,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":262202,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX25_250403_20645",
+            "isprimary":0,
+            "rank":6,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":262203,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX25_250403_20668",
+            "isprimary":0,
+            "rank":7,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"<p>\"The checklist of the John B. Elliott Bequest,\" <em>Record of the Princeton University Art Museum </em>61 (2002): p. 49-99.</p>",
+            "citation":"<p>\"The checklist of the John B. Elliott Bequest,\" <em>Record of the Princeton University Art Museum </em>61 (2002): p. 49-99.</p>, p. 98",
+            "date":2002,
+            "id":3025,
+            "uri":"https://www.jstor.org/stable/3774767"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: South America, Costa Rica or Nicaragua",
+            "code":"Place made",
+            "continent":"South America",
+            "subcontinent":"Intermediate area",
+            "country":"Costa Rica or Nicaragua",
+            "region":null,
+            "state":null,
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3686110/republic-of-colombia.html",
+            "location":{
+                "lat":"4",
+                "lon":"-73.25"
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2188695,
+            "term":"Costa Rican",
+            "aatid":null,
+            "termtype":"Culture"
+        },
+        {
+            "id":2158069,
+            "term":"reptiles",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2147660,
+            "term":"whistles",
+            "aatid":300042706,
+            "termtype":"Classification"
+        },
+        {
+            "id":2160750,
+            "term":"ceramic",
+            "aatid":300235507,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        },
+        {
+            "id":2147660,
+            "classification":"whistles"
+        }
+    ],
+    "cultures":[
+        {
+            "id":14084,
+            "culture":"Greater Nicoya",
+            "alphasort":"Greater Nicoya",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Greater Nicoya (Belén Incised)",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2188695,
+            "culture":"Costa Rican"
+        }
+    ],
+    "periods":[
+        {
+            "id":24133,
+            "period":"Sapoá Period",
+            "alphasort":"Sapoá Period",
+            "begindate":0,
+            "enddate":0,
+            "displayperiod":"Sapoá Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"7.10"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"7.30"
+        },
+        {
+            "element":"Overall",
+            "type":"Length",
+            "units":"centimeters",
+            "dimension":"14.90"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":282738,
+            "name":"Bingo_Animals"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX25_250403_20560"
+    ],
+    "displaymaker":null,
+    "displayculture":"Greater Nicoya (Belén Incised)",
+    "displayperiod":"Sapoá Period",
+    "caption":"Greater Nicoya (Belén Incised), Sapoá Period, 800–1350, Costa Rica or Nicaragua, Intermediate area, Ocarina in the form of a crocodilian. Ceramic; 7.1 × 7.3 × 14.9 cm. Bequest of John B. Elliott, Class of 1951 (1998-456)",
+    "captionhtml":"Greater Nicoya (Belén Incised), Sapoá Period, 800–1350, Costa Rica or Nicaragua, Intermediate area, <i>Ocarina in the form of a crocodilian</i>. Ceramic; 7.1 × 7.3 × 14.9 cm. Bequest of John B. Elliott, Class of 1951 (1998-456)",
+    "published_date":"2026-02-11 10:50:31.210286",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

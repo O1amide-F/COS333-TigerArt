@@ -1,0 +1,355 @@
+{
+    "type":"artobject",
+    "objectid":31985,
+    "objectnumber":"y1974-4",
+    "sortnumber":"1974    4y",
+    "displaytitle":"Fragment of a funerary relief depicting an offering scene",
+    "department":"Ancient, Byzantine, and Islamic Art",
+    "classification":"Architectural Elements",
+    "datebegin":-1971,
+    "dateend":-1926,
+    "datecomputed":-1948,
+    "daterange":"2000-1000 B.C.",
+    "displaydate":"ca. 1971–ca. 1926 BCE",
+    "medium":"Painted limestone",
+    "dimensions":"26.0 x 28.0 x 12.0 cm (10 1/4 x 11 x 4 3/4 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Museum purchase and gift of Dan Fellows Platt, Class of 1895, by exchange",
+    "markings":null,
+    "inscribed":"Hieroglyphics (information from Bernard Bothmer): Group “‘nhw” preserved in left column; “mry.f” in the next one.;",
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":"",
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"1974-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Fragment of a funerary relief depicting an offering scene",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"Scenes of dedicating offerings to the dead frequently decorated Egyptian tombs. Here, a man sits on a chair before a table piled with meat and vegetables. He extends his right arm toward the offerings while his left hand clenches a piece of fabric that is conventionally termed a “handkerchief.” He wears a kilt-like garment, a shoulder-length wig, a broad collar, and a sash across his chest that identifies him as a lector priest, tasked with reciting spells and hymns during religious rituals. Above him are the remains of four columns of hieroglyphs. The relief, as with most works of art from the ancient world, was originally painted with bright colors, traces of which remain visible today, including red on the man’s face and body as well as the back of the chair; a darker red on the background near his face; and green on the collar, the table, and the lines separating hieroglyphs.",
+            "remarks":"MED1_22_WLA.pdf – Day One Cataloguing"
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"Apparently in an Australian museum and then London auction; purchased by Peter Sharrer; purchased by the Museum from Sharrer in 1974.",
+            "remarks":"From accession card. "
+        }
+    ],
+    "media":[
+        {
+            "id":14332,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/y1974-4",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Luna Digitization Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"<i>Princeton University Art Museum: Handbook of the Collections </i>(Princeton, NJ: Princeton University Art Museum, 2013)",
+            "citation":"<i>Princeton University Art Museum: Handbook of the Collections </i>(Princeton, NJ: Princeton University Art Museum, 2013), p. 65",
+            "date":2013,
+            "id":1994,
+            "uri":"https://search.worldcat.org/title/865020505"
+        },
+        {
+            "boilertext":"<i>Princeton University Art Museum: Handbook of the Collection</i> (New Haven, CT: Yale University Press, 2007)",
+            "citation":"<i>Princeton University Art Museum: Handbook of the Collection</i> (New Haven, CT: Yale University Press, 2007), p. 65 (illus.)",
+            "date":2007,
+            "id":474,
+            "uri":"https://search.worldcat.org/title/191864564"
+        },
+        {
+            "boilertext":"\"Acquisitions of the Art Museum 1974\", <em>Record of the Art Museum, Princeton University</em> 34, no. 1 (1975): p. 22-30.",
+            "citation":"\"Acquisitions of the Art Museum 1974\", <em>Record of the Art Museum, Princeton University</em> 34, no. 1 (1975): p. 22-30., p. 29",
+            "date":1975,
+            "id":3453,
+            "uri":"https://www.jstor.org/stable/3774476"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: Africa, Egypt",
+            "code":"Place made",
+            "continent":"Africa",
+            "subcontinent":null,
+            "country":"Egypt",
+            "region":null,
+            "state":null,
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":null,
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2054950,
+            "term":"funerary sculpture",
+            "aatid":300184644,
+            "termtype":"Classification"
+        },
+        {
+            "id":2048603,
+            "term":"fragments",
+            "aatid":300117130,
+            "termtype":"Classification"
+        },
+        {
+            "id":2080462,
+            "term":"tombs",
+            "aatid":300005926,
+            "termtype":"Subject"
+        },
+        {
+            "id":2055330,
+            "term":"reliefs",
+            "aatid":300047230,
+            "termtype":"Classification"
+        },
+        {
+            "id":2036860,
+            "term":"Egyptian (ancient)",
+            "aatid":300020251,
+            "termtype":"Culture"
+        },
+        {
+            "id":2049054,
+            "term":"votive offerings",
+            "aatid":300178244,
+            "termtype":"Subject"
+        },
+        {
+            "id":2055657,
+            "term":"figures (representations)",
+            "aatid":300189808,
+            "termtype":"Subject"
+        },
+        {
+            "id":2036967,
+            "term":"Twelfth Dynasty",
+            "aatid":300020322,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2135437,
+            "term":"deaths",
+            "aatid":300151836,
+            "termtype":"Subject"
+        },
+        {
+            "id":2090741,
+            "term":"priests",
+            "aatid":300025774,
+            "termtype":"Subject"
+        },
+        {
+            "id":2131158,
+            "term":"wigs",
+            "aatid":300046049,
+            "termtype":"Subject"
+        },
+        {
+            "id":2107406,
+            "term":"architectural elements",
+            "aatid":300000885,
+            "termtype":"Classification"
+        },
+        {
+            "id":2088270,
+            "term":"men",
+            "aatid":300025928,
+            "termtype":"Subject"
+        },
+        {
+            "id":2163916,
+            "term":"limestone",
+            "aatid":300011286,
+            "termtype":"Materials"
+        },
+        {
+            "id":2167740,
+            "term":"paint",
+            "aatid":300015029,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2055330,
+            "classification":"reliefs"
+        },
+        {
+            "id":2048603,
+            "classification":"fragments"
+        },
+        {
+            "id":2054950,
+            "classification":"funerary sculpture"
+        },
+        {
+            "id":2107406,
+            "classification":"architectural elements"
+        }
+    ],
+    "cultures":[
+        {
+            "id":15181,
+            "culture":"Egyptian",
+            "alphasort":"Egyptian",
+            "begindate":-3000,
+            "enddate":395,
+            "displayculture":"Egyptian",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2036860,
+            "culture":"Egyptian (ancient)"
+        }
+    ],
+    "periods":[
+        {
+            "id":14193,
+            "period":"12th Dynasty",
+            "alphasort":"Twelfth Dynasty",
+            "begindate":-1981,
+            "enddate":-1802,
+            "displayperiod":"Middle Kingdom, ca. 2030–1640 BCE, 12th Dynasty, ca. 1981–1802 BCE",
+            "displaydate":"ca. 1981–1802 BCE"
+        },
+        {
+            "id":24148,
+            "period":"reign of Senwosret I",
+            "alphasort":"reign of Senwosret I",
+            "begindate":-1961,
+            "enddate":-1917,
+            "displayperiod":"possibly during reign of Senwosret I, 1961–1917 BCE",
+            "displaydate":"1961–1917 BCE"
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2036967,
+            "period":"Twelfth Dynasty"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199315,
+            "term":"African Art",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199316,
+            "term":"Ancient Mediterranean Art",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"26.00"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"28.00"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"12.00"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":181973,
+            "name":"web_2020_Ancient"
+        },
+        {
+            "packageid":267508,
+            "name":"Web_CA_2025_AncientMediterranean"
+        },
+        {
+            "packageid":182064,
+            "name":"web_2020_ancient_egyptian"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":197269,
+            "name":"web_highlights -revised 2021"
+        },
+        {
+            "packageid":185788,
+            "name":"CRS_2020_ABI Highlights 2020"
+        },
+        {
+            "packageid":193144,
+            "name":"PUAM_Expressing Culture_Ancient Mediterranean"
+        },
+        {
+            "packageid":220207,
+            "name":"Gallery_22(Pavilion6)-AncientMed"
+        },
+        {
+            "packageid":204035,
+            "name":"Teaching Kit Reproductions 8 1/2 x 11"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/y1974-4"
+    ],
+    "displaymaker":null,
+    "displayculture":"Egyptian",
+    "displayperiod":"Middle Kingdom, ca. 2030–1640 BCE, 12th Dynasty, ca. 1981–1802 BCE | possibly during reign of Senwosret I, 1961–1917 BCE",
+    "caption":"Egyptian, Middle Kingdom, ca. 2030–1640 BCE, 12th Dynasty (ca. 1981–1802 BCE), possibly during reign of Senwosret I (1961–1917 BCE), Egypt, ca. 1971–ca. 1926 BCE, Fragment of a funerary relief depicting an offering scene. Painted limestone; 26 x 28 x 12 cm. Museum purchase and gift of Dan Fellows Platt, Class of 1895, by exchange (y1974-4)",
+    "captionhtml":"Egyptian, Middle Kingdom, ca. 2030–1640 BCE, 12th Dynasty (ca. 1981–1802 BCE), possibly during reign of Senwosret I (1961–1917 BCE), Egypt, ca. 1971–ca. 1926 BCE, <i>Fragment of a funerary relief depicting an offering scene</i>. Painted limestone; 26 x 28 x 12 cm. Museum purchase and gift of Dan Fellows Platt, Class of 1895, by exchange (y1974-4)",
+    "published_date":"2026-02-11 10:27:14.856002",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

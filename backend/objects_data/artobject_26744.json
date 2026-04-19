@@ -1,0 +1,336 @@
+{
+    "type":"artobject",
+    "objectid":26744,
+    "objectnumber":"2024-28",
+    "sortnumber":"2024   28",
+    "displaytitle":"Vessel with a bird on eggs",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ceramic",
+    "datebegin":1470,
+    "dateend":1532,
+    "datecomputed":1501,
+    "daterange":"A.D. 1500-1600",
+    "displaydate":"1470–1532",
+    "medium":"Ceramic with polychrome slip-paint",
+    "dimensions":"20 × 9.9 × 18.3 cm (7 7/8 × 3 7/8 × 7 3/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Museum purchase, The Peter Jay Sharp, Class of 1952, Curatorship of the Art of the Ancient Americas",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":"",
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":"",
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2024-01-01",
+    "newaccession":1,
+    "titles":[
+        {
+            "title":"Vessel with a bird on eggs",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\t1966, Raúl Efrén Apesteguía Bresciani (1929-1996), Lima, sold to private collection, New York [1]; 2024, private collection sold to Princeton University Art Museum.\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] According to private collection. The same owner lent the work to the 1969 exhibition “Precolumbian Art in New York Collections” at the Museum of Primitive Art, New York, confirming it was in the US by this date.\n</p>",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"The Inka became a sprawling political empire in the late fourteenth century, rapidly growing through military and economic expansion to become the largest empire in the ancient Andes. Their vast territory stretched from the capital at Cuzco north into Ecuador and south into Chile, comprising more than twelve million subjects. This Inka-dominated area was called Tawantinsuyo (Land of Four Quarters), reflecting the basic four-part organization of Inka political geography. Conquest by the empire brought luxury goods to subject peoples. Those in power carefully controlled fine objects in order to maintain\n\na discernible imperial style and impose a consistent vision of the state. Still, local deviations from the official Inka style resulted in subtle regional variations. The bird sitting on two eggs, for example, is a common theme in the art of Chimú culture, conquered by the Inka around 1470.\n",
+            "remarks":"AAA2_20-T6-1_CLA_FA.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":252746,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX24_240514_13320",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":252747,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX24_240514_13321",
+            "isprimary":0,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":252748,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX24_240514_13323",
+            "isprimary":0,
+            "rank":3,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":252749,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX24_240514_13324",
+            "isprimary":0,
+            "rank":4,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":252750,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX24_240514_13325",
+            "isprimary":0,
+            "rank":5,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":252751,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX24_240514_13326",
+            "isprimary":0,
+            "rank":6,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"Julie Jones, <i>Pre-Columbian Art in New York: Selections from Private Collections</i> (New York: The Museum of Primitive Art, 1969).",
+            "citation":"Julie Jones, <i>Pre-Columbian Art in New York: Selections from Private Collections</i> (New York: The Museum of Primitive Art, 1969)., cat. no. 274 (illus.)",
+            "date":1969,
+            "id":2621,
+            "uri":"https://search.worldcat.org/title/58491"
+        },
+        {
+            "boilertext":"Alan Lapiner,<i> Pre-Columbian Art of South America</i> (New York: Harry N. Abrams, 1976).",
+            "citation":"Alan Lapiner,<i> Pre-Columbian Art of South America</i> (New York: Harry N. Abrams, 1976)., fig. 709 (illus.)",
+            "date":1976,
+            "id":2793,
+            "uri":"https://search.worldcat.org/title/1177648"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: South America, Peru, North coast",
+            "code":"Place made",
+            "continent":"South America",
+            "subcontinent":"Andes",
+            "country":"Peru",
+            "region":"North coast",
+            "state":null,
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3932488/republic-of-peru.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2117201,
+            "term":"spouts",
+            "aatid":300197224,
+            "termtype":"Classification"
+        },
+        {
+            "id":2158039,
+            "term":"birds",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2072851,
+            "term":"vessels (containers)",
+            "aatid":300193015,
+            "termtype":"Classification"
+        },
+        {
+            "id":2036054,
+            "term":"Chimú",
+            "aatid":300017316,
+            "termtype":"Culture"
+        },
+        {
+            "id":2036058,
+            "term":"Inca",
+            "aatid":300017326,
+            "termtype":"Culture"
+        },
+        {
+            "id":2036065,
+            "term":"Late horizon",
+            "aatid":300017332,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2045231,
+            "term":"egg",
+            "aatid":300011801,
+            "termtype":"Subject"
+        },
+        {
+            "id":2160397,
+            "term":"slip",
+            "aatid":300010459,
+            "termtype":"Materials"
+        },
+        {
+            "id":2160750,
+            "term":"ceramic",
+            "aatid":300235507,
+            "termtype":"Materials"
+        },
+        {
+            "id":2055947,
+            "term":"polychrome",
+            "aatid":300252261,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2117201,
+            "classification":"spouts"
+        },
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        },
+        {
+            "id":2072851,
+            "classification":"vessels (containers)"
+        }
+    ],
+    "cultures":[
+        {
+            "id":13516,
+            "culture":"Inka",
+            "alphasort":"Inka",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Chimú - Inka",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2036054,
+            "culture":"Chimú"
+        },
+        {
+            "id":2036058,
+            "culture":"Inca"
+        }
+    ],
+    "periods":[
+        {
+            "id":13501,
+            "period":"Late Horizon",
+            "alphasort":"Horizon, Late",
+            "begindate":1438,
+            "enddate":1534,
+            "displayperiod":"Late Horizon",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2036065,
+            "period":"Late horizon"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"20.00"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"9.90"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"18.30"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":207234,
+            "name":"SAB_Gala2021"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX24_240514_13320"
+    ],
+    "displaymaker":null,
+    "displayculture":"Chimú - Inka",
+    "displayperiod":"Late Horizon",
+    "caption":"Chimú -Inka, Late Horizon, 1470–1532, North coast, Peru, Andes, Vessel with a bird on eggs. Ceramic with polychrome slip-paint; 20 × 9.9 × 18.3 cm. Museum purchase, The Peter Jay Sharp, Class of 1952, Curatorship of the Art of the Ancient Americas (2024-28)",
+    "captionhtml":"Chimú -Inka, Late Horizon, 1470–1532, North coast, Peru, Andes, <i>Vessel with a bird on eggs</i>. Ceramic with polychrome slip-paint; 20 × 9.9 × 18.3 cm. Museum purchase, The Peter Jay Sharp, Class of 1952, Curatorship of the Art of the Ancient Americas (2024-28)",
+    "published_date":"2026-02-11 10:07:27.542851",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

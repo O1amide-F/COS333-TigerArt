@@ -1,0 +1,265 @@
+{
+    "type":"artobject",
+    "objectid":27612,
+    "objectnumber":"2016-1265",
+    "sortnumber":"2016 1265",
+    "displaytitle":"Bottle with an excised raptor foot",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ceramic",
+    "datebegin":-1400,
+    "dateend":-1000,
+    "datecomputed":-1200,
+    "daterange":"2000-1000 B.C.",
+    "displaydate":"1400–1000 BCE",
+    "medium":"Reduction-fired ceramic",
+    "dimensions":"h. 19.7, diam. 14.4 cm (7 3/4 × 5 11/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Bequest of Gillett G. Griffin",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2016-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Bottle with an excised raptor foot",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>October 31, 1978, The Merrin Gallery (Edward H. Merrin), New York, sold to Gillett G. Griffin (1928-2016), Princeton, NJ [1]; 2016, bequeathed to Princeton University Art Museum.\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] According to invoice (no. 1701), in the curatorial file.\n</p>",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"A serpent winds around one vessel, while two others present clawed feet: The distinctive hooked shape of the claws colored red on the tecomate\n\n(gourd-shaped bowl) are those of a feline, such as the mighty jaguar, the terrestrial apex predator of Mesoamerica. The long, straight claws carved on\n\nthe bottle more likely depict bird talons. The Olmec featured in their art a specific raptor, the harpy eagle, the great predator of the sky. Parts of a creature’s body likely stood for the whole, a convention scholars call pars pro toto (part for the whole), a visual strategy frequently employed by Olmec artists. In the deeply excised designs adorning the dish displayed here, intensive reduction and abstraction were used. The designs represent the head of the Olmec Dragon, a supernatural being that blends features of the crocodile, harpy eagle, snake, and feline.\n",
+            "remarks":"AAA1_20-T6-3_CLA_FA_9_17_25.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":46866,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV012623",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"Michael D. Coe et al., <I>The Olmec World: Ritual and Rulership</I> (Princeton, Princeton University Art Museum, 1996)",
+            "citation":"Michael D. Coe et al., <I>The Olmec World: Ritual and Rulership</I> (Princeton, Princeton University Art Museum, 1996), cat. no. 108a, p. 214 (illus.)",
+            "date":1996,
+            "id":2564,
+            "uri":"https://search.worldcat.org/title/34103154"
+        },
+        {
+            "boilertext":"Harmer Johnson, ed. <i>Guide to the Arts of the Americas</i> (New York: Rizzoli, 1992)",
+            "citation":"Harmer Johnson, ed. <i>Guide to the Arts of the Americas</i> (New York: Rizzoli, 1992), p. 58 (illus.)",
+            "date":1992,
+            "id":1260,
+            "uri":"https://search.worldcat.org/title/25547967"
+        }
+    ],
+    "exhibitions":[
+        {
+            "exhibitionid":1682,
+            "citation":"The Olmec World: Ritual and Rulership (December 16, 1995 - June 9, 1996)",
+            "isvirtual":true,
+            "begindate":"1995-12-16",
+            "enddate":"1996-06-09",
+            "uri":"https://artmuseum.princeton.edu/art/exhibitions/1682"
+        }
+    ],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Mexico, Puebla, Las Bocas",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Mesoamerica",
+            "country":"Mexico",
+            "region":null,
+            "state":"Puebla",
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":"Las Bocas",
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3521082/estado-de-puebla.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2035648,
+            "term":"Early Preclassic",
+            "aatid":300016970,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2035751,
+            "term":"Olmec",
+            "aatid":300017051,
+            "termtype":"Culture"
+        },
+        {
+            "id":2072893,
+            "term":"bottles",
+            "aatid":300045627,
+            "termtype":"Classification"
+        },
+        {
+            "id":2051820,
+            "term":"symbols",
+            "aatid":300055878,
+            "termtype":"Subject"
+        },
+        {
+            "id":2096251,
+            "term":"iconography",
+            "aatid":300055859,
+            "termtype":"Subject"
+        },
+        {
+            "id":2160750,
+            "term":"ceramic",
+            "aatid":300235507,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2072893,
+            "classification":"bottles"
+        },
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        }
+    ],
+    "cultures":[
+        {
+            "id":12498,
+            "culture":"Olmec",
+            "alphasort":"Olmec",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Olmec style",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2035751,
+            "culture":"Olmec"
+        }
+    ],
+    "periods":[
+        {
+            "id":24008,
+            "period":"Early Formative Period",
+            "alphasort":"Formative Period, Early",
+            "begindate":0,
+            "enddate":0,
+            "displayperiod":"Early Formative Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035648,
+            "period":"Early Preclassic"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"19.70"
+        },
+        {
+            "element":"Overall",
+            "type":"Length",
+            "units":"centimeters",
+            "dimension":"14.40"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":118480,
+            "name":"CRS_ART100_2017_09-25"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":207234,
+            "name":"SAB_Gala2021"
+        },
+        {
+            "packageid":223468,
+            "name":"2023_ART365/LAS370/ANT365_02_28"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV012623"
+    ],
+    "displaymaker":null,
+    "displayculture":"Olmec style",
+    "displayperiod":"Early Formative Period",
+    "caption":"Olmec style, Early Formative Period, 1400–1000 BCE, Puebla, Mexico, Mesoamerica, Bottle with an excised raptor foot. Reduction-fired ceramic; 19.7 × 14.4 cm. Bequest of Gillett G. Griffin (2016-1265)",
+    "captionhtml":"Olmec style, Early Formative Period, 1400–1000 BCE, Puebla, Mexico, Mesoamerica, <i>Bottle with an excised raptor foot</i>. Reduction-fired ceramic; 19.7 × 14.4 cm. Bequest of Gillett G. Griffin (2016-1265)",
+    "published_date":"2026-02-11 10:08:08.912771",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

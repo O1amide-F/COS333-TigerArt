@@ -1,0 +1,298 @@
+{
+    "type":"artobject",
+    "objectid":31589,
+    "objectnumber":"y1972-37",
+    "sortnumber":"1972   37y",
+    "displaytitle":"Labret in the form of a bird’s head",
+    "department":"Art of the Ancient Americas",
+    "classification":"Metal",
+    "datebegin":1300,
+    "dateend":1521,
+    "datecomputed":1410,
+    "daterange":"A.D. 1000-1500",
+    "displaydate":"1300–1521",
+    "medium":"Cast gold",
+    "dimensions":"5.9 × 3.6 × 2.3 cm (2 5/16 × 1 7/16 × 7/8 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Museum purchase, gift of the Hans A. Widenmann, Class of 1918, and Dorothy Widenmann Foundation",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":"K220",
+    "creditlinerepro":"",
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"1972-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Labret in the form of a bird’s head",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"1972, partial purchase by the Princeton University Art Museum and partial gift of the Hans A. Widenmann, Class of 1918, and Dorothy Widenmann Foundation.\n",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"<p>\n\tTeōcuitlatl—the Excrement of the Gods\n</p>\n<p>\n\tInjn teucujtlatl in coztic, in jztac in jtoca: itech qujça in jtoca teutl, ioan cuicatl: ipampa in maviztic, in coztic, in qualli, in iectli, in tlaçotli, in necujltonolli, in netlamachtilli, intonal, imaxca, inneixcavil in tlatoque, in totecujiovan:itech qujzquj, in quēman cana neçi tlavizcalpan.\n</p>\n<p>\n\tThe name of this gold, the yellow, the white [silver]—its name comes from teotl [god] cuicatl [excrement], because it is wonderful, yellow, good, fine, precious. It is the wealth, the riches, the lot, the possession, the property of the rulers, our lords.\n</p>\n<p><b>\n\tA Mexica contributor to Bernadino de Sahagún’s <i>Florentine Codex</i></b>, book 11, folios 213r–213v, original Nahuatl translated by Arthur J. O. Anderson and Charles E. Dibble.\n</p>",
+            "remarks":"AAA3_20-T3G-7_CLA_FA.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":7464,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/y1972-37",
+            "isprimary":1,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Luna Digitization Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"<i>Princeton University Art Museum: Handbook of the Collections </i>(Princeton, NJ: Princeton University Art Museum, 2013)",
+            "citation":"<i>Princeton University Art Museum: Handbook of the Collections </i>(Princeton, NJ: Princeton University Art Museum, 2013), p. 137",
+            "date":2013,
+            "id":1994,
+            "uri":"https://search.worldcat.org/title/865020505"
+        },
+        {
+            "boilertext":"John M. D. Pohl, Sorcerers of the Fifth Heaven: Nahua Art and Ritual of Ancient Southern Mexico (Princeton: Princeton University Program in Latin American Studies<I> </I>no<I>.</I> 9, 2007).",
+            "citation":"John M. D. Pohl, Sorcerers of the Fifth Heaven: Nahua Art and Ritual of Ancient Southern Mexico (Princeton: Princeton University Program in Latin American Studies<I> </I>no<I>.</I> 9, 2007)., fig. 12b, p. 21 (illus.)",
+            "date":2007,
+            "id":2657,
+            "uri":"https://search.worldcat.org/title/123232128"
+        },
+        {
+            "boilertext":"<i>Princeton University Art Museum: Handbook of the Collection</i> (New Haven, CT: Yale University Press, 2007)",
+            "citation":"<i>Princeton University Art Museum: Handbook of the Collection</i> (New Haven, CT: Yale University Press, 2007), p. 137 (illus.)",
+            "date":2007,
+            "id":474,
+            "uri":"https://search.worldcat.org/title/191864564"
+        },
+        {
+            "boilertext":"Felipe Solís, <EM>The Aztec Empire: Catalogue of the Exhibition</EM> (New York: Guggenheim Museum Publications, 2004).",
+            "citation":"Felipe Solís, <EM>The Aztec Empire: Catalogue of the Exhibition</EM> (New York: Guggenheim Museum Publications, 2004)., cat. no. 304 (illus.)",
+            "date":2004,
+            "id":2930,
+            "uri":"https://search.worldcat.org/title/57144932"
+        },
+        {
+            "boilertext":"Felipe Solís, <EM>The Aztec Empire</EM> (New York: Guggenheim Museum Publications, 2004).",
+            "citation":"Felipe Solís, <EM>The Aztec Empire</EM> (New York: Guggenheim Museum Publications, 2004)., fig. 160 (illus.)",
+            "date":2004,
+            "id":2956,
+            "uri":"https://search.worldcat.org/title/57120073"
+        },
+        {
+            "boilertext":"<p>\"Acquisitions 1972\", <em>Record of the Art Museum, Princeton University</em> 32, no. 1 (1973): p. 20-30.</p>",
+            "citation":"<p>\"Acquisitions 1972\", <em>Record of the Art Museum, Princeton University</em> 32, no. 1 (1973): p. 20-30.</p>, p. 24 (illus.); p. 30",
+            "date":1973,
+            "id":3442,
+            "uri":"https://www.jstor.org/stable/3774431"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Mexico, Puebla, Central Mexico",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Mesoamerica",
+            "country":"Mexico",
+            "region":"Central Mexico",
+            "state":"Puebla",
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3521082/estado-de-puebla.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2048931,
+            "term":"ornament",
+            "aatid":300056258,
+            "termtype":"Classification"
+        },
+        {
+            "id":2040613,
+            "term":"Nahua",
+            "aatid":300017793,
+            "termtype":"Culture"
+        },
+        {
+            "id":2035674,
+            "term":"Postclassic",
+            "aatid":300016987,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2158039,
+            "term":"birds",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2130715,
+            "term":"labrets",
+            "aatid":300211525,
+            "termtype":"Classification"
+        },
+        {
+            "id":2152740,
+            "term":"casting (process)",
+            "aatid":300053104,
+            "termtype":"Techniques"
+        },
+        {
+            "id":2162191,
+            "term":"gold",
+            "aatid":300011021,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2048931,
+            "classification":"ornament"
+        },
+        {
+            "id":2130715,
+            "classification":"labrets"
+        }
+    ],
+    "cultures":[
+        {
+            "id":12496,
+            "culture":"Mexica",
+            "alphasort":"Mexica",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Mexica or Ñuù Savi",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2040613,
+            "culture":"Nahua"
+        }
+    ],
+    "periods":[
+        {
+            "id":24018,
+            "period":"Late Postclassic Period",
+            "alphasort":"Postclassic Period, Late",
+            "begindate":1350,
+            "enddate":1521,
+            "displayperiod":"Late Postclassic Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035674,
+            "period":"Postclassic"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"5.90"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"3.60"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"2.30"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":181974,
+            "name":"web_2020_AAA"
+        },
+        {
+            "packageid":210384,
+            "name":"TDC-Final [4]"
+        },
+        {
+            "packageid":197269,
+            "name":"web_highlights -revised 2021"
+        },
+        {
+            "packageid":208852,
+            "name":"2022_ART267_04_13"
+        },
+        {
+            "packageid":282738,
+            "name":"Bingo_Animals"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/y1972-37"
+    ],
+    "displaymaker":null,
+    "displayculture":"Mexica or Ñuù Savi",
+    "displayperiod":"Late Postclassic Period",
+    "caption":"Mexica or Ñuù Savi, Late Postclassic Period, 1300–1521, Puebla, Central Mexico, Mexico, Mesoamerica, Labret in the form of a bird’s head. Cast gold; 5.9 × 3.6 × 2.3 cm. Museum purchase, gift of the Hans A. Widenmann, Class of 1918, and Dorothy Widenmann Foundation (y1972-37)",
+    "captionhtml":"Mexica or Ñuù Savi, Late Postclassic Period, 1300–1521, Puebla, Central Mexico, Mexico, Mesoamerica, <i>Labret in the form of a bird’s head</i>. Cast gold; 5.9 × 3.6 × 2.3 cm. Museum purchase, gift of the Hans A. Widenmann, Class of 1918, and Dorothy Widenmann Foundation (y1972-37)",
+    "published_date":"2026-03-05 09:06:52.801887",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

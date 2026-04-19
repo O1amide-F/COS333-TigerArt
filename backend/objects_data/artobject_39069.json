@@ -1,0 +1,243 @@
+{
+    "type":"artobject",
+    "objectid":39069,
+    "objectnumber":"2016-1241",
+    "sortnumber":"2016 1241",
+    "displaytitle":"Face pendant",
+    "department":"Art of the Ancient Americas",
+    "classification":"Sculpture",
+    "datebegin":-1000,
+    "dateend":-400,
+    "datecomputed":-700,
+    "daterange":"1000 B.C.-A.D 1",
+    "displaydate":"1000–400 BCE",
+    "medium":"Greenstone",
+    "dimensions":"4.3 × 2.8 × 1.2 cm (1 11/16 × 1 1/8 × 7/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Bequest of Gillett G. Griffin",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2016-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Face pendant",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\tSeptember 12, 1970, sold by Teochita, Inc. (PT277) to Gillett G. Griffin (1928-2016), Princeton, NJ [1]; 2000, promised bequest of Gillett G. Griffin to the Princeton University Art Museum.\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] Matched to an invoice in the curatorial files for an object described as “Pendant. Face. Olmec. Cahlcacingo [sic], Morelos.” A dated slide (GG9001170) in the Griffin archive also confirms this was in his collection in September 1970.\n</p>",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"One of the first civilizations of present-day Mexico, the Olmec distributed their ceramics widely. With the shift of the center of Olmec culture from San Lorenzo, Veracruz, to La Venta, Tabasco, around 1000 BCE, however, Olmec-style ceramics became much less pervasive. They were replaced by fine small-scale greenstone sculptures, especially blue-green jadeite and serpentine. In part, this shift may have resulted from increased focus on maize agriculture; the blue-green color of jadeite symbolized successful crops, and the subject matter often involved maize iconography. Incised jewelry, masklike faces, and complexly modeled animal, human, and super-natural ﬁgures, all from the Middle Formative period and made in Olmec style, have been discovered throughout most of Mesoamerica and beyond, from Costa Rica to the central Mexican highlands to the southwest Mexican coast in the present-day state of Guerrero.\n",
+            "remarks":"AAA3_20-T3B-8_CLA_FA.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":50532,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV017510",
+            "isprimary":1,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Mexico, Morelos, reportedly from Chalcatzingo",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Mesoamerica",
+            "country":"Mexico",
+            "region":null,
+            "state":"Morelos",
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":"reportedly from Chalcatzingo",
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3522961/estado-de-morelos.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2048931,
+            "term":"ornament",
+            "aatid":300056258,
+            "termtype":"Classification"
+        },
+        {
+            "id":2199062,
+            "term":"greenstone (rock)",
+            "aatid":null,
+            "termtype":"Classification"
+        },
+        {
+            "id":2158090,
+            "term":"faces",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2035652,
+            "term":"Middle Preclassic",
+            "aatid":300016973,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2130620,
+            "term":"pendants (jewelry)",
+            "aatid":300046002,
+            "termtype":"Classification"
+        },
+        {
+            "id":2035751,
+            "term":"Olmec",
+            "aatid":300017051,
+            "termtype":"Culture"
+        },
+        {
+            "id":2199062,
+            "term":"greenstone (rock)",
+            "aatid":null,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2130620,
+            "classification":"pendants (jewelry)"
+        },
+        {
+            "id":2199062,
+            "classification":"greenstone (rock)"
+        },
+        {
+            "id":2048931,
+            "classification":"ornament"
+        }
+    ],
+    "cultures":[
+        {
+            "id":12498,
+            "culture":"Olmec",
+            "alphasort":"Olmec",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Olmec style",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2035751,
+            "culture":"Olmec"
+        }
+    ],
+    "periods":[
+        {
+            "id":24010,
+            "period":"Middle Formative Period",
+            "alphasort":"Formative Period, Middle",
+            "begindate":-1000,
+            "enddate":-400,
+            "displayperiod":"Middle Formative Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035652,
+            "period":"Middle Preclassic"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"4.30"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"2.80"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"1.18"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":223469,
+            "name":"2023_ART365/LAS370/ANT365_03_21"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV017510"
+    ],
+    "displaymaker":null,
+    "displayculture":"Olmec style",
+    "displayperiod":"Middle Formative Period",
+    "caption":"Olmec style, Middle Formative Period, 1000–400 BCE, Morelos, Mexico, Mesoamerica, Face pendant. Greenstone; 4.3 × 2.8 × 1.2 cm. Bequest of Gillett G. Griffin (2016-1241)",
+    "captionhtml":"Olmec style, Middle Formative Period, 1000–400 BCE, Morelos, Mexico, Mesoamerica, <i>Face pendant</i>. Greenstone; 4.3 × 2.8 × 1.2 cm. Bequest of Gillett G. Griffin (2016-1241)",
+    "published_date":"2026-02-11 10:58:38.063365",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

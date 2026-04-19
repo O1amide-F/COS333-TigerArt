@@ -1,0 +1,288 @@
+{
+    "type":"artobject",
+    "objectid":32101,
+    "objectnumber":"y1987-64",
+    "sortnumber":"1987   64y",
+    "displaytitle":"Seated female figure",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ceramic",
+    "datebegin":-300,
+    "dateend":200,
+    "datecomputed":-50,
+    "daterange":"1000 B.C.-A.D 1",
+    "displaydate":"300 BCE–200 CE",
+    "medium":"Ceramic with white slip",
+    "dimensions":"12.9 × 8 × 5.7 cm (5 1/16 × 3 3/16 × 2 1/4 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Museum purchase",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":"",
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"1987-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Seated female figure",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"The art of ancient Honduras and El Salvador has long been considered in terms of its possible relationships to the more famous cultures of Mesoamerica. By the Early Formative period (1000–500 BCE), there is evidence of interaction with the Olmec of Mexico’s gulf coast and the southernmost Maya kingdom,\n\ncentered at Copán, in northwest Honduras. Indeed, the people of this region were never isolated from their neighbors. For example, local artists adopted\n\nthe tall, cylindrical form for chocolate-drinking vessels from the Maya, but their shorter marble vessels, also used for chocolate drinking, have no correlates in Mesoamerica. As more archaeological excavations are conducted in this region, scholars are learning that ancient Honduras and El Salvador had stronger cultural connections with peoples to the south and in the Caribbean than with Mesoamericans.\n",
+            "remarks":"AAA2_20-T6-2_CLA_FA_9_17_25.pdf - Day 1 installation"
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"1987, Fine Arts of Ancient Lands, Inc., New York, sold to the Princeton University Art Museum\n",
+            "remarks":null
+        }
+    ],
+    "media":[
+        {
+            "id":18824,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/y1987-64_2",
+            "isprimary":0,
+            "rank":3,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM photo"
+        },
+        {
+            "id":18825,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/y1987-64_3",
+            "isprimary":0,
+            "rank":4,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM photo"
+        },
+        {
+            "id":7888,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/y1987-64_SL",
+            "isprimary":0,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Luna Digitization Project"
+        },
+        {
+            "id":50010,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV016677",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"\"Acquisitions of the Art Museum 1987\", <i>Record of the Art Museum, Princeton University</i> 47, no. 1 (1988): p. 30-54.",
+            "citation":"\"Acquisitions of the Art Museum 1987\", <i>Record of the Art Museum, Princeton University</i> 47, no. 1 (1988): p. 30-54., p. 50",
+            "date":1988,
+            "id":542,
+            "uri":"https://www.jstor.org/stable/3774608"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, El Salvador, Chalchuapa",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Intermediate area",
+            "country":"El Salvador",
+            "region":"Chalchuapa",
+            "state":null,
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3587086/chalchuapa.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2055437,
+            "term":"figurines",
+            "aatid":300047455,
+            "termtype":"Classification"
+        },
+        {
+            "id":2088280,
+            "term":"women",
+            "aatid":300025943,
+            "termtype":"Subject"
+        },
+        {
+            "id":2055657,
+            "term":"figures (representations)",
+            "aatid":300189808,
+            "termtype":"Subject"
+        },
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2035656,
+            "term":"Late Preclassic",
+            "aatid":300016976,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2035852,
+            "term":"Pre-Columbian Central American styles and periods",
+            "aatid":300108078,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2151023,
+            "term":"sitting",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2160397,
+            "term":"slip",
+            "aatid":300010459,
+            "termtype":"Materials"
+        },
+        {
+            "id":2160750,
+            "term":"ceramic",
+            "aatid":300235507,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2055437,
+            "classification":"figurines"
+        },
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        }
+    ],
+    "cultures":[
+        {
+            "id":13994,
+            "culture":"Chalchuapa",
+            "alphasort":"Chalchuapa",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Chalchuapa",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[],
+    "periods":[
+        {
+            "id":24009,
+            "period":"Late Formative Period",
+            "alphasort":"Formative Period, Late",
+            "begindate":0,
+            "enddate":0,
+            "displayperiod":"Late Formative Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035656,
+            "period":"Late Preclassic"
+        },
+        {
+            "id":2035852,
+            "period":"Pre-Columbian Central American styles and periods"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"12.90"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"8.02"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"5.70"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":207234,
+            "name":"SAB_Gala2021"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV016677"
+    ],
+    "displaymaker":null,
+    "displayculture":"Chalchuapa",
+    "displayperiod":"Late Formative Period",
+    "caption":"Chalchuapa, Late Formative Period, 300 BCE–200 CE, Chalchuapa, El Salvador, Intermediate area, Seated female figure. Ceramic with white slip; 12.9 × 8 × 5.7 cm. Museum purchase (y1987-64)",
+    "captionhtml":"Chalchuapa, Late Formative Period, 300 BCE–200 CE, Chalchuapa, El Salvador, Intermediate area, <i>Seated female figure</i>. Ceramic with white slip; 12.9 × 8 × 5.7 cm. Museum purchase (y1987-64)",
+    "published_date":"2026-02-11 10:27:45.726550",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

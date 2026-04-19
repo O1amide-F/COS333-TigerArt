@@ -1,0 +1,230 @@
+{
+    "type":"artobject",
+    "objectid":33379,
+    "objectnumber":"y1989-94",
+    "sortnumber":"1989   94y",
+    "displaytitle":"Labret with three bells",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ornament",
+    "datebegin":1100,
+    "dateend":1521,
+    "datecomputed":1310,
+    "daterange":"A.D. 1000-1500",
+    "displaydate":"1100–1521",
+    "medium":"Obsidian and bronze (copper with tin or arsenic)",
+    "dimensions":"3 × 2.5 cm (1 3/16 × 1 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Museum purchase, gift of Herbert L. Lucas, Class of 1950",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"1989-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Labret with three bells",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>1989, sold by Paul Arany, New York, to the Princeton University Art Museum.\n</p>",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"Beginning in the seventh century CE, technologies of smelting, cold-working, and lost-wax casting are thought to have been introduced to western Mexico by seafaring traders from the Pacific coastal cultures of Colombia and Ecuador. In West Mexico, the technology continued to be refined; relatively pure copper cold-work and casting were supplemented with the use of bronze—copper alloyed with tin or arsenic—which allowed for thinner, more intricate casting. The thin coils of wax that formed the original model, encased in a combination of ash and clay to make a mold, are retained in the surface pattern of the cast bells. The sound of these bells was of primary importance, although experimentation with color, by adding gold or silver to the alloys, suggests that visual qualities also mattered. Corrosion conceals the original colors of these bells, but they could be determined by scientific analysis.\n",
+            "remarks":"AAA3_20-T3G-7_CLA_FA.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":49957,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV016377",
+            "isprimary":0,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        },
+        {
+            "id":49958,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV016372",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"\"Acquisitions of the Art Museum 1989,\" <EM>Record of the Art Museum, Princeton University </EM>49, no. 1 (1990): p. 24-57.",
+            "citation":"\"Acquisitions of the Art Museum 1989,\" <EM>Record of the Art Museum, Princeton University </EM>49, no. 1 (1990): p. 24-57., p. 54 (illus.), p. 56",
+            "date":1990,
+            "id":3099,
+            "uri":"https://www.jstor.org/stable/3774747"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Mexico, possibly Michoacán",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Mesoamerica",
+            "country":"Mexico",
+            "region":null,
+            "state":"possibly Michoacán",
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3996063/mexico.html",
+            "location":{
+                "lat":"23",
+                "lon":"-102"
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2117245,
+            "term":"bells (aerophone components)",
+            "aatid":300042399,
+            "termtype":"Classification"
+        },
+        {
+            "id":2035674,
+            "term":"Postclassic",
+            "aatid":300016987,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2130715,
+            "term":"labrets",
+            "aatid":300211525,
+            "termtype":"Classification"
+        },
+        {
+            "id":2162034,
+            "term":"copper",
+            "aatid":300011020,
+            "termtype":"Materials"
+        },
+        {
+            "id":2163364,
+            "term":"obsidian",
+            "aatid":300011254,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2117245,
+            "classification":"bells (aerophone components)"
+        },
+        {
+            "id":2130715,
+            "classification":"labrets"
+        }
+    ],
+    "cultures":[
+        {
+            "id":18505,
+            "culture":"P’urépecha",
+            "alphasort":"P’urépecha",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"P’urépecha",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[],
+    "periods":[
+        {
+            "id":12495,
+            "period":"Postclassic Period",
+            "alphasort":"Postclassic Period",
+            "begindate":1300,
+            "enddate":1521,
+            "displayperiod":"Postclassic Period (West Mexican Metallurgical Period 2)",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035674,
+            "period":"Postclassic"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"3.00"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"2.50"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV016372"
+    ],
+    "displaymaker":null,
+    "displayculture":"P’urépecha",
+    "displayperiod":"Postclassic Period (West Mexican Metallurgical Period 2)",
+    "caption":"P’urépecha, Postclassic Period (West Mexican Metallurgical Period 2), 1100–1521, possibly Michoacán, Mexico, Mesoamerica, Labret with three bells. Obsidian and bronze (copper with tin or arsenic); 3 × 2.5 cm. Museum purchase, gift of Herbert L. Lucas, Class of 1950 (y1989-94)",
+    "captionhtml":"P’urépecha, Postclassic Period (West Mexican Metallurgical Period 2), 1100–1521, possibly Michoacán, Mexico, Mesoamerica, <i>Labret with three bells</i>. Obsidian and bronze (copper with tin or arsenic); 3 × 2.5 cm. Museum purchase, gift of Herbert L. Lucas, Class of 1950 (y1989-94)",
+    "published_date":"2026-03-05 09:07:04.766616",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

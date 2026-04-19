@@ -1,0 +1,294 @@
+{
+    "type":"artobject",
+    "objectid":33319,
+    "objectnumber":"y1990-19",
+    "sortnumber":"1990   19y",
+    "displaytitle":"Necked jar with alligator gods",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ceramic",
+    "datebegin":950,
+    "dateend":1150,
+    "datecomputed":1050,
+    "daterange":"A.D. 1000-1500",
+    "displaydate":"950–1150",
+    "medium":"Ceramic with polychrome slip-paint",
+    "dimensions":"h. 18.2, diam. 17.9 cm. (7 3/16 x 7 1/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Gift of Lin and Emile Deletaille",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"1990-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Necked jar with alligator gods",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"1990, Lin and Emile Deletaille gift to the Princeton University Art Museum.\n",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"Although several regional variants are known, ceramic vessels from central Panama share many traits, including the use of multiple slip-paint colors to create dense, dynamic designs, most of which include depictions of humans, animals, or fantastic combinations thereof. The examples here are especially elaborate vessels, likely part of the funerary assemblages of high-ranking individuals. In burials excavated by professional archaeologists, most ceramics have been found smashed, presumably in intentional acts of ceremonial transformation. The few objects that remain intact, such as the examples displayed here, were likely interred to provide sustenance in the afterlife or for other reasons related to their imagery. The use of purple slip-paint is relatively rare in the ancient Americas but common in Greater Coclé culture. The mineral used to produce this color remains unknown, awaiting scientific analysis.\n",
+            "remarks":"AAA2_20-T6-2_CLA_FA_9_17_25.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":233087,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMSTU2063426",
+            "isprimary":0,
+            "rank":4,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":233088,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMSTU2063420",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":233098,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMSTU2063425",
+            "isprimary":0,
+            "rank":3,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":233099,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMSTU2063423",
+            "isprimary":0,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"\"Acquisitions of the Art Museum 1990,\" <EM>Record of the Art Museum, Princeton University </EM>50, no. 1 (1991): p. 16-69.",
+            "citation":"\"Acquisitions of the Art Museum 1990,\" <EM>Record of the Art Museum, Princeton University </EM>50, no. 1 (1991): p. 16-69., p. 66 (illus.)",
+            "date":1991,
+            "id":1866,
+            "uri":"https://www.jstor.org/stable/3774743"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Panama",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Intermediate area",
+            "country":"Panama",
+            "region":null,
+            "state":null,
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3703430/republic-of-panama.html",
+            "location":{
+                "lat":"9",
+                "lon":"-80"
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2055657,
+            "term":"figures (representations)",
+            "aatid":300189808,
+            "termtype":"Subject"
+        },
+        {
+            "id":2158039,
+            "term":"birds",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2158039,
+            "term":"birds",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2158069,
+            "term":"reptiles",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2171856,
+            "term":"gods",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2035899,
+            "term":"Coclé",
+            "aatid":300017242,
+            "termtype":"Culture"
+        },
+        {
+            "id":2073226,
+            "term":"jars",
+            "aatid":300195347,
+            "termtype":"Classification"
+        },
+        {
+            "id":2096051,
+            "term":"mythology",
+            "aatid":300055985,
+            "termtype":"Subject"
+        },
+        {
+            "id":2160397,
+            "term":"slip",
+            "aatid":300010459,
+            "termtype":"Materials"
+        },
+        {
+            "id":2160750,
+            "term":"ceramic",
+            "aatid":300235507,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2073226,
+            "classification":"jars"
+        },
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        }
+    ],
+    "cultures":[
+        {
+            "id":13856,
+            "culture":"Greater Coclé",
+            "alphasort":"Greater Coclé",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Greater Coclé (Macaracas style)",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2035899,
+            "culture":"Coclé"
+        }
+    ],
+    "periods":[
+        {
+            "id":24120,
+            "period":"Late Ceramic B Phase",
+            "alphasort":"Late Ceramic B Phase",
+            "begindate":0,
+            "enddate":0,
+            "displayperiod":"Late Ceramic B Phase",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"18.20"
+        },
+        {
+            "element":"Overall",
+            "type":"diam.",
+            "units":"centimeters",
+            "dimension":"17.90"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":181974,
+            "name":"web_2020_AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":207234,
+            "name":"SAB_Gala2021"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMSTU2063420"
+    ],
+    "displaymaker":null,
+    "displayculture":"Greater Coclé (Macaracas style)",
+    "displayperiod":"Late Ceramic B Phase",
+    "caption":"Greater Coclé (Macaracas style), Late Ceramic B Phase, 950–1150, Panama, Intermediate area, Necked jar with alligator gods. Ceramic with polychrome slip-paint; 18.2 x 17.9 cm. Gift of Lin and Emile Deletaille (y1990-19)",
+    "captionhtml":"Greater Coclé (Macaracas style), Late Ceramic B Phase, 950–1150, Panama, Intermediate area, <i>Necked jar with alligator gods</i>. Ceramic with polychrome slip-paint; 18.2 x 17.9 cm. Gift of Lin and Emile Deletaille (y1990-19)",
+    "published_date":"2026-02-11 10:34:23.122147",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

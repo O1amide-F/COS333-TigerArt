@@ -1,0 +1,281 @@
+{
+    "type":"artobject",
+    "objectid":36700,
+    "objectnumber":"1998-454",
+    "sortnumber":"1998  454",
+    "displaytitle":"Plate with stylized crocodilians",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ceramic",
+    "datebegin":750,
+    "dateend":950,
+    "datecomputed":850,
+    "daterange":"A.D. 500-1000",
+    "displaydate":"750–950",
+    "medium":"Ceramic with polychrome slip-paint",
+    "dimensions":"h. 6.5, diam. 31.5 cm. (2 9/16 x 12 3/8 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Bequest of John B. Elliott, Class of 1951",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"1998-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Plate with stylized crocodilians",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\tDamon Brandt Gallery, New York [1]. 1998, John B. Elliott (1928-1997), Princeton, NJ, bequeathed to the Princeton University Art Museum.\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] There is a Damon Brandt Gallery label on the inside of this object.\n\t<br />\n</p>",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"Although several regional variants are known, ceramic vessels from central Panama share many traits, including the use of multiple slip-paint colors to create dense, dynamic designs, most of which include depictions of humans, animals, or fantastic combinations thereof. The examples here are especially elaborate vessels, likely part of the funerary assemblages of high-ranking individuals. In burials excavated by professional archaeologists, most ceramics have been found smashed, presumably in intentional acts of ceremonial transformation. The few objects that remain intact, such as the examples displayed here, were likely interred to provide sustenance in the afterlife or for other reasons related to their imagery. The use of purple slip-paint is relatively rare in the ancient Americas but common in Greater Coclé culture. The mineral used to produce this color remains unknown, awaiting scientific analysis.\n",
+            "remarks":"AAA2_20-T6-2_CLA_FA_9_17_25.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":262880,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX25_250507_21343",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":262881,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX25_250507_21345",
+            "isprimary":0,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":262882,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX25_250507_21351",
+            "isprimary":0,
+            "rank":3,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"Gillett G. Griffin and Matthew Robb, \"Pre-Columbian Art: A Selection from The John B. Elliott Collection,\"&nbsp;<EM>Record of the Princeton University Art Museum</EM> 61 (2002): 26–35.",
+            "citation":"Gillett G. Griffin and Matthew Robb, \"Pre-Columbian Art: A Selection from The John B. Elliott Collection,\"&nbsp;<EM>Record of the Princeton University Art Museum</EM> 61 (2002): 26–35., pp. 34–35, cat. no. 7 (illus.)",
+            "date":2002,
+            "id":2742,
+            "uri":"https://www.jstor.org/stable/3774765"
+        },
+        {
+            "boilertext":"<p>\"The checklist of the John B. Elliott Bequest,\" <em>Record of the Princeton University Art Museum </em>61 (2002): p. 49-99.</p>",
+            "citation":"<p>\"The checklist of the John B. Elliott Bequest,\" <em>Record of the Princeton University Art Museum </em>61 (2002): p. 49-99.</p>, p. 99",
+            "date":2002,
+            "id":3025,
+            "uri":"https://www.jstor.org/stable/3774767"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Panama",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Intermediate area",
+            "country":"Panama",
+            "region":null,
+            "state":null,
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3703430/republic-of-panama.html",
+            "location":{
+                "lat":"9",
+                "lon":"-80"
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2055947,
+            "term":"polychrome",
+            "aatid":300252261,
+            "termtype":"Classification"
+        },
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2158069,
+            "term":"reptiles",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2035899,
+            "term":"Coclé",
+            "aatid":300017242,
+            "termtype":"Culture"
+        },
+        {
+            "id":2159868,
+            "term":"geometric patterns",
+            "aatid":300165213,
+            "termtype":"Subject"
+        },
+        {
+            "id":2075879,
+            "term":"plates (dishes)",
+            "aatid":300042991,
+            "termtype":"Classification"
+        },
+        {
+            "id":2168423,
+            "term":"pigment",
+            "aatid":300013109,
+            "termtype":"Materials"
+        },
+        {
+            "id":2160397,
+            "term":"slip",
+            "aatid":300010459,
+            "termtype":"Materials"
+        },
+        {
+            "id":2160750,
+            "term":"ceramic",
+            "aatid":300235507,
+            "termtype":"Materials"
+        },
+        {
+            "id":2055947,
+            "term":"polychrome",
+            "aatid":300252261,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        },
+        {
+            "id":2075879,
+            "classification":"plates (dishes)"
+        },
+        {
+            "id":2055947,
+            "classification":"polychrome"
+        }
+    ],
+    "cultures":[
+        {
+            "id":13856,
+            "culture":"Greater Coclé",
+            "alphasort":"Greater Coclé",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Greater Coclé",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2035899,
+            "culture":"Coclé"
+        }
+    ],
+    "periods":[
+        {
+            "id":24119,
+            "period":"Late Ceramic A Phase",
+            "alphasort":"Late Ceramic A Phase",
+            "begindate":0,
+            "enddate":0,
+            "displayperiod":"Late Ceramic A Phase",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"6.50"
+        },
+        {
+            "element":"Overall",
+            "type":"diam.",
+            "units":"centimeters",
+            "dimension":"31.50"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX25_250507_21343"
+    ],
+    "displaymaker":null,
+    "displayculture":"Greater Coclé",
+    "displayperiod":"Late Ceramic A Phase",
+    "caption":"Greater Coclé, Late Ceramic A Phase, 750–950, Panama, Intermediate area, Plate with stylized crocodilians. Ceramic with polychrome slip-paint; 6.5 x 31.5 cm. Bequest of John B. Elliott, Class of 1951 (1998-454)",
+    "captionhtml":"Greater Coclé, Late Ceramic A Phase, 750–950, Panama, Intermediate area, <i>Plate with stylized crocodilians</i>. Ceramic with polychrome slip-paint; 6.5 x 31.5 cm. Bequest of John B. Elliott, Class of 1951 (1998-454)",
+    "published_date":"2026-02-11 10:50:38.091056",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

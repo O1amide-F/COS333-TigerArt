@@ -1,0 +1,447 @@
+{
+    "type":"artobject",
+    "objectid":33058,
+    "objectnumber":"y1986-98",
+    "sortnumber":"1986   98y",
+    "displaytitle":"Tripod uk’ib (drinking cup) depicting a mythological scene",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ceramic",
+    "datebegin":650,
+    "dateend":750,
+    "datecomputed":700,
+    "daterange":"A.D. 500-1000",
+    "displaydate":"650–750",
+    "medium":"Ceramic with red and brown slip-paint",
+    "dimensions":"h. 12.1 cm., diam. 13.6 cm. (4 3/4 x 5 3/8 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Museum purchase, Fowler McCormick, Class of 1921, Fund",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":"K1003\r\nMS1405",
+    "creditlinerepro":"",
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"1986-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Tripod uk’ib (drinking cup) depicting a mythological scene",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"[Possibly Sotheby's, NY]. Purchased by the Princeton University Art Museum, 1986.",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"This vessel presents a mythological event that scholars have not been able to interpret fully even though the figures are recognizable and the hieroglyphs are legible. Chahk, the rain god, wields an axe in one hand and a handstone in the other; his axe was thought to produce the crack of lightning and his stone rumbling thunder. Behind him sits a jaguar, holding one paw to his head in a gesture of mourning. A firefly, holding a flaming torch, floats above the jaguar. The large stylized head before Chahk represents Flower Mountain,\n\na source of sustenance and vitality. Along the mountain’s curling snout tumbles a humanoid infant with a jaguar’s tail. A skeletal death god gestures clumsily toward the baby. Just above the death god’s hands floats a brief hieroglyphic text, recording that “K’awiil was grasped” on a particular day. K’awiil is a supernatural manifestation of ancestral power and royal legitimacy.\n",
+            "remarks":"AAA1_20_CLA_FA_9_17_25.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":15779,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/research.mayavase.com/kerrmaya_list.php?_allSearch",
+            "isprimary":0,
+            "rank":13,
+            "mediatypeid":7,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Maya Vase Database"
+        },
+        {
+            "id":193661,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMSTU2015_10680",
+            "isprimary":0,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM photo"
+        },
+        {
+            "id":193662,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMSTU2015_10681",
+            "isprimary":0,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM photo"
+        },
+        {
+            "id":193663,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMSTU2015_10682",
+            "isprimary":0,
+            "rank":3,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM photo"
+        },
+        {
+            "id":193664,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMSTU2015_10683",
+            "isprimary":1,
+            "rank":4,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM photo"
+        },
+        {
+            "id":193665,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMSTU2015_10684",
+            "isprimary":0,
+            "rank":5,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM photo"
+        },
+        {
+            "id":193666,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMSTU2015_10689",
+            "isprimary":0,
+            "rank":6,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM photo"
+        },
+        {
+            "id":193667,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMSTU2015_10690",
+            "isprimary":0,
+            "rank":7,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM photo"
+        },
+        {
+            "id":193668,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMSTU2015_10691",
+            "isprimary":0,
+            "rank":8,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM photo"
+        },
+        {
+            "id":193669,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMSTU2015_10692",
+            "isprimary":0,
+            "rank":9,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM photo"
+        },
+        {
+            "id":7857,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/y1986-98_1_SL",
+            "isprimary":0,
+            "rank":11,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Luna Digitization Project"
+        },
+        {
+            "id":7858,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/y1986-98_2_SL",
+            "isprimary":0,
+            "rank":10,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Luna Digitization Project"
+        },
+        {
+            "id":7859,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/y1986-98_3_SL",
+            "isprimary":0,
+            "rank":12,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Luna Digitization Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"Barbara Kerr and Justin Kerr, \"Some Observations on Maya Vase Painters,\" in <I>Maya Iconography</I>, eds. Elizabeth P. Benson and Gillett G. Griffin (Princeton: Princeton University Press, 1988).",
+            "citation":"Barbara Kerr and Justin Kerr, \"Some Observations on Maya Vase Painters,\" in <I>Maya Iconography</I>, eds. Elizabeth P. Benson and Gillett G. Griffin (Princeton: Princeton University Press, 1988)., figs. 7.11b and 7.13b, pp. 236–259 (illus.)",
+            "date":1988,
+            "id":2639,
+            "uri":"https://search.worldcat.org/title/77851364"
+        },
+        {
+            "boilertext":"Francis Robiscek, <i>The Maya Book of the Dead: The Ceramic Codex</i> (Charlottesville: University of Virginia Art Museum, 1981).",
+            "citation":"Francis Robiscek, <i>The Maya Book of the Dead: The Ceramic Codex</i> (Charlottesville: University of Virginia Art Museum, 1981)., Vessel 19 (illus.)",
+            "date":1981,
+            "id":2672,
+            "uri":"https://search.worldcat.org/title/9073379"
+        },
+        {
+            "boilertext":"Francis Robicsek and Donald Hales, \"A Ceramic Codex Fragment: The Sacrifice of Xbalanque,\" in <I>Maya Iconography</I>, eds. Elizabeth P. Benson and Gillett G. Griffin (Princeton: Princeton University Press, 1988): 260-276.",
+            "citation":"Francis Robicsek and Donald Hales, \"A Ceramic Codex Fragment: The Sacrifice of Xbalanque,\" in <I>Maya Iconography</I>, eds. Elizabeth P. Benson and Gillett G. Griffin (Princeton: Princeton University Press, 1988): 260-276., fig. 8.3, pp. 260–276 (illus.)",
+            "date":1988,
+            "id":2673,
+            "uri":"https://search.worldcat.org/title/82248447"
+        },
+        {
+            "boilertext":"Francis Robicsek, et al.,&nbsp;<EM>The World Beyond: Maya Tomb Ceramics, </EM>Epcot Center Exhibition Catalogue<EM>&nbsp;</EM>(Orlando, Walt Disney Productions, 1984). ",
+            "citation":"Francis Robicsek, et al.,&nbsp;<EM>The World Beyond: Maya Tomb Ceramics, </EM>Epcot Center Exhibition Catalogue<EM>&nbsp;</EM>(Orlando, Walt Disney Productions, 1984). , fig. 50",
+            "date":1984,
+            "id":2792,
+            "uri":"https://search.worldcat.org/title/14350841"
+        },
+        {
+            "boilertext":"Joanne M. Spero, \"Beyond Rainstorms: The Kawak as an Ancestor, Warrior, and Patron of Witchcraft,\" in <em>Sixth Palenque Round</em> <em>Table, 1986, </em>Volume VIII, ed. Merle Greene Robertson (Normal: University of Oklahoma Press, 1991): 145-155.",
+            "citation":"Joanne M. Spero, \"Beyond Rainstorms: The Kawak as an Ancestor, Warrior, and Patron of Witchcraft,\" in <em>Sixth Palenque Round</em> <em>Table, 1986, </em>Volume VIII, ed. Merle Greene Robertson (Normal: University of Oklahoma Press, 1991): 145-155., fig. 12 (illus.)",
+            "date":1991,
+            "id":2937,
+            "uri":"https://search.worldcat.org/title/44954714"
+        },
+        {
+            "boilertext":"Ana García Barrios, \"Chaahk, el Dios de la Lluvia, en el Periodo Clásico Maya: Aspectos Religiosos y Políticos\" (PhD diss. unpublished, Universidad Compultense de Madrid, 2008).",
+            "citation":"Ana García Barrios, \"Chaahk, el Dios de la Lluvia, en el Periodo Clásico Maya: Aspectos Religiosos y Políticos\" (PhD diss. unpublished, Universidad Compultense de Madrid, 2008)., fig. 3.110a (illus.)",
+            "date":2008,
+            "id":2947,
+            "uri":"https://search.worldcat.org/title/847466857"
+        },
+        {
+            "boilertext":"\"Acquisitions of the Art Museum 1986,\" <em>Record of the Art Museum, Princeton University</em> 46, no. 1 (1987): p. 18–52",
+            "citation":"\"Acquisitions of the Art Museum 1986,\" <em>Record of the Art Museum, Princeton University</em> 46, no. 1 (1987): p. 18–52, p. 50 (illus.)",
+            "date":1987,
+            "id":550,
+            "uri":"https://www.jstor.org/stable/3774580"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Guatemala, Petén, Maya area, Nakbé region",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Mesoamerica",
+            "country":"Guatemala",
+            "region":"Maya area",
+            "state":"Petén",
+            "city":null,
+            "county":null,
+            "subregion":"Central lowlands",
+            "locale":"Nakbé region",
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/11072613/nakbe.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2055657,
+            "term":"figures (representations)",
+            "aatid":300189808,
+            "termtype":"Subject"
+        },
+        {
+            "id":2055947,
+            "term":"polychrome",
+            "aatid":300252261,
+            "termtype":"Classification"
+        },
+        {
+            "id":2118718,
+            "term":"hieroglyphics",
+            "aatid":300028721,
+            "termtype":"Subject"
+        },
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2135524,
+            "term":"rituals (events)",
+            "aatid":300065284,
+            "termtype":"Subject"
+        },
+        {
+            "id":2171856,
+            "term":"gods",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2035671,
+            "term":"Late Classic",
+            "aatid":300016986,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2072851,
+            "term":"vessels (containers)",
+            "aatid":300193015,
+            "termtype":"Classification"
+        },
+        {
+            "id":2036114,
+            "term":"Maya",
+            "aatid":null,
+            "termtype":"Culture"
+        },
+        {
+            "id":2096051,
+            "term":"mythology",
+            "aatid":300055985,
+            "termtype":"Subject"
+        },
+        {
+            "id":2096251,
+            "term":"iconography",
+            "aatid":300055859,
+            "termtype":"Subject"
+        },
+        {
+            "id":2160750,
+            "term":"ceramic",
+            "aatid":300235507,
+            "termtype":"Materials"
+        },
+        {
+            "id":2055947,
+            "term":"polychrome",
+            "aatid":300252261,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        },
+        {
+            "id":2072851,
+            "classification":"vessels (containers)"
+        },
+        {
+            "id":2055947,
+            "classification":"polychrome"
+        }
+    ],
+    "cultures":[
+        {
+            "id":12497,
+            "culture":"Maya",
+            "alphasort":"Maya",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Maya (Codex style)",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2036114,
+            "culture":"Maya"
+        }
+    ],
+    "periods":[
+        {
+            "id":24016,
+            "period":"Late Classic Period",
+            "alphasort":"Classic Period, Late",
+            "begindate":0,
+            "enddate":0,
+            "displayperiod":"Late Classic Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035671,
+            "period":"Late Classic"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"12.10"
+        },
+        {
+            "element":"Overall",
+            "type":"diam.",
+            "units":"centimeters",
+            "dimension":"13.60"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":181974,
+            "name":"web_2020_AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":207234,
+            "name":"SAB_Gala2021"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMSTU2015_10683"
+    ],
+    "displaymaker":null,
+    "displayculture":"Maya (Codex style)",
+    "displayperiod":"Late Classic Period",
+    "caption":"Maya (Codex style), Late Classic Period, 650–750, Central lowlands, Petén, Maya area, Guatemala, Mesoamerica, Tripod uk’ib (drinking cup) depicting a mythological scene. Ceramic with red and brown slip-paint; 12.1 x 13.6 cm. Museum purchase, Fowler McCormick, Class of 1921, Fund (y1986-98)",
+    "captionhtml":"Maya (Codex style), Late Classic Period, 650–750, Central lowlands, Petén, Maya area, Guatemala, Mesoamerica, <i>Tripod uk’ib (drinking cup) depicting a mythological scene</i>. Ceramic with red and brown slip-paint; 12.1 x 13.6 cm. Museum purchase, Fowler McCormick, Class of 1921, Fund (y1986-98)",
+    "published_date":"2026-02-11 10:32:57.984474",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}
