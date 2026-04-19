@@ -1,0 +1,227 @@
+{
+    "type":"artobject",
+    "objectid":1334,
+    "objectnumber":"2016-1290",
+    "sortnumber":"2016 1290",
+    "displaytitle":"Figurine",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ceramic",
+    "datebegin":-500,
+    "dateend":-1,
+    "datecomputed":-250,
+    "daterange":"1000 B.C.-A.D 1",
+    "displaydate":"500–1 BCE",
+    "medium":"Ceramic with traces of pigment",
+    "dimensions":"9.8 × 4.2 × 2.7 cm (3 7/8 × 1 5/8 × 1 1/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Bequest of Gillett G. Griffin",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2016-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Figurine",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\tFebruary 2, 1981, Mathias Komor (1909-1984), New York, sold to Gillett G. Griffin (1928-2016), Princeton, NJ [1]; 2016, bequeathed to the Princeton University Art Museum.\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] According to an invoice in the curatorial file. Komor inventory F828.\n</p>",
+            "remarks":null
+        }
+    ],
+    "media":[
+        {
+            "id":11375,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/G0022",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"For Reference Only"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: South America, Ecuador, Manabí, coastal, Los Esteros",
+            "code":"Place made",
+            "continent":"South America",
+            "subcontinent":"Intermediate area",
+            "country":"Ecuador",
+            "region":"coastal",
+            "state":"Manabí",
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":"Los Esteros",
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/8472277/los-dos-esteros.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2055437,
+            "term":"figurines",
+            "aatid":300047455,
+            "termtype":"Classification"
+        },
+        {
+            "id":2039347,
+            "term":"Bahía",
+            "aatid":300017401,
+            "termtype":"Culture"
+        },
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2055657,
+            "term":"figures (representations)",
+            "aatid":300189808,
+            "termtype":"Subject"
+        },
+        {
+            "id":2035656,
+            "term":"Late Preclassic",
+            "aatid":300016976,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2160750,
+            "term":"ceramic",
+            "aatid":300235507,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2055437,
+            "classification":"figurines"
+        },
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        }
+    ],
+    "cultures":[
+        {
+            "id":15706,
+            "culture":"Bahía",
+            "alphasort":"Bahía",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Bahía",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2039347,
+            "culture":"Bahía"
+        }
+    ],
+    "periods":[
+        {
+            "id":24009,
+            "period":"Late Formative Period",
+            "alphasort":"Formative Period, Late",
+            "begindate":0,
+            "enddate":0,
+            "displayperiod":"Late Formative Period to early Regional Development Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035656,
+            "period":"Late Preclassic"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"9.80"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"4.20"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"2.70"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":277757,
+            "name":"Web_ObjsOnView_NoPrimaryImage_20251010"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/G0022"
+    ],
+    "displaymaker":null,
+    "displayculture":"Bahía",
+    "displayperiod":"Late Formative Period to early Regional Development Period",
+    "caption":"Bahía, Late Formative Period to early Regional Development Period, 500–1 BCE, Manabí, coastal, Ecuador, Intermediate area, Figurine. Ceramic with traces of pigment; 9.8 × 4.2 × 2.7 cm. Bequest of Gillett G. Griffin (2016-1290)",
+    "captionhtml":"Bahía, Late Formative Period to early Regional Development Period, 500–1 BCE, Manabí, coastal, Ecuador, Intermediate area, <i>Figurine</i>. Ceramic with traces of pigment; 9.8 × 4.2 × 2.7 cm. Bequest of Gillett G. Griffin (2016-1290)",
+    "published_date":"2026-02-11 07:23:39.597801",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

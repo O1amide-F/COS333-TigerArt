@@ -1,0 +1,307 @@
+{
+    "type":"artobject",
+    "objectid":138266,
+    "objectnumber":"2021-92",
+    "sortnumber":"2021   92",
+    "displaytitle":"Standing female figure",
+    "department":"Art of the Ancient Americas",
+    "classification":"Sculpture",
+    "datebegin":1000,
+    "dateend":1550,
+    "datecomputed":1275,
+    "daterange":"A.D. 1000-1500",
+    "displaydate":"1000–1550",
+    "medium":"Andesite",
+    "dimensions":"80.6 × 40.6 × 19.7 cm (31 3/4 × 16 × 7 3/4 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Museum purchase, Peter Jay Sharp, Class of 1952, Fund",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":"Photograph Courtesy of Sotheby’s, Inc. © 2021",
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":"",
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2021-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Standing female figure",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\t1966 Alfonso Jiménez Alvarado, San José, Costa Rica, sold to André Emmerich, New York [1]; November 30, 1968, sold to the Hidden Harmony private collection [2]; May 18, 2021, sold through Sotheby’s, New York, to the Princeton University Art Museum.\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] According to Emmerich ledger card (inv. no. CB-150), Sotheby’s, New York. The card indicates that the purchase occurred in 1966 but that the work did not arrive until May 1968. Copy in the curatorial file.\n\t<br />\n\t[2] According to provenance indicated in a September 9, 1988 appraisal by Harmer Johnson for the Hidden Harmony collection. Hidden Harmony association according to Sotheby’s, Hidden Harmony: An Exquisite Private Collection (New York: Sotheby’s, 2021), lot 9. Copies in the curatorial file\n\t<br />\n</p>",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"As is typical of Costa Rican female stone sculptures, this figure seems to highlight fertility and beauty. For example, her hands cup and thus draw attention to her breasts, while her long hair with stepped bangs suggests youth and health. Such large freestanding human forms became popular among central highland and Caribbean coastal communities in Costa Rica around 1000 CE. Their discovery on the surface of archaeological sites associated with public architecture is thought to reflect a shift at this time to a more centralized and hierarchical political structure, in which rituals involved whole communities. These sculptures may have been manipulated for different events or rituals. They could have been dressed, relocated, or assembled into narrative and symbolic groupings as well.\n",
+            "remarks":"AAA3_20-T3C-1_CLA_FA_7_17_25.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":244004,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX23_5397",
+            "isprimary":0,
+            "rank":6,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":244005,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX23_5396",
+            "isprimary":0,
+            "rank":5,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":244006,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX23_5395",
+            "isprimary":0,
+            "rank":4,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":244007,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX23_5390",
+            "isprimary":0,
+            "rank":9,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":244008,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX23_5389",
+            "isprimary":0,
+            "rank":8,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":244009,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX23_5387",
+            "isprimary":0,
+            "rank":7,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":244010,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX23_5386",
+            "isprimary":0,
+            "rank":3,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":244011,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX23_5385",
+            "isprimary":0,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":244012,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX23_5383",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Costa Rica, Linea Vieja region",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Intermediate area",
+            "country":"Costa Rica",
+            "region":null,
+            "state":null,
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":"Linea Vieja region",
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":null,
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2088280,
+            "term":"women",
+            "aatid":300025943,
+            "termtype":"Subject"
+        },
+        {
+            "id":2055271,
+            "term":"sculptures",
+            "aatid":300047203,
+            "termtype":"Classification"
+        },
+        {
+            "id":2188695,
+            "term":"Costa Rican",
+            "aatid":null,
+            "termtype":"Culture"
+        },
+        {
+            "id":2035852,
+            "term":"Pre-Columbian Central American styles and periods",
+            "aatid":300108078,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2163310,
+            "term":"andesite",
+            "aatid":300011213,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2055271,
+            "classification":"sculptures"
+        }
+    ],
+    "cultures":[
+        {
+            "id":24153,
+            "culture":"Central Caribbean",
+            "alphasort":"Central Caribbean",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Central Caribbean",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2188695,
+            "culture":"Costa Rican"
+        }
+    ],
+    "periods":[
+        {
+            "id":24152,
+            "period":"La Cabaña Period",
+            "alphasort":"La Cabaña Period",
+            "begindate":0,
+            "enddate":0,
+            "displayperiod":"La Cabaña Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035852,
+            "period":"Pre-Columbian Central American styles and periods"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"80.64"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"40.63"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"19.68"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":207234,
+            "name":"SAB_Gala2021"
+        },
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":216464,
+            "name":"image_descriptions_newacquisitions_2021"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX23_5383"
+    ],
+    "displaymaker":null,
+    "displayculture":"Central Caribbean",
+    "displayperiod":"La Cabaña Period",
+    "caption":"Central Caribbean, La Cabaña Period, 1000–1550, Costa Rica, Intermediate area, Standing female figure. Andesite; 80.6 × 40.6 × 19.7 cm. Museum purchase, Peter Jay Sharp, Class of 1952, Fund (2021-92)",
+    "captionhtml":"Central Caribbean, La Cabaña Period, 1000–1550, Costa Rica, Intermediate area, <i>Standing female figure</i>. Andesite; 80.6 × 40.6 × 19.7 cm. Museum purchase, Peter Jay Sharp, Class of 1952, Fund (2021-92)",
+    "published_date":"2026-02-11 14:52:38.095062",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

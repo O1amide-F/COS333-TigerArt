@@ -1,0 +1,277 @@
+{
+    "type":"artobject",
+    "objectid":133368,
+    "objectnumber":"2018-10",
+    "sortnumber":"2018   10",
+    "displaytitle":"Dish with annular base",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ceramics",
+    "datebegin":600,
+    "dateend":900,
+    "datecomputed":750,
+    "daterange":"A.D. 500-1000",
+    "displaydate":"600–900",
+    "medium":"Ceramic with cream and brown slip-paint",
+    "dimensions":"h. 8.2, diam. 20.4 cm (3 1/4 × 8 1/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Museum purchase, Gillett G. Griffin Art of the Ancient Americas Fund",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":"",
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2018-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Dish with annular base",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\tMay 20, 1970, Alan C. Lapiner (1933-1975), New York, sold to private collection, New York [1]; 2018, sold to Princeton University Art Museum.\n</p>\n<p>\n\t[1] According to the collector catalogue. Copy in curatorial file.\n</p>",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"Cajamarca is best known as the place where the Inka emperor Atahualpa was kidnapped and ransomed by the Spanish conquistador Francisco Pizarro in 1532. The region was, however, home to the earlier Cajamarca culture, conquered by the Inka in 1492.\n\nThe Cajamarca culture’s distinctive ceramic style has been found in far-flung regions of the Andes, suggesting that the pottery was long esteemed as a tradeware. The consistency of the Cajamarca style within its various phases suggests closely controlled,\n\ncentralized production, but the complex architecture or monumental art that one would expect in such a context has not been attested. This vessel’s form, specific motifs, and overall composition of the design accord with the Cursivo Clásico style of middle-period Cajamarca ceramics, well known from fragments excavated at a variety of sites in Peru’s northern highlands but seen only rarely in such an excellent state of preservation.\n",
+            "remarks":"AAA2_20-T6-1_CLA_FA.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":217937,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMSTU2018-1931677",
+            "isprimary":0,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":217938,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMSTU2018-1931726",
+            "isprimary":0,
+            "rank":3,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":217939,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMSTU2018-1931789",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"<p>&quot;Acquisitions of the Princeton University Art Museum 2018,&quot; <i>Record of the Art Museum, Princeton University</i> 77/78 (2017-18)</p>",
+            "citation":"<p>&quot;Acquisitions of the Princeton University Art Museum 2018,&quot; <i>Record of the Art Museum, Princeton University</i> 77/78 (2017-18)</p>, p. 163",
+            "date":2017,
+            "id":9760,
+            "uri":"https://www.jstor.org/stable/45401204"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: South America, Peru",
+            "code":"Place made",
+            "continent":"South America",
+            "subcontinent":"Andes",
+            "country":"Peru",
+            "region":null,
+            "state":null,
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3932488/republic-of-peru.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2039472,
+            "term":"Pre-Columbian Andean styles",
+            "aatid":300017346,
+            "termtype":"Culture"
+        },
+        {
+            "id":2036036,
+            "term":"Middle horizon",
+            "aatid":300017300,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2036045,
+            "term":"Late Intermediate period",
+            "aatid":300017313,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2159868,
+            "term":"geometric patterns",
+            "aatid":300165213,
+            "termtype":"Subject"
+        },
+        {
+            "id":2075787,
+            "term":"dishes",
+            "aatid":300042973,
+            "termtype":"Classification"
+        },
+        {
+            "id":2160397,
+            "term":"slip",
+            "aatid":300010459,
+            "termtype":"Materials"
+        },
+        {
+            "id":2160750,
+            "term":"ceramic",
+            "aatid":300235507,
+            "termtype":"Materials"
+        },
+        {
+            "id":2055947,
+            "term":"polychrome",
+            "aatid":300252261,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2075787,
+            "classification":"dishes"
+        },
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        }
+    ],
+    "cultures":[
+        {
+            "id":16837,
+            "culture":"Cajamarca",
+            "alphasort":"Cajamarca",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Cajamarca (Cursivo Clásico style)",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2039472,
+            "culture":"Pre-Columbian Andean styles"
+        }
+    ],
+    "periods":[
+        {
+            "id":13507,
+            "period":"Middle Horizon",
+            "alphasort":"Horizon, Middle",
+            "begindate":550,
+            "enddate":1000,
+            "displayperiod":"Middle Horizon to Late Intermediate (Middle Cajamarca phase)",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2036036,
+            "period":"Middle horizon"
+        },
+        {
+            "id":2036045,
+            "period":"Late Intermediate period"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"8.20"
+        },
+        {
+            "element":"Overall",
+            "type":"diam.",
+            "units":"centimeters",
+            "dimension":"20.40"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":207234,
+            "name":"SAB_Gala2021"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMSTU2018-1931789"
+    ],
+    "displaymaker":null,
+    "displayculture":"Cajamarca (Cursivo Clásico style)",
+    "displayperiod":"Middle Horizon to Late Intermediate (Middle Cajamarca phase)",
+    "caption":"Cajamarca (Cursivo Clásico style), Middle Horizon to Late Intermediate (Middle Cajamarca phase), 600–900, Peru, Andes, Dish with annular base. Ceramic with cream and brown slip-paint; 8.2 × 20.4 cm. Museum purchase, Gillett G. Griffin Art of the Ancient Americas Fund (2018-10)",
+    "captionhtml":"Cajamarca (Cursivo Clásico style), Middle Horizon to Late Intermediate (Middle Cajamarca phase), 600–900, Peru, Andes, <i>Dish with annular base</i>. Ceramic with cream and brown slip-paint; 8.2 × 20.4 cm. Museum purchase, Gillett G. Griffin Art of the Ancient Americas Fund (2018-10)",
+    "published_date":"2026-02-11 14:33:21.109707",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

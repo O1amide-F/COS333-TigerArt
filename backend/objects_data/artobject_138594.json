@@ -1,0 +1,259 @@
+{
+    "type":"artobject",
+    "objectid":138594,
+    "objectnumber":"2022-110",
+    "sortnumber":"2022  110",
+    "displaytitle":"Serpent",
+    "department":"Art of the Ancient Americas",
+    "classification":"Jades",
+    "datebegin":-1000,
+    "dateend":-400,
+    "datecomputed":-700,
+    "daterange":"1000 B.C.-A.D 1",
+    "displaydate":"1000–400 BCE",
+    "medium":"Jadeite",
+    "dimensions":"3.6 × 1.7 × 13.7 cm (1 7/16 × 11/16 × 5 3/8 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Museum purchase, Fowler McCormick, Class of 1921, Fund",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":"",
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2022-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Serpent",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"Arroyo, Veracruz, summer 1969; possibly Mexican military general from Veracruz; Jorge Hauswaldt, Mexico City, Mexico 1969-1970; [The Merrin Gallery, New York, NY, since 1970]; purchased by the Princeton University Art Museum, 2022.",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"Scholars believe that this serpent is from Arroyo Pesquero, a deposit of many jade objects found by local men in a stream in western Veracruz, Mexico. Although common throughout Mesoamerica, snakes were not well represented in Olmec art. This is the only known example made of jade. The undulating body is thick and short, likely reflecting its derivation from a celt, or axe, commonly used to produce Olmec jade work. Like all the jade objects found at Arroyo Pesquero, the serpent lacks the blue-green color and translucency prized by the Olmec. Rather, this serpent is gray with light swirls, while other Olmec jade items are in various tones of brown, gray, and white. Scholars suspect that these jades were subjected to intense heat before being deposited in the stream, which would leach the color from the surfaces. In some cases the heat also caused the objects to crack.\n",
+            "remarks":"AAA3_20-T3B-8_CLA_FA.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":243532,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX23_5356",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":243554,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX23_5097",
+            "isprimary":0,
+            "rank":4,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":243555,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX23_5091",
+            "isprimary":0,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":243556,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX23_5080",
+            "isprimary":0,
+            "rank":3,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Mexico, Veracruz, Arroyo Pesquero",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Mesoamerica",
+            "country":"Mexico",
+            "region":null,
+            "state":"Veracruz",
+            "city":"Arroyo Pesquero",
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":null,
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2055224,
+            "term":"jades",
+            "aatid":300184767,
+            "termtype":"Classification"
+        },
+        {
+            "id":2055271,
+            "term":"sculptures",
+            "aatid":300047203,
+            "termtype":"Classification"
+        },
+        {
+            "id":2035652,
+            "term":"Middle Preclassic",
+            "aatid":300016973,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2035751,
+            "term":"Olmec",
+            "aatid":300017051,
+            "termtype":"Culture"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2055224,
+            "classification":"jades"
+        },
+        {
+            "id":2055271,
+            "classification":"sculptures"
+        }
+    ],
+    "cultures":[
+        {
+            "id":12498,
+            "culture":"Olmec",
+            "alphasort":"Olmec",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Olmec style",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2035751,
+            "culture":"Olmec"
+        }
+    ],
+    "periods":[
+        {
+            "id":24010,
+            "period":"Middle Formative Period",
+            "alphasort":"Formative Period, Middle",
+            "begindate":-1000,
+            "enddate":-400,
+            "displayperiod":"Middle Formative Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035652,
+            "period":"Middle Preclassic"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"3.60"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"1.70"
+        },
+        {
+            "element":"Overall",
+            "type":"Length",
+            "units":"centimeters",
+            "dimension":"13.70"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":207234,
+            "name":"SAB_Gala2021"
+        },
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":282738,
+            "name":"Bingo_Animals"
+        },
+        {
+            "packageid":223469,
+            "name":"2023_ART365/LAS370/ANT365_03_21"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX23_5356"
+    ],
+    "displaymaker":null,
+    "displayculture":"Olmec style",
+    "displayperiod":"Middle Formative Period",
+    "caption":"Olmec style, Middle Formative Period, 1000–400 BCE, Arroyo Pesquero, Veracruz, Mexico, Mesoamerica, Serpent. Jadeite; 3.6 × 1.7 × 13.7 cm. Museum purchase, Fowler McCormick, Class of 1921, Fund (2022-110)",
+    "captionhtml":"Olmec style, Middle Formative Period, 1000–400 BCE, Arroyo Pesquero, Veracruz, Mexico, Mesoamerica, <i>Serpent</i>. Jadeite; 3.6 × 1.7 × 13.7 cm. Museum purchase, Fowler McCormick, Class of 1921, Fund (2022-110)",
+    "published_date":"2026-02-11 14:54:15.004964",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

@@ -1,0 +1,149 @@
+{
+    "type":"artobject",
+    "objectid":114213,
+    "objectnumber":"Antioch 2015-1294",
+    "sortnumber":"ntioch 2015A 1294",
+    "displaytitle":"Fragment",
+    "department":"Ancient, Byzantine, and Islamic Art",
+    "classification":"Ceramic",
+    "datebegin":0,
+    "dateend":1939,
+    "datecomputed":null,
+    "daterange":"",
+    "displaydate":null,
+    "medium":"13-R, TR. 13, 10-6-39",
+    "dimensions":"",
+    "dimensionsproposed":"",
+    "creditline":"Gift of the Committee for the Excavation of Antioch to Princeton University",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":false,
+    "accessionyear":null,
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Fragment",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"Excavated by the Princeton-led team at Antioch-on-the-Orontes, present-day Antakya, Turkey, 1931-1939; with the Museum since 1939",
+            "remarks":"Batch edit for Provenance publication project"
+        }
+    ],
+    "media":[
+        {
+            "id":174940,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV83822",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place collected: Antioch-on-the-Orontes",
+            "code":"Place collected",
+            "continent":null,
+            "subcontinent":null,
+            "country":null,
+            "region":null,
+            "state":null,
+            "city":"Antioch-on-the-Orontes",
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":"13-R N ",
+            "river":null,
+            "excavation":null,
+            "geoname":null,
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199342,
+            "term":"Antioch Collection",
+            "termtype":"Archive | Collection"
+        },
+        {
+            "id":2199316,
+            "term":"Ancient Mediterranean Art",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[],
+    "packages":[
+        {
+            "packageid":154209,
+            "name":"web_stahl_2019"
+        },
+        {
+            "packageid":278709,
+            "name":"Web_Archive|Collection_Antioch_Objs"
+        },
+        {
+            "packageid":281905,
+            "name":"Web_Archive|Collection_Antioch_ObjNumber"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV83822"
+    ],
+    "displaymaker":null,
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"Antioch-on-the-Orontes, Fragment. 13-R, TR. 13, 10-6-39. Gift of the Committee for the Excavation of Antioch to Princeton University (Antioch 2015-1294)",
+    "captionhtml":"Antioch-on-the-Orontes, <i>Fragment</i>. 13-R, TR. 13, 10-6-39. Gift of the Committee for the Excavation of Antioch to Princeton University (Antioch 2015-1294)",
+    "published_date":"2026-02-11 14:19:05.973954",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

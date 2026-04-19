@@ -1,0 +1,327 @@
+{
+    "type":"artobject",
+    "objectid":107466,
+    "objectnumber":"2015-6691",
+    "sortnumber":"2015 6691",
+    "displaytitle":"Vessel in the form of a dog",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ceramic",
+    "datebegin":-300,
+    "dateend":400,
+    "datecomputed":50,
+    "daterange":"A.D. 1-500",
+    "displaydate":"300 BCE–400 CE",
+    "medium":"Burnished ceramic with red slip",
+    "dimensions":"14.5 × 29.2 × 20.3 cm (5 11/16 × 11 1/2 × 8 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Gift of Virginia and Bagley Wright Jr., Class of 1946",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":"",
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2015-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Vessel in the form of a dog",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\tSeptember 24, 1965, sold by David Stuart Galleries, Los Angeles (stock no. F90) to Bagley Wright (1924-2011), Seattle, WA [1]; 2015, gift of Virginia and Bagley Wright Jr. to the Princeton University Art Museum.\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] According to an invoice in the curatorial file.\n</p>",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"The Late Formative–period cultures of western Mexico—in the present-day states of Jalisco, Nayarit, Colima, and Michoacán—shared a tradition of burying the deceased in deep shaft tombs, often located under homes. These tombs could accommodate generations of family members: When someone died, the bones of their ancestors were moved aside to create room for the new ancestor. A great variety of ceramic objects accompanied the dead. Human figures might represent loved ones or key moments in the history of the interred. Ceramic animals might have been perceived as providing sustenance in the afterlife, or they may have been seen as eternal companions. Archaeological excavations in the region have uncovered these ceramic objects in contexts other than tombs, however, raising the likelihood that at least some “tomb sculptures” had other functions prior to their interment.\n",
+            "remarks":"AAA1_20-T6-3_CLA_FA_9_17_25.pdf - Day 1 installation - Group chat for 2016-1239, y1990-16, 2016-1071, and 2015-6691"
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Multivocal Label",
+            "textentryhtml":"<p>\n\tThis two-thousand-year-old ceramic dog is a testament to the enduring relationship between humans and dogs. It’s fascinating to consider that our appreciation and respect for animals are sentiments shared with our distant ancestors. While some theories suggest that these sculptures were interred in tombs as symbols of food, I prefer to view the serene posture of this figure as a depiction of companionship: the canine likeness being laid beside her entombed human to accompany them for eternity. Her peaceful sleeping posture is reminiscent of my own dog curled up in her bed. The resemblance may not be coincidental. Identifying the breed is challenging; it might depict a Xoloitzcuintli or an extinct Techichi. Yet I like to imagine it as a Chihuahua, echoing part of the ancestry of my own mixed-breed canine companion.\n</p>\n<p><b>\n\tPeter S. Chapman</b>, Medical Director, BluePearl Pet Hospital, Levittown, PA\n</p>",
+            "remarks":"AAA1_20-T6-3_CLA_FA_9_17_25.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":262364,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX25_250422_20993",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":262365,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX25_250422_20995",
+            "isprimary":0,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":262366,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX25_250422_20997",
+            "isprimary":0,
+            "rank":3,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":262367,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX25_250422_21002",
+            "isprimary":0,
+            "rank":4,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":262368,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX25_250422_21020",
+            "isprimary":0,
+            "rank":5,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":262369,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX25_250422_21021",
+            "isprimary":0,
+            "rank":6,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"\"Acquisitions of the Princeton University Art Museum 2015,\" <em>Record of the Art Museum, Princeton University</em> 75/76 (2016-17): 102-125.",
+            "citation":"\"Acquisitions of the Princeton University Art Museum 2015,\" <em>Record of the Art Museum, Princeton University</em> 75/76 (2016-17): 102-125., p. 109 (illus.)",
+            "date":2016,
+            "id":9661,
+            "uri":"https://www.jstor.org/stable/i40228781"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Mexico, Colima, West Mexico",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Mesoamerica",
+            "country":"Mexico",
+            "region":"West Mexico",
+            "state":"Colima",
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/4013513/estado-de-colima.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2080553,
+            "term":"shaft graves",
+            "aatid":300005951,
+            "termtype":"Subject"
+        },
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2103919,
+            "term":"dogs",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2035656,
+            "term":"Late Preclassic",
+            "aatid":300016976,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2072851,
+            "term":"vessels (containers)",
+            "aatid":300193015,
+            "termtype":"Classification"
+        },
+        {
+            "id":2035837,
+            "term":"Colima",
+            "aatid":300017197,
+            "termtype":"Culture"
+        },
+        {
+            "id":2157533,
+            "term":"slip trailing",
+            "aatid":300053919,
+            "termtype":"Techniques"
+        },
+        {
+            "id":2160353,
+            "term":"clay",
+            "aatid":300010439,
+            "termtype":"Materials"
+        },
+        {
+            "id":2160397,
+            "term":"slip",
+            "aatid":300010459,
+            "termtype":"Materials"
+        },
+        {
+            "id":2152702,
+            "term":"burnishing (polishing)",
+            "aatid":300053869,
+            "termtype":"Techniques"
+        },
+        {
+            "id":2160750,
+            "term":"ceramic",
+            "aatid":300235507,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        },
+        {
+            "id":2072851,
+            "classification":"vessels (containers)"
+        }
+    ],
+    "cultures":[
+        {
+            "id":17720,
+            "culture":"Comala",
+            "alphasort":"Comala",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Comala style",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2035837,
+            "culture":"Colima"
+        }
+    ],
+    "periods":[
+        {
+            "id":24009,
+            "period":"Late Formative Period",
+            "alphasort":"Formative Period, Late",
+            "begindate":0,
+            "enddate":0,
+            "displayperiod":"Late Formative Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035656,
+            "period":"Late Preclassic"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"14.50"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"29.20"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"20.31"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":181974,
+            "name":"web_2020_AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX25_250422_20993"
+    ],
+    "displaymaker":null,
+    "displayculture":"Comala style",
+    "displayperiod":"Late Formative Period",
+    "caption":"Comala style, Late Formative Period, 300 BCE–400 CE, Colima, West Mexico, Mexico, Mesoamerica, Vessel in the form of a dog. Burnished ceramic with red slip; 14.5 × 29.2 × 20.3 cm. Gift of Virginia and Bagley Wright Jr., Class of 1946 (2015-6691)",
+    "captionhtml":"Comala style, Late Formative Period, 300 BCE–400 CE, Colima, West Mexico, Mexico, Mesoamerica, <i>Vessel in the form of a dog</i>. Burnished ceramic with red slip; 14.5 × 29.2 × 20.3 cm. Gift of Virginia and Bagley Wright Jr., Class of 1946 (2015-6691)",
+    "published_date":"2026-02-11 14:13:14.118732",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

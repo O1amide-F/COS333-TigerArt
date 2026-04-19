@@ -1,0 +1,239 @@
+{
+    "type":"artobject",
+    "objectid":140209,
+    "objectnumber":"2022-105",
+    "sortnumber":"2022  105",
+    "displaytitle":"Elaborately costumed male figurine",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ceramic",
+    "datebegin":-1400,
+    "dateend":-1100,
+    "datecomputed":-1250,
+    "daterange":"2000-1000 B.C.",
+    "displaydate":"1400–1100 BCE",
+    "medium":"Ceramic with traces of white and yellow slip-paint",
+    "dimensions":"14 × 4.4 × 2.2 cm (5 1/2 × 1 3/4 × 7/8 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Museum purchase, Gillett G. Griffin Art of the Ancient Americas Fund",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":"",
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2022-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Elaborately costumed male figurine",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\t1963, D. Daniel Michel (1902-2004) Sr., Chicago (#63:101) [1]; 1991, D. Daniel Michel sold through Ancient Art of the New World, New York, to US private collection [2]; August 16, 2022, purchased by Princeton University Art Museum.\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] According to Michel’s personal collection catalogue. The work was first published in 1965 as part of the same collection.\n\t<br />\n\t[2] According to US private collection.\n\t<br />\n</p>",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"Although not the first places where ceramics were produced in Mesoamerica, villages in the central basin of Mexico, now encompassed by Mexico City, the adjacent valley of Morelos to the south, and the region around the modern town of Las Bocas, Puebla, are among the areas most renowned for their ancient ceramic vessels and figurines. Local workers and amateur pothunters were the first, in the early twentieth century, to encounter the remains of these villages. The objects they looted from the sites and sold on the art market became prized by a small number of art collectors in Mexico and the United States. Later, archaeologists excavated sites in the area, contributing crucial information about the original burial context for these works.\n",
+            "remarks":"AAA1_20-T6-3_CLA_FA_9_17_25.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":244115,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX23_5679",
+            "isprimary":0,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":244116,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX23_5678",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"Christine Betton Niederberger, <EM>Paléopaysages et archéologie pré-urbaine du Bassin de Mexico</EM>, Vols. 1-2&nbsp;(Mexico City: Centre d’études mexicaines et centraméricaines, 1987).",
+            "citation":"Christine Betton Niederberger, <EM>Paléopaysages et archéologie pré-urbaine du Bassin de Mexico</EM>, Vols. 1-2&nbsp;(Mexico City: Centre d’études mexicaines et centraméricaines, 1987)., fig. 106 (illus.)",
+            "date":1987,
+            "id":2649,
+            "uri":"https://search.worldcat.org/title/16502451"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Mexico, Mexico City, Central Mexico, Tlatilco",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Mesoamerica",
+            "country":"Mexico",
+            "region":"Central Mexico",
+            "state":null,
+            "city":"Mexico City",
+            "county":null,
+            "subregion":null,
+            "locale":"Tlatilco",
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":null,
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2035648,
+            "term":"Early Preclassic",
+            "aatid":300016970,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2035649,
+            "term":"Early Formative",
+            "aatid":300016970,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2035688,
+            "term":"Tlatilco",
+            "aatid":300017007,
+            "termtype":"Culture"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        }
+    ],
+    "cultures":[
+        {
+            "id":13858,
+            "culture":"Tlatilco",
+            "alphasort":"Tlatilco",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Tlatilco (Type D1)",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2035688,
+            "culture":"Tlatilco"
+        }
+    ],
+    "periods":[
+        {
+            "id":24008,
+            "period":"Early Formative Period",
+            "alphasort":"Formative Period, Early",
+            "begindate":0,
+            "enddate":0,
+            "displayperiod":"Early Formative Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035648,
+            "period":"Early Preclassic"
+        },
+        {
+            "id":2035649,
+            "period":"Early Formative"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"14.00"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"4.40"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"2.20"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":207234,
+            "name":"SAB_Gala2021"
+        },
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX23_5678"
+    ],
+    "displaymaker":null,
+    "displayculture":"Tlatilco (Type D1)",
+    "displayperiod":"Early Formative Period",
+    "caption":"Tlatilco (Type D1), Early Formative Period, 1400–1100 BCE, Mexico City, Central Mexico, Mexico, Mesoamerica, Elaborately costumed male figurine. Ceramic with traces of white and yellow slip-paint; 14 × 4.4 × 2.2 cm. Museum purchase, Gillett G. Griffin Art of the Ancient Americas Fund (2022-105)",
+    "captionhtml":"Tlatilco (Type D1), Early Formative Period, 1400–1100 BCE, Mexico City, Central Mexico, Mexico, Mesoamerica, <i>Elaborately costumed male figurine</i>. Ceramic with traces of white and yellow slip-paint; 14 × 4.4 × 2.2 cm. Museum purchase, Gillett G. Griffin Art of the Ancient Americas Fund (2022-105)",
+    "published_date":"2026-02-11 14:55:20.619445",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

@@ -1,0 +1,151 @@
+{
+    "type":"artobject",
+    "objectid":135794,
+    "objectnumber":"PP736",
+    "sortnumber":"P       736P",
+    "displaytitle":"Carl A. Fields",
+    "department":"American Art",
+    "classification":"Paintings",
+    "datebegin":2019,
+    "dateend":2019,
+    "datecomputed":2019,
+    "daterange":"A.D. 1945-present",
+    "displaydate":"2019",
+    "medium":"Oil on canvas",
+    "dimensions":"frame: 74.3 × 59.1 × 7 cm (29 1/4 × 23 1/4 × 2 3/4 in.)\r\nPainting: 61 × 45.7 cm (24 × 18 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Princeton University",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":"Restricted Download - Under Copyright",
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"true",
+    "on_view":true,
+    "accessionyear":null,
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Carl A. Fields",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[
+        {
+            "id":21675,
+            "displayname":"Simmie Knox",
+            "displaydate":"born 1935, Aliceville, AL; active Maryland",
+            "datebegin":1935,
+            "dateend":0,
+            "prefix":null,
+            "suffix":null,
+            "role":"Artist",
+            "displaymaker":"Simmie Knox, born 1935, Aliceville, AL; active Maryland",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[],
+    "media":[
+        {
+            "id":221236,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMSTU2018-1956549",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":"Restricted Download - Under Copyright",
+            "caption":"PUAM Photo"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[],
+    "terms":[
+        {
+            "id":2052977,
+            "term":"paintings",
+            "aatid":300033618,
+            "termtype":"Classification"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2052977,
+            "classification":"paintings"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199324,
+            "term":"Art Since 1945",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199325,
+            "term":"North American Art",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"frame",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"74.29"
+        },
+        {
+            "element":"frame",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"59.05"
+        },
+        {
+            "element":"frame",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"6.98"
+        },
+        {
+            "element":"Painting",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"60.95"
+        },
+        {
+            "element":"Painting",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"45.71"
+        }
+    ],
+    "packages":[],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMSTU2018-1956549"
+    ],
+    "displaymaker":"Simmie Knox, born 1935, Aliceville, AL; active Maryland",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"Simmie Knox (born 1935, Aliceville, AL; active Maryland), Carl A. Fields, 2019. Oil on canvas; 74.3 × 59.1 × 7 cm (frame), 61 × 45.7 cm (Painting). Princeton University (PP736)",
+    "captionhtml":"Simmie Knox (born 1935, Aliceville, AL; active Maryland), <i>Carl A. Fields</i>, 2019. Oil on canvas; 74.3 × 59.1 × 7 cm (frame), 61 × 45.7 cm (Painting). Princeton University (PP736)",
+    "published_date":"2026-03-31 03:30:43.025759",
+    "campusart":[
+        {
+            "campuscollections":"true",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

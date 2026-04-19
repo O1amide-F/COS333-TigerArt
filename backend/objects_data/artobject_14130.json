@@ -1,0 +1,267 @@
+{
+    "type":"artobject",
+    "objectid":14130,
+    "objectnumber":"2016-1095",
+    "sortnumber":"2016 1095",
+    "displaytitle":"Warrior with shield",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ceramic",
+    "datebegin":-100,
+    "dateend":300,
+    "datecomputed":100,
+    "daterange":"A.D. 1-500",
+    "displaydate":"100 BCE–300 CE",
+    "medium":"Ceramic with traces of slip-paint",
+    "dimensions":"21.2 × 11.4 × 9.4 cm (8 3/8 × 4 1/2 × 3 11/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Bequest of Gillett G. Griffin",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":"L.1966.190",
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2016-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Warrior with shield",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\tBy 1966, Gillett G. Griffin (1928-2016), Princeton, NJ [1]; 2016, bequest of Gillett G. Griffin to the Princeton University Art Museum.\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] Griffin lent the work to the Museum in 1966 (L.1966.190).\n</p>",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"The rectangular elements concealing the bodies of these three figurines, each painted with swirling designs, likely depict shields, identifying the subjects as warriors. The shields may have been made of fabric or leather, as they were in other parts of Mesoamerica, because these pliable materials reduce the impact of hurled darts or thrust spears more effectively than unyielding materials such as wood. The headdresses worn by the figures may indicate military rank. Two warriors share similar headdresses, as though reflections of each other. The headdresses are decorated with bird faces topped with finials, possibly alluding to a bird’s crest or tail feathers. Because these three warrior figures lack archaeological context, it is unknown whether they were placed in a shaft tomb with objects representing other members of this military squad.\n",
+            "remarks":"AAA1_20-T6-3_CLA_FA_9_17_25.pdf - Day 1 installation - Group chat for 2016-1094, 2016-1095, and 2016-1096"
+        }
+    ],
+    "media":[
+        {
+            "id":21029,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV0000385_1",
+            "isprimary":0,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Image"
+        },
+        {
+            "id":21037,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV0000384_1",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Image"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Mexico, Nayarit, West Mexico",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Mesoamerica",
+            "country":"Mexico",
+            "region":"West Mexico",
+            "state":"Nayarit",
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3995012/estado-de-nayarit.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2055437,
+            "term":"figurines",
+            "aatid":300047455,
+            "termtype":"Classification"
+        },
+        {
+            "id":2055657,
+            "term":"figures (representations)",
+            "aatid":300189808,
+            "termtype":"Subject"
+        },
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2158100,
+            "term":"warriors",
+            "aatid":null,
+            "termtype":"Classification"
+        },
+        {
+            "id":2129929,
+            "term":"shields (armor)",
+            "aatid":300036869,
+            "termtype":"Subject"
+        },
+        {
+            "id":2035656,
+            "term":"Late Preclassic",
+            "aatid":300016976,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2035846,
+            "term":"Nayarit",
+            "aatid":300017205,
+            "termtype":"Culture"
+        },
+        {
+            "id":2131826,
+            "term":"headdresses",
+            "aatid":300046023,
+            "termtype":"Subject"
+        },
+        {
+            "id":2168423,
+            "term":"pigment",
+            "aatid":300013109,
+            "termtype":"Materials"
+        },
+        {
+            "id":2160750,
+            "term":"ceramic",
+            "aatid":300235507,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2055437,
+            "classification":"figurines"
+        },
+        {
+            "id":2158100,
+            "classification":"warriors"
+        },
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        }
+    ],
+    "cultures":[
+        {
+            "id":24045,
+            "culture":"Lagunillas",
+            "alphasort":"Lagunillas",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Lagunillas C style",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2035846,
+            "culture":"Nayarit"
+        }
+    ],
+    "periods":[
+        {
+            "id":24009,
+            "period":"Late Formative Period",
+            "alphasort":"Formative Period, Late",
+            "begindate":0,
+            "enddate":0,
+            "displayperiod":"Late Formative Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035656,
+            "period":"Late Preclassic"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"21.20"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"11.40"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"9.40"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV0000384_1"
+    ],
+    "displaymaker":null,
+    "displayculture":"Lagunillas C style",
+    "displayperiod":"Late Formative Period",
+    "caption":"Lagunillas C style, Late Formative Period, 100 BCE–300 CE, Nayarit, West Mexico, Mexico, Mesoamerica, Warrior with shield. Ceramic with traces of slip-paint; 21.2 × 11.4 × 9.4 cm. Bequest of Gillett G. Griffin (2016-1095)",
+    "captionhtml":"Lagunillas C style, Late Formative Period, 100 BCE–300 CE, Nayarit, West Mexico, Mexico, Mesoamerica, <i>Warrior with shield</i>. Ceramic with traces of slip-paint; 21.2 × 11.4 × 9.4 cm. Bequest of Gillett G. Griffin (2016-1095)",
+    "published_date":"2026-02-11 08:54:34.352729",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

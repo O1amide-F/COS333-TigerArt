@@ -1,0 +1,190 @@
+{
+    "type":"artobject",
+    "objectid":112247,
+    "objectnumber":"y1939-170",
+    "sortnumber":"1939  170y",
+    "displaytitle":"Lamp depicting Athena Parthenos",
+    "department":"Ancient, Byzantine, and Islamic Art",
+    "classification":"Ceramics",
+    "datebegin":0,
+    "dateend":1939,
+    "datecomputed":null,
+    "daterange":"",
+    "displaydate":null,
+    "medium":"Terracotta",
+    "dimensions":"",
+    "dimensionsproposed":"",
+    "creditline":"Gift of the Committee for the Excavation of Antioch to Princeton University",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"1939-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Lamp depicting Athena Parthenos",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"Excavated by the Princeton-led team at Antioch-on-the-Orontes, present-day Antakya, Turkey, 1931-1939; with the Museum since 1939",
+            "remarks":"Batch edit for Provenance publication project"
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"Many of the archaeological finds from Antioch—and the ancient Mediterranean more broadly—survive in multiple pieces. While some pieces can be reassembled, fragmentary artifacts represent the majority of the small finds from Antioch that are under the care of Princeton University. Despite their partially preserved state, these objects reveal much about the cultural environment of the city. Objects in this case, which includes coins, oil lamps, and statues, feature figures associated with the various religions practiced in Antioch, including Christianity, Greco-Roman polytheism, Judaism, and Islam. This juxtaposition of cultural traditions is also exemplified by the mosaic nearby, which depicts both a well-known Greco-Roman myth (that of Apollo and Daphne) and decorative motifs seen more broadly across the surviving Antioch mosaics, such as the braid-like lines and zigzags that flank the central scene, a pattern that is also repeated on the lamp displayed in this case.\n",
+            "remarks":"MED2_22_WLA.pdf – Day One Cataloguing (group chat for 2000-47, 2000-40, 2000-56, y1939-175, y1939-174, y1939-173, y1939-170, y1939-168, y1939-169, 1939-172, y1939-176, y1939-178, y1939-177, NBGP-027, NBGP-028, NBGP-029, L.2025.3.2)"
+        }
+    ],
+    "media":[
+        {
+            "id":167839,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV80007",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place excavated: Turkey",
+            "code":"Place excavated",
+            "continent":null,
+            "subcontinent":null,
+            "country":"Turkey",
+            "region":null,
+            "state":null,
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":"Antioch-on-the-Orontes",
+            "geoname":null,
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        },
+        {
+            "displaygeography":"Place made: Turkey",
+            "code":"Place made",
+            "continent":null,
+            "subcontinent":null,
+            "country":"Turkey",
+            "region":null,
+            "state":null,
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":null,
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2108112,
+            "term":"capitals",
+            "aatid":300001662,
+            "termtype":"Classification"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2108112,
+            "classification":"capitals"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[],
+    "periods":[
+        {
+            "id":12861,
+            "period":"Roman Imperial Period",
+            "alphasort":"Roman Imperial Period",
+            "begindate":-30,
+            "enddate":467,
+            "displayperiod":"Roman Imperial Period, ca. 30 BCE–476 CE",
+            "displaydate":"ca. 30 BCE–476 CE"
+        }
+    ],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199316,
+            "term":"Ancient Mediterranean Art",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199342,
+            "term":"Antioch Collection",
+            "termtype":"Archive | Collection"
+        }
+    ],
+    "dimensionelements":[],
+    "packages":[
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":281905,
+            "name":"Web_Archive|Collection_Antioch_ObjNumber"
+        },
+        {
+            "packageid":278709,
+            "name":"Web_Archive|Collection_Antioch_Objs"
+        },
+        {
+            "packageid":220207,
+            "name":"Gallery_22(Pavilion6)-AncientMed"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV80007"
+    ],
+    "displaymaker":null,
+    "displayculture":null,
+    "displayperiod":"Roman Imperial Period, ca. 30 BCE–476 CE",
+    "caption":"Roman Imperial Period (ca. 30 BCE–476 CE), Turkey, Lamp depicting Athena Parthenos. Terracotta. Gift of the Committee for the Excavation of Antioch to Princeton University (y1939-170)",
+    "captionhtml":"Roman Imperial Period (ca. 30 BCE–476 CE), Turkey, <i>Lamp depicting Athena Parthenos</i>. Terracotta. Gift of the Committee for the Excavation of Antioch to Princeton University (y1939-170)",
+    "published_date":"2026-04-03 02:00:48.850892",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

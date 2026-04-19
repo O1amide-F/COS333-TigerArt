@@ -1,0 +1,255 @@
+{
+    "type":"artobject",
+    "objectid":142061,
+    "objectnumber":"2024-30",
+    "sortnumber":"2024   30",
+    "displaytitle":"Anthropomorphic bottle",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ceramic",
+    "datebegin":850,
+    "dateend":1000,
+    "datecomputed":925,
+    "daterange":"A.D. 500-1000",
+    "displaydate":"850–1000",
+    "medium":"Ceramic with polychrome slip-paint",
+    "dimensions":"h. 24.1, diam. 15.2 cm (9 1/2 × 6 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Museum purchase, The Peter Jay Sharp, Class of 1952, Curatorship of the Art of the Ancient Americas",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":"",
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2024-01-01",
+    "newaccession":1,
+    "titles":[
+        {
+            "title":"Anthropomorphic bottle",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"The expansive influence of the interrelated Tiwanaku and Wari empires defines the Middle Horizon period in Peruvian archaeology. From about 500 to 1000 CE, Tiwanaku was the hub of trade networks. With its eponymous center on Lake Titicaca, it encompassed and expanded beyond what is today Bolivia. The Wari empire, situated to the north, simultaneously imposed its own systems of control and aesthetics on communities throughout much of what is today Peru. Their art shares many stylistic features, although some Wari art employs complex forms of abstraction not seen in Tiwanaku visual culture. On the tunic\n\nworn by the Wari male figure above, for example, the interlocking opposed skeletal heads become colorful stripes. The Tiwanaku wood kero (ceremonial drinking cup) presents a frontal face with emanating, serpentine rays, a signature motif of Tiwanaku art that also adorns the silver plumes in the case opposite.\n",
+            "remarks":"AAA2_20-T6-1_CLA_FA.pdf - Day 1 installation"
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\tBy 1969, John and Sue Tishman, New York (P25/P29) [1]; 2007, purchased by private collector, New York [2]; 2024, private collection, New York, sold to Princeton University Art Museum.\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] The Tishmans assigned numbers to works in their collection, whereby lower-numbered objects were acquired prior to higher-numbered objects. The numbers changed over time as works were donated or sold from the collection. A series of appraisals of the collection produced by Robert Sonin, copies of which are in the curatorial file and date as early as 1970, list this object as P25 or P29 depending on the copy. Another work on the list, numbered P31 and P35, respectively, was exhibited and published in 1969, providing a terminus ante quem by which the proposed object was in the Tishman collection.\n</p>",
+            "remarks":null
+        }
+    ],
+    "media":[
+        {
+            "id":252752,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX24_240514_13335",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":252753,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX24_240514_13336",
+            "isprimary":0,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":252754,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX24_240514_13337",
+            "isprimary":0,
+            "rank":3,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":252755,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX24_240514_13338",
+            "isprimary":0,
+            "rank":4,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":252756,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX24_240514_13339",
+            "isprimary":0,
+            "rank":5,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: South America, Peru, South coast",
+            "code":"Place made",
+            "continent":"South America",
+            "subcontinent":"Andes",
+            "country":"Peru",
+            "region":"South coast",
+            "state":null,
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":null,
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2072893,
+            "term":"bottles",
+            "aatid":300045627,
+            "termtype":"Classification"
+        },
+        {
+            "id":2036029,
+            "term":"Huari",
+            "aatid":300017283,
+            "termtype":"Culture"
+        },
+        {
+            "id":2036036,
+            "term":"Middle horizon",
+            "aatid":300017300,
+            "termtype":"Period / Style"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2072893,
+            "classification":"bottles"
+        },
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        }
+    ],
+    "cultures":[
+        {
+            "id":13511,
+            "culture":"Wari",
+            "alphasort":"Wari",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Wari (possibly Atarco style)",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2036029,
+            "culture":"Huari"
+        }
+    ],
+    "periods":[
+        {
+            "id":13507,
+            "period":"Middle Horizon",
+            "alphasort":"Horizon, Middle",
+            "begindate":550,
+            "enddate":1000,
+            "displayperiod":"Middle Horizon (Epoch 2)",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2036036,
+            "period":"Middle horizon"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"24.12"
+        },
+        {
+            "element":"Overall",
+            "type":"diam.",
+            "units":"centimeters",
+            "dimension":"15.23"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":207234,
+            "name":"SAB_Gala2021"
+        },
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMANX24_240514_13335"
+    ],
+    "displaymaker":null,
+    "displayculture":"Wari (possibly Atarco style)",
+    "displayperiod":"Middle Horizon (Epoch 2)",
+    "caption":"Wari (possibly Atarco style), Middle Horizon (Epoch 2), 850–1000, South coast, Peru, Andes, Anthropomorphic bottle. Ceramic with polychrome slip-paint; 24.1 × 15.2 cm. Museum purchase, The Peter Jay Sharp, Class of 1952, Curatorship of the Art of the Ancient Americas (2024-30)",
+    "captionhtml":"Wari (possibly Atarco style), Middle Horizon (Epoch 2), 850–1000, South coast, Peru, Andes, <i>Anthropomorphic bottle</i>. Ceramic with polychrome slip-paint; 24.1 × 15.2 cm. Museum purchase, The Peter Jay Sharp, Class of 1952, Curatorship of the Art of the Ancient Americas (2024-30)",
+    "published_date":"2026-02-11 15:05:08.142968",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

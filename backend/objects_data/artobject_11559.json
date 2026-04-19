@@ -1,0 +1,271 @@
+{
+    "type":"artobject",
+    "objectid":11559,
+    "objectnumber":"x1971-193",
+    "sortnumber":"1971  193x",
+    "displaytitle":"Detail of O’Keeffe painting and reflections, An American Place, New York",
+    "department":"Photography",
+    "classification":"Photographs",
+    "datebegin":1939,
+    "dateend":1939,
+    "datecomputed":1939,
+    "daterange":"A.D. 1900-1945",
+    "displaydate":"1939",
+    "medium":"Gelatin silver print",
+    "dimensions":"18.1 x 22.5 cm (7 1/8 x 8 7/8 in.)\r\nmount: 35.6 x 43.7 cm. (14 x 17 3/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Gift of David H. McAlpin, Class of 1920",
+    "markings":null,
+    "inscribed":"In graphite, left corner: #3\r\nIn graphite, verso top center: Detail of O'Keefe Paingint, and Reflections / An American Place / Gallery of Alfred Stieglitz /1939 / Ansel Adams",
+    "signed":"Signed on verso top center",
+    "catalograisonne":null,
+    "creditlinerepro":"© The Ansel Adams Publishing Rights Trust",
+    "restrictions":"Restricted",
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"1971-01-01",
+    "newaccession":0,
+    "titles":[],
+    "makers":[
+        {
+            "id":17,
+            "displayname":"Ansel Adams",
+            "displaydate":"1902–1984; born San Francisco, CA; died Monterey, CA; active San Francisco, CA and Carmel-by-the-Sea, CA",
+            "datebegin":1902,
+            "dateend":1984,
+            "prefix":null,
+            "suffix":null,
+            "role":"Artist",
+            "displaymaker":"Ansel Adams, 1902–1984; born San Francisco, CA; died Monterey, CA; active San Francisco, CA and Carmel-by-the-Sea, CA",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"The artist. Acquired by David H. McAlpin, after 1958; given to the Princeton University Art Museum, 1970.\n",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"In 1905, the photographer, gallerist, and publisher Alfred Stieglitz (1864–1946) opened the Little Galleries of the Photo-Secession at 291 Fifth Avenue in New York, in the former studio of fellow photographer Edward Steichen (1879–1973). Known as 291, the small space was of outsize significance in displaying the work of the Photo-Secession, a group of photographers including Steichen, Gertrude Käsebier, and Clarence White who sought to establish photography as a fine art with manipulated, often soft-focus imagery. Both 291 and Stieglitz’s later galleries, the Intimate Gallery (1925–29) and An American Place (1929–46), served as important sites for the introduction of modern European art to the United States—and, increasingly, for promoting the work of American modernists, including Ansel Adams and Marsden Hartley. Adams’s photograph offers a glimpse into Stieglitz’s final gallery and depicts a painting by Georgia O’Keeffe, one of Stieglitz’s most renowned exhibitors and, after 1924, his wife. In its fragmentary, close-cropped composition and its abstract reflections, the photograph exemplifies the modernist idiom of the group eventually known as the Stieglitz Circle.\n",
+            "remarks":"AMER-STR_27-T5-1_CLA_01_FA01 Day 1 Cataloguing   Group chat for x1983-1121, x1975-124, x1983-250, x1971-193, and x1964-48"
+        }
+    ],
+    "media":[
+        {
+            "id":94834,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV20163",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":"Restricted",
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"<p>\"Acquisitions of the Art Museum 1971,\" <em>Record of the Art Museum, Princeton University,</em> 31 no. 1 (1972): p. 20-32.</p>",
+            "citation":"<p>\"Acquisitions of the Art Museum 1971,\" <em>Record of the Art Museum, Princeton University,</em> 31 no. 1 (1972): p. 20-32.</p>, p. 24",
+            "date":1972,
+            "id":882,
+            "uri":"https://www.jstor.org/stable/3774565"
+        }
+    ],
+    "exhibitions":[
+        {
+            "exhibitionid":2145,
+            "citation":"Ansel Adams to Edward Weston: Celebrating the Legacy of David H. McAlpin Saturday, June 25, 2016 - Sunday, October 02, 2016",
+            "isvirtual":true,
+            "begindate":"2016-06-25",
+            "enddate":"2016-10-02",
+            "uri":"https://artmuseum.princeton.edu/art/exhibitions/2145"
+        }
+    ],
+    "geography":[
+        {
+            "displaygeography":"Place depicted: North America, United States, New York, Manhattan, New York, An American Place, 53rd Street and Madison Avenue",
+            "code":"Place depicted",
+            "continent":"North America",
+            "subcontinent":null,
+            "country":"United States",
+            "region":null,
+            "state":"New York",
+            "city":"Manhattan, New York",
+            "county":null,
+            "subregion":null,
+            "locale":"An American Place, 53rd Street and Madison Avenue",
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/5125771/manhattan.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2038492,
+            "term":"American",
+            "aatid":300107956,
+            "termtype":"Culture"
+        },
+        {
+            "id":2053728,
+            "term":"black-and-white photographs",
+            "aatid":300128347,
+            "termtype":"Classification"
+        },
+        {
+            "id":2053541,
+            "term":"gelatin silver prints",
+            "aatid":300128695,
+            "termtype":"Classification"
+        },
+        {
+            "id":2114765,
+            "term":"shelves",
+            "aatid":300165847,
+            "termtype":"Subject"
+        },
+        {
+            "id":2097800,
+            "term":"storage",
+            "aatid":300056390,
+            "termtype":"Subject"
+        },
+        {
+            "id":2052977,
+            "term":"paintings",
+            "aatid":300033618,
+            "termtype":"Subject"
+        },
+        {
+            "id":2053200,
+            "term":"photographs",
+            "aatid":300046300,
+            "termtype":"Classification"
+        },
+        {
+            "id":2098998,
+            "term":"reflections",
+            "aatid":300056034,
+            "termtype":"Subject"
+        },
+        {
+            "id":2156299,
+            "term":"mounting",
+            "aatid":300081370,
+            "termtype":"Techniques"
+        },
+        {
+            "id":2154022,
+            "term":"gelatin silver process",
+            "aatid":300139114,
+            "termtype":"Techniques"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2053200,
+            "classification":"photographs"
+        },
+        {
+            "id":2053541,
+            "classification":"gelatin silver prints"
+        },
+        {
+            "id":2053728,
+            "classification":"black-and-white photographs"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[
+        {
+            "id":2038492,
+            "culture":"American"
+        }
+    ],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199325,
+            "term":"North American Art",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199326,
+            "term":"Photography",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"mount",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"35.60"
+        },
+        {
+            "element":"mount",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"43.70"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"22.50"
+        },
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"18.10"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":213904,
+            "name":"Gallery_23-27(Pavilion7)-American"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":188098,
+            "name":"x-image_descriptions_AL_photography"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV20163"
+    ],
+    "displaymaker":"Ansel Adams, 1902–1984; born San Francisco, CA; died Monterey, CA; active San Francisco, CA and Carmel-by-the-Sea, CA",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"Ansel Adams (1902–1984; born San Francisco, CA; died Monterey, CA; active San Francisco, CA and Carmel-by-the-Sea, CA), Detail of O’Keeffe painting and reflections, An American Place, New York, 1939. Gelatin silver print; 18.1 x 22.5 cm. Gift of David H. McAlpin, Class of 1920 (x1971-193)",
+    "captionhtml":"Ansel Adams (1902–1984; born San Francisco, CA; died Monterey, CA; active San Francisco, CA and Carmel-by-the-Sea, CA), Detail of O’Keeffe painting and reflections, An American Place, New York, 1939. Gelatin silver print; 18.1 x 22.5 cm. Gift of David H. McAlpin, Class of 1920 (x1971-193)",
+    "published_date":"2026-03-05 08:39:32.679390",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":true
+}

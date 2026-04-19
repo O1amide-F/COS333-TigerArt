@@ -1,0 +1,305 @@
+{
+    "type":"artobject",
+    "objectid":11120,
+    "objectnumber":"2016-1071",
+    "sortnumber":"2016 1071",
+    "displaytitle":"Seated figure holding a club",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ceramic",
+    "datebegin":-300,
+    "dateend":200,
+    "datecomputed":-50,
+    "daterange":"1000 B.C.-A.D 1",
+    "displaydate":"300 BCE–200 CE",
+    "medium":"Ceramic with red and cream slip-paint",
+    "dimensions":"26.5 × 24 × 15.7 cm (10 7/16 × 9 7/16 × 6 3/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Bequest of Gillett G. Griffin",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":"",
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":"L.1967.66",
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2016-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Seated figure holding a club",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p><p>\n\tBy 1967, Gillett G. Griffin (1928-2016), Princeton, NJ [1]; 2016, bequest of Gillett G. Griffin to the Princeton University Art Museum.\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] On loan to the museum in 1967 (L.1967.66)\n</p>\n</p>\n<font face=\"Times New Roman\" size=\"3\">  </font>",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"The Late Formative–period cultures of western Mexico—in the present-day states of Jalisco, Nayarit, Colima, and Michoacán—shared a tradition of burying the deceased in deep shaft tombs, often located under homes. These tombs could accommodate generations of family members: When someone died, the bones of their ancestors were moved aside to create room for the new ancestor. A great variety of ceramic objects accompanied the dead. Human figures might represent loved ones or key moments in the history of the interred. Ceramic animals might have been perceived as providing sustenance in the afterlife, or they may have been seen as eternal companions. Archaeological excavations in the region have uncovered these ceramic objects in contexts other than tombs, however, raising the likelihood that at least some “tomb sculptures” had other functions prior to their interment.\n",
+            "remarks":"AAA1_20-T6-3_CLA_FA_9_17_25.pdf - Day 1 installation - Group chat for 2016-1239, y1990-16, 2016-1071, and 2015-6691"
+        }
+    ],
+    "media":[
+        {
+            "id":21030,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV0000364_1",
+            "isprimary":0,
+            "rank":3,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Image"
+        },
+        {
+            "id":21049,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV0000363_1",
+            "isprimary":1,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Image"
+        },
+        {
+            "id":21050,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV0000365_1",
+            "isprimary":0,
+            "rank":4,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Image"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"<p>\"Acquisitions of the Princeton University Art Museum 2016,\" <em>Record of the Art Museum, Princeton University</em> 75/76 (2016-17): 126-157.</p>",
+            "citation":"<p>\"Acquisitions of the Princeton University Art Museum 2016,\" <em>Record of the Art Museum, Princeton University</em> 75/76 (2016-17): 126-157.</p>, p. 155",
+            "date":2016,
+            "id":9662,
+            "uri":"https://www.jstor.org/stable/i40228781"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Mexico, Colima, West Mexico",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Mesoamerica",
+            "country":"Mexico",
+            "region":"West Mexico",
+            "state":"Colima",
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/4013513/estado-de-colima.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2055438,
+            "term":"figurines",
+            "aatid":300047455,
+            "termtype":"Classification"
+        },
+        {
+            "id":2117201,
+            "term":"spouts",
+            "aatid":300197224,
+            "termtype":"Classification"
+        },
+        {
+            "id":2039243,
+            "term":"Colima",
+            "aatid":300017197,
+            "termtype":"Culture"
+        },
+        {
+            "id":2055657,
+            "term":"figures (representations)",
+            "aatid":300189808,
+            "termtype":"Subject"
+        },
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2090947,
+            "term":"shamans",
+            "aatid":300218522,
+            "termtype":"Subject"
+        },
+        {
+            "id":2035656,
+            "term":"Late Preclassic",
+            "aatid":300016976,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2035837,
+            "term":"Colima",
+            "aatid":300017197,
+            "termtype":"Culture"
+        },
+        {
+            "id":2072851,
+            "term":"vessels (containers)",
+            "aatid":300193015,
+            "termtype":"Classification"
+        },
+        {
+            "id":2160397,
+            "term":"slip",
+            "aatid":300010459,
+            "termtype":"Materials"
+        },
+        {
+            "id":2152702,
+            "term":"burnishing (polishing)",
+            "aatid":300053869,
+            "termtype":"Techniques"
+        },
+        {
+            "id":2160750,
+            "term":"ceramic",
+            "aatid":300235507,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2117201,
+            "classification":"spouts"
+        },
+        {
+            "id":2055438,
+            "classification":"figurines"
+        },
+        {
+            "id":2072851,
+            "classification":"vessels (containers)"
+        },
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        }
+    ],
+    "cultures":[
+        {
+            "id":17720,
+            "culture":"Comala",
+            "alphasort":"Comala",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Comala style",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2039243,
+            "culture":"Colima"
+        },
+        {
+            "id":2035837,
+            "culture":"Colima"
+        }
+    ],
+    "periods":[
+        {
+            "id":24009,
+            "period":"Late Formative Period",
+            "alphasort":"Formative Period, Late",
+            "begindate":0,
+            "enddate":0,
+            "displayperiod":"Late Formative Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035656,
+            "period":"Late Preclassic"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"26.50"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"24.00"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"15.70"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV0000363_1"
+    ],
+    "displaymaker":null,
+    "displayculture":"Comala style",
+    "displayperiod":"Late Formative Period",
+    "caption":"Comala style, Late Formative Period, 300 BCE–200 CE, Colima, West Mexico, Mexico, Mesoamerica, Seated figure holding a club. Ceramic with red and cream slip-paint; 26.5 × 24 × 15.7 cm. Bequest of Gillett G. Griffin (2016-1071)",
+    "captionhtml":"Comala style, Late Formative Period, 300 BCE–200 CE, Colima, West Mexico, Mexico, Mesoamerica, <i>Seated figure holding a club</i>. Ceramic with red and cream slip-paint; 26.5 × 24 × 15.7 cm. Bequest of Gillett G. Griffin (2016-1071)",
+    "published_date":"2026-02-11 08:39:06.308405",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":true
+}

@@ -1,0 +1,175 @@
+{
+    "type":"artobject",
+    "objectid":138829,
+    "objectnumber":"PU 2017-211",
+    "sortnumber":"U      2017P  211",
+    "displaytitle":"Cemí",
+    "department":"Departmental Collections",
+    "classification":"Tools / Equipment / Implements",
+    "datebegin":1200,
+    "dateend":1500,
+    "datecomputed":1350,
+    "daterange":"A.D. 1000-1500",
+    "displaydate":"1200–1500",
+    "medium":"Stone",
+    "dimensions":"12.2 × 11.6 × 26.7 cm (4 13/16 × 4 9/16 × 10 1/2 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Department of Geosciences, Princeton University",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":null,
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Cemí",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"Princeton University, Department of Geosciences collection, by 2017.",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"<p>Taíno <i>caciques </i>(community leaders) amassed fine sacred objects as demonstrations of their wealth and power, although Taíno <i>behiques </i>(shamans) also owned many of the same kinds of powerful objects. <i>Cemís </i>were particularly potent vital forces that could\n\nreside in various forms and were made in a variety of media. The triangular stone on view here is an example of one form that could be associated with <i>cemís</i>. Fancy ceramic vessels were used for feasts and possibly to contain the ground seeds of the\n\ncohoba tree, which were crushed with mortars—such as the example displayed here with an owl’s head—and inhaled for their potent mind-altering effects. Other fine sculptures were made as pendants, including the white stone figure. This example, like many others, seems to depict a bound captive.\n</p><p>Sixteenth-century Spaniards sought to record aspectsof Native culture and religion, primarily to facilitate erasure of those practices and replacement by European and Christian ideas. Some noted that the three-pointed stone sculptures known as <i>cemís</i>,\n\nsuch as this example, had a relationship with cassava, a root that was a basic part of the Taíno diet. It was associated with potent spirit forces, whether of deities or ancestors. As indicated in the white writing, this example was found in Puerto Rico. The number refers to its cataloguing as part of the collection of George Latimer (1803–1874), a Philadelphian who settled in Puerto Rico and amassed a large collection of ancient Taíno objects while there, which he in turn donated to the Smithsonian Institution. In 1877 the Smithsonian allowed Arnold Guyot, then director of Princeton’s natural history museum, to select objects\n\nfrom its collections to populate the burgeoning museum. Guyot selected this object.\n </p>",
+            "remarks":"AAA2_20-T6-2_CLA_FA_9_17_25.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":248772,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PU2017-211_ref_1",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Reference Image"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, United States, Puerto Rico",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Intermediate area",
+            "country":"United States",
+            "region":null,
+            "state":"Puerto Rico",
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":null,
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[],
+    "classifications":[],
+    "cultures":[
+        {
+            "id":13908,
+            "culture":"Taíno",
+            "alphasort":"Taíno",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Taíno",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[],
+    "periods":[
+        {
+            "id":24006,
+            "period":"Integration Period",
+            "alphasort":"Integration Period",
+            "begindate":0,
+            "enddate":0,
+            "displayperiod":"Integration Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[],
+    "attribute_groups":[],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"12.20"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"11.60"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"26.70"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278648,
+            "name":"<New mbey 2025-10-23 14:05:43>"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":277757,
+            "name":"Web_ObjsOnView_NoPrimaryImage_20251010"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/PU2017-211_ref_1"
+    ],
+    "displaymaker":null,
+    "displayculture":"Taíno",
+    "displayperiod":"Integration Period",
+    "caption":"Taíno, Integration Period, Cemí, 1200–1500. Stone; 12.2 × 11.6 × 26.7 cm. Department of Geosciences, Princeton University (PU 2017-211)",
+    "captionhtml":"Taíno, Integration Period, <i>Cemí</i>, 1200–1500. Stone; 12.2 × 11.6 × 26.7 cm. Department of Geosciences, Princeton University (PU 2017-211)",
+    "published_date":"2026-02-11 14:54:47.321665",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

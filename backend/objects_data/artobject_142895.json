@@ -1,0 +1,189 @@
+{
+    "type":"artobject",
+    "objectid":142895,
+    "objectnumber":"2025-114",
+    "sortnumber":"2025  114",
+    "displaytitle":"Easy Rider",
+    "department":"Modern and Contemporary Art",
+    "classification":"Sculpture",
+    "datebegin":2002,
+    "dateend":2002,
+    "datecomputed":2002,
+    "daterange":"A.D. 1945-present",
+    "displaydate":"2002",
+    "medium":"Forged steel",
+    "dimensions":"302.3 × 182.9 × 34.9 cm (119 × 72 × 13 3/4 in.)",
+    "dimensionsproposed":"",
+    "creditline":"From the collection of Doris and Don Fisher, gift of Robert J. Fisher, Class of 1976, William S. Fisher, Class of 1979, and John J. Fisher, Class of 1983, in honor of their parents Doris and Don Fisher",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":"© Estate of Richard Serra / Artists Rights Society (ARS), New York",
+    "restrictions":"Restricted Download - Under Copyright and Reference Image",
+    "nowebuse":"False",
+    "secondaryobjectnumber":"",
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2025-01-01",
+    "newaccession":1,
+    "titles":[
+        {
+            "title":"Easy Rider",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[
+        {
+            "id":3566,
+            "displayname":"Richard Serra",
+            "displaydate":"1938–2024; born San Francisco, CA; died Orient, NY; active New York, NY",
+            "datebegin":1938,
+            "dateend":2024,
+            "prefix":null,
+            "suffix":null,
+            "role":"Artist",
+            "displaymaker":"Richard Serra, 1938–2024; born San Francisco, CA; died Orient, NY; active New York, NY",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"Richard Serra; [Gagosian Gallery, New York, New York]; acquired by Doris and Don Fisher (2002); to their sons Robert Fisher, John Fisher, and William Fisher; gift to Princeton University Art Museum (July 2025)",
+            "remarks":"as per acquisition proposal"
+        }
+    ],
+    "media":[],
+    "hasimage":"false",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":null,
+            "code":"(not assigned)",
+            "continent":null,
+            "subcontinent":null,
+            "country":null,
+            "region":null,
+            "state":null,
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":null,
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2038492,
+            "term":"American",
+            "aatid":300107956,
+            "termtype":"Culture"
+        },
+        {
+            "id":2055271,
+            "term":"sculptures",
+            "aatid":300047203,
+            "termtype":"Classification"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2055271,
+            "classification":"sculptures"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[
+        {
+            "id":2038492,
+            "culture":"American"
+        }
+    ],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199324,
+            "term":"Art Since 1945",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199325,
+            "term":"North American Art",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199328,
+            "term":"Campus Art",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199332,
+            "term":"Princeton Collects",
+            "termtype":"Archive | Collection"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"302.25"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"182.87"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"34.92"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":264438,
+            "name":"CFA-since-1-1-2024"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":239550,
+            "name":"VP_Exterior Sculpture & Terrace"
+        }
+    ],
+    "primaryimage":"",
+    "displaymaker":"Richard Serra, 1938–2024; born San Francisco, CA; died Orient, NY; active New York, NY",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"Richard Serra (1938–2024; born San Francisco, CA; died Orient, NY; active New York, NY), Easy Rider, 2002. Forged steel; 302.3 × 182.9 × 34.9 cm. From the collection of Doris and Don Fisher, gift of Robert J. Fisher, Class of 1976, William S. Fisher, Class of 1979, and John J. Fisher, Class of 1983, in honor of their parents Doris and Don Fisher (2025-114)",
+    "captionhtml":"Richard Serra (1938–2024; born San Francisco, CA; died Orient, NY; active New York, NY), <i>Easy Rider</i>, 2002. Forged steel; 302.3 × 182.9 × 34.9 cm. From the collection of Doris and Don Fisher, gift of Robert J. Fisher, Class of 1976, William S. Fisher, Class of 1979, and John J. Fisher, Class of 1983, in honor of their parents Doris and Don Fisher (2025-114)",
+    "published_date":"2026-03-31 03:38:17.934487",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

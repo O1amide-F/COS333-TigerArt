@@ -1,0 +1,127 @@
+{
+    "type":"artobject",
+    "objectid":138544,
+    "objectnumber":"PP753",
+    "sortnumber":"P       753P",
+    "displaytitle":"Tina Ravitz",
+    "department":"American Art",
+    "classification":"Paintings",
+    "datebegin":2022,
+    "dateend":2022,
+    "datecomputed":2022,
+    "daterange":"A.D. 1945-present",
+    "displaydate":"2022",
+    "medium":"Oil on canvas",
+    "dimensions":"76.5 × 61.3 × 3.8 cm (30 1/8 × 24 1/8 × 1 1/2 in.)\r\nframe: 93.3 × 78.7 × 8.3 cm (36 3/4 × 31 × 3 1/4 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Princeton University",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":"Restricted Download - Under Copyright",
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"true",
+    "on_view":true,
+    "accessionyear":null,
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Tina Ravitz",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[
+        {
+            "id":21675,
+            "displayname":"Simmie Knox",
+            "displaydate":"born 1935, Aliceville, AL; active Maryland",
+            "datebegin":1935,
+            "dateend":0,
+            "prefix":null,
+            "suffix":null,
+            "role":"Artist",
+            "displaymaker":"Simmie Knox, born 1935, Aliceville, AL; active Maryland",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[],
+    "media":[],
+    "hasimage":"false",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[],
+    "terms":[],
+    "classifications":[],
+    "cultures":[],
+    "cultureterms":[],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199324,
+            "term":"Art Since 1945",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"frame",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"93.34"
+        },
+        {
+            "element":"frame",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"78.73"
+        },
+        {
+            "element":"frame",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"8.25"
+        },
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"76.51"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"61.27"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"3.80"
+        }
+    ],
+    "packages":[],
+    "primaryimage":"",
+    "displaymaker":"Simmie Knox, born 1935, Aliceville, AL; active Maryland",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"Simmie Knox (born 1935, Aliceville, AL; active Maryland), Tina Ravitz, 2022. Oil on canvas; 76.5 × 61.3 × 3.8 cm, 93.3 × 78.7 × 8.3 cm (frame). Princeton University (PP753)",
+    "captionhtml":"Simmie Knox (born 1935, Aliceville, AL; active Maryland), <i>Tina Ravitz</i>, 2022. Oil on canvas; 76.5 × 61.3 × 3.8 cm, 93.3 × 78.7 × 8.3 cm (frame). Princeton University (PP753)",
+    "published_date":"2026-03-31 03:34:31.954441",
+    "campusart":[
+        {
+            "campuscollections":"true",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

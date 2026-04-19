@@ -1,0 +1,269 @@
+{
+    "type":"artobject",
+    "objectid":137690,
+    "objectnumber":"2021-43",
+    "sortnumber":"2021   43",
+    "displaytitle":"Crescent-shaped ornament",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ornament",
+    "datebegin":600,
+    "dateend":800,
+    "datecomputed":700,
+    "daterange":"A.D. 500-1000",
+    "displaydate":"600–800",
+    "medium":"Copper alloy",
+    "dimensions":"7 × 8.2 cm (2 3/4 × 3 1/4 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Museum purchase, Gillett G. Griffin Art of the Ancient Americas Fund",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":"",
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2021-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Crescent-shaped ornament",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\tAfter December 6, 1969 and before 1976, sold by André Emmerich Gallery/Alan C. Lapiner, New York, to Robert Sonin (1926-2011), New York [1]; 2011, sold to private collection, New York; 2020, sold to the Princeton University Art Museum.\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] The work was exhibited and published in André Emmerich, Sun Gods and Saints: Art of Pre-Columbian and Colonial Peru (New York: André Emmerich Gallery, New York), fig. 40. It was subsequently published as collection of Robert Sonin in Alan C. Lapiner, Pre-Columbian Art of South America (New York: Harry N. Abrams, 1976), fig. 365.\n\t<br />\n</p>",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"Spear-throwers, which enhance the power behind hurled darts, were the primary ranged weapons used by the Mochica. The example displayed here, composed of a bronze substructure with brown and black stone inlay, was likely used only for ceremonial purposes. The addition of a feline atop the handle suggests parallels between war and the hunt, as does the small deer that likely served as the burl on another ceremonial spear-thrower. The same type of spear-thrower is wielded by the mythical wrinkly-faced man who faces an anthropomorphic jaguar on the finial of a blade used to pierce the jugular of sacrificial war captives. The same two mythical figures face off on an ornamental crescent-shaped object. Here, they engage in melee combat, with the wrinkly-faced man gripping the feline’s hair to take it captive.\n",
+            "remarks":"AAA3_20-T3G-3_CLA_FA_7_17_25.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":228152,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMSTU2020_63536",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":228153,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMSTU2020_63538",
+            "isprimary":0,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: South America, Peru, Loma Negra, North coast, Piura valley",
+            "code":"Place made",
+            "continent":"South America",
+            "subcontinent":"Andes",
+            "country":"Peru",
+            "region":"North coast",
+            "state":null,
+            "city":"Loma Negra",
+            "county":null,
+            "subregion":null,
+            "locale":"Piura valley",
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"https://www.geonames.org/3695261/loma-negra.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2048931,
+            "term":"ornament",
+            "aatid":300056258,
+            "termtype":"Classification"
+        },
+        {
+            "id":2134545,
+            "term":"battles",
+            "aatid":300185692,
+            "termtype":"Subject"
+        },
+        {
+            "id":2055657,
+            "term":"figures (representations)",
+            "aatid":300189808,
+            "termtype":"Subject"
+        },
+        {
+            "id":2103919,
+            "term":"dogs",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2039412,
+            "term":"Early Intermediate period",
+            "aatid":300017280,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2049420,
+            "term":"metalwork",
+            "aatid":300015336,
+            "termtype":"Classification"
+        },
+        {
+            "id":2171854,
+            "term":"deities",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2036006,
+            "term":"Early Intermediate period",
+            "aatid":300017280,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2036017,
+            "term":"Mochica",
+            "aatid":300017287,
+            "termtype":"Culture"
+        },
+        {
+            "id":2162034,
+            "term":"copper",
+            "aatid":300011020,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2049420,
+            "classification":"metalwork"
+        },
+        {
+            "id":2048931,
+            "classification":"ornament"
+        }
+    ],
+    "cultures":[
+        {
+            "id":13510,
+            "culture":"Mochica",
+            "alphasort":"Mochica",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Mochica",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2036017,
+            "culture":"Mochica"
+        }
+    ],
+    "periods":[
+        {
+            "id":13506,
+            "period":"Early Intermediate Period",
+            "alphasort":"Intermediate, Early",
+            "begindate":-200,
+            "enddate":500,
+            "displayperiod":"Early Intermediate Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2039412,
+            "period":"Early Intermediate period"
+        },
+        {
+            "id":2036006,
+            "period":"Early Intermediate period"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"7.00"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"8.20"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":207234,
+            "name":"SAB_Gala2021"
+        },
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":216464,
+            "name":"image_descriptions_newacquisitions_2021"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMSTU2020_63536"
+    ],
+    "displaymaker":null,
+    "displayculture":"Mochica",
+    "displayperiod":"Early Intermediate Period",
+    "caption":"Mochica, Early Intermediate Period, 600–800, Loma Negra, North coast, Peru, Andes, Crescent-shaped ornament. Copper alloy; 7 × 8.2 cm. Museum purchase, Gillett G. Griffin Art of the Ancient Americas Fund (2021-43)",
+    "captionhtml":"Mochica, Early Intermediate Period, 600–800, Loma Negra, North coast, Peru, Andes, <i>Crescent-shaped ornament</i>. Copper alloy; 7 × 8.2 cm. Museum purchase, Gillett G. Griffin Art of the Ancient Americas Fund (2021-43)",
+    "published_date":"2026-02-11 14:50:33.380716",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}
