@@ -1,0 +1,263 @@
+{
+    "type":"artobject",
+    "objectid":18535,
+    "objectnumber":"2016-1253",
+    "sortnumber":"2016 1253",
+    "displaytitle":"Baton with an alpaca finial in an alpaca-hide case",
+    "department":"Art of the Ancient Americas",
+    "classification":"Tools / Equipment / Implements",
+    "datebegin":1470,
+    "dateend":1532,
+    "datecomputed":1501,
+    "daterange":"A.D. 1500-1600",
+    "displaydate":"1470–1532",
+    "medium":"Wood, alpaca hide, and red pigment",
+    "dimensions":"baton: 17.2 × 3.6 × 1.9 cm (6 3/4 × 1 7/16 × 3/4 in.)\r\ncase: 14.4 × 3.7 × 2.3 cm (5 11/16 × 1 7/16 × 15/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Bequest of Gillett G. Griffin",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2016-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Baton with an alpaca finial in an alpaca-hide case",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\tMarch 31, 1981, sold by Mathias Komor (dealer; 1909-1984), New York, to Gillett G. Griffin (1928-2016), Princeton, NJ [1]; 2016, bequest of Gillett G. Griffin to the Princeton University Art Museum.\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] According to an invoice in the curatorial file.\n\t<br />\n</p>",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"The Inka became a sprawling political empire in the late fourteenth century, rapidly growing through military and economic expansion to become the largest empire in the ancient Andes. Their vast territory stretched from the capital at Cuzco north into Ecuador and south into Chile, comprising more than twelve million subjects. This Inka-dominated area was called Tawantinsuyo (Land of Four Quarters), reflecting the basic four-part organization of Inka political geography. Conquest by the empire brought luxury goods to subject peoples. Those in power carefully controlled fine objects in order to maintain\n\na discernible imperial style and impose a consistent vision of the state. Still, local deviations from the official Inka style resulted in subtle regional variations. The bird sitting on two eggs, for example, is a common theme in the art of Chimú culture, conquered by the Inka around 1470.\n",
+            "remarks":"AAA2_20-T6-1_CLA_FA.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":48893,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV014429",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: South America, Peru",
+            "code":"Place made",
+            "continent":"South America",
+            "subcontinent":"Andes",
+            "country":"Peru",
+            "region":null,
+            "state":null,
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3932488/republic-of-peru.html",
+            "location":{
+                "lat":"-10",
+                "lon":"-75.25"
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2158054,
+            "term":"mammals",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2127287,
+            "term":"batons (symbols of office)",
+            "aatid":300212148,
+            "termtype":"Classification"
+        },
+        {
+            "id":2072697,
+            "term":"cases (containers)",
+            "aatid":300045659,
+            "termtype":"Classification"
+        },
+        {
+            "id":2143713,
+            "term":"batons (music equipment)",
+            "aatid":300236137,
+            "termtype":"Classification"
+        },
+        {
+            "id":2036058,
+            "term":"Inca",
+            "aatid":300017326,
+            "termtype":"Culture"
+        },
+        {
+            "id":2036065,
+            "term":"Late horizon",
+            "aatid":300017332,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2168423,
+            "term":"pigment",
+            "aatid":300013109,
+            "termtype":"Materials"
+        },
+        {
+            "id":2045920,
+            "term":"wood",
+            "aatid":300011914,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2072697,
+            "classification":"cases (containers)"
+        },
+        {
+            "id":2143713,
+            "classification":"batons (music equipment)"
+        },
+        {
+            "id":2127287,
+            "classification":"batons (symbols of office)"
+        }
+    ],
+    "cultures":[
+        {
+            "id":13516,
+            "culture":"Inka",
+            "alphasort":"Inka",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Inka",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2036058,
+            "culture":"Inca"
+        }
+    ],
+    "periods":[
+        {
+            "id":13501,
+            "period":"Late Horizon",
+            "alphasort":"Horizon, Late",
+            "begindate":1438,
+            "enddate":1534,
+            "displayperiod":"Late Horizon",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2036065,
+            "period":"Late horizon"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"14.40"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"3.66"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"2.34"
+        },
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"17.20"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"3.64"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"1.90"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV014429"
+    ],
+    "displaymaker":null,
+    "displayculture":"Inka",
+    "displayperiod":"Late Horizon",
+    "caption":"Inka, Late Horizon, 1470–1532, Peru, Andes, Baton with an alpaca finial in an alpaca-hide case. Wood, alpaca hide, and red pigment; 17.2 × 3.6 × 1.9 cm (baton), 14.4 × 3.7 × 2.3 cm (case). Bequest of Gillett G. Griffin (2016-1253)",
+    "captionhtml":"Inka, Late Horizon, 1470–1532, Peru, Andes, <i>Baton with an alpaca finial in an alpaca-hide case</i>. Wood, alpaca hide, and red pigment; 17.2 × 3.6 × 1.9 cm (baton), 14.4 × 3.7 × 2.3 cm (case). Bequest of Gillett G. Griffin (2016-1253)",
+    "published_date":"2026-02-11 09:16:57.634922",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

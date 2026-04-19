@@ -1,0 +1,223 @@
+{
+    "type":"artobject",
+    "objectid":24607,
+    "objectnumber":"y1954-139",
+    "sortnumber":"1954  139y",
+    "displaytitle":"Trilobe basin depicting the Gathering of Manna",
+    "department":"European Painting and Sculpture ",
+    "classification":"Ceramics",
+    "datebegin":1550,
+    "dateend":1560,
+    "datecomputed":1555,
+    "daterange":"A.D. 1500-1600",
+    "displaydate":"1550-60",
+    "medium":"Maiolica (tin-glazed earthenware)",
+    "dimensions":"23.3 × diam. 51 cm (9 3/16 × 20 1/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Gift of Stanley Mortimer, Class of 1919",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"1954-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Trilobe basin depicting the Gathering of Manna",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[
+        {
+            "id":5976,
+            "displayname":"Battista Franco",
+            "displaydate":"1510–1561; born and died Venice, Italy",
+            "datebegin":1498,
+            "dateend":1580,
+            "prefix":"after",
+            "suffix":null,
+            "role":"Artist",
+            "displaymaker":"after Battista Franco, 1510–1561; born and died Venice, Italy",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":" Stanley Mortimer; 1954 gift to museum.",
+            "remarks":null
+        }
+    ],
+    "media":[
+        {
+            "id":138055,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV60176",
+            "isprimary":1,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        },
+        {
+            "id":138056,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV60177",
+            "isprimary":0,
+            "rank":5,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        },
+        {
+            "id":138057,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV60178",
+            "isprimary":0,
+            "rank":6,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        },
+        {
+            "id":138058,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV60179",
+            "isprimary":0,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"\"Recent acquisitions\", <em>Record of the Art Museum, Princeton University</em> 14, no. 1 (1955): p. 17-19.",
+            "citation":"\"Recent acquisitions\", <em>Record of the Art Museum, Princeton University</em> 14, no. 1 (1955): p. 17-19., p. 18",
+            "date":1955,
+            "id":3782,
+            "uri":"https://www.jstor.org/stable/3774235"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[],
+    "terms":[
+        {
+            "id":2151556,
+            "term":"glazing (coating)",
+            "aatid":300053914,
+            "termtype":"Subject"
+        },
+        {
+            "id":2031625,
+            "term":"Italian",
+            "aatid":300111198,
+            "termtype":"Culture"
+        },
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2049225,
+            "term":"earthenware",
+            "aatid":300140803,
+            "termtype":"Subject"
+        },
+        {
+            "id":2072862,
+            "term":"basins",
+            "aatid":300045614,
+            "termtype":"Classification"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        },
+        {
+            "id":2072862,
+            "classification":"basins"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[
+        {
+            "id":2031625,
+            "culture":"Italian"
+        }
+    ],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199321,
+            "term":"European Art",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"23.30"
+        },
+        {
+            "element":"Overall",
+            "type":"diam.",
+            "units":"centimeters",
+            "dimension":"51.00"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":264608,
+            "name":"DenseDisplay_EPS_at_20250205"
+        },
+        {
+            "packageid":211736,
+            "name":"VisibleStorage_GHC-F_Ancient"
+        },
+        {
+            "packageid":264600,
+            "name":"DenseDisplay_CompleteList_at_20250205"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV60176"
+    ],
+    "displaymaker":"after Battista Franco, 1510–1561; born and died Venice, Italy",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"After Battista Franco (1510–1561; born and died Venice, Italy), Trilobe basin depicting the Gathering of Manna, 1550-60. Maiolica (tin-glazed earthenware); 23.3 × 51 cm. Gift of Stanley Mortimer, Class of 1919 (y1954-139)",
+    "captionhtml":"After Battista Franco (1510–1561; born and died Venice, Italy), <i>Trilobe basin depicting the Gathering of Manna</i>, 1550-60. Maiolica (tin-glazed earthenware); 23.3 × 51 cm. Gift of Stanley Mortimer, Class of 1919 (y1954-139)",
+    "published_date":"2026-02-11 10:04:26.097032",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

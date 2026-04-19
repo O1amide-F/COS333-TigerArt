@@ -1,0 +1,193 @@
+{
+    "type":"artobject",
+    "objectid":145774,
+    "objectnumber":"2025-327",
+    "sortnumber":"2025  327",
+    "displaytitle":"Dough bowl",
+    "department":"American Art",
+    "classification":"Ceramic",
+    "datebegin":1885,
+    "dateend":1895,
+    "datecomputed":1890,
+    "daterange":"A.D. 1850-1900",
+    "displaydate":"ca. 1890",
+    "medium":"Ceramic with slip-paint",
+    "dimensions":"16.8 × 35.6 cm (6 5/8 × 14 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Gift of Jim Maddox, Class of 1965, and Lucy Maddox",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":"Restricted Download - Reference Image",
+    "nowebuse":"False",
+    "secondaryobjectnumber":"",
+    "campuscollections":"false",
+    "on_view":false,
+    "accessionyear":"2025-01-01",
+    "newaccession":1,
+    "titles":[
+        {
+            "title":"Dough bowl",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[
+        {
+            "id":12918,
+            "displayname":"Artist unidentified",
+            "displaydate":null,
+            "datebegin":0,
+            "dateend":0,
+            "prefix":null,
+            "suffix":null,
+            "role":"Artist",
+            "displaymaker":"Artist unidentified",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[],
+    "media":[],
+    "hasimage":"false",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, United States, New Mexico, Kewa (Santo Domingo) Pueblo, Rio Grande",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"American southwest",
+            "country":"United States",
+            "region":"Rio Grande",
+            "state":"New Mexico",
+            "city":"Kewa (Santo Domingo) Pueblo",
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":null,
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2072851,
+            "term":"vessels (containers)",
+            "aatid":300193015,
+            "termtype":"Classification"
+        },
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2039520,
+            "term":"Native American",
+            "aatid":300017437,
+            "termtype":"Culture"
+        },
+        {
+            "id":2040513,
+            "term":"Pueblo",
+            "aatid":300017746,
+            "termtype":"Culture"
+        },
+        {
+            "id":2040532,
+            "term":"Santo Domingo",
+            "aatid":300017758,
+            "termtype":"Culture"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        },
+        {
+            "id":2072851,
+            "classification":"vessels (containers)"
+        }
+    ],
+    "cultures":[
+        {
+            "id":23170,
+            "culture":"Kewa (Santo Domingo)",
+            "alphasort":"Kewa",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Kewa (Santo Domingo)",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2039520,
+            "culture":"Native American"
+        },
+        {
+            "id":2040513,
+            "culture":"Pueblo"
+        },
+        {
+            "id":2040532,
+            "culture":"Santo Domingo"
+        }
+    ],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199325,
+            "term":"North American Art",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199332,
+            "term":"Princeton Collects",
+            "termtype":"Archive | Collection"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"16.82"
+        },
+        {
+            "element":"Overall",
+            "type":"diam.",
+            "units":"centimeters",
+            "dimension":"35.55"
+        }
+    ],
+    "packages":[],
+    "primaryimage":"",
+    "displaymaker":"Artist unidentified",
+    "displayculture":"Kewa (Santo Domingo)",
+    "displayperiod":null,
+    "caption":"Artist unidentified, Kewa (Santo Domingo), Dough bowl, ca. 1890. Ceramic with slip-paint; 16.8 × 35.6 cm. Gift of Jim Maddox, Class of 1965, and Lucy Maddox (2025-327)",
+    "captionhtml":"Artist unidentified, Kewa (Santo Domingo), <i>Dough bowl</i>, ca. 1890. Ceramic with slip-paint; 16.8 × 35.6 cm. Gift of Jim Maddox, Class of 1965, and Lucy Maddox (2025-327)",
+    "published_date":"2026-03-05 11:23:42.257891",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

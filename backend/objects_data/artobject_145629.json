@@ -1,0 +1,175 @@
+{
+    "type":"artobject",
+    "objectid":145629,
+    "objectnumber":"2025-113",
+    "sortnumber":"2025  113",
+    "displaytitle":"Terra III",
+    "department":"Modern and Contemporary Art",
+    "classification":"Sculpture",
+    "datebegin":1964,
+    "dateend":1967,
+    "datecomputed":1966,
+    "daterange":"A.D. 1945-present",
+    "displaydate":"1964–67",
+    "medium":"Bronze",
+    "dimensions":"124.5 × 109.2 × 61 cm (49 × 43 × 24 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Museum purchase, Virginia and Bagley Wright, Class of 1946, Program Fund for Modern and Contemporary Art and gift of the Benacerraf family from the collection of Professor Paul Benacerraf",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":"© Estate of Dimitri Hadzi",
+    "restrictions":"Restricted Download - Under Copyright and Reference Image",
+    "nowebuse":"False",
+    "secondaryobjectnumber":"",
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2025-01-01",
+    "newaccession":1,
+    "titles":[
+        {
+            "title":"Terra III",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[
+        {
+            "id":5035,
+            "displayname":"Dimitri Hadzi",
+            "displaydate":"1921–2006; born New York, NY; died Boston, MA; active Rome, Italy and Cambridge, MA",
+            "datebegin":1921,
+            "dateend":2006,
+            "prefix":null,
+            "suffix":null,
+            "role":"Artist",
+            "displaymaker":"Dimitri Hadzi, 1921–2006; born New York, NY; died Boston, MA; active Rome, Italy and Cambridge, MA",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"Acquired by Dr. Paul Benacerraf by 1979; by descent to Natasha Benacerraf, Nicolas Benacerraf, and Tania Benacerraf; partial gift to Princeton University Art Museum (July 2025)",
+            "remarks":"as per acquisition proposal"
+        }
+    ],
+    "media":[],
+    "hasimage":"false",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: Europe, Italy, Rome",
+            "code":"Place made",
+            "continent":"Europe",
+            "subcontinent":null,
+            "country":"Italy",
+            "region":null,
+            "state":null,
+            "city":"Rome",
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"https://www.geonames.org/3175395/italian-republic.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2038492,
+            "term":"American",
+            "aatid":300107956,
+            "termtype":"Culture"
+        },
+        {
+            "id":2055271,
+            "term":"sculptures",
+            "aatid":300047203,
+            "termtype":"Classification"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2055271,
+            "classification":"sculptures"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[
+        {
+            "id":2038492,
+            "culture":"American"
+        }
+    ],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199324,
+            "term":"Art Since 1945",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199325,
+            "term":"North American Art",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"124.45"
+        },
+        {
+            "element":"Overall",
+            "type":"Length",
+            "units":"centimeters",
+            "dimension":"109.21"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"60.95"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":239550,
+            "name":"VP_Exterior Sculpture & Terrace"
+        }
+    ],
+    "primaryimage":"",
+    "displaymaker":"Dimitri Hadzi, 1921–2006; born New York, NY; died Boston, MA; active Rome, Italy and Cambridge, MA",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"Dimitri Hadzi (1921–2006; born New York, NY; died Boston, MA; active Rome, Italy and Cambridge, MA), Terra III, 1964–67. Bronze; 124.5 × 109.2 × 61 cm. Museum purchase, Virginia and Bagley Wright, Class of 1946, Program Fund for Modern and Contemporary Art and gift of the Benacerraf family from the collection of Professor Paul Benacerraf (2025-113)",
+    "captionhtml":"Dimitri Hadzi (1921–2006; born New York, NY; died Boston, MA; active Rome, Italy and Cambridge, MA), <i>Terra III</i>, 1964–67. Bronze; 124.5 × 109.2 × 61 cm. Museum purchase, Virginia and Bagley Wright, Class of 1946, Program Fund for Modern and Contemporary Art and gift of the Benacerraf family from the collection of Professor Paul Benacerraf (2025-113)",
+    "published_date":"2026-03-31 03:41:20.142082",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

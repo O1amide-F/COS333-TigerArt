@@ -1,0 +1,226 @@
+{
+    "type":"artobject",
+    "objectid":20289,
+    "objectnumber":"y1935-7",
+    "sortnumber":"1935    7y",
+    "displaytitle":"Footed dish",
+    "department":"European Painting and Sculpture ",
+    "classification":"Ceramics",
+    "datebegin":1740,
+    "dateend":1740,
+    "datecomputed":1740,
+    "daterange":"A.D. 1700-1800",
+    "displaydate":"1740",
+    "medium":"Earthenware",
+    "dimensions":"9.1 × diam. 15 cm (3 9/16 × 5 7/8 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Gift of Frank Jewett Mather Jr.",
+    "markings":null,
+    "inscribed":"Painted inside foot: Chelsea 1740 / [anchor]",
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"1935-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Footed dish",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[
+        {
+            "id":18552,
+            "displayname":"Chelsea Porcelain Factory",
+            "displaydate":"active ca. 1745–1784, United Kingdom",
+            "datebegin":1745,
+            "dateend":1784,
+            "prefix":"Manufactory: possibly",
+            "suffix":null,
+            "role":"Manufactory",
+            "displaymaker":"Manufactory: possibly Chelsea Porcelain Factory, active ca. 1745–1784, United Kingdom",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"Antique shop in Bucks Co., Pa; purchase by F. J. Mather; 1935 gift to Princeton University Art Museum.",
+            "remarks":null
+        }
+    ],
+    "media":[
+        {
+            "id":136613,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV58942",
+            "isprimary":1,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        },
+        {
+            "id":136614,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV58943",
+            "isprimary":0,
+            "rank":6,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"(not assigned): Europe, United Kingdom, Chelsea",
+            "code":"(not assigned)",
+            "continent":"Europe",
+            "subcontinent":null,
+            "country":"United Kingdom",
+            "region":null,
+            "state":null,
+            "city":"Chelsea",
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":null,
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2186313,
+            "term":"feet",
+            "aatid":300233911,
+            "termtype":"Subject"
+        },
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2055694,
+            "term":"landscapes (representations)",
+            "aatid":300015636,
+            "termtype":"Subject"
+        },
+        {
+            "id":2031586,
+            "term":"British",
+            "aatid":300111159,
+            "termtype":"Culture"
+        },
+        {
+            "id":2075787,
+            "term":"dishes",
+            "aatid":300042973,
+            "termtype":"Subject"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[
+        {
+            "id":2031586,
+            "culture":"British"
+        }
+    ],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199321,
+            "term":"European Art",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199338,
+            "term":"Nazi-era gaps",
+            "termtype":"Provenance & Cultural Heritage"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"9.10"
+        },
+        {
+            "element":"Overall",
+            "type":"diam.",
+            "units":"centimeters",
+            "dimension":"15.00"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":246533,
+            "name":"EPS Provenance Nazi-era gaps"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":215583,
+            "name":"VisibleStorage_GHC-A_Asian"
+        },
+        {
+            "packageid":264608,
+            "name":"DenseDisplay_EPS_at_20250205"
+        },
+        {
+            "packageid":276252,
+            "name":"Nazi Era Sept 2025 list for web"
+        },
+        {
+            "packageid":264600,
+            "name":"DenseDisplay_CompleteList_at_20250205"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV58942"
+    ],
+    "displaymaker":"Manufactory: possibly Chelsea Porcelain Factory, active ca. 1745–1784, United Kingdom",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"Manufactory: possibly Chelsea Porcelain Factory (active ca. 1745–1784, United Kingdom), Footed dish, 1740. Earthenware; 9.1 × 15 cm. Gift of Frank Jewett Mather Jr. (y1935-7)",
+    "captionhtml":"Manufactory: possibly Chelsea Porcelain Factory (active ca. 1745–1784, United Kingdom), <i>Footed dish</i>, 1740. Earthenware; 9.1 × 15 cm. Gift of Frank Jewett Mather Jr. (y1935-7)",
+    "published_date":"2026-02-11 09:25:38.185573",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

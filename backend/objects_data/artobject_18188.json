@@ -1,0 +1,277 @@
+{
+    "type":"artobject",
+    "objectid":18188,
+    "objectnumber":"2016-1251",
+    "sortnumber":"2016 1251",
+    "displaytitle":"Whistle flute with the head of an old bearded man",
+    "department":"Art of the Ancient Americas",
+    "classification":"Musical Instruments",
+    "datebegin":600,
+    "dateend":900,
+    "datecomputed":750,
+    "daterange":"A.D. 500-1000",
+    "displaydate":"600–900",
+    "medium":"Ceramic",
+    "dimensions":"35.1 × 7.4 × 6.5 cm (13 13/16 × 2 15/16 × 2 9/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Bequest of Gillett G. Griffin",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":"",
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2016-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Whistle flute with the head of an old bearded man",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\tJanuary 6, 1971, ‘José Luís’ sold to Gillett G. Griffin (1928-2016), Princeton, NJ [1]; promised bequest of Gillett G. Griffin to the Princeton University Art Museum.\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] According to Griffin’s Notebook 8-2. José Luís may be José Luís Franco Carrasco.\n</p>",
+            "remarks":null
+        }
+    ],
+    "media":[
+        {
+            "id":2263,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/L1975-108",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Luna Digitization Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"John H. Burkhalter III and Gillett G. Griffin,<I> Music from the Land of the Jaguar</I> (Princeton: Princeton University Art Museum, 2004).",
+            "citation":"John H. Burkhalter III and Gillett G. Griffin,<I> Music from the Land of the Jaguar</I> (Princeton: Princeton University Art Museum, 2004)., no. 15",
+            "date":2004,
+            "id":2551,
+            "uri":"https://search.worldcat.org/title/457910964"
+        },
+        {
+            "boilertext":"Marilyn M. Goldstein, <i>Ceremonial Sculpture of Ancient Veracruz</i> (Brookville:&nbsp;Long Island University, 1987)",
+            "citation":"Marilyn M. Goldstein, <i>Ceremonial Sculpture of Ancient Veracruz</i> (Brookville:&nbsp;Long Island University, 1987), no. 126, p. 74",
+            "date":1987,
+            "id":2599,
+            "uri":"https://search.worldcat.org/title/18006583"
+        },
+        {
+            "boilertext":"Harmer Johnson, ed. <i>Guide to the Arts of the Americas</i> (New York: Rizzoli, 1992)",
+            "citation":"Harmer Johnson, ed. <i>Guide to the Arts of the Americas</i> (New York: Rizzoli, 1992), p. 85 (illus.)",
+            "date":1992,
+            "id":1260,
+            "uri":"https://search.worldcat.org/title/25547967"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Mexico, Veracruz, south-central Veracruz",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Mesoamerica",
+            "country":"Mexico",
+            "region":"south-central Veracruz",
+            "state":"Veracruz",
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3514780/estado-de-veracruz-llave.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2171856,
+            "term":"gods",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2147449,
+            "term":"flutes (aerophones)",
+            "aatid":300042513,
+            "termtype":"Classification"
+        },
+        {
+            "id":2150797,
+            "term":"musical instruments",
+            "aatid":300041620,
+            "termtype":"Classification"
+        },
+        {
+            "id":2160750,
+            "term":"ceramic",
+            "aatid":300235507,
+            "termtype":"Classification"
+        },
+        {
+            "id":2096051,
+            "term":"mythology",
+            "aatid":300055985,
+            "termtype":"Subject"
+        },
+        {
+            "id":2035671,
+            "term":"Late Classic",
+            "aatid":300016986,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2035746,
+            "term":"Classic Veracruz",
+            "aatid":300017056,
+            "termtype":"Culture"
+        },
+        {
+            "id":2158086,
+            "term":"heads",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2055437,
+            "term":"figurines",
+            "aatid":300047455,
+            "termtype":"Classification"
+        },
+        {
+            "id":2160750,
+            "term":"ceramic",
+            "aatid":300235507,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2055437,
+            "classification":"figurines"
+        },
+        {
+            "id":2147449,
+            "classification":"flutes (aerophones)"
+        },
+        {
+            "id":2150797,
+            "classification":"musical instruments"
+        },
+        {
+            "id":2160750,
+            "classification":"ceramic"
+        }
+    ],
+    "cultures":[
+        {
+            "id":13849,
+            "culture":"Classic Veracruz",
+            "alphasort":"Classic Veracruz",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Classic Veracruz",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2035746,
+            "culture":"Classic Veracruz"
+        }
+    ],
+    "periods":[
+        {
+            "id":24016,
+            "period":"Late Classic Period",
+            "alphasort":"Classic Period, Late",
+            "begindate":0,
+            "enddate":0,
+            "displayperiod":"Late Classic Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035671,
+            "period":"Late Classic"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"35.10"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"7.40"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"6.50"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/L1975-108"
+    ],
+    "displaymaker":null,
+    "displayculture":"Classic Veracruz",
+    "displayperiod":"Late Classic Period",
+    "caption":"Classic Veracruz, Late Classic Period, 600–900, Veracruz, south-central Veracruz, Mexico, Mesoamerica, Whistle flute with the head of an old bearded man. Ceramic; 35.1 × 7.4 × 6.5 cm. Bequest of Gillett G. Griffin (2016-1251)",
+    "captionhtml":"Classic Veracruz, Late Classic Period, 600–900, Veracruz, south-central Veracruz, Mexico, Mesoamerica, <i>Whistle flute with the head of an old bearded man</i>. Ceramic; 35.1 × 7.4 × 6.5 cm. Bequest of Gillett G. Griffin (2016-1251)",
+    "published_date":"2026-03-05 09:02:47.878892",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

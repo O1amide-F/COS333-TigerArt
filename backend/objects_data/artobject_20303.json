@@ -1,0 +1,247 @@
+{
+    "type":"artobject",
+    "objectid":20303,
+    "objectnumber":"2016-1255 a-b",
+    "sortnumber":"2016 1255 a    b",
+    "displaytitle":"Floral ear ornaments",
+    "department":"Art of the Ancient Americas",
+    "classification":"Jades",
+    "datebegin":250,
+    "dateend":600,
+    "datecomputed":425,
+    "daterange":"A.D. 1-500",
+    "displaydate":"250–600 CE",
+    "medium":"Jadeite with cinnabar",
+    "dimensions":"each: h. 1.6, diam. 7.6 cm. (5/8 x 3 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Bequest of Gillett G. Griffin",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2016-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Floral ear ornaments",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\tBy May 1971, Gillett G. Griffin (1928-2016), Princeton, NJ [1]; 2016, bequeathed to the Princeton University Art Museum.\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] According to a dated slide in the Griffin archive.\n</p>",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"The phenomenon of synesthesia—in which one sensation (such as a color) accompanies the stimulation of another sense (such as sound)—explains the ﬂoral forms of these ear ornaments, originally worn by men and women alike. The ancient Maya believed that the eyes, nose, mouth, and ears were conduits of the vital essences of enlivened bodies. Breath, scent, voice, and hearing were all considered manifestations of ik’ (breath, wind, animating force). Floral motifs of this kind make smell visible, alluding to the pleasant fragrance of ik’, the distinctive essence of nobility and rulers, which signaled great refinement and beauty.\n",
+            "remarks":"AAA2_20-T6-2_CLA_FA_9_17_25.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":49612,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV015842",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"Linda Schele and Mary E. Miller,<i> The Blood of Kings: Dynasty and Ritual in Maya Art</i> (New York and Fort Worth, George Braziller, Inc. and Kimbell Art Museum, 1986).",
+            "citation":"Linda Schele and Mary E. Miller,<i> The Blood of Kings: Dynasty and Ritual in Maya Art</i> (New York and Fort Worth, George Braziller, Inc. and Kimbell Art Museum, 1986)., pl. 12 (illus.)",
+            "date":1986,
+            "id":2678,
+            "uri":"https://search.worldcat.org/title/13327308"
+        },
+        {
+            "boilertext":"Elizabeth Wagner, \"Jade, the Green Gold of the Maya,\" in <i>Maya: Gottkönige in Regenwald,</i> ed. Nikolai Grube (Köln: Könemann Verlagsgesellschaft, 2000): 66-69.",
+            "citation":"Elizabeth Wagner, \"Jade, the Green Gold of the Maya,\" in <i>Maya: Gottkönige in Regenwald,</i> ed. Nikolai Grube (Köln: Könemann Verlagsgesellschaft, 2000): 66-69., fig. 97 (illus.)",
+            "date":2000,
+            "id":2724,
+            "uri":"https://search.worldcat.org/title/48191020"
+        }
+    ],
+    "exhibitions":[
+        {
+            "exhibitionid":1680,
+            "citation":"The Blood of Kings: Dynasty and Ritual in Maya Art (May 17 - December 14, 1986)",
+            "isvirtual":true,
+            "begindate":"1986-05-17",
+            "enddate":"1986-12-14",
+            "uri":"https://artmuseum.princeton.edu/art/exhibitions/1680"
+        }
+    ],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Belize, Guatemala, Honduras, or Mexico, Maya area",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Mesoamerica",
+            "country":"Belize, Guatemala, Honduras, or Mexico",
+            "region":"Maya area",
+            "state":null,
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/7729892/central-america.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2055224,
+            "term":"jades",
+            "aatid":300184767,
+            "termtype":"Classification"
+        },
+        {
+            "id":2035666,
+            "term":"Early Classic",
+            "aatid":300016984,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2130705,
+            "term":"earspools",
+            "aatid":300209300,
+            "termtype":"Classification"
+        },
+        {
+            "id":2120449,
+            "term":"flowers (plants)",
+            "aatid":300132399,
+            "termtype":"Subject"
+        },
+        {
+            "id":2036114,
+            "term":"Maya",
+            "aatid":null,
+            "termtype":"Culture"
+        },
+        {
+            "id":2163406,
+            "term":"jade",
+            "aatid":300011119,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2055224,
+            "classification":"jades"
+        },
+        {
+            "id":2130705,
+            "classification":"earspools"
+        }
+    ],
+    "cultures":[
+        {
+            "id":12497,
+            "culture":"Maya",
+            "alphasort":"Maya",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Maya",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2036114,
+            "culture":"Maya"
+        }
+    ],
+    "periods":[
+        {
+            "id":24014,
+            "period":"Early Classic Period",
+            "alphasort":"Classic Period, Early",
+            "begindate":0,
+            "enddate":0,
+            "displayperiod":"Early Classic Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035666,
+            "period":"Early Classic"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"1.60"
+        },
+        {
+            "element":"Overall",
+            "type":"diam.",
+            "units":"centimeters",
+            "dimension":"7.60"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV015842"
+    ],
+    "displaymaker":null,
+    "displayculture":"Maya",
+    "displayperiod":"Early Classic Period",
+    "caption":"Maya, Early Classic Period, 250–600 CE, Maya area, Belize, Guatemala, Honduras, or Mexico, Mesoamerica, Floral ear ornaments. Jadeite with cinnabar; 1.6 x 7.6 cm. Bequest of Gillett G. Griffin (2016-1255 a-b)",
+    "captionhtml":"Maya, Early Classic Period, 250–600 CE, Maya area, Belize, Guatemala, Honduras, or Mexico, Mesoamerica, <i>Floral ear ornaments</i>. Jadeite with cinnabar; 1.6 x 7.6 cm. Bequest of Gillett G. Griffin (2016-1255 a-b)",
+    "published_date":"2026-02-11 09:25:44.605705",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

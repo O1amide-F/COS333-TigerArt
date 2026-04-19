@@ -1,0 +1,226 @@
+{
+    "type":"artobject",
+    "objectid":2383,
+    "objectnumber":"2016-1250",
+    "sortnumber":"2016 1250",
+    "displaytitle":"Pedestal plate",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ceramic",
+    "datebegin":700,
+    "dateend":1200,
+    "datecomputed":950,
+    "daterange":"A.D. 500-1000",
+    "displaydate":"700–1200",
+    "medium":"Ceramic with polychrome slip-paint",
+    "dimensions":"h. 10.5, diam. 22.9 cm (4 1/8 × 9 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Bequest of Gillett G. Griffin",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2016-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Pedestal plate",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\tDecember 12, 1986, Fine Arts of Ancient Lands, Inc. sold to Gillett G. Griffin (1928-2016), Princeton, NJ [1]; 2016, bequeathed to the Princeton University Art Museum.\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] According to an invoice in the curatorial file.\n\t<br />\n</p>",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"Although several regional variants are known, ceramic vessels from central Panama share many traits, including the use of multiple slip-paint colors to create dense, dynamic designs, most of which include depictions of humans, animals, or fantastic combinations thereof. The examples here are especially elaborate vessels, likely part of the funerary assemblages of high-ranking individuals. In burials excavated by professional archaeologists, most ceramics have been found smashed, presumably in intentional acts of ceremonial transformation. The few objects that remain intact, such as the examples displayed here, were likely interred to provide sustenance in the afterlife or for other reasons related to their imagery. The use of purple slip-paint is relatively rare in the ancient Americas but common in Greater Coclé culture. The mineral used to produce this color remains unknown, awaiting scientific analysis.\n",
+            "remarks":"AAA2_20-T6-2_CLA_FA_9_17_25.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":219278,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMSTU2018-1933306",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM Photo"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Panama, Southern Azuero Peninsula",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Intermediate area",
+            "country":"Panama",
+            "region":"Southern Azuero Peninsula",
+            "state":null,
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":null,
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2039305,
+            "term":"Coclé",
+            "aatid":300017242,
+            "termtype":"Culture"
+        },
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2072851,
+            "term":"vessels (containers)",
+            "aatid":300193015,
+            "termtype":"Classification"
+        },
+        {
+            "id":2035899,
+            "term":"Coclé",
+            "aatid":300017242,
+            "termtype":"Culture"
+        },
+        {
+            "id":2160397,
+            "term":"slip",
+            "aatid":300010459,
+            "termtype":"Materials"
+        },
+        {
+            "id":2160750,
+            "term":"ceramic",
+            "aatid":300235507,
+            "termtype":"Materials"
+        },
+        {
+            "id":2055947,
+            "term":"polychrome",
+            "aatid":300252261,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2072851,
+            "classification":"vessels (containers)"
+        },
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        }
+    ],
+    "cultures":[
+        {
+            "id":13856,
+            "culture":"Greater Coclé",
+            "alphasort":"Greater Coclé",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Greater Coclé (Joaquín style)",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2039305,
+            "culture":"Coclé"
+        },
+        {
+            "id":2035899,
+            "culture":"Coclé"
+        }
+    ],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"10.47"
+        },
+        {
+            "element":"Overall",
+            "type":"diam.",
+            "units":"centimeters",
+            "dimension":"22.85"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":207234,
+            "name":"SAB_Gala2021"
+        },
+        {
+            "packageid":277757,
+            "name":"Web_ObjsOnView_NoPrimaryImage_20251010"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMSTU2018-1933306"
+    ],
+    "displaymaker":null,
+    "displayculture":"Greater Coclé (Joaquín style)",
+    "displayperiod":null,
+    "caption":"Greater Coclé (Joaquín style), 700–1200, Southern Azuero Peninsula, Panama, Intermediate area, Pedestal plate. Ceramic with polychrome slip-paint; 10.5 × 22.9 cm. Bequest of Gillett G. Griffin (2016-1250)",
+    "captionhtml":"Greater Coclé (Joaquín style), 700–1200, Southern Azuero Peninsula, Panama, Intermediate area, <i>Pedestal plate</i>. Ceramic with polychrome slip-paint; 10.5 × 22.9 cm. Bequest of Gillett G. Griffin (2016-1250)",
+    "published_date":"2026-02-11 07:24:08.306971",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

@@ -1,0 +1,172 @@
+{
+    "type":"artobject",
+    "objectid":144821,
+    "objectnumber":"2024-538",
+    "sortnumber":"2024  538",
+    "displaytitle":"Raw Materials 33",
+    "department":"Modern and Contemporary Art",
+    "classification":"Mixed Media",
+    "datebegin":2024,
+    "dateend":2024,
+    "datecomputed":2024,
+    "daterange":"A.D. 1945-present",
+    "displaydate":"2024",
+    "medium":"Custom-printed 245gms organic cotton warp satin, cotton lawn, polyester thread, cotton thread, lace, chiffon, sequins, cord, synthetic net, and canvas",
+    "dimensions":"142 × 166 cm (55 7/8 × 65 3/8 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Princeton University, with funds provided by the International Economics Section in the Department of Economics",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":"© Hew Locke",
+    "restrictions":"Restricted Download - Under Copyright and Reference Image",
+    "nowebuse":"False",
+    "secondaryobjectnumber":"",
+    "campuscollections":"false",
+    "on_view":false,
+    "accessionyear":"2024-01-01",
+    "newaccession":1,
+    "titles":[
+        {
+            "title":"Raw Materials 33",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[
+        {
+            "id":23183,
+            "displayname":"Hew Locke",
+            "displaydate":"born 1959, Edinburgh, Scotland; active London, UK",
+            "datebegin":1959,
+            "dateend":0,
+            "prefix":null,
+            "suffix":null,
+            "role":"Artist",
+            "displaymaker":"Hew Locke, born 1959, Edinburgh, Scotland; active London, UK",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"Artist commission",
+            "remarks":"as per acquistion proposal"
+        }
+    ],
+    "media":[],
+    "hasimage":"false",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: Europe, England, London",
+            "code":"Place made",
+            "continent":"Europe",
+            "subcontinent":null,
+            "country":"England",
+            "region":null,
+            "state":null,
+            "city":"London",
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"https://www.geonames.org/2643743/london.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2089351,
+            "term":"musicians",
+            "aatid":300025666,
+            "termtype":"Subject"
+        },
+        {
+            "id":2044377,
+            "term":"textiles",
+            "aatid":300231565,
+            "termtype":"Classification"
+        },
+        {
+            "id":2051938,
+            "term":"collages",
+            "aatid":300033963,
+            "termtype":"Classification"
+        },
+        {
+            "id":2190224,
+            "term":"trade",
+            "aatid":300061886,
+            "termtype":"Subject"
+        },
+        {
+            "id":2199159,
+            "term":"colonialism",
+            "aatid":300400905,
+            "termtype":"Subject"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2044377,
+            "classification":"textiles"
+        },
+        {
+            "id":2051938,
+            "classification":"collages"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199324,
+            "term":"Art Since 1945",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"142.00"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"166.00"
+        }
+    ],
+    "packages":[],
+    "primaryimage":"",
+    "displaymaker":"Hew Locke, born 1959, Edinburgh, Scotland; active London, UK",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"Hew Locke (born 1959, Edinburgh, Scotland; active London, UK), Raw Materials 33, 2024. Custom-printed 245gms organic cotton warp satin, cotton lawn, polyester thread, cotton thread, lace, chiffon, sequins, cord, synthetic net, and canvas; 142 × 166 cm. Princeton University, with funds provided by the International Economics Section in the Department of Economics (2024-538)",
+    "captionhtml":"Hew Locke (born 1959, Edinburgh, Scotland; active London, UK), <i>Raw Materials 33</i>, 2024. Custom-printed 245gms organic cotton warp satin, cotton lawn, polyester thread, cotton thread, lace, chiffon, sequins, cord, synthetic net, and canvas; 142 × 166 cm. Princeton University, with funds provided by the International Economics Section in the Department of Economics (2024-538)",
+    "published_date":"2026-03-31 03:39:25.208091",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

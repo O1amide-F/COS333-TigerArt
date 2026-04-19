@@ -1,0 +1,223 @@
+{
+    "type":"artobject",
+    "objectid":1719,
+    "objectnumber":"2016-1030 a-b",
+    "sortnumber":"2016 1030 a    b",
+    "displaytitle":"Performer with a movable helmet",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ceramic",
+    "datebegin":750,
+    "dateend":900,
+    "datecomputed":825,
+    "daterange":"A.D. 500-1000",
+    "displaydate":"750–900",
+    "medium":"Ceramic",
+    "dimensions":"",
+    "dimensionsproposed":"",
+    "creditline":"Bequest of Gillett G. Griffin",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":"L.2016.3.1 a-b",
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2016-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Performer with a movable helmet",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\tFebruary 9, 1963, Aaron Furman Gallery, New York, sold to Gillett G. Griffin (1928-2016), Princeton, NJ [1]; 2016, bequeathed to the Princeton University Art Museum.\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] According to an invoice in the curatorial file and a Griffin index card (M60).\n\t<br />\n</p>",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"Artists from south-central Veracruz occasionally created kinetic, puppet-like ﬁgures in clay, such as this wheeled feline and squatting, masked performer. Wheeled “toys”—which, indeed, may have served as children’s playthings—provide the only evidence that wheels were used in any part of Mesoamerica. The other object moved as well. The performer’s head was modeled separately from its body, as was its now-missing lower jaw. Holes at the sides of the mouth, the base of the head, and the top of the neck conﬁrm that multiple strings once held the pieces together. Pulling different strings would have allowed one to move the head and the jaw, animating the sculpture.\n",
+            "remarks":"AAA3_20-T6-3_CLA_FA.pdf  - Day 1 installation - Group Chat 2004-46 and 2016-1030 a-b"
+        }
+    ],
+    "media":[
+        {
+            "id":11686,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/G0003",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"For Reference Only"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"Gerald Berjonneau, Emile Deletaille,&nbsp;and Jean-Louis Sonnery, <i>Rediscovered Masterpieces of Mesoamerica: Mexico-Guatemala-Honduras</i> (Boulogne: Editions Arts, 1985).",
+            "citation":"Gerald Berjonneau, Emile Deletaille,&nbsp;and Jean-Louis Sonnery, <i>Rediscovered Masterpieces of Mesoamerica: Mexico-Guatemala-Honduras</i> (Boulogne: Editions Arts, 1985)., cat. no. 96 (illus.)",
+            "date":1985,
+            "id":2538,
+            "uri":"https://search.worldcat.org/title/13186418"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Mexico, Veracruz, south-central Veracruz, La Mixtequilla",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Mesoamerica",
+            "country":"Mexico",
+            "region":"south-central Veracruz",
+            "state":"Veracruz",
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":"La Mixtequilla",
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3514780/estado-de-veracruz-llave.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2055657,
+            "term":"figures (representations)",
+            "aatid":300189808,
+            "termtype":"Subject"
+        },
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2035671,
+            "term":"Late Classic",
+            "aatid":300016986,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2129929,
+            "term":"shields (armor)",
+            "aatid":300036869,
+            "termtype":"Subject"
+        },
+        {
+            "id":2158100,
+            "term":"warriors",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2055438,
+            "term":"figurines",
+            "aatid":300047455,
+            "termtype":"Classification"
+        },
+        {
+            "id":2160750,
+            "term":"ceramic",
+            "aatid":300235507,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2055438,
+            "classification":"figurines"
+        },
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        }
+    ],
+    "cultures":[
+        {
+            "id":16757,
+            "culture":"Nopiloa",
+            "alphasort":"Nopiloa",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Nopiloa (Los Cerros Detailed Appliqué Dancers type)",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[],
+    "periods":[
+        {
+            "id":24016,
+            "period":"Late Classic Period",
+            "alphasort":"Classic Period, Late",
+            "begindate":0,
+            "enddate":0,
+            "displayperiod":"Late Classic Period (Nopiloa III)",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035671,
+            "period":"Late Classic"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278648,
+            "name":"<New mbey 2025-10-23 14:05:43>"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/G0003"
+    ],
+    "displaymaker":null,
+    "displayculture":"Nopiloa (Los Cerros Detailed Appliqué Dancers type)",
+    "displayperiod":"Late Classic Period (Nopiloa III)",
+    "caption":"Nopiloa (Los Cerros Detailed Appliqué Dancers type), Late Classic Period (Nopiloa III), 750–900, Veracruz, south-central Veracruz, Mexico, Mesoamerica, Performer with a movable helmet. Ceramic. Bequest of Gillett G. Griffin (2016-1030 a-b)",
+    "captionhtml":"Nopiloa (Los Cerros Detailed Appliqué Dancers type), Late Classic Period (Nopiloa III), 750–900, Veracruz, south-central Veracruz, Mexico, Mesoamerica, <i>Performer with a movable helmet</i>. Ceramic. Bequest of Gillett G. Griffin (2016-1030 a-b)",
+    "published_date":"2026-03-05 08:36:45.846411",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

@@ -1,0 +1,173 @@
+{
+    "type":"artobject",
+    "objectid":145751,
+    "objectnumber":"2025-303",
+    "sortnumber":"2025  303",
+    "displaytitle":"Jar",
+    "department":"American Art",
+    "classification":"Ceramic",
+    "datebegin":1925,
+    "dateend":1935,
+    "datecomputed":1930,
+    "daterange":"A.D. 1900-1945",
+    "displaydate":"ca. 1930",
+    "medium":"Ceramic with slip-paint",
+    "dimensions":"16.5 × 29.2 cm (6 1/2 × 11 1/2 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Gift of Jim Maddox, Class of 1965, and Lucy Maddox",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":"© Estate of Grace Chapella",
+    "restrictions":"Restricted Download - Under Copyright and Reference Image",
+    "nowebuse":"False",
+    "secondaryobjectnumber":"",
+    "campuscollections":"false",
+    "on_view":false,
+    "accessionyear":"2025-01-01",
+    "newaccession":1,
+    "titles":[
+        {
+            "title":"Jar",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[
+        {
+            "id":23880,
+            "displayname":"Grace Chapella",
+            "displaydate":"1874–1980; born Hano, AZ",
+            "datebegin":1874,
+            "dateend":1980,
+            "prefix":null,
+            "suffix":null,
+            "role":"Artist",
+            "displaymaker":"Grace Chapella, 1874–1980; born Hano, AZ",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[],
+    "media":[],
+    "hasimage":"false",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, United States, Arizona",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":null,
+            "country":"United States",
+            "region":null,
+            "state":"Arizona",
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"https://www.geonames.org/5551752/arizona.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2039520,
+            "term":"Native American",
+            "aatid":300017437,
+            "termtype":"Culture"
+        },
+        {
+            "id":2040513,
+            "term":"Pueblo",
+            "aatid":300017746,
+            "termtype":"Culture"
+        },
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2072851,
+            "term":"vessels (containers)",
+            "aatid":300193015,
+            "termtype":"Classification"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2072851,
+            "classification":"vessels (containers)"
+        },
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[
+        {
+            "id":2039520,
+            "culture":"Native American"
+        },
+        {
+            "id":2040513,
+            "culture":"Pueblo"
+        }
+    ],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199325,
+            "term":"North American Art",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199332,
+            "term":"Princeton Collects",
+            "termtype":"Archive | Collection"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"16.50"
+        },
+        {
+            "element":"Overall",
+            "type":"diam.",
+            "units":"centimeters",
+            "dimension":"29.20"
+        }
+    ],
+    "packages":[],
+    "primaryimage":"",
+    "displaymaker":"Grace Chapella, 1874–1980; born Hano, AZ",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"Grace Chapella (1874–1980; born Hano, AZ), Jar, ca. 1930. Ceramic with slip-paint; 16.5 × 29.2 cm. Gift of Jim Maddox, Class of 1965, and Lucy Maddox (2025-303)",
+    "captionhtml":"Grace Chapella (1874–1980; born Hano, AZ), <i>Jar</i>, ca. 1930. Ceramic with slip-paint; 16.5 × 29.2 cm. Gift of Jim Maddox, Class of 1965, and Lucy Maddox (2025-303)",
+    "published_date":"2026-03-25 09:35:12.472154",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

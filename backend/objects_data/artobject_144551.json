@@ -1,0 +1,161 @@
+{
+    "type":"artobject",
+    "objectid":144551,
+    "objectnumber":"2025-188",
+    "sortnumber":"2025  188",
+    "displaytitle":"The Battery, 1986, from the series Disaster Paintings",
+    "department":"Modern and Contemporary Art",
+    "classification":"Paintings",
+    "datebegin":1986,
+    "dateend":1986,
+    "datecomputed":1986,
+    "daterange":"A.D. 1945-present",
+    "displaydate":"1986",
+    "medium":"Latex paint and tar on vinyl composite tile on Masonite laid down on panel",
+    "dimensions":"243.8 × 243.8 cm (96 × 96 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Gift of Yves-André Istel, Class of 1957, and Kathleen Begala\r\n\r\n",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":"© Donald Sultan",
+    "restrictions":"y-lender, copyright",
+    "nowebuse":"False",
+    "secondaryobjectnumber":"",
+    "campuscollections":"false",
+    "on_view":false,
+    "accessionyear":"2025-01-01",
+    "newaccession":1,
+    "titles":[
+        {
+            "title":"The Battery, 1986, from the series Disaster Paintings",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[
+        {
+            "id":2626,
+            "displayname":"Donald Sultan",
+            "displaydate":"born 1951, Ashville, NC; active New York, NY",
+            "datebegin":1951,
+            "dateend":2100,
+            "prefix":null,
+            "suffix":null,
+            "role":"Artist",
+            "displaymaker":"Donald Sultan, born 1951, Ashville, NC; active New York, NY",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[],
+    "media":[],
+    "hasimage":"false",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[],
+    "terms":[
+        {
+            "id":2038492,
+            "term":"American",
+            "aatid":300107956,
+            "termtype":"Culture"
+        },
+        {
+            "id":2052977,
+            "term":"paintings",
+            "aatid":300033618,
+            "termtype":"Classification"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2052977,
+            "classification":"paintings"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[
+        {
+            "id":2038492,
+            "culture":"American"
+        }
+    ],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199324,
+            "term":"Art Since 1945",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199325,
+            "term":"North American Art",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199332,
+            "term":"Princeton Collects",
+            "termtype":"Archive | Collection"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"243.83"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"243.83"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":264438,
+            "name":"CFA-since-1-1-2024"
+        },
+        {
+            "packageid":271018,
+            "name":"Princeton Collects Condition Reports [2]"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":277757,
+            "name":"Web_ObjsOnView_NoPrimaryImage_20251010"
+        },
+        {
+            "packageid":277770,
+            "name":"Web_ObjsOnView_NoPrimaryImage_Qs_20251010"
+        },
+        {
+            "packageid":223482,
+            "name":"Gallery_32(Pavilion9)-SpecX"
+        }
+    ],
+    "primaryimage":"",
+    "displaymaker":"Donald Sultan, born 1951, Ashville, NC; active New York, NY",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"Donald Sultan (born 1951, Ashville, NC; active New York, NY), The Battery, 1986, from the series Disaster Paintings, 1986. Latex paint and tar on vinyl composite tile on Masonite laid down on panel; 243.8 × 243.8 cm. Gift of Yves-André Istel, Class of 1957, and Kathleen Begala\r\n\r\n (2025-188)",
+    "captionhtml":"Donald Sultan (born 1951, Ashville, NC; active New York, NY), <i>The Battery, 1986, from the series Disaster Paintings</i>, 1986. Latex paint and tar on vinyl composite tile on Masonite laid down on panel; 243.8 × 243.8 cm. Gift of Yves-André Istel, Class of 1957, and Kathleen Begala\r\n\r\n (2025-188)",
+    "published_date":"2026-04-04 02:00:28.038359",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

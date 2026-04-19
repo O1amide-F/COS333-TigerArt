@@ -1,0 +1,252 @@
+{
+    "type":"artobject",
+    "objectid":145479,
+    "objectnumber":"2025-82",
+    "sortnumber":"2025   82",
+    "displaytitle":"Cross",
+    "department":"European Painting and Sculpture ",
+    "classification":"Paintings",
+    "datebegin":1635,
+    "dateend":1645,
+    "datecomputed":1640,
+    "daterange":"A.D. 1600-1700",
+    "displaydate":"ca. 1640–50",
+    "medium":"Oil on cross-shaped panel",
+    "dimensions":"91.8 × 52.4 cm (36 1/8 × 20 5/8 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Museum purchase, Fowler McCormick, Class of 1921, Fund",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":"Restricted Download - Reference Image",
+    "nowebuse":"False",
+    "secondaryobjectnumber":"",
+    "campuscollections":"false",
+    "on_view":false,
+    "accessionyear":"2025-01-01",
+    "newaccession":1,
+    "titles":[
+        {
+            "title":"Cell Cross (Cruz de Celda)",
+            "titletype":"Primary Title",
+            "displayorder":2
+        }
+    ],
+    "makers":[
+        {
+            "id":23684,
+            "displayname":"María Josefa Sánchez",
+            "displaydate":"active 1639–1649; born, active, and died Spain",
+            "datebegin":1639,
+            "dateend":1649,
+            "prefix":null,
+            "suffix":null,
+            "role":"Artist",
+            "displaymaker":"María Josefa Sánchez, active 1639–1649; born, active, and died Spain",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"Private collection, Spain, ca. 1970-2024; [La Suite Subastas, Barcelona, June 27, 2024, lot 33]; [purchased by Patrick Matthiesen, London]; [with Nicholas Hall, New York]; purchased by the Princeton University Art Museum, 2025.",
+            "remarks":"as per acquisition proposal"
+        }
+    ],
+    "media":[
+        {
+            "id":267210,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMJE_07292025_2521654",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":"Restricted Download - Reference Image",
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":267211,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMJE_07292025_2521669",
+            "isprimary":0,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":"Restricted Download - Reference Image",
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":267212,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMJE_07292025_2521675",
+            "isprimary":0,
+            "rank":3,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":"Restricted Download - Reference Image",
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":267213,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMJE_07292025_2521679",
+            "isprimary":0,
+            "rank":4,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":"Restricted Download - Reference Image",
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":267214,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMJE_07292025_2521684",
+            "isprimary":0,
+            "rank":5,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":"Restricted Download - Reference Image",
+            "caption":"PUAM Photo"
+        },
+        {
+            "id":267215,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMJE_07292025_2521685",
+            "isprimary":0,
+            "rank":6,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":"Restricted Download - Reference Image",
+            "caption":"PUAM Photo"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: Europe, Spain",
+            "code":"Place made",
+            "continent":"Europe",
+            "subcontinent":null,
+            "country":"Spain",
+            "region":null,
+            "state":null,
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":null,
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2052977,
+            "term":"paintings",
+            "aatid":300033618,
+            "termtype":"Classification"
+        },
+        {
+            "id":2096186,
+            "term":"paragone",
+            "aatid":300065372,
+            "termtype":"Subject"
+        },
+        {
+            "id":2029984,
+            "term":"Cross",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2031563,
+            "term":"European",
+            "aatid":300020656,
+            "termtype":"Culture"
+        },
+        {
+            "id":2055649,
+            "term":"crucifixes",
+            "aatid":300248835,
+            "termtype":"Subject"
+        },
+        {
+            "id":2031673,
+            "term":"Spanish",
+            "aatid":300111215,
+            "termtype":"Culture"
+        },
+        {
+            "id":2095583,
+            "term":"illusionism",
+            "aatid":300056536,
+            "termtype":"Subject"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2052977,
+            "classification":"paintings"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[
+        {
+            "id":2031563,
+            "culture":"European"
+        },
+        {
+            "id":2031673,
+            "culture":"Spanish"
+        }
+    ],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199321,
+            "term":"European Art",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"91.75"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"52.38"
+        }
+    ],
+    "packages":[],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/PUAMJE_07292025_2521654"
+    ],
+    "displaymaker":"María Josefa Sánchez, active 1639–1649; born, active, and died Spain",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"María Josefa Sánchez (active 1639–1649; born, active, and died Spain), Cross, ca. 1640–50. Oil on cross-shaped panel; 91.8 × 52.4 cm. Museum purchase, Fowler McCormick, Class of 1921, Fund (2025-82)",
+    "captionhtml":"María Josefa Sánchez (active 1639–1649; born, active, and died Spain), Cross, ca. 1640–50. Oil on cross-shaped panel; 91.8 × 52.4 cm. Museum purchase, Fowler McCormick, Class of 1921, Fund (2025-82)",
+    "published_date":"2026-03-25 09:35:11.194711",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

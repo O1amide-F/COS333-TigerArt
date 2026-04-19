@@ -1,0 +1,201 @@
+{
+    "type":"artobject",
+    "objectid":145485,
+    "objectnumber":"2025-116",
+    "sortnumber":"2025  116",
+    "displaytitle":"Drawn copy of The Two Pilgrims (Les Deux Pélerins)",
+    "department":"Prints and Drawings",
+    "classification":"Drawings",
+    "datebegin":1850,
+    "dateend":1899,
+    "datecomputed":1874,
+    "daterange":"A.D. 1850-1900",
+    "displaydate":"Second half of 19th century",
+    "medium":"Pen and ink",
+    "dimensions":"sheet: 18.9 × 13.6 cm (7 7/16 × 5 3/8 in.)\r\nmount: 36.8 × 27 cm (14 1/2 × 10 5/8 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Museum purchase, Morley and Jean Melden Prints and Drawings Fund",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":"",
+    "campuscollections":"false",
+    "on_view":false,
+    "accessionyear":"2025-01-01",
+    "newaccession":1,
+    "titles":[
+        {
+            "title":"Drawn copy of The Two Pilgrims (Les Deux Pélerins)",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[
+        {
+            "id":6244,
+            "displayname":"Jacques Callot",
+            "displaydate":"French, 1592–1635",
+            "datebegin":1592,
+            "dateend":1635,
+            "prefix":"after",
+            "suffix":null,
+            "role":"Artist",
+            "displaymaker":"after Jacques Callot, French, 1592–1635",
+            "displayorder":2
+        },
+        {
+            "id":23689,
+            "displayname":"Berthe Césarine Corvisart",
+            "displaydate":"born 1835, France",
+            "datebegin":1835,
+            "dateend":0,
+            "prefix":null,
+            "suffix":null,
+            "role":"Artist",
+            "displaymaker":"Berthe Césarine Corvisart, born 1835, France",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"The artist, by descent through the family until 2024; sold at auction by [Couton Jamault Hirn, IVOIRE, Nantes], “Un château en Bretagne” sale, part 1, February 20, 2024, lot 112. Offered by “Steeg” via Catawiki.com, “Old Masters &amp; Antique Prints Auction,” November 1, 2024. [Den Otter Fine Art, Rotterdam], by March 2025; purchased by the Princeton University Art Museum, 2025.\n",
+            "remarks":null
+        }
+    ],
+    "media":[],
+    "hasimage":"false",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: Europe, France",
+            "code":"Place made",
+            "continent":"Europe",
+            "subcontinent":null,
+            "country":"France",
+            "region":null,
+            "state":null,
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"https://www.geonames.org/3017382/republic-of-france.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2088270,
+            "term":"men",
+            "aatid":300025928,
+            "termtype":"Subject"
+        },
+        {
+            "id":2051964,
+            "term":"drawings",
+            "aatid":300033973,
+            "termtype":"Classification"
+        },
+        {
+            "id":2131442,
+            "term":"hats",
+            "aatid":300046106,
+            "termtype":"Subject"
+        },
+        {
+            "id":2031563,
+            "term":"European",
+            "aatid":300020656,
+            "termtype":"Culture"
+        },
+        {
+            "id":2031609,
+            "term":"French",
+            "aatid":300111188,
+            "termtype":"Culture"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2051964,
+            "classification":"drawings"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[
+        {
+            "id":2031563,
+            "culture":"European"
+        },
+        {
+            "id":2031609,
+            "culture":"French"
+        }
+    ],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199327,
+            "term":"Prints and Drawings",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"mount",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"36.80"
+        },
+        {
+            "element":"mount",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"27.00"
+        },
+        {
+            "element":"sheet",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"18.90"
+        },
+        {
+            "element":"sheet",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"13.60"
+        }
+    ],
+    "packages":[],
+    "primaryimage":"",
+    "displaymaker":"Berthe Césarine Corvisart, born 1835, France | after Jacques Callot, French, 1592–1635",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"Berthe Césarine Corvisart (born 1835, France), after Jacques Callot (French, 1592–1635), Drawn copy of The Two Pilgrims (Les Deux Pélerins), Second half of 19th century. Pen and ink; 18.9 × 13.6 cm (sheet). Museum purchase, Morley and Jean Melden Prints and Drawings Fund (2025-116)",
+    "captionhtml":"Berthe Césarine Corvisart (born 1835, France), after Jacques Callot (French, 1592–1635), <i>Drawn copy of The Two Pilgrims (Les Deux Pélerins)</i>, Second half of 19th century. Pen and ink; 18.9 × 13.6 cm (sheet). Museum purchase, Morley and Jean Melden Prints and Drawings Fund (2025-116)",
+    "published_date":"2026-03-05 11:23:36.847807",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

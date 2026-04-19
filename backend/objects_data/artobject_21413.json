@@ -1,0 +1,252 @@
+{
+    "type":"artobject",
+    "objectid":21413,
+    "objectnumber":"y1940-153",
+    "sortnumber":"1940  153y",
+    "displaytitle":"Conical lamp",
+    "department":"Ancient, Byzantine, and Islamic Art",
+    "classification":"Glass",
+    "datebegin":300,
+    "dateend":499,
+    "datecomputed":400,
+    "daterange":"A.D. 1-500",
+    "displaydate":"4th–5th century CE",
+    "medium":"Transparent olive-green and dark blue glass with few sandy impurities",
+    "dimensions":"h. 13.3 cm, diam. rim. 7 cm (5 1/4 x 2 3/4 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Museum purchase",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":"",
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"1940-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Conical lamp",
+            "titletype":"Primary Title",
+            "displayorder":1
+        },
+        {
+            "title":"Conical lamp from a chandelier (polykandelon)",
+            "titletype":"Primary Title",
+            "displayorder":2
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Description",
+            "textentryhtml":"Flaring rim, sharply cut off and uneven; conical body with extended point. A row of applied, dark blue blobs, 3 cm. below the rim, forms a decorative band around the body.",
+            "remarks":"Fire and Sand (2012)"
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"Purchased by the Museum from John Khayat",
+            "remarks":null
+        }
+    ],
+    "media":[
+        {
+            "id":74232,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/y1940-153",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Bruce White Photography"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"Anastassios Antonaras,<em> Fire and Sand: Ancient Glass in the Princeton University Art Museum </em>(Princeton, NJ: Princeton University Art Museum, 2012)",
+            "citation":"Anastassios Antonaras,<em> Fire and Sand: Ancient Glass in the Princeton University Art Museum </em>(Princeton, NJ: Princeton University Art Museum, 2012), fig. 59, 31; cat. no. 184 (illus.)",
+            "date":2012,
+            "id":1296,
+            "uri":"https://search.worldcat.org/title/794814337"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: possibly Egypt or eastern Mediterranean",
+            "code":"Place made",
+            "continent":null,
+            "subcontinent":null,
+            "country":null,
+            "region":null,
+            "state":null,
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":"possibly Egypt or eastern Mediterranean",
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"www.geonames.org/maps/google_27_30.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2161148,
+            "term":"glass",
+            "aatid":300010797,
+            "termtype":"Classification"
+        },
+        {
+            "id":2036723,
+            "term":"Roman (style or period)",
+            "aatid":300020533,
+            "termtype":"Culture"
+        },
+        {
+            "id":2036735,
+            "term":"Imperial (Roman)",
+            "aatid":300020541,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2036755,
+            "term":"Late Antique",
+            "aatid":300020666,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2070903,
+            "term":"lamps (lighting devices)",
+            "aatid":300037592,
+            "termtype":"Classification"
+        },
+        {
+            "id":2159248,
+            "term":"dots",
+            "aatid":300010145,
+            "termtype":"Subject"
+        },
+        {
+            "id":2161427,
+            "term":"free-blown glass",
+            "aatid":300233425,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2161148,
+            "classification":"glass"
+        },
+        {
+            "id":2070903,
+            "classification":"lamps (lighting devices)"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[
+        {
+            "id":2036723,
+            "culture":"Roman (style or period)"
+        }
+    ],
+    "periods":[
+        {
+            "id":12861,
+            "period":"Roman Imperial Period",
+            "alphasort":"Roman Imperial Period",
+            "begindate":-30,
+            "enddate":467,
+            "displayperiod":"Roman Imperial Period or Late Antiquity, ca. 476–700 CE, ca. 30 BCE–476 CE",
+            "displaydate":"ca. 30 BCE–476 CE"
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2036735,
+            "period":"Imperial (Roman)"
+        },
+        {
+            "id":2036755,
+            "period":"Late Antique"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199316,
+            "term":"Ancient Mediterranean Art",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"13.30"
+        },
+        {
+            "element":"Overall",
+            "type":"diam. rim",
+            "units":"centimeters",
+            "dimension":"7.00"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":181973,
+            "name":"web_2020_Ancient"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":264604,
+            "name":"DenseDisplay_AncientMed_at_20250205"
+        },
+        {
+            "packageid":264578,
+            "name":"VisibleStorage_DenseDisplay_G22_ABI_RomanGlass"
+        },
+        {
+            "packageid":220207,
+            "name":"Gallery_22(Pavilion6)-AncientMed"
+        },
+        {
+            "packageid":264600,
+            "name":"DenseDisplay_CompleteList_at_20250205"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/y1940-153"
+    ],
+    "displaymaker":null,
+    "displayculture":null,
+    "displayperiod":"Roman Imperial Period or Late Antiquity, ca. 476–700 CE, ca. 30 BCE–476 CE",
+    "caption":"Roman Imperial Period or Late Antiquity, ca. 476–700 CE (ca. 30 BCE–476 CE), 4th–5th century CE, Conical lamp. Transparent olive-green and dark blue glass with few sandy impurities; 13.3 x 7 cm. Museum purchase (y1940-153)",
+    "captionhtml":"Roman Imperial Period or Late Antiquity, ca. 476–700 CE (ca. 30 BCE–476 CE), 4th–5th century CE, <i>Conical lamp</i>. Transparent olive-green and dark blue glass with few sandy impurities; 13.3 x 7 cm. Museum purchase (y1940-153)",
+    "published_date":"2026-02-11 09:36:01.991976",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

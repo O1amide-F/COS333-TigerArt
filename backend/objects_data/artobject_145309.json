@@ -1,0 +1,193 @@
+{
+    "type":"artobject",
+    "objectid":145309,
+    "objectnumber":"2025-121",
+    "sortnumber":"2025  121",
+    "displaytitle":"Sem título (da série Cupinzeiros) [Untitled (from the Termite mound series)]",
+    "department":"Modern and Contemporary Art",
+    "classification":"Ceramic",
+    "datebegin":2022,
+    "dateend":2022,
+    "datecomputed":2022,
+    "daterange":"A.D. 1945-present",
+    "displaydate":"2022",
+    "medium":"Terracotta",
+    "dimensions":"43 × 27 × 22 cm (16 15/16 × 10 5/8 × 8 11/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Museum purchase, Mary Trumbull Adams Art Fund",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":"© Lídia Lisboa",
+    "restrictions":"Restricted Download - Under Copyright",
+    "nowebuse":"False",
+    "secondaryobjectnumber":"",
+    "campuscollections":"false",
+    "on_view":false,
+    "accessionyear":"2025-01-01",
+    "newaccession":1,
+    "titles":[
+        {
+            "title":"Sem título (da série Cupinzeiros) [Untitled (from the Termite mound series)]",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[
+        {
+            "id":23580,
+            "displayname":"Lídia Lisboa",
+            "displaydate":"born 1970, Guaíra, Brazil; active Sao Paolo, Brazil",
+            "datebegin":1970,
+            "dateend":0,
+            "prefix":null,
+            "suffix":null,
+            "role":"Artist",
+            "displaymaker":"Lídia Lisboa, born 1970, Guaíra, Brazil; active Sao Paolo, Brazil",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"Lídia Lisbôa, Sao Paolo, Brazil, 2022; [The Ocean is the Axis, curated by Igor Simões, Mariane\nIbrahim Gallery, Mexico City, MX, June 1–September 2024]; purchased by the Princeton\nUniversity Art Museum, Princeton, NJ, July 2025.\n",
+            "remarks":null
+        }
+    ],
+    "media":[
+        {
+            "id":263992,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/2025-121_1",
+            "isprimary":1,
+            "rank":0,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":"Restricted Download - Under Copyright",
+            "caption":"Vendor Image"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[
+        {
+            "exhibitionid":3884,
+            "citation":"Clay Has Memory: Creative Lineages from Africa Sunday, July 19, 2026 - Saturday, July 3, 2027",
+            "isvirtual":true,
+            "begindate":"2026-07-19",
+            "enddate":"2027-07-03",
+            "uri":"https://artmuseum.princeton.edu/art/exhibitions/3884"
+        }
+    ],
+    "geography":[
+        {
+            "displaygeography":"Place made: South America, Brazil, Sao Paolo",
+            "code":"Place made",
+            "continent":"South America",
+            "subcontinent":null,
+            "country":"Brazil",
+            "region":null,
+            "state":null,
+            "city":"Sao Paolo",
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"https://www.geonames.org/3448433/sao-paulo.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2055271,
+            "term":"sculptures",
+            "aatid":300047203,
+            "termtype":"Classification"
+        },
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2038525,
+            "term":"Brazilian",
+            "aatid":300107967,
+            "termtype":"Culture"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2055271,
+            "classification":"sculptures"
+        },
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[
+        {
+            "id":2038525,
+            "culture":"Brazilian"
+        }
+    ],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199324,
+            "term":"Art Since 1945",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"43.00"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"27.00"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"22.00"
+        }
+    ],
+    "packages":[],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/2025-121_1"
+    ],
+    "displaymaker":"Lídia Lisboa, born 1970, Guaíra, Brazil; active Sao Paolo, Brazil",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"Lídia Lisboa (born 1970, Guaíra, Brazil; active Sao Paolo, Brazil), Sem título (da série Cupinzeiros) [Untitled (from the Termite mound series)], 2022. Terracotta; 43 × 27 × 22 cm. Museum purchase, Mary Trumbull Adams Art Fund (2025-121)",
+    "captionhtml":"Lídia Lisboa (born 1970, Guaíra, Brazil; active Sao Paolo, Brazil), <i>Sem título (da série Cupinzeiros) [Untitled (from the Termite mound series)]</i>, 2022. Terracotta; 43 × 27 × 22 cm. Museum purchase, Mary Trumbull Adams Art Fund (2025-121)",
+    "published_date":"2026-04-03 02:01:13.598418",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

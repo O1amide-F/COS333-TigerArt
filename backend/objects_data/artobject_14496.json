@@ -1,0 +1,324 @@
+{
+    "type":"artobject",
+    "objectid":14496,
+    "objectnumber":"2012-46",
+    "sortnumber":"2012   46",
+    "displaytitle":"Maskette",
+    "department":"Art of the Ancient Americas",
+    "classification":"Sculpture",
+    "datebegin":-1000,
+    "dateend":-400,
+    "datecomputed":-700,
+    "daterange":"1000 B.C.-A.D 1",
+    "displaydate":"1000–400 BCE",
+    "medium":"Serpentine with pyrite inclusions",
+    "dimensions":"11.2 × 10 × 5 cm (4 7/16 × 3 15/16 × 1 15/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Gift of Gillett G. Griffin in honor of Douglas H. Dunn, Class of 1964",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2012-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Maskette",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"One of the first civilizations of present-day Mexico, the Olmec distributed their ceramics widely. With the shift of the center of Olmec culture from San Lorenzo, Veracruz, to La Venta, Tabasco, around 1000 BCE, however, Olmec-style ceramics became much less pervasive. They were replaced by fine small-scale greenstone sculptures, especially blue-green jadeite and serpentine. In part, this shift may have resulted from increased focus on maize agriculture; the blue-green color of jadeite symbolized successful crops, and the subject matter often involved maize iconography. Incised jewelry, masklike faces, and complexly modeled animal, human, and super-natural ﬁgures, all from the Middle Formative period and made in Olmec style, have been discovered throughout most of Mesoamerica and beyond, from Costa Rica to the central Mexican highlands to the southwest Mexican coast in the present-day state of Guerrero.\n",
+            "remarks":"AAA3_20-T3B-8_CLA_FA.pdf - Day 1 installation"
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\tProbably Teochita, Inc., New York [1]; by 1967, Gillett G. Griffin (1928-2016), Princeton, NJ [2]; 2012, gift to the Princeton University Art Museum.\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] As suggested by an invoice in the curatorial file, Griffin purchased an 'Olmec face panel' from Teochita, Inc. (Frances Pratt) on April 18, 1967. It is noted as object PT17 by Pratt, described in some detail in a letter to Griffin from Carlo Gay dated 12 May 1967, and mentioned briefly in a letter from Pratt to Griffin dated 15 March 1967.\n\t<br />\n\t[2] Griffin lent the work to the Museum in 1967 (L.1967.196).\n</p>",
+            "remarks":null
+        }
+    ],
+    "media":[
+        {
+            "id":73933,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/2012-46_FRN",
+            "isprimary":1,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM photo"
+        },
+        {
+            "id":73934,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/2012-46_FRN2",
+            "isprimary":0,
+            "rank":3,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM photo"
+        },
+        {
+            "id":73935,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/2012-46_LFT",
+            "isprimary":0,
+            "rank":4,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM photo"
+        },
+        {
+            "id":73936,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/2012-46_OBL",
+            "isprimary":0,
+            "rank":5,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM photo"
+        },
+        {
+            "id":73937,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/2012-46_OBL2",
+            "isprimary":0,
+            "rank":6,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"PUAM photo"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"Gillett G. Griffin, \"Olmec Forms and Materials Found in Central Guerrero,\" in <SPAN style='FONT-SIZE: 9pt; FONT-FAMILY: \"Arial\",sans-serif; LINE-HEIGHT: 107%; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA'><EM>The Olmec and Their Neighbors: Essays in Memory of Matthew W. Stirling</EM></SPAN><SPAN style='FONT-SIZE: 9pt; FONT-FAMILY: \"Arial\",sans-serif; LINE-HEIGHT: 107%; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA'>, eds.&nbsp;Michael D. Coe, David C. Grove, Elizabeth&nbsp;P. Benson&nbsp;(Washington, D.C.: Dumburton Oaks Research Library and Collections, 1981).</SPAN>",
+            "citation":"Gillett G. Griffin, \"Olmec Forms and Materials Found in Central Guerrero,\" in <SPAN style='FONT-SIZE: 9pt; FONT-FAMILY: \"Arial\",sans-serif; LINE-HEIGHT: 107%; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA'><EM>The Olmec and Their Neighbors: Essays in Memory of Matthew W. Stirling</EM></SPAN><SPAN style='FONT-SIZE: 9pt; FONT-FAMILY: \"Arial\",sans-serif; LINE-HEIGHT: 107%; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA'>, eds.&nbsp;Michael D. Coe, David C. Grove, Elizabeth&nbsp;P. Benson&nbsp;(Washington, D.C.: Dumburton Oaks Research Library and Collections, 1981).</SPAN>, fig. 23 (illus.)",
+            "date":1981,
+            "id":2600,
+            "uri":"https://search.worldcat.org/title/7416377"
+        },
+        {
+            "boilertext":"\"Acquisitions of the Princeton University Art Museum 2012,\"&nbsp;<em>Record of the Princeton University Art Museum</em> 71/72 (2012-13): p. 105-132.",
+            "citation":"\"Acquisitions of the Princeton University Art Museum 2012,\"&nbsp;<em>Record of the Princeton University Art Museum</em> 71/72 (2012-13): p. 105-132., p. 11 (illus.)",
+            "date":2012,
+            "id":2988,
+            "uri":"https://www.jstor.org/stable/24416388"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Mexico, Guerrero, near Zumpango del Rio",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Mesoamerica",
+            "country":"Mexico",
+            "region":null,
+            "state":"Guerrero",
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":"near Zumpango del Rio",
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3513967/zumpango-del-rio.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2054791,
+            "term":"sculpture",
+            "aatid":300047090,
+            "termtype":"Classification"
+        },
+        {
+            "id":2156347,
+            "term":"carving",
+            "aatid":300053149,
+            "termtype":"Classification"
+        },
+        {
+            "id":2158086,
+            "term":"heads",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2158090,
+            "term":"faces",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2129353,
+            "term":"masks (costume)",
+            "aatid":300138758,
+            "termtype":"Classification"
+        },
+        {
+            "id":2035652,
+            "term":"Middle Preclassic",
+            "aatid":300016973,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2035751,
+            "term":"Olmec",
+            "aatid":300017051,
+            "termtype":"Culture"
+        },
+        {
+            "id":2156347,
+            "term":"carving",
+            "aatid":300053149,
+            "termtype":"Techniques"
+        },
+        {
+            "id":2163044,
+            "term":"serpentine",
+            "aatid":300011627,
+            "termtype":"Materials"
+        },
+        {
+            "id":2162963,
+            "term":"pyrite",
+            "aatid":300011112,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2054791,
+            "classification":"sculpture"
+        },
+        {
+            "id":2156347,
+            "classification":"carving"
+        },
+        {
+            "id":2129353,
+            "classification":"masks (costume)"
+        }
+    ],
+    "cultures":[
+        {
+            "id":12498,
+            "culture":"Olmec",
+            "alphasort":"Olmec",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Olmec style",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2035751,
+            "culture":"Olmec"
+        }
+    ],
+    "periods":[
+        {
+            "id":24010,
+            "period":"Middle Formative Period",
+            "alphasort":"Formative Period, Middle",
+            "begindate":-1000,
+            "enddate":-400,
+            "displayperiod":"Middle Formative Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035652,
+            "period":"Middle Preclassic"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"11.20"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"10.00"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"5.00"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":181974,
+            "name":"web_2020_AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":223469,
+            "name":"2023_ART365/LAS370/ANT365_03_21"
+        },
+        {
+            "packageid":207234,
+            "name":"SAB_Gala2021"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/2012-46_FRN"
+    ],
+    "displaymaker":null,
+    "displayculture":"Olmec style",
+    "displayperiod":"Middle Formative Period",
+    "caption":"Olmec style, Middle Formative Period, 1000–400 BCE, Guerrero, Mexico, Mesoamerica, Maskette. Serpentine with pyrite inclusions; 11.2 × 10 × 5 cm. Gift of Gillett G. Griffin in honor of Douglas H. Dunn, Class of 1964 (2012-46)",
+    "captionhtml":"Olmec style, Middle Formative Period, 1000–400 BCE, Guerrero, Mexico, Mesoamerica, <i>Maskette</i>. Serpentine with pyrite inclusions; 11.2 × 10 × 5 cm. Gift of Gillett G. Griffin in honor of Douglas H. Dunn, Class of 1964 (2012-46)",
+    "published_date":"2026-02-11 08:56:28.411707",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":true
+}

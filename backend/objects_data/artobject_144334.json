@@ -1,0 +1,178 @@
+{
+    "type":"artobject",
+    "objectid":144334,
+    "objectnumber":"2025-56",
+    "sortnumber":"2025   56",
+    "displaytitle":"Imadode, from the Ivie series",
+    "department":"African and Oceanic Art",
+    "classification":"Mixed Media",
+    "datebegin":2022,
+    "dateend":2022,
+    "datecomputed":2022,
+    "daterange":"A.D. 1945-present",
+    "displaydate":"2022",
+    "medium":"Paper collage, pen drawing, and acrylic on canvas",
+    "dimensions":"127 × 78.1 cm (50 × 30 3/4 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Museum purchase, Virginia and Bagley Wright, Class of 1946, Program Fund for Modern and Contemporary Art",
+    "markings":null,
+    "inscribed":null,
+    "signed":"Signed and dated: Taiye Idahor, 2022",
+    "catalograisonne":null,
+    "creditlinerepro":"© Taiye Idahor",
+    "restrictions":"Restricted Download - Under Copyright",
+    "nowebuse":"False",
+    "secondaryobjectnumber":"",
+    "campuscollections":"false",
+    "on_view":false,
+    "accessionyear":"2025-01-01",
+    "newaccession":1,
+    "titles":[
+        {
+            "title":"Imadode, from the Ivie series",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[
+        {
+            "id":21558,
+            "displayname":"Taiye Idahor",
+            "displaydate":"born 1984, Lagos, Nigeria; active Lagos",
+            "datebegin":1984,
+            "dateend":0,
+            "prefix":null,
+            "suffix":null,
+            "role":"Artist",
+            "displaymaker":"Taiye Idahor, born 1984, Lagos, Nigeria; active Lagos",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[],
+    "media":[],
+    "hasimage":"false",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: Africa, Nigeria, Lagos",
+            "code":"Place made",
+            "continent":"Africa",
+            "subcontinent":null,
+            "country":"Nigeria",
+            "region":null,
+            "state":null,
+            "city":"Lagos",
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":null,
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2166886,
+            "term":"mixed media",
+            "aatid":300163347,
+            "termtype":"Classification"
+        },
+        {
+            "id":2041478,
+            "term":"African",
+            "aatid":300015647,
+            "termtype":"Culture"
+        },
+        {
+            "id":2041568,
+            "term":"Nigerian",
+            "aatid":300015776,
+            "termtype":"Culture"
+        },
+        {
+            "id":2051938,
+            "term":"collages",
+            "aatid":300033963,
+            "termtype":"Classification"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2166886,
+            "classification":"mixed media"
+        },
+        {
+            "id":2051938,
+            "classification":"collages"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[
+        {
+            "id":2041478,
+            "culture":"African"
+        },
+        {
+            "id":2041568,
+            "culture":"Nigerian"
+        }
+    ],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199315,
+            "term":"African Art",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199324,
+            "term":"Art Since 1945",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199327,
+            "term":"Prints and Drawings",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"126.99"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"78.10"
+        }
+    ],
+    "packages":[],
+    "primaryimage":"",
+    "displaymaker":"Taiye Idahor, born 1984, Lagos, Nigeria; active Lagos",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"Taiye Idahor (born 1984, Lagos, Nigeria; active Lagos), Lagos, Nigeria, Imadode, from the Ivie series, 2022. Paper collage, pen drawing, and acrylic on canvas; 127 × 78.1 cm. Museum purchase, Virginia and Bagley Wright, Class of 1946, Program Fund for Modern and Contemporary Art (2025-56)",
+    "captionhtml":"Taiye Idahor (born 1984, Lagos, Nigeria; active Lagos), Lagos, Nigeria, <i>Imadode, from the Ivie series</i>, 2022. Paper collage, pen drawing, and acrylic on canvas; 127 × 78.1 cm. Museum purchase, Virginia and Bagley Wright, Class of 1946, Program Fund for Modern and Contemporary Art (2025-56)",
+    "published_date":"2026-03-31 03:39:08.066867",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

@@ -1,0 +1,178 @@
+{
+    "type":"artobject",
+    "objectid":145725,
+    "objectnumber":"2025-277",
+    "sortnumber":"2025  277",
+    "displaytitle":"Olla",
+    "department":"American Art",
+    "classification":"Ceramic",
+    "datebegin":1995,
+    "dateend":2005,
+    "datecomputed":2000,
+    "daterange":"A.D. 1945-present",
+    "displaydate":"ca. 2000",
+    "medium":"Ceramic with slip-paint",
+    "dimensions":"18.4 × 24.8 cm (7 1/4 × 9 3/4 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Gift of Jim Maddox, Class of 1965, and Lucy Maddox",
+    "markings":null,
+    "inscribed":null,
+    "signed":"Signed: M.C. Antonio, Acoma N.M.",
+    "catalograisonne":null,
+    "creditlinerepro":"© Melissa Antonio",
+    "restrictions":"Restricted Download - Under Copyright and Reference Image",
+    "nowebuse":"False",
+    "secondaryobjectnumber":"",
+    "campuscollections":"false",
+    "on_view":false,
+    "accessionyear":"2025-01-01",
+    "newaccession":1,
+    "titles":[
+        {
+            "title":"Olla",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[
+        {
+            "id":23877,
+            "displayname":"Melissa Antonio",
+            "displaydate":"born 1965; born Haak'u (Acoma) Pueblo, NM",
+            "datebegin":1965,
+            "dateend":0,
+            "prefix":null,
+            "suffix":null,
+            "role":"Artist",
+            "displaymaker":"Melissa Antonio, born 1965; born Haak'u (Acoma) Pueblo, NM",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[],
+    "media":[],
+    "hasimage":"false",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, United States, New Mexico, Haak'u (Acoma) Pueblo",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":null,
+            "country":"United States",
+            "region":null,
+            "state":"New Mexico",
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":"Haak'u (Acoma) Pueblo",
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"https://www.geonames.org/5454217/acoma-pueblo.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2039520,
+            "term":"Native American",
+            "aatid":300017437,
+            "termtype":"Culture"
+        },
+        {
+            "id":2040513,
+            "term":"Pueblo",
+            "aatid":300017746,
+            "termtype":"Culture"
+        },
+        {
+            "id":2072851,
+            "term":"vessels (containers)",
+            "aatid":300193015,
+            "termtype":"Classification"
+        },
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        },
+        {
+            "id":2072851,
+            "classification":"vessels (containers)"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[
+        {
+            "id":2039520,
+            "culture":"Native American"
+        },
+        {
+            "id":2040513,
+            "culture":"Pueblo"
+        }
+    ],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199324,
+            "term":"Art Since 1945",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199325,
+            "term":"North American Art",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199332,
+            "term":"Princeton Collects",
+            "termtype":"Archive | Collection"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"18.41"
+        },
+        {
+            "element":"Overall",
+            "type":"diam.",
+            "units":"centimeters",
+            "dimension":"24.76"
+        }
+    ],
+    "packages":[],
+    "primaryimage":"",
+    "displaymaker":"Melissa Antonio, born 1965; born Haak'u (Acoma) Pueblo, NM",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"Melissa Antonio (born 1965; born Haak'u (Acoma) Pueblo, NM), Olla, ca. 2000. Ceramic with slip-paint; 18.4 × 24.8 cm. Gift of Jim Maddox, Class of 1965, and Lucy Maddox (2025-277)",
+    "captionhtml":"Melissa Antonio (born 1965; born Haak'u (Acoma) Pueblo, NM), <i>Olla</i>, ca. 2000. Ceramic with slip-paint; 18.4 × 24.8 cm. Gift of Jim Maddox, Class of 1965, and Lucy Maddox (2025-277)",
+    "published_date":"2026-03-31 03:41:21.098044",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

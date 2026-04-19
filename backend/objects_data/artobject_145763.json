@@ -1,0 +1,204 @@
+{
+    "type":"artobject",
+    "objectid":145763,
+    "objectnumber":"2025-315",
+    "sortnumber":"2025  315",
+    "displaytitle":"Jar",
+    "department":"American Art",
+    "classification":"Ceramic",
+    "datebegin":1992,
+    "dateend":1992,
+    "datecomputed":1992,
+    "daterange":"A.D. 1945-present",
+    "displaydate":"1992",
+    "medium":"Ceramic with slip-paint",
+    "dimensions":"18.4 × 23.8 cm (7 1/4 × 9 3/8 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Gift of Jim Maddox, Class of 1965, and Lucy Maddox",
+    "markings":null,
+    "inscribed":null,
+    "signed":"Signed and dated: Nathan Begaye, Navajo Hopi, 9-23-92",
+    "catalograisonne":null,
+    "creditlinerepro":"© Estate of Nathan Begaye",
+    "restrictions":"Restricted Download - Under Copyright and Reference Image",
+    "nowebuse":"False",
+    "secondaryobjectnumber":"",
+    "campuscollections":"false",
+    "on_view":false,
+    "accessionyear":"2025-01-01",
+    "newaccession":1,
+    "titles":[
+        {
+            "title":"Jar",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[
+        {
+            "id":22276,
+            "displayname":"Nathan Begaye",
+            "displaydate":"Hopi and Diné, 1969–2010; born Phoenix, AZ; died Tuba City, AZ; active Tuba City",
+            "datebegin":1969,
+            "dateend":2010,
+            "prefix":null,
+            "suffix":null,
+            "role":"Artist",
+            "displaymaker":"Nathan Begaye, Hopi and Diné, 1969–2010; born Phoenix, AZ; died Tuba City, AZ; active Tuba City",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[],
+    "media":[],
+    "hasimage":"false",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, United States, Arizona, Tuba City",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":null,
+            "country":"United States",
+            "region":null,
+            "state":"Arizona",
+            "city":"Tuba City",
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"https://www.geonames.org/5318279/tuba-city.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2039520,
+            "term":"Native American",
+            "aatid":300017437,
+            "termtype":"Culture"
+        },
+        {
+            "id":2040499,
+            "term":"Navajo",
+            "aatid":300017740,
+            "termtype":"Culture"
+        },
+        {
+            "id":2040513,
+            "term":"Pueblo",
+            "aatid":300017746,
+            "termtype":"Culture"
+        },
+        {
+            "id":2040541,
+            "term":"Hopi",
+            "aatid":300017763,
+            "termtype":"Culture"
+        },
+        {
+            "id":2072851,
+            "term":"vessels (containers)",
+            "aatid":300193015,
+            "termtype":"Classification"
+        },
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2158039,
+            "term":"birds",
+            "aatid":null,
+            "termtype":"Subject"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        },
+        {
+            "id":2072851,
+            "classification":"vessels (containers)"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[
+        {
+            "id":2039520,
+            "culture":"Native American"
+        },
+        {
+            "id":2040499,
+            "culture":"Navajo"
+        },
+        {
+            "id":2040513,
+            "culture":"Pueblo"
+        },
+        {
+            "id":2040541,
+            "culture":"Hopi"
+        }
+    ],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199324,
+            "term":"Art Since 1945",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199325,
+            "term":"North American Art",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199332,
+            "term":"Princeton Collects",
+            "termtype":"Archive | Collection"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"18.41"
+        },
+        {
+            "element":"Overall",
+            "type":"diam.",
+            "units":"centimeters",
+            "dimension":"23.81"
+        }
+    ],
+    "packages":[],
+    "primaryimage":"",
+    "displaymaker":"Nathan Begaye, Hopi and Diné, 1969–2010; born Phoenix, AZ; died Tuba City, AZ; active Tuba City",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"Nathan Begaye (Hopi and Diné, 1969–2010; born Phoenix, AZ; died Tuba City, AZ; active Tuba City), Jar, 1992. Ceramic with slip-paint; 18.4 × 23.8 cm. Gift of Jim Maddox, Class of 1965, and Lucy Maddox (2025-315)",
+    "captionhtml":"Nathan Begaye (Hopi and Diné, 1969–2010; born Phoenix, AZ; died Tuba City, AZ; active Tuba City), <i>Jar</i>, 1992. Ceramic with slip-paint; 18.4 × 23.8 cm. Gift of Jim Maddox, Class of 1965, and Lucy Maddox (2025-315)",
+    "published_date":"2026-03-31 03:41:21.428504",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

@@ -1,0 +1,211 @@
+{
+    "type":"artobject",
+    "objectid":145023,
+    "objectnumber":"2024-521",
+    "sortnumber":"2024  521",
+    "displaytitle":"Untitled",
+    "department":"Photography",
+    "classification":"Photographs",
+    "datebegin":2021,
+    "dateend":2021,
+    "datecomputed":2021,
+    "daterange":"A.D. 1945-present",
+    "displaydate":"2021",
+    "medium":"Gouache on photography",
+    "dimensions":"32 × 22 cm (12 5/8 × 8 11/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Gift of Shamus R. Khan",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":"© Sofia Borges",
+    "restrictions":"Restricted Download - Under Copyright",
+    "nowebuse":"False",
+    "secondaryobjectnumber":"",
+    "campuscollections":"false",
+    "on_view":false,
+    "accessionyear":"2024-01-01",
+    "newaccession":1,
+    "titles":[
+        {
+            "title":"Untitled",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[
+        {
+            "id":23479,
+            "displayname":"Sofia Borges",
+            "displaydate":"born 1984, Ribeirão Preto, Brazil; active New York, NY",
+            "datebegin":0,
+            "dateend":0,
+            "prefix":null,
+            "suffix":null,
+            "role":"Artist",
+            "displaymaker":"Sofia Borges, born 1984, Ribeirão Preto, Brazil; active New York, NY",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[],
+    "media":[],
+    "hasimage":"false",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, United States, New York, New York",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":null,
+            "country":"United States",
+            "region":null,
+            "state":"New York",
+            "city":"New York",
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"https://www.geonames.org/5128581/new-york-city.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2158086,
+            "term":"heads",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2158090,
+            "term":"faces",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2038492,
+            "term":"American",
+            "aatid":300107956,
+            "termtype":"Culture"
+        },
+        {
+            "id":2038525,
+            "term":"Brazilian",
+            "aatid":300107967,
+            "termtype":"Culture"
+        },
+        {
+            "id":2055657,
+            "term":"figures (representations)",
+            "aatid":300189808,
+            "termtype":"Subject"
+        },
+        {
+            "id":2041244,
+            "term":"Latin American",
+            "aatid":300080819,
+            "termtype":"Culture"
+        },
+        {
+            "id":2053200,
+            "term":"photographs",
+            "aatid":300046300,
+            "termtype":"Classification"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2053200,
+            "classification":"photographs"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[
+        {
+            "id":2038492,
+            "culture":"American"
+        },
+        {
+            "id":2038525,
+            "culture":"Brazilian"
+        },
+        {
+            "id":2041244,
+            "culture":"Latin American"
+        }
+    ],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199323,
+            "term":"Latin American Art",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199324,
+            "term":"Art Since 1945",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199326,
+            "term":"Photography",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199327,
+            "term":"Prints and Drawings",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199332,
+            "term":"Princeton Collects",
+            "termtype":"Archive | Collection"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"32.00"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"22.00"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":264438,
+            "name":"CFA-since-1-1-2024"
+        }
+    ],
+    "primaryimage":"",
+    "displaymaker":"Sofia Borges, born 1984, Ribeirão Preto, Brazil; active New York, NY",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"Sofia Borges (born 1984, Ribeirão Preto, Brazil; active New York, NY), Untitled, 2021. Gouache on photography; 32 × 22 cm. Gift of Shamus R. Khan (2024-521)",
+    "captionhtml":"Sofia Borges (born 1984, Ribeirão Preto, Brazil; active New York, NY), <i>Untitled</i>, 2021. Gouache on photography; 32 × 22 cm. Gift of Shamus R. Khan (2024-521)",
+    "published_date":"2026-03-31 03:40:28.229158",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

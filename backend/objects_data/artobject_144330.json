@@ -1,0 +1,144 @@
+{
+    "type":"artobject",
+    "objectid":144330,
+    "objectnumber":"2024-508",
+    "sortnumber":"2024  508",
+    "displaytitle":"Wind Sculpture in Bronze II",
+    "department":"Modern and Contemporary Art",
+    "classification":"Sculpture",
+    "datebegin":2023,
+    "dateend":2023,
+    "datecomputed":2023,
+    "daterange":"A.D. 1945-present",
+    "displaydate":"2023",
+    "medium":"Bronze, hand-painted with Dutch wax pattern",
+    "dimensions":"200 × 150 × 137 cm (78 3/4 × 59 1/16 × 53 15/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Princeton University",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":"© Yinka Shonibare MBE / Courtesy James Cohan, New York",
+    "restrictions":"Restricted Download - Under Copyright",
+    "nowebuse":"False",
+    "secondaryobjectnumber":"",
+    "campuscollections":"false",
+    "on_view":false,
+    "accessionyear":"2024-01-01",
+    "newaccession":1,
+    "titles":[
+        {
+            "title":"Wind Sculpture in Bronze II",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[
+        {
+            "id":14696,
+            "displayname":"Yinka Shonibare CBE",
+            "displaydate":"born 1962, London, United Kingdom; active London",
+            "datebegin":1962,
+            "dateend":1962,
+            "prefix":null,
+            "suffix":null,
+            "role":"Artist",
+            "displaymaker":"Yinka Shonibare CBE, born 1962, London, United Kingdom; active London",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[],
+    "media":[
+        {
+            "id":253437,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/TC2024-61_ref_1",
+            "isprimary":1,
+            "rank":0,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":"Restricted Download - Under Copyright",
+            "caption":"Reference image"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: Europe, England, London",
+            "code":"Place made",
+            "continent":"Europe",
+            "subcontinent":null,
+            "country":"England",
+            "region":null,
+            "state":null,
+            "city":"London",
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"https://www.geonames.org/2643743/london.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[],
+    "classifications":[],
+    "cultures":[],
+    "cultureterms":[],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199324,
+            "term":"Art Since 1945",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"200.00"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"150.00"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"137.00"
+        }
+    ],
+    "packages":[],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/TC2024-61_ref_1"
+    ],
+    "displaymaker":"Yinka Shonibare CBE, born 1962, London, United Kingdom; active London",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"Yinka Shonibare CBE (born 1962, London, United Kingdom; active London), Wind Sculpture in Bronze II, 2023. Bronze, hand-painted with Dutch wax pattern; 200 × 150 × 137 cm. Princeton University (2024-508)",
+    "captionhtml":"Yinka Shonibare CBE (born 1962, London, United Kingdom; active London), <i>Wind Sculpture in Bronze II</i>, 2023. Bronze, hand-painted with Dutch wax pattern; 200 × 150 × 137 cm. Princeton University (2024-508)",
+    "published_date":"2026-03-31 03:39:06.749805",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

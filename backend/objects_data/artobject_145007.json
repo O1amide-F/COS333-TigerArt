@@ -1,0 +1,154 @@
+{
+    "type":"artobject",
+    "objectid":145007,
+    "objectnumber":"2024-277.33",
+    "sortnumber":"2024  277    33",
+    "displaytitle":"Looking Back",
+    "department":"Photography",
+    "classification":"Ephemera",
+    "datebegin":2010,
+    "dateend":2010,
+    "datecomputed":2010,
+    "daterange":"A.D. 1945-present",
+    "displaydate":"2010",
+    "medium":"Paper",
+    "dimensions":"",
+    "dimensionsproposed":"",
+    "creditline":"Museum purchase, Fowler McCormick, Class of 1921, Fund",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":"© Mierle Laderman Ukeles",
+    "restrictions":"Restricted Download - Under Copyright",
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":false,
+    "accessionyear":"2024-01-01",
+    "newaccession":1,
+    "titles":[],
+    "makers":[
+        {
+            "id":18648,
+            "displayname":"Mierle Laderman Ukeles",
+            "displaydate":"born 1939, Denver, CO; active New York, NY",
+            "datebegin":1939,
+            "dateend":2100,
+            "prefix":null,
+            "suffix":null,
+            "role":"Artist",
+            "displaymaker":"Mierle Laderman Ukeles, born 1939, Denver, CO; active New York, NY",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[],
+    "media":[],
+    "hasimage":"false",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place depicted: North America, United States, New York, New York",
+            "code":"Place depicted",
+            "continent":"North America",
+            "subcontinent":null,
+            "country":"United States",
+            "region":null,
+            "state":"New York",
+            "city":"New York",
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":null,
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2038492,
+            "term":"American",
+            "aatid":300107956,
+            "termtype":"Culture"
+        },
+        {
+            "id":2048313,
+            "term":"ephemera",
+            "aatid":300028881,
+            "termtype":"Classification"
+        },
+        {
+            "id":2053200,
+            "term":"photographs",
+            "aatid":300046300,
+            "termtype":"Classification"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2048313,
+            "classification":"ephemera"
+        },
+        {
+            "id":2053200,
+            "classification":"photographs"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[
+        {
+            "id":2038492,
+            "culture":"American"
+        }
+    ],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199324,
+            "term":"Art Since 1945",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199325,
+            "term":"North American Art",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199326,
+            "term":"Photography",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199327,
+            "term":"Prints and Drawings",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[],
+    "packages":[],
+    "primaryimage":"",
+    "displaymaker":"Mierle Laderman Ukeles, born 1939, Denver, CO; active New York, NY",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"Mierle Laderman Ukeles (born 1939, Denver, CO; active New York, NY), Looking Back, 2010. Paper. Museum purchase, Fowler McCormick, Class of 1921, Fund (2024-277.33)",
+    "captionhtml":"Mierle Laderman Ukeles (born 1939, Denver, CO; active New York, NY), <i>Looking Back</i>, 2010. Paper. Museum purchase, Fowler McCormick, Class of 1921, Fund (2024-277.33)",
+    "published_date":"2026-03-31 03:40:24.239225",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

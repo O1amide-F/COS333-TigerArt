@@ -1,0 +1,198 @@
+{
+    "type":"artobject",
+    "objectid":144889,
+    "objectnumber":"2025-149",
+    "sortnumber":"2025  149",
+    "displaytitle":"Dockside the Thames",
+    "department":"American Art",
+    "classification":"Paintings",
+    "datebegin":1890,
+    "dateend":1900,
+    "datecomputed":1895,
+    "daterange":"A.D. 1850-1900",
+    "displaydate":"ca. 1895",
+    "medium":"Oil on canvas",
+    "dimensions":"61 × 91.4 cm (24 × 36 in.)\r\nframe: 81.3 × 113 × 7.6 cm (32 × 44 1/2 × 3 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Gift of David A. Cleveland, Class of 1974, and Patricia Haas Cleveland",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":"Restricted Download - Reference Image",
+    "nowebuse":"False",
+    "secondaryobjectnumber":"",
+    "campuscollections":"false",
+    "on_view":false,
+    "accessionyear":"2025-01-01",
+    "newaccession":1,
+    "titles":[
+        {
+            "title":"Dockside the Thames",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[
+        {
+            "id":23446,
+            "displayname":"Henry Muhrman",
+            "displaydate":"1854–1916; born Cincinatti, OH; died Meissen, Germany",
+            "datebegin":1854,
+            "dateend":1916,
+            "prefix":null,
+            "suffix":null,
+            "role":"Artist",
+            "displaymaker":"Henry Muhrman, 1854–1916; born Cincinatti, OH; died Meissen, Germany",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"The David and Patricia Haas Cleveland Collection; donated to the Princeton University Art Museum, 2024.",
+            "remarks":null
+        }
+    ],
+    "media":[
+        {
+            "id":257777,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/TC2024-98-19_ref",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":"Restricted Download - Reference Image",
+            "caption":"Reference Image"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[],
+    "terms":[
+        {
+            "id":2038492,
+            "term":"American",
+            "aatid":300107956,
+            "termtype":"Culture"
+        },
+        {
+            "id":2052977,
+            "term":"paintings",
+            "aatid":300033618,
+            "termtype":"Classification"
+        },
+        {
+            "id":2055694,
+            "term":"landscapes (representations)",
+            "aatid":300015636,
+            "termtype":"Subject"
+        },
+        {
+            "id":2119857,
+            "term":"rivers",
+            "aatid":300008707,
+            "termtype":"Subject"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2052977,
+            "classification":"paintings"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[
+        {
+            "id":2038492,
+            "culture":"American"
+        }
+    ],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199325,
+            "term":"North American Art",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199332,
+            "term":"Princeton Collects",
+            "termtype":"Archive | Collection"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"60.95"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"91.43"
+        },
+        {
+            "element":"frame",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"81.27"
+        },
+        {
+            "element":"frame",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"113.02"
+        },
+        {
+            "element":"frame",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"7.61"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":264438,
+            "name":"CFA-since-1-1-2024"
+        },
+        {
+            "packageid":277757,
+            "name":"Web_ObjsOnView_NoPrimaryImage_20251010"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":223482,
+            "name":"Gallery_32(Pavilion9)-SpecX"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/TC2024-98-19_ref"
+    ],
+    "displaymaker":"Henry Muhrman, 1854–1916; born Cincinatti, OH; died Meissen, Germany",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"Henry Muhrman (1854–1916; born Cincinatti, OH; died Meissen, Germany), Dockside the Thames, ca. 1895. Oil on canvas; 61 × 91.4 cm, 81.3 × 113 × 7.6 cm (frame). Gift of David A. Cleveland, Class of 1974, and Patricia Haas Cleveland (2025-149)",
+    "captionhtml":"Henry Muhrman (1854–1916; born Cincinatti, OH; died Meissen, Germany), <i>Dockside the Thames</i>, ca. 1895. Oil on canvas; 61 × 91.4 cm, 81.3 × 113 × 7.6 cm (frame). Gift of David A. Cleveland, Class of 1974, and Patricia Haas Cleveland (2025-149)",
+    "published_date":"2026-03-31 03:39:26.465198",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

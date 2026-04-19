@@ -1,0 +1,189 @@
+{
+    "type":"artobject",
+    "objectid":19260,
+    "objectnumber":"y1929-260",
+    "sortnumber":"1929  260y",
+    "displaytitle":"Plate with \"Fall of Montmorenci, Near Quebec\"",
+    "department":"European Painting and Sculpture ",
+    "classification":"Ceramics",
+    "datebegin":1818,
+    "dateend":1840,
+    "datecomputed":1829,
+    "daterange":"A.D. 1800-1850",
+    "displaydate":null,
+    "medium":"Earthenware",
+    "dimensions":"2.5 × diam. 23.6 cm (1 × 9 5/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Livingston Collection",
+    "markings":null,
+    "inscribed":"Mark and title in panel.\r\nImpressed in blue: WOOD / 31",
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":false,
+    "accessionyear":"1929-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Plate with \"Fall of Montmorenci, Near Quebec\"",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[
+        {
+            "id":2063,
+            "displayname":"Enoch Wood & Sons",
+            "displaydate":"active 1818–1846, United Kingdom",
+            "datebegin":1818,
+            "dateend":1846,
+            "prefix":null,
+            "suffix":null,
+            "role":"Artist",
+            "displaymaker":"Enoch Wood & Sons, active 1818–1846, United Kingdom",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[],
+    "media":[
+        {
+            "id":136891,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV59220",
+            "isprimary":0,
+            "rank":20,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        },
+        {
+            "id":136892,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV59221",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: Burslem",
+            "code":"Place made",
+            "continent":null,
+            "subcontinent":null,
+            "country":null,
+            "region":null,
+            "state":null,
+            "city":"Burslem",
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":null,
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2075879,
+            "term":"plates (dishes)",
+            "aatid":300042991,
+            "termtype":"Subject"
+        },
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2119963,
+            "term":"waterfalls",
+            "aatid":300008736,
+            "termtype":"Subject"
+        },
+        {
+            "id":2055694,
+            "term":"landscapes (representations)",
+            "aatid":300015636,
+            "termtype":"Subject"
+        },
+        {
+            "id":2031586,
+            "term":"British",
+            "aatid":300111159,
+            "termtype":"Culture"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[
+        {
+            "id":2031586,
+            "culture":"British"
+        }
+    ],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199321,
+            "term":"European Art",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"2.50"
+        },
+        {
+            "element":"Overall",
+            "type":"diam.",
+            "units":"centimeters",
+            "dimension":"23.60"
+        }
+    ],
+    "packages":[],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV59221"
+    ],
+    "displaymaker":"Enoch Wood & Sons, active 1818–1846, United Kingdom",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"Enoch Wood & Sons (active 1818–1846, United Kingdom), Plate with \"Fall of Montmorenci, Near Quebec\". Earthenware; 2.5 × 23.6 cm. Livingston Collection (y1929-260)",
+    "captionhtml":"Enoch Wood & Sons (active 1818–1846, United Kingdom), <i>Plate with \"Fall of Montmorenci, Near Quebec\"</i>. Earthenware; 2.5 × 23.6 cm. Livingston Collection (y1929-260)",
+    "published_date":"2026-02-11 09:20:29.940235",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

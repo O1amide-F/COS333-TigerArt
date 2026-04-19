@@ -1,0 +1,218 @@
+{
+    "type":"artobject",
+    "objectid":145630,
+    "objectnumber":"2025-182",
+    "sortnumber":"2025  182",
+    "displaytitle":"The Ballad of Sexual Dependency",
+    "department":"Photography",
+    "classification":"Time-based works",
+    "datebegin":1981,
+    "dateend":2025,
+    "datecomputed":2003,
+    "daterange":"A.D. 1945-present",
+    "displaydate":"1981–2025",
+    "medium":"Multimedia installation with 687 color slides and programmed soundtrack",
+    "dimensions":"duration: 41 minutes, 52 seconds",
+    "dimensionsproposed":"",
+    "creditline":"Museum purchase, Fowler McCormick, Class of 1921, Fund",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":"© Nan Goldin / courtesy Nan Goldin and Gagosian",
+    "restrictions":"Restricted Download - Under Copyright",
+    "nowebuse":"False",
+    "secondaryobjectnumber":"",
+    "campuscollections":"false",
+    "on_view":false,
+    "accessionyear":"2025-01-01",
+    "newaccession":1,
+    "titles":[
+        {
+            "title":"The Ballad of Sexual Dependency",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[
+        {
+            "id":4886,
+            "displayname":"Nan Goldin",
+            "displaydate":"born 1953, Washington, DC; active New York, NY",
+            "datebegin":1953,
+            "dateend":2100,
+            "prefix":null,
+            "suffix":null,
+            "role":"Artist",
+            "displaymaker":"Nan Goldin, born 1953, Washington, DC; active New York, NY",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"Created by the artist 2025; to [Gagosian Gallery, New York]\n",
+            "remarks":null
+        }
+    ],
+    "media":[
+        {
+            "id":263900,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/P_110_Twisting-at-my-birthday-party_Goldin_120_110_cc1",
+            "isprimary":0,
+            "rank":3,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":"Restricted Download - Under Copyright",
+            "caption":"Vendor Image"
+        },
+        {
+            "id":263901,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/P_129_The-Hug_Goldin_026_129_cc2",
+            "isprimary":0,
+            "rank":4,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":"Restricted Download - Under Copyright",
+            "caption":"Vendor Image"
+        },
+        {
+            "id":263902,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/P_85_Heart-shaped-bruise_Goldin_099_085_cc1",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":"Restricted Download - Under Copyright",
+            "caption":"Vendor Image"
+        },
+        {
+            "id":263903,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/P_99_Cookie-and-Vittorios-wedding_Goldin_076_099_cc1",
+            "isprimary":0,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":"Restricted Download - Under Copyright",
+            "caption":"Vendor Image"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place depicted: North America, United States, New York, New York",
+            "code":"Place depicted",
+            "continent":"North America",
+            "subcontinent":null,
+            "country":"United States",
+            "region":null,
+            "state":"New York",
+            "city":"New York",
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":null,
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2038492,
+            "term":"American",
+            "aatid":300107956,
+            "termtype":"Culture"
+        },
+        {
+            "id":2055565,
+            "term":"time-based works",
+            "aatid":300185191,
+            "termtype":"Classification"
+        },
+        {
+            "id":2053814,
+            "term":"slides (photographs)",
+            "aatid":300128371,
+            "termtype":"Classification"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2053814,
+            "classification":"slides (photographs)"
+        },
+        {
+            "id":2055565,
+            "classification":"time-based works"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[
+        {
+            "id":2038492,
+            "culture":"American"
+        }
+    ],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199324,
+            "term":"Art Since 1945",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199325,
+            "term":"North American Art",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199326,
+            "term":"Photography",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"duration",
+            "type":"Minutes",
+            "units":"minutes",
+            "dimension":"41.00"
+        },
+        {
+            "element":"duration",
+            "type":"Seconds",
+            "units":"seconds",
+            "dimension":"52.00"
+        }
+    ],
+    "packages":[],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/P_85_Heart-shaped-bruise_Goldin_099_085_cc1"
+    ],
+    "displaymaker":"Nan Goldin, born 1953, Washington, DC; active New York, NY",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"Nan Goldin (born 1953, Washington, DC; active New York, NY), The Ballad of Sexual Dependency, 1981–2025. Multimedia installation with 687 color slides and programmed soundtrack; 41 minutes, 52 seconds (duration). Museum purchase, Fowler McCormick, Class of 1921, Fund (2025-182)",
+    "captionhtml":"Nan Goldin (born 1953, Washington, DC; active New York, NY), <i>The Ballad of Sexual Dependency</i>, 1981–2025. Multimedia installation with 687 color slides and programmed soundtrack; 41 minutes, 52 seconds (duration). Museum purchase, Fowler McCormick, Class of 1921, Fund (2025-182)",
+    "published_date":"2026-03-31 03:41:20.426947",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":true
+}

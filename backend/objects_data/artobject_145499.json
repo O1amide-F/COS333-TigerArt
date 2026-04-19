@@ -1,0 +1,197 @@
+{
+    "type":"artobject",
+    "objectid":145499,
+    "objectnumber":"2025-106",
+    "sortnumber":"2025  106",
+    "displaytitle":"St. Frideswide’s Shrine in the Cathedral, Corpus Christi, Oxford",
+    "department":"Prints and Drawings",
+    "classification":"Drawings",
+    "datebegin":1838,
+    "dateend":1838,
+    "datecomputed":1838,
+    "daterange":"A.D. 1800-1850",
+    "displaydate":"1838",
+    "medium":"Watercolor",
+    "dimensions":"26.8 × 21.5 cm (10 9/16 × 8 7/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Gift of David Farmer, Graduate School Class of 1981, in memory of John M. Schnorrenberg, Graduate School Class of 1964",
+    "markings":null,
+    "inscribed":"in graphite, lower right: ST FRIDESWIDE'S SHRINE | CHRIST CH. OXFORD | MAY. 12. 38",
+    "signed":"Signed, lower left: J S Prout",
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":"Restricted Download - Reference Image",
+    "nowebuse":"False",
+    "secondaryobjectnumber":"",
+    "campuscollections":"false",
+    "on_view":false,
+    "accessionyear":"2025-01-01",
+    "newaccession":1,
+    "titles":[
+        {
+            "title":"St. Frideswide’s Shrine in the Cathedral, Corpus Christi, Oxford",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[
+        {
+            "id":23715,
+            "displayname":"John Skinner Prout",
+            "displaydate":"1805–1876; born Plymouth, England; died London, England",
+            "datebegin":1805,
+            "dateend":1876,
+            "prefix":null,
+            "suffix":null,
+            "role":"Artist",
+            "displaymaker":"John Skinner Prout, 1805–1876; born Plymouth, England; died London, England",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[],
+    "media":[],
+    "hasimage":"false",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place depicted: Europe, England, Oxford",
+            "code":"Place depicted",
+            "continent":"Europe",
+            "subcontinent":null,
+            "country":"England",
+            "region":null,
+            "state":null,
+            "city":"Oxford",
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"https://www.geonames.org/2640729/oxford.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2107406,
+            "term":"architectural elements",
+            "aatid":300000885,
+            "termtype":"Subject"
+        },
+        {
+            "id":2084715,
+            "term":"cathedrals",
+            "aatid":300007501,
+            "termtype":"Subject"
+        },
+        {
+            "id":2084870,
+            "term":"shrines",
+            "aatid":300007558,
+            "termtype":"Subject"
+        },
+        {
+            "id":2051964,
+            "term":"drawings",
+            "aatid":300033973,
+            "termtype":"Classification"
+        },
+        {
+            "id":2195525,
+            "term":"interior",
+            "aatid":300010279,
+            "termtype":"Subject"
+        },
+        {
+            "id":2031586,
+            "term":"British",
+            "aatid":300111159,
+            "termtype":"Culture"
+        },
+        {
+            "id":2031563,
+            "term":"European",
+            "aatid":300020656,
+            "termtype":"Culture"
+        },
+        {
+            "id":2031590,
+            "term":"English",
+            "aatid":300111178,
+            "termtype":"Culture"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2051964,
+            "classification":"drawings"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[
+        {
+            "id":2031586,
+            "culture":"British"
+        },
+        {
+            "id":2031563,
+            "culture":"European"
+        },
+        {
+            "id":2031590,
+            "culture":"English"
+        }
+    ],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199327,
+            "term":"Prints and Drawings",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199332,
+            "term":"Princeton Collects",
+            "termtype":"Archive | Collection"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"26.80"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"21.50"
+        }
+    ],
+    "packages":[],
+    "primaryimage":"",
+    "displaymaker":"John Skinner Prout, 1805–1876; born Plymouth, England; died London, England",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"John Skinner Prout (1805–1876; born Plymouth, England; died London, England), St. Frideswide’s Shrine in the Cathedral, Corpus Christi, Oxford, 1838. Watercolor; 26.8 × 21.5 cm. Gift of David Farmer, Graduate School Class of 1981, in memory of John M. Schnorrenberg, Graduate School Class of 1964 (2025-106)",
+    "captionhtml":"John Skinner Prout (1805–1876; born Plymouth, England; died London, England), <i>St. Frideswide’s Shrine in the Cathedral, Corpus Christi, Oxford</i>, 1838. Watercolor; 26.8 × 21.5 cm. Gift of David Farmer, Graduate School Class of 1981, in memory of John M. Schnorrenberg, Graduate School Class of 1964 (2025-106)",
+    "published_date":"2026-03-05 11:23:39.529552",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

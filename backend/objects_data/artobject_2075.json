@@ -1,0 +1,224 @@
+{
+    "type":"artobject",
+    "objectid":2075,
+    "objectnumber":"2016-1297",
+    "sortnumber":"2016 1297",
+    "displaytitle":"Whistle in the form of a standing man",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ceramics",
+    "datebegin":900,
+    "dateend":1600,
+    "datecomputed":1250,
+    "daterange":"A.D. 1000-1500",
+    "displaydate":"900–1600",
+    "medium":"Ceramic",
+    "dimensions":"6.5 × 3.6 × 2.8 cm (2 9/16 × 1 7/16 × 1 1/8 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Bequest of Gillett G. Griffin",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2016-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Whistle in the form of a standing man",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Multivocal Label",
+            "textentryhtml":"<p>\n\tAncient Tairona people once directly engaged with each of these three objects through touch. The ceramic whistle in the form of a hybrid serpent-bird would have produced sound by the placement of one’s fingers on the holes of its outstretched wings.\n\n\tThe greenstone plaque, which resembles the abstracted body of a bat, would have once been worn on the chest as a pectoral. Research suggests that these plaques also may have functioned as musical instruments; when strung together with cords and\n\n\thung from a performer’s body, they would have produced clanging sounds as the wearer moved. Other examples of Tairona art showcase maracas, drums, and various instruments that all point to the importance of multisensorial experiences and rituals\n\n\tin the culture, in which vision, sound, and touch collectively produced charged and symbolic meanings.\n</p>\n<p><b>\n\tEric Mazariegos</b>, PhD candidate, Department of Art History and Archaeology, Columbia University\n</p>",
+            "remarks":"AAA2_20-T6-2_CLA_FA_9_17_25.pdf - Day 1 installation"
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\tBy March 31, 1987, Gillett G. Griffin (1928-2016), Princeton, NJ [1]; 2016, bequeathed to the Princeton University Art Museum.\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] Griffin recorded a video of his collection for insurance purposes on this date. The object is among the works\n</p>",
+            "remarks":null
+        }
+    ],
+    "media":[
+        {
+            "id":48563,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV013865",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: South America, Colombia, Magdalena",
+            "code":"Place made",
+            "continent":"South America",
+            "subcontinent":"Intermediate area",
+            "country":"Colombia",
+            "region":null,
+            "state":"Magdalena",
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3673867/sierra-nevada-de-santa-marta.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2088270,
+            "term":"men",
+            "aatid":300025928,
+            "termtype":"Subject"
+        },
+        {
+            "id":2055437,
+            "term":"figurines",
+            "aatid":300047455,
+            "termtype":"Classification"
+        },
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2055657,
+            "term":"figures (representations)",
+            "aatid":300189808,
+            "termtype":"Subject"
+        },
+        {
+            "id":2041124,
+            "term":"Tairona",
+            "aatid":300017998,
+            "termtype":"Culture"
+        },
+        {
+            "id":2160750,
+            "term":"ceramic",
+            "aatid":300235507,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2055437,
+            "classification":"figurines"
+        },
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        }
+    ],
+    "cultures":[
+        {
+            "id":13852,
+            "culture":"Tairona",
+            "alphasort":"Tairona",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Tairona",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2041124,
+            "culture":"Tairona"
+        }
+    ],
+    "periods":[
+        {
+            "id":24118,
+            "period":"Classic Tairona Period",
+            "alphasort":"Classic Tairona Period",
+            "begindate":0,
+            "enddate":0,
+            "displayperiod":"Classic Tairona Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"6.50"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"3.60"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"2.80"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV013865"
+    ],
+    "displaymaker":null,
+    "displayculture":"Tairona",
+    "displayperiod":"Classic Tairona Period",
+    "caption":"Tairona, Classic Tairona Period, 900–1600, Magdalena, Colombia, Intermediate area, Whistle in the form of a standing man. Ceramic; 6.5 × 3.6 × 2.8 cm. Bequest of Gillett G. Griffin (2016-1297)",
+    "captionhtml":"Tairona, Classic Tairona Period, 900–1600, Magdalena, Colombia, Intermediate area, <i>Whistle in the form of a standing man</i>. Ceramic; 6.5 × 3.6 × 2.8 cm. Bequest of Gillett G. Griffin (2016-1297)",
+    "published_date":"2026-02-11 07:24:00.069629",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

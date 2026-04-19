@@ -1,0 +1,200 @@
+{
+    "type":"artobject",
+    "objectid":145484,
+    "objectnumber":"2025-104",
+    "sortnumber":"2025  104",
+    "displaytitle":"Edinburgh from the Calton Hill",
+    "department":"Photography",
+    "classification":"Photographs",
+    "datebegin":1860,
+    "dateend":1860,
+    "datecomputed":1860,
+    "daterange":"A.D. 1850-1900",
+    "displaydate":"probably 1860s or later",
+    "medium":"Albumen print",
+    "dimensions":"12.1 × 19.4 cm (4 3/4 × 7 5/8 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Gift of Marilyn F. Symmes",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":"Restricted Download - Reference Image",
+    "nowebuse":"False",
+    "secondaryobjectnumber":"",
+    "campuscollections":"false",
+    "on_view":false,
+    "accessionyear":"2025-01-01",
+    "newaccession":1,
+    "titles":[
+        {
+            "title":"Edinburgh from the Calton Hill",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[
+        {
+            "id":1839,
+            "displayname":"George Washington Wilson",
+            "displaydate":"1823–1893; born Alvah, Scotland; died Aberdeen, Scotland; active Aberdeen",
+            "datebegin":1823,
+            "dateend":1893,
+            "prefix":null,
+            "suffix":null,
+            "role":"Artist",
+            "displaymaker":"George Washington Wilson, 1823–1893; born Alvah, Scotland; died Aberdeen, Scotland; active Aberdeen",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[],
+    "media":[],
+    "hasimage":"false",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place depicted: Europe, Scotland, Edinburgh",
+            "code":"Place depicted",
+            "continent":"Europe",
+            "subcontinent":null,
+            "country":"Scotland",
+            "region":null,
+            "state":null,
+            "city":"Edinburgh",
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"https://www.geonames.org/2650225/edinburgh.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2080185,
+            "term":"castles",
+            "aatid":300006891,
+            "termtype":"Subject"
+        },
+        {
+            "id":2053478,
+            "term":"albumen prints",
+            "aatid":300127121,
+            "termtype":"Classification"
+        },
+        {
+            "id":2053200,
+            "term":"photographs",
+            "aatid":300046300,
+            "termtype":"Classification"
+        },
+        {
+            "id":2031586,
+            "term":"British",
+            "aatid":300111159,
+            "termtype":"Culture"
+        },
+        {
+            "id":2031563,
+            "term":"European",
+            "aatid":300020656,
+            "termtype":"Culture"
+        },
+        {
+            "id":2031595,
+            "term":"Scottish",
+            "aatid":300111212,
+            "termtype":"Culture"
+        },
+        {
+            "id":2055631,
+            "term":"cityscapes",
+            "aatid":300015571,
+            "termtype":"Subject"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2053200,
+            "classification":"photographs"
+        },
+        {
+            "id":2053478,
+            "classification":"albumen prints"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[
+        {
+            "id":2031586,
+            "culture":"British"
+        },
+        {
+            "id":2031563,
+            "culture":"European"
+        },
+        {
+            "id":2031595,
+            "culture":"Scottish"
+        }
+    ],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199321,
+            "term":"European Art",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199326,
+            "term":"Photography",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199332,
+            "term":"Princeton Collects",
+            "termtype":"Archive | Collection"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"12.06"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"19.36"
+        }
+    ],
+    "packages":[],
+    "primaryimage":"",
+    "displaymaker":"George Washington Wilson, 1823–1893; born Alvah, Scotland; died Aberdeen, Scotland; active Aberdeen",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"George Washington Wilson (1823–1893; born Alvah, Scotland; died Aberdeen, Scotland; active Aberdeen), Edinburgh from the Calton Hill, probably 1860s or later. Albumen print; 12.1 × 19.4 cm. Gift of Marilyn F. Symmes (2025-104)",
+    "captionhtml":"George Washington Wilson (1823–1893; born Alvah, Scotland; died Aberdeen, Scotland; active Aberdeen), <i>Edinburgh from the Calton Hill</i>, probably 1860s or later. Albumen print; 12.1 × 19.4 cm. Gift of Marilyn F. Symmes (2025-104)",
+    "published_date":"2026-03-05 11:23:36.499722",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

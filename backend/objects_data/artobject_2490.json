@@ -1,0 +1,200 @@
+{
+    "type":"artobject",
+    "objectid":2490,
+    "objectnumber":"2016-1246",
+    "sortnumber":"2016 1246",
+    "displaytitle":"Rubber ball effigy",
+    "department":"Art of the Ancient Americas",
+    "classification":"Sculpture",
+    "datebegin":1300,
+    "dateend":1521,
+    "datecomputed":1410,
+    "daterange":"A.D. 1000-1500",
+    "displaydate":"1300–1521",
+    "medium":"Blackstone",
+    "dimensions":"diam. 6.4 cm. (2 1/2 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Bequest of Gillett G. Griffin",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2016-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Rubber ball effigy",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"The ceremonial heart of the Mexica capital, Tenochtitlan (now downtown Mexico City), was rapidly razed and built over by the Spanish in the sixteenth century. Under the Metropolitan Cathedral, which forms the northern edge of Mexico City’s zocalo, or main plaza, archaeologists have located the primary Mexica ball court, used for both competitive sport and ceremonial performance. The small model ball courts, balls, and musical instruments encountered in deposits in this area likely served as offerings to activate and define the function of this important space. The balls were white and black, leading archaeologists to suggest that they represent not only rubber balls used in the game but also the sun and the moon, as the game itself was thought to re-create the movements of these celestial bodies. Although not found together, the examples displayed here were likely components of similar offerings at other Mesoamerican ballcourts.\n",
+            "remarks":"AAA3_20-T3G-7_CLA_FA.pdf - Day 1 installation"
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\tBy 2000, Gillett G. Griffin (1928-2016), Princeton, NJ [1]; 2016, bequest of Gillett G. Griffin to the Princeton University Art Museum.\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] Included in an inventory of the Griffin collection created in 2000 (G1488).\n</p>",
+            "remarks":null
+        }
+    ],
+    "media":[
+        {
+            "id":51694,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV018387",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Mexico, Central Mexico",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Mesoamerica",
+            "country":"Mexico",
+            "region":"Central Mexico",
+            "state":null,
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3527213/estado-de-guerrero.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2098423,
+            "term":"spheres",
+            "aatid":300055639,
+            "termtype":"Classification"
+        },
+        {
+            "id":2035684,
+            "term":"Mesoamerican cultures, styles and periods",
+            "aatid":300016992,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2054791,
+            "term":"sculpture",
+            "aatid":300047090,
+            "termtype":"Classification"
+        },
+        {
+            "id":2164290,
+            "term":"stone",
+            "aatid":300011176,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2054791,
+            "classification":"sculpture"
+        },
+        {
+            "id":2098423,
+            "classification":"spheres"
+        }
+    ],
+    "cultures":[
+        {
+            "id":12496,
+            "culture":"Mexica",
+            "alphasort":"Mexica",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Possibly Mexica",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[],
+    "periods":[
+        {
+            "id":24018,
+            "period":"Late Postclassic Period",
+            "alphasort":"Postclassic Period, Late",
+            "begindate":1350,
+            "enddate":1521,
+            "displayperiod":"Late Postclassic Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035684,
+            "period":"Mesoamerican cultures, styles and periods"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"diam.",
+            "units":"centimeters",
+            "dimension":"6.36"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV018387"
+    ],
+    "displaymaker":null,
+    "displayculture":"Possibly Mexica",
+    "displayperiod":"Late Postclassic Period",
+    "caption":"Possibly Mexica, Late Postclassic Period, 1300–1521, Central Mexico, Mexico, Mesoamerica, Rubber ball effigy. Blackstone; 6.4 cm. Bequest of Gillett G. Griffin (2016-1246)",
+    "captionhtml":"Possibly Mexica, Late Postclassic Period, 1300–1521, Central Mexico, Mexico, Mesoamerica, <i>Rubber ball effigy</i>. Blackstone; 6.4 cm. Bequest of Gillett G. Griffin (2016-1246)",
+    "published_date":"2026-03-05 08:36:47.207380",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

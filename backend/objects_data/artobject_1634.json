@@ -1,0 +1,238 @@
+{
+    "type":"artobject",
+    "objectid":1634,
+    "objectnumber":"2016-1321",
+    "sortnumber":"2016 1321",
+    "displaytitle":"Figurine",
+    "department":"Art of the Ancient Americas",
+    "classification":"Ceramic",
+    "datebegin":-1200,
+    "dateend":-400,
+    "datecomputed":-800,
+    "daterange":"1000 B.C.-A.D 1",
+    "displaydate":"1200–400 BCE",
+    "medium":"Tanware",
+    "dimensions":"3.9 × 2 × 1.5 cm (1 9/16 × 3/4 × 9/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Bequest of Gillett G. Griffin",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2016-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Figurine",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"Acquired by Gillett G. Griffin (1928-2016), Princeton, NJ, by 2016; bequest to the Princeton University Art Museum, 2016.",
+            "remarks":null
+        }
+    ],
+    "media":[
+        {
+            "id":46649,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV012236",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Mexico",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Mesoamerica",
+            "country":"Mexico",
+            "region":null,
+            "state":null,
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3996063/mexico.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2055657,
+            "term":"figures (representations)",
+            "aatid":300189808,
+            "termtype":"Subject"
+        },
+        {
+            "id":2035688,
+            "term":"Tlatilco",
+            "aatid":300017007,
+            "termtype":"Culture"
+        },
+        {
+            "id":2048603,
+            "term":"fragments",
+            "aatid":300117130,
+            "termtype":"Classification"
+        },
+        {
+            "id":2055437,
+            "term":"figurines",
+            "aatid":300047455,
+            "termtype":"Classification"
+        },
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2188638,
+            "term":"tan ware",
+            "aatid":null,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        },
+        {
+            "id":2055437,
+            "classification":"figurines"
+        },
+        {
+            "id":2048603,
+            "classification":"fragments"
+        }
+    ],
+    "cultures":[
+        {
+            "id":13858,
+            "culture":"Tlatilco",
+            "alphasort":"Tlatilco",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"possibly Tlatilco",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2035688,
+            "culture":"Tlatilco"
+        }
+    ],
+    "periods":[
+        {
+            "id":24010,
+            "period":"Middle Formative Period",
+            "alphasort":"Formative Period, Middle",
+            "begindate":-1000,
+            "enddate":-400,
+            "displayperiod":"Middle Formative Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"3.90"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"1.98"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"1.45"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":278648,
+            "name":"<New mbey 2025-10-23 14:05:43>"
+        },
+        {
+            "packageid":277931,
+            "name":"EW-Artwalk_Figuration_CaseD"
+        },
+        {
+            "packageid":236376,
+            "name":"EW-Artwalk_Figuration"
+        },
+        {
+            "packageid":264605,
+            "name":"DenseDisplay_AAA_at_20250205"
+        },
+        {
+            "packageid":264600,
+            "name":"DenseDisplay_CompleteList_at_20250205"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV012236"
+    ],
+    "displaymaker":null,
+    "displayculture":"possibly Tlatilco",
+    "displayperiod":"Middle Formative Period",
+    "caption":"Possibly Tlatilco, Middle Formative Period, 1200–400 BCE, Mexico, Mesoamerica, Figurine. Tanware; 3.9 × 2 × 1.5 cm. Bequest of Gillett G. Griffin (2016-1321)",
+    "captionhtml":"Possibly Tlatilco, Middle Formative Period, 1200–400 BCE, Mexico, Mesoamerica, <i>Figurine</i>. Tanware; 3.9 × 2 × 1.5 cm. Bequest of Gillett G. Griffin (2016-1321)",
+    "published_date":"2026-02-12 09:31:45.432585",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

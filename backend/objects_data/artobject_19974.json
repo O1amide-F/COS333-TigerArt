@@ -1,0 +1,257 @@
+{
+    "type":"artobject",
+    "objectid":19974,
+    "objectnumber":"y1932-3",
+    "sortnumber":"1932    3y",
+    "displaytitle":"Pectoral with incised ballcourt design",
+    "department":"Art of the Ancient Americas",
+    "classification":"Sculpture",
+    "datebegin":1300,
+    "dateend":1521,
+    "datecomputed":1410,
+    "daterange":"A.D. 1000-1500",
+    "displaydate":"1300–1521",
+    "medium":"Greenstone",
+    "dimensions":"4.9 × 8.8 × 1 cm (1 15/16 × 3 7/16 × 3/8 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Gift of Malcolm Lloyd, Class of 1894",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":"",
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"1932-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Pectoral with incised ballcourt design",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"1932, gift of Malcolm Lloyd to the Princeton University Art Museum.\n",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"The ceremonial heart of the Mexica capital, Tenochtitlan (now downtown Mexico City), was rapidly razed and built over by the Spanish in the sixteenth century. Under the Metropolitan Cathedral, which forms the northern edge of Mexico City’s zocalo, or main plaza, archaeologists have located the primary Mexica ball court, used for both competitive sport and ceremonial performance. The small model ball courts, balls, and musical instruments encountered in deposits in this area likely served as offerings to activate and define the function of this important space. The balls were white and black, leading archaeologists to suggest that they represent not only rubber balls used in the game but also the sun and the moon, as the game itself was thought to re-create the movements of these celestial bodies. Although not found together, the examples displayed here were likely components of similar offerings at other Mesoamerican ballcourts.\n",
+            "remarks":"AAA3_20-T3G-7_CLA_FA.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":2929,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/y1932-3",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Luna Digitization Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"E. Michael Whittington, ed., <em>The sport of life and death: the Mesoamerican ballgame</em> (New York: Thames &amp; Hudson, 2001).",
+            "citation":"E. Michael Whittington, ed., <em>The sport of life and death: the Mesoamerican ballgame</em> (New York: Thames &amp; Hudson, 2001)., cat. no. 32",
+            "date":2001,
+            "id":2942,
+            "uri":"https://search.worldcat.org/title/49029226"
+        }
+    ],
+    "exhibitions":[
+        {
+            "exhibitionid":337,
+            "citation":"The Sport of Life and Death: The Mesoamerican Ballgame:\r\nMint Museum of Art (22 Sept., 2001 – 6 Jan., 2002);\r\nNew Orleans Museum of Art (16 Feb. – 28 Apr. 2002);\r\nJoslyn Art Museum (8 Jun. – 1 Sept., 2002);\r\nNewark Museum (1 Oct. – 1 Dec., 2002).",
+            "isvirtual":true,
+            "begindate":"2001-09-24",
+            "enddate":"2002-12-01",
+            "uri":"https://artmuseum.princeton.edu/art/exhibitions/337"
+        }
+    ],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Mexico, Reportedly from Veracruz",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Mesoamerica",
+            "country":"Mexico",
+            "region":null,
+            "state":"Reportedly from Veracruz",
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3514780/estado-de-veracruz-llave.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2146924,
+            "term":"ball games",
+            "aatid":300239662,
+            "termtype":"Subject"
+        },
+        {
+            "id":2035663,
+            "term":"Classic",
+            "aatid":300016983,
+            "termtype":"Period / Style"
+        },
+        {
+            "id":2084114,
+            "term":"ball courts",
+            "aatid":300007324,
+            "termtype":"Classification"
+        },
+        {
+            "id":2054791,
+            "term":"sculpture",
+            "aatid":300047090,
+            "termtype":"Classification"
+        },
+        {
+            "id":2130762,
+            "term":"pectorals",
+            "aatid":300211902,
+            "termtype":"Classification"
+        },
+        {
+            "id":2164290,
+            "term":"stone",
+            "aatid":300011176,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2130762,
+            "classification":"pectorals"
+        },
+        {
+            "id":2054791,
+            "classification":"sculpture"
+        },
+        {
+            "id":2084114,
+            "classification":"ball courts"
+        }
+    ],
+    "cultures":[
+        {
+            "id":12496,
+            "culture":"Mexica",
+            "alphasort":"Mexica",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Possibly Mexica",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[],
+    "periods":[
+        {
+            "id":24018,
+            "period":"Late Postclassic Period",
+            "alphasort":"Postclassic Period, Late",
+            "begindate":1350,
+            "enddate":1521,
+            "displayperiod":"Late Postclassic Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[
+        {
+            "id":2035663,
+            "period":"Classic"
+        }
+    ],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"4.90"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"8.80"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"1.00"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":214598,
+            "name":"2022_LAS307/ANT307/ARC317/ART388_04_11"
+        },
+        {
+            "packageid":141945,
+            "name":"Web_Ballgame_Courts"
+        },
+        {
+            "packageid":141941,
+            "name":"Web_Ballgame_all"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/y1932-3"
+    ],
+    "displaymaker":null,
+    "displayculture":"Possibly Mexica",
+    "displayperiod":"Late Postclassic Period",
+    "caption":"Possibly Mexica, Late Postclassic Period, 1300–1521, Reportedly from Veracruz, Mexico, Mesoamerica, Pectoral with incised ballcourt design. Greenstone; 4.9 × 8.8 × 1 cm. Gift of Malcolm Lloyd, Class of 1894 (y1932-3)",
+    "captionhtml":"Possibly Mexica, Late Postclassic Period, 1300–1521, Reportedly from Veracruz, Mexico, Mesoamerica, <i>Pectoral with incised ballcourt design</i>. Greenstone; 4.9 × 8.8 × 1 cm. Gift of Malcolm Lloyd, Class of 1894 (y1932-3)",
+    "published_date":"2026-03-05 09:05:20.234534",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

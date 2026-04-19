@@ -1,0 +1,200 @@
+{
+    "type":"artobject",
+    "objectid":145509,
+    "objectnumber":"2025-105",
+    "sortnumber":"2025  105",
+    "displaytitle":"Peter Bunnell, Museum Director, New York City",
+    "department":"Photography",
+    "classification":"Photographs",
+    "datebegin":1977,
+    "dateend":1977,
+    "datecomputed":1977,
+    "daterange":"A.D. 1945-present",
+    "displaydate":"March 30, 1977",
+    "medium":"Gelatin silver print",
+    "dimensions":"image: 24.7 × 19.4 cm (9 3/4 × 7 5/8 in.)\r\nsheet: 25.5 × 20.1 cm (10 1/16 × 7 15/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Gift of Anne Robinson Woods, Class of 1988",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":"© The Richard Avedon Foundation",
+    "restrictions":"Restricted Download - Under Copyright and Reference Image",
+    "nowebuse":"False",
+    "secondaryobjectnumber":"",
+    "campuscollections":"false",
+    "on_view":false,
+    "accessionyear":"2025-01-01",
+    "newaccession":1,
+    "titles":[
+        {
+            "title":"Peter Bunnell, Museum Director, New York City",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[
+        {
+            "id":174,
+            "displayname":"Richard Avedon",
+            "displaydate":"1923–2004; born New York, NY; died San Antonio, TX; active New York",
+            "datebegin":1923,
+            "dateend":2004,
+            "prefix":null,
+            "suffix":null,
+            "role":"Artist",
+            "displaymaker":"Richard Avedon, 1923–2004; born New York, NY; died San Antonio, TX; active New York",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[],
+    "media":[
+        {
+            "id":262395,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/TC2025-32_ref_1",
+            "isprimary":1,
+            "rank":0,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":"Restricted Download - Under Copyright and Reference Image",
+            "caption":"Reference Image"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[],
+    "terms":[
+        {
+            "id":2053541,
+            "term":"gelatin silver prints",
+            "aatid":300128695,
+            "termtype":"Classification"
+        },
+        {
+            "id":2038492,
+            "term":"American",
+            "aatid":300107956,
+            "termtype":"Culture"
+        },
+        {
+            "id":2088270,
+            "term":"men",
+            "aatid":300025928,
+            "termtype":"Subject"
+        },
+        {
+            "id":2127813,
+            "term":"suits",
+            "aatid":300209863,
+            "termtype":"Subject"
+        },
+        {
+            "id":2055723,
+            "term":"portraits",
+            "aatid":300015637,
+            "termtype":"Subject"
+        },
+        {
+            "id":2053200,
+            "term":"photographs",
+            "aatid":300046300,
+            "termtype":"Classification"
+        },
+        {
+            "id":2079935,
+            "term":"museums",
+            "aatid":300005768,
+            "termtype":"Subject"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2053541,
+            "classification":"gelatin silver prints"
+        },
+        {
+            "id":2053200,
+            "classification":"photographs"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[
+        {
+            "id":2038492,
+            "culture":"American"
+        }
+    ],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199324,
+            "term":"Art Since 1945",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199325,
+            "term":"North American Art",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199326,
+            "term":"Photography",
+            "termtype":"Collecting Area"
+        },
+        {
+            "id":2199332,
+            "term":"Princeton Collects",
+            "termtype":"Archive | Collection"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"sheet",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"25.50"
+        },
+        {
+            "element":"sheet",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"20.10"
+        },
+        {
+            "element":"image",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"24.70"
+        },
+        {
+            "element":"image",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"19.40"
+        }
+    ],
+    "packages":[],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/TC2025-32_ref_1"
+    ],
+    "displaymaker":"Richard Avedon, 1923–2004; born New York, NY; died San Antonio, TX; active New York",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"Richard Avedon (1923–2004; born New York, NY; died San Antonio, TX; active New York), Peter Bunnell, Museum Director, New York City, March 30, 1977. Gelatin silver print; 24.7 × 19.4 cm (image), 25.5 × 20.1 cm (sheet). Gift of Anne Robinson Woods, Class of 1988 (2025-105)",
+    "captionhtml":"Richard Avedon (1923–2004; born New York, NY; died San Antonio, TX; active New York), <i>Peter Bunnell, Museum Director, New York City</i>, March 30, 1977. Gelatin silver print; 24.7 × 19.4 cm (image), 25.5 × 20.1 cm (sheet). Gift of Anne Robinson Woods, Class of 1988 (2025-105)",
+    "published_date":"2026-03-31 03:41:19.815557",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

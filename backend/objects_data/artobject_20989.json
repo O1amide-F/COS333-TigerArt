@@ -1,0 +1,170 @@
+{
+    "type":"artobject",
+    "objectid":20989,
+    "objectnumber":"y1937-106",
+    "sortnumber":"1937  106y",
+    "displaytitle":"Plate with Scene of St. Michael's Church, Coventry",
+    "department":"European Painting and Sculpture ",
+    "classification":"Ceramics",
+    "datebegin":1751,
+    "dateend":1937,
+    "datecomputed":1844,
+    "daterange":"A.D. 1800-1850",
+    "displaydate":null,
+    "medium":"Porcelain",
+    "dimensions":"2.2 × diam. 20.2 cm (7/8 × 7 15/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Trumbull-Prime Collection",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":null,
+    "campuscollections":"false",
+    "on_view":false,
+    "accessionyear":"1937-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Plate with Scene of St. Michael's Church, Coventry",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[
+        {
+            "id":18555,
+            "displayname":"Royal Worcester",
+            "displaydate":"established 1751, United Kingdom",
+            "datebegin":1751,
+            "dateend":0,
+            "prefix":"Manufactory:",
+            "suffix":null,
+            "role":"Manufactory",
+            "displaymaker":"Manufactory: Royal Worcester, established 1751, United Kingdom",
+            "displayorder":1
+        }
+    ],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"Mary Hollister Prime (née Trumbull) (1827-1872) and William Cowper Prime, Class of 1843 (1825-1905); 1890 gift to Princeton University Art Museum.",
+            "remarks":"Batch edit for Provenance publication project"
+        }
+    ],
+    "media":[
+        {
+            "id":136617,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV58946",
+            "isprimary":1,
+            "rank":1,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[],
+    "exhibitions":[],
+    "geography":[],
+    "terms":[
+        {
+            "id":2075879,
+            "term":"plates (dishes)",
+            "aatid":300042991,
+            "termtype":"Subject"
+        },
+        {
+            "id":2084585,
+            "term":"churches",
+            "aatid":300007466,
+            "termtype":"Subject"
+        },
+        {
+            "id":2049167,
+            "term":"ceramics",
+            "aatid":300151343,
+            "termtype":"Classification"
+        },
+        {
+            "id":2171706,
+            "term":"clouds",
+            "aatid":null,
+            "termtype":"Subject"
+        },
+        {
+            "id":2051508,
+            "term":"views",
+            "aatid":300015424,
+            "termtype":"Subject"
+        },
+        {
+            "id":2031586,
+            "term":"British",
+            "aatid":300111159,
+            "termtype":"Culture"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2049167,
+            "classification":"ceramics"
+        }
+    ],
+    "cultures":[],
+    "cultureterms":[
+        {
+            "id":2031586,
+            "culture":"British"
+        }
+    ],
+    "periods":[],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199321,
+            "term":"European Art",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"2.20"
+        },
+        {
+            "element":"Overall",
+            "type":"diam.",
+            "units":"centimeters",
+            "dimension":"20.20"
+        }
+    ],
+    "packages":[],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV58946"
+    ],
+    "displaymaker":"Manufactory: Royal Worcester, established 1751, United Kingdom",
+    "displayculture":null,
+    "displayperiod":null,
+    "caption":"Manufactory: Royal Worcester (established 1751, United Kingdom), Plate with Scene of St. Michael's Church, Coventry. Porcelain; 2.2 × 20.2 cm. Trumbull-Prime Collection (y1937-106)",
+    "captionhtml":"Manufactory: Royal Worcester (established 1751, United Kingdom), <i>Plate with Scene of St. Michael's Church, Coventry</i>. Porcelain; 2.2 × 20.2 cm. Trumbull-Prime Collection (y1937-106)",
+    "published_date":"2026-02-11 09:32:05.010286",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}

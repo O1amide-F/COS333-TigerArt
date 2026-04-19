@@ -1,0 +1,274 @@
+{
+    "type":"artobject",
+    "objectid":18213,
+    "objectnumber":"2016-1219",
+    "sortnumber":"2016 1219",
+    "displaytitle":"Hacha",
+    "department":"Art of the Ancient Americas",
+    "classification":"Sculpture",
+    "datebegin":600,
+    "dateend":1000,
+    "datecomputed":800,
+    "daterange":"A.D. 500-1000",
+    "displaydate":"600–1000",
+    "medium":"Vesicular pyroxene basalt",
+    "dimensions":"26.8 × 21 × 7.2 cm (10 9/16 × 8 1/4 × 2 13/16 in.)",
+    "dimensionsproposed":"",
+    "creditline":"Bequest of Gillett G. Griffin",
+    "markings":null,
+    "inscribed":null,
+    "signed":null,
+    "catalograisonne":null,
+    "creditlinerepro":null,
+    "restrictions":null,
+    "nowebuse":"False",
+    "secondaryobjectnumber":"",
+    "campuscollections":"false",
+    "on_view":true,
+    "accessionyear":"2016-01-01",
+    "newaccession":0,
+    "titles":[
+        {
+            "title":"Hacha",
+            "titletype":"Primary Title",
+            "displayorder":1
+        }
+    ],
+    "makers":[],
+    "depicted":[],
+    "texts":[
+        {
+            "texttype":"Online",
+            "textpurpose":"Provenance",
+            "textentryhtml":"<p>\n\tBy January 1974, Gillett G. Griffin (1928-2016), Princeton, NJ [1]; 2016, bequest of Gillett G. Griffin to the Princeton University Art Museum.\n</p>\n<p>\n\tNotes:\n\t<br />\n\t[1] According to dated slides in the Griffin archive.\n</p>",
+            "remarks":null
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"<p>\n\tAlthough the ballgame was played throughout Mexico and Central America, no region gave it more attention than Veracruz—in part because the rubber-tree sap used to make the balls is prevalent in the humid tropical lowlands along the Mexican coast. Most regional variants of the game shared several basic features: a solid rubber ball; a ball court consisting of a narrow alleyway with sloped walls, occasionally with enclosed end zones; and two teams, each with two or three members who wore specialized protective gear. Only the upper arms, thighs, and torso of a player could strike the ball, and each of these areas bore its own type of protection made of stone, cloth, deer hide, or wood. This case presents examples of the basic forms of protective gear made in stone, as well as objects used in gladiatorial combat that occurred in the same ball courts.\n</p>\n<p>\n\tScholars have long thought that the heavy, sculptural stone ballgame gear from Mesoamerica served as trophies for the victors in the game and not as functional equipment. Frequently made of precious greenstone, this ballgame gear also may have been created for wager, as gambling was a signiﬁcant component of Mesoamerican ballgames. Recently, however, specialists determined that a Maya example of a stone “yoke” with inset carved shell hieroglyphs included the inscription ya’tuun, or “hip-stone,” implying that stone protective gear was worn on the hips. By extension, it is plausible that all ballgame-related stone sculptures were used in the game, or at least in ceremonial performances mimicking actual ball play. Some ballgame sculptures include elaborate relief carving, often portraying bruised and battered individuals who may represent captives forced to play as part of sacrificial rites. Others portray paired, youthful faces, possibly mythical hero twins who played the ballgame against lords of the underworld.\n</p>\n<p>\n\tBecause the vast majority of ballgame-related stone objects were looted, it has proven particularly challenging to date them or to corroborate proposals of stylistic changes. By some accounts, smaller, broader hachas, usually with a pronounced protrusion at the top, including the two displayed here, predate the larger, thinner examples. It is also possible, however, that differences in materials used, size, proportions, and details of fabrication show regional variations. The human head, often with details suggesting decapitation, is the most common subject represented. Each of these examples also exhibits traces of paint; while the greenstone used for some sculptures was prized and likely not concealed by paint, hachas made of less valuable materials, such as the elongated white limestone head displayed here, may have warranted color enhancement.\n</p>",
+            "remarks":"AAA3_20-T3B-9_CLA_FA_7_17_25.pdf - Day 1 installation"
+        },
+        {
+            "texttype":"Online",
+            "textpurpose":"Gallery Label",
+            "textentryhtml":"This skull likely represents a decapitated victim, an opponent either in the ballgame or on the battlefield, as the ballgame was seen as a metaphor for war. However, unlike the other hachas on display here, this example includes a projection or tenon at the rear as opposed to a notch. If worn on the waist, a different form of hip-stone would be needed to support the tenon. Alternatively, this sculpture may have been set into the masonry ball court walls, serving as a marker during the game. Note the difference in texture and color of the stone at the tenon; it seems that the artist chose to use the densest section of the stone for the tenon, a place likely to see more stress.\n",
+            "remarks":"AAA3_20-T3B-9_CLA_FA_7_17_25.pdf - Day 1 installation"
+        }
+    ],
+    "media":[
+        {
+            "id":49788,
+            "uri":"https://media.artmuseum.princeton.edu/iiif/3/collection/INV016287",
+            "isprimary":1,
+            "rank":2,
+            "mediatypeid":1,
+            "mediaviewtype":"(not assigned)",
+            "restrictions":null,
+            "caption":"Inventory Project"
+        }
+    ],
+    "hasimage":"true",
+    "bibliography":[
+        {
+            "boilertext":"Marilyn M. Goldstein, <i>Ceremonial Sculpture of Ancient Veracruz</i> (Brookville:&nbsp;Long Island University, 1987)",
+            "citation":"Marilyn M. Goldstein, <i>Ceremonial Sculpture of Ancient Veracruz</i> (Brookville:&nbsp;Long Island University, 1987), no. 156, p. 81",
+            "date":1987,
+            "id":2599,
+            "uri":"https://search.worldcat.org/title/18006583"
+        },
+        {
+            "boilertext":"Mary E. Miller, \"The Ballgame,\" <i>Record of the Art Museum, Princeton University</i> 48, no. 2 (1989): 22–31.",
+            "citation":"Mary E. Miller, \"The Ballgame,\" <i>Record of the Art Museum, Princeton University</i> 48, no. 2 (1989): 22–31., p. 29, fig. 13",
+            "date":1989,
+            "id":2789,
+            "uri":"https://www.jstor.org/stable/3774731"
+        },
+        {
+            "boilertext":"<p>\"Acquisitions of the Princeton University Art Museum 2016,\" <em>Record of the Art Museum, Princeton University</em> 75/76 (2016-17): 126-157.</p>",
+            "citation":"<p>\"Acquisitions of the Princeton University Art Museum 2016,\" <em>Record of the Art Museum, Princeton University</em> 75/76 (2016-17): 126-157.</p>, p. 155",
+            "date":2016,
+            "id":9662,
+            "uri":"https://www.jstor.org/stable/i40228781"
+        }
+    ],
+    "exhibitions":[],
+    "geography":[
+        {
+            "displaygeography":"Place made: North America, Mexico, Veracruz, Gulf Coast",
+            "code":"Place made",
+            "continent":"North America",
+            "subcontinent":"Mesoamerica",
+            "country":"Mexico",
+            "region":"Gulf Coast",
+            "state":"Veracruz",
+            "city":null,
+            "county":null,
+            "subregion":null,
+            "locale":null,
+            "locus":null,
+            "river":null,
+            "excavation":null,
+            "geoname":"http://www.geonames.org/3514780/estado-de-veracruz-llave.html",
+            "location":{
+                "lat":"",
+                "lon":""
+            }
+        }
+    ],
+    "terms":[
+        {
+            "id":2048754,
+            "term":"ceremonial objects",
+            "aatid":300234117,
+            "termtype":"Classification"
+        },
+        {
+            "id":2055271,
+            "term":"sculptures",
+            "aatid":300047203,
+            "termtype":"Classification"
+        },
+        {
+            "id":2158086,
+            "term":"heads",
+            "aatid":null,
+            "termtype":"Classification"
+        },
+        {
+            "id":2135608,
+            "term":"hacha",
+            "aatid":null,
+            "termtype":"Classification"
+        },
+        {
+            "id":2035746,
+            "term":"Classic Veracruz",
+            "aatid":300017056,
+            "termtype":"Culture"
+        },
+        {
+            "id":2163349,
+            "term":"volcanic rock",
+            "aatid":300011246,
+            "termtype":"Materials"
+        },
+        {
+            "id":2164290,
+            "term":"stone",
+            "aatid":300011176,
+            "termtype":"Materials"
+        }
+    ],
+    "classifications":[
+        {
+            "id":2135608,
+            "classification":"hacha"
+        },
+        {
+            "id":2158086,
+            "classification":"heads"
+        },
+        {
+            "id":2055271,
+            "classification":"sculptures"
+        },
+        {
+            "id":2048754,
+            "classification":"ceremonial objects"
+        }
+    ],
+    "cultures":[
+        {
+            "id":13849,
+            "culture":"Classic Veracruz",
+            "alphasort":"Classic Veracruz",
+            "begindate":0,
+            "enddate":0,
+            "displayculture":"Classic Veracruz",
+            "displaydate":null
+        }
+    ],
+    "cultureterms":[
+        {
+            "id":2035746,
+            "culture":"Classic Veracruz"
+        }
+    ],
+    "periods":[
+        {
+            "id":24016,
+            "period":"Late Classic Period",
+            "alphasort":"Classic Period, Late",
+            "begindate":0,
+            "enddate":0,
+            "displayperiod":"Late Classic Period",
+            "displaydate":null
+        }
+    ],
+    "periodterms":[],
+    "attribute_groups":[
+        {
+            "id":2199317,
+            "term":"Art of the Ancient Americas",
+            "termtype":"Collecting Area"
+        }
+    ],
+    "dimensionelements":[
+        {
+            "element":"Overall",
+            "type":"Height",
+            "units":"centimeters",
+            "dimension":"26.80"
+        },
+        {
+            "element":"Overall",
+            "type":"Width",
+            "units":"centimeters",
+            "dimension":"21.00"
+        },
+        {
+            "element":"Overall",
+            "type":"Depth",
+            "units":"centimeters",
+            "dimension":"7.20"
+        }
+    ],
+    "packages":[
+        {
+            "packageid":225488,
+            "name":"Gallery_20(Pavilion5)-AAA"
+        },
+        {
+            "packageid":278831,
+            "name":"10282025-DAY1-ONVIEW"
+        },
+        {
+            "packageid":141943,
+            "name":"Web_Ballgame_Paraphenalia"
+        },
+        {
+            "packageid":23505,
+            "name":"web_AAA for Atrium"
+        }
+    ],
+    "primaryimage":[
+        "https://media.artmuseum.princeton.edu/iiif/3/collection/INV016287"
+    ],
+    "displaymaker":null,
+    "displayculture":"Classic Veracruz",
+    "displayperiod":"Late Classic Period",
+    "caption":"Classic Veracruz, Late Classic Period, 600–1000, Veracruz, Gulf Coast, Mexico, Mesoamerica, Hacha. Vesicular pyroxene basalt; 26.8 × 21 × 7.2 cm. Bequest of Gillett G. Griffin (2016-1219)",
+    "captionhtml":"Classic Veracruz, Late Classic Period, 600–1000, Veracruz, Gulf Coast, Mexico, Mesoamerica, <i>Hacha</i>. Vesicular pyroxene basalt; 26.8 × 21 × 7.2 cm. Bequest of Gillett G. Griffin (2016-1219)",
+    "published_date":"2026-02-11 09:15:17.665224",
+    "campusart":[
+        {
+            "campuscollections":"false",
+            "campusart":0,
+            "neighborhood":null,
+            "lat":null,
+            "lon":null
+        }
+    ],
+    "extended_content":false
+}
