@@ -78,43 +78,27 @@ export function SettingsScreen({
           >
             {isGuest ? "Hi, Guest" : (displayName || username)}
           </span>
-          <button
-            onClick={() => {
-              if (!isGuest) {
-                window.location.href = '/logoutentra';
-              }
-            }}
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 8,
-              background: theme.components.badge.background,
-              color: theme.components.badge.text,
-              borderRadius: 6,
-              padding: "8px 12px",
-              cursor: "pointer",
-              fontSize: 13,
-              fontFamily: "'DM Sans', sans-serif",
-              border: "none",
-            }}
-          >
-            {isGuest ? "Create Account" : "Sign Out"}
-          </button>
+          {!isGuest && (
+            <button
+              onClick={() => { window.location.href = '/logoutentra'; }}
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+                background: theme.components.badge.background,
+                color: theme.components.badge.text,
+                borderRadius: 6,
+                padding: "8px 12px",
+                cursor: "pointer",
+                fontSize: 13,
+                fontFamily: "'DM Sans', sans-serif",
+                border: "none",
+              }}
+            >
+              Sign Out
+            </button>
+          )}
         </div>
-        {isGuest && (
-          <div
-            style={{
-              marginTop: 8,
-              fontSize: 12,
-              fontFamily: "'DM Sans', sans-serif",
-              color: theme.components.badge.mutedText,
-              lineHeight: 1.5,
-            }}
-          >
-            Create an account to save favorites, recently viewed items, and your
-            preferences across sessions.
-          </div>
-        )}
       </div>
 
       {/* Survey section */}
