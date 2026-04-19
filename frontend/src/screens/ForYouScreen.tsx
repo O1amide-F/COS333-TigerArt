@@ -1,20 +1,18 @@
 import { useEffect, useState } from "react";
 import { Heart } from "lucide-react";
-import { SearchFilterBar } from "../components/SearchFilterBar.tsx";
-import { itemMatchesFilters } from "../utils/filterUtils";
+import { SearchBar } from "../components/SearchBar";
 import { Placeholder } from "../components/Placeholder";
 import { ArtworkModal } from "../components/ArtworkModal";
 import type { ForYouItem, ExhibitItem } from "../types";
 import { theme } from "../theme";
-import { useMemo } from "react"
 
-const API_BASE = '/api';
+const API_BASE = "/api";
 
 type ForYouScreenProps = {
   userId: string | null;
   favorites: number[];
   onToggleFavorite: (id: number) => void;
-  onRecordView: (id: number) => void;
+  onRecordView?: (id: number) => void;
 };
 
 export function ForYouScreen({
@@ -23,22 +21,17 @@ export function ForYouScreen({
   onRecordView,
   userId,
 }: ForYouScreenProps) {
-  console.log("ForYouScreen userId:", userId);
   const [items, setItems] = useState<ForYouItem[]>([]);
   const [searchResults, setSearchResults] = useState<ForYouItem[] | null>(null);
   const [loading, setLoading] = useState(true);
   const [searchLoading, setSearchLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [modalItem, setModalItem] = useState<ExhibitItem | null>(null);
-  const [activeFilters, setActiveFilters] = useState<string[]>([]);
 
   useEffect(() => {
+    if (!userId) return;
     setLoading(true);
-    const initialEndpoint = userId
-      ? `${API_BASE}/for-you/${userId}`
-      : `${API_BASE}/for-you`;
-
-    fetch(initialEndpoint)
+    fetch(`${API_BASE}/for-you/${userId}`)
       .then((r) => {
         if (!r.ok) throw new Error("fallback");
         return r.json();
@@ -74,45 +67,59 @@ export function ForYouScreen({
 
   const handleClear = () => setSearchResults(null);
 
-  const displayItems = useMemo(() => {
-    const base = searchResults ?? items;
-    return base.filter((item) => itemMatchesFilters(item, activeFilters));
-  }, [searchResults, items, activeFilters]);
+  const displayItems = searchResults ?? items;
   const isSearching = searchResults !== null;
 
-  const toExhibitItem = (item: ForYouItem): ExhibitItem => {
-    console.log("FOR YOU clicked item:", item);
-    return {
-      id: item.id,
-      name: item.title,
-      desc: item.about,
-      imageUrl: item.imageUrl,
-      department: item.department,
-      classification: item.classification,
-      displaydate: item.displaydate,
-      displaymaker: item.displaymaker,
-      on_view: item.on_view,
-      gallery_label_text: item.gallery_label_text,
-    };
-  };
+  const toExhibitItem = (item: ForYouItem): ExhibitItem => ({
+    id: item.id,
+    name: item.title,
+    desc: item.about,
+    imageUrl: item.imageUrl,
+    department: item.department,
+    classification: item.classification,
+    displaydate: item.displaydate,
+    displaymaker: item.displaymaker,
+    on_view: item.on_view,
+  });
+
+  if (!userId) {
+    return (
+      <div
+        style={{
+          padding: "16px 20px 100px",
+          overflowY: "auto",
+          height: "100%",
+        }}
+      >
+        <div
+          style={{
+            textAlign: "center",
+            padding: "40px 0",
+            fontFamily: "'DM Sans', sans-serif",
+            color: theme.components.badge.mutedText,
+            fontSize: 14,
+          }}
+        >
+          Loading your feed…
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div
       style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}
     >
-      {/* ── data-tour="search" — highlights the search bar ── */}
+      {/* ── Tour target: search bar ── */}
       <div data-tour="search">
-        <SearchFilterBar
+        <SearchBar
           onSearch={handleSearch}
           onClear={handleClear}
           isSearching={isSearching}
-          placeholder="Search by title or tag…"
-          activeFilters={activeFilters}
-          onFiltersChange={setActiveFilters}
         />
       </div>
 
-      {/* ── data-tour="for-you-heading" — highlights the page title ── */}
+      {/* ── Tour target: page heading ── */}
       <h1
         data-tour="for-you-heading"
         style={{
@@ -215,10 +222,10 @@ export function ForYouScreen({
           {displayItems.map((item, index) => (
             <div
               key={item.id}
-              // ── data-tour="artwork-card" on the FIRST card only ──
-              // The tour spotlights the first card as an example;
-              // remove this attribute from subsequent cards.
+              // Tour targets only the first card
               {...(index === 0 ? { "data-tour": "artwork-card" } : {})}
+              data-tour-track="view"
+              data-tour-art-id={String(item.id)}
               onClick={() => setModalItem(toExhibitItem(item))}
               style={{
                 breakInside: "avoid",
@@ -249,9 +256,11 @@ export function ForYouScreen({
                     style={{ borderRadius: 0 }}
                   />
                 )}
-                {/* ── data-tour="favorite-btn" on the FIRST card's heart ── */}
+                {/* Tour targets the heart on the first card only */}
                 <button
                   {...(index === 0 ? { "data-tour": "favorite-btn" } : {})}
+                  data-tour-track="favorite"
+                  data-tour-art-id={String(item.id)}
                   onClick={(e) => {
                     e.stopPropagation();
                     onToggleFavorite(item.id);
@@ -289,7 +298,6 @@ export function ForYouScreen({
                   />
                 </button>
               </div>
-
               <div
                 style={{
                   padding: "8px 10px",
@@ -313,7 +321,6 @@ export function ForYouScreen({
           favorites={favorites}
           onToggleFavorite={onToggleFavorite}
           onClose={() => setModalItem(null)}
-          userId={userId}
           onRecordView={onRecordView}
         />
       )}

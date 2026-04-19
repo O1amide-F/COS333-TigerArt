@@ -26,7 +26,15 @@ const NAV_TO_SCREEN: Record<NavId, Screen> = {
   recently_viewed: "recently_viewed",
 };
 
-function TigerArtAuthenticated({ isGuest = false, initialUsername = "", initialDisplayName = "" }: { isGuest?: boolean; initialUsername?: string; initialDisplayName?: string }) {
+function TigerArtAuthenticated({
+  isGuest = false,
+  initialUsername = "",
+  initialDisplayName = "",
+}: {
+  isGuest?: boolean;
+  initialUsername?: string;
+  initialDisplayName?: string;
+}) {
   const [screen, setScreen] = useState<Screen>("survey");
   const [favorites, setFavorites] = useState<number[]>([]);
   const [recentlyViewed, setRecentlyViewed] = useState<number[]>([]);
@@ -38,7 +46,20 @@ function TigerArtAuthenticated({ isGuest = false, initialUsername = "", initialD
   const username = initialUsername;
   const displayName = initialDisplayName || initialUsername;
   const userId = initialUsername || null;
-  const { startTour } = useTour({ autoStart: false });
+
+  const handleNav = (id: NavId) => {
+    setActiveNav(id);
+    setScreen(NAV_TO_SCREEN[id]);
+  };
+
+  const { startTour } = useTour({
+    autoStart: false,
+    onNavigate: handleNav,
+    getTourStats: () => ({
+      favoritesCount: favorites.length,
+      recentlyViewedCount: recentlyViewed.length,
+    }),
+  });
 
   // On login: load userId, favorites, recently viewed from backend
   useEffect(() => {
@@ -47,9 +68,9 @@ function TigerArtAuthenticated({ isGuest = false, initialUsername = "", initialD
       setScreen("survey");
       return;
     }
-  if (!initialUsername) return;  
-  async function loadUserData() {
-        // Load favorited artwork IDs
+    if (!initialUsername) return;
+    async function loadUserData() {
+      // Load favorited artwork IDs
       try {
         const favRes = await fetch(
           `${API_BASE}/favorites/${initialUsername}/ids`,
@@ -82,14 +103,12 @@ function TigerArtAuthenticated({ isGuest = false, initialUsername = "", initialD
           setScreen("home");
           setActiveNav("home");
         }
-      } 
-        
-      catch (e) {
+      } catch (e) {
         console.error("Failed to check user preferences:", e);
-      }      
+      }
     }
-      loadUserData().catch(console.error);
-  }, [isGuest,initialUsername]);
+    loadUserData().catch(console.error);
+  }, [isGuest, initialUsername]);
 
   // Single source of truth for toggling favorites
   const toggleFavorite = async (id: number) => {
@@ -142,11 +161,6 @@ function TigerArtAuthenticated({ isGuest = false, initialUsername = "", initialD
     recordRecentlyViewed(section.items[0]?.id);
     setActiveSection(section);
     setScreen("exhibitDetail");
-  };
-
-  const handleNav = (id: NavId) => {
-    setActiveNav(id);
-    setScreen(NAV_TO_SCREEN[id]);
   };
 
   const toggleSurveySelection = (id: number) => {
@@ -290,13 +304,16 @@ export default function TigerArt() {
 
   const [isGuest, setIsGuest] = useState(false);
 
-    useEffect(() => {
-    fetch('/api/getusername', { credentials: 'include' })
-      .then(res => {
-        if (!res.ok) { setReady(true); return null; }
+  useEffect(() => {
+    fetch("/api/getusername", { credentials: "include" })
+      .then((res) => {
+        if (!res.ok) {
+          setReady(true);
+          return null;
+        }
         return res.json();
       })
-      .then(data => {
+      .then((data) => {
         if (data?.username) setUsername(data.username);
         if (data?.displayName) setDisplayName(data.displayName);
         setReady(true);
@@ -307,5 +324,10 @@ export default function TigerArt() {
   if (!ready) return null;
   if (isGuest) return <TigerArtAuthenticated isGuest />;
   if (!username) return <LoginScreen onGuestLogin={() => setIsGuest(true)} />;
-  return <TigerArtAuthenticated initialUsername={username} initialDisplayName={displayName ?? username} />;
+  return (
+    <TigerArtAuthenticated
+      initialUsername={username}
+      initialDisplayName={displayName ?? username}
+    />
+  );
 }

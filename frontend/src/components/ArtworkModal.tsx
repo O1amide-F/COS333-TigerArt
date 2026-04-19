@@ -4,7 +4,7 @@ import { Placeholder } from "./Placeholder";
 import { theme } from "../theme";
 import type { ExhibitItem } from "../types";
 
-const API_BASE = '/api';
+const API_BASE = "/api";
 
 type ArtworkModalProps = {
   item: ExhibitItem;
@@ -83,6 +83,7 @@ export function ArtworkModal({
 
           {/* Close button */}
           <button
+            data-tour="artwork-modal-close"
             onClick={onClose}
             style={{
               position: "absolute",
@@ -107,6 +108,9 @@ export function ArtworkModal({
 
           {/* Favorite button */}
           <button
+            data-tour="artwork-modal-favorite"
+            data-tour-track="favorite"
+            data-tour-art-id={String(item.id)}
             onClick={() => onToggleFavorite(item.id)}
             style={{
               position: "absolute",
@@ -144,6 +148,7 @@ export function ArtworkModal({
         {/* Details */}
         <div style={{ padding: "16px 18px 24px" }}>
           <div
+            data-tour="artwork-modal-title"
             style={{
               fontSize: 18,
               fontWeight: 700,

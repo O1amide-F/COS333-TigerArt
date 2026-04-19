@@ -76,7 +76,7 @@ export const tourSteps: DriveStep[] = [
     popover: {
       title: "Exhibits",
       description:
-        "Browse curated exhibitions and galleries. Filter by department or view works currently on display at Harvard Art Museums.",
+        "Browse curated exhibitions and galleries. Filter by department or view works currently on display at Princeton University Art Museums.",
       side: "top",
       align: "center",
     },

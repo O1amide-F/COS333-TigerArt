@@ -5,19 +5,24 @@ import { SurveyFlow } from "../components/SurveyFlow";
 type SettingsScreenProps = {
   username: string;
   displayName?: string;
+  isGuest?: boolean;
+  onUsernameChange?: (value: string) => void;
+  profileImage?: string | null;
+  onProfileImageChange?: (value: string | null) => void;
+  selected?: number[];
+  onToggleSelection?: (id: number) => void;
   onSave: () => void;
   userId: string | null;
   onStartTour: () => void;
-  isGuest?: boolean;
 };
 
 export function SettingsScreen({
   username,
   displayName,
+  isGuest = false,
   onSave,
   userId,
   onStartTour,
-  isGuest = false,
 }: SettingsScreenProps) {
   const [showSurvey, setShowSurvey] = useState(false);
   const [savedMessage, setSavedMessage] = useState(false);
@@ -76,11 +81,13 @@ export function SettingsScreen({
               fontWeight: 600,
             }}
           >
-            {isGuest ? "Hi, Guest" : (displayName || username)}
+            {isGuest ? "Guest" : displayName || username}
           </span>
           {!isGuest && (
             <button
-              onClick={() => { window.location.href = '/logoutentra'; }}
+              onClick={() => {
+                window.location.href = "/logoutentra";
+              }}
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -101,8 +108,9 @@ export function SettingsScreen({
         </div>
       </div>
 
-      {/* Survey section */}
+      {/* ── Tour target: preferences card ── */}
       <div
+        data-tour="settings-preferences"
         style={{
           border: `1px solid ${theme.components.card.border}`,
           borderRadius: 10,
@@ -168,7 +176,6 @@ export function SettingsScreen({
           </button>
         </div>
 
-        {/* Saved confirmation */}
         {savedMessage && (
           <div
             style={{
@@ -186,7 +193,6 @@ export function SettingsScreen({
           </div>
         )}
 
-        {/* Inline survey flow */}
         {showSurvey && (
           <div style={{ marginTop: 4 }}>
             <SurveyFlow
@@ -198,7 +204,9 @@ export function SettingsScreen({
         )}
       </div>
 
+      {/* ── Tour target: take the tour card ── */}
       <div
+        data-tour="settings-tour"
         style={{
           border: `1px solid ${theme.components.card.border}`,
           borderRadius: 10,
@@ -233,6 +241,7 @@ export function SettingsScreen({
           </div>
         </div>
         <button
+          data-tour="settings-tour-btn"
           onClick={onStartTour}
           style={{
             background: theme.components.button.primaryBackground,

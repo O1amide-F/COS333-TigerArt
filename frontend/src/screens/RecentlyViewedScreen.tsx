@@ -35,9 +35,9 @@ type RecentCard = {
   title: string;
   subtitle: string;
   imageUrl?: string;
-  classification?: string; 
-  department?: string;      
-  displaydate?: string
+  classification?: string;
+  department?: string;
+  displaydate?: string;
 };
 
 export function RecentlyViewedScreen({
@@ -96,9 +96,9 @@ export function RecentlyViewedScreen({
         title: a.title ?? "Untitled",
         subtitle: a.description ?? "",
         imageUrl: a.image_url,
-        classification: a.classification, 
-        department: a.department,         
-        displaydate: a.displaydate, 
+        classification: a.classification,
+        department: a.department,
+        displaydate: a.displaydate,
       })),
     [artworks],
   );
@@ -108,7 +108,9 @@ export function RecentlyViewedScreen({
     if (searchQuery) {
       const q = searchQuery.toLowerCase();
       cards = cards.filter(
-        (c) => c.title.toLowerCase().includes(q) || c.subtitle.toLowerCase().includes(q),
+        (c) =>
+          c.title.toLowerCase().includes(q) ||
+          c.subtitle.toLowerCase().includes(q),
       );
     }
     return cards.filter((c) => itemMatchesFilters(c, activeFilters));
@@ -183,16 +185,18 @@ export function RecentlyViewedScreen({
     <div
       style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}
     >
-      <SearchFilterBar
-        onSearch={handleSearch}
-        onClear={handleClear}
-        isSearching={isSearching}
-        placeholder="Search recently viewed…"
-        activeFilters={activeFilters}
-        onFiltersChange={setActiveFilters}
-        sortBy={sortBy}
-        onSortChange={setSortBy}
-      />
+      <div data-tour="recently-viewed-search">
+        <SearchFilterBar
+          onSearch={handleSearch}
+          onClear={handleClear}
+          isSearching={isSearching}
+          placeholder="Search recently viewed…"
+          activeFilters={activeFilters}
+          onFiltersChange={setActiveFilters}
+          sortBy={sortBy}
+          onSortChange={setSortBy}
+        />
+      </div>
 
       <div
         style={{
@@ -286,6 +290,7 @@ export function RecentlyViewedScreen({
           {/* Featured hero card */}
           {featuredCard && (
             <div
+              data-tour="recently-viewed-card"
               style={{ marginBottom: 10, cursor: "pointer" }}
               onClick={() => handleCardClick(featuredCard)}
             >

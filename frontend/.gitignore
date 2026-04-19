@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+backend/makers.zip
+backend/objects.zip
+backend/on_display_cloudinary_images.json

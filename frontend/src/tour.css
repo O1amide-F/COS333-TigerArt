@@ -1,316 +1,137 @@
-import { useEffect, useState } from "react";
-import { Heart } from "lucide-react";
-import { SearchBar } from "./components/SearchBar";
-import { Placeholder } from "./components/Placeholder";
-import { ArtworkModal } from "./components/ArtworkModal";
-import type { ForYouItem, ExhibitItem } from "./types";
-import { theme } from "./theme";
+/* =============================================================================
+   TigerArt — driver.js overrides
+   Import AFTER driver.js/dist/driver.css in App.tsx
+   ============================================================================= */
 
-const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:5001/api";
+/* ── Popover container ─────────────────────────────────────────────────────── */
+.tigerart-tour-popover.driver-popover {
+  background: #ffffff;
+  border: 1px solid #e5e2db;
+  border-radius: 12px;
+  padding: 20px 20px 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  font-family: "DM Sans", sans-serif;
+  max-width: 300px;
+  min-width: 260px;
+}
 
-type ForYouScreenProps = {
-  userId: string | null;
-  favorites: number[];
-  onToggleFavorite: (id: number) => void;
-};
+/* ── Title ─────────────────────────────────────────────────────────────────── */
+.tigerart-tour-popover .driver-popover-title {
+  font-family: "Playfair Display", serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
 
-export function ForYouScreen({
-  favorites,
-  onToggleFavorite,
-  userId,
-}: ForYouScreenProps) {
-  console.log("ForYouScreen userId:", userId);
-  const [items, setItems] = useState<ForYouItem[]>([]);
-  const [searchResults, setSearchResults] = useState<ForYouItem[] | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [searchLoading, setSearchLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [modalItem, setModalItem] = useState<ExhibitItem | null>(null);
+/* ── Body ──────────────────────────────────────────────────────────────────── */
+.tigerart-tour-popover .driver-popover-description {
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  color: #5c5a56;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
 
-  useEffect(() => {
-    if (!userId) return;
-    setLoading(true);
-    fetch(`${API_BASE}/for-you/${userId}`)
-      .then((r) => {
-        if (!r.ok) throw new Error("fallback");
-        return r.json();
-      })
-      .then((data: ForYouItem[]) => {
-        setItems(data);
-        setLoading(false);
-      })
-      .catch(() => {
-        fetch(`${API_BASE}/for-you`)
-          .then((r) => r.json())
-          .then((data: ForYouItem[]) => {
-            setItems(data);
-            setLoading(false);
-          })
-          .catch((e) => {
-            setError(e.message);
-            setLoading(false);
-          });
-      });
-  }, [userId]);
+.tigerart-tour-popover .tigerart-tour-inline-hint {
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  color: #7a766f;
+  margin-bottom: 12px;
+}
 
-  const handleSearch = (query: string) => {
-    setSearchLoading(true);
-    fetch(`${API_BASE}/search?q=${encodeURIComponent(query)}`)
-      .then((r) => r.json())
-      .then((data: ForYouItem[]) => {
-        setSearchResults(data);
-        setSearchLoading(false);
-      })
-      .catch(() => setSearchLoading(false));
-  };
+/* ── Progress text ─────────────────────────────────────────────────────────── */
+.tigerart-tour-popover .driver-popover-progress-text {
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  color: #9c9890;
+}
 
-  const handleClear = () => setSearchResults(null);
+/* ── Footer ────────────────────────────────────────────────────────────────── */
+.tigerart-tour-popover .driver-popover-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-top: 1px solid #f0ede8;
+  padding-top: 12px;
+  margin-top: 0;
+}
 
-  const displayItems = searchResults ?? items;
-  const isSearching = searchResults !== null;
+/* ── Shared button styles ──────────────────────────────────────────────────── */
+.tigerart-tour-popover .driver-popover-footer button {
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 7px;
+  padding: 6px 14px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: opacity 0.15s;
+}
 
-  const toExhibitItem = (item: ForYouItem): ExhibitItem => ({
-    id: item.id,
-    name: item.title,
-    desc: item.about,
-    imageUrl: item.imageUrl,
-    department: item.department,
-    classification: item.classification,
-    displaydate: item.displaydate,
-    displaymaker: item.displaymaker,
-    gallery_label_text: item.gallery_label_text,
-    on_view: item.on_view,
-  });
+.tigerart-tour-popover .driver-popover-footer button:hover {
+  opacity: 0.85;
+}
 
-  if (!userId) {
-    return (
-      <div style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}>
-        <div style={{ textAlign: "center", padding: "40px 0",
-          fontFamily: "'DM Sans', sans-serif",
-          color: theme.components.badge.mutedText, fontSize: 14 }}>
-          Loading your feed…
-        </div>
-      </div>
-    );
-  }
+/* Previous button */
+.tigerart-tour-popover .driver-popover-prev-btn {
+  background: transparent;
+  color: #5c5a56;
+  border-color: #d9d6cf;
+}
 
-  return (
-    <div
-      style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}
-    >
-      {/* ── data-tour="search" — highlights the search bar ── */}
-      <div data-tour="search">
-        <SearchBar
-          onSearch={handleSearch}
-          onClear={handleClear}
-          isSearching={isSearching}
-        />
-      </div>
+/* Next / Done — Princeton orange */
+.tigerart-tour-popover .driver-popover-next-btn {
+  background: #d85a30;
+  color: #ffffff;
+  border-color: #d85a30;
+  margin-left: auto;
+}
 
-      {/* ── data-tour="for-you-heading" — highlights the page title ── */}
-      <h1
-        data-tour="for-you-heading"
-        style={{
-          margin: "0 0 4px",
-          fontSize: 24,
-          fontFamily: "'Playfair Display', serif",
-          fontWeight: 700,
-          color: theme.components.badge.text,
-        }}
-      >
-        {isSearching ? "Search Results" : "For You Page"}
-      </h1>
+/* Explicit finish action available on every step */
+.tigerart-tour-popover .tigerart-tour-finish-btn {
+  background: #d85a30;
+  color: #ffffff;
+  border: 1px solid #d85a30;
+  margin-left: auto;
+}
 
-      <p
-        style={{
-          margin: "0 0 20px",
-          fontSize: 13,
-          fontFamily: "'DM Sans', sans-serif",
-          color: theme.components.badge.mutedText,
-          background: theme.components.badge.background,
-          display: "inline-block",
-          padding: "4px 10px",
-          borderRadius: 4,
-        }}
-      >
-        {isSearching
-          ? `${displayItems.length} result${displayItems.length !== 1 ? "s" : ""} found`
-          : "Curated according to your preferences"}
-      </p>
+/* Close (×) */
+.tigerart-tour-popover .driver-popover-close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 16px;
+  color: #9c9890;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
 
-      {(loading || searchLoading) && (
-        <div
-          style={{
-            textAlign: "center",
-            padding: "40px 0",
-            fontFamily: "'DM Sans', sans-serif",
-            color: theme.components.badge.mutedText,
-            fontSize: 14,
-          }}
-        >
-          {searchLoading ? "Searching…" : "Loading your feed…"}
-        </div>
-      )}
+.tigerart-tour-popover .driver-popover-close-btn:hover {
+  color: #1a1a1a;
+  background: #f0ede8;
+}
 
-      {!loading && !searchLoading && error && (
-        <div
-          style={{
-            background: theme.components.badge.background,
-            borderRadius: 8,
-            padding: "24px 20px",
-            textAlign: "center",
-            fontFamily: "'DM Sans', sans-serif",
-            color: theme.components.badge.mutedText,
-            fontSize: 13,
-          }}
-        >
-          Something went wrong loading your feed.
-        </div>
-      )}
+/* ── Spotlight ring ────────────────────────────────────────────────────────── */
+.driver-active-element {
+  outline: 3px solid #d85a30 !important;
+  outline-offset: 3px;
+}
 
-      {!loading &&
-        !searchLoading &&
-        !error &&
-        isSearching &&
-        displayItems.length === 0 && (
-          <div
-            style={{
-              background: theme.components.badge.background,
-              borderRadius: 8,
-              padding: "24px 20px",
-              textAlign: "center",
-              fontFamily: "'DM Sans', sans-serif",
-            }}
-          >
-            <p
-              style={{
-                margin: "0 0 6px",
-                fontWeight: 600,
-                color: theme.components.badge.text,
-              }}
-            >
-              No results found
-            </p>
-            <p
-              style={{
-                margin: 0,
-                fontSize: 13,
-                color: theme.components.badge.mutedText,
-              }}
-            >
-              Try a different keyword or tag
-            </p>
-          </div>
-        )}
+/* ── Overlay: make sure it fully blocks interaction outside spotlight ──────── */
+/* driver.js renders its own overlay divs — these rules reinforce pointer blocking */
+#driver-overlay,
+.driver-overlay {
+  pointer-events: all !important;
+  cursor: not-allowed !important;
+}
 
-      {!loading && !searchLoading && !error && (
-        <div
-          style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}
-        >
-          {displayItems.map((item, index) => (
-            <div
-              key={item.id}
-              // ── data-tour="artwork-card" on the FIRST card only ──
-              // The tour spotlights the first card as an example;
-              // remove this attribute from subsequent cards.
-              {...(index === 0 ? { "data-tour": "artwork-card" } : {})}
-              onClick={() => setModalItem(toExhibitItem(item))}
-              style={{
-                breakInside: "avoid",
-                marginBottom: 12,
-                border: `1px solid ${theme.components.card.border}`,
-                borderRadius: 8,
-                overflow: "hidden",
-                background: theme.components.card.background,
-                cursor: "pointer",
-              }}
-            >
-              <div style={{ position: "relative" }}>
-                {item.imageUrl ? (
-                  <img
-                    src={item.imageUrl}
-                    alt={item.title}
-                    style={{
-                      width: "100%",
-                      aspectRatio: "1/1",
-                      objectFit: "cover",
-                      display: "block",
-                    }}
-                  />
-                ) : (
-                  <Placeholder
-                    label="Unable to Render Image"
-                    aspectRatio="1/1"
-                    style={{ borderRadius: 0 }}
-                  />
-                )}
-                {/* ── data-tour="favorite-btn" on the FIRST card's heart ── */}
-                <button
-                  {...(index === 0 ? { "data-tour": "favorite-btn" } : {})}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    onToggleFavorite(item.id);
-                  }}
-                  style={{
-                    position: "absolute",
-                    top: 8,
-                    right: 8,
-                    background: "rgba(0,0,0,0.35)",
-                    backdropFilter: "blur(4px)",
-                    border: "none",
-                    borderRadius: "50%",
-                    width: 32,
-                    height: 32,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    cursor: "pointer",
-                    flexShrink: 0,
-                  }}
-                >
-                  <Heart
-                    size={16}
-                    strokeWidth={2.2}
-                    color={
-                      favorites.includes(item.id)
-                        ? theme.components.favorite.active
-                        : "#fff"
-                    }
-                    fill={
-                      favorites.includes(item.id)
-                        ? theme.components.favorite.active
-                        : "none"
-                    }
-                  />
-                </button>
-              </div>
-
-              <div
-                style={{
-                  padding: "8px 10px",
-                  fontSize: 13,
-                  fontWeight: 600,
-                  color: theme.components.badge.text,
-                  fontFamily: "'DM Sans', sans-serif",
-                  lineHeight: 1.3,
-                }}
-              >
-                {item.title}
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
-
-      {modalItem && (
-        <ArtworkModal
-          item={modalItem}
-          favorites={favorites}
-          onToggleFavorite={onToggleFavorite}
-          onClose={() => setModalItem(null)}
-          userId={userId}
-        />
-      )}
-    </div>
-  );
+/* The spotlit element itself stays fully interactive */
+.driver-active-element {
+  pointer-events: all !important;
+  cursor: pointer !important;
 }

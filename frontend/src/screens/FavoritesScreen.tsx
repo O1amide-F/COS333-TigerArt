@@ -5,7 +5,7 @@ import { SearchFilterBar } from "../components/SearchFilterBar.tsx";
 import { itemMatchesFilters } from "../utils/filterUtils";
 import { theme } from "../theme";
 
-const API_BASE = '/api';
+const API_BASE = "/api";
 
 type FavoritesScreenProps = {
   userId: string | null;
@@ -19,8 +19,8 @@ type ArtworkFromAPI = {
   title: string;
   description?: string;
   image_url?: string;
-  classification?: string;  
-  department?: string;      
+  classification?: string;
+  department?: string;
   displaydate?: string;
 };
 
@@ -29,8 +29,8 @@ type FavoriteCard = {
   title: string;
   subtitle: string;
   imageUrl?: string;
-  classification?: string;  
-  department?: string;      
+  classification?: string;
+  department?: string;
   displaydate?: string;
 };
 
@@ -48,13 +48,11 @@ export function FavoritesScreen({
   const [expandedId, setExpandedId] = useState<number | null>(null);
   const [searchQuery, setSearchQuery] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState<SortOption>("recency");
-  const [showSortMenu, setShowSortMenu] = useState(false);
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
 
   useEffect(() => {
     setIsLoading(true);
     setError(null);
-
     const endpoint = userId
       ? `${API_BASE}/favorites/${userId}`
       : favorites.length > 0
@@ -78,7 +76,7 @@ export function FavoritesScreen({
         setError("Could not load favorites. Is the server running?");
       })
       .finally(() => setIsLoading(false));
-  }, [userId, favorites]); // re-fetch when favorites toggle so removals reflect immediately
+  }, [userId, favorites]);
 
   useEffect(() => {
     if (expandedId !== null && !favorites.includes(expandedId))
@@ -92,8 +90,8 @@ export function FavoritesScreen({
         title: a.title ?? "Untitled",
         subtitle: a.description ?? "",
         imageUrl: a.image_url,
-        classification: a.classification, 
-        department: a.department,           
+        classification: a.classification,
+        department: a.department,
         displaydate: a.displaydate,
       })),
     [artworks],
@@ -105,7 +103,6 @@ export function FavoritesScreen({
       return cards.sort((a, b) => a.title.localeCompare(b.title));
     if (sortBy === "za")
       return cards.sort((a, b) => b.title.localeCompare(a.title));
-    // "recency": backend returns ORDER BY sa.id DESC (newest first) — preserve that order
     return cards;
   }, [favoriteCards, sortBy]);
 
@@ -114,7 +111,9 @@ export function FavoritesScreen({
     if (searchQuery) {
       const q = searchQuery.toLowerCase();
       cards = cards.filter(
-        (c) => c.title.toLowerCase().includes(q) || c.subtitle.toLowerCase().includes(q),
+        (c) =>
+          c.title.toLowerCase().includes(q) ||
+          c.subtitle.toLowerCase().includes(q),
       );
     }
     return cards.filter((c) => itemMatchesFilters(c, activeFilters));
@@ -122,23 +121,23 @@ export function FavoritesScreen({
 
   const isSearching = searchQuery !== null;
 
-  const handleSearch = (q: string) => setSearchQuery(q);
-  const handleClear = () => setSearchQuery(null);
-
   return (
     <div
       style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}
     >
-      <SearchFilterBar
-        onSearch={handleSearch}
-        onClear={handleClear}
-        isSearching={isSearching}
-        placeholder="Search your favorites…"
-        activeFilters={activeFilters}
-        onFiltersChange={setActiveFilters}
-        sortBy={sortBy}
-        onSortChange={setSortBy}
-      />
+      {/* ── Tour target: search/filter bar ── */}
+      <div data-tour="favorites-search">
+        <SearchFilterBar
+          onSearch={(q) => setSearchQuery(q)}
+          onClear={() => setSearchQuery(null)}
+          isSearching={isSearching}
+          placeholder="Search your favorites…"
+          activeFilters={activeFilters}
+          onFiltersChange={setActiveFilters}
+          sortBy={sortBy}
+          onSortChange={setSortBy}
+        />
+      </div>
 
       <div
         style={{
@@ -148,7 +147,9 @@ export function FavoritesScreen({
           marginBottom: 24,
         }}
       >
+        {/* ── Tour target: page heading ── */}
         <h1
+          data-tour="favorites-heading"
           style={{
             margin: 0,
             fontSize: 22,

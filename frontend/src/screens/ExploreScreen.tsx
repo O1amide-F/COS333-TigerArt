@@ -7,10 +7,10 @@ import { ArtworkModal } from "../components/ArtworkModal";
 import { getExhibitSections } from "../new_data";
 import { theme } from "../theme";
 import type { ExhibitSection, ExhibitItem, ForYouItem } from "../types";
-import { useMemo } from "react"
+import { useMemo } from "react";
 
 const PINNED_SECTIONS_KEY = "tigerart_pinned_sections";
-const API_BASE = '/api';
+const API_BASE = "/api";
 
 type ExploreScreenProps = {
   userId: string | null;
@@ -135,7 +135,6 @@ function ViewMoreCard({
   onSectionClick: (s: ExhibitSection) => void;
 }) {
   const [hovered, setHovered] = useState(false);
-
   return (
     <div
       style={styles.cardInner}
@@ -229,6 +228,8 @@ function SearchResultCard({
 }) {
   return (
     <div
+      data-tour-track="view"
+      data-tour-art-id={String(item.id)}
       onClick={() => onCardClick(item)}
       style={{
         border: `1px solid ${theme.components.card.border}`,
@@ -258,6 +259,8 @@ function SearchResultCard({
           />
         )}
         <button
+          data-tour-track="favorite"
+          data-tour-art-id={String(item.id)}
           onClick={(e) => {
             e.stopPropagation();
             onToggleFavorite(item.id);
@@ -317,6 +320,7 @@ function ExploreSectionCard({
   isPinned,
   onTogglePin,
   onCardClick,
+  isFirst,
 }: {
   section: ExhibitSection;
   onSectionClick: (s: ExhibitSection) => void;
@@ -325,6 +329,7 @@ function ExploreSectionCard({
   isPinned: boolean;
   onTogglePin: (name: string) => void;
   onCardClick: (item: ExhibitItem) => void;
+  isFirst: boolean;
 }) {
   const [pinHovered, setPinHovered] = useState(false);
   const [sectionHovered, setSectionHovered] = useState(false);
@@ -332,7 +337,9 @@ function ExploreSectionCard({
   return (
     <div style={styles.sectionBlock}>
       <div style={{ display: "flex", alignItems: "center", marginBottom: 12 }}>
+        {/* ── Tour target: pin button (first section only) ── */}
         <button
+          {...(isFirst ? { "data-tour": "pin-btn" } : {})}
           onClick={(e) => {
             e.stopPropagation();
             onTogglePin(section.name);
@@ -355,7 +362,10 @@ function ExploreSectionCard({
             fill={isPinned ? theme.components.badge.text : "none"}
           />
         </button>
+
+        {/* ── Tour target: section heading (first section only) ── */}
         <div
+          {...(isFirst ? { "data-tour": "section-heading" } : {})}
           style={{
             ...styles.sectionHeader,
             marginBottom: 0,
@@ -375,10 +385,15 @@ function ExploreSectionCard({
       </div>
 
       <div style={styles.sectionRow}>
-        {/* Show exactly 4 artwork cards */}
-        {section.items.slice(0, 4).map((item) => (
+        {section.items.slice(0, 4).map((item, itemIdx) => (
           <div
             key={item.id}
+            // Tour targets the first artwork card in the first section
+            {...(isFirst && itemIdx === 0
+              ? { "data-tour": "explore-card" }
+              : {})}
+            data-tour-track="view"
+            data-tour-art-id={String(item.id)}
             style={styles.cardInner}
             onClick={() => onCardClick(item)}
           >
@@ -389,6 +404,8 @@ function ExploreSectionCard({
                 <Placeholder label="Unable to Render Image" aspectRatio="3/4" />
               )}
               <button
+                data-tour-track="favorite"
+                data-tour-art-id={String(item.id)}
                 onClick={(e) => {
                   e.stopPropagation();
                   onToggleFavorite(item.id);
@@ -417,8 +434,6 @@ function ExploreSectionCard({
             </div>
           </div>
         ))}
-
-        {/* 5th card: "View More" CTA linking to section details */}
         <ViewMoreCard section={section} onSectionClick={onSectionClick} />
       </div>
     </div>
@@ -490,15 +505,19 @@ export function ExploreScreen({
 
   const filteredSearchResults = useMemo(() => {
     if (!searchResults) return null;
-    return searchResults.filter((item) => itemMatchesFilters(item, activeFilters));
+    return searchResults.filter((item) =>
+      itemMatchesFilters(item, activeFilters),
+    );
   }, [searchResults, activeFilters]);
-  
+
   const filteredSections = useMemo(() => {
     if (activeFilters.length === 0) return sections;
     return sections
       .map((section) => ({
         ...section,
-        items: section.items.filter((item) => itemMatchesFilters(item, activeFilters)),
+        items: section.items.filter((item) =>
+          itemMatchesFilters(item, activeFilters),
+        ),
       }))
       .filter((section) => section.items.length > 0);
   }, [sections, activeFilters]);
@@ -506,8 +525,11 @@ export function ExploreScreen({
   const pinnedList = pinnedSections
     .map((name) => filteredSections.find((s) => s.name === name))
     .filter((s): s is ExhibitSection => Boolean(s));
-  const unpinnedList = filteredSections.filter((s) => !pinnedSections.includes(s.name));
-  const sharedCardProps = (section: ExhibitSection) => ({
+  const unpinnedList = filteredSections.filter(
+    (s) => !pinnedSections.includes(s.name),
+  );
+
+  const sharedCardProps = (section: ExhibitSection, isFirst: boolean) => ({
     section,
     onSectionClick,
     favorites,
@@ -515,6 +537,7 @@ export function ExploreScreen({
     isPinned: pinnedSections.includes(section.name),
     onTogglePin: handleTogglePin,
     onCardClick: (item: ExhibitItem) => setModalItem(item),
+    isFirst,
   });
 
   const handleClear = () => setSearchResults(null);
@@ -522,15 +545,22 @@ export function ExploreScreen({
 
   return (
     <div style={styles.page}>
-      <SearchFilterBar
-        onSearch={handleSearch}
-        onClear={handleClear}
-        isSearching={isSearching}
-        placeholder="Search by title or tag…"
-        activeFilters={activeFilters}
-        onFiltersChange={setActiveFilters}
-      />
-      <h1 style={styles.title}>{isSearching ? "SEARCH RESULTS" : "EXPLORE"}</h1>
+      {/* ── Tour target: search/filter bar ── */}
+      <div data-tour="explore-search">
+        <SearchFilterBar
+          onSearch={handleSearch}
+          onClear={handleClear}
+          isSearching={isSearching}
+          placeholder="Search by title or tag…"
+          activeFilters={activeFilters}
+          onFiltersChange={setActiveFilters}
+        />
+      </div>
+
+      {/* ── Tour target: page heading ── */}
+      <h1 data-tour="explore-heading" style={styles.title}>
+        {isSearching ? "SEARCH RESULTS" : "EXPLORE"}
+      </h1>
 
       {searchLoading && (
         <div
@@ -610,19 +640,19 @@ export function ExploreScreen({
                 <Pin size={11} strokeWidth={2.5} />
                 Pinned
               </div>
-              {pinnedList.map((section) => (
+              {pinnedList.map((section, i) => (
                 <ExploreSectionCard
                   key={section.name}
-                  {...sharedCardProps(section)}
+                  {...sharedCardProps(section, i === 0)}
                 />
               ))}
               <hr style={styles.divider} />
             </>
           )}
-          {unpinnedList.map((section) => (
+          {unpinnedList.map((section, i) => (
             <ExploreSectionCard
               key={section.name}
-              {...sharedCardProps(section)}
+              {...sharedCardProps(section, pinnedList.length === 0 && i === 0)}
             />
           ))}
         </>

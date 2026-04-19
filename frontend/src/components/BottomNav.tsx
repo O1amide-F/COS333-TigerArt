@@ -70,6 +70,7 @@ function SidebarNav({ activeNav, onNavigate }: BottomNavProps) {
           <button
             key={item.id}
             onClick={() => onNavigate(item.id)}
+            data-tour={`nav-${item.id.replace(/_/g, "-")}`}
             aria-label={item.label}
             style={{
               background: isActive ? "rgba(255,255,255,0.1)" : "transparent",
@@ -140,6 +141,7 @@ function MobileNav({ activeNav, onNavigate }: BottomNavProps) {
         <button
           key={item.id}
           onClick={() => onNavigate(item.id)}
+          data-tour={`nav-${item.id.replace(/_/g, "-")}`}
           style={{
             background: theme.components.button.ghostBackground,
             border: theme.components.button.ghostBorder,

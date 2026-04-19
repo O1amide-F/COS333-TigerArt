@@ -18,6 +18,7 @@ export function NewsScreen() {
       style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}
     >
       <h1
+        data-tour="news-heading"
         style={{
           margin: "0 0 20px",
           fontSize: 22,
@@ -37,7 +38,10 @@ export function NewsScreen() {
 
       <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
         {items.map((item, index) => (
-          <div key={item.id}>
+          <div
+            key={item.id}
+            {...(index === 0 ? { "data-tour": "news-article" } : {})}
+          >
             <div style={{ position: "relative" }}>
               {item.imageUrl ? (
                 <>
@@ -52,7 +56,8 @@ export function NewsScreen() {
                     }}
                     onError={(e) => {
                       e.currentTarget.style.display = "none";
-                      const fallback = e.currentTarget.nextElementSibling as HTMLElement | null;
+                      const fallback = e.currentTarget
+                        .nextElementSibling as HTMLElement | null;
                       if (fallback) fallback.style.display = "block";
                     }}
                   />

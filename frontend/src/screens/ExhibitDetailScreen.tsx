@@ -5,7 +5,7 @@ import { ArtworkModal } from "../components/ArtworkModal";
 import { theme } from "../theme";
 import type { ExhibitItem, ExhibitSection } from "../types";
 
-const API_BASE = '/api';
+const API_BASE = "/api";
 
 type ExhibitDetailScreenProps = {
   userId: string | null;
@@ -88,6 +88,7 @@ export function ExhibitDetailScreen({
       style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}
     >
       <button
+        data-tour="exhibit-detail-back"
         onClick={onBack}
         style={{
           background: theme.components.button.ghostBackground,
@@ -107,6 +108,7 @@ export function ExhibitDetailScreen({
       </button>
 
       <div
+        data-tour="exhibit-detail-heading"
         style={{
           background: theme.components.badge.background,
           borderRadius: 4,
@@ -124,6 +126,9 @@ export function ExhibitDetailScreen({
 
       {featuredItem && (
         <div
+          data-tour="exhibit-detail-featured"
+          data-tour-track="view"
+          data-tour-art-id={String(featuredItem.id)}
           style={{ marginBottom: 10, cursor: "pointer" }}
           onClick={() => setModalItem(featuredItem)}
         >
@@ -177,6 +182,7 @@ export function ExhibitDetailScreen({
       />
 
       <div
+        data-tour="exhibit-detail-grid"
         style={{
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
@@ -187,6 +193,8 @@ export function ExhibitDetailScreen({
         {gridItems.map((item) => (
           <div
             key={item.id}
+            data-tour-track="view"
+            data-tour-art-id={String(item.id)}
             style={{ cursor: "pointer" }}
             onClick={() => setModalItem(item)}
           >
@@ -238,6 +246,7 @@ export function ExhibitDetailScreen({
           style={{ marginTop: 16, display: "flex", justifyContent: "center" }}
         >
           <button
+            data-tour="exhibit-detail-more"
             onClick={() => setVisibleCount((prev) => prev + 6)}
             style={{
               padding: "10px 16px",
