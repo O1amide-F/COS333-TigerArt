@@ -1,3 +1,47 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8e0aa2277a2f7de8b63327a52c040a0cc6b6d042d560e6263073d3a0560f825a
-size 1186
+{
+    "makerid":12593,
+    "published_date":"2024-07-02 02:02:00.303228",
+    "type":"maker",
+    "displayname":"Shōwa era",
+    "makertype":"Individual",
+    "alphasort":"Showa era",
+    "lastname":null,
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"1926–1989",
+    "begindate":1926,
+    "enddate":1989,
+    "nationality":"Japanese",
+    "culturegroup":"Showa era",
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Shōwa era",
+            "alphasort":"Showa era",
+            "lastname":null,
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":"Showa era"
+        },
+        {
+            "nametype":"Unicode Display Name",
+            "displayname":"Shōwa period",
+            "alphasort":null,
+            "lastname":null,
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

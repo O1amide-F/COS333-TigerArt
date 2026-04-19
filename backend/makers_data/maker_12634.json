@@ -1,3 +1,45 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3d1b6554abe1c5a64279bf9d41c7d2026b6ec9dd7e66a7d538351c17cf686bcc
-size 1088
+{
+    "makerid":12634,
+    "published_date":"2022-03-28 16:07:51.462341",
+    "type":"maker",
+    "displayname":"Paul Henry Brach",
+    "makertype":"Individual",
+    "alphasort":"Brach, Paul Henry",
+    "lastname":"Brach",
+    "firstname":"Paul",
+    "nametitle":null,
+    "middlename":"Henry",
+    "suffix":null,
+    "displaybio":"American, 1924–2007",
+    "begindate":1924,
+    "enddate":2007,
+    "nationality":"American",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Paul Henry Brach",
+            "alphasort":"Brach, Paul Henry",
+            "lastname":"Brach",
+            "firstname":"Paul",
+            "nametitle":null,
+            "middlename":"Henry",
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"ULAN",
+            "id":"500018752"
+        },
+        {
+            "source":"VIAF",
+            "id":"http://viaf.org/viaf/66503022"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

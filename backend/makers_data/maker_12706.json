@@ -1,3 +1,41 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:76943550d20bf265ff8b29ddd2ec321cae541c989d277cdd362624e68ffcf063
-size 999
+{
+    "makerid":12706,
+    "published_date":"2022-03-28 16:07:54.402393",
+    "type":"maker",
+    "displayname":"David Horton",
+    "makertype":"Individual",
+    "alphasort":"Horton, David",
+    "lastname":"Horton",
+    "firstname":"David",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"American, born 1939",
+    "begindate":1939,
+    "enddate":0,
+    "nationality":"American",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"David Horton",
+            "alphasort":"Horton, David",
+            "lastname":"Horton",
+            "firstname":"David",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"VIAF",
+            "id":"http://viaf.org/viaf/103144782703867818421"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

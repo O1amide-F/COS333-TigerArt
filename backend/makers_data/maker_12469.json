@@ -1,3 +1,45 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e3726e2764b447650e54171618b7da4b557ebbdabee37049cb488f774452337b
-size 1080
+{
+    "makerid":12469,
+    "published_date":"2022-03-28 16:07:47.413970",
+    "type":"maker",
+    "displayname":"Domenico Mondo",
+    "makertype":"Individual",
+    "alphasort":"Mondo, Domenico",
+    "lastname":"Mondo",
+    "firstname":"Domenico",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"Italian, 1723–1806",
+    "begindate":1723,
+    "enddate":1806,
+    "nationality":"Italian",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Domenico Mondo",
+            "alphasort":"Mondo, Domenico",
+            "lastname":"Mondo",
+            "firstname":"Domenico",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"ULAN",
+            "id":"500000118"
+        },
+        {
+            "source":"VIAF",
+            "id":"http://viaf.org/viaf/95681324"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

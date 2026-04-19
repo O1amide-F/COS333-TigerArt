@@ -1,3 +1,45 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:48c4839cfafbba3b9cb853f01773f89af3d3989e5231750ab0c3feef49bada30
-size 1056
+{
+    "makerid":12679,
+    "published_date":"2022-03-28 16:07:53.311906",
+    "type":"maker",
+    "displayname":"Mary Frank",
+    "makertype":"Individual",
+    "alphasort":"Frank, Mary",
+    "lastname":"Frank",
+    "firstname":"Mary",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"American, born 1933",
+    "begindate":1933,
+    "enddate":2100,
+    "nationality":"American",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Mary Frank",
+            "alphasort":"Frank, Mary",
+            "lastname":"Frank",
+            "firstname":"Mary",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"ULAN",
+            "id":"500013115"
+        },
+        {
+            "source":"VIAF",
+            "id":"http://viaf.org/viaf/95761105"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

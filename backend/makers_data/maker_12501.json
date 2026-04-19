@@ -1,3 +1,47 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ca8a672a2180f20352c46ec4633d17847424c44646ef11e7fd75bc8a4f16d797
-size 1217
+{
+    "makerid":12501,
+    "published_date":"2023-03-17 02:01:26.410232",
+    "type":"maker",
+    "displayname":"Zhou dynasty",
+    "makertype":"Individual",
+    "alphasort":"Zhou dynasty",
+    "lastname":null,
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"ca. 1100–256 BCE",
+    "begindate":-1100,
+    "enddate":-256,
+    "nationality":"Chinese",
+    "culturegroup":"Zhou dynasty",
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Zhou dynasty",
+            "alphasort":"Zhou dynasty",
+            "lastname":null,
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":"Zhou dynasty"
+        },
+        {
+            "nametype":"Alternate",
+            "displayname":"Chou dynasty",
+            "alphasort":"Chou dynasty",
+            "lastname":null,
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":"Chou dynasty"
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

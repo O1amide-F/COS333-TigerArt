@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ef7de6e67b683aacb7ab0968ef1016d2edd9ca83ef1a074b4dbfea5d4d6ae191
-size 845
+{
+    "makerid":1133,
+    "published_date":"2022-03-28 16:03:58.595024",
+    "type":"maker",
+    "displayname":"Joy Moody",
+    "makertype":"Individual",
+    "alphasort":"Moody Joy",
+    "lastname":"Moody",
+    "firstname":"Joy",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":null,
+    "begindate":1978,
+    "enddate":0,
+    "nationality":"American",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Joy Moody",
+            "alphasort":"Moody Joy",
+            "lastname":"Moody",
+            "firstname":"Joy",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

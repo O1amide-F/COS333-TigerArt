@@ -1,3 +1,78 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6e8ae1a9020a1d98de0c6468bff322f9c9d16c217302a8b65c0b5e0b0d4bbf72
-size 2062
+{
+    "makerid":1266,
+    "published_date":"2022-03-28 16:04:03.741972",
+    "type":"maker",
+    "displayname":"Wen Rukuo 溫汝适",
+    "makertype":"Individual",
+    "alphasort":"Wen Rukuo",
+    "lastname":"Wen Rukuo",
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"1755–1821",
+    "begindate":1755,
+    "enddate":1821,
+    "nationality":"Chinese",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Alternate",
+            "displayname":"Wen Rugua",
+            "alphasort":"Wen Rugua",
+            "lastname":"Wen Rugua",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Primary Name",
+            "displayname":"Wen Rukuo 溫汝适",
+            "alphasort":"Wen Rukuo",
+            "lastname":"Wen Rukuo",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Alternate",
+            "displayname":"Wen Ju-kua",
+            "alphasort":"Wen Ju-kua",
+            "lastname":"Wen Ju-kua",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Alternate",
+            "displayname":"溫汝适",
+            "alphasort":"溫汝适",
+            "lastname":"溫汝适",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"Baike Baidu",
+            "id":"http://baike.baidu.com/view/4686850.htm"
+        },
+        {
+            "source":"VIAF",
+            "id":"http://viaf.org/viaf/282165541"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

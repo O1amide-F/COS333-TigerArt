@@ -1,3 +1,41 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:132573407327698cc2dcba04f6157a5ea1a53a6bc951fe6115da9ccb891ca175
-size 1002
+{
+    "makerid":1009,
+    "published_date":"2022-03-28 16:03:53.755144",
+    "type":"maker",
+    "displayname":"Brian Pelletier",
+    "makertype":"Individual",
+    "alphasort":"Pelletier Brian",
+    "lastname":"Pelletier",
+    "firstname":"Brian",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"American, born 1941",
+    "begindate":1941,
+    "enddate":0,
+    "nationality":"American",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Brian Pelletier",
+            "alphasort":"Pelletier Brian",
+            "lastname":"Pelletier",
+            "firstname":"Brian",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"VIAF",
+            "id":"http://viaf.org/viaf/316795726"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

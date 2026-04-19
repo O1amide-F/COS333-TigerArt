@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:59334820683e9ee40dbda5b31672d0edf77f8be3bf64785c51c5f3377ffe1c2c
-size 894
+{
+    "makerid":1143,
+    "published_date":"2022-03-28 16:03:58.998239",
+    "type":"maker",
+    "displayname":"Jones & Brother",
+    "makertype":"Individual",
+    "alphasort":"Jones & Brother",
+    "lastname":"Jones & Brother",
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"19th century",
+    "begindate":0,
+    "enddate":0,
+    "nationality":"American",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Jones & Brother",
+            "alphasort":"Jones & Brother",
+            "lastname":"Jones & Brother",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

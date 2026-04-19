@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7917ff139cb96bf5dac4f97db3f7aa9e2c760cd96aa509e1195e8d98b0c124c1
-size 433
+{
+    "alphasort":"Herve Lucien",
+    "altnames":[],
+    "begindate":1917,
+    "biography":null,
+    "constituentid":1116,
+    "culturegroup":null,
+    "displaybio":"French, born 1917",
+    "displayname":"Lucien Herve",
+    "enddate":2100,
+    "firstname":"Lucien",
+    "lastname":"Herve",
+    "middlename":null,
+    "nametitle":null,
+    "nationality":"French",
+    "published_date":"2017-01-03 11:48:17.505030",
+    "suffix":null
+}

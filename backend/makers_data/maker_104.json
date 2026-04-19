@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:da0512f64073659c80dc955b361cfcb85aad7d6e048954a047a08eafd9824586
-size 960
+{
+    "makerid":104,
+    "published_date":"2022-03-28 16:03:19.893817",
+    "type":"maker",
+    "displayname":"Clement-Auguste Andrieux",
+    "makertype":"Individual",
+    "alphasort":"Andrieux, Clement-Auguste",
+    "lastname":"Andrieux",
+    "firstname":"Clement-Auguste",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"French, 1829 - after 1880",
+    "begindate":1829,
+    "enddate":1880,
+    "nationality":"French",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Clement-Auguste Andrieux",
+            "alphasort":"Andrieux, Clement-Auguste",
+            "lastname":"Andrieux",
+            "firstname":"Clement-Auguste",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

@@ -1,3 +1,58 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c680b4f7f9f2b597ef806f567605aaf51011c72913ce4ee49d8ca9b2e97b7b26
-size 1535
+{
+    "makerid":1049,
+    "published_date":"2022-03-28 16:03:55.428891",
+    "type":"maker",
+    "displayname":"Chen Shuhua 陳樹華",
+    "makertype":"Individual",
+    "alphasort":"Chen Shuhua",
+    "lastname":"Chen Shuhua",
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":null,
+    "begindate":1644,
+    "enddate":1912,
+    "nationality":"Chinese",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Chen Shuhua 陳樹華",
+            "alphasort":"Chen Shuhua",
+            "lastname":"Chen Shuhua",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Alternate",
+            "displayname":"Ch'en Shu-hua",
+            "alphasort":"Ch'en Shu-hua",
+            "lastname":"Ch'en Shu-hua",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Alternate",
+            "displayname":"陳樹華",
+            "alphasort":"陳樹華",
+            "lastname":"陳樹華",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

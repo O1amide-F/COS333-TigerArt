@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:654b9c55beea730e3d47a226f9d4a69532680b65a7d22a9a41538b1c82aa23a9
-size 909
+{
+    "makerid":1196,
+    "published_date":"2022-03-28 16:04:00.796145",
+    "type":"maker",
+    "displayname":"Robert Yoskowitz",
+    "makertype":"Individual",
+    "alphasort":"Yoskowitz, Robert",
+    "lastname":"Yoskowitz",
+    "firstname":"Robert",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"American, born 1951",
+    "begindate":1951,
+    "enddate":2100,
+    "nationality":"American",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Robert Yoskowitz",
+            "alphasort":"Yoskowitz, Robert",
+            "lastname":"Yoskowitz",
+            "firstname":"Robert",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

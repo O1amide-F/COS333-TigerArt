@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d86865168a6ad3969bfe226811c1213c7929690442329b8c8d36341ca27658e7
-size 883
+{
+    "makerid":1232,
+    "published_date":"2022-03-28 16:04:02.439502",
+    "type":"maker",
+    "displayname":"Mariah Hughs",
+    "makertype":"Individual",
+    "alphasort":"Hughs Mariah",
+    "lastname":"Hughs",
+    "firstname":"Mariah",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"American, active 1970s",
+    "begindate":0,
+    "enddate":1979,
+    "nationality":"American",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Mariah Hughs",
+            "alphasort":"Hughs Mariah",
+            "lastname":"Hughs",
+            "firstname":"Mariah",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

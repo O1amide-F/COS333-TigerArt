@@ -1,3 +1,41 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e9a6cf738228975c1f321c1d402d56a6a516d3d1bea91bb449cb47c2ecc94cf6
-size 1031
+{
+    "makerid":12648,
+    "published_date":"2022-03-28 16:07:52.020945",
+    "type":"maker",
+    "displayname":"Sandra Russell Clark",
+    "makertype":"Individual",
+    "alphasort":"Clark, Sandra Russell",
+    "lastname":"Clark",
+    "firstname":"Sandra",
+    "nametitle":null,
+    "middlename":"Russell",
+    "suffix":null,
+    "displaybio":"American, born 1949",
+    "begindate":1949,
+    "enddate":2100,
+    "nationality":"American",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Sandra Russell Clark",
+            "alphasort":"Clark, Sandra Russell",
+            "lastname":"Clark",
+            "firstname":"Sandra",
+            "nametitle":null,
+            "middlename":"Russell",
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"VIAF",
+            "id":"http://viaf.org/viaf/58362697"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

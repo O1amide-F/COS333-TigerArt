@@ -1,3 +1,45 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:680af5776e4f13a55e6fe48d449358695a535465e1e37e4153edf9c4620c3250
-size 1069
+{
+    "makerid":12623,
+    "published_date":"2022-03-28 16:07:50.987556",
+    "type":"maker",
+    "displayname":"Drew Beattie",
+    "makertype":"Individual",
+    "alphasort":"Beattie, Drew",
+    "lastname":"Beattie",
+    "firstname":"Drew",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"American, born 1952",
+    "begindate":1952,
+    "enddate":2100,
+    "nationality":"American",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Drew Beattie",
+            "alphasort":"Beattie, Drew",
+            "lastname":"Beattie",
+            "firstname":"Drew",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"ULAN",
+            "id":"500074339"
+        },
+        {
+            "source":"VIAF",
+            "id":"http://viaf.org/viaf/264359637"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

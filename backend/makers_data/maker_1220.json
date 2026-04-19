@@ -1,3 +1,45 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f22da63e9e28373922260ed6219937f47903cc54059dfea5dc94bb0385f107b0
-size 1115
+{
+    "makerid":1220,
+    "published_date":"2022-03-28 16:04:01.963203",
+    "type":"maker",
+    "displayname":"Alexis Jean Fournier",
+    "makertype":"Individual",
+    "alphasort":"Fournier Alexis Jean",
+    "lastname":"Fournier",
+    "firstname":"Alexis Jean",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"American, 1865–1948",
+    "begindate":1865,
+    "enddate":1948,
+    "nationality":"American",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Alexis Jean Fournier",
+            "alphasort":"Fournier Alexis Jean",
+            "lastname":"Fournier",
+            "firstname":"Alexis Jean",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"ULAN",
+            "id":"500020832"
+        },
+        {
+            "source":"VIAF",
+            "id":"http://viaf.org/viaf/55569103"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

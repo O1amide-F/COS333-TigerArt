@@ -1,3 +1,45 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:56a4161820536803dfa0ec8f617dcd99be88c4efe464cd13e28341b0001fa2fa
-size 1060
+{
+    "makerid":1201,
+    "published_date":"2022-03-28 16:04:00.996062",
+    "type":"maker",
+    "displayname":"David Lucas",
+    "makertype":"Individual",
+    "alphasort":"Lucas David",
+    "lastname":"Lucas",
+    "firstname":"David",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"British, 1802–1881",
+    "begindate":1802,
+    "enddate":1881,
+    "nationality":"British",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"David Lucas",
+            "alphasort":"Lucas David",
+            "lastname":"Lucas",
+            "firstname":"David",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"ULAN",
+            "id":"500003709"
+        },
+        {
+            "source":"VIAF",
+            "id":"http://viaf.org/viaf/100383097"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

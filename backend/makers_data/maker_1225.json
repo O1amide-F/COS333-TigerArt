@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:de528f3ec55bebf31e07c7a05a8d0a4e3c1e59765dbe0b86a2a5f71cb9c2beea
-size 907
+{
+    "makerid":1225,
+    "published_date":"2022-03-28 16:04:02.169557",
+    "type":"maker",
+    "displayname":"Mabel A. Hewit",
+    "makertype":"Individual",
+    "alphasort":"Hewit, Mabel A.",
+    "lastname":"Hewit",
+    "firstname":"Mabel A.",
+    "nametitle":null,
+    "middlename":"Amelia",
+    "suffix":null,
+    "displaybio":"American, 1903–1984",
+    "begindate":1903,
+    "enddate":1984,
+    "nationality":"American",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Mabel A. Hewit",
+            "alphasort":"Hewit, Mabel A.",
+            "lastname":"Hewit",
+            "firstname":"Mabel A.",
+            "nametitle":null,
+            "middlename":"Amelia",
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

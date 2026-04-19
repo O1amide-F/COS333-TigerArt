@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:99e36b3e0959688ca9d49e8339d0e427be693208b1af9bc7f3242e03c9ccf44e
-size 896
+{
+    "makerid":1115,
+    "published_date":"2022-03-28 16:03:58.033930",
+    "type":"maker",
+    "displayname":"Nishimura Josaemon",
+    "makertype":"Individual",
+    "alphasort":"Nishimura Josaemon",
+    "lastname":"Nishimura",
+    "firstname":"Josaemon",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":null,
+    "begindate":0,
+    "enddate":0,
+    "nationality":"Japanese",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Nishimura Josaemon",
+            "alphasort":"Nishimura Josaemon",
+            "lastname":"Nishimura",
+            "firstname":"Josaemon",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

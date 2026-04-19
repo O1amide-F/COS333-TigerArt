@@ -1,3 +1,56 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9c299dbadbbdcb1093afee45a21c5d23eb5709d3bd7368a86b4c9b73f10ded7c
-size 1397
+{
+    "makerid":12625,
+    "published_date":"2022-03-28 16:07:51.079252",
+    "type":"maker",
+    "displayname":"Larry Bell",
+    "makertype":"Individual",
+    "alphasort":"Bell, Larry",
+    "lastname":"Bell",
+    "firstname":"Larry",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"American, born 1939",
+    "begindate":1939,
+    "enddate":2100,
+    "nationality":"American",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Larry Bell",
+            "alphasort":"Bell, Larry",
+            "lastname":"Bell",
+            "firstname":"Larry",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Alternate",
+            "displayname":"Larry Stuart Bell",
+            "alphasort":"Bell, Larry Stuart",
+            "lastname":"Bell",
+            "firstname":"Larry Stuart",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"ULAN",
+            "id":"500005382"
+        },
+        {
+            "source":"VIAF",
+            "id":"http://viaf.org/viaf/84632166"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

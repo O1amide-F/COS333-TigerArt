@@ -1,3 +1,41 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d0d557f42d66f05e457a492f2773d91807570d35dcda05e17c214c9c624ce2d2
-size 991
+{
+    "makerid":12658,
+    "published_date":"2022-03-28 16:07:52.376530",
+    "type":"maker",
+    "displayname":"Bradley Darius Davis",
+    "makertype":"Individual",
+    "alphasort":"Davis, Brad",
+    "lastname":"Davis",
+    "firstname":"Bradley",
+    "nametitle":null,
+    "middlename":"Darius",
+    "suffix":null,
+    "displaybio":"American, born 1942",
+    "begindate":1942,
+    "enddate":2100,
+    "nationality":"American",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Bradley Darius Davis",
+            "alphasort":"Davis, Brad",
+            "lastname":"Davis",
+            "firstname":"Bradley",
+            "nametitle":null,
+            "middlename":"Darius",
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"ULAN",
+            "id":"500031816"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

@@ -1,3 +1,45 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8f2ea595592e48d5cc504829e4f23eed7877c1a87b7da7d5d823390e80efdd82
-size 1094
+{
+    "makerid":12695,
+    "published_date":"2022-03-28 16:07:53.919902",
+    "type":"maker",
+    "displayname":"Douglas Kent Hall",
+    "makertype":"Individual",
+    "alphasort":"Hall, Douglas Kent",
+    "lastname":"Hall",
+    "firstname":"Douglas",
+    "nametitle":null,
+    "middlename":"Kent",
+    "suffix":null,
+    "displaybio":"American, 1938–2008",
+    "begindate":1938,
+    "enddate":2008,
+    "nationality":"American",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Douglas Kent Hall",
+            "alphasort":"Hall, Douglas Kent",
+            "lastname":"Hall",
+            "firstname":"Douglas",
+            "nametitle":null,
+            "middlename":"Kent",
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"ULAN",
+            "id":"500374686"
+        },
+        {
+            "source":"VIAF",
+            "id":"http://viaf.org/viaf/91645786"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

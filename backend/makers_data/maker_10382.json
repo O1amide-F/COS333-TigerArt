@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3fa21185f688cb17be2c709ed91cb9835cf5adf58578a8ea8dc965adb25fa8d7
-size 1068
+{
+    "makerid":10382,
+    "published_date":"2022-03-28 16:07:44.693115",
+    "type":"maker",
+    "displayname":"Ashmolean Museum of Art and Archaeology, University of Oxford",
+    "makertype":"Institution",
+    "alphasort":"Ashmolean Museum of Art and Archaeology",
+    "lastname":"Ashmolean Museum of Art and Archaeology",
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":null,
+    "begindate":0,
+    "enddate":0,
+    "nationality":null,
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Ashmolean Museum of Art and Archaeology, University of Oxford",
+            "alphasort":"Ashmolean Museum of Art and Archaeology",
+            "lastname":"Ashmolean Museum of Art and Archaeology",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

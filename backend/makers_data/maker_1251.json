@@ -1,3 +1,67 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fb04640346baa42dd648f91b6a3c20d9e5b4efaf79cddf51c3cfb306422b9871
-size 1718
+{
+    "makerid":1251,
+    "published_date":"2022-03-28 16:04:03.040531",
+    "type":"maker",
+    "displayname":"Jiao Hong 焦竑",
+    "makertype":"Individual",
+    "alphasort":"Jiao Hong",
+    "lastname":"Jiao Hong",
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"1540–1620",
+    "begindate":1540,
+    "enddate":1620,
+    "nationality":"Chinese",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Jiao Hong 焦竑",
+            "alphasort":"Jiao Hong",
+            "lastname":"Jiao Hong",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Alternate",
+            "displayname":"Jiao Hong",
+            "alphasort":"Jiao Hong",
+            "lastname":"Jiao Hong",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Alternate",
+            "displayname":"焦竑",
+            "alphasort":"焦竑",
+            "lastname":"焦竑",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"Baike Baidu",
+            "id":"http://baike.baidu.com/view/329363.htm"
+        },
+        {
+            "source":"VIAF",
+            "id":"//viaf.org/viaf/62468354"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

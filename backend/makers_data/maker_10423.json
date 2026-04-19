@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:aa497dc836658194bc65b852d3c7ea4e2ec0f0383f9734c9c0d6bdd5974a8555
-size 882
+{
+    "makerid":10423,
+    "published_date":"2022-03-28 16:07:44.879304",
+    "type":"maker",
+    "displayname":"Knoedler Gallery",
+    "makertype":"Gallery",
+    "alphasort":"Knoedler Gallery",
+    "lastname":"Knoedler Gallery",
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":null,
+    "begindate":0,
+    "enddate":0,
+    "nationality":null,
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Knoedler Gallery",
+            "alphasort":"Knoedler Gallery",
+            "lastname":"Knoedler Gallery",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

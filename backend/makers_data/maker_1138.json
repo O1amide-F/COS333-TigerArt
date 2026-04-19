@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7eddc182572832eb5b8193ccc0c91d5eb28c56442d0bc7d06cd9c663b0d35925
-size 877
+{
+    "makerid":1138,
+    "published_date":"2022-03-28 16:03:58.785217",
+    "type":"maker",
+    "displayname":"Sasha Stone",
+    "makertype":"Individual",
+    "alphasort":"Stone Sasha",
+    "lastname":"Stone",
+    "firstname":"Sasha",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"Russian, 1895 - 1940",
+    "begindate":1895,
+    "enddate":1940,
+    "nationality":"Russian",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Sasha Stone",
+            "alphasort":"Stone Sasha",
+            "lastname":"Stone",
+            "firstname":"Sasha",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

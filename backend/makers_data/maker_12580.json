@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:eaae6971860391310cf8758c2c6a4836ac378eb4710c13ed6df358d220a7805c
-size 875
+{
+    "makerid":12580,
+    "published_date":"2025-05-06 02:04:18.986176",
+    "type":"maker",
+    "displayname":"Nara period",
+    "makertype":"Individual",
+    "alphasort":"Nara period",
+    "lastname":null,
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"710–794 CE",
+    "begindate":710,
+    "enddate":794,
+    "nationality":"Japanese",
+    "culturegroup":"Nara period",
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Nara period",
+            "alphasort":"Nara period",
+            "lastname":null,
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":"Nara period"
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

@@ -1,3 +1,67 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c875e460090d4a9ca10c2dda3d89e27f19a3b0f2cf4b770ee5aa4b4f27a9d4b1
-size 1779
+{
+    "makerid":1097,
+    "published_date":"2022-03-28 16:03:57.254712",
+    "type":"maker",
+    "displayname":"Wu Rongguang 吳榮光",
+    "makertype":"Individual",
+    "alphasort":"Wu Rongguang",
+    "lastname":"Wu Rongguang",
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"1773–1843",
+    "begindate":1773,
+    "enddate":1843,
+    "nationality":"Chinese",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Wu Rongguang 吳榮光",
+            "alphasort":"Wu Rongguang",
+            "lastname":"Wu Rongguang",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Alternate",
+            "displayname":"Wu Jung-kuang",
+            "alphasort":"Wu Jung-kuang",
+            "lastname":"Wu Jung-kuang",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Alternate",
+            "displayname":"吳榮光",
+            "alphasort":"吳榮光",
+            "lastname":"吳榮光",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"Baike Baidu",
+            "id":"http://baike.baidu.com/subview/284702/6387531.htm"
+        },
+        {
+            "source":"VIAF",
+            "id":"http://viaf.org/viaf/11861626"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

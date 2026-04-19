@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8692a6b3807a5e6e66ca883e67593daf08cf98014ae3464c069be7f5e9cfd04a
-size 851
+{
+    "makerid":1155,
+    "published_date":"2022-03-28 16:03:59.310659",
+    "type":"maker",
+    "displayname":"Zhu Bang",
+    "makertype":"Individual",
+    "alphasort":"Zhu Bang",
+    "lastname":"Zhu Bang",
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"16th century",
+    "begindate":0,
+    "enddate":0,
+    "nationality":"Chinese",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Zhu Bang",
+            "alphasort":"Zhu Bang",
+            "lastname":"Zhu Bang",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

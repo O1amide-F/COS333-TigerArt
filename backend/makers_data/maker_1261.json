@@ -1,3 +1,58 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a6520cb7087e64a8cb8410aada6292ef0a0d8ec1e771fa87e5740b952a754192
-size 1524
+{
+    "makerid":1261,
+    "published_date":"2022-03-28 16:04:03.524580",
+    "type":"maker",
+    "displayname":"Wei Jinxi 魏晉錫",
+    "makertype":"Individual",
+    "alphasort":"Wei Jinxi",
+    "lastname":"Wei Jinxi",
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":null,
+    "begindate":0,
+    "enddate":0,
+    "nationality":"Chinese",
+    "culturegroup":null,
+    "biography":"Qing Dynasty",
+    "altnames":[
+        {
+            "nametype":"Alternate",
+            "displayname":"Wei Chin-hsi",
+            "alphasort":"Wei Chin-hsi",
+            "lastname":"Wei Chin-hsi",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Primary Name",
+            "displayname":"Wei Jinxi 魏晉錫",
+            "alphasort":"Wei Jinxi",
+            "lastname":"Wei Jinxi",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Alternate",
+            "displayname":"魏晉錫",
+            "alphasort":"魏晉錫",
+            "lastname":"魏晉錫",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

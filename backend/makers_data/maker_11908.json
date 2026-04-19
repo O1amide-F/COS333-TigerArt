@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c27f08fb24ea748b6e06e44c1f3ef78351d146d074742f59db74b30284e3b01c
-size 882
+{
+    "makerid":11908,
+    "published_date":"2022-03-28 16:07:46.749205",
+    "type":"maker",
+    "displayname":"Portland Museum of Art",
+    "makertype":"Institution",
+    "alphasort":"Portland Museum of Art",
+    "lastname":null,
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":null,
+    "begindate":0,
+    "enddate":0,
+    "nationality":null,
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Portland Museum of Art",
+            "alphasort":"Portland Museum of Art",
+            "lastname":null,
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

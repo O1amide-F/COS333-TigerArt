@@ -1,3 +1,41 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:241ceb4dad92d59555b47b27c53283088b2dd095550c4adf1175bd7cb4b981ab
-size 985
+{
+    "makerid":12557,
+    "published_date":"2022-06-09 08:45:12.371617",
+    "type":"maker",
+    "displayname":"Southern Song dynasty",
+    "makertype":"Individual",
+    "alphasort":"Southern Song",
+    "lastname":null,
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"1127–1279",
+    "begindate":1127,
+    "enddate":1279,
+    "nationality":"Chinese",
+    "culturegroup":"Southern Song",
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Southern Song dynasty",
+            "alphasort":"Southern Song",
+            "lastname":null,
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":"Southern Song"
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"AAT",
+            "id":"300018434"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

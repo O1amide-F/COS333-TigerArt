@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:885a2da0e168d0e9b98869ff89882a17ffb0707568c35b0b5818dc2c69745ba3
-size 881
+{
+    "makerid":12577,
+    "published_date":"2024-02-22 02:02:18.266343",
+    "type":"maker",
+    "displayname":"Kofun period",
+    "makertype":"Individual",
+    "alphasort":"Kofun period",
+    "lastname":null,
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"300–710 CE",
+    "begindate":300,
+    "enddate":710,
+    "nationality":"Japanese",
+    "culturegroup":"Kofun period",
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Kofun period",
+            "alphasort":"Kofun period",
+            "lastname":null,
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":"Kofun period"
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

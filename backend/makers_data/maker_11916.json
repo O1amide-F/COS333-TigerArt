@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2b1cdf2a0a133859f888ca8be105bbd36600120907f86372f1999517abcc679b
-size 910
+{
+    "makerid":11916,
+    "published_date":"2022-03-28 16:07:46.794924",
+    "type":"maker",
+    "displayname":"Bowdoin College Museum of Art",
+    "makertype":"Institution",
+    "alphasort":"Bowdoin College Museum of Art",
+    "lastname":null,
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":null,
+    "begindate":0,
+    "enddate":0,
+    "nationality":null,
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Bowdoin College Museum of Art",
+            "alphasort":"Bowdoin College Museum of Art",
+            "lastname":null,
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

@@ -1,3 +1,45 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ae00f584e2fb11c15f3af8cba417d22576c701eb002cec035183d7ab0c43c19c
-size 1044
+{
+    "makerid":12672,
+    "published_date":"2022-03-28 16:07:53.010061",
+    "type":"maker",
+    "displayname":"Don Eddy",
+    "makertype":"Individual",
+    "alphasort":"Eddy, Don",
+    "lastname":"Eddy",
+    "firstname":"Don",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"American, born 1944",
+    "begindate":1944,
+    "enddate":2100,
+    "nationality":"American",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Don Eddy",
+            "alphasort":"Eddy, Don",
+            "lastname":"Eddy",
+            "firstname":"Don",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"ULAN",
+            "id":"500023943"
+        },
+        {
+            "source":"VIAF",
+            "id":"http://viaf.org/viaf/26103627"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

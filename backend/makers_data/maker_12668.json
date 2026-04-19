@@ -1,3 +1,45 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bc3a4a2d96c64697c104c5725292b4cb97ff652f4f22df6f14a9b2fac5dac9e8
-size 1078
+{
+    "makerid":12668,
+    "published_date":"2022-03-28 16:07:52.834659",
+    "type":"maker",
+    "displayname":"Bertrand Dorny",
+    "makertype":"Individual",
+    "alphasort":"Dorny, Bertrand",
+    "lastname":"Dorny",
+    "firstname":"Bertrand",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"French, 1931–2015",
+    "begindate":1931,
+    "enddate":2015,
+    "nationality":"French",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Bertrand Dorny",
+            "alphasort":"Dorny, Bertrand",
+            "lastname":"Dorny",
+            "firstname":"Bertrand",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"ULAN",
+            "id":"500000915"
+        },
+        {
+            "source":"VIAF",
+            "id":"http://viaf.org/viaf/12307507"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

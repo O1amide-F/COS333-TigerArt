@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ac0334356b55cad515531807789f37418a966e972e250f58cd34d48dd585b226
-size 836
+{
+    "makerid":1005,
+    "published_date":"2022-03-28 16:03:53.621367",
+    "type":"maker",
+    "displayname":"Johannot",
+    "makertype":"Individual",
+    "alphasort":"Johannot",
+    "lastname":"Johannot",
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":null,
+    "begindate":0,
+    "enddate":0,
+    "nationality":null,
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Johannot",
+            "alphasort":"Johannot",
+            "lastname":"Johannot",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

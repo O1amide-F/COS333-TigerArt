@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:22eadc9e23e5830fd8f5c5580bc2bdbe3d9b2b0a8b6e2e7833a41ca6b527a84d
-size 874
+{
+    "makerid":11413,
+    "published_date":"2022-03-28 16:07:45.842608",
+    "type":"maker",
+    "displayname":"Dieter Schwarz",
+    "makertype":"Contact",
+    "alphasort":"Schwarz Dieter Dr.",
+    "lastname":"Schwarz",
+    "firstname":"Dieter",
+    "nametitle":"Dr.",
+    "middlename":null,
+    "suffix":null,
+    "displaybio":null,
+    "begindate":0,
+    "enddate":0,
+    "nationality":null,
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Dieter Schwarz",
+            "alphasort":"Schwarz Dieter Dr.",
+            "lastname":"Schwarz",
+            "firstname":"Dieter",
+            "nametitle":"Dr.",
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

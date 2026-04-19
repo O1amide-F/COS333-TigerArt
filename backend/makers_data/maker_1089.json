@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:14cc0d9bda2e21c335e1a35635d7519e8bc3a54c897e5d68b813404ed79671fd
-size 866
+{
+    "makerid":1089,
+    "published_date":"2022-03-28 16:03:57.028370",
+    "type":"maker",
+    "displayname":"Giuseppe Rozzo",
+    "makertype":"Individual",
+    "alphasort":"Rozzo Giuseppe",
+    "lastname":"Rozzo",
+    "firstname":"Giuseppe",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":null,
+    "begindate":0,
+    "enddate":0,
+    "nationality":null,
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Giuseppe Rozzo",
+            "alphasort":"Rozzo Giuseppe",
+            "lastname":"Rozzo",
+            "firstname":"Giuseppe",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

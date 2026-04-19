@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a076c03b74525735a4f5c0016e0dfba505cab213632ab784cc80e1304a8c11c9
-size 883
+{
+    "makerid":11645,
+    "published_date":"2022-03-28 16:07:46.165160",
+    "type":"maker",
+    "displayname":"Alfred A. Knopf, Inc.",
+    "makertype":"Organization",
+    "alphasort":"Knopf, Alfred A.",
+    "lastname":"Knopf",
+    "firstname":"Alfred",
+    "nametitle":null,
+    "middlename":"A.",
+    "suffix":null,
+    "displaybio":null,
+    "begindate":0,
+    "enddate":0,
+    "nationality":null,
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Alfred A. Knopf, Inc.",
+            "alphasort":"Knopf, Alfred A.",
+            "lastname":"Knopf",
+            "firstname":"Alfred",
+            "nametitle":null,
+            "middlename":"A.",
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

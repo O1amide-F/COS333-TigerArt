@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:66c89ecf1da3063cce9b12a7cea9dcca0e319086f14843af8e730c1ad46c25a9
-size 895
+{
+    "makerid":1113,
+    "published_date":"2022-03-28 16:03:57.943171",
+    "type":"maker",
+    "displayname":"Jules Moigniez",
+    "makertype":"Individual",
+    "alphasort":"Moigniez, Jules",
+    "lastname":"Moigniez",
+    "firstname":"Jules",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"French, 1835–1894",
+    "begindate":1835,
+    "enddate":1894,
+    "nationality":"French",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Jules Moigniez",
+            "alphasort":"Moigniez, Jules",
+            "lastname":"Moigniez",
+            "firstname":"Jules",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

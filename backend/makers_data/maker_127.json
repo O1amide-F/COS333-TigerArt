@@ -1,3 +1,41 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e28fca9499e20e01783a21c3045d73747e7a420ac2e561dc5161a6e0cbf64c28
-size 1019
+{
+    "makerid":127,
+    "published_date":"2022-03-28 16:03:20.827511",
+    "type":"maker",
+    "displayname":"Shusaku Arakawa",
+    "makertype":"Individual",
+    "alphasort":"Arakawa, Shusaku",
+    "lastname":"Arakawa",
+    "firstname":"Shusaku",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"1936–2010; born Nagoya, Japan; active United States",
+    "begindate":1936,
+    "enddate":2010,
+    "nationality":"Japanese",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Shusaku Arakawa",
+            "alphasort":"Arakawa, Shusaku",
+            "lastname":"Arakawa",
+            "firstname":"Shusaku",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"ULAN",
+            "id":"500123705"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

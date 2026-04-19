@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1513fcf3be99971ad52348bcf1609a94826976cf660cd3b9d97e2549e8f19cff
-size 900
+{
+    "makerid":12588,
+    "published_date":"2025-10-11 02:45:14.748025",
+    "type":"maker",
+    "displayname":"Momoyama period",
+    "makertype":"Individual",
+    "alphasort":"Momoyama period",
+    "lastname":null,
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"1573–1603",
+    "begindate":1573,
+    "enddate":1603,
+    "nationality":"Japanese",
+    "culturegroup":"Momoyama period",
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Momoyama period",
+            "alphasort":"Momoyama period",
+            "lastname":null,
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":"Momoyama period"
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

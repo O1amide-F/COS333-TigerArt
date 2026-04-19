@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5bcb3b76a4ae88c2e5b005ea1a1ef5ca214a1cb8b0d64d1c5b905b8240e2e311
-size 853
+{
+    "makerid":1184,
+    "published_date":"2022-03-28 16:04:00.404093",
+    "type":"maker",
+    "displayname":"Sheng Yuan",
+    "makertype":"Individual",
+    "alphasort":"Sheng Yuan",
+    "lastname":"Sheng Yuan",
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":null,
+    "begindate":0,
+    "enddate":0,
+    "nationality":"Chinese",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Sheng Yuan",
+            "alphasort":"Sheng Yuan",
+            "lastname":"Sheng Yuan",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

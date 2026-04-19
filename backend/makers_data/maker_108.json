@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5beb4bc0db11d3ca92df2da9a4d2f5a1e132096be66a7ee5cffc62cb9e9b67ba
-size 966
+{
+    "makerid":108,
+    "published_date":"2022-03-28 16:03:20.062276",
+    "type":"maker",
+    "displayname":"Battista Angolo del Moro",
+    "makertype":"Individual",
+    "alphasort":"Angolo del Moro, Battista",
+    "lastname":"Angolo del Moro",
+    "firstname":"Battista",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"Italian, before 1568 - after 1610",
+    "begindate":0,
+    "enddate":1610,
+    "nationality":"Italian",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Battista Angolo del Moro",
+            "alphasort":"Angolo del Moro, Battista",
+            "lastname":"Angolo del Moro",
+            "firstname":"Battista",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6428bde8a97b1be0048b22cc3f603da93ffee8ccca7dca368d6bd19c64988e74
-size 910
+{
+    "makerid":11939,
+    "published_date":"2022-03-28 16:07:46.928878",
+    "type":"maker",
+    "displayname":"Musée d'Art Moderne, Ibaraki",
+    "makertype":"Institution",
+    "alphasort":"Musée d'Art Moderne, Ibaraki",
+    "lastname":null,
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":null,
+    "begindate":0,
+    "enddate":0,
+    "nationality":null,
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Musée d'Art Moderne, Ibaraki",
+            "alphasort":"Musée d'Art Moderne, Ibaraki",
+            "lastname":null,
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

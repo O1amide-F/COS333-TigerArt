@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6b3d9d01e9942440c6f8c65783f37c7183e54465a89f5e702f2198d191ff3c6a
-size 934
+{
+    "makerid":12510,
+    "published_date":"2024-02-22 02:02:16.297115",
+    "type":"maker",
+    "displayname":"Three Kingdoms period",
+    "makertype":"Individual",
+    "alphasort":"Three Kingdoms period",
+    "lastname":null,
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"220–265 CE",
+    "begindate":220,
+    "enddate":265,
+    "nationality":"Chinese",
+    "culturegroup":"Three Kingdoms period",
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Three Kingdoms period",
+            "alphasort":"Three Kingdoms period",
+            "lastname":null,
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":"Three Kingdoms period"
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

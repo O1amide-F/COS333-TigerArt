@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:95cc059118dd1d96b28f2c4b52d21f62517b8109f7a77c7d6c10ba3d42b425cb
-size 894
+{
+    "makerid":1093,
+    "published_date":"2025-10-10 02:04:51.651118",
+    "type":"maker",
+    "displayname":"Charles Gwaythil",
+    "makertype":"Individual",
+    "alphasort":"Gwaythil Charles",
+    "lastname":"Gwaythil",
+    "firstname":"Charles",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"19th century",
+    "begindate":1800,
+    "enddate":1899,
+    "nationality":null,
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Charles Gwaythil",
+            "alphasort":"Gwaythil Charles",
+            "lastname":"Gwaythil",
+            "firstname":"Charles",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

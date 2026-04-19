@@ -1,3 +1,56 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4a3ccd7b1f98a28c935ff7c82ac2a340f49a305c87b6cac75fc928fcec0a2c87
-size 1447
+{
+    "makerid":1114,
+    "published_date":"2022-03-28 16:03:57.988779",
+    "type":"maker",
+    "displayname":"Prado-Fienga Painter",
+    "makertype":"Individual",
+    "alphasort":"Prado-Fienga Painter",
+    "lastname":"Prado-Fienga Painter",
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":null,
+    "begindate":-380,
+    "enddate":-360,
+    "nationality":"South Italian, Apulian",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Prado-Fienga Painter",
+            "alphasort":"Prado-Fienga Painter",
+            "lastname":"Prado-Fienga Painter",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Alternate",
+            "displayname":"Prado Painter",
+            "alphasort":"Prado Painter",
+            "lastname":"Prado Painter",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"ULAN",
+            "id":"500108483"
+        },
+        {
+            "source":"VIAF",
+            "id":"http://viaf.org/viaf/96492952"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

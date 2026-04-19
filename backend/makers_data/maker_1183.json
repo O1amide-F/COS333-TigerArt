@@ -1,3 +1,45 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:aef242abccb2db300646d7e111983db6b1d046379500545b85fb15e42924bc80
-size 1063
+{
+    "makerid":1183,
+    "published_date":"2022-03-28 16:04:00.362049",
+    "type":"maker",
+    "displayname":"Werner Rohde",
+    "makertype":"Individual",
+    "alphasort":"Rohde Werner",
+    "lastname":"Rohde",
+    "firstname":"Werner",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"German, 1890–1963",
+    "begindate":1890,
+    "enddate":1963,
+    "nationality":"German",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Werner Rohde",
+            "alphasort":"Rohde Werner",
+            "lastname":"Rohde",
+            "firstname":"Werner",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"ULAN",
+            "id":"500037083"
+        },
+        {
+            "source":"VIAF",
+            "id":"http://viaf.org/viaf/29803722"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

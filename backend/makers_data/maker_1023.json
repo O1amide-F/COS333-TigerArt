@@ -1,3 +1,58 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:201c8eb4a92bee1e9c7e980c793ff778e93416cd5972cbd1bb912973d20af190
-size 1547
+{
+    "makerid":1023,
+    "published_date":"2022-03-28 16:03:54.196128",
+    "type":"maker",
+    "displayname":"Pan Dingxin 潘鼎新",
+    "makertype":"Individual",
+    "alphasort":"Pan Dingxin",
+    "lastname":"Pan Dingxin",
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"1828–1888",
+    "begindate":1828,
+    "enddate":1888,
+    "nationality":"Chinese",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Alternate",
+            "displayname":"P'an Ting-hsin",
+            "alphasort":"P'an Ting-hsin",
+            "lastname":"P'an Ting-hsin",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Primary Name",
+            "displayname":"Pan Dingxin 潘鼎新",
+            "alphasort":"Pan Dingxin",
+            "lastname":"Pan Dingxin",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Alternate",
+            "displayname":"潘鼎新",
+            "alphasort":"潘鼎新",
+            "lastname":"潘鼎新",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b4d8144f498acf75211b18ff0381b97e50a19a3016775b833fdbfc5a207beb78
-size 890
+{
+    "makerid":110,
+    "published_date":"2022-03-28 16:03:20.148599",
+    "type":"maker",
+    "displayname":"William Angus",
+    "makertype":"Individual",
+    "alphasort":"Angus, William",
+    "lastname":"Angus",
+    "firstname":"William",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"British, 1752 - 1821",
+    "begindate":1752,
+    "enddate":1821,
+    "nationality":"British",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"William Angus",
+            "alphasort":"Angus, William",
+            "lastname":"Angus",
+            "firstname":"William",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

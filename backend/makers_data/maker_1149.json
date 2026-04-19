@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:af753e12398445bf4f20161e4ff00387606121f61934366a6f7f3bf369eb571b
-size 496
+{
+    "alphasort":"Benvenuto, Simone di Filippo di",
+    "altnames":[],
+    "begindate":1355,
+    "biography":null,
+    "constituentid":1149,
+    "culturegroup":null,
+    "displaybio":"Italian, active 1355 - 1399",
+    "displayname":"Simone di Filippo di Benvenuto",
+    "enddate":1399,
+    "firstname":"Simone",
+    "lastname":"Benvenuto",
+    "middlename":"di Filippo di",
+    "nametitle":null,
+    "nationality":"Italian",
+    "published_date":"2017-01-03 11:48:18.280083",
+    "suffix":null
+}

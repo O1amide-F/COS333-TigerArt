@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4d7e769e201df03ec199e640761334a6e736e036476b1722689fcfc4f8874768
-size 867
+{
+    "makerid":1153,
+    "published_date":"2022-03-28 16:03:59.215355",
+    "type":"maker",
+    "displayname":"Paul Cava",
+    "makertype":"Individual",
+    "alphasort":"Cava, Paul",
+    "lastname":"Cava",
+    "firstname":"Paul",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"American, born 1949",
+    "begindate":1949,
+    "enddate":2100,
+    "nationality":"American",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Paul Cava",
+            "alphasort":"Cava, Paul",
+            "lastname":"Cava",
+            "firstname":"Paul",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

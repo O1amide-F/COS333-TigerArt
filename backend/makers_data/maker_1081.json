@@ -1,3 +1,47 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:031ea18b29c7ab630c407da6a58aa5a647394e6a48bcdb0992bd7a83bf720afe
-size 1204
+{
+    "makerid":1081,
+    "published_date":"2025-05-28 14:39:16.621152",
+    "type":"maker",
+    "displayname":"Edmund Dulac",
+    "makertype":"Individual",
+    "alphasort":"Dulac Edmund",
+    "lastname":"Dulac",
+    "firstname":"Edmund",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"British, 1882–1953",
+    "begindate":1882,
+    "enddate":1953,
+    "nationality":null,
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Edmund Dulac",
+            "alphasort":"Dulac Edmund",
+            "lastname":"Dulac",
+            "firstname":"Edmund",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Alternate",
+            "displayname":"Edmond Dulac",
+            "alphasort":"Dulac, Edmond",
+            "lastname":"Dulac",
+            "firstname":"Edmond",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

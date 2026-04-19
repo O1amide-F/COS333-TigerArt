@@ -1,3 +1,47 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7b21c77510b01bee927efd3b77882512f00c9d6917649d0dc4bdde7033e3e321
-size 1248
+{
+    "makerid":11163,
+    "published_date":"2022-12-03 02:01:24.590618",
+    "type":"maker",
+    "displayname":"Hamada Shinsaku 濱田晋作",
+    "makertype":"Individual",
+    "alphasort":"Hamada Shinsaku",
+    "lastname":"Hamada Shinsaku",
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"born 1929",
+    "begindate":1929,
+    "enddate":0,
+    "nationality":"Japanese",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":null,
+            "displayname":"Tajima Mitsuru",
+            "alphasort":"Tajima Mitsuru",
+            "lastname":"Tajima Mitsuru",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Primary Name",
+            "displayname":"Hamada Shinsaku 濱田晋作",
+            "alphasort":"Hamada Shinsaku",
+            "lastname":"Hamada Shinsaku",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

@@ -1,3 +1,45 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:86412166843a7250a131cfce2c00f73419cdc99bed77141ccc0e4edd5e05bd04
-size 1071
+{
+    "makerid":1160,
+    "published_date":"2022-03-28 16:03:59.490121",
+    "type":"maker",
+    "displayname":"Ben Nicholson",
+    "makertype":"Individual",
+    "alphasort":"Nicholson Ben",
+    "lastname":"Nicholson",
+    "firstname":"Ben",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"British, 1894–1982",
+    "begindate":1894,
+    "enddate":1982,
+    "nationality":"British",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Ben Nicholson",
+            "alphasort":"Nicholson Ben",
+            "lastname":"Nicholson",
+            "firstname":"Ben",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"ULAN",
+            "id":"500005137"
+        },
+        {
+            "source":"VIAF",
+            "id":"http://viaf.org/viaf/51697862"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

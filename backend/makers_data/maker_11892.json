@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:096cd7f37a45ab39a29e4418f705492f37f5725e2c8f0ad0d6e6118147fd7a7c
-size 978
+{
+    "makerid":11892,
+    "published_date":"2022-03-28 16:07:46.571690",
+    "type":"maker",
+    "displayname":"Fine Arts Museums of San Francisco, California",
+    "makertype":"Institution",
+    "alphasort":"Fine Arts Museums of San Francisco, California",
+    "lastname":null,
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":null,
+    "begindate":0,
+    "enddate":0,
+    "nationality":null,
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Fine Arts Museums of San Francisco, California",
+            "alphasort":"Fine Arts Museums of San Francisco, California",
+            "lastname":null,
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

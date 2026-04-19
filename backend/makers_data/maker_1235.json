@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9f0bb537509a415f0ed7c754f1cf2186829ec2239028de8938015170ee8ac731
-size 896
+{
+    "makerid":1235,
+    "published_date":"2022-03-28 16:04:02.486572",
+    "type":"maker",
+    "displayname":"David  S. MacClay, Jr.",
+    "makertype":"Individual",
+    "alphasort":"MacClay, David S. Jr.",
+    "lastname":"MacClay",
+    "firstname":"David",
+    "nametitle":null,
+    "middlename":"S.",
+    "suffix":"Jr.",
+    "displaybio":null,
+    "begindate":0,
+    "enddate":0,
+    "nationality":null,
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"David  S. MacClay, Jr.",
+            "alphasort":"MacClay, David S. Jr.",
+            "lastname":"MacClay",
+            "firstname":"David",
+            "nametitle":null,
+            "middlename":"S.",
+            "suffix":"Jr.",
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

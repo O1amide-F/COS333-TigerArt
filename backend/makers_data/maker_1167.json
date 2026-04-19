@@ -1,3 +1,45 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4de235e6a0e9d62a5bb5edf6f915491010d2c3d2601fb7e1f761d689c72fdf1c
-size 1089
+{
+    "makerid":1167,
+    "published_date":"2022-03-28 16:03:59.661930",
+    "type":"maker",
+    "displayname":"Albertinum Painter",
+    "makertype":"Individual",
+    "alphasort":"Albertinum Painter",
+    "lastname":"Albertinum Painter",
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":null,
+    "begindate":-550,
+    "enddate":-425,
+    "nationality":"Greek",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Albertinum Painter",
+            "alphasort":"Albertinum Painter",
+            "lastname":"Albertinum Painter",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"ULAN",
+            "id":"500116535"
+        },
+        {
+            "source":"VIAF",
+            "id":"https://viaf.org/viaf/132430957"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

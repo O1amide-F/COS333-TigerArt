@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b76f21a3da13aefa17d98beac358228a1155e1b64a1c0c9100580ad98c331532
-size 864
+{
+    "makerid":12558,
+    "published_date":"2025-05-06 02:04:18.898750",
+    "type":"maker",
+    "displayname":"Xi Xia dynasty",
+    "makertype":"Individual",
+    "alphasort":"Xi Xia",
+    "lastname":null,
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"1038–1227 CE",
+    "begindate":1038,
+    "enddate":1227,
+    "nationality":"Chinese",
+    "culturegroup":"Xi Xia",
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Xi Xia dynasty",
+            "alphasort":"Xi Xia",
+            "lastname":null,
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":"Xi Xia"
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

@@ -1,3 +1,41 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4e4a85b76ec8f10413db2647c39a42cb7a22857638dc77e47ac087ae68f49bf7
-size 1004
+{
+    "makerid":1123,
+    "published_date":"2022-03-28 16:03:58.210356",
+    "type":"maker",
+    "displayname":"William J. Mullins",
+    "makertype":"Individual",
+    "alphasort":"Mullins William J.",
+    "lastname":"Mullins",
+    "firstname":"William J.",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"American, 1860–1917",
+    "begindate":1860,
+    "enddate":1917,
+    "nationality":"American",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"William J. Mullins",
+            "alphasort":"Mullins William J.",
+            "lastname":"Mullins",
+            "firstname":"William J.",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"ULAN",
+            "id":"500335417"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

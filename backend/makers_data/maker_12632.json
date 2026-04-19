@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:968140586acff0bf9c54cb8bf2322cd3b6e3fe5f27450b22ef4246e7f5e24ea3
-size 875
+{
+    "makerid":12632,
+    "published_date":"2022-03-28 16:07:51.371096",
+    "type":"maker",
+    "displayname":"Malcolm Blair",
+    "makertype":"Individual",
+    "alphasort":"Blair, Malcolm",
+    "lastname":"Blair",
+    "firstname":"Malcolm",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"American",
+    "begindate":0,
+    "enddate":0,
+    "nationality":"American",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Malcolm Blair",
+            "alphasort":"Blair, Malcolm",
+            "lastname":"Blair",
+            "firstname":"Malcolm",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

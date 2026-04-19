@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e8d023fce8e75e9a5b83c2f4291a5757561f0852e810c1dd1a703b701f96a0f3
-size 848
+{
+    "makerid":1177,
+    "published_date":"2022-03-28 16:04:00.118605",
+    "type":"maker",
+    "displayname":"Yvonne Burk",
+    "makertype":"Individual",
+    "alphasort":"Burk Yvonne",
+    "lastname":"Burk",
+    "firstname":"Yvonne",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":null,
+    "begindate":0,
+    "enddate":0,
+    "nationality":null,
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Yvonne Burk",
+            "alphasort":"Burk Yvonne",
+            "lastname":"Burk",
+            "firstname":"Yvonne",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

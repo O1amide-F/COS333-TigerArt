@@ -1,3 +1,45 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bd8c6f3b51ed7309428674be7760829154f959cddd266da4eb3362a032f1e629
-size 1086
+{
+    "makerid":12642,
+    "published_date":"2025-08-08 02:02:14.316903",
+    "type":"maker",
+    "displayname":"Squeak Carnwath",
+    "makertype":"Individual",
+    "alphasort":"Carnwath, Squeak",
+    "lastname":"Carnwath",
+    "firstname":"Squeak",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"American, born 1947",
+    "begindate":1947,
+    "enddate":2100,
+    "nationality":"American",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Squeak Carnwath",
+            "alphasort":"Carnwath, Squeak",
+            "lastname":"Carnwath",
+            "firstname":"Squeak",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"ULAN",
+            "id":"500329681"
+        },
+        {
+            "source":"VIAF",
+            "id":"http://viaf.org/viaf/25412269"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

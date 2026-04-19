@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6c29c7c0a4a9438748cdc5432388660989f0c97798c816ccd2cd9a23da9b5d2a
-size 893
+{
+    "makerid":1210,
+    "published_date":"2022-03-28 16:04:01.519671",
+    "type":"maker",
+    "displayname":"John Blakemore",
+    "makertype":"Individual",
+    "alphasort":"Blakemore John",
+    "lastname":"Blakemore",
+    "firstname":"John",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"British, born 1936",
+    "begindate":1936,
+    "enddate":2100,
+    "nationality":"British",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"John Blakemore",
+            "alphasort":"Blakemore John",
+            "lastname":"Blakemore",
+            "firstname":"John",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

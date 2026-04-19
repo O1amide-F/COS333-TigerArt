@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7b11cb4ef8608083472ee57485152117455f44cce2d8cca388291fa94a2b3fba
-size 849
+{
+    "makerid":101,
+    "published_date":"2022-03-28 16:03:19.768985",
+    "type":"maker",
+    "displayname":"J. Andrews",
+    "makertype":"Individual",
+    "alphasort":"Andrews, J.",
+    "lastname":"Andrews",
+    "firstname":"J.",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":null,
+    "begindate":0,
+    "enddate":0,
+    "nationality":"American",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"J. Andrews",
+            "alphasort":"Andrews, J.",
+            "lastname":"Andrews",
+            "firstname":"J.",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

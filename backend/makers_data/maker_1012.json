@@ -1,3 +1,45 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7c4e6b16ffecdf8f414cd12ce583fc4c7abb9fe863254faacb6be51279141b28
-size 1108
+{
+    "makerid":1012,
+    "published_date":"2022-03-28 16:03:53.840802",
+    "type":"maker",
+    "displayname":"Charles Prendergast",
+    "makertype":"Individual",
+    "alphasort":"Prendergast Charles",
+    "lastname":"Prendergast",
+    "firstname":"Charles",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"American, 1863–1948",
+    "begindate":1863,
+    "enddate":1948,
+    "nationality":"American",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Charles Prendergast",
+            "alphasort":"Prendergast Charles",
+            "lastname":"Prendergast",
+            "firstname":"Charles",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"ULAN",
+            "id":"500009511"
+        },
+        {
+            "source":"VIAF",
+            "id":"http://viaf.org/viaf/8186381"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

@@ -1,3 +1,56 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:74a718500d109cabb390421e4bd3d5f9128d36856c509977f673b400b71b8c73
-size 1467
+{
+    "makerid":1203,
+    "published_date":"2022-12-02 02:01:16.225435",
+    "type":"maker",
+    "displayname":"Ashley Bickerton",
+    "makertype":"Individual",
+    "alphasort":"Bickerton, Ashley",
+    "lastname":"Bickerton",
+    "firstname":"Ashley",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"1959–2022; born Barbados; died Los Angeles, CA; active Los Angeles and Bali, Indonesia",
+    "begindate":1959,
+    "enddate":2022,
+    "nationality":"American",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Alternate",
+            "displayname":"Susie",
+            "alphasort":"Susie",
+            "lastname":null,
+            "firstname":"Susie",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Primary Name",
+            "displayname":"Ashley Bickerton",
+            "alphasort":"Bickerton, Ashley",
+            "lastname":"Bickerton",
+            "firstname":"Ashley",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"ULAN",
+            "id":"500118758"
+        },
+        {
+            "source":"VIAF",
+            "id":"http://viaf.org/viaf/96561283"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

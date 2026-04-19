@@ -1,3 +1,56 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:50e559dd7600dbfa5f167b2fb9b8c2be80ae06fdda717d8053137c4bed829ed4
-size 1385
+{
+    "makerid":116,
+    "published_date":"2022-03-28 16:03:20.360815",
+    "type":"maker",
+    "displayname":"Horst Antès",
+    "makertype":"Individual",
+    "alphasort":"Antès, Horst",
+    "lastname":"Antès",
+    "firstname":"Horst",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"German, born 1936",
+    "begindate":1936,
+    "enddate":2100,
+    "nationality":"German",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Alternate",
+            "displayname":"Horst Antes",
+            "alphasort":"Antes, Horst",
+            "lastname":"Antes",
+            "firstname":"Horst",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Primary Name",
+            "displayname":"Horst Antès",
+            "alphasort":"Antès, Horst",
+            "lastname":"Antès",
+            "firstname":"Horst",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"ULAN",
+            "id":"500010821"
+        },
+        {
+            "source":"VIAF",
+            "id":"http://viaf.org/viaf/39479138"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

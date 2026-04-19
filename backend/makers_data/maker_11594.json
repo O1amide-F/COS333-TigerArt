@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0a78dd98b3efafa9b0f21a17412d9b815ca4da7bbaef6db92f365c06187a3857
-size 830
+{
+    "makerid":11594,
+    "published_date":"2022-03-28 16:07:46.071278",
+    "type":"maker",
+    "displayname":"applicant",
+    "makertype":"Institution",
+    "alphasort":"applicant",
+    "lastname":null,
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":null,
+    "begindate":0,
+    "enddate":0,
+    "nationality":null,
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"applicant",
+            "alphasort":"applicant",
+            "lastname":null,
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

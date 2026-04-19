@@ -1,3 +1,45 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:46635a6c4815b6c4bde0c5685f268cefa60bd52ab1b11825b7ffb0b6e7607b6f
-size 1119
+{
+    "makerid":1139,
+    "published_date":"2022-03-28 16:03:58.827559",
+    "type":"maker",
+    "displayname":"Luis Ortiz Monasterio",
+    "makertype":"Individual",
+    "alphasort":"Ortiz Monasterio Luis",
+    "lastname":"Ortiz Monasterio",
+    "firstname":"Luis",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"Mexican, 1906–1990",
+    "begindate":1906,
+    "enddate":1990,
+    "nationality":"Mexican",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Luis Ortiz Monasterio",
+            "alphasort":"Ortiz Monasterio Luis",
+            "lastname":"Ortiz Monasterio",
+            "firstname":"Luis",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"ULAN",
+            "id":"500034216"
+        },
+        {
+            "source":"VIAF",
+            "id":"http://viaf.org/viaf/92775893"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

@@ -1,3 +1,45 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:377eab595cf0c36fe8018dc3823685b0d81e82efca4d3ffde9e40becb53a8cd6
-size 1086
+{
+    "makerid":12651,
+    "published_date":"2022-03-28 16:07:52.150069",
+    "type":"maker",
+    "displayname":"Gregory Conniff",
+    "makertype":"Individual",
+    "alphasort":"Conniff, Gregory",
+    "lastname":"Conniff",
+    "firstname":"Gregory",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"American, born 1944",
+    "begindate":1944,
+    "enddate":2100,
+    "nationality":"American",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Gregory Conniff",
+            "alphasort":"Conniff, Gregory",
+            "lastname":"Conniff",
+            "firstname":"Gregory",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"ULAN",
+            "id":"500077547"
+        },
+        {
+            "source":"VIAF",
+            "id":"http://viaf.org/viaf/96232137"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

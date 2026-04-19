@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:01597f17868a14a5d1534d65e22632db34111c649efdd40128f85233bf7afa55
-size 882
+{
+    "makerid":12590,
+    "published_date":"2022-03-28 16:07:49.825832",
+    "type":"maker",
+    "displayname":"Kan'ei era",
+    "makertype":"Individual",
+    "alphasort":"Kan'ei period",
+    "lastname":null,
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"1624–1644",
+    "begindate":1624,
+    "enddate":1644,
+    "nationality":"Japanese",
+    "culturegroup":"Kan'ei period",
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Kan'ei era",
+            "alphasort":"Kan'ei period",
+            "lastname":null,
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":"Kan'ei period"
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

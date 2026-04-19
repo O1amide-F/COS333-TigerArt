@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3912a6a25a42d64af04e3c3161d67ba0767405869ce575d02a0054e434228770
-size 879
+{
+    "makerid":10900,
+    "published_date":"2022-03-28 16:07:45.446418",
+    "type":"maker",
+    "displayname":"Donald D. Egbert",
+    "makertype":"Individual",
+    "alphasort":"Egbert Donald D.",
+    "lastname":"Egbert",
+    "firstname":"Donald D.",
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":null,
+    "begindate":0,
+    "enddate":0,
+    "nationality":null,
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Donald D. Egbert",
+            "alphasort":"Egbert Donald D.",
+            "lastname":"Egbert",
+            "firstname":"Donald D.",
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

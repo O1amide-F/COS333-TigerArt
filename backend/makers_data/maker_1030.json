@@ -1,3 +1,52 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:063b3154659218b1097a8756aab492b8f5cd653ace24e7833507c325b4bd7f88
-size 1288
+{
+    "makerid":1030,
+    "published_date":"2022-03-28 16:03:54.468306",
+    "type":"maker",
+    "displayname":"Fu Mei 傅眉",
+    "makertype":"Individual",
+    "alphasort":"Fu Mei",
+    "lastname":"Fu Mei",
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"1628–1683",
+    "begindate":1628,
+    "enddate":1683,
+    "nationality":"Chinese",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Fu Mei 傅眉",
+            "alphasort":"Fu Mei",
+            "lastname":"Fu Mei",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        },
+        {
+            "nametype":"Alternate",
+            "displayname":"傅眉",
+            "alphasort":"傅眉",
+            "lastname":"傅眉",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[
+        {
+            "source":"Baike Baidu",
+            "id":"http://baike.baidu.com/view/4519380.htm"
+        }
+    ],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

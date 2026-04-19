@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dc7e2204a054240e76e928702e97802b9d65e27e25de9a9c1801c42e215ce925
-size 875
+{
+    "makerid":12506,
+    "published_date":"2022-03-28 16:07:48.279976",
+    "type":"maker",
+    "displayname":"Jin dynasty",
+    "makertype":"Individual",
+    "alphasort":"Jin dynasty",
+    "lastname":null,
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"1115–1234",
+    "begindate":1115,
+    "enddate":1234,
+    "nationality":"Chinese",
+    "culturegroup":"Jin dynasty",
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Jin dynasty",
+            "alphasort":"Jin dynasty",
+            "lastname":null,
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":"Jin dynasty"
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}

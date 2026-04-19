@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:666ff82dad2097ccc9cb2d080b5f9a8078a71355ddbc83dc6ad8149c43a1f521
-size 916
+{
+    "makerid":1218,
+    "published_date":"2022-03-28 16:04:01.869810",
+    "type":"maker",
+    "displayname":"Budtz Müller & Co.",
+    "makertype":"Individual",
+    "alphasort":"Budtz Müller & Co.",
+    "lastname":"Budtz Müller & Co.",
+    "firstname":null,
+    "nametitle":null,
+    "middlename":null,
+    "suffix":null,
+    "displaybio":"active 1860s",
+    "begindate":0,
+    "enddate":0,
+    "nationality":"Danish",
+    "culturegroup":null,
+    "biography":null,
+    "altnames":[
+        {
+            "nametype":"Primary Name",
+            "displayname":"Budtz Müller & Co.",
+            "alphasort":"Budtz Müller & Co.",
+            "lastname":"Budtz Müller & Co.",
+            "firstname":null,
+            "nametitle":null,
+            "middlename":null,
+            "suffix":null,
+            "culturegroup":null
+        }
+    ],
+    "identifiers":[],
+    "audio":[],
+    "video":[],
+    "essay":[]
+}
