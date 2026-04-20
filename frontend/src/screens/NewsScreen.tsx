@@ -52,7 +52,8 @@ export function NewsScreen() {
                     style={{
                       width: "100%",
                       aspectRatio: "16/7",
-                      objectFit: "cover",
+                      objectFit: "contain",
+                      backgroundColor: theme.components.image.newsBackground,
                       display: "block",
                     }}
                     onError={(e) => {
@@ -64,7 +65,10 @@ export function NewsScreen() {
                     <Placeholder
                       label="Unable to Render Image"
                       aspectRatio="16 / 7"
-                      style={{ borderRadius: 0 }}
+                      style={{
+                        borderRadius: 0,
+                        backgroundColor: theme.components.image.newsBackground,
+                      }}
                     />
                   </div>
                 </>
@@ -72,7 +76,10 @@ export function NewsScreen() {
                 <Placeholder
                   label="Unable to Render Image"
                   aspectRatio="16 / 7"
-                  style={{ borderRadius: 0 }}
+                  style={{
+                    borderRadius: 0,
+                    backgroundColor: theme.components.image.newsBackground,
+                  }}
                 />
               )}
             </div>

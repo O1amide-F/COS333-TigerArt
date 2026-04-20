@@ -303,7 +303,8 @@ export function RecentlyViewedScreen({
                     style={{
                       width: "100%",
                       aspectRatio: "16 / 9",
-                      objectFit: "cover",
+                      objectFit: "contain",
+                      backgroundColor: theme.components.image.background,
                       display: "block",
                       borderRadius: 4,
                     }}
@@ -374,7 +375,8 @@ export function RecentlyViewedScreen({
                       style={{
                         width: "100%",
                         aspectRatio: "1 / 1",
-                        objectFit: "cover",
+                        objectFit: "contain",
+                        backgroundColor: theme.components.image.background,
                         display: "block",
                         borderRadius: 4,
                       }}

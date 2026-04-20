@@ -94,7 +94,8 @@ const styles = {
   image: {
     width: "100%",
     aspectRatio: "3 / 4",
-    objectFit: "cover" as const,
+    objectFit: "contain" as const,
+    backgroundColor: theme.components.image.background,
     borderRadius: 8,
     display: "block",
   },
@@ -248,7 +249,8 @@ function SearchResultCard({
             style={{
               width: "100%",
               aspectRatio: "4 / 3",
-              objectFit: "cover",
+              objectFit: "contain",
+              backgroundColor: theme.components.image.background,
               display: "block",
             }}
             onError={(e) => {

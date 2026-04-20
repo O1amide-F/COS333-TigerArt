@@ -69,7 +69,8 @@ export function ArtworkModal({
               style={{
                 width: "100%",
                 aspectRatio: "4/3",
-                objectFit: "cover",
+                objectFit: "contain",
+                backgroundColor: theme.components.image.background,
                 borderRadius: "16px 16px 0 0",
                 display: "block",
               }}

@@ -1,5 +1,6 @@
 import type { CSSProperties } from "react";
 import { getFallbackImageForAspect } from "../assets/fallbackImage";
+import { theme } from "../theme";
 
 type PlaceholderProps = {
   style?: CSSProperties;
@@ -21,7 +22,8 @@ export function Placeholder({
       style={{
         width: "100%",
         aspectRatio,
-        objectFit: "cover",
+        objectFit: "contain",
+        backgroundColor: theme.components.image.background,
         display: "block",
         borderRadius: 4,
         ...style,

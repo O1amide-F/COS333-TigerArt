@@ -222,7 +222,8 @@ export function SurveyFlow({
                     style={{
                       width: "100%",
                       height: "100%",
-                      objectFit: "cover",
+                      objectFit: "contain",
+                      backgroundColor: theme.components.image.background,
                       display: "block",
                     }}
                     onError={(e) => {
@@ -238,7 +239,8 @@ export function SurveyFlow({
                     style={{
                       width: "100%",
                       height: "100%",
-                      objectFit: "cover",
+                      objectFit: "contain",
+                      backgroundColor: theme.components.image.background,
                       display: "block",
                     }}
                   />

@@ -246,7 +246,8 @@ export function ForYouScreen({
                     style={{
                       width: "100%",
                       aspectRatio: "1/1",
-                      objectFit: "cover",
+                      objectFit: "contain",
+                      backgroundColor: theme.components.image.background,
                       display: "block",
                     }}
                     onError={(e) => {

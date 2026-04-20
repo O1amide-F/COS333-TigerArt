@@ -10,6 +10,8 @@ const colors = {
   card_color: "#e3a06f",
   danger: "#E53935",
   placeholderGradientEnd: "#E8E6E1",
+  imageBg: "#d8d5d0",
+  black: "#000000",
 } as const;
 
 export const theme = {
@@ -58,6 +60,10 @@ export const theme = {
     },
     divider: {
       color: colors.border,
+    },
+    image: {
+      background: colors.imageBg,
+      newsBackground: colors.black,
     },
   },
 } as const;
