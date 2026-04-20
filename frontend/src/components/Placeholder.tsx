@@ -1,5 +1,5 @@
 import type { CSSProperties } from "react";
-import { theme } from "../theme";
+import { getFallbackImageForAspect } from "../assets/fallbackImage";
 
 type PlaceholderProps = {
   style?: CSSProperties;
@@ -12,24 +12,20 @@ export function Placeholder({
   label = "Image",
   aspectRatio = "4/3",
 }: PlaceholderProps) {
+  const fallbackSrc = getFallbackImageForAspect(aspectRatio);
+
   return (
-    <div
+    <img
+      src={fallbackSrc}
+      alt={label}
       style={{
-        background: `linear-gradient(135deg, ${theme.components.placeholder.gradientStart} 0%, ${theme.components.placeholder.gradientEnd} 100%)`,
+        width: "100%",
         aspectRatio,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        textAlign: "center",
-        color: theme.components.placeholder.label,
-        fontSize: 13,
-        fontFamily: "'DM Sans', sans-serif",
-        letterSpacing: "0.05em",
+        objectFit: "cover",
+        display: "block",
         borderRadius: 4,
         ...style,
       }}
-    >
-      {label}
-    </div>
+    />
   );
 }

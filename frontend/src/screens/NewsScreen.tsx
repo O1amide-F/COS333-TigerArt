@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Placeholder } from "../components/Placeholder";
+import { getFallbackImageForAspect } from "../assets/fallbackImage";
 import { getNewsItems } from "../new_data";
 import type { NewsItem } from "../types";
 import { theme } from "../theme";
@@ -55,10 +56,8 @@ export function NewsScreen() {
                       display: "block",
                     }}
                     onError={(e) => {
-                      e.currentTarget.style.display = "none";
-                      const fallback = e.currentTarget
-                        .nextElementSibling as HTMLElement | null;
-                      if (fallback) fallback.style.display = "block";
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = getFallbackImageForAspect("16/7");
                     }}
                   />
                   <div style={{ display: "none" }}>

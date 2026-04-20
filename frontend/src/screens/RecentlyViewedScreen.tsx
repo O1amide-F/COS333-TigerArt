@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Heart, Clock } from "lucide-react";
 import { Placeholder } from "../components/Placeholder";
+import { getFallbackImageForAspect } from "../assets/fallbackImage";
 import { SearchFilterBar } from "../components/SearchFilterBar.tsx";
 import { itemMatchesFilters } from "../utils/filterUtils";
 import { ArtworkModal } from "../components/ArtworkModal";
@@ -306,6 +307,10 @@ export function RecentlyViewedScreen({
                       display: "block",
                       borderRadius: 4,
                     }}
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = getFallbackImageForAspect("16/9");
+                    }}
                   />
                 ) : (
                   <Placeholder
@@ -372,6 +377,10 @@ export function RecentlyViewedScreen({
                         objectFit: "cover",
                         display: "block",
                         borderRadius: 4,
+                      }}
+                      onError={(e) => {
+                        e.currentTarget.onerror = null;
+                        e.currentTarget.src = getFallbackImageForAspect("1/1");
                       }}
                     />
                   ) : (

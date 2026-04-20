@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Heart, Pin, ArrowRight } from "lucide-react";
 import { Placeholder } from "../components/Placeholder";
+import { getFallbackImageForAspect } from "../assets/fallbackImage";
 import { SearchFilterBar } from "../components/SearchFilterBar";
 import { itemMatchesFilters } from "../utils/filterUtils";
 import { ArtworkModal } from "../components/ArtworkModal";
@@ -250,6 +251,10 @@ function SearchResultCard({
               objectFit: "cover",
               display: "block",
             }}
+            onError={(e) => {
+              e.currentTarget.onerror = null;
+              e.currentTarget.src = getFallbackImageForAspect("4/3");
+            }}
           />
         ) : (
           <Placeholder
@@ -399,7 +404,15 @@ function ExploreSectionCard({
           >
             <div style={{ position: "relative" }}>
               {item.imageUrl ? (
-                <img src={item.imageUrl} alt={item.name} style={styles.image} />
+                <img
+                  src={item.imageUrl}
+                  alt={item.name}
+                  style={styles.image}
+                  onError={(e) => {
+                    e.currentTarget.onerror = null;
+                    e.currentTarget.src = getFallbackImageForAspect("3/4");
+                  }}
+                />
               ) : (
                 <Placeholder label="Unable to Render Image" aspectRatio="3/4" />
               )}

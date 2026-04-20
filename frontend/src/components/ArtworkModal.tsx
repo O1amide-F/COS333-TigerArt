@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Heart } from "lucide-react";
 import { Placeholder } from "./Placeholder";
+import { getFallbackImageForAspect } from "../assets/fallbackImage";
 import { theme } from "../theme";
 import type { ExhibitItem } from "../types";
 
@@ -71,6 +72,10 @@ export function ArtworkModal({
                 objectFit: "cover",
                 borderRadius: "16px 16px 0 0",
                 display: "block",
+              }}
+              onError={(e) => {
+                e.currentTarget.onerror = null;
+                e.currentTarget.src = getFallbackImageForAspect("4/3");
               }}
             />
           ) : (

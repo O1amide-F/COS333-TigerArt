@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Heart } from "lucide-react";
 import { Placeholder } from "../components/Placeholder";
+import { getFallbackImageForAspect } from "../assets/fallbackImage";
 import { SearchFilterBar } from "../components/SearchFilterBar.tsx";
 import { itemMatchesFilters } from "../utils/filterUtils";
 import { theme } from "../theme";
@@ -240,118 +241,121 @@ export function FavoritesScreen({
             </p>
           )}
           <div style={{ columnCount: 2, columnGap: 12 }}>
-            {displayCards.map((card, index) => (
-              <div
-                key={card.id}
-                onClick={() =>
-                  setExpandedId((prev) => (prev === card.id ? null : card.id))
-                }
-                style={{
-                  breakInside: "avoid",
-                  marginBottom: 12,
-                  border: `1px solid ${theme.components.card.border}`,
-                  borderRadius: 8,
-                  overflow: "hidden",
-                  background: theme.components.card.background,
-                  cursor: "pointer",
-                  transition: "all 180ms ease",
-                }}
-              >
-                <div style={{ position: "relative" }}>
-                  {card.imageUrl ? (
-                    <img
-                      src={card.imageUrl}
-                      alt={card.title}
-                      style={{
-                        width: "100%",
-                        aspectRatio:
-                          index % 5 === 0
-                            ? "3/4"
-                            : index % 5 === 1
-                              ? "1/1"
-                              : index % 5 === 2
-                                ? "4/5"
-                                : index % 5 === 3
-                                  ? "2/3"
-                                  : "4/3",
-                        objectFit: "cover",
-                        display: "block",
-                      }}
-                    />
-                  ) : (
-                    <Placeholder
-                      label="Unable to Render Image"
-                      aspectRatio={
-                        index % 5 === 0
-                          ? "3/4"
-                          : index % 5 === 1
-                            ? "1/1"
-                            : index % 5 === 2
-                              ? "4/5"
-                              : index % 5 === 3
-                                ? "2/3"
-                                : "4/3"
-                      }
-                      style={{ borderRadius: 0 }}
-                    />
-                  )}
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      onToggleFavorite(card.id);
-                    }}
+            {displayCards.map((card, index) =>
+              (() => {
+                const cardAspectRatio =
+                  index % 5 === 0
+                    ? "3/4"
+                    : index % 5 === 1
+                      ? "1/1"
+                      : index % 5 === 2
+                        ? "4/5"
+                        : index % 5 === 3
+                          ? "2/3"
+                          : "4/3";
+
+                return (
+                  <div
+                    key={card.id}
+                    onClick={() =>
+                      setExpandedId((prev) =>
+                        prev === card.id ? null : card.id,
+                      )
+                    }
                     style={{
-                      position: "absolute",
-                      top: 8,
-                      right: 8,
-                      background: "rgba(0,0,0,0.35)",
-                      backdropFilter: "blur(4px)",
-                      border: "none",
-                      borderRadius: "50%",
-                      width: 32,
-                      height: 32,
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
+                      breakInside: "avoid",
+                      marginBottom: 12,
+                      border: `1px solid ${theme.components.card.border}`,
+                      borderRadius: 8,
+                      overflow: "hidden",
+                      background: theme.components.card.background,
                       cursor: "pointer",
+                      transition: "all 180ms ease",
                     }}
                   >
-                    <Heart
-                      size={16}
-                      strokeWidth={2.2}
-                      color={theme.components.favorite.active}
-                      fill={theme.components.favorite.active}
-                    />
-                  </button>
-                </div>
-                {expandedId === card.id && (
-                  <div style={{ padding: "12px" }}>
-                    <div
-                      style={{
-                        fontSize: 14,
-                        fontWeight: 700,
-                        color: theme.components.badge.text,
-                        fontFamily: "'DM Sans', sans-serif",
-                        lineHeight: 1.2,
-                        marginBottom: 8,
-                      }}
-                    >
-                      {card.title}
+                    <div style={{ position: "relative" }}>
+                      {card.imageUrl ? (
+                        <img
+                          src={card.imageUrl}
+                          alt={card.title}
+                          style={{
+                            width: "100%",
+                            aspectRatio: cardAspectRatio,
+                            objectFit: "cover",
+                            display: "block",
+                          }}
+                          onError={(e) => {
+                            e.currentTarget.onerror = null;
+                            e.currentTarget.src =
+                              getFallbackImageForAspect(cardAspectRatio);
+                          }}
+                        />
+                      ) : (
+                        <Placeholder
+                          label="Unable to Render Image"
+                          aspectRatio={cardAspectRatio}
+                          style={{ borderRadius: 0 }}
+                        />
+                      )}
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          onToggleFavorite(card.id);
+                        }}
+                        style={{
+                          position: "absolute",
+                          top: 8,
+                          right: 8,
+                          background: "rgba(0,0,0,0.35)",
+                          backdropFilter: "blur(4px)",
+                          border: "none",
+                          borderRadius: "50%",
+                          width: 32,
+                          height: 32,
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          cursor: "pointer",
+                        }}
+                      >
+                        <Heart
+                          size={16}
+                          strokeWidth={2.2}
+                          color={theme.components.favorite.active}
+                          fill={theme.components.favorite.active}
+                        />
+                      </button>
                     </div>
-                    <div
-                      style={{
-                        fontSize: 13,
-                        fontFamily: "'DM Sans', sans-serif",
-                        color: theme.components.badge.mutedText,
-                        lineHeight: 1.5,
-                      }}
-                    >
-                      {card.subtitle}
-                    </div>
+                    {expandedId === card.id && (
+                      <div style={{ padding: "12px" }}>
+                        <div
+                          style={{
+                            fontSize: 14,
+                            fontWeight: 700,
+                            color: theme.components.badge.text,
+                            fontFamily: "'DM Sans', sans-serif",
+                            lineHeight: 1.2,
+                            marginBottom: 8,
+                          }}
+                        >
+                          {card.title}
+                        </div>
+                        <div
+                          style={{
+                            fontSize: 13,
+                            fontFamily: "'DM Sans', sans-serif",
+                            color: theme.components.badge.mutedText,
+                            lineHeight: 1.5,
+                          }}
+                        >
+                          {card.subtitle}
+                        </div>
+                      </div>
+                    )}
                   </div>
-                )}
-              </div>
-            ))}
+                );
+              })(),
+            )}
           </div>
         </>
       ) : (

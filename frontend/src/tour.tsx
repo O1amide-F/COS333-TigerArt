@@ -3,10 +3,11 @@ import { Heart } from "lucide-react";
 import { SearchBar } from "./components/SearchBar";
 import { Placeholder } from "./components/Placeholder";
 import { ArtworkModal } from "./components/ArtworkModal";
+import { getFallbackImageForAspect } from "./assets/fallbackImage";
 import type { ForYouItem, ExhibitItem } from "./types";
 import { theme } from "./theme";
 
-const API_BASE = '/api';
+const API_BASE = "/api";
 
 type ForYouScreenProps = {
   userId: string | null;
@@ -84,10 +85,22 @@ export function ForYouScreen({
 
   if (!userId) {
     return (
-      <div style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}>
-        <div style={{ textAlign: "center", padding: "40px 0",
-          fontFamily: "'DM Sans', sans-serif",
-          color: theme.components.badge.mutedText, fontSize: 14 }}>
+      <div
+        style={{
+          padding: "16px 20px 100px",
+          overflowY: "auto",
+          height: "100%",
+        }}
+      >
+        <div
+          style={{
+            textAlign: "center",
+            padding: "40px 0",
+            fontFamily: "'DM Sans', sans-serif",
+            color: theme.components.badge.mutedText,
+            fontSize: 14,
+          }}
+        >
           Loading your feed…
         </div>
       </div>
@@ -235,6 +248,10 @@ export function ForYouScreen({
                       aspectRatio: "1/1",
                       objectFit: "cover",
                       display: "block",
+                    }}
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = getFallbackImageForAspect("1/1");
                     }}
                   />
                 ) : (

@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Heart } from "lucide-react";
 import { Placeholder } from "../components/Placeholder";
+import { getFallbackImageForAspect } from "../assets/fallbackImage";
 import { ArtworkModal } from "../components/ArtworkModal";
 import { theme } from "../theme";
 import type { ExhibitItem, ExhibitSection } from "../types";
@@ -144,6 +145,10 @@ export function ExhibitDetailScreen({
                   display: "block",
                   borderRadius: 4,
                 }}
+                onError={(e) => {
+                  e.currentTarget.onerror = null;
+                  e.currentTarget.src = getFallbackImageForAspect("16/9");
+                }}
               />
             ) : (
               <Placeholder label="Unable to Render Image" aspectRatio="16/9" />
@@ -209,6 +214,10 @@ export function ExhibitDetailScreen({
                     objectFit: "cover",
                     display: "block",
                     borderRadius: 4,
+                  }}
+                  onError={(e) => {
+                    e.currentTarget.onerror = null;
+                    e.currentTarget.src = getFallbackImageForAspect("1/1");
                   }}
                 />
               ) : (

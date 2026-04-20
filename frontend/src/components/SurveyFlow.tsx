@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { Check, ChevronRight } from "lucide-react";
+import { getFallbackImageForAspect } from "../assets/fallbackImage";
 import { theme } from "../theme";
 
-const API_BASE = '/api';
+const API_BASE = "/api";
 
 // --------------------------------------------------------------------------
 // Types
@@ -38,7 +39,11 @@ type SurveyFlowProps = {
 // --------------------------------------------------------------------------
 // Shared survey flow component
 // --------------------------------------------------------------------------
-export function SurveyFlow({ userId, onComplete, completeLabel = "Continue" }: SurveyFlowProps) {
+export function SurveyFlow({
+  userId,
+  onComplete,
+  completeLabel = "Continue",
+}: SurveyFlowProps) {
   const [config, setConfig] = useState<SurveyConfig | null>(null);
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
@@ -48,13 +53,23 @@ export function SurveyFlow({ userId, onComplete, completeLabel = "Continue" }: S
 
   useEffect(() => {
     fetch(`${API_BASE}/survey/config`)
-      .then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
-      .then((data: SurveyConfig) => { setConfig(data); setLoading(false); })
-      .catch((e) => { setError(e.message); setLoading(false); });
+      .then((r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json();
+      })
+      .then((data: SurveyConfig) => {
+        setConfig(data);
+        setLoading(false);
+      })
+      .catch((e) => {
+        setError(e.message);
+        setLoading(false);
+      });
   }, []);
 
   if (loading) return <LoadingState />;
-  if (error || !config) return <ErrorState message={error ?? "Unknown error"} />;
+  if (error || !config)
+    return <ErrorState message={error ?? "Unknown error"} />;
 
   const question = config.questions[currentStep];
   const totalSteps = config.questions.length;
@@ -66,7 +81,8 @@ export function SurveyFlow({ userId, onComplete, completeLabel = "Continue" }: S
   const toggleTag = (tag: string) => {
     setAnswers((prev) => {
       const current = prev[question.id] ?? [];
-      if (current.includes(tag)) return { ...prev, [question.id]: current.filter((t) => t !== tag) };
+      if (current.includes(tag))
+        return { ...prev, [question.id]: current.filter((t) => t !== tag) };
       if (current.length >= question.selectCount) return prev;
       return { ...prev, [question.id]: [...current, tag] };
     });
@@ -74,7 +90,10 @@ export function SurveyFlow({ userId, onComplete, completeLabel = "Continue" }: S
 
   const handleNext = async () => {
     if (!canAdvance) return;
-    if (!isLastStep) { setCurrentStep((s) => s + 1); return; }
+    if (!isLastStep) {
+      setCurrentStep((s) => s + 1);
+      return;
+    }
 
     setSubmitting(true);
 
@@ -112,25 +131,45 @@ export function SurveyFlow({ userId, onComplete, completeLabel = "Continue" }: S
   return (
     <div>
       {/* Progress bar */}
-      <div style={{ display: "flex", justifyContent: "center", gap: 8, marginBottom: 20 }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: 8,
+          marginBottom: 20,
+        }}
+      >
         {config.questions.map((q, i) => (
-          <div key={q.id} style={{
-            height: 4, flex: 1, maxWidth: 60, borderRadius: 2,
-            background: i <= currentStep
-              ? theme.components.button.primaryBackground
-              : theme.components.divider.color,
-            transition: "background 0.3s",
-          }} />
+          <div
+            key={q.id}
+            style={{
+              height: 4,
+              flex: 1,
+              maxWidth: 60,
+              borderRadius: 2,
+              background:
+                i <= currentStep
+                  ? theme.components.button.primaryBackground
+                  : theme.components.divider.color,
+              transition: "background 0.3s",
+            }}
+          />
         ))}
       </div>
 
       {/* Prompt */}
-      <div style={{
-        background: theme.components.badge.background, borderRadius: 6,
-        padding: "10px 14px", textAlign: "center", fontSize: 13,
-        fontFamily: "'DM Sans', sans-serif", color: theme.components.badge.text,
-        marginBottom: 20,
-      }}>
+      <div
+        style={{
+          background: theme.components.badge.background,
+          borderRadius: 6,
+          padding: "10px 14px",
+          textAlign: "center",
+          fontSize: 13,
+          fontFamily: "'DM Sans', sans-serif",
+          color: theme.components.badge.text,
+          marginBottom: 20,
+        }}
+      >
         <p style={{ margin: "0 0 4px", fontWeight: 600 }}>{question.prompt}</p>
         <p style={{ margin: 0, color: theme.components.badge.mutedText }}>
           {remaining > 0
@@ -140,16 +179,25 @@ export function SurveyFlow({ userId, onComplete, completeLabel = "Continue" }: S
       </div>
 
       {/* Image grid */}
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 20 }}>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: 14,
+          marginBottom: 20,
+        }}
+      >
         {question.options.map((option) => {
           const isSelected = selectedTags.includes(option.tag);
-          const isDisabled = !isSelected && selectedTags.length >= question.selectCount;
+          const isDisabled =
+            !isSelected && selectedTags.length >= question.selectCount;
           return (
             <div
               key={option.tag}
               onClick={() => !isDisabled && toggleTag(option.tag)}
               style={{
-                borderRadius: 8, overflow: "hidden",
+                borderRadius: 8,
+                overflow: "hidden",
                 border: isSelected
                   ? `2px solid ${theme.components.button.primaryBackground}`
                   : `2px solid ${theme.components.card.border}`,
@@ -160,31 +208,70 @@ export function SurveyFlow({ userId, onComplete, completeLabel = "Continue" }: S
                 background: theme.components.card.background,
               }}
             >
-              <div style={{ position: "relative", aspectRatio: "4/3", background: theme.components.badge.background }}>
+              <div
+                style={{
+                  position: "relative",
+                  aspectRatio: "4/3",
+                  background: theme.components.badge.background,
+                }}
+              >
                 {option.imageUrl ? (
-                  <img src={option.imageUrl} alt={option.tag}
-                    style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-                    onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }} />
+                  <img
+                    src={option.imageUrl}
+                    alt={option.tag}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      display: "block",
+                    }}
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      target.onerror = null;
+                      target.src = getFallbackImageForAspect("4/3");
+                    }}
+                  />
                 ) : (
-                  <div style={{ width: "100%", height: "100%", display: "flex",
-                    alignItems: "center", justifyContent: "center",
-                    color: theme.components.badge.mutedText, fontSize: 11,
-                    fontFamily: "'DM Sans', sans-serif" }}>
-                    No image
-                  </div>
+                  <img
+                    src={getFallbackImageForAspect("4/3")}
+                    alt={option.tag}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      display: "block",
+                    }}
+                  />
                 )}
                 {isSelected && (
-                  <div style={{ position: "absolute", top: 6, right: 6, width: 22, height: 22,
-                    borderRadius: "50%", background: theme.components.button.primaryBackground,
-                    display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: 6,
+                      right: 6,
+                      width: 22,
+                      height: 22,
+                      borderRadius: "50%",
+                      background: theme.components.button.primaryBackground,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
                     <Check size={13} strokeWidth={2.5} color="#fff" />
                   </div>
                 )}
               </div>
               <div style={{ padding: "6px 10px" }}>
-                <span style={{ fontSize: 11, fontFamily: "'DM Sans', sans-serif",
-                  color: theme.components.badge.text, textTransform: "capitalize",
-                  letterSpacing: "0.02em" }}>
+                <span
+                  style={{
+                    fontSize: 11,
+                    fontFamily: "'DM Sans', sans-serif",
+                    color: theme.components.badge.text,
+                    textTransform: "capitalize",
+                    letterSpacing: "0.02em",
+                  }}
+                >
                   {option.tag.replace(/_/g, " ")}
                 </span>
               </div>
@@ -194,32 +281,60 @@ export function SurveyFlow({ userId, onComplete, completeLabel = "Continue" }: S
       </div>
 
       {/* Nav buttons */}
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
         {currentStep > 0 ? (
-          <button onClick={() => setCurrentStep((s) => s - 1)} style={{
-            background: "none", border: `1px solid ${theme.components.divider.color}`,
-            borderRadius: 6, padding: "10px 20px", fontFamily: "'DM Sans', sans-serif",
-            fontSize: 14, color: theme.components.badge.mutedText, cursor: "pointer",
-          }}>
+          <button
+            onClick={() => setCurrentStep((s) => s - 1)}
+            style={{
+              background: "none",
+              border: `1px solid ${theme.components.divider.color}`,
+              borderRadius: 6,
+              padding: "10px 20px",
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: 14,
+              color: theme.components.badge.mutedText,
+              cursor: "pointer",
+            }}
+          >
             Back
           </button>
-        ) : <div />}
+        ) : (
+          <div />
+        )}
 
-        <button onClick={handleNext} disabled={submitting} style={{
-          background: canAdvance
-            ? theme.components.button.primaryBackground
-            : theme.components.button.disabledBackground,
-          color: canAdvance
-            ? theme.components.button.primaryText
-            : theme.components.button.disabledText,
-          border: "none", borderRadius: 6, padding: "10px 24px",
-          fontFamily: "'DM Sans', sans-serif", fontSize: 14, fontWeight: 500,
-          cursor: canAdvance && !submitting ? "pointer" : "default",
-          transition: "background 0.2s, color 0.2s",
-          display: "flex", alignItems: "center", gap: 6,
-        }}>
+        <button
+          onClick={handleNext}
+          disabled={submitting}
+          style={{
+            background: canAdvance
+              ? theme.components.button.primaryBackground
+              : theme.components.button.disabledBackground,
+            color: canAdvance
+              ? theme.components.button.primaryText
+              : theme.components.button.disabledText,
+            border: "none",
+            borderRadius: 6,
+            padding: "10px 24px",
+            fontFamily: "'DM Sans', sans-serif",
+            fontSize: 14,
+            fontWeight: 500,
+            cursor: canAdvance && !submitting ? "pointer" : "default",
+            transition: "background 0.2s, color 0.2s",
+            display: "flex",
+            alignItems: "center",
+            gap: 6,
+          }}
+        >
           {submitting ? "Saving…" : isLastStep ? completeLabel : "Next"}
-          {!isLastStep && canAdvance && <ChevronRight size={16} strokeWidth={2.5} />}
+          {!isLastStep && canAdvance && (
+            <ChevronRight size={16} strokeWidth={2.5} />
+          )}
         </button>
       </div>
     </div>
@@ -231,8 +346,17 @@ export function SurveyFlow({ userId, onComplete, completeLabel = "Continue" }: S
 // --------------------------------------------------------------------------
 export function LoadingState() {
   return (
-    <div style={{ height: "100%", display: "flex", alignItems: "center",
-      justifyContent: "center", fontFamily: "'DM Sans', sans-serif", color: "#888", fontSize: 14 }}>
+    <div
+      style={{
+        height: "100%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        fontFamily: "'DM Sans', sans-serif",
+        color: "#888",
+        fontSize: 14,
+      }}
+    >
       Loading survey…
     </div>
   );
@@ -240,9 +364,21 @@ export function LoadingState() {
 
 export function ErrorState({ message }: { message: string }) {
   return (
-    <div style={{ height: "100%", display: "flex", flexDirection: "column",
-      alignItems: "center", justifyContent: "center", fontFamily: "'DM Sans', sans-serif",
-      color: "#888", fontSize: 14, gap: 8, padding: 24, textAlign: "center" }}>
+    <div
+      style={{
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        fontFamily: "'DM Sans', sans-serif",
+        color: "#888",
+        fontSize: 14,
+        gap: 8,
+        padding: 24,
+        textAlign: "center",
+      }}
+    >
       <p style={{ margin: 0, fontWeight: 600 }}>Couldn't load survey</p>
       <p style={{ margin: 0, fontSize: 12 }}>{message}</p>
     </div>

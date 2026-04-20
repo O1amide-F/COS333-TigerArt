@@ -3,6 +3,7 @@ import { Heart } from "lucide-react";
 import { SearchBar } from "../components/SearchBar";
 import { Placeholder } from "../components/Placeholder";
 import { ArtworkModal } from "../components/ArtworkModal";
+import { getFallbackImageForAspect } from "../assets/fallbackImage";
 import type { ForYouItem, ExhibitItem } from "../types";
 import { theme } from "../theme";
 
@@ -247,6 +248,10 @@ export function ForYouScreen({
                       aspectRatio: "1/1",
                       objectFit: "cover",
                       display: "block",
+                    }}
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = getFallbackImageForAspect("1/1");
                     }}
                   />
                 ) : (
