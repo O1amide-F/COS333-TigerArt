@@ -3,22 +3,12 @@ export const PUAMLogoSquare = new URL("./PUAMLogoSquare.png", import.meta.url)
   .href;
 
 // Backward-compatible default for callers that only need a generic fallback.
-export const PUAMLogo = PUAMLogoRect;
+export const PUAMLogo = PUAMLogoSquare;
 
 export function getFallbackImageForAspect(aspectRatio: string): string {
-  const [rawWidth, rawHeight] = aspectRatio
-    .split("/")
-    .map((part) => part.trim());
-  const width = Number(rawWidth);
-  const height = Number(rawHeight);
+  void aspectRatio;
 
-  if (!Number.isFinite(width) || !Number.isFinite(height) || height === 0) {
-    return PUAMLogoRect;
-  }
-
-  const ratio = width / height;
-
-  // Treat moderately portrait/landscape cards as "square-ish" so fallback crops
-  // less aggressively. Reserve the rectangular logo for very wide/tall slots.
-  return ratio >= 0.625 && ratio <= 1.6 ? PUAMLogoSquare : PUAMLogoRect;
+  // Always use the square logo. The caller controls sizing with contain-fit,
+  // so any unused space can show the background color behind it.
+  return PUAMLogoSquare;
 }
