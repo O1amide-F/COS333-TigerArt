@@ -488,8 +488,10 @@ export function ExploreScreen({
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
   const [sections, setSections] = useState<ExhibitSection[]>([]);
   const [searchResults, setSearchResults] = useState<ForYouItem[] | null>(null);
+  const [filterResults, setFilterResults] = useState<ForYouItem[] | null>(null);
   const [searchLoading, setSearchLoading] = useState(false);
   const [modalItem, setModalItem] = useState<ExhibitItem | null>(null);
+  const [visibleCount, setVisibleCount] = useState(10);
   const [pinnedSections, setPinnedSections] = useState<string[]>(() => {
     try {
       const s = localStorage.getItem(PINNED_SECTIONS_KEY);
@@ -518,6 +520,7 @@ export function ExploreScreen({
   };
 
   const handleSearch = (query: string) => {
+    setVisibleCount(10);
     setSearchLoading(true);
     fetch(`${API_BASE}/search?q=${encodeURIComponent(query)}`)
       .then((r) => r.json())
@@ -540,13 +543,6 @@ export function ExploreScreen({
     on_view: item.on_view,
     gallery_label_text: item.gallery_label_text,
   });
-
-  const filteredSearchResults = useMemo(() => {
-    if (!searchResults) return null;
-    return searchResults.filter((item) =>
-      itemMatchesFilters(item, activeFilters),
-    );
-  }, [searchResults, activeFilters]);
 
   const filteredSections = useMemo(() => {
     if (activeFilters.length === 0) return sections;
@@ -578,8 +574,31 @@ export function ExploreScreen({
     isFirst,
   });
 
-  const handleClear = () => setSearchResults(null);
-  const isSearching = searchResults !== null;
+  const handleClear = () => {
+    setSearchResults(null);
+    setFilterResults(null);
+    setVisibleCount(10);
+  };
+
+  // When filters change, search the full collection using tag names as query
+  const handleFiltersChange = (filters: string[]) => {
+    setActiveFilters(filters);
+    setVisibleCount(10);
+    if (filters.length === 0) {
+      setFilterResults(null);
+      return;
+    }
+    const query = filters.join(" ");
+    fetch(`${API_BASE}/search?q=${encodeURIComponent(query)}`)
+      .then((r) => r.json())
+      .then((data: ForYouItem[]) => setFilterResults(data))
+      .catch(() => setFilterResults(null));
+  };
+  const displaySearchResults = searchResults ?? filterResults;
+  const isSearching = searchResults !== null || filterResults !== null;
+  const visibleSearchResults = displaySearchResults
+    ? displaySearchResults.slice(0, visibleCount)
+    : null;
 
   return (
     <div style={styles.page}>
@@ -591,7 +610,7 @@ export function ExploreScreen({
           isSearching={isSearching}
           placeholder="Search by title or tag…"
           activeFilters={activeFilters}
-          onFiltersChange={setActiveFilters}
+          onFiltersChange={handleFiltersChange}
         />
       </div>
 
@@ -614,7 +633,7 @@ export function ExploreScreen({
         </div>
       )}
 
-      {isSearching && !searchLoading && filteredSearchResults!.length === 0 && (
+      {isSearching && !searchLoading && displaySearchResults !== null && displaySearchResults.length === 0 && (
         <div
           style={{
             background: theme.components.badge.background,
@@ -645,29 +664,73 @@ export function ExploreScreen({
         </div>
       )}
 
-      {isSearching && !searchLoading && filteredSearchResults!.length > 0 && (
-        <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-          <p
-            style={{
-              margin: "0 0 8px",
-              fontSize: 13,
-              fontFamily: "'DM Sans', sans-serif",
-              color: theme.components.badge.mutedText,
-            }}
-          >
-            {filteredSearchResults!.length} result
-            {filteredSearchResults!.length !== 1 ? "s" : ""} found
+      {isSearching && !searchLoading && displaySearchResults !== null && displaySearchResults.length > 0 && (
+        <>
+          <p style={{ margin: "0 0 12px", fontSize: 13,
+            fontFamily: "'DM Sans', sans-serif",
+            color: theme.components.badge.mutedText }}>
+            {displaySearchResults!.length} result
+            {displaySearchResults!.length !== 1 ? "s" : ""} found
           </p>
-          {filteredSearchResults!.map((item) => (
-            <SearchResultCard
-              key={item.id}
-              item={item}
-              favorites={favorites}
-              onToggleFavorite={onToggleFavorite}
-              onCardClick={(item) => setModalItem(forYouToExhibitItem(item))}
-            />
-          ))}
-        </div>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+            {visibleSearchResults!.map((item) => (
+              <div
+                key={item.id}
+                onClick={() => setModalItem(forYouToExhibitItem(item))}
+                style={{
+                  border: `1px solid ${theme.components.card.border}`,
+                  borderRadius: 8,
+                  overflow: "hidden",
+                  background: theme.components.card.background,
+                  cursor: "pointer",
+                }}
+              >
+                <div style={{ position: "relative" }}>
+                  {item.imageUrl ? (
+                    <img src={item.imageUrl} alt={item.title}
+                      style={{ width: "100%", aspectRatio: "1/1",
+                        objectFit: "contain",
+                        backgroundColor: theme.components.image?.background ?? "#f5f5f0",
+                        display: "block" }}
+                      onError={(e) => { e.currentTarget.onerror = null;
+                        e.currentTarget.src = getFallbackImageForAspect("1/1"); }} />
+                  ) : (
+                    <Placeholder label="No Image" aspectRatio="1/1" style={{ borderRadius: 0 }} />
+                  )}
+                  <button
+                    onClick={(e) => { e.stopPropagation(); onToggleFavorite(item.id); }}
+                    style={{ position: "absolute", top: 8, right: 8,
+                      background: "rgba(0,0,0,0.35)", backdropFilter: "blur(4px)",
+                      border: "none", borderRadius: "50%", width: 32, height: 32,
+                      display: "flex", alignItems: "center", justifyContent: "center",
+                      cursor: "pointer" }}>
+                    <Heart size={16} strokeWidth={2.2}
+                      color={favorites.includes(item.id) ? theme.components.favorite.active : "#fff"}
+                      fill={favorites.includes(item.id) ? theme.components.favorite.active : "none"} />
+                  </button>
+                </div>
+                <div style={{ padding: "8px 10px", fontSize: 13, fontWeight: 600,
+                  color: theme.components.badge.text,
+                  fontFamily: "'DM Sans', sans-serif", lineHeight: 1.3 }}>
+                  {item.title}
+                </div>
+              </div>
+            ))}
+          </div>
+          {displaySearchResults!.length > visibleCount && (
+            <div style={{ marginTop: 16, display: "flex", justifyContent: "center" }}>
+              <button
+                onClick={() => setVisibleCount((prev) => prev + 10)}
+                style={{ padding: "10px 24px", borderRadius: 6, border: "none",
+                  cursor: "pointer", fontSize: 14,
+                  fontFamily: "'DM Sans', sans-serif", fontWeight: 600,
+                  background: theme.components.badge.background,
+                  color: theme.components.badge.text }}>
+                Load more ({displaySearchResults!.length - visibleCount} remaining)
+              </button>
+            </div>
+          )}
+        </>
       )}
 
       {!isSearching && (

@@ -1,7 +1,6 @@
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState} from "react";
 import { Heart } from "lucide-react";
 import { SearchFilterBar } from "../components/SearchFilterBar";
-import { itemMatchesFilters } from "../utils/filterUtils";
 import { Placeholder } from "../components/Placeholder";
 import { ArtworkModal } from "../components/ArtworkModal";
 import { getFallbackImageForAspect } from "../assets/fallbackImage";
@@ -25,11 +24,14 @@ export function ForYouScreen({
 }: ForYouScreenProps) {
   const [items, setItems] = useState<ForYouItem[]>([]);
   const [searchResults, setSearchResults] = useState<ForYouItem[] | null>(null);
+  const [filterResults, setFilterResults] = useState<ForYouItem[] | null>(null);
   const [loading, setLoading] = useState(true);
   const [searchLoading, setSearchLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [modalItem, setModalItem] = useState<ExhibitItem | null>(null);
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
+  const [visibleCount, setVisibleCount] = useState(10);
+
 
   useEffect(() => {
     if (!userId) return;
@@ -58,6 +60,7 @@ export function ForYouScreen({
   }, [userId]);
 
   const handleSearch = (query: string) => {
+    setVisibleCount(10);
     setSearchLoading(true);
     fetch(`${API_BASE}/search?q=${encodeURIComponent(query)}`)
       .then((r) => r.json())
@@ -68,13 +71,31 @@ export function ForYouScreen({
       .catch(() => setSearchLoading(false));
   };
 
-  const handleClear = () => setSearchResults(null);
+  const handleClear = () => {
+    setSearchResults(null);
+    setFilterResults(null);
+    setVisibleCount(10); 
+  };
 
-  const displayItems = useMemo(() => {
-    const base = searchResults ?? items;
-    return base.filter((item) => itemMatchesFilters(item, activeFilters));
-  }, [searchResults, items, activeFilters]);
-  const isSearching = searchResults !== null;
+    // When filters change, search the full collection using tag names as query
+    const handleFiltersChange = (filters: string[]) => {
+      setActiveFilters(filters);
+      setVisibleCount(10);
+      if (filters.length === 0) {
+        setFilterResults(null);
+        return;
+      }
+      // Join filter tags with spaces — backend search handles multiple keywords
+      const query = filters.join(" ");
+      fetch(`${API_BASE}/search?q=${encodeURIComponent(query)}`)
+        .then((r) => r.json())
+        .then((data: ForYouItem[]) => setFilterResults(data))
+        .catch(() => setFilterResults(null));
+    };
+
+  const displayItems = searchResults ?? filterResults ?? items;
+  const isSearching = searchResults !== null || filterResults !== null;
+  const visibleItems = isSearching ? displayItems.slice(0, visibleCount) : displayItems;
 
   const toExhibitItem = (item: ForYouItem): ExhibitItem => ({
     id: item.id,
@@ -124,7 +145,7 @@ export function ForYouScreen({
           isSearching={isSearching}
           placeholder="Search by title or tag…"
           activeFilters={activeFilters}
-          onFiltersChange={setActiveFilters}
+          onFiltersChange={handleFiltersChange}
         />
       </div>
 
@@ -228,7 +249,7 @@ export function ForYouScreen({
         <div
           style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}
         >
-          {displayItems.map((item, index) => (
+          {visibleItems.map((item, index) => (
             <div
               key={item.id}
               // Tour targets only the first card
@@ -326,6 +347,23 @@ export function ForYouScreen({
               </div>
             </div>
           ))}
+        </div>
+      )}
+
+      {isSearching && visibleCount < displayItems.length && (
+        <div style={{ marginTop: 16, display: "flex", justifyContent: "center" }}>
+          <button
+            onClick={() => setVisibleCount((prev) => prev + 10)}
+            style={{
+              padding: "10px 24px", borderRadius: 6, border: "none",
+              cursor: "pointer", fontSize: 14,
+              fontFamily: "'DM Sans', sans-serif", fontWeight: 600,
+              background: theme.components.badge.background,
+              color: theme.components.badge.text,
+            }}
+          >
+            Load more ({displayItems.length - visibleCount} remaining)
+          </button>
         </div>
       )}
 
