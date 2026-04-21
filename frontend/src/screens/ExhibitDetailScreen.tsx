@@ -262,7 +262,7 @@ export function ExhibitDetailScreen({
             style={{
               padding: "10px 16px",
               borderRadius: 6,
-              border: "none",
+              border: theme.muted_orange,
               cursor: "pointer",
               fontSize: 14,
               fontFamily: "'DM Sans', sans-serif",
