@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { Heart } from "lucide-react";
-import { SearchBar } from "../components/SearchBar";
+import { SearchFilterBar } from "../components/SearchFilterBar";
+import { itemMatchesFilters } from "../utils/filterUtils";
 import { Placeholder } from "../components/Placeholder";
 import { ArtworkModal } from "../components/ArtworkModal";
 import { getFallbackImageForAspect } from "../assets/fallbackImage";
@@ -28,6 +29,7 @@ export function ForYouScreen({
   const [searchLoading, setSearchLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [modalItem, setModalItem] = useState<ExhibitItem | null>(null);
+  const [activeFilters, setActiveFilters] = useState<string[]>([]);
 
   useEffect(() => {
     if (!userId) return;
@@ -68,7 +70,10 @@ export function ForYouScreen({
 
   const handleClear = () => setSearchResults(null);
 
-  const displayItems = searchResults ?? items;
+  const displayItems = useMemo(() => {
+    const base = searchResults ?? items;
+    return base.filter((item) => itemMatchesFilters(item, activeFilters));
+  }, [searchResults, items, activeFilters]);
   const isSearching = searchResults !== null;
 
   const toExhibitItem = (item: ForYouItem): ExhibitItem => ({
@@ -113,10 +118,13 @@ export function ForYouScreen({
     >
       {/* ── Tour target: search bar ── */}
       <div data-tour="search">
-        <SearchBar
+        <SearchFilterBar
           onSearch={handleSearch}
           onClear={handleClear}
           isSearching={isSearching}
+          placeholder="Search by title or tag…"
+          activeFilters={activeFilters}
+          onFiltersChange={setActiveFilters}
         />
       </div>
 

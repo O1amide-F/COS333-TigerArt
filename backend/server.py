@@ -378,6 +378,42 @@ def load_user_vector(cur, user_id: str) -> list[float] | None:
 # ---------------------------------------------------------------------------
 
 @app.route("/api/for-you")
+
+def update_user_vector_from_artwork(cur, user_id: str, objectid: int, direction: float):
+    """
+    Nudge the user's feature vector toward (direction=+1) or away from
+    (direction=-1) the artwork identified by objectid.
+
+    learning_rate=0.1 means each like/unlike shifts the vector by 10%.
+    Values are clamped to [0, 1].
+    """
+    LEARNING_RATE = 0.3
+
+    user_vec = load_user_vector(cur, user_id)
+    if user_vec is None:
+        return  # User hasn't taken the survey yet — skip
+
+    cur.execute("""
+        SELECT classification, department, displaydate
+        FROM artworks WHERE objectid = %s
+    """, (objectid,))
+    row = cur.fetchone()
+    if row is None:
+        return
+
+    classification, department, displaydate = row
+    artwork_vec = tag_object(objectid, classification, department, displaydate)
+
+    new_vec = [
+        max(0.0, min(1.0,
+            user_vec[i] + direction * LEARNING_RATE * (artwork_vec[i] - user_vec[i])
+        ))
+        for i in range(len(user_vec))
+    ]
+
+    save_user_vector(cur, user_id, new_vec)
+
+
 def get_for_you():
     """Original non-personalised feed (kept for backwards compatibility)."""
     conn = get_connection()
@@ -747,7 +783,7 @@ def get_for_you_personalised(user_id):
 
     # Return top 10
     scored.sort(key=lambda x: x[0], reverse=True)
-    top10 = [item for _, item in scored[:10]]
+    top10 = [item for _, item in scored[:20]]
 
     return jsonify(top10)
 
@@ -958,7 +994,7 @@ def get_favorites(user_id):
  
 @app.route('/api/favorites/<string:user_id>/<int:objectid>', methods=['POST'])
 def add_favorite(user_id, objectid):
-    """Save an artwork to a user's favorites."""
+    """Save an artwork to a user's favorites and nudge the preference vector toward it."""
     conn = get_connection()
     cur = conn.cursor()
     try:
@@ -967,6 +1003,7 @@ def add_favorite(user_id, objectid):
             VALUES (%s, %s)
             ON CONFLICT DO NOTHING
         """, (user_id, objectid))
+        update_user_vector_from_artwork(cur, user_id, objectid, direction=+1.0)
         conn.commit()
         return jsonify({"status": "saved"}), 201
     except Exception as e:
@@ -979,16 +1016,21 @@ def add_favorite(user_id, objectid):
  
 @app.route('/api/favorites/<string:user_id>/<int:objectid>', methods=['DELETE'])
 def remove_favorite(user_id, objectid):
-    """Remove an artwork from a user's favorites."""
+    """Remove an artwork from a user's favorites and nudge the preference vector away from it."""
     conn = get_connection()
     cur = conn.cursor()
-    cur.execute("""
-        DELETE FROM saved_artworks
-        WHERE user_id = %s AND objectid = %s
-    """, (user_id, objectid))
-    conn.commit()
-    cur.close()
-    conn.close()
+    try:
+        cur.execute("""
+            DELETE FROM saved_artworks
+            WHERE user_id = %s AND objectid = %s
+        """, (user_id, objectid))
+        update_user_vector_from_artwork(cur, user_id, objectid, direction=-1.0)
+        conn.commit()
+    except Exception as e:
+        conn.rollback()
+    finally:
+        cur.close()
+        conn.close()
     return jsonify({"status": "removed"}), 200
  
  
