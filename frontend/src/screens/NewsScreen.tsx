@@ -21,10 +21,10 @@ export function NewsScreen() {
       <h1
         data-tour="news-heading"
         style={{
-          margin: "0 0 20px",
-          fontSize: 22,
+          margin: "0 0 4px",
+          fontSize: 24,
           fontFamily: "'Playfair Display', serif",
-          fontWeight: 900,
+          fontWeight: 700,
           letterSpacing: "0.06em",
           color: theme.components.badge.text,
           background: theme.components.badge.background,
@@ -34,7 +34,7 @@ export function NewsScreen() {
           textAlign: "center",
         }}
       >
-        LATEST NEWS
+        Latest News
       </h1>
 
       <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>

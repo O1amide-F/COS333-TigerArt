@@ -41,10 +41,10 @@ export function SettingsScreen({
       {/* Title */}
       <h1
         style={{
-          margin: "0 0 20px",
-          fontSize: 22,
+          margin: "0 0 4px",
+          fontSize: 24,
           fontFamily: "'Playfair Display', serif",
-          fontWeight: 900,
+          fontWeight: 700,
           letterSpacing: "0.06em",
           color: theme.components.badge.text,
           background: theme.components.badge.background,
@@ -53,7 +53,7 @@ export function SettingsScreen({
           borderRadius: 4,
         }}
       >
-        SETTINGS
+        Settings
       </h1>
 
       {/* Profile card */}

@@ -150,10 +150,10 @@ export function FavoritesScreen({
         <h1
           data-tour="favorites-heading"
           style={{
-            margin: 0,
-            fontSize: 22,
+            margin: "0 0 4px",
+            fontSize: 24,
             fontFamily: "'Playfair Display', serif",
-            fontWeight: 900,
+            fontWeight: 700,
             letterSpacing: "0.06em",
             color: theme.components.badge.text,
             background: theme.components.badge.background,
@@ -162,7 +162,7 @@ export function FavoritesScreen({
             borderRadius: 4,
           }}
         >
-          {isSearching ? "SEARCH RESULTS" : "FAVORITES"}
+          {isSearching ? "SEARCH RESULTS" : "Favorites"}
         </h1>
       </div>
 

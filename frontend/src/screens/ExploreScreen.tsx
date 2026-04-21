@@ -28,10 +28,10 @@ const styles = {
     height: "100%",
   },
   title: {
-    margin: "0 0 20px",
-    fontSize: 22,
+    margin: "0 0 4px",
+    fontSize: 24,
     fontFamily: "'Playfair Display', serif",
-    fontWeight: 900,
+    fontWeight: 700,
     letterSpacing: "0.06em",
     color: theme.components.badge.text,
     background: theme.components.badge.background,
@@ -404,7 +404,15 @@ function ExploreSectionCard({
             style={styles.cardInner}
             onClick={() => onCardClick(item)}
           >
-            <div style={{ position: "relative" }}>
+          <div
+            style={{
+              borderRadius: 8,
+              overflow: "hidden",
+              background: theme.components.card.background,
+              height: "100%",
+            }}
+          >
+              <div style={{ position: "relative" }}>
               {item.imageUrl ? (
                 <img
                   src={item.imageUrl}
@@ -443,10 +451,25 @@ function ExploreSectionCard({
                 />
               </button>
             </div>
-            <div style={styles.cardTextWrap}>
-              <div style={styles.itemName}>{item.name}</div>
-              <div style={styles.itemDesc}>{item.desc}</div>
+            <div
+              style={{
+                padding: "6px 10px",
+                fontSize: 12,
+                fontFamily: "'DM Sans', sans-serif",
+                color: theme.components.badge.text,
+                lineHeight: 1.35,
+
+                // fixing caption height so everything's consistent
+                height: 34,
+                overflow: "hidden",
+                whiteSpace: "nowrap",
+                textOverflow: "ellipsis"
+              }}
+            >
+              {item.name}
             </div>
+          </div>
+
           </div>
         ))}
         <ViewMoreCard section={section} onSectionClick={onSectionClick} />
@@ -574,7 +597,7 @@ export function ExploreScreen({
 
       {/* ── Tour target: page heading ── */}
       <h1 data-tour="explore-heading" style={styles.title}>
-        {isSearching ? "SEARCH RESULTS" : "EXPLORE"}
+        {isSearching ? "SEARCH RESULTS" : "Explore"}
       </h1>
 
       {searchLoading && (

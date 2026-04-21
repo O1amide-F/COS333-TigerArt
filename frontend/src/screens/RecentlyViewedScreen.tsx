@@ -204,15 +204,16 @@ export function RecentlyViewedScreen({
           background: theme.components.badge.background,
           borderRadius: 4,
           padding: "6px 12px",
-          fontSize: 14,
-          fontFamily: "'DM Sans', sans-serif",
-          fontWeight: 600,
+          fontSize: 24,
+          margin: "0 0 4px",
+          fontFamily: "'Playfair Display', serif",
+          fontWeight: 700,
           color: theme.components.badge.text,
           marginBottom: 14,
           textAlign: "center",
         }}
       >
-        {isSearching ? "SEARCH RESULTS" : "RECENTLY VIEWED"}
+        {isSearching ? "SEARCH RESULTS" : "Recently Viewed"}
       </div>
 
       {isLoading ? (
@@ -295,52 +296,55 @@ export function RecentlyViewedScreen({
               style={{ marginBottom: 10, cursor: "pointer" }}
               onClick={() => handleCardClick(featuredCard)}
             >
-              <div style={{ position: "relative" }}>
-                {featuredCard.imageUrl ? (
-                  <img
-                    src={featuredCard.imageUrl}
-                    alt={featuredCard.title}
-                    style={{
-                      width: "100%",
-                      aspectRatio: "16 / 9",
-                      objectFit: "contain",
-                      backgroundColor: theme.components.image.background,
-                      display: "block",
-                      borderRadius: 4,
-                    }}
-                    onError={(e) => {
-                      e.currentTarget.onerror = null;
-                      e.currentTarget.src = getFallbackImageForAspect("16/9");
-                    }}
-                  />
-                ) : (
-                  <Placeholder
-                    label="Unable to Render Image"
-                    aspectRatio="16/9"
-                  />
-                )}
-                <HeartButton itemId={featuredCard.id} />
-              </div>
-              <div style={{ paddingTop: 8 }}>
-                <div
-                  style={{
-                    fontSize: 14,
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontWeight: 600,
-                    color: theme.components.badge.text,
-                    marginBottom: 4,
-                  }}
+              <div
+                style={{
+                  borderRadius: 8,
+                  overflow: "hidden",
+                  background: theme.components.card.background,
+                  height: "100%",
+                }}
                 >
-                  {featuredCard.title}
+                  <div style={{ position: "relative" }}>
+                  {featuredCard.imageUrl ? (
+                    <img
+                      src={featuredCard.imageUrl}
+                      alt={featuredCard.title}
+                      style={{
+                        width: "100%",
+                        aspectRatio: "16 / 9",
+                        objectFit: "contain",
+                        backgroundColor: theme.components.image.background,
+                        display: "block",
+                        borderRadius: 4,
+                      }}
+                      onError={(e) => {
+                        e.currentTarget.onerror = null;
+                        e.currentTarget.src = getFallbackImageForAspect("16/9");
+                      }}
+                    />
+                  ) : (
+                    <Placeholder
+                      label="Unable to Render Image"
+                      aspectRatio="16/9"
+                    />
+                  )}
+                  <HeartButton itemId={featuredCard.id} />
                 </div>
-                <div
-                  style={{
-                    width: 80,
-                    height: 5,
-                    background: theme.components.divider.color,
-                    borderRadius: 3,
-                  }}
-                />
+                <div style={{ 
+                  padding: "8px 10px", 
+                }}>
+                  <div
+                    style={{
+                      fontSize: 14,
+                      fontFamily: "'DM Sans', sans-serif",
+                      fontWeight: 600,
+                      color: theme.components.badge.text,
+                      marginBottom: 4,
+                    }}
+                  >
+                    {featuredCard.title}
+                  </div>
+                </div>
               </div>
             </div>
           )}
@@ -367,53 +371,56 @@ export function RecentlyViewedScreen({
                 style={{ cursor: "pointer" }}
                 onClick={() => handleCardClick(card)}
               >
-                <div style={{ position: "relative" }}>
-                  {card.imageUrl ? (
-                    <img
-                      src={card.imageUrl}
-                      alt={card.title}
-                      style={{
-                        width: "100%",
-                        aspectRatio: "1 / 1",
-                        objectFit: "contain",
-                        backgroundColor: theme.components.image.background,
-                        display: "block",
-                        borderRadius: 4,
-                      }}
-                      onError={(e) => {
-                        e.currentTarget.onerror = null;
-                        e.currentTarget.src = getFallbackImageForAspect("1/1");
-                      }}
-                    />
-                  ) : (
-                    <Placeholder
-                      label="Unable to Render Image"
-                      aspectRatio="1/1"
-                    />
-                  )}
-                  <HeartButton itemId={card.id} />
-                </div>
-                <div style={{ paddingTop: 6 }}>
-                  <div
-                    style={{
-                      fontSize: 13,
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontWeight: 600,
-                      color: theme.components.badge.text,
-                    }}
-                  >
-                    {card.title}
+                <div
+                style={{
+                  borderRadius: 8,
+                  overflow: "hidden",
+                  background: theme.components.card.background,
+                  height: "100%",
+                }}
+                >
+                  <div style={{ position: "relative" }}>
+                    {card.imageUrl ? (
+                      <img
+                        src={card.imageUrl}
+                        alt={card.title}
+                        style={{
+                          width: "100%",
+                          aspectRatio: "1 / 1",
+                          objectFit: "contain",
+                          backgroundColor: theme.components.image.background,
+                          display: "block",
+                        }}
+                        onError={(e) => {
+                          e.currentTarget.onerror = null;
+                          e.currentTarget.src = getFallbackImageForAspect("1/1");
+                        }}
+                      />
+                    ) : (
+                      <Placeholder
+                        label="Unable to Render Image"
+                        aspectRatio="1/1"
+                      />
+                    )}
+                    <HeartButton itemId={card.id} />
                   </div>
-                  <div
-                    style={{
-                      width: 50,
-                      height: 5,
-                      background: theme.components.divider.color,
-                      borderRadius: 3,
-                      marginTop: 4,
-                    }}
-                  />
+                  <div style={{ 
+                    background: theme.components.card.background,
+                    padding: "8px 10px", 
+                  }}>
+                    <div
+                      style={{
+                        fontSize: 13,
+                        fontFamily: "'DM Sans', sans-serif",
+                        fontWeight: 600,
+                        color: theme.components.badge.text,
+                      }}
+                    >
+                      {card.title}
+                    </div>
+                  </div>
                 </div>
+
               </div>
             ))}
           </div>

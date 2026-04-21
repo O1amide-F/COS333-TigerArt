@@ -114,9 +114,10 @@ export function ExhibitDetailScreen({
           background: theme.components.badge.background,
           borderRadius: 4,
           padding: "6px 12px",
-          fontSize: 14,
-          fontFamily: "'DM Sans', sans-serif",
-          fontWeight: 600,
+          margin: "0 0 4px",
+          fontSize: 24,
+          fontFamily: "'Playfair Display', serif",
+          fontWeight: 700,
           color: theme.components.badge.text,
           marginBottom: 14,
           textAlign: "center",
@@ -127,57 +128,58 @@ export function ExhibitDetailScreen({
 
       {featuredItem && (
         <div
+        style={{
+          borderRadius: 8,
+          overflow: "hidden",
+          background: theme.components.card.background,
+        }}
+        >
+          <div
           data-tour="exhibit-detail-featured"
           data-tour-track="view"
           data-tour-art-id={String(featuredItem.id)}
           style={{ marginBottom: 10, cursor: "pointer" }}
           onClick={() => setModalItem(featuredItem)}
-        >
-          <div style={{ position: "relative" }}>
-            {featuredItem.imageUrl ? (
-              <img
-                src={featuredItem.imageUrl}
-                alt={featuredItem.name}
-                style={{
-                  width: "100%",
-                  aspectRatio: "16 / 9",
-                  objectFit: "contain",
-                  backgroundColor: theme.components.image.background,
-                  display: "block",
-                  borderRadius: 4,
-                }}
-                onError={(e) => {
-                  e.currentTarget.onerror = null;
-                  e.currentTarget.src = getFallbackImageForAspect("16/9");
-                }}
-              />
-            ) : (
-              <Placeholder label="Unable to Render Image" aspectRatio="16/9" />
-            )}
-            <HeartButton itemId={featuredItem.id} />
-          </div>
-          <div style={{ paddingTop: 8 }}>
-            <div
-              style={{
-                fontSize: 14,
-                fontFamily: "'DM Sans', sans-serif",
-                fontWeight: 600,
-                color: theme.components.badge.text,
-                marginBottom: 4,
-              }}
-            >
-              {featuredItem.name}
+          >
+            <div style={{ position: "relative" }}>
+              {featuredItem.imageUrl ? (
+                <img
+                  src={featuredItem.imageUrl}
+                  alt={featuredItem.name}
+                  style={{
+                    width: "100%",
+                    aspectRatio: "16 / 9",
+                    objectFit: "contain",
+                    backgroundColor: theme.components.image.background,
+                    display: "block",
+                  }}
+                  onError={(e) => {
+                    e.currentTarget.onerror = null;
+                    e.currentTarget.src = getFallbackImageForAspect("16/9");
+                  }}
+                />
+              ) : (
+                <Placeholder label="Unable to Render Image" aspectRatio="16/9" />
+              )}
+              <HeartButton itemId={featuredItem.id} />
             </div>
-            <div
-              style={{
-                width: 80,
-                height: 5,
-                background: theme.components.divider.color,
-                borderRadius: 3,
-              }}
-            />
+            <div style={{
+              padding: "8px 10px",
+            }}>
+              <div
+                style={{
+                  fontSize: 14,
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontWeight: 600,
+                  color: theme.components.badge.text,
+                }}
+              >
+                {featuredItem.name}
+              </div>
+            </div>
           </div>
         </div>
+        
       )}
 
       <div
@@ -204,7 +206,12 @@ export function ExhibitDetailScreen({
             style={{ cursor: "pointer" }}
             onClick={() => setModalItem(item)}
           >
-            <div style={{ position: "relative" }}>
+            <div style={{ borderRadius: 8,
+              overflow: "hidden",
+              background: theme.components.card.background, 
+              height: "100%",
+            }}>
+              <div style={{ position: "relative" }}>
               {item.imageUrl ? (
                 <img
                   src={item.imageUrl}
@@ -215,7 +222,6 @@ export function ExhibitDetailScreen({
                     objectFit: "contain",
                     backgroundColor: theme.components.image.background,
                     display: "block",
-                    borderRadius: 4,
                   }}
                   onError={(e) => {
                     e.currentTarget.onerror = null;
@@ -227,7 +233,9 @@ export function ExhibitDetailScreen({
               )}
               <HeartButton itemId={item.id} />
             </div>
-            <div style={{ paddingTop: 6 }}>
+            <div style={{ 
+              padding: "8px 10px", 
+            }}>
               <div
                 style={{
                   fontSize: 13,
@@ -238,16 +246,8 @@ export function ExhibitDetailScreen({
               >
                 {item.name}
               </div>
-              <div
-                style={{
-                  width: 50,
-                  height: 5,
-                  background: theme.components.divider.color,
-                  borderRadius: 3,
-                  marginTop: 4,
-                }}
-              />
             </div>
+          </div>            
           </div>
         ))}
       </div>
