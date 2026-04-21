@@ -1,4 +1,4 @@
-import { useEffect, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useState, type ReactNode } from "react";
 import "./App.css";
 import { useTour } from "./hooks/useTour";
 import "./tour";
@@ -142,7 +142,7 @@ function TigerArtAuthenticated({
   };
 
   // Shared view recorder: guests update local state only; signed-in users also sync to backend.
-  const recordRecentlyViewed = (objectId?: number) => {
+  const recordRecentlyViewed = useCallback((objectId?: number) => {
     if (!objectId) return;
 
     if (userId) {
@@ -154,7 +154,7 @@ function TigerArtAuthenticated({
     setRecentlyViewed((prev) =>
       [objectId, ...prev.filter((id) => id !== objectId)].slice(0, 15),
     );
-  };
+  }, [userId]);
 
   // Records the view on the backend + updates local state, then navigates
   const handleSectionClick = (section: ExhibitSection) => {
@@ -269,7 +269,6 @@ function TigerArtAuthenticated({
         onSectionClick={templateContext.handleSectionClick}
         favorites={templateContext.favorites}
         onToggleFavorite={templateContext.toggleFavorite}
-        onRecordView={recordRecentlyViewed}
       />
     ),
   };

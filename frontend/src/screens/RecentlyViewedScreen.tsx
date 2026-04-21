@@ -16,7 +16,6 @@ type RecentlyViewedScreenProps = {
   onSectionClick: (section: ExhibitSection) => void;
   favorites: number[];
   onToggleFavorite: (id: number) => void;
-  onRecordView: (id: number) => void;
 };
 
 type ArtworkFromAPI = {
@@ -46,7 +45,6 @@ export function RecentlyViewedScreen({
   recentIds,
   favorites,
   onToggleFavorite,
-  onRecordView,
 }: RecentlyViewedScreenProps) {
   const [artworks, setArtworks] = useState<ArtworkFromAPI[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -438,7 +436,7 @@ export function RecentlyViewedScreen({
                 style={{
                   padding: "10px 16px",
                   borderRadius: 6,
-                  border: theme.muted_orange,
+                  border: "none",
                   cursor: "pointer",
                   fontSize: 14,
                   fontFamily: "'DM Sans', sans-serif",
@@ -501,7 +499,6 @@ export function RecentlyViewedScreen({
           onToggleFavorite={onToggleFavorite}
           onClose={() => setModalItem(null)}
           userId={userId}
-          onRecordView={onRecordView}
         />
       )}
     </div>

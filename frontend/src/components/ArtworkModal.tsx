@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Heart } from "lucide-react";
 import { Placeholder } from "./Placeholder";
 import { getFallbackImageForAspect } from "../assets/fallbackImage";
@@ -24,9 +24,18 @@ export function ArtworkModal({
   userId,
   onRecordView,
 }: ArtworkModalProps) {
-  // Record view once when modal opens
+  const lastRecordedIdRef = useRef<number | null>(null);
+
+  // Record a view once per opened item.
   useEffect(() => {
-    onRecordView?.(item.id);
+    if (lastRecordedIdRef.current === item.id) return;
+    lastRecordedIdRef.current = item.id;
+
+    if (onRecordView) {
+      onRecordView(item.id);
+      return;
+    }
+
     if (!userId) return;
     fetch(`${API_BASE}/recently-viewed/${userId}/${item.id}`, {
       method: "POST",
