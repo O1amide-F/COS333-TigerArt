@@ -199,6 +199,7 @@ export function SettingsScreen({
               userId={userId}
               onComplete={handleSurveySaved}
               completeLabel="Save Changes"
+              persistToDb={!isGuest}
             />
           </div>
         )}

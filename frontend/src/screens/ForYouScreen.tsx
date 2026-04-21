@@ -11,9 +11,23 @@ const API_BASE = "/api";
 
 type ForYouScreenProps = {
   userId: string | null;
+  isGuest?: boolean;
+  seedObjectIds?: number[];
   favorites: number[];
   onToggleFavorite: (id: number) => void;
   onRecordView?: (id: number) => void;
+};
+
+type ArtworkFromAPI = {
+  artwork_id: number;
+  title: string;
+  description?: string;
+  image_url?: string;
+  classification?: string;
+  department?: string;
+  displaydate?: string;
+  displaymaker?: string;
+  on_view?: boolean;
 };
 
 export function ForYouScreen({
@@ -21,6 +35,8 @@ export function ForYouScreen({
   onToggleFavorite,
   onRecordView,
   userId,
+  isGuest = false,
+  seedObjectIds = [],
 }: ForYouScreenProps) {
   const [items, setItems] = useState<ForYouItem[]>([]);
   const [searchResults, setSearchResults] = useState<ForYouItem[] | null>(null);
@@ -34,8 +50,58 @@ export function ForYouScreen({
 
 
   useEffect(() => {
-    if (!userId) return;
+    const loadFallbackFeed = () => {
+      fetch(`${API_BASE}/for-you`)
+        .then((r) => r.json())
+        .then((data: ForYouItem[]) => {
+          setItems(data);
+          setLoading(false);
+        })
+        .catch((e) => {
+          setError(e.message);
+          setLoading(false);
+        });
+    };
+
     setLoading(true);
+    setError(null);
+
+    if (isGuest) {
+      if (seedObjectIds.length === 0) {
+        loadFallbackFeed();
+        return;
+      }
+
+      const idsQuery = encodeURIComponent(seedObjectIds.join(","));
+      fetch(`${API_BASE}/artworks/by-ids?ids=${idsQuery}`)
+        .then((r) => {
+          if (!r.ok) throw new Error("fallback");
+          return r.json();
+        })
+        .then((data: ArtworkFromAPI[]) => {
+          const guestItems: ForYouItem[] = data.map((a) => ({
+            id: a.artwork_id,
+            title: a.title ?? "Untitled",
+            about: a.description ?? "",
+            imageUrl: a.image_url,
+            classification: a.classification,
+            department: a.department,
+            displaydate: a.displaydate,
+            displaymaker: a.displaymaker,
+            on_view: a.on_view,
+          }));
+          setItems(guestItems);
+          setLoading(false);
+        })
+        .catch(() => loadFallbackFeed());
+      return;
+    }
+
+    if (!userId) {
+      loadFallbackFeed();
+      return;
+    }
+
     fetch(`${API_BASE}/for-you/${userId}`)
       .then((r) => {
         if (!r.ok) throw new Error("fallback");
@@ -45,19 +111,8 @@ export function ForYouScreen({
         setItems(data);
         setLoading(false);
       })
-      .catch(() => {
-        fetch(`${API_BASE}/for-you`)
-          .then((r) => r.json())
-          .then((data: ForYouItem[]) => {
-            setItems(data);
-            setLoading(false);
-          })
-          .catch((e) => {
-            setError(e.message);
-            setLoading(false);
-          });
-      });
-  }, [userId]);
+      .catch(() => loadFallbackFeed());
+  }, [isGuest, seedObjectIds, userId]);
 
   const handleSearch = (query: string) => {
     setVisibleCount(10);
@@ -108,30 +163,6 @@ export function ForYouScreen({
     displaymaker: item.displaymaker,
     on_view: item.on_view,
   });
-
-  if (!userId) {
-    return (
-      <div
-        style={{
-          padding: "16px 20px 100px",
-          overflowY: "auto",
-          height: "100%",
-        }}
-      >
-        <div
-          style={{
-            textAlign: "center",
-            padding: "40px 0",
-            fontFamily: "'DM Sans', sans-serif",
-            color: theme.components.badge.mutedText,
-            fontSize: 14,
-          }}
-        >
-          Loading your feed…
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div

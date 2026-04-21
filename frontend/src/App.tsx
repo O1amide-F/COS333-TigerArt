@@ -16,6 +16,16 @@ import { theme } from "./theme";
 import type { ExhibitSection, NavId, Screen } from "./types";
 
 const API_BASE = "/api";
+const GUEST_ID_STORAGE_KEY = "tigerart.localGuestId";
+
+function getOrCreateGuestId(): string {
+  const existing = window.localStorage.getItem(GUEST_ID_STORAGE_KEY);
+  if (existing) return existing;
+
+  const generated = `guest-${Math.random().toString(36).slice(2, 10)}`;
+  window.localStorage.setItem(GUEST_ID_STORAGE_KEY, generated);
+  return generated;
+}
 
 const NAV_TO_SCREEN: Record<NavId, Screen> = {
   home: "home",
@@ -43,9 +53,9 @@ function TigerArtAuthenticated({
   );
   const [activeNav, setActiveNav] = useState<NavId>("home");
   const [surveySelections, setSurveySelections] = useState<number[]>([]);
-  const username = initialUsername;
-  const displayName = initialDisplayName || initialUsername;
-  const userId = initialUsername || null;
+  const username = isGuest ? "Guest" : initialUsername;
+  const displayName = isGuest ? "Guest" : initialDisplayName || initialUsername;
+  const userId = isGuest ? null : initialUsername || null;
 
   const handleNav = (id: NavId) => {
     setActiveNav(id);
@@ -145,7 +155,7 @@ function TigerArtAuthenticated({
   const recordRecentlyViewed = useCallback((objectId?: number) => {
     if (!objectId) return;
 
-    if (userId) {
+    if (!isGuest && userId) {
       fetch(`${API_BASE}/recently-viewed/${userId}/${objectId}`, {
         method: "POST",
       }).catch(console.error);
@@ -154,7 +164,7 @@ function TigerArtAuthenticated({
     setRecentlyViewed((prev) =>
       [objectId, ...prev.filter((id) => id !== objectId)].slice(0, 15),
     );
-  }, [userId]);
+  }, [isGuest, userId]);
 
   // Records the view on the backend + updates local state, then navigates
   const handleSectionClick = (section: ExhibitSection) => {
@@ -206,6 +216,7 @@ function TigerArtAuthenticated({
         username={templateContext.username}
         displayName={templateContext.displayName}
         userId={templateContext.userId}
+        isGuest={isGuest}
       />
     ),
     home: (
@@ -213,6 +224,8 @@ function TigerArtAuthenticated({
         favorites={templateContext.favorites}
         onToggleFavorite={templateContext.toggleFavorite}
         userId={templateContext.userId}
+        isGuest={isGuest}
+        seedObjectIds={templateContext.surveySelections}
         onRecordView={recordRecentlyViewed}
       />
     ),
@@ -302,6 +315,7 @@ export default function TigerArt() {
   const [ready, setReady] = useState(false);
 
   const [isGuest, setIsGuest] = useState(false);
+  const [guestId, setGuestId] = useState<string | null>(null);
 
   useEffect(() => {
     fetch("/api/getusername", { credentials: "include" })
@@ -321,8 +335,24 @@ export default function TigerArt() {
   }, []);
 
   if (!ready) return null;
-  if (isGuest) return <TigerArtAuthenticated isGuest />;
-  if (!username) return <LoginScreen onGuestLogin={() => setIsGuest(true)} />;
+  if (isGuest)
+    return (
+      <TigerArtAuthenticated
+        isGuest
+        initialUsername={guestId ?? getOrCreateGuestId()}
+        initialDisplayName="Guest"
+      />
+    );
+  if (!username)
+    return (
+      <LoginScreen
+        onGuestLogin={() => {
+          const localGuestId = getOrCreateGuestId();
+          setGuestId(localGuestId);
+          setIsGuest(true);
+        }}
+      />
+    );
   return (
     <TigerArtAuthenticated
       initialUsername={username}

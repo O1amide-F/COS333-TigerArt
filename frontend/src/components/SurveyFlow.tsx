@@ -34,6 +34,8 @@ type SurveyFlowProps = {
   onComplete: (objectIds: number[]) => void;
   // Label for the final button — "Continue" on onboarding, "Save Changes" in settings
   completeLabel?: string;
+  // When false, selections are local-only and not sent to backend.
+  persistToDb?: boolean;
 };
 
 // --------------------------------------------------------------------------
@@ -43,6 +45,7 @@ export function SurveyFlow({
   userId,
   onComplete,
   completeLabel = "Continue",
+  persistToDb = true,
 }: SurveyFlowProps) {
   const [config, setConfig] = useState<SurveyConfig | null>(null);
   const [loading, setLoading] = useState(true);
@@ -106,14 +109,16 @@ export function SurveyFlow({
       },
     };
 
-    try {
-      await fetch(`${API_BASE}/survey/submit`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-    } catch (e) {
-      console.error("Survey submit failed:", e);
+    if (persistToDb && userId) {
+      try {
+        await fetch(`${API_BASE}/survey/submit`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+      } catch (e) {
+        console.error("Survey submit failed:", e);
+      }
     }
 
     setSubmitting(false);
