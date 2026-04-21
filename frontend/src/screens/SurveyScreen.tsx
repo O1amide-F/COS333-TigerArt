@@ -19,10 +19,10 @@ export function SurveyScreen({ onContinue, username, displayName, userId }: Surv
           fontFamily: "'DM Sans', sans-serif" }}>
           {displayName || username || "Guest"}
         </div>
-        <h2 style={{ margin: 0, fontSize: 18, fontFamily: "'Playfair Display', serif",
+        <h1 style={{ margin: 0, fontSize: "clamp(14px, 2vw, 20px)", fontFamily: "'Playfair Display', serif",
           fontWeight: 700, color: theme.components.badge.text }}>
           Survey Preferences
-        </h2>
+        </h1>
       </div>
 
       <SurveyFlow

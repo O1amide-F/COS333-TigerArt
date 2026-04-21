@@ -169,7 +169,7 @@ export function SurveyFlow({
           borderRadius: 6,
           padding: "10px 14px",
           textAlign: "center",
-          fontSize: 13,
+          fontSize: "clamp(14px, 2vw, 20px)",
           fontFamily: "'DM Sans', sans-serif",
           color: theme.components.badge.text,
           marginBottom: 20,
@@ -272,7 +272,7 @@ export function SurveyFlow({
               <div style={{ padding: "6px 10px" }}>
                 <span
                   style={{
-                    fontSize: 11,
+                    fontSize: "clamp(12px, 1.5vw, 16px)",
                     fontFamily: "'DM Sans', sans-serif",
                     color: theme.components.badge.text,
                     textTransform: "capitalize",
