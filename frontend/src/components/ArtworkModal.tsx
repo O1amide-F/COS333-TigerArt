@@ -14,6 +14,7 @@ type ArtworkModalProps = {
   onClose: () => void;
   userId?: string | null;
   onRecordView?: (id: number) => void;
+  zIndex?: number;
 };
 
 export function ArtworkModal({
@@ -23,6 +24,7 @@ export function ArtworkModal({
   onClose,
   userId,
   onRecordView,
+  zIndex,
 }: ArtworkModalProps) {
   const lastRecordedIdRef = useRef<number | null>(null);
 
@@ -50,11 +52,11 @@ export function ArtworkModal({
         inset: 0,
         background: "rgba(0,0,0,0.6)",
         backdropFilter: "blur(4px)",
-        zIndex: 1000,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         padding: "24px 16px",
+        zIndex: zIndex ?? 50,
       }}
     >
       <div

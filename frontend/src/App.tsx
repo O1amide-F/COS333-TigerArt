@@ -1,7 +1,10 @@
+// App.tsx — wires TourOverlay into the shell and passes tour state down.
+// Only the tour-related sections are changed; all screen/nav logic is identical.
+
 import { useCallback, useEffect, useState, type ReactNode } from "react";
 import "./App.css";
 import { useTour } from "./hooks/useTour";
-import "./tour";
+import { TourOverlay } from "./components/TourOverlay";
 import { BottomNav } from "./components/BottomNav";
 import { ExploreScreen } from "./screens/ExploreScreen";
 import { ExhibitDetailScreen } from "./screens/ExhibitDetailScreen";
@@ -21,7 +24,6 @@ const GUEST_ID_STORAGE_KEY = "tigerart.localGuestId";
 function getOrCreateGuestId(): string {
   const existing = window.localStorage.getItem(GUEST_ID_STORAGE_KEY);
   if (existing) return existing;
-
   const generated = `guest-${Math.random().toString(36).slice(2, 10)}`;
   window.localStorage.setItem(GUEST_ID_STORAGE_KEY, generated);
   return generated;
@@ -58,6 +60,7 @@ function TigerArtAuthenticated({
   );
   const [surveySelections, setSurveySelections] = useState<number[]>([]);
   const [showAccountPrompt, setShowAccountPrompt] = useState(false);
+
   const username = isGuest ? "Guest" : initialUsername;
   const displayName = isGuest ? "Guest" : initialDisplayName || initialUsername;
   const userId = isGuest ? null : initialUsername || null;
@@ -68,10 +71,10 @@ function TigerArtAuthenticated({
 
   useEffect(() => {
     if (!showAccountPrompt) return;
-    const timeoutId = window.setTimeout(() => {
-      setShowAccountPrompt(false);
-    }, 2200);
-
+    const timeoutId = window.setTimeout(
+      () => setShowAccountPrompt(false),
+      2200,
+    );
     return () => window.clearTimeout(timeoutId);
   }, [showAccountPrompt]);
 
@@ -80,57 +83,60 @@ function TigerArtAuthenticated({
       showMakeAccountPrompt();
       return;
     }
-
     setActiveNav(id);
     setScreen(NAV_TO_SCREEN[id]);
   };
 
-  const { startTour } = useTour({
+  // ── Tour ──────────────────────────────────────────────────────────────────
+  const {
+    status: tourStatus,
+    currentStepMeta,
+    stepIndex,
+    totalSteps,
+    canAdvance,
+    canGoBack,
+    startTour,
+    advanceStep,
+    goBack,
+    endTour,
+  } = useTour({
     autoStart: false,
-    onNavigate: handleNav,
+    isGuest,
+    onNavigate: (navId) => handleNav(navId as NavId),
     getTourStats: () => ({
       favoritesCount: favorites.length,
       recentlyViewedCount: recentlyViewed.length,
     }),
   });
 
-  // On login: load userId, favorites, recently viewed from backend
+  // ── User data bootstrap ───────────────────────────────────────────────────
   useEffect(() => {
     if (isGuest) {
-      // Guests skip survey and land directly in unrestricted navigation.
       setScreen("explore");
       setActiveNav("explore");
       return;
     }
     if (!initialUsername) return;
+
     async function loadUserData() {
-      // Load favorited artwork IDs
       try {
         const favRes = await fetch(
           `${API_BASE}/favorites/${initialUsername}/ids`,
         );
-        if (favRes.ok) {
-          const ids: number[] = await favRes.json();
-          setFavorites(ids);
-        }
+        if (favRes.ok) setFavorites(await favRes.json());
       } catch (e) {
         console.error("Failed to load favorites:", e);
       }
 
-      // Load recently viewed artwork IDs
       try {
         const rvRes = await fetch(
           `${API_BASE}/recently-viewed/${initialUsername}/ids`,
         );
-        if (rvRes.ok) {
-          const ids: number[] = await rvRes.json();
-          setRecentlyViewed(ids);
-        }
+        if (rvRes.ok) setRecentlyViewed(await rvRes.json());
       } catch (e) {
         console.error("Failed to load recently viewed:", e);
       }
 
-      // Skip survey if user already has a feature vector
       try {
         const res = await fetch(`${API_BASE}/for-you/${initialUsername}`);
         if (res.ok) {
@@ -141,26 +147,20 @@ function TigerArtAuthenticated({
         console.error("Failed to check user preferences:", e);
       }
     }
+
     loadUserData().catch(console.error);
   }, [isGuest, initialUsername]);
 
-  // Single source of truth for toggling favorites
+  // ── Favorites ─────────────────────────────────────────────────────────────
   const toggleFavorite = async (id: number) => {
     const isFavorited = favorites.includes(id);
-
     if (isGuest) {
-      // Guest mode is local-only: keep interaction behavior but skip DB writes.
       setFavorites((prev) =>
         isFavorited ? prev.filter((x) => x !== id) : [...prev, id],
       );
       return;
     }
-
-    if (!userId) {
-      console.warn("toggleFavorite called before userId resolved");
-      return;
-    }
-
+    if (!userId) return;
     const method = isFavorited ? "DELETE" : "POST";
     try {
       const res = await fetch(`${API_BASE}/favorites/${userId}/${id}`, {
@@ -175,17 +175,15 @@ function TigerArtAuthenticated({
     }
   };
 
-  // Shared view recorder: guests update local state only; signed-in users also sync to backend.
+  // ── Recently viewed ───────────────────────────────────────────────────────
   const recordRecentlyViewed = useCallback(
     (objectId?: number) => {
       if (!objectId) return;
-
       if (!isGuest && userId) {
         fetch(`${API_BASE}/recently-viewed/${userId}/${objectId}`, {
           method: "POST",
         }).catch(console.error);
       }
-
       setRecentlyViewed((prev) =>
         [objectId, ...prev.filter((id) => id !== objectId)].slice(0, 15),
       );
@@ -193,7 +191,6 @@ function TigerArtAuthenticated({
     [isGuest, userId],
   );
 
-  // Records the view on the backend + updates local state, then navigates
   const handleSectionClick = (section: ExhibitSection) => {
     recordRecentlyViewed(section.items[0]?.id);
     setActiveSection(section);
@@ -234,11 +231,7 @@ function TigerArtAuthenticated({
           templateContext.setSurveySelections(selected);
           templateContext.setScreen("home");
           templateContext.setActiveNav("home");
-
-          // Launch the tour only after survey submission completes and home UI is rendered.
-          setTimeout(() => {
-            startTour();
-          }, 800);
+          setTimeout(() => startTour(), 800);
         }}
         username={templateContext.username}
         displayName={templateContext.displayName}
@@ -254,6 +247,10 @@ function TigerArtAuthenticated({
         isGuest={isGuest}
         seedObjectIds={templateContext.surveySelections}
         onRecordView={recordRecentlyViewed}
+        // Pass tour state so ForYouScreen can fire tour events and optionally
+        // show a subtle "tour mode" ring around the whole grid.
+        tourActive={tourStatus.active}
+        tourStep={tourStatus.step}
       />
     ),
     explore: (
@@ -335,6 +332,7 @@ function TigerArtAuthenticated({
             </div>
           )}
           <div className="tiger-art-content">{templates[screen]}</div>
+
           {showAccountPrompt && (
             <div
               role="status"
@@ -361,6 +359,19 @@ function TigerArtAuthenticated({
           )}
         </div>
       </div>
+
+      {/* ── Tour overlay — rendered outside the app shell so z-index is unaffected ── */}
+      <TourOverlay
+        status={tourStatus}
+        currentStepMeta={currentStepMeta}
+        stepIndex={stepIndex}
+        totalSteps={totalSteps}
+        canAdvance={canAdvance}
+        canGoBack={canGoBack}
+        onBack={goBack}
+        onNext={advanceStep}
+        onExit={endTour}
+      />
     </>
   );
 }
@@ -369,7 +380,6 @@ export default function TigerArt() {
   const [username, setUsername] = useState<string | null>(null);
   const [displayName, setDisplayName] = useState<string | null>(null);
   const [ready, setReady] = useState(false);
-
   const [isGuest, setIsGuest] = useState(false);
   const [guestId, setGuestId] = useState<string | null>(null);
 

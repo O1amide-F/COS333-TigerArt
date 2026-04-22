@@ -1,9 +1,24 @@
+// screens/ForYouScreen.tsx
+//
+// KEY FIX: During open-modals step, ArtworkModal must render above the tour
+// popover (z-index 9010). We pass a `modalZIndex` prop to ArtworkModal so it
+// can be elevated during that step only.
+//
+// Also fires tour events:
+//   • FAVORITE_TOGGLED — only on a new favorite (not unfavorite) during like-photos
+//   • MODAL_OPENED — each time a modal opens during open-modals step
+
 import { useEffect, useState } from "react";
 import { Heart } from "lucide-react";
 import { SearchFilterBar } from "../components/SearchFilterBar";
 import { Placeholder } from "../components/Placeholder";
 import { ArtworkModal } from "../components/ArtworkModal";
 import { getFallbackImageForAspect } from "../assets/fallbackImage";
+import {
+  dispatchTourEvent,
+  TOUR_EVENTS,
+  type TourStep,
+} from "../hooks/useTour";
 import type { ForYouItem, ExhibitItem } from "../types";
 import { theme } from "../theme";
 
@@ -16,6 +31,8 @@ type ForYouScreenProps = {
   favorites: number[];
   onToggleFavorite: (id: number) => void;
   onRecordView?: (id: number) => void;
+  tourActive?: boolean;
+  tourStep?: TourStep;
 };
 
 type ArtworkFromAPI = {
@@ -37,6 +54,8 @@ export function ForYouScreen({
   userId,
   isGuest = false,
   seedObjectIds = [],
+  tourActive = false,
+  tourStep,
 }: ForYouScreenProps) {
   const [items, setItems] = useState<ForYouItem[]>([]);
   const [searchResults, setSearchResults] = useState<ForYouItem[] | null>(null);
@@ -49,101 +68,95 @@ export function ForYouScreen({
   const [visibleCount, setVisibleCount] = useState(10);
 
   useEffect(() => {
-    const loadFallbackFeed = () => {
+    const loadFallback = () =>
       fetch(`${API_BASE}/for-you`)
         .then((r) => r.json())
-        .then((data: ForYouItem[]) => {
-          setItems(data);
+        .then((d: ForYouItem[]) => {
+          setItems(d);
           setLoading(false);
         })
         .catch((e) => {
           setError(e.message);
           setLoading(false);
         });
-    };
 
     setLoading(true);
     setError(null);
 
     if (isGuest) {
       if (seedObjectIds.length === 0) {
-        loadFallbackFeed();
+        loadFallback();
         return;
       }
-
-      const idsQuery = encodeURIComponent(seedObjectIds.join(","));
-      fetch(`${API_BASE}/artworks/by-ids?ids=${idsQuery}`)
+      fetch(
+        `${API_BASE}/artworks/by-ids?ids=${encodeURIComponent(seedObjectIds.join(","))}`,
+      )
         .then((r) => {
-          if (!r.ok) throw new Error("fallback");
+          if (!r.ok) throw new Error();
           return r.json();
         })
-        .then((data: ArtworkFromAPI[]) => {
-          const guestItems: ForYouItem[] = data.map((a) => ({
-            id: a.artwork_id,
-            title: a.title ?? "Untitled",
-            about: a.description ?? "",
-            imageUrl: a.image_url,
-            classification: a.classification,
-            department: a.department,
-            displaydate: a.displaydate,
-            displaymaker: a.displaymaker,
-            on_view: a.on_view,
-          }));
-          setItems(guestItems);
+        .then((d: ArtworkFromAPI[]) => {
+          setItems(
+            d.map((a) => ({
+              id: a.artwork_id,
+              title: a.title ?? "Untitled",
+              about: a.description ?? "",
+              imageUrl: a.image_url,
+              classification: a.classification,
+              department: a.department,
+              displaydate: a.displaydate,
+              displaymaker: a.displaymaker,
+              on_view: a.on_view,
+            })),
+          );
           setLoading(false);
         })
-        .catch(() => loadFallbackFeed());
+        .catch(loadFallback);
       return;
     }
-
     if (!userId) {
-      loadFallbackFeed();
+      loadFallback();
       return;
     }
 
     fetch(`${API_BASE}/for-you/${userId}`)
       .then((r) => {
-        if (!r.ok) throw new Error("fallback");
+        if (!r.ok) throw new Error();
         return r.json();
       })
-      .then((data: ForYouItem[]) => {
-        setItems(data);
+      .then((d: ForYouItem[]) => {
+        setItems(d);
         setLoading(false);
       })
-      .catch(() => loadFallbackFeed());
+      .catch(loadFallback);
   }, [isGuest, seedObjectIds, userId]);
 
-  const handleSearch = (query: string) => {
+  const handleSearch = (q: string) => {
     setVisibleCount(10);
     setSearchLoading(true);
-    fetch(`${API_BASE}/search?q=${encodeURIComponent(query)}`)
+    fetch(`${API_BASE}/search?q=${encodeURIComponent(q)}`)
       .then((r) => r.json())
-      .then((data: ForYouItem[]) => {
-        setSearchResults(data);
+      .then((d: ForYouItem[]) => {
+        setSearchResults(d);
         setSearchLoading(false);
       })
       .catch(() => setSearchLoading(false));
   };
-
   const handleClear = () => {
     setSearchResults(null);
     setFilterResults(null);
     setVisibleCount(10);
   };
-
-  // When filters change, search the full collection using tag names as query
   const handleFiltersChange = (filters: string[]) => {
     setActiveFilters(filters);
     setVisibleCount(10);
-    if (filters.length === 0) {
+    if (!filters.length) {
       setFilterResults(null);
       return;
     }
-    // Join filter tags with spaces — backend search handles multiple keywords
-    const query = filters.join(" ");
-    fetch(`${API_BASE}/search?q=${encodeURIComponent(query)}`)
+    fetch(`${API_BASE}/search?q=${encodeURIComponent(filters.join(" "))}`)
       .then((r) => r.json())
-      .then((data: ForYouItem[]) => setFilterResults(data))
+      .then((d: ForYouItem[]) => setFilterResults(d))
       .catch(() => setFilterResults(null));
   };
 
@@ -165,11 +178,36 @@ export function ForYouScreen({
     on_view: item.on_view,
   });
 
+  // ── Tour-aware interaction handlers ──────────────────────────────────────
+  const handleToggleFavorite = (id: number) => {
+    const isNewLike = !favorites.includes(id);
+    onToggleFavorite(id);
+    if (tourActive && tourStep === "like-photos" && isNewLike) {
+      dispatchTourEvent(TOUR_EVENTS.FAVORITE_TOGGLED);
+    }
+  };
+
+  const handleOpenModal = (item: ForYouItem) => {
+    setModalItem(toExhibitItem(item));
+    if (tourActive && tourStep === "open-modals") {
+      dispatchTourEvent(TOUR_EVENTS.MODAL_OPENED);
+    }
+    onRecordView?.(item.id);
+  };
+
+  // Modal must appear above the tour popover (9010) so the user can interact with it
+  const modalZ = tourActive && tourStep === "open-modals" ? 9020 : undefined;
+
   return (
     <div
-      style={{ padding: "0px 20px 100px", overflowY: "auto", height: "100%" }}
+      data-tour="home-page"
+      style={{
+        padding: "0px 20px 100px",
+        overflowY: "auto",
+        height: "100%",
+      }}
     >
-      {/* ── Sticky header: title + search bar ── */}
+      {/* Sticky header */}
       <div
         style={{
           position: "sticky",
@@ -235,7 +273,6 @@ export function ForYouScreen({
           {searchLoading ? "Searching…" : "Loading your feed…"}
         </div>
       )}
-
       {!loading && !searchLoading && error && (
         <div
           style={{
@@ -251,7 +288,6 @@ export function ForYouScreen({
           Something went wrong loading your feed.
         </div>
       )}
-
       {!loading &&
         !searchLoading &&
         !error &&
@@ -289,16 +325,14 @@ export function ForYouScreen({
 
       {!loading && !searchLoading && !error && (
         <div
+          data-tour="artwork-grid"
           style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}
         >
           {visibleItems.map((item, index) => (
             <div
               key={item.id}
-              // Tour targets only the first card
               {...(index === 0 ? { "data-tour": "artwork-card" } : {})}
-              data-tour-track="view"
-              data-tour-art-id={String(item.id)}
-              onClick={() => setModalItem(toExhibitItem(item))}
+              onClick={() => handleOpenModal(item)}
               style={{
                 breakInside: "avoid",
                 marginBottom: 12,
@@ -333,14 +367,11 @@ export function ForYouScreen({
                     style={{ borderRadius: 0 }}
                   />
                 )}
-                {/* Tour targets the heart on the first card only */}
                 <button
                   {...(index === 0 ? { "data-tour": "favorite-btn" } : {})}
-                  data-tour-track="favorite"
-                  data-tour-art-id={String(item.id)}
                   onClick={(e) => {
                     e.stopPropagation();
-                    onToggleFavorite(item.id);
+                    handleToggleFavorite(item.id);
                   }}
                   style={{
                     position: "absolute",
@@ -397,7 +428,7 @@ export function ForYouScreen({
           style={{ marginTop: 16, display: "flex", justifyContent: "center" }}
         >
           <button
-            onClick={() => setVisibleCount((prev) => prev + 10)}
+            onClick={() => setVisibleCount((p) => p + 10)}
             style={{
               padding: "10px 24px",
               borderRadius: 6,
@@ -419,9 +450,12 @@ export function ForYouScreen({
         <ArtworkModal
           item={modalItem}
           favorites={favorites}
-          onToggleFavorite={onToggleFavorite}
+          onToggleFavorite={handleToggleFavorite}
           onClose={() => setModalItem(null)}
           onRecordView={onRecordView}
+          userId={userId}
+          // Elevate modal above tour popover during open-modals step
+          zIndex={modalZ}
         />
       )}
     </div>
