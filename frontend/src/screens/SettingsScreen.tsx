@@ -38,23 +38,21 @@ export function SettingsScreen({
     <div
       style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}
     >
-      {/* Title */}
-      <h1
-        style={{
-          margin: "0 0 4px",
-          fontSize: 24,
-          fontFamily: "'Playfair Display', serif",
-          fontWeight: 700,
-          letterSpacing: "0.06em",
-          color: theme.components.badge.text,
-          background: theme.components.badge.background,
-          display: "inline-block",
-          padding: "6px 12px",
-          borderRadius: 4,
-        }}
-      >
-        Settings
-      </h1>
+      {/* ── Sticky header: title only ── */}
+      <div style={{ position: "sticky", top: 0, zIndex: 20,
+        background: theme.colors.bg, paddingBottom: 8, marginBottom: 8 }}>
+        <h1
+          style={{
+            margin: 0,
+            fontSize: 24,
+            fontFamily: "'Playfair Display', serif",
+            fontWeight: 700,
+            color: theme.components.badge.text,
+          }}
+        >
+          Settings
+        </h1>
+      </div>
 
       {/* Profile card */}
       <div

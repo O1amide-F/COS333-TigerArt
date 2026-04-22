@@ -602,22 +602,23 @@ export function ExploreScreen({
 
   return (
     <div style={styles.page}>
-      {/* ── Tour target: search/filter bar ── */}
-      <div data-tour="explore-search">
-        <SearchFilterBar
-          onSearch={handleSearch}
-          onClear={handleClear}
-          isSearching={isSearching}
-          placeholder="Search by title or tag…"
-          activeFilters={activeFilters}
-          onFiltersChange={handleFiltersChange}
-        />
+      {/* ── Sticky header: title + search bar ── */}
+      <div style={{ position: "sticky", top: 0, zIndex: 20,
+        background: theme.colors.bg, paddingBottom: 8, marginBottom: 8 }}>
+        <h1 data-tour="explore-heading" style={{ ...styles.title, marginBottom: 8 }}>
+          {isSearching ? "Search Results" : "Explore"}
+        </h1>
+        <div data-tour="explore-search">
+          <SearchFilterBar
+            onSearch={handleSearch}
+            onClear={handleClear}
+            isSearching={isSearching}
+            placeholder="Search by title…"
+            activeFilters={activeFilters}
+            onFiltersChange={handleFiltersChange}
+          />
+        </div>
       </div>
-
-      {/* ── Tour target: page heading ── */}
-      <h1 data-tour="explore-heading" style={styles.title}>
-        {isSearching ? "SEARCH RESULTS" : "Explore"}
-      </h1>
 
       {searchLoading && (
         <div

@@ -118,7 +118,7 @@ export function SearchFilterBar({
       position: "sticky",
       top: 0,
       zIndex: 20,
-      background: "#fafaf8",
+      background: theme.colors.bg,
       paddingBottom: 8,
       marginBottom: 8,
     }}>
@@ -128,13 +128,13 @@ export function SearchFilterBar({
         {/* Search input */}
         <div style={{
           flex: 1,
-          background: theme.components.badge.background,
+          background: "#ffffff",
           borderRadius: 8,
           padding: "9px 12px",
           display: "flex",
           alignItems: "center",
           gap: 8,
-          border: `1.5px solid transparent`,
+          border: "none",
           transition: "border-color 0.15s",
         }}>
           <Search size={15} strokeWidth={2} color={theme.components.badge.mutedText} />
@@ -186,7 +186,7 @@ export function SearchFilterBar({
             style={{
               background: filterCount > 0
                 ? theme.components.button.primaryBackground
-                : theme.components.badge.background,
+                : "#ffffff",
               color: filterCount > 0
                 ? theme.components.button.primaryText
                 : theme.components.badge.mutedText,
@@ -316,7 +316,7 @@ export function SearchFilterBar({
               onMouseUp={() => { sortMouseDown.current = false; }}
               onClick={() => { setShowSort((v) => !v); setShowFilter(false); }}
               style={{
-                background: theme.components.badge.background,
+                background: "#ffffff",
                 color: theme.components.badge.mutedText,
                 border: "none", borderRadius: 8,
                 width: 36, height: 36,

@@ -18,24 +18,22 @@ export function NewsScreen() {
     <div
       style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}
     >
-      <h1
-        data-tour="news-heading"
-        style={{
-          margin: "0 0 4px",
-          fontSize: 24,
-          fontFamily: "'Playfair Display', serif",
-          fontWeight: 700,
-          letterSpacing: "0.06em",
-          color: theme.components.badge.text,
-          background: theme.components.badge.background,
-          display: "block",
-          padding: "8px 14px",
-          borderRadius: 4,
-          textAlign: "center",
-        }}
-      >
-        Latest News
-      </h1>
+      {/* ── Sticky header: title only ── */}
+      <div style={{ position: "sticky", top: 0, zIndex: 20,
+        background: "#fafaf8", paddingBottom: 8, marginBottom: 8 }}>
+        <h1
+          data-tour="news-heading"
+          style={{
+            margin: 0,
+            fontSize: 24,
+            fontFamily: "'Playfair Display', serif",
+            fontWeight: 700,
+            color: theme.components.badge.text,
+          }}
+        >
+          Latest News
+        </h1>
+      </div>
 
       <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
         {items.map((item, index) => (

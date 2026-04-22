@@ -124,46 +124,33 @@ export function FavoritesScreen({
     <div
       style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}
     >
-      {/* ── Tour target: search/filter bar ── */}
-      <div data-tour="favorites-search">
-        <SearchFilterBar
-          onSearch={(q) => setSearchQuery(q)}
-          onClear={() => setSearchQuery(null)}
-          isSearching={isSearching}
-          placeholder="Search your favorites…"
-          activeFilters={activeFilters}
-          onFiltersChange={setActiveFilters}
-          sortBy={sortBy}
-          onSortChange={setSortBy}
-        />
-      </div>
-
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          marginBottom: 24,
-        }}
-      >
-        {/* ── Tour target: page heading ── */}
+      {/* ── Sticky header: title + search bar ── */}
+      <div style={{ position: "sticky", top: 0, zIndex: 20,
+        background: theme.colors.bg, paddingBottom: 8, marginBottom: 8 }}>
         <h1
           data-tour="favorites-heading"
           style={{
-            margin: "0 0 4px",
+            margin: "0 0 8px",
             fontSize: 24,
             fontFamily: "'Playfair Display', serif",
             fontWeight: 700,
-            letterSpacing: "0.06em",
             color: theme.components.badge.text,
-            background: theme.components.badge.background,
-            display: "inline-block",
-            padding: "6px 12px",
-            borderRadius: 4,
           }}
         >
-          {isSearching ? "SEARCH RESULTS" : "Favorites"}
+          {isSearching ? "Search Results" : "Favorites"}
         </h1>
+        <div data-tour="favorites-search">
+          <SearchFilterBar
+            onSearch={(q) => setSearchQuery(q)}
+            onClear={() => setSearchQuery(null)}
+            isSearching={isSearching}
+            placeholder="Search your favorites…"
+            activeFilters={activeFilters}
+            onFiltersChange={setActiveFilters}
+            sortBy={sortBy}
+            onSortChange={setSortBy}
+          />
+        </div>
       </div>
 
       {isLoading ? (

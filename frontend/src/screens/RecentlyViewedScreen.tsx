@@ -184,34 +184,32 @@ export function RecentlyViewedScreen({
     <div
       style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}
     >
-      <div data-tour="recently-viewed-search">
-        <SearchFilterBar
-          onSearch={handleSearch}
-          onClear={handleClear}
-          isSearching={isSearching}
-          placeholder="Search recently viewed…"
-          activeFilters={activeFilters}
-          onFiltersChange={setActiveFilters}
-          sortBy={sortBy}
-          onSortChange={setSortBy}
-        />
-      </div>
-
-      <div
-        style={{
-          background: theme.components.badge.background,
-          borderRadius: 4,
-          padding: "6px 12px",
-          fontSize: 24,
-          margin: "0 0 4px",
-          fontFamily: "'Playfair Display', serif",
-          fontWeight: 700,
-          color: theme.components.badge.text,
-          marginBottom: 14,
-          textAlign: "center",
-        }}
-      >
-        {isSearching ? "SEARCH RESULTS" : "Recently Viewed"}
+      {/* ── Sticky header: title + search bar ── */}
+      <div style={{ position: "sticky", top: 0, zIndex: 20,
+        background: theme.colors.bg, paddingBottom: 8, marginBottom: 8 }}>
+        <h1
+          style={{
+            margin: "0 0 8px",
+            fontSize: 24,
+            fontFamily: "'Playfair Display', serif",
+            fontWeight: 700,
+            color: theme.components.badge.text,
+          }}
+        >
+          {isSearching ? "Search Results" : "Recently Viewed"}
+        </h1>
+        <div data-tour="recently-viewed-search">
+          <SearchFilterBar
+            onSearch={handleSearch}
+            onClear={handleClear}
+            isSearching={isSearching}
+            placeholder="Search recently viewed…"
+            activeFilters={activeFilters}
+            onFiltersChange={setActiveFilters}
+            sortBy={sortBy}
+            onSortChange={setSortBy}
+          />
+        </div>
       </div>
 
       {isLoading ? (

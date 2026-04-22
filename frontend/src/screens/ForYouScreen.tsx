@@ -166,33 +166,34 @@ export function ForYouScreen({
 
   return (
     <div
-      style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}
+      style={{ padding: "0px 20px 100px", overflowY: "auto", height: "100%" }}
     >
-      {/* ── Tour target: search bar ── */}
-      <div data-tour="search">
-        <SearchFilterBar
-          onSearch={handleSearch}
-          onClear={handleClear}
-          isSearching={isSearching}
-          placeholder="Search by title or tag…"
-          activeFilters={activeFilters}
-          onFiltersChange={handleFiltersChange}
-        />
+      {/* ── Sticky header: title + search bar ── */}
+      <div style={{ position: "sticky", top: 0, zIndex: 20,
+        background: theme.colors.bg, paddingTop: 8, paddingBottom: 2, marginBottom: 8 }}>
+        <h1
+          data-tour="for-you-heading"
+          style={{
+            margin: "0 0 8px",
+            fontSize: 24,
+            fontFamily: "'Playfair Display', serif",
+            fontWeight: 700,
+            color: theme.components.badge.text,
+          }}
+        >
+          {isSearching ? "Search Results" : "For You"}
+        </h1>
+        <div data-tour="search">
+          <SearchFilterBar
+            onSearch={handleSearch}
+            onClear={handleClear}
+            isSearching={isSearching}
+            placeholder="Search by title or tag…"
+            activeFilters={activeFilters}
+            onFiltersChange={handleFiltersChange}
+          />
+        </div>
       </div>
-
-      {/* ── Tour target: page heading ── */}
-      <h1
-        data-tour="for-you-heading"
-        style={{
-          margin: "0 0 4px",
-          fontSize: 24,
-          fontFamily: "'Playfair Display', serif",
-          fontWeight: 700,
-          color: theme.components.badge.text,
-        }}
-      >
-        {isSearching ? "Search Results" : "For You Page"}
-      </h1>
 
       <p
         style={{
