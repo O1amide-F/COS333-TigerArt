@@ -6,6 +6,7 @@ import type { NavId } from "../types";
 type BottomNavProps = {
   activeNav: NavId;
   onNavigate: (id: NavId) => void;
+  disabledNavIds?: NavId[];
 };
 
 function useIsDesktop() {
@@ -21,20 +22,40 @@ function useIsDesktop() {
   return isDesktop;
 }
 
-export function BottomNav({ activeNav, onNavigate }: BottomNavProps) {
+export function BottomNav({
+  activeNav,
+  onNavigate,
+  disabledNavIds = [],
+}: BottomNavProps) {
   const isDesktop = useIsDesktop();
 
   if (isDesktop) {
-    return <SidebarNav activeNav={activeNav} onNavigate={onNavigate} />;
+    return (
+      <SidebarNav
+        activeNav={activeNav}
+        onNavigate={onNavigate}
+        disabledNavIds={disabledNavIds}
+      />
+    );
   }
 
-  return <MobileNav activeNav={activeNav} onNavigate={onNavigate} />;
+  return (
+    <MobileNav
+      activeNav={activeNav}
+      onNavigate={onNavigate}
+      disabledNavIds={disabledNavIds}
+    />
+  );
 }
 
 // ----------------------------------------------------------------------------
 // Sidebar (desktop)
 // ----------------------------------------------------------------------------
-function SidebarNav({ activeNav, onNavigate }: BottomNavProps) {
+function SidebarNav({
+  activeNav,
+  onNavigate,
+  disabledNavIds = [],
+}: BottomNavProps) {
   return (
     <div
       style={{
@@ -66,14 +87,19 @@ function SidebarNav({ activeNav, onNavigate }: BottomNavProps) {
       {/* Nav items */}
       {NAV_ITEMS.map((item) => {
         const isActive = activeNav === item.id;
+        const isDisabled = disabledNavIds.includes(item.id);
         return (
           <button
             key={item.id}
             onClick={() => onNavigate(item.id)}
             data-tour={`nav-${item.id.replace(/_/g, "-")}`}
             aria-label={item.label}
+            aria-disabled={isDisabled}
             style={{
-              background: isActive ? "rgba(255,255,255,0.1)" : "transparent",
+              background:
+                isActive && !isDisabled
+                  ? "rgba(255,255,255,0.1)"
+                  : "transparent",
               border: "none",
               cursor: "pointer",
               display: "flex",
@@ -82,20 +108,20 @@ function SidebarNav({ activeNav, onNavigate }: BottomNavProps) {
               padding: "12px 24px",
               borderRadius: 8,
               margin: "0 12px",
-              opacity: 1,
+              opacity: isDisabled ? 0.35 : 1,
               transition: "opacity 0.2s, background 0.2s",
             }}
           >
             <item.icon
               size={20}
-              strokeWidth={isActive ? 2.2 : 1.9}
+              strokeWidth={isActive && !isDisabled ? 2.2 : 1.9}
               color={theme.components.nav.icon}
             />
             <span
               style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: 14,
-                fontWeight: isActive ? 600 : 400,
+                fontWeight: isActive && !isDisabled ? 600 : 400,
                 color: theme.components.nav.icon,
                 letterSpacing: "0.01em",
               }}
@@ -103,7 +129,7 @@ function SidebarNav({ activeNav, onNavigate }: BottomNavProps) {
               {item.label}
             </span>
             {/* Active indicator bar */}
-            {isActive && (
+            {isActive && !isDisabled && (
               <div
                 style={{
                   marginLeft: "auto",
@@ -125,7 +151,11 @@ function SidebarNav({ activeNav, onNavigate }: BottomNavProps) {
 // ----------------------------------------------------------------------------
 // Bottom bar (mobile / tablet)
 // ----------------------------------------------------------------------------
-function MobileNav({ activeNav, onNavigate }: BottomNavProps) {
+function MobileNav({
+  activeNav,
+  onNavigate,
+  disabledNavIds = [],
+}: BottomNavProps) {
   return (
     <div
       style={{
@@ -137,29 +167,38 @@ function MobileNav({ activeNav, onNavigate }: BottomNavProps) {
         flexShrink: 0,
       }}
     >
-      {NAV_ITEMS.map((item) => (
-        <button
-          key={item.id}
-          onClick={() => onNavigate(item.id)}
-          data-tour={`nav-${item.id.replace(/_/g, "-")}`}
-          style={{
-            background: theme.components.button.ghostBackground,
-            border: theme.components.button.ghostBorder,
-            cursor: "pointer",
-            opacity:
-              activeNav === item.id ? 1 : theme.components.nav.inactiveOpacity,
-            transition: "opacity 0.2s",
-            padding: "4px 10px",
-          }}
-          aria-label={item.label}
-        >
-          <item.icon
-            size={22}
-            strokeWidth={1.9}
-            color={theme.components.nav.icon}
-          />
-        </button>
-      ))}
+      {NAV_ITEMS.map((item) => {
+        const isDisabled = disabledNavIds.includes(item.id);
+        const isActive = activeNav === item.id;
+
+        return (
+          <button
+            key={item.id}
+            onClick={() => onNavigate(item.id)}
+            data-tour={`nav-${item.id.replace(/_/g, "-")}`}
+            style={{
+              background: theme.components.button.ghostBackground,
+              border: theme.components.button.ghostBorder,
+              cursor: "pointer",
+              opacity: isDisabled
+                ? 0.35
+                : isActive
+                  ? 1
+                  : theme.components.nav.inactiveOpacity,
+              transition: "opacity 0.2s",
+              padding: "4px 10px",
+            }}
+            aria-label={item.label}
+            aria-disabled={isDisabled}
+          >
+            <item.icon
+              size={22}
+              strokeWidth={1.9}
+              color={theme.components.nav.icon}
+            />
+          </button>
+        );
+      })}
     </div>
   );
 }

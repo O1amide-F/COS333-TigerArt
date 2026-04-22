@@ -36,6 +36,8 @@ const NAV_TO_SCREEN: Record<NavId, Screen> = {
   recently_viewed: "recently_viewed",
 };
 
+const GUEST_RESTRICTED_NAV: NavId[] = ["home", "favorites", "recently_viewed"];
+
 function TigerArtAuthenticated({
   isGuest = false,
   initialUsername = "",
@@ -45,19 +47,40 @@ function TigerArtAuthenticated({
   initialUsername?: string;
   initialDisplayName?: string;
 }) {
-  const [screen, setScreen] = useState<Screen>("survey");
+  const [screen, setScreen] = useState<Screen>(isGuest ? "explore" : "survey");
   const [favorites, setFavorites] = useState<number[]>([]);
   const [recentlyViewed, setRecentlyViewed] = useState<number[]>([]);
   const [activeSection, setActiveSection] = useState<ExhibitSection | null>(
     null,
   );
-  const [activeNav, setActiveNav] = useState<NavId>("home");
+  const [activeNav, setActiveNav] = useState<NavId>(
+    isGuest ? "explore" : "home",
+  );
   const [surveySelections, setSurveySelections] = useState<number[]>([]);
+  const [showAccountPrompt, setShowAccountPrompt] = useState(false);
   const username = isGuest ? "Guest" : initialUsername;
   const displayName = isGuest ? "Guest" : initialDisplayName || initialUsername;
   const userId = isGuest ? null : initialUsername || null;
 
+  const showMakeAccountPrompt = useCallback(() => {
+    setShowAccountPrompt(true);
+  }, []);
+
+  useEffect(() => {
+    if (!showAccountPrompt) return;
+    const timeoutId = window.setTimeout(() => {
+      setShowAccountPrompt(false);
+    }, 2200);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [showAccountPrompt]);
+
   const handleNav = (id: NavId) => {
+    if (isGuest && GUEST_RESTRICTED_NAV.includes(id)) {
+      showMakeAccountPrompt();
+      return;
+    }
+
     setActiveNav(id);
     setScreen(NAV_TO_SCREEN[id]);
   };
@@ -74,8 +97,9 @@ function TigerArtAuthenticated({
   // On login: load userId, favorites, recently viewed from backend
   useEffect(() => {
     if (isGuest) {
-      // Skip auth fetches for guests and go straight to survey/home flow.
-      setScreen("survey");
+      // Guests skip survey and land directly in unrestricted navigation.
+      setScreen("explore");
+      setActiveNav("explore");
       return;
     }
     if (!initialUsername) return;
@@ -152,19 +176,22 @@ function TigerArtAuthenticated({
   };
 
   // Shared view recorder: guests update local state only; signed-in users also sync to backend.
-  const recordRecentlyViewed = useCallback((objectId?: number) => {
-    if (!objectId) return;
+  const recordRecentlyViewed = useCallback(
+    (objectId?: number) => {
+      if (!objectId) return;
 
-    if (!isGuest && userId) {
-      fetch(`${API_BASE}/recently-viewed/${userId}/${objectId}`, {
-        method: "POST",
-      }).catch(console.error);
-    }
+      if (!isGuest && userId) {
+        fetch(`${API_BASE}/recently-viewed/${userId}/${objectId}`, {
+          method: "POST",
+        }).catch(console.error);
+      }
 
-    setRecentlyViewed((prev) =>
-      [objectId, ...prev.filter((id) => id !== objectId)].slice(0, 15),
-    );
-  }, [isGuest, userId]);
+      setRecentlyViewed((prev) =>
+        [objectId, ...prev.filter((id) => id !== objectId)].slice(0, 15),
+      );
+    },
+    [isGuest, userId],
+  );
 
   // Records the view on the backend + updates local state, then navigates
   const handleSectionClick = (section: ExhibitSection) => {
@@ -267,6 +294,7 @@ function TigerArtAuthenticated({
         userId={templateContext.userId}
         isGuest={isGuest}
         onStartTour={startTour}
+        onRequireAccount={showMakeAccountPrompt}
         onSave={() => {
           if (templateContext.surveySelections.length === 3) {
             templateContext.setScreen("home");
@@ -299,10 +327,38 @@ function TigerArtAuthenticated({
         >
           {screen !== "survey" && (
             <div className="tiger-art-bottom-nav">
-              <BottomNav activeNav={activeNav} onNavigate={handleNav} />
+              <BottomNav
+                activeNav={activeNav}
+                onNavigate={handleNav}
+                disabledNavIds={isGuest ? GUEST_RESTRICTED_NAV : []}
+              />
             </div>
           )}
           <div className="tiger-art-content">{templates[screen]}</div>
+          {showAccountPrompt && (
+            <div
+              role="status"
+              aria-live="polite"
+              style={{
+                position: "fixed",
+                right: 16,
+                top: 16,
+                background: "rgba(15, 25, 35, 0.96)",
+                color: "#fff",
+                borderRadius: 8,
+                padding: "10px 12px",
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 13,
+                lineHeight: 1.35,
+                boxShadow: "0 6px 20px rgba(0,0,0,0.25)",
+                border: "1px solid rgba(255,255,255,0.12)",
+                zIndex: 60,
+                maxWidth: 260,
+              }}
+            >
+              Make an account to access this page.
+            </div>
+          )}
         </div>
       </div>
     </>

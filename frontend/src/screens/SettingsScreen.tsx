@@ -14,6 +14,7 @@ type SettingsScreenProps = {
   onSave: () => void;
   userId: string | null;
   onStartTour: () => void;
+  onRequireAccount?: () => void;
 };
 
 export function SettingsScreen({
@@ -23,9 +24,14 @@ export function SettingsScreen({
   onSave,
   userId,
   onStartTour,
+  onRequireAccount,
 }: SettingsScreenProps) {
   const [showSurvey, setShowSurvey] = useState(false);
   const [savedMessage, setSavedMessage] = useState(false);
+
+  const handleLoginScreen = () => {
+    window.location.href = isGuest ? "/" : "/logoutapp";
+  };
 
   const handleSurveySaved = () => {
     setShowSurvey(false);
@@ -39,8 +45,16 @@ export function SettingsScreen({
       style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}
     >
       {/* ── Sticky header: title only ── */}
-      <div style={{ position: "sticky", top: 0, zIndex: 20,
-        background: theme.colors.bg, paddingBottom: 8, marginBottom: 8 }}>
+      <div
+        style={{
+          position: "sticky",
+          top: 0,
+          zIndex: 20,
+          background: theme.colors.bg,
+          paddingBottom: 8,
+          marginBottom: 8,
+        }}
+      >
         <h1
           style={{
             margin: 0,
@@ -104,6 +118,34 @@ export function SettingsScreen({
             </button>
           )}
         </div>
+
+        <div
+          style={{ display: "flex", justifyContent: "flex-end", marginTop: 12 }}
+        >
+          <button
+            onClick={handleLoginScreen}
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 8,
+              background: isGuest
+                ? theme.components.button.primaryBackground
+                : theme.components.badge.background,
+              color: isGuest
+                ? theme.components.button.primaryText
+                : theme.components.badge.text,
+              borderRadius: 6,
+              padding: "8px 12px",
+              cursor: "pointer",
+              fontSize: 13,
+              fontFamily: "'DM Sans', sans-serif",
+              border: "none",
+            }}
+          >
+            Log In
+          </button>
+        </div>
       </div>
 
       {/* ── Tour target: preferences card ── */}
@@ -144,20 +186,32 @@ export function SettingsScreen({
                 color: theme.components.badge.mutedText,
               }}
             >
-              {showSurvey
-                ? "Select 3 images per question"
-                : "Retake the survey to update your For You feed"}
+              {isGuest
+                ? "Make an account to set personalized preferences"
+                : showSurvey
+                  ? "Select 3 images per question"
+                  : "Retake the survey to update your For You feed"}
             </div>
           </div>
           <button
-            onClick={() => setShowSurvey((v) => !v)}
+            onClick={() => {
+              if (isGuest) {
+                onRequireAccount?.();
+                return;
+              }
+              setShowSurvey((v) => !v);
+            }}
             style={{
-              background: showSurvey
+              background: isGuest
                 ? theme.components.badge.background
-                : theme.components.button.primaryBackground,
-              color: showSurvey
+                : showSurvey
+                  ? theme.components.badge.background
+                  : theme.components.button.primaryBackground,
+              color: isGuest
                 ? theme.components.badge.mutedText
-                : theme.components.button.primaryText,
+                : showSurvey
+                  ? theme.components.badge.mutedText
+                  : theme.components.button.primaryText,
               border: "none",
               borderRadius: 6,
               padding: "8px 14px",
@@ -165,12 +219,13 @@ export function SettingsScreen({
               fontSize: 13,
               fontWeight: 500,
               cursor: "pointer",
+              opacity: isGuest ? 0.65 : 1,
               whiteSpace: "nowrap",
               flexShrink: 0,
               marginLeft: 12,
             }}
           >
-            {showSurvey ? "Cancel" : "Retake Survey"}
+            {isGuest ? "Locked" : showSurvey ? "Cancel" : "Retake Survey"}
           </button>
         </div>
 
@@ -191,7 +246,7 @@ export function SettingsScreen({
           </div>
         )}
 
-        {showSurvey && (
+        {!isGuest && showSurvey && (
           <div style={{ marginTop: 4 }}>
             <SurveyFlow
               userId={userId}

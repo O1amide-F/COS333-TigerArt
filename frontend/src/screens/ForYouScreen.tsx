@@ -1,4 +1,4 @@
-import { useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import { Heart } from "lucide-react";
 import { SearchFilterBar } from "../components/SearchFilterBar";
 import { Placeholder } from "../components/Placeholder";
@@ -47,7 +47,6 @@ export function ForYouScreen({
   const [modalItem, setModalItem] = useState<ExhibitItem | null>(null);
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
   const [visibleCount, setVisibleCount] = useState(10);
-
 
   useEffect(() => {
     const loadFallbackFeed = () => {
@@ -129,28 +128,30 @@ export function ForYouScreen({
   const handleClear = () => {
     setSearchResults(null);
     setFilterResults(null);
-    setVisibleCount(10); 
+    setVisibleCount(10);
   };
 
-    // When filters change, search the full collection using tag names as query
-    const handleFiltersChange = (filters: string[]) => {
-      setActiveFilters(filters);
-      setVisibleCount(10);
-      if (filters.length === 0) {
-        setFilterResults(null);
-        return;
-      }
-      // Join filter tags with spaces — backend search handles multiple keywords
-      const query = filters.join(" ");
-      fetch(`${API_BASE}/search?q=${encodeURIComponent(query)}`)
-        .then((r) => r.json())
-        .then((data: ForYouItem[]) => setFilterResults(data))
-        .catch(() => setFilterResults(null));
-    };
+  // When filters change, search the full collection using tag names as query
+  const handleFiltersChange = (filters: string[]) => {
+    setActiveFilters(filters);
+    setVisibleCount(10);
+    if (filters.length === 0) {
+      setFilterResults(null);
+      return;
+    }
+    // Join filter tags with spaces — backend search handles multiple keywords
+    const query = filters.join(" ");
+    fetch(`${API_BASE}/search?q=${encodeURIComponent(query)}`)
+      .then((r) => r.json())
+      .then((data: ForYouItem[]) => setFilterResults(data))
+      .catch(() => setFilterResults(null));
+  };
 
   const displayItems = searchResults ?? filterResults ?? items;
   const isSearching = searchResults !== null || filterResults !== null;
-  const visibleItems = isSearching ? displayItems.slice(0, visibleCount) : displayItems;
+  const visibleItems = isSearching
+    ? displayItems.slice(0, visibleCount)
+    : displayItems;
 
   const toExhibitItem = (item: ForYouItem): ExhibitItem => ({
     id: item.id,
@@ -169,8 +170,17 @@ export function ForYouScreen({
       style={{ padding: "0px 20px 100px", overflowY: "auto", height: "100%" }}
     >
       {/* ── Sticky header: title + search bar ── */}
-      <div style={{ position: "sticky", top: 0, zIndex: 20,
-        background: theme.colors.bg, paddingTop: 8, paddingBottom: 2, marginBottom: 8 }}>
+      <div
+        style={{
+          position: "sticky",
+          top: 0,
+          zIndex: 20,
+          background: theme.colors.bg,
+          paddingTop: 8,
+          paddingBottom: 2,
+          marginBottom: 8,
+        }}
+      >
         <h1
           data-tour="for-you-heading"
           style={{
@@ -181,7 +191,7 @@ export function ForYouScreen({
             color: theme.components.badge.text,
           }}
         >
-          {isSearching ? "Search Results" : "For You"}
+          {isSearching ? "Search Results" : "Home"}
         </h1>
         <div data-tour="search">
           <SearchFilterBar
@@ -209,7 +219,7 @@ export function ForYouScreen({
       >
         {isSearching
           ? `${displayItems.length} result${displayItems.length !== 1 ? "s" : ""} found`
-          : "Curated according to your preferences"}
+          : "For You Page: Curated according to your preferences"}
       </p>
 
       {(loading || searchLoading) && (
@@ -383,13 +393,19 @@ export function ForYouScreen({
       )}
 
       {isSearching && visibleCount < displayItems.length && (
-        <div style={{ marginTop: 16, display: "flex", justifyContent: "center" }}>
+        <div
+          style={{ marginTop: 16, display: "flex", justifyContent: "center" }}
+        >
           <button
             onClick={() => setVisibleCount((prev) => prev + 10)}
             style={{
-              padding: "10px 24px", borderRadius: 6, border: "none",
-              cursor: "pointer", fontSize: 14,
-              fontFamily: "'DM Sans', sans-serif", fontWeight: 600,
+              padding: "10px 24px",
+              borderRadius: 6,
+              border: "none",
+              cursor: "pointer",
+              fontSize: 14,
+              fontFamily: "'DM Sans', sans-serif",
+              fontWeight: 600,
               background: theme.components.badge.background,
               color: theme.components.badge.text,
             }}
