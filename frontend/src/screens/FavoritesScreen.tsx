@@ -1,8 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
 import { Heart } from "lucide-react";
+import { ArtworkModal } from "../components/ArtworkModal";
 import { SearchFilterBar } from "../components/SearchFilterBar.tsx";
 import { itemMatchesFilters } from "../utils/filterUtils";
 import { theme } from "../theme";
+import type { ExhibitItem } from "../types";
 
 const API_BASE = "/api";
 
@@ -44,7 +46,7 @@ export function FavoritesScreen({
   const [artworks, setArtworks] = useState<ArtworkFromAPI[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [expandedId, setExpandedId] = useState<number | null>(null);
+  const [modalItem, setModalItem] = useState<ExhibitItem | null>(null);
   const [searchQuery, setSearchQuery] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState<SortOption>("recency");
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
@@ -76,11 +78,6 @@ export function FavoritesScreen({
       })
       .finally(() => setIsLoading(false));
   }, [userId, favorites]);
-
-  useEffect(() => {
-    if (expandedId !== null && !favorites.includes(expandedId))
-      setExpandedId(null);
-  }, [favorites, expandedId]);
 
   const favoriteCards = useMemo<FavoriteCard[]>(
     () =>
@@ -120,13 +117,35 @@ export function FavoritesScreen({
 
   const isSearching = searchQuery !== null;
 
+  const toExhibitItem = (artwork: ArtworkFromAPI): ExhibitItem => ({
+    id: artwork.artwork_id,
+    name: artwork.title ?? "Untitled",
+    desc: artwork.description ?? "",
+    imageUrl: artwork.image_url,
+    classification: artwork.classification,
+    department: artwork.department,
+    displaydate: artwork.displaydate,
+  });
+
+  const handleCardClick = (cardId: number) => {
+    const artwork = artworks.find((item) => item.artwork_id === cardId);
+    if (artwork) setModalItem(toExhibitItem(artwork));
+  };
+
   return (
     <div
       style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}
     >
-      {/* ── Sticky header: title + search bar ── */}
-      <div style={{ position: "sticky", top: 0, zIndex: 20,
-        background: theme.colors.bg, paddingBottom: 8, marginBottom: 8 }}>
+      <div
+        style={{
+          position: "sticky",
+          top: 0,
+          zIndex: 20,
+          background: theme.colors.bg,
+          paddingBottom: 8,
+          marginBottom: 8,
+        }}
+      >
         <h1
           data-tour="favorites-heading"
           style={{
@@ -229,9 +248,7 @@ export function FavoritesScreen({
             {displayCards.map((card) => (
               <div
                 key={card.id}
-                onClick={() =>
-                  setExpandedId((prev) => (prev === card.id ? null : card.id))
-                }
+                onClick={() => handleCardClick(card.id)}
                 style={{
                   borderRadius: 8,
                   overflow: "hidden",
@@ -239,6 +256,7 @@ export function FavoritesScreen({
                   transition: "all 180ms ease",
                   breakInside: "avoid",
                   marginBottom: 16,
+                  background: theme.components.card.background,
                 }}
               >
                 <div style={{ position: "relative" }}>
@@ -285,40 +303,36 @@ export function FavoritesScreen({
                     />
                   </button>
                 </div>
-                {expandedId === card.id && (
+                <div
+                  style={{
+                    padding: "12px",
+                    background: theme.components.card.background,
+                  }}
+                >
                   <div
                     style={{
-                      padding: "12px",
-                      background: theme.components.card.background,
+                      fontSize: 14,
+                      fontWeight: 700,
+                      color: theme.components.badge.text,
+                      fontFamily: "'DM Sans', sans-serif",
+                      lineHeight: 1.2,
                     }}
                   >
-                    <div
-                      style={{
-                        fontSize: 14,
-                        fontWeight: 700,
-                        color: theme.components.badge.text,
-                        fontFamily: "'DM Sans', sans-serif",
-                        lineHeight: 1.2,
-                        marginBottom: 8,
-                      }}
-                    >
-                      {card.title}
-                    </div>
-                    <div
-                      style={{
-                        fontSize: 13,
-                        fontFamily: "'DM Sans', sans-serif",
-                        color: theme.components.badge.mutedText,
-                        lineHeight: 1.5,
-                      }}
-                    >
-                      {card.subtitle}
-                    </div>
+                    {card.title}
                   </div>
-                )}
+                </div>
               </div>
             ))}
           </div>
+          {modalItem && (
+            <ArtworkModal
+              item={modalItem}
+              favorites={favorites}
+              onToggleFavorite={onToggleFavorite}
+              onClose={() => setModalItem(null)}
+              userId={userId}
+            />
+          )}
         </>
       ) : (
         <div

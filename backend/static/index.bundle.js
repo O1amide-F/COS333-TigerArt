@@ -1410,7 +1410,7 @@ function SearchFilterBar(_ref) {
       position: "sticky",
       top: 0,
       zIndex: 20,
-      background: "#fafaf8",
+      background: _theme__WEBPACK_IMPORTED_MODULE_5__.theme.colors.bg,
       paddingBottom: 8,
       marginBottom: 8
     },
@@ -1423,13 +1423,13 @@ function SearchFilterBar(_ref) {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
         style: {
           flex: 1,
-          background: _theme__WEBPACK_IMPORTED_MODULE_5__.theme.components.badge.background,
+          background: "#ffffff",
           borderRadius: 8,
           padding: "9px 12px",
           display: "flex",
           alignItems: "center",
           gap: 8,
-          border: "1.5px solid transparent",
+          border: "none",
           transition: "border-color 0.15s"
         },
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -1508,7 +1508,7 @@ function SearchFilterBar(_ref) {
             setShowSort(false);
           },
           style: {
-            background: filterCount > 0 ? _theme__WEBPACK_IMPORTED_MODULE_5__.theme.components.button.primaryBackground : _theme__WEBPACK_IMPORTED_MODULE_5__.theme.components.badge.background,
+            background: filterCount > 0 ? _theme__WEBPACK_IMPORTED_MODULE_5__.theme.components.button.primaryBackground : "#ffffff",
             color: filterCount > 0 ? _theme__WEBPACK_IMPORTED_MODULE_5__.theme.components.button.primaryText : _theme__WEBPACK_IMPORTED_MODULE_5__.theme.components.badge.mutedText,
             border: "none",
             borderRadius: 8,
@@ -1685,7 +1685,7 @@ function SearchFilterBar(_ref) {
             setShowFilter(false);
           },
           style: {
-            background: _theme__WEBPACK_IMPORTED_MODULE_5__.theme.components.badge.background,
+            background: "#ffffff",
             color: _theme__WEBPACK_IMPORTED_MODULE_5__.theme.components.badge.mutedText,
             border: "none",
             borderRadius: 8,
@@ -3825,20 +3825,32 @@ function ExploreScreen(_ref4) {
   var visibleSearchResults = displaySearchResults ? displaySearchResults.slice(0, visibleCount) : null;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
     style: styles.page,
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
-      "data-tour": "explore-search",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components_SearchFilterBar__WEBPACK_IMPORTED_MODULE_6__.SearchFilterBar, {
-        onSearch: handleSearch,
-        onClear: handleClear,
-        isSearching: isSearching,
-        placeholder: "Search by title or tag\u2026",
-        activeFilters: activeFilters,
-        onFiltersChange: handleFiltersChange
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("h1", {
-      "data-tour": "explore-heading",
-      style: styles.title,
-      children: isSearching ? "SEARCH RESULTS" : "Explore"
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
+      style: {
+        position: "sticky",
+        top: 0,
+        zIndex: 20,
+        background: _theme__WEBPACK_IMPORTED_MODULE_10__.theme.colors.bg,
+        paddingBottom: 8,
+        marginBottom: 8
+      },
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("h1", {
+        "data-tour": "explore-heading",
+        style: _objectSpread(_objectSpread({}, styles.title), {}, {
+          marginBottom: 8
+        }),
+        children: isSearching ? "Search Results" : "Explore"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+        "data-tour": "explore-search",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components_SearchFilterBar__WEBPACK_IMPORTED_MODULE_6__.SearchFilterBar, {
+          onSearch: handleSearch,
+          onClear: handleClear,
+          isSearching: isSearching,
+          placeholder: "Search by title\u2026",
+          activeFilters: activeFilters,
+          onFiltersChange: handleFiltersChange
+        })
+      })]
     }), searchLoading && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
       style: {
         textAlign: "center",
@@ -4033,10 +4045,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var lucide_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lucide-react */ "./node_modules/lucide-react/dist/esm/icons/heart.js");
-/* harmony import */ var _components_SearchFilterBar_tsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/SearchFilterBar.tsx */ "./src/components/SearchFilterBar.tsx");
-/* harmony import */ var _utils_filterUtils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/filterUtils */ "./src/utils/filterUtils.ts");
-/* harmony import */ var _theme__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../theme */ "./src/theme.ts");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _components_ArtworkModal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/ArtworkModal */ "./src/components/ArtworkModal.tsx");
+/* harmony import */ var _components_SearchFilterBar_tsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/SearchFilterBar.tsx */ "./src/components/SearchFilterBar.tsx");
+/* harmony import */ var _utils_filterUtils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/filterUtils */ "./src/utils/filterUtils.ts");
+/* harmony import */ var _theme__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../theme */ "./src/theme.ts");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
@@ -4047,6 +4060,7 @@ function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) 
 function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
 function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
 function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+
 
 
 
@@ -4073,8 +4087,8 @@ function FavoritesScreen(_ref) {
     setError = _useState6[1];
   var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
     _useState8 = _slicedToArray(_useState7, 2),
-    expandedId = _useState8[0],
-    setExpandedId = _useState8[1];
+    modalItem = _useState8[0],
+    setModalItem = _useState8[1];
   var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
     _useState0 = _slicedToArray(_useState9, 2),
     searchQuery = _useState0[0],
@@ -4108,9 +4122,6 @@ function FavoritesScreen(_ref) {
       return setIsLoading(false);
     });
   }, [userId, favorites]);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    if (expandedId !== null && !favorites.includes(expandedId)) setExpandedId(null);
-  }, [favorites, expandedId]);
   var favoriteCards = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(function () {
     return artworks.map(function (a) {
       var _a$title, _a$description;
@@ -4144,120 +4155,133 @@ function FavoritesScreen(_ref) {
       });
     }
     return cards.filter(function (c) {
-      return (0,_utils_filterUtils__WEBPACK_IMPORTED_MODULE_3__.itemMatchesFilters)(c, activeFilters);
+      return (0,_utils_filterUtils__WEBPACK_IMPORTED_MODULE_4__.itemMatchesFilters)(c, activeFilters);
     });
   }, [sortedCards, searchQuery, activeFilters]);
   var isSearching = searchQuery !== null;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+  var toExhibitItem = function toExhibitItem(artwork) {
+    var _artwork$title, _artwork$description;
+    return {
+      id: artwork.artwork_id,
+      name: (_artwork$title = artwork.title) !== null && _artwork$title !== void 0 ? _artwork$title : "Untitled",
+      desc: (_artwork$description = artwork.description) !== null && _artwork$description !== void 0 ? _artwork$description : "",
+      imageUrl: artwork.image_url,
+      classification: artwork.classification,
+      department: artwork.department,
+      displaydate: artwork.displaydate
+    };
+  };
+  var handleCardClick = function handleCardClick(cardId) {
+    var artwork = artworks.find(function (item) {
+      return item.artwork_id === cardId;
+    });
+    if (artwork) setModalItem(toExhibitItem(artwork));
+  };
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
     style: {
       padding: "16px 20px 100px",
       overflowY: "auto",
       height: "100%"
     },
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-      "data-tour": "favorites-search",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_SearchFilterBar_tsx__WEBPACK_IMPORTED_MODULE_2__.SearchFilterBar, {
-        onSearch: function onSearch(q) {
-          return setSearchQuery(q);
-        },
-        onClear: function onClear() {
-          return setSearchQuery(null);
-        },
-        isSearching: isSearching,
-        placeholder: "Search your favorites\u2026",
-        activeFilters: activeFilters,
-        onFiltersChange: setActiveFilters,
-        sortBy: sortBy,
-        onSortChange: setSortBy
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
       style: {
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        marginBottom: 24
+        position: "sticky",
+        top: 0,
+        zIndex: 20,
+        background: _theme__WEBPACK_IMPORTED_MODULE_5__.theme.colors.bg,
+        paddingBottom: 8,
+        marginBottom: 8
       },
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h1", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h1", {
         "data-tour": "favorites-heading",
         style: {
-          margin: "0 0 4px",
+          margin: "0 0 8px",
           fontSize: 24,
           fontFamily: "'Playfair Display', serif",
           fontWeight: 700,
-          letterSpacing: "0.06em",
-          color: _theme__WEBPACK_IMPORTED_MODULE_4__.theme.components.badge.text,
-          background: _theme__WEBPACK_IMPORTED_MODULE_4__.theme.components.badge.background,
-          display: "inline-block",
-          padding: "6px 12px",
-          borderRadius: 4
+          color: _theme__WEBPACK_IMPORTED_MODULE_5__.theme.components.badge.text
         },
-        children: isSearching ? "SEARCH RESULTS" : "Favorites"
-      })
-    }), isLoading ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+        children: isSearching ? "Search Results" : "Favorites"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+        "data-tour": "favorites-search",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_SearchFilterBar_tsx__WEBPACK_IMPORTED_MODULE_3__.SearchFilterBar, {
+          onSearch: function onSearch(q) {
+            return setSearchQuery(q);
+          },
+          onClear: function onClear() {
+            return setSearchQuery(null);
+          },
+          isSearching: isSearching,
+          placeholder: "Search your favorites\u2026",
+          activeFilters: activeFilters,
+          onFiltersChange: setActiveFilters,
+          sortBy: sortBy,
+          onSortChange: setSortBy
+        })
+      })]
+    }), isLoading ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
       style: {
-        border: "1px solid ".concat(_theme__WEBPACK_IMPORTED_MODULE_4__.theme.components.card.border),
+        border: "1px solid ".concat(_theme__WEBPACK_IMPORTED_MODULE_5__.theme.components.card.border),
         borderRadius: 10,
         padding: "20px 24px",
-        background: _theme__WEBPACK_IMPORTED_MODULE_4__.theme.components.card.background,
+        background: _theme__WEBPACK_IMPORTED_MODULE_5__.theme.components.card.background,
         fontSize: 13,
         fontFamily: "'DM Sans', sans-serif",
-        color: _theme__WEBPACK_IMPORTED_MODULE_4__.theme.components.badge.mutedText
+        color: _theme__WEBPACK_IMPORTED_MODULE_5__.theme.components.badge.mutedText
       },
       children: "Loading your favorites..."
-    }) : error ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+    }) : error ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
       style: {
-        border: "1px solid ".concat(_theme__WEBPACK_IMPORTED_MODULE_4__.theme.components.card.border),
+        border: "1px solid ".concat(_theme__WEBPACK_IMPORTED_MODULE_5__.theme.components.card.border),
         borderRadius: 10,
         padding: "20px 24px",
-        background: _theme__WEBPACK_IMPORTED_MODULE_4__.theme.components.card.background,
+        background: _theme__WEBPACK_IMPORTED_MODULE_5__.theme.components.card.background,
         fontSize: 13,
         fontFamily: "'DM Sans', sans-serif",
         color: "#c0392b"
       },
       children: error
-    }) : isSearching && displayCards.length === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+    }) : isSearching && displayCards.length === 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
       style: {
-        background: _theme__WEBPACK_IMPORTED_MODULE_4__.theme.components.badge.background,
+        background: _theme__WEBPACK_IMPORTED_MODULE_5__.theme.components.badge.background,
         borderRadius: 8,
         padding: "24px 20px",
         textAlign: "center",
         fontFamily: "'DM Sans', sans-serif"
       },
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
         style: {
           margin: "0 0 6px",
           fontWeight: 600,
-          color: _theme__WEBPACK_IMPORTED_MODULE_4__.theme.components.badge.text
+          color: _theme__WEBPACK_IMPORTED_MODULE_5__.theme.components.badge.text
         },
         children: "No matching favorites"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
         style: {
           margin: 0,
           fontSize: 13,
-          color: _theme__WEBPACK_IMPORTED_MODULE_4__.theme.components.badge.mutedText
+          color: _theme__WEBPACK_IMPORTED_MODULE_5__.theme.components.badge.mutedText
         },
         children: "Try a different search term"
       })]
-    }) : displayCards.length > 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
-      children: [isSearching && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
+    }) : displayCards.length > 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.Fragment, {
+      children: [isSearching && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("p", {
         style: {
           margin: "0 0 12px",
           fontSize: 13,
           fontFamily: "'DM Sans', sans-serif",
-          color: _theme__WEBPACK_IMPORTED_MODULE_4__.theme.components.badge.mutedText
+          color: _theme__WEBPACK_IMPORTED_MODULE_5__.theme.components.badge.mutedText
         },
-        children: [displayCards.length, " result", displayCards.length !== 1 ? "s" : "", " ", "in your favorites"]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+        children: [displayCards.length, " result", displayCards.length !== 1 ? "s" : "", " in your favorites"]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
         style: {
           columnCount: 2,
           columnGap: 16
         },
         children: displayCards.map(function (card) {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
             onClick: function onClick() {
-              return setExpandedId(function (prev) {
-                return prev === card.id ? null : card.id;
-              });
+              return handleCardClick(card.id);
             },
             style: {
               borderRadius: 8,
@@ -4265,13 +4289,14 @@ function FavoritesScreen(_ref) {
               cursor: "pointer",
               transition: "all 180ms ease",
               breakInside: "avoid",
-              marginBottom: 16
+              marginBottom: 16,
+              background: _theme__WEBPACK_IMPORTED_MODULE_5__.theme.components.card.background
             },
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
               style: {
                 position: "relative"
               },
-              children: [card.imageUrl ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+              children: [card.imageUrl ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("img", {
                 src: card.imageUrl,
                 alt: card.title,
                 style: {
@@ -4282,7 +4307,7 @@ function FavoritesScreen(_ref) {
                 onError: function onError(e) {
                   e.currentTarget.style.display = "none";
                 }
-              }) : null, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
+              }) : null, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
                 onClick: function onClick(e) {
                   e.stopPropagation();
                   onToggleFavorite(card.id);
@@ -4302,78 +4327,77 @@ function FavoritesScreen(_ref) {
                   justifyContent: "center",
                   cursor: "pointer"
                 },
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_1__["default"], {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_1__["default"], {
                   size: 16,
                   strokeWidth: 2.2,
-                  color: _theme__WEBPACK_IMPORTED_MODULE_4__.theme.components.favorite.active,
-                  fill: _theme__WEBPACK_IMPORTED_MODULE_4__.theme.components.favorite.active
+                  color: _theme__WEBPACK_IMPORTED_MODULE_5__.theme.components.favorite.active,
+                  fill: _theme__WEBPACK_IMPORTED_MODULE_5__.theme.components.favorite.active
                 })
               })]
-            }), expandedId === card.id && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
               style: {
                 padding: "12px",
-                background: _theme__WEBPACK_IMPORTED_MODULE_4__.theme.components.card.background
+                background: _theme__WEBPACK_IMPORTED_MODULE_5__.theme.components.card.background
               },
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
                 style: {
                   fontSize: 14,
                   fontWeight: 700,
-                  color: _theme__WEBPACK_IMPORTED_MODULE_4__.theme.components.badge.text,
+                  color: _theme__WEBPACK_IMPORTED_MODULE_5__.theme.components.badge.text,
                   fontFamily: "'DM Sans', sans-serif",
-                  lineHeight: 1.2,
-                  marginBottom: 8
+                  lineHeight: 1.2
                 },
                 children: card.title
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-                style: {
-                  fontSize: 13,
-                  fontFamily: "'DM Sans', sans-serif",
-                  color: _theme__WEBPACK_IMPORTED_MODULE_4__.theme.components.badge.mutedText,
-                  lineHeight: 1.5
-                },
-                children: card.subtitle
-              })]
+              })
             })]
           }, card.id);
         })
+      }), modalItem && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_ArtworkModal__WEBPACK_IMPORTED_MODULE_2__.ArtworkModal, {
+        item: modalItem,
+        favorites: favorites,
+        onToggleFavorite: onToggleFavorite,
+        onClose: function onClose() {
+          return setModalItem(null);
+        },
+        userId: userId
       })]
-    }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+    }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
       style: {
-        border: "1px solid ".concat(_theme__WEBPACK_IMPORTED_MODULE_4__.theme.components.favorites_card.border),
+        border: "1px solid ".concat(_theme__WEBPACK_IMPORTED_MODULE_5__.theme.components.favorites_card.border),
         borderRadius: 10,
         padding: "48px 24px",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         gap: 12,
-        background: _theme__WEBPACK_IMPORTED_MODULE_4__.theme.components.favorites_card.background
+        background: _theme__WEBPACK_IMPORTED_MODULE_5__.theme.components.favorites_card.background
       },
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(lucide_react__WEBPACK_IMPORTED_MODULE_1__["default"], {
         size: 48,
         strokeWidth: 1.7,
-        color: _theme__WEBPACK_IMPORTED_MODULE_4__.theme.components.favorite.inactive
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+        color: _theme__WEBPACK_IMPORTED_MODULE_5__.theme.components.favorite.inactive
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
         style: {
           fontSize: 16,
           fontFamily: "'Playfair Display', serif",
           fontWeight: 700,
-          color: _theme__WEBPACK_IMPORTED_MODULE_4__.theme.components.badge.text
+          color: _theme__WEBPACK_IMPORTED_MODULE_5__.theme.components.badge.text
         },
         children: "No favorites yet"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
         style: {
           fontSize: 13,
           fontFamily: "'DM Sans', sans-serif",
-          color: _theme__WEBPACK_IMPORTED_MODULE_4__.theme.components.badge.mutedText,
+          color: _theme__WEBPACK_IMPORTED_MODULE_5__.theme.components.badge.mutedText,
           textAlign: "center"
         },
         children: "Tap hearts on artworks to see them here"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
         onClick: onNavHome,
         style: {
           marginTop: 8,
-          background: _theme__WEBPACK_IMPORTED_MODULE_4__.theme.components.button.primaryBackground,
-          color: _theme__WEBPACK_IMPORTED_MODULE_4__.theme.components.button.primaryText,
+          background: _theme__WEBPACK_IMPORTED_MODULE_5__.theme.components.button.primaryBackground,
+          color: _theme__WEBPACK_IMPORTED_MODULE_5__.theme.components.button.primaryText,
           border: "none",
           borderRadius: 6,
           padding: "12px 28px",
@@ -4590,30 +4614,41 @@ function ForYouScreen(_ref) {
   };
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
     style: {
-      padding: "16px 20px 100px",
+      padding: "0px 20px 100px",
       overflowY: "auto",
       height: "100%"
     },
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
-      "data-tour": "search",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_SearchFilterBar__WEBPACK_IMPORTED_MODULE_2__.SearchFilterBar, {
-        onSearch: handleSearch,
-        onClear: handleClear,
-        isSearching: isSearching,
-        placeholder: "Search by title or tag\u2026",
-        activeFilters: activeFilters,
-        onFiltersChange: handleFiltersChange
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("h1", {
-      "data-tour": "for-you-heading",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
       style: {
-        margin: "0 0 4px",
-        fontSize: 24,
-        fontFamily: "'Playfair Display', serif",
-        fontWeight: 700,
-        color: _theme__WEBPACK_IMPORTED_MODULE_6__.theme.components.badge.text
+        position: "sticky",
+        top: 0,
+        zIndex: 20,
+        background: _theme__WEBPACK_IMPORTED_MODULE_6__.theme.colors.bg,
+        paddingTop: 8,
+        paddingBottom: 2,
+        marginBottom: 8
       },
-      children: isSearching ? "Search Results" : "For You Page"
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("h1", {
+        "data-tour": "for-you-heading",
+        style: {
+          margin: "0 0 8px",
+          fontSize: 24,
+          fontFamily: "'Playfair Display', serif",
+          fontWeight: 700,
+          color: _theme__WEBPACK_IMPORTED_MODULE_6__.theme.components.badge.text
+        },
+        children: isSearching ? "Search Results" : "For You"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+        "data-tour": "search",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_SearchFilterBar__WEBPACK_IMPORTED_MODULE_2__.SearchFilterBar, {
+          onSearch: handleSearch,
+          onClear: handleClear,
+          isSearching: isSearching,
+          placeholder: "Search by title or tag\u2026",
+          activeFilters: activeFilters,
+          onFiltersChange: handleFiltersChange
+        })
+      })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("p", {
       style: {
         margin: "0 0 20px",
@@ -4940,22 +4975,26 @@ function NewsScreen() {
       overflowY: "auto",
       height: "100%"
     },
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h1", {
-      "data-tour": "news-heading",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
       style: {
-        margin: "0 0 4px",
-        fontSize: 24,
-        fontFamily: "'Playfair Display', serif",
-        fontWeight: 700,
-        letterSpacing: "0.06em",
-        color: _theme__WEBPACK_IMPORTED_MODULE_4__.theme.components.badge.text,
-        background: _theme__WEBPACK_IMPORTED_MODULE_4__.theme.components.badge.background,
-        display: "block",
-        padding: "8px 14px",
-        borderRadius: 4,
-        textAlign: "center"
+        position: "sticky",
+        top: 0,
+        zIndex: 20,
+        background: "#fafaf8",
+        paddingBottom: 8,
+        marginBottom: 8
       },
-      children: "Latest News"
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h1", {
+        "data-tour": "news-heading",
+        style: {
+          margin: 0,
+          fontSize: 24,
+          fontFamily: "'Playfair Display', serif",
+          fontWeight: 700,
+          color: _theme__WEBPACK_IMPORTED_MODULE_4__.theme.components.badge.text
+        },
+        children: "Latest News"
+      })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
       style: {
         display: "flex",
@@ -5267,32 +5306,37 @@ function RecentlyViewedScreen(_ref) {
       overflowY: "auto",
       height: "100%"
     },
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
-      "data-tour": "recently-viewed-search",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_SearchFilterBar_tsx__WEBPACK_IMPORTED_MODULE_5__.SearchFilterBar, {
-        onSearch: handleSearch,
-        onClear: handleClear,
-        isSearching: isSearching,
-        placeholder: "Search recently viewed\u2026",
-        activeFilters: activeFilters,
-        onFiltersChange: setActiveFilters,
-        sortBy: sortBy,
-        onSortChange: setSortBy
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
       style: {
-        background: _theme__WEBPACK_IMPORTED_MODULE_8__.theme.components.badge.background,
-        borderRadius: 4,
-        padding: "6px 12px",
-        fontSize: 24,
-        margin: "0 0 4px",
-        fontFamily: "'Playfair Display', serif",
-        fontWeight: 700,
-        color: _theme__WEBPACK_IMPORTED_MODULE_8__.theme.components.badge.text,
-        marginBottom: 14,
-        textAlign: "center"
+        position: "sticky",
+        top: 0,
+        zIndex: 20,
+        background: _theme__WEBPACK_IMPORTED_MODULE_8__.theme.colors.bg,
+        paddingBottom: 8,
+        marginBottom: 8
       },
-      children: isSearching ? "SEARCH RESULTS" : "Recently Viewed"
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h1", {
+        style: {
+          margin: "0 0 8px",
+          fontSize: 24,
+          fontFamily: "'Playfair Display', serif",
+          fontWeight: 700,
+          color: _theme__WEBPACK_IMPORTED_MODULE_8__.theme.components.badge.text
+        },
+        children: isSearching ? "Search Results" : "Recently Viewed"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+        "data-tour": "recently-viewed-search",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_SearchFilterBar_tsx__WEBPACK_IMPORTED_MODULE_5__.SearchFilterBar, {
+          onSearch: handleSearch,
+          onClear: handleClear,
+          isSearching: isSearching,
+          placeholder: "Search recently viewed\u2026",
+          activeFilters: activeFilters,
+          onFiltersChange: setActiveFilters,
+          sortBy: sortBy,
+          onSortChange: setSortBy
+        })
+      })]
     }), isLoading ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
       style: {
         border: "1px solid ".concat(_theme__WEBPACK_IMPORTED_MODULE_8__.theme.components.card.border),
@@ -5603,20 +5647,25 @@ function SettingsScreen(_ref) {
       overflowY: "auto",
       height: "100%"
     },
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       style: {
-        margin: "0 0 4px",
-        fontSize: 24,
-        fontFamily: "'Playfair Display', serif",
-        fontWeight: 700,
-        letterSpacing: "0.06em",
-        color: _theme__WEBPACK_IMPORTED_MODULE_1__.theme.components.badge.text,
-        background: _theme__WEBPACK_IMPORTED_MODULE_1__.theme.components.badge.background,
-        display: "inline-block",
-        padding: "6px 12px",
-        borderRadius: 4
+        position: "sticky",
+        top: 0,
+        zIndex: 20,
+        background: _theme__WEBPACK_IMPORTED_MODULE_1__.theme.colors.bg,
+        paddingBottom: 8,
+        marginBottom: 8
       },
-      children: "Settings"
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
+        style: {
+          margin: 0,
+          fontSize: 24,
+          fontFamily: "'Playfair Display', serif",
+          fontWeight: 700,
+          color: _theme__WEBPACK_IMPORTED_MODULE_1__.theme.components.badge.text
+        },
+        children: "Settings"
+      })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       style: {
         border: "1px solid ".concat(_theme__WEBPACK_IMPORTED_MODULE_1__.theme.components.card.border),
@@ -5821,34 +5870,43 @@ function SurveyScreen(_ref) {
       overflowY: "auto",
       height: "100%"
     },
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
       style: {
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        gap: 8,
-        marginBottom: 24
+        position: "sticky",
+        top: 0,
+        zIndex: 20,
+        background: "#fafaf8",
+        paddingBottom: 8,
+        marginBottom: 16
       },
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
         style: {
-          background: _theme__WEBPACK_IMPORTED_MODULE_0__.theme.components.badge.background,
-          borderRadius: 4,
-          padding: "4px 16px",
-          color: _theme__WEBPACK_IMPORTED_MODULE_0__.theme.components.badge.text,
-          fontSize: 17,
-          fontFamily: "'DM Sans', sans-serif"
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: 4
         },
-        children: displayName || username || "Guest"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h2", {
-        style: {
-          margin: 0,
-          fontSize: 18,
-          fontFamily: "'Playfair Display', serif",
-          fontWeight: 700,
-          color: _theme__WEBPACK_IMPORTED_MODULE_0__.theme.components.badge.text
-        },
-        children: "Survey Preferences"
-      })]
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          style: {
+            background: _theme__WEBPACK_IMPORTED_MODULE_0__.theme.components.badge.background,
+            borderRadius: 4,
+            padding: "4px 16px",
+            color: _theme__WEBPACK_IMPORTED_MODULE_0__.theme.components.badge.text,
+            fontSize: 15,
+            fontFamily: "'DM Sans', sans-serif"
+          },
+          children: displayName || username || "Guest"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h2", {
+          style: {
+            margin: 0,
+            fontSize: 22,
+            fontFamily: "'Playfair Display', serif",
+            fontWeight: 700,
+            color: _theme__WEBPACK_IMPORTED_MODULE_0__.theme.components.badge.text
+          },
+          children: "Survey Preferences"
+        })]
+      })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_components_SurveyFlow__WEBPACK_IMPORTED_MODULE_1__.SurveyFlow, {
       userId: userId,
       onComplete: onContinue,
