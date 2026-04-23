@@ -98,7 +98,9 @@ export function ForYouScreen({
   // Merge personalized + random items and shuffle when either updates
   useEffect(() => {
     if (items.length === 0) return;
-    const merged = [...items, ...randomItems];
+    const seenIds = new Set(items.map((item) => item.id));
+    const uniqueRandom = randomItems.filter((item) => !seenIds.has(item.id));
+    const merged = [...items, ...uniqueRandom];
     for (let i = merged.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [merged[i], merged[j]] = [merged[j], merged[i]];
@@ -297,7 +299,7 @@ export function ForYouScreen({
           ? `${displayItems.length} result${displayItems.length !== 1 ? "s" : ""} found`
           : "For You Page: Curated according to your preferences"}
       </p>
-      
+
       {!isSearching && topTags.length > 0 && (
         <div style={{ display: "flex", alignItems: "center", gap: 8,
           marginBottom: 20, flexWrap: "wrap" }}>
