@@ -29,7 +29,8 @@
 .tiger-art-content {
   flex: 1;
   min-width: 0;
-  overflow-y: visible;
+  overflow-y: auto;
+  height: 100dvh;
   /* On mobile the bottom nav is fixed, so add padding so content isn't hidden behind it */
   padding-bottom: 72px;
 }
@@ -90,8 +91,8 @@
     flex: 1;
     padding-bottom: 0;
     padding-top: 0;
-    overflow-y: visible;
-    height: auto;
+    overflow-y: auto;
+    height: 100dvh;
   }
 
   /* Keep actual content centered while right pane still fills full app width */

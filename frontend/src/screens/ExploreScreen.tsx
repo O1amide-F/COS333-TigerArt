@@ -34,7 +34,6 @@ const styles = {
     fontWeight: 700,
     letterSpacing: "0.06em",
     color: theme.components.badge.text,
-    background: theme.components.badge.background,
     display: "inline-block",
     padding: "6px 12px",
     borderRadius: 4,
