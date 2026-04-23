@@ -95,17 +95,16 @@ export function SettingsScreen({
           >
             {isGuest ? "Guest" : displayName || username}
           </span>
-          {!isGuest && (
+          {isGuest ? (
             <button
-              onClick={() => {
-                window.location.href = "/logoutentra";
-              }}
+              onClick={handleLoginScreen}
               style={{
                 display: "inline-flex",
                 alignItems: "center",
+                justifyContent: "center",
                 gap: 8,
-                background: theme.components.badge.background,
-                color: theme.components.badge.text,
+                background: theme.components.button.primaryBackground,
+                color: theme.components.button.primaryText,
                 borderRadius: 6,
                 padding: "8px 12px",
                 cursor: "pointer",
@@ -114,37 +113,28 @@ export function SettingsScreen({
                 border: "none",
               }}
             >
-              Sign Out
+              Log In
+            </button>
+          ) : (
+            <button
+              onClick={() => { window.location.href = "/logoutentra"; }}
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+                background: theme.components.button.primaryBackground,
+                color: theme.components.button.primaryText,
+                borderRadius: 6,
+                padding: "8px 12px",
+                cursor: "pointer",
+                fontSize: 13,
+                fontFamily: "'DM Sans', sans-serif",
+                border: "none",
+              }}
+            >
+              Log Out
             </button>
           )}
-        </div>
-
-        <div
-          style={{ display: "flex", justifyContent: "flex-end", marginTop: 12 }}
-        >
-          <button
-            onClick={handleLoginScreen}
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: 8,
-              background: isGuest
-                ? theme.components.button.primaryBackground
-                : theme.components.badge.background,
-              color: isGuest
-                ? theme.components.button.primaryText
-                : theme.components.badge.text,
-              borderRadius: 6,
-              padding: "8px 12px",
-              cursor: "pointer",
-              fontSize: 13,
-              fontFamily: "'DM Sans', sans-serif",
-              border: "none",
-            }}
-          >
-            Log In
-          </button>
         </div>
       </div>
 
