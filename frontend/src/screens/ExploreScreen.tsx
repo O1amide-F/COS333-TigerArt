@@ -603,7 +603,7 @@ export function ExploreScreen({
     <div style={styles.page}>
       {/* ── Sticky header: title + search bar ── */}
       <div style={{ position: "sticky", top: 0, zIndex: 20,
-        background: theme.colors.bg, paddingBottom: 8, marginBottom: 8 }}>
+        background: theme.colors.bg, paddingBottom: 8, paddingTop:0, marginBottom: 8 }}>
         <h1 data-tour="explore-heading" style={{ ...styles.title, marginBottom: 8 }}>
           {isSearching ? "Search Results" : "Explore"}
         </h1>

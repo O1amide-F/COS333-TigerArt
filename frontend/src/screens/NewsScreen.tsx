@@ -16,11 +16,11 @@ export function NewsScreen() {
 
   return (
     <div
-      style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}
+      style={{ padding: "0px 20px 100px", overflowY: "auto", height: "100%" }}
     >
       {/* ── Sticky header: title only ── */}
       <div style={{ position: "sticky", top: 0, zIndex: 20,
-        background: theme.colors.bg, paddingBottom: 8, marginBottom: 8 }}>
+        background: theme.colors.bg, paddingBottom: 8, paddingTop:16, marginBottom: 8 }}>
         <h1
           data-tour="news-heading"
           style={{

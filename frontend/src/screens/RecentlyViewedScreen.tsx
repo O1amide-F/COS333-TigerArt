@@ -182,11 +182,11 @@ export function RecentlyViewedScreen({
 
   return (
     <div
-      style={{ padding: "16px 20px 100px", overflowY: "auto", height: "100%" }}
+      style={{ padding: "0px 20px 100px", overflowY: "auto", height: "100%" }}
     >
       {/* ── Sticky header: title + search bar ── */}
       <div style={{ position: "sticky", top: 0, zIndex: 20,
-        background: theme.colors.bg, paddingBottom: 8, marginBottom: 8 }}>
+        background: theme.colors.bg, paddingBottom: 8, paddingTop: 16, marginBottom: 8 }}>
         <h1
           style={{
             margin: "0 0 8px",
