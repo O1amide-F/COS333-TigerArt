@@ -354,7 +354,7 @@ function TigerArtAuthenticated({
                 maxWidth: 260,
               }}
             >
-              Make an account to access this page.
+              You need to Login to access this page.
             </div>
           )}
         </div>
