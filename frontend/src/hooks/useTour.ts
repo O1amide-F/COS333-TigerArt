@@ -77,14 +77,14 @@ export const TOUR_STEPS: StepMeta[] = [
   },
   {
     id: "like-photos",
-    target: "[data-tour='home-page']",
+    target: "[data-tour='artwork-grid']",
     title: "Try It: Like 2 Artworks ♡",
     body: "Tap the heart ♥ on any 2 artworks in your feed to save them. This teaches TigerArt what you enjoy!",
     interactive: true,
   },
   {
     id: "open-modals",
-    target: "[data-tour='home-page']",
+    target: "[data-tour='artwork-grid']",
     title: "Try It: Open 2 Artwork Details",
     body: "Tap any 2 artwork cards to open their detail view. You'll see the artist, date, classification, and more.",
     interactive: true,

@@ -17,7 +17,7 @@ import type { StepMeta, TourStatus } from "../hooks/useTour";
 type Rect = { top: number; left: number; width: number; height: number };
 
 const PADDING = 10;
-const POPOVER_WIDTH = 308;
+const POPOVER_WIDTH = 336;
 
 type TourOverlayProps = {
   status: TourStatus;
@@ -226,7 +226,7 @@ export function TourOverlay({
             : shouldUseFixedPopover
               ? { top: 20, left: 20 }
               : { top: popoverPos.top, left: popoverPos.left }),
-          width: POPOVER_WIDTH,
+          width: Math.min(POPOVER_WIDTH, window.innerWidth - 24),
           background: "#f2f1ee",
           border: "1px solid #dddbd5",
           borderRadius: 14,
@@ -248,17 +248,18 @@ export function TourOverlay({
         <div
           style={{
             background: "#0f1923",
-            padding: "13px 44px 13px 18px",
+            padding: "24px 44px 24px 18px",
             position: "relative",
           }}
         >
           <div
             style={{
               fontFamily: "'Playfair Display', serif",
-              fontSize: 15,
+              fontSize: 20,
               fontWeight: 700,
               color: "#fff",
-              lineHeight: 1.35,
+              lineHeight: 1.62,
+              letterSpacing: "0.01em",
             }}
           >
             {currentStepMeta.title}
@@ -299,10 +300,11 @@ export function TourOverlay({
         {/* Body */}
         <div
           style={{
-            padding: "14px 18px 0",
-            fontSize: 13.5,
+            padding: "16px 18px 0",
+            fontSize: 15,
             color: "#1c1c1a",
-            lineHeight: 1.68,
+            lineHeight: 1.9,
+            fontWeight: 500,
           }}
         >
           {currentStepMeta.body}
@@ -336,11 +338,11 @@ export function TourOverlay({
         {isInteractive && (
           <div
             style={{
-              margin: "10px 18px 0",
-              padding: "8px 12px",
+              margin: "12px 18px 0",
+              padding: "9px 12px",
               borderRadius: 8,
-              fontSize: 12,
-              lineHeight: 1.5,
+              fontSize: 13,
+              lineHeight: 1.72,
               background: canAdvance
                 ? "rgba(34,139,60,0.10)"
                 : "rgba(15,25,35,0.06)",
@@ -359,9 +361,9 @@ export function TourOverlay({
           style={{
             display: "flex",
             alignItems: "center",
-            padding: "14px 18px 16px",
+            padding: "16px 18px 18px",
             borderTop: "1px solid #e2e0db",
-            marginTop: 14,
+            marginTop: 16,
             gap: 8,
           }}
         >
@@ -369,7 +371,7 @@ export function TourOverlay({
           <div style={{ flex: 1, minWidth: 0 }}>
             <div
               style={{
-                fontSize: 10,
+                fontSize: 11,
                 fontWeight: 700,
                 color: "#5a3a20",
                 letterSpacing: "0.07em",
@@ -406,7 +408,8 @@ export function TourOverlay({
               background: "transparent",
               border: "none",
               color: "#999",
-              fontSize: 12,
+              fontSize: 12.5,
+              fontWeight: 600,
               cursor: "pointer",
               padding: "4px 2px",
               flexShrink: 0,
@@ -428,7 +431,7 @@ export function TourOverlay({
               color: canGoBack ? "#4f4c47" : "#9f9b95",
               borderRadius: 8,
               padding: "8px 14px",
-              fontSize: 13,
+              fontSize: 13.5,
               fontWeight: 600,
               fontFamily: "'DM Sans', sans-serif",
               cursor: canGoBack ? "pointer" : "not-allowed",
@@ -450,7 +453,7 @@ export function TourOverlay({
               border: "none",
               borderRadius: 8,
               padding: "8px 18px",
-              fontSize: 13,
+              fontSize: 13.5,
               fontWeight: 600,
               fontFamily: "'DM Sans', sans-serif",
               cursor: canAdvance ? "pointer" : "not-allowed",
@@ -493,7 +496,7 @@ function InteractiveProgress({
       >
         <span
           style={{
-            fontSize: 11,
+            fontSize: 12,
             fontWeight: 700,
             color: "#3d1d07",
             fontFamily: "'DM Sans', sans-serif",
@@ -503,7 +506,7 @@ function InteractiveProgress({
         </span>
         <span
           style={{
-            fontSize: 13,
+            fontSize: 14,
             color,
             fontFamily: "'DM Sans', sans-serif",
             fontWeight: 700,
@@ -517,7 +520,7 @@ function InteractiveProgress({
               {icon}
             </span>
           ))}
-          <span style={{ fontSize: 11, marginLeft: 5 }}>
+          <span style={{ fontSize: 12, marginLeft: 5, fontWeight: 600 }}>
             {done}/{total}
           </span>
         </span>
