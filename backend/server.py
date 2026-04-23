@@ -1,4 +1,4 @@
-from flask import Flask, abort, jsonify, request, send_from_directory
+from flask import Flask, abort, jsonify, request, send_from_directory, g
 from datetime import datetime
 import psycopg2
 import json
@@ -7,6 +7,7 @@ import os
 import requests
 import dotenv
 import auth
+import time
 
 DB_NAME = os.getenv("DB_NAME", "tigerart_db")
 DB_USER = os.getenv("DB_USER", "postgres")
@@ -29,6 +30,17 @@ auth.init(app)
 
 #-----------------------------------------------------------------------
 
+@app.before_request
+def log_request():
+    g.start_time = time.time()
+    print(f"REQUEST: {request.method} {request.path}", flush=True)
+
+@app.after_request
+def log_response(response):
+    duration = round(time.time() - g.start_time, 4)
+    print(f"RESPONSE: {response.status_code} ({duration}s)", flush=True)
+    return response
+
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def serve_index(path):
@@ -39,6 +51,7 @@ def serve_index(path):
         os.path.join(os.path.dirname(__file__), 'static'),
         'index.html'
     )
+#-----------------------------------------------------------------------
 
 
 #-----------------------------------------------------------------------
@@ -393,11 +406,20 @@ def update_user_vector_from_artwork(cur, user_id: str, objectid: int, direction:
     if user_vec is None:
         return  # User hasn't taken the survey yet — skip
 
+    # Checking how long each DB query takes (initiating)
+    db_start = time.time()
+    print("DB QUERY START: update_user_vector_from_artwork", flush=True)
+
     cur.execute("""
         SELECT classification, department, displaydate
         FROM artworks WHERE objectid = %s
     """, (objectid,))
     row = cur.fetchone()
+
+    # Checking how long each DB query takes (ending timing)
+    print(f"DB QUERY END: update_user_vector_from_artwork ({round(time.time() - db_start, 4)}s)", flush=True)
+
+
     if row is None:
         return
 
@@ -419,6 +441,10 @@ def get_for_you():
     conn = get_connection()
     cur = conn.cursor()
 
+    # Checking how long each DB query takes (initiating)
+    db_start = time.time()
+    print("DB QUERY START: get_for_you", flush=True)
+
     cur.execute("""
         SELECT
             a.objectid AS id,
@@ -437,6 +463,10 @@ def get_for_you():
         WHERE a.title IS NOT NULL
         LIMIT 20;
     """)
+
+    # Checking how long each DB query takes (ending timing)
+    print(f"DB QUERY END: get_for_you ({round(time.time() - db_start, 4)}s)", flush=True)
+
 
     rows = cur.fetchall()
     cur.close()
@@ -465,11 +495,20 @@ def get_news():
     conn = get_connection()
     cur = conn.cursor()
 
+    # Checking how long each DB query takes (initiating)
+    db_start = time.time()
+    print("DB QUERY START: get_news", flush=True)
+
+
     cur.execute("""
         SELECT id, uuid, title, published_date, image_url, article_url
         FROM news_items
         ORDER BY published_date DESC NULLS LAST, id DESC;
     """)
+
+    # Checking how long each DB query takes (ending timing)
+    print(f"DB QUERY END: get_news ({round(time.time() - db_start, 4)}s)", flush=True)
+
 
     rows = cur.fetchall()
     cur.close()
@@ -500,6 +539,11 @@ def refresh_news():
 def get_exhibits():
     conn = get_connection()
     cur = conn.cursor()
+
+    # Checking how long each DB query takes (initiating)
+    db_start = time.time()
+    print("DB QUERY START: get_exhibits", flush=True)
+
 
     cur.execute("""
         WITH ranked_artworks AS (
@@ -532,6 +576,9 @@ def get_exhibits():
         ORDER BY department, rn
     """)
 
+    # Checking how long each DB query takes (ending timing)
+    print(f"DB QUERY END: get_exhibits ({round(time.time() - db_start, 4)}s)", flush=True)
+
     rows = cur.fetchall()
     cur.close()
     conn.close()
@@ -561,6 +608,10 @@ def get_exhibit_detail(department):
     conn = get_connection()
     cur = conn.cursor()
 
+    # Checking how long each DB query takes (initiating)
+    db_start = time.time()
+    print("DB QUERY START: get_exhibit_detail", flush=True)
+
     cur.execute("""
         SELECT *
         FROM (
@@ -583,6 +634,10 @@ def get_exhibit_detail(department):
         ) AS unique_artworks
         ORDER BY RANDOM();
     """, (department,))
+
+    # Checking how long each DB query takes (ending timing)
+    print(f"DB QUERY END: get_exhibit_detail ({round(time.time() - db_start, 4)}s)", flush=True)
+
 
     rows = cur.fetchall()
     cur.close()
@@ -741,6 +796,11 @@ def get_for_you_personalised(user_id):
         return jsonify({"error": "No survey data found for this user. Please complete the survey."}), 404
 
     # Load all artworks with the fields needed for tagging
+
+    # Checking how long each DB query takes (initiating)
+    db_start = time.time()
+    print("DB QUERY START: get_for_you_personalised", flush=True)
+
     cur.execute("""
         SELECT
             a.objectid,
@@ -757,6 +817,10 @@ def get_for_you_personalised(user_id):
         LEFT JOIN artwork_images ai ON a.objectid = ai.objectid
         WHERE a.title IS NOT NULL;
     """)
+
+    # Checking how long each DB query takes (ending timing)
+    print(f"DB QUERY END: get_for_you_personalised ({round(time.time() - db_start, 4)}s)", flush=True)
+
     rows = cur.fetchall()
     cur.close()
     conn.close()
@@ -844,6 +908,11 @@ def search():
 
     conn = get_connection()
     cur = conn.cursor()
+
+    # Checking how long each DB query takes (initiating)
+    db_start = time.time()
+    print("DB QUERY START: search", flush=True)
+
     cur.execute("""
         SELECT
             a.objectid,
@@ -860,6 +929,10 @@ def search():
         LEFT JOIN artwork_images ai ON a.objectid = ai.objectid
         WHERE a.title IS NOT NULL;
     """)
+
+    # Checking how long each DB query takes (ending timing)
+    print(f"DB QUERY END: search ({round(time.time() - db_start, 4)}s)", flush=True)
+
     rows = cur.fetchall()
     cur.close()
     conn.close()
@@ -919,6 +992,11 @@ def get_artworks_by_ids():
     conn = get_connection()
     cur = conn.cursor()
     try:
+        # Checking how long each DB query takes (initiating)
+        db_start = time.time()
+        print("DB QUERY START: get_artworks_by_ids", flush=True)
+
+
         cur.execute("""
             SELECT
                 a.objectid,
@@ -936,6 +1014,10 @@ def get_artworks_by_ids():
             WHERE a.objectid = ANY(%s)
             ORDER BY array_position(%s, a.objectid);
         """, (object_ids, object_ids))
+
+        # Checking how long each DB query takes (ending timing)
+        print(f"DB QUERY END: get_artworks_by_ids ({round(time.time() - db_start, 4)}s)", flush=True)
+
         rows = cur.fetchall()
     finally:
         cur.close()
@@ -963,6 +1045,11 @@ def get_favorites(user_id):
     """Return full artwork details for all of a user's saved pieces."""
     conn = get_connection()
     cur = conn.cursor()
+
+    # Checking how long each DB query takes (initiating)
+    db_start = time.time()
+    print("DB QUERY START: get_favorites", flush=True)
+
     cur.execute("""
         SELECT a.objectid, a.title, a.medium, a.department, a.classification,
             a.displaydate, a.displaymaker, a.gallery_label_text, a.on_view, ai.image_url
@@ -972,6 +1059,10 @@ def get_favorites(user_id):
         WHERE sa.user_id = %s
         ORDER BY sa.id DESC
     """, (user_id,))
+
+    # Checking how long each DB query takes (ending timing)
+    print(f"DB QUERY END: get_favorites ({round(time.time() - db_start, 4)}s)", flush=True)
+
     rows = cur.fetchall()
     cur.close()
     conn.close()
@@ -998,11 +1089,19 @@ def add_favorite(user_id, objectid):
     conn = get_connection()
     cur = conn.cursor()
     try:
+        # Checking how long each DB query takes (initiating)
+        db_start = time.time()
+        print("DB QUERY START: add_favorite", flush=True)
+
         cur.execute("""
             INSERT INTO saved_artworks (user_id, objectid)
             VALUES (%s, %s)
             ON CONFLICT DO NOTHING
         """, (user_id, objectid))
+
+        # Checking how long each DB query takes (ending timing)
+        print(f"DB QUERY END: add_favorite ({round(time.time() - db_start, 4)}s)", flush=True)
+
         update_user_vector_from_artwork(cur, user_id, objectid, direction=+1.0)
         conn.commit()
         return jsonify({"status": "saved"}), 201
@@ -1020,10 +1119,19 @@ def remove_favorite(user_id, objectid):
     conn = get_connection()
     cur = conn.cursor()
     try:
+
+        # Checking how long each DB query takes (initiating)
+        db_start = time.time()
+        print("DB QUERY START: remove_favorite", flush=True)
+
         cur.execute("""
             DELETE FROM saved_artworks
             WHERE user_id = %s AND objectid = %s
         """, (user_id, objectid))
+
+        # Checking how long each DB query takes (ending timing)
+        print(f"DB QUERY END: remove_favorite ({round(time.time() - db_start, 4)}s)", flush=True)
+
         update_user_vector_from_artwork(cur, user_id, objectid, direction=-1.0)
         conn.commit()
     except Exception as e:
@@ -1039,7 +1147,16 @@ def get_favorite_ids(user_id):
     """Lightweight endpoint — returns just the saved objectids."""
     conn = get_connection()
     cur = conn.cursor()
+
+    # Checking how long each DB query takes (initiating)
+    db_start = time.time()
+    print("DB QUERY START: get_favorite_ids", flush=True)
+
     cur.execute("SELECT objectid FROM saved_artworks WHERE user_id = %s", (user_id,))
+    
+    # Checking how long each DB query takes (ending timing)
+    print(f"DB QUERY END: get_favorite_ids ({round(time.time() - db_start, 4)}s)", flush=True)
+
     ids = [row[0] for row in cur.fetchall()]
     cur.close()
     conn.close()
@@ -1050,6 +1167,11 @@ def get_recently_viewed_ids(user_id):
     """Lightweight endpoint — returns just the objectids in recency order."""
     conn = get_connection()
     cur = conn.cursor()
+
+    # Checking how long each DB query takes (initiating)
+    db_start = time.time()
+    print("DB QUERY START: get_recently_viewed_ids", flush=True)
+
     cur.execute("""
         SELECT a.objectid, a.title, a.medium, a.department, a.classification,
             a.displaydate, a.displaymaker, a.gallery_label_text, a.on_view, ai.image_url
@@ -1060,6 +1182,10 @@ def get_recently_viewed_ids(user_id):
         ORDER BY rv.viewed_at DESC
         LIMIT 20
     """, (user_id,))
+
+    # Checking how long each DB query takes (ending timing)
+    print(f"DB QUERY END: get_recently_viewed_ids ({round(time.time() - db_start, 4)}s)", flush=True)
+
     ids = [row[0] for row in cur.fetchall()]
     cur.close()
     conn.close()
@@ -1071,6 +1197,11 @@ def get_recently_viewed(user_id):
     """Return full artwork details for a user's recently viewed pieces (max 20)."""
     conn = get_connection()
     cur = conn.cursor()
+
+    # Checking how long each DB query takes (initiating)
+    db_start = time.time()
+    print("DB QUERY START: get_recently_viewed", flush=True)
+
     cur.execute("""
         SELECT a.objectid, a.title, a.medium, a.department, a.classification,
             a.displaydate, a.displaymaker, a.gallery_label_text, a.on_view, ai.image_url
@@ -1081,6 +1212,10 @@ def get_recently_viewed(user_id):
         ORDER BY rv.viewed_at DESC
         LIMIT 20
     """, (user_id,))
+
+    # Checking how long each DB query takes (ending timing)
+    print(f"DB QUERY END: get_recently_viewed ({round(time.time() - db_start, 4)}s)", flush=True)
+
     rows = cur.fetchall()
     cur.close()
     conn.close()
@@ -1107,11 +1242,19 @@ def add_recently_viewed(user_id, objectid):
     conn = get_connection()
     cur = conn.cursor()
     try:
+        # Checking how long each DB query takes (initiating)
+        db_start = time.time()
+        print("DB QUERY START: add_recently_viewed", flush=True)
+
         cur.execute("""
             INSERT INTO recently_viewed (user_id, objectid, viewed_at)
             VALUES (%s, %s, NOW())
             ON CONFLICT (user_id, objectid) DO UPDATE SET viewed_at = NOW()
         """, (user_id, objectid))
+
+        # Checking how long each DB query takes (ending timing)
+        print(f"DB QUERY END: add_recently_viewed ({round(time.time() - db_start, 4)}s)", flush=True)
+
         conn.commit()
         return jsonify({"status": "recorded"}), 201
     except Exception as e:
