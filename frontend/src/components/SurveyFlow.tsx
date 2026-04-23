@@ -162,6 +162,17 @@ export function SurveyFlow({
         ))}
       </div>
 
+      {/* Step counter*/}
+      <p style={{
+        textAlign: "center",
+        fontSize: 12,
+        fontFamily: "'DM Sans', sans-serif",
+        color: theme.components.badge.mutedText,
+        margin: "0 0 16px",
+      }}>
+        Question {currentStep + 1} of {totalSteps}
+      </p>
+
       {/* Prompt */}
       <div
         style={{
