@@ -1265,5 +1265,39 @@ def add_recently_viewed(user_id, objectid):
         conn.close()
 
 ## Changed to also run on phone using ip address
+@app.route("/api/random-artworks")
+def get_random_artworks():
+    """Return 10 random artworks with images for the discovery section."""
+    conn = get_connection()
+    cur = conn.cursor()
+    cur.execute("""
+        SELECT a.objectid, a.title,
+               CONCAT_WS(' - ', a.medium, a.displaydate, a.displaymaker) AS about,
+               a.department, a.classification, a.displaydate, a.displaymaker,
+               a.gallery_label_text, a.on_view, ai.image_url
+        FROM artworks a
+        LEFT JOIN artwork_images ai ON a.objectid = ai.objectid
+        WHERE a.title IS NOT NULL AND ai.image_url IS NOT NULL
+        ORDER BY RANDOM()
+        LIMIT 10;
+    """)
+    rows = cur.fetchall()
+    cur.close()
+    conn.close()
+    return jsonify([{
+        "id":                row[0],
+        "title":             row[1],
+        "about":             row[2],
+        "department":        row[3],
+        "classification":    row[4],
+        "displaydate":       row[5],
+        "displaymaker":      row[6],
+        "gallery_label_text": row[7],
+        "on_view":           row[8],
+        "imageUrl":          row[9],
+        "score":             0,
+    } for row in rows])
+
+
 if __name__ == "__main__":
     app.run(debug=True, port=5001, host='0.0.0.0')

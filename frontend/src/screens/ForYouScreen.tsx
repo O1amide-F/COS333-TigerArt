@@ -33,6 +33,7 @@ type ForYouScreenProps = {
   onRecordView?: (id: number) => void;
   tourActive?: boolean;
   tourStep?: TourStep;
+  refreshKey?: number;
 };
 
 type ArtworkFromAPI = {
@@ -56,6 +57,7 @@ export function ForYouScreen({
   seedObjectIds = [],
   tourActive = false,
   tourStep,
+  refreshKey = 0,
 }: ForYouScreenProps) {
   const [items, setItems] = useState<ForYouItem[]>([]);
   const [searchResults, setSearchResults] = useState<ForYouItem[] | null>(null);
@@ -66,6 +68,27 @@ export function ForYouScreen({
   const [modalItem, setModalItem] = useState<ExhibitItem | null>(null);
   const [activeFilters, setActiveFilters] = useState<string[]>([]);
   const [visibleCount, setVisibleCount] = useState(10);
+  const [randomItems, setRandomItems] = useState<ForYouItem[]>([]);
+  const [mergedItems, setMergedItems] = useState<ForYouItem[]>([]);
+
+  // Fetch 10 random artworks on each visit — reshuffles when refreshKey changes
+  useEffect(() => {
+    fetch(`${API_BASE}/random-artworks`)
+      .then((r) => r.json())
+      .then((d: ForYouItem[]) => setRandomItems(d))
+      .catch(() => {});
+  }, [refreshKey]);
+
+  // Merge personalized + random items and shuffle when either updates
+  useEffect(() => {
+    if (items.length === 0) return;
+    const merged = [...items, ...randomItems];
+    for (let i = merged.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [merged[i], merged[j]] = [merged[j], merged[i]];
+    }
+    setMergedItems(merged);
+  }, [items, randomItems]);
 
   useEffect(() => {
     const loadFallback = () =>
@@ -160,7 +183,7 @@ export function ForYouScreen({
       .catch(() => setFilterResults(null));
   };
 
-  const displayItems = searchResults ?? filterResults ?? items;
+  const displayItems = searchResults ?? filterResults ?? mergedItems;
   const isSearching = searchResults !== null || filterResults !== null;
   const visibleItems = isSearching
     ? displayItems.slice(0, visibleCount)
