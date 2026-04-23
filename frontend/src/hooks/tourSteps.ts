@@ -22,7 +22,7 @@ export const tourSteps: DriveStep[] = [
     popover: {
       title: "Search artworks",
       description:
-        "Find pieces by title, artist, department, or classification. Results update as you type.",
+        "Find pieces by title, artist, department, or classification. Results sort features vertically and update as you type.",
       side: "bottom",
       align: "start",
     },
