@@ -225,7 +225,7 @@ export function ForYouScreen({
     <div
       data-tour="home-page"
       style={{
-        padding: "0px 20px 100px",
+        padding: "16px 20px 100px",
         overflowY: "auto",
         height: "100%",
       }}
@@ -237,8 +237,7 @@ export function ForYouScreen({
           top: 0,
           zIndex: 20,
           background: theme.colors.bg,
-          paddingTop: 8,
-          paddingBottom: 2,
+          paddingBottom: 8,
           marginBottom: 8,
         }}
       >

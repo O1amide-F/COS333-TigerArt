@@ -20,7 +20,7 @@ export function NewsScreen() {
     >
       {/* ── Sticky header: title only ── */}
       <div style={{ position: "sticky", top: 0, zIndex: 20,
-        background: "#fafaf8", paddingBottom: 8, marginBottom: 8 }}>
+        background: theme.colors.bg, paddingBottom: 8, marginBottom: 8 }}>
         <h1
           data-tour="news-heading"
           style={{
