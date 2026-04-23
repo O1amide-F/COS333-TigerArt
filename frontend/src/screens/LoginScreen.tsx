@@ -1,4 +1,5 @@
 import { theme } from "../theme";
+const puamLogo = new URL("../assets/PUAMloginlogo.png", import.meta.url).href;
 
 export function LoginScreen({ onGuestLogin }: { onGuestLogin?: () => void }) {
 
@@ -21,10 +22,12 @@ export function LoginScreen({ onGuestLogin }: { onGuestLogin?: () => void }) {
         padding: "24px 20px",
       }}
     >
-      <h1 style={{ fontFamily: "'Playfair Display', serif", marginBottom: 8 }}>
-        Welcome to TigerArt
+      <h1 style={{ fontFamily: "'Playfair Display', serif", marginBottom: 24, fontSize: 48 }}>
+        Welcome to TigerArt!
       </h1>
-      <p style={{ color: theme.colors.text, marginBottom: 24 }}>
+      <img src={puamLogo} alt="PUAM Logo" style={{ marginTop: 24, width: 300, marginBottom: 32 }}
+      />
+      <p style={{ color: theme.colors.text, marginBottom: 24, fontSize: 20  }}>
         Please log in to continue
       </p>
       <button
@@ -36,7 +39,7 @@ export function LoginScreen({ onGuestLogin }: { onGuestLogin?: () => void }) {
           borderRadius: 6,
           padding: "10px 24px",
           fontFamily: "'DM Sans', sans-serif",
-          fontSize: 14,
+          fontSize: 18,
           fontWeight: 500,
           cursor: "pointer",
         }}
@@ -47,17 +50,17 @@ export function LoginScreen({ onGuestLogin }: { onGuestLogin?: () => void }) {
       {onGuestLogin && (
         <div
           style={{
-            marginTop: 14,
+            marginTop: 45,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            gap: 6,
+            gap: 10,
           }}
         >
           <button onClick={onGuestLogin} style={{ opacity: 0.7 }}>
-            Continue as guest
+            Continue as Guest
           </button>
-          <p style={{ fontSize: 12, color: "gray", margin: 0 }}>
+          <p style={{ fontSize: 12, color: "gray", margin: 3 }}>
             Guest mode: favorites and history won't be saved
           </p>
         </div>
