@@ -1299,5 +1299,19 @@ def get_random_artworks():
     } for row in rows])
 
 
+@app.route("/api/user-preferences/<string:user_id>")
+def get_user_preferences(user_id):
+    """Return the user's feature vector as a labeled dict."""
+    conn = get_connection()
+    cur = conn.cursor()
+    vec = load_user_vector(cur, user_id)
+    cur.close()
+    conn.close()
+    if vec is None:
+        return jsonify({"error": "No preferences found"}), 404
+    labeled = {FEATURE_DIMS[i]: round(vec[i], 4) for i in range(len(vec))}
+    return jsonify(labeled)
+
+
 if __name__ == "__main__":
     app.run(debug=True, port=5001, host='0.0.0.0')

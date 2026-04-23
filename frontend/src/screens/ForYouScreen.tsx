@@ -70,14 +70,30 @@ export function ForYouScreen({
   const [visibleCount, setVisibleCount] = useState(10);
   const [randomItems, setRandomItems] = useState<ForYouItem[]>([]);
   const [mergedItems, setMergedItems] = useState<ForYouItem[]>([]);
+  const [topTags, setTopTags] = useState<string[]>([]);
 
   // Fetch 10 random artworks on each visit — reshuffles when refreshKey changes
+  // Fetch top tags
   useEffect(() => {
     fetch(`${API_BASE}/random-artworks`)
       .then((r) => r.json())
       .then((d: ForYouItem[]) => setRandomItems(d))
       .catch(() => {});
-  }, [refreshKey]);
+
+      if (userId && !isGuest) {
+        fetch(`${API_BASE}/user-preferences/${userId}`)
+          .then((r) => r.json())
+          .then((data: Record<string, number>) => {
+            const sorted = Object.entries(data)
+              .filter(([, v]) => v > 0)
+              .sort(([, a], [, b]) => b - a)
+              .slice(0, 3)
+              .map(([tag]) => tag.replace(/_/g, " "));
+            setTopTags(sorted);
+          })
+          .catch(() => {});
+      }
+    }, [refreshKey, userId, isGuest]);
 
   // Merge personalized + random items and shuffle when either updates
   useEffect(() => {
@@ -281,6 +297,29 @@ export function ForYouScreen({
           ? `${displayItems.length} result${displayItems.length !== 1 ? "s" : ""} found`
           : "For You Page: Curated according to your preferences"}
       </p>
+      
+      {!isSearching && topTags.length > 0 && (
+        <div style={{ display: "flex", alignItems: "center", gap: 8,
+          marginBottom: 20, flexWrap: "wrap" }}>
+          <span style={{ fontSize: 12, fontFamily: "'DM Sans', sans-serif",
+            color: theme.components.badge.mutedText }}>
+            Your taste:
+          </span>
+          {topTags.map((tag) => (
+            <span key={tag} style={{
+              fontSize: 11, fontFamily: "'DM Sans', sans-serif",
+              fontWeight: 600,
+              color: theme.components.button.primaryText,
+              background: theme.components.button.primaryBackground,
+              borderRadius: 20, padding: "3px 10px",
+              textTransform: "capitalize" as const,
+              letterSpacing: "0.02em",
+            }}>
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
 
       {(loading || searchLoading) && (
         <div
