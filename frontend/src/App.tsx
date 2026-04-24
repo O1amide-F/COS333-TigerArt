@@ -60,12 +60,16 @@ function TigerArtAuthenticated({
   );
   const [surveySelections, setSurveySelections] = useState<number[]>([]);
   const [showAccountPrompt, setShowAccountPrompt] = useState(false);
+  const [accountPromptMessage, setAccountPromptMessage] = useState(
+    "Create an account to use this feature.",
+  );
 
   const username = isGuest ? "Guest" : initialUsername;
   const displayName = isGuest ? "Guest" : initialDisplayName || initialUsername;
   const userId = isGuest ? null : initialUsername || null;
 
-  const showMakeAccountPrompt = useCallback(() => {
+  const showMakeAccountPrompt = useCallback((message?: string) => {
+    if (message) setAccountPromptMessage(message);
     setShowAccountPrompt(true);
   }, []);
 
@@ -155,9 +159,7 @@ function TigerArtAuthenticated({
   const toggleFavorite = async (id: number) => {
     const isFavorited = favorites.includes(id);
     if (isGuest) {
-      setFavorites((prev) =>
-        isFavorited ? prev.filter((x) => x !== id) : [...prev, id],
-      );
+      showMakeAccountPrompt("Create an account to save favorites.");
       return;
     }
     if (!userId) return;
@@ -354,7 +356,7 @@ function TigerArtAuthenticated({
                 maxWidth: 260,
               }}
             >
-              You need to Login to access this page.
+              {accountPromptMessage}
             </div>
           )}
         </div>
