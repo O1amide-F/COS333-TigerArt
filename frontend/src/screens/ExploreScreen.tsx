@@ -15,6 +15,8 @@ const API_BASE = "/api";
 
 type ExploreScreenProps = {
   userId: string | null;
+  isGuest?: boolean;
+  onRequireAccount?: (message?: string) => void;
   onSectionClick: (section: ExhibitSection) => void;
   favorites: number[];
   onToggleFavorite: (id: number) => void;
@@ -479,6 +481,8 @@ function ExploreSectionCard({
 
 export function ExploreScreen({
   userId,
+  isGuest = false,
+  onRequireAccount,
   onSectionClick,
   favorites,
   onToggleFavorite,
@@ -491,14 +495,14 @@ export function ExploreScreen({
   const [searchLoading, setSearchLoading] = useState(false);
   const [modalItem, setModalItem] = useState<ExhibitItem | null>(null);
   const [visibleCount, setVisibleCount] = useState(10);
-  const [pinnedSections, setPinnedSections] = useState<string[]>(() => {
+  const [pinnedSections, setPinnedSections] = useState<string[]>([]);
+
+  useEffect(() => {
     try {
-      const s = localStorage.getItem(PINNED_SECTIONS_KEY);
-      return s ? JSON.parse(s) : [];
-    } catch {
-      return [];
-    }
-  });
+      // Clear legacy cached pins so Explore always starts unpinned.
+      localStorage.removeItem(PINNED_SECTIONS_KEY);
+    } catch {}
+  }, []);
 
   useEffect(() => {
     getExhibitSections()
@@ -507,14 +511,14 @@ export function ExploreScreen({
   }, []);
 
   const handleTogglePin = (sectionName: string) => {
+    if (isGuest) {
+      onRequireAccount?.("Create an account to pin exhibits.");
+      return;
+    }
     setPinnedSections((prev) => {
-      const updated = prev.includes(sectionName)
+      return prev.includes(sectionName)
         ? prev.filter((n) => n !== sectionName)
         : [...prev, sectionName];
-      try {
-        localStorage.setItem(PINNED_SECTIONS_KEY, JSON.stringify(updated));
-      } catch {}
-      return updated;
     });
   };
 

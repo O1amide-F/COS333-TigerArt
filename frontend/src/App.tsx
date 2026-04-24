@@ -259,6 +259,8 @@ function TigerArtAuthenticated({
     explore: (
       <ExploreScreen
         userId={templateContext.userId}
+        isGuest={isGuest}
+        onRequireAccount={showMakeAccountPrompt}
         onSectionClick={templateContext.handleSectionClick}
         favorites={templateContext.favorites}
         onToggleFavorite={templateContext.toggleFavorite}

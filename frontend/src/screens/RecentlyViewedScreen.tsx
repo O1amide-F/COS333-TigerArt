@@ -430,17 +430,23 @@ export function RecentlyViewedScreen({
               }}
             >
               <button
+                data-tour="exhibit-detail-more"
                 onClick={() => setVisibleCount((prev) => prev + 6)}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.background = "black";
+                  e.currentTarget.style.color = "#fff";
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.background = theme.components.badge.background;
+                  e.currentTarget.style.color = theme.components.badge.text;
+                }}
                 style={{
                   padding: "10px 16px",
                   borderRadius: 6,
-                  border: "none",
                   cursor: "pointer",
                   fontSize: 14,
                   fontFamily: "'DM Sans', sans-serif",
                   fontWeight: 600,
-                  background: theme.components.badge.background,
-                  color: theme.components.badge.text,
                 }}
               >
                 Click here to view more images
