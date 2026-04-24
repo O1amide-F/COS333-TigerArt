@@ -177,6 +177,7 @@ function TigerArtAuthenticated({
     }
   };
 
+  
   // ── Recently viewed ───────────────────────────────────────────────────────
   const recordRecentlyViewed = useCallback(
     (objectId?: number) => {
