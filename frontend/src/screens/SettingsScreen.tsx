@@ -30,6 +30,8 @@ export function SettingsScreen({
   const [savedMessage, setSavedMessage] = useState(false);
 
   const handleLoginScreen = () => {
+    localStorage.removeItem("tigerart.screen");
+    localStorage.removeItem("tigerart.activeNav");
     window.location.href = isGuest ? "/" : "/logoutapp";
   };
 
@@ -118,9 +120,13 @@ export function SettingsScreen({
             </button>
           ) : (
             <button
-              onClick={() => { window.location.href = "/logoutentra"; }}
-              style={{
-                display: "inline-flex",
+                onClick={() => {
+                  localStorage.removeItem("tigerart.screen");
+                  localStorage.removeItem("tigerart.activeNav");
+                  window.location.href = "/logoutentra";
+                }}
+                style={{
+                  display: "inline-flex",
                 alignItems: "center",
                 gap: 8,
                 background: theme.components.button.primaryBackground,

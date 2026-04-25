@@ -49,20 +49,33 @@ function TigerArtAuthenticated({
   initialUsername?: string;
   initialDisplayName?: string;
 }) {
-  const [screen, setScreen] = useState<Screen>(isGuest ? "explore" : "survey");
+  const [screen, setScreen] = useState<Screen>(() => {
+    if (isGuest) return "explore";
+    const saved = localStorage.getItem("tigerart.screen") as Screen | null;
+    return (saved && saved !== "survey") ? saved : "survey";
+  });
   const [favorites, setFavorites] = useState<number[]>([]);
   const [recentlyViewed, setRecentlyViewed] = useState<number[]>([]);
   const [activeSection, setActiveSection] = useState<ExhibitSection | null>(
     null,
   );
-  const [activeNav, setActiveNav] = useState<NavId>(
-    isGuest ? "explore" : "home",
-  );
+  const [activeNav, setActiveNav] = useState<NavId>(() => {
+    if (isGuest) return "explore";
+    return (localStorage.getItem("tigerart.activeNav") as NavId | null) ?? "home";
+  });
+
   const [surveySelections, setSurveySelections] = useState<number[]>([]);
   const [showAccountPrompt, setShowAccountPrompt] = useState(false);
   const [accountPromptMessage, setAccountPromptMessage] = useState(
     "Create an account to use this feature.",
   );
+
+  useEffect(() => {
+    if (!isGuest && screen !== "survey" && screen !== "exhibitDetail") {
+      localStorage.setItem("tigerart.screen", screen);
+      localStorage.setItem("tigerart.activeNav", activeNav);
+    }
+  }, [screen, activeNav, isGuest]);
 
   const username = isGuest ? "Guest" : initialUsername;
   const displayName = isGuest ? "Guest" : initialDisplayName || initialUsername;
@@ -144,8 +157,11 @@ function TigerArtAuthenticated({
       try {
         const res = await fetch(`${API_BASE}/for-you/${initialUsername}`);
         if (res.ok) {
-          setScreen("home");
-          setActiveNav("home");
+          const savedScreen = localStorage.getItem("tigerart.screen");
+          if (!savedScreen) {
+            setScreen("home");
+            setActiveNav("home");
+          }
         }
       } catch (e) {
         console.error("Failed to check user preferences:", e);
