@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 export type TourStep =
   | "welcome"
   | "for-you-heading"
+  | "your-taste"
   | "search"
   | "artwork-grid"
   | "like-photos"
@@ -62,6 +63,12 @@ export const TOUR_STEPS: StepMeta[] = [
     target: "[data-tour='for-you-heading']",
     title: "Your Personal Feed",
     body: "This is your Home feed — artwork chosen based on your survey preferences. It updates as you explore and favorite more pieces.",
+  },
+  {
+    id: "your-taste",
+    target: "[data-tour='your-taste']",
+    title: "Your Taste",
+    body: "These tags summarize the themes you interact with most. Home also mixes in a few completely random artworks so you can discover something new while still seeing pieces that fit you.",
   },
   {
     id: "search",

@@ -52,7 +52,7 @@ function TigerArtAuthenticated({
   const [screen, setScreen] = useState<Screen>(() => {
     if (isGuest) return "explore";
     const saved = localStorage.getItem("tigerart.screen") as Screen | null;
-    return (saved && saved !== "survey") ? saved : "survey";
+    return saved && saved !== "survey" ? saved : "survey";
   });
   const [favorites, setFavorites] = useState<number[]>([]);
   const [recentlyViewed, setRecentlyViewed] = useState<number[]>([]);
@@ -61,7 +61,9 @@ function TigerArtAuthenticated({
   );
   const [activeNav, setActiveNav] = useState<NavId>(() => {
     if (isGuest) return "explore";
-    return (localStorage.getItem("tigerart.activeNav") as NavId | null) ?? "home";
+    return (
+      (localStorage.getItem("tigerart.activeNav") as NavId | null) ?? "home"
+    );
   });
 
   const [surveySelections, setSurveySelections] = useState<number[]>([]);
@@ -193,7 +195,6 @@ function TigerArtAuthenticated({
     }
   };
 
-  
   // ── Recently viewed ───────────────────────────────────────────────────────
   const recordRecentlyViewed = useCallback(
     (objectId?: number) => {
@@ -349,6 +350,7 @@ function TigerArtAuthenticated({
                 activeNav={activeNav}
                 onNavigate={handleNav}
                 disabledNavIds={isGuest ? GUEST_RESTRICTED_NAV : []}
+                onStartTour={startTour}
               />
             </div>
           )}

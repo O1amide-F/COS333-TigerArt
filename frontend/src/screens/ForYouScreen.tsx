@@ -80,20 +80,20 @@ export function ForYouScreen({
       .then((d: ForYouItem[]) => setRandomItems(d))
       .catch(() => {});
 
-      if (userId && !isGuest) {
-        fetch(`${API_BASE}/user-preferences/${userId}`)
-          .then((r) => r.json())
-          .then((data: Record<string, number>) => {
-            const sorted = Object.entries(data)
-              .filter(([, v]) => v > 0)
-              .sort(([, a], [, b]) => b - a)
-              .slice(0, 3)
-              .map(([tag]) => tag.replace(/_/g, " "));
-            setTopTags(sorted);
-          })
-          .catch(() => {});
-      }
-    }, [refreshKey, userId, isGuest]);
+    if (userId && !isGuest) {
+      fetch(`${API_BASE}/user-preferences/${userId}`)
+        .then((r) => r.json())
+        .then((data: Record<string, number>) => {
+          const sorted = Object.entries(data)
+            .filter(([, v]) => v > 0)
+            .sort(([, a], [, b]) => b - a)
+            .slice(0, 3)
+            .map(([tag]) => tag.replace(/_/g, " "));
+          setTopTags(sorted);
+        })
+        .catch(() => {});
+    }
+  }, [refreshKey, userId, isGuest]);
 
   // Merge personalized + random items and shuffle when either updates
   useEffect(() => {
@@ -302,22 +302,40 @@ export function ForYouScreen({
       </p>
 
       {!isSearching && topTags.length > 0 && (
-        <div style={{ display: "flex", alignItems: "center", gap: 8,
-          marginBottom: 20, flexWrap: "wrap" }}>
-          <span style={{ fontSize: 12, fontFamily: "'DM Sans', sans-serif",
-            color: theme.components.badge.mutedText }}>
+        <div
+          data-tour="your-taste"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 8,
+            marginBottom: 20,
+            flexWrap: "wrap",
+          }}
+        >
+          <span
+            style={{
+              fontSize: 12,
+              fontFamily: "'DM Sans', sans-serif",
+              color: theme.components.badge.mutedText,
+            }}
+          >
             Your taste:
           </span>
           {topTags.map((tag) => (
-            <span key={tag} style={{
-              fontSize: 11, fontFamily: "'DM Sans', sans-serif",
-              fontWeight: 600,
-              color: theme.components.button.primaryText,
-              background: theme.components.button.primaryBackground,
-              borderRadius: 20, padding: "3px 10px",
-              textTransform: "capitalize" as const,
-              letterSpacing: "0.02em",
-            }}>
+            <span
+              key={tag}
+              style={{
+                fontSize: 11,
+                fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 600,
+                color: theme.components.button.primaryText,
+                background: theme.components.button.primaryBackground,
+                borderRadius: 20,
+                padding: "3px 10px",
+                textTransform: "capitalize" as const,
+                letterSpacing: "0.02em",
+              }}
+            >
               {tag}
             </span>
           ))}
