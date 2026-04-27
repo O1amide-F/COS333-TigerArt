@@ -24,6 +24,56 @@ function useIsDesktop() {
   return isDesktop;
 }
 
+function TourButton({
+  onClick,
+  compact = false,
+}: {
+  onClick: () => void;
+  compact?: boolean;
+}) {
+  const [isHovered, setIsHovered] = useState(false);
+  const baseBackground = "#223140";
+  const hoverBackground = "#112f51";
+
+  return (
+    <button
+      data-tour="nav-tour"
+      onClick={onClick}
+      aria-label="Take tour"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      style={{
+        width: compact ? "auto" : "100%",
+        margin: compact ? "10px 12px 0" : 0,
+        padding: compact ? "10px 14px" : "12px 14px",
+        borderRadius: 12,
+        border: `1px solid ${isHovered ? "#101821" : "#304051"}`,
+        backgroundColor: isHovered ? hoverBackground : baseBackground,
+        color: theme.components.nav.icon,
+        fontFamily: "'DM Sans', sans-serif",
+        fontSize: compact ? 13 : 14,
+        fontWeight: 700,
+        cursor: "pointer",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: 8,
+        transform: isHovered ? "translateY(-1px)" : "translateY(0)",
+        transition:
+          "transform 0.18s ease, background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease",
+      }}
+    >
+      <Info
+        size={compact ? 15 : 16}
+        strokeWidth={2.2}
+        color={theme.components.nav.icon}
+        style={{ transition: "color 0.18s ease, transform 0.18s ease" }}
+      />
+      Take tour
+    </button>
+  );
+}
+
 export function BottomNav({
   activeNav,
   onNavigate,
@@ -154,31 +204,7 @@ function SidebarNav({
 
         {onStartTour && (
           <div style={{ marginTop: "auto", padding: "16px 12px 0" }}>
-            <button
-              data-tour="nav-tour"
-              onClick={onStartTour}
-              aria-label="Take tour"
-              style={{
-                width: "100%",
-                padding: "12px 14px",
-                borderRadius: 12,
-                border: `1px solid ${theme.components.button.primaryText}`,
-                background: `linear-gradient(180deg, ${theme.components.button.primaryBackground}, rgba(255,255,255,0.18))`,
-                boxShadow: "0 6px 16px rgba(0, 0, 0, 0.18)",
-                color: theme.components.button.primaryText,
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: 14,
-                fontWeight: 700,
-                cursor: "pointer",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: 8,
-              }}
-            >
-              <Info size={16} strokeWidth={2.2} />
-              Take tour
-            </button>
+            <TourButton onClick={onStartTour} />
           </div>
         )}
       </div>
@@ -247,33 +273,7 @@ function MobileNav({
         })}
       </div>
 
-      {onStartTour && (
-        <button
-          data-tour="nav-tour"
-          onClick={onStartTour}
-          aria-label="Take tour"
-          style={{
-            margin: "10px 12px 0",
-            padding: "10px 14px",
-            borderRadius: 12,
-            border: `1px solid ${theme.components.button.primaryText}`,
-            background: `linear-gradient(180deg, ${theme.components.button.primaryBackground}, rgba(255,255,255,0.18))`,
-            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.16)",
-            color: theme.components.button.primaryText,
-            fontFamily: "'DM Sans', sans-serif",
-            fontSize: 13,
-            fontWeight: 700,
-            cursor: "pointer",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: 8,
-          }}
-        >
-          <Info size={15} strokeWidth={2.2} />
-          Take tour
-        </button>
-      )}
+      {onStartTour && <TourButton onClick={onStartTour} compact />}
     </div>
   );
 }
