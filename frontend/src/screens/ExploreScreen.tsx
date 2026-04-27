@@ -405,72 +405,74 @@ function ExploreSectionCard({
             style={styles.cardInner}
             onClick={() => onCardClick(item)}
           >
-          <div
-            style={{
-              borderRadius: 8,
-              overflow: "hidden",
-              background: theme.components.card.background,
-              height: "100%",
-            }}
-          >
-              <div style={{ position: "relative" }}>
-              {item.imageUrl ? (
-                <img
-                  src={item.imageUrl}
-                  alt={item.name}
-                  style={styles.image}
-                  onError={(e) => {
-                    e.currentTarget.onerror = null;
-                    e.currentTarget.src = getFallbackImageForAspect("3/4");
-                  }}
-                />
-              ) : (
-                <Placeholder label="Unable to Render Image" aspectRatio="3/4" />
-              )}
-              <button
-                data-tour-track="favorite"
-                data-tour-art-id={String(item.id)}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onToggleFavorite(item.id);
-                }}
-                style={heartButtonStyle}
-              >
-                <Heart
-                  size={16}
-                  strokeWidth={2.2}
-                  color={
-                    favorites.includes(item.id)
-                      ? theme.components.favorite.active
-                      : "#fff"
-                  }
-                  fill={
-                    favorites.includes(item.id)
-                      ? theme.components.favorite.active
-                      : "none"
-                  }
-                />
-              </button>
-            </div>
             <div
               style={{
-                padding: "6px 10px",
-                fontSize: 12,
-                fontFamily: "'DM Sans', sans-serif",
-                color: theme.components.badge.text,
-                lineHeight: 1.35,
-
-                // fixing caption height so everything's consistent
-                height: 34,
+                borderRadius: 8,
                 overflow: "hidden",
-                whiteSpace: "nowrap",
-                textOverflow: "ellipsis"
+                background: theme.components.card.background,
+                height: "100%",
               }}
             >
-              {item.name}
-            </div>
-          </div>
+              <div style={{ position: "relative" }}>
+                {item.imageUrl ? (
+                  <img
+                    src={item.imageUrl}
+                    alt={item.name}
+                    style={styles.image}
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = getFallbackImageForAspect("3/4");
+                    }}
+                  />
+                ) : (
+                  <Placeholder
+                    label="Unable to Render Image"
+                    aspectRatio="3/4"
+                  />
+                )}
+                <button
+                  data-tour-track="favorite"
+                  data-tour-art-id={String(item.id)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onToggleFavorite(item.id);
+                  }}
+                  style={heartButtonStyle}
+                >
+                  <Heart
+                    size={16}
+                    strokeWidth={2.2}
+                    color={
+                      favorites.includes(item.id)
+                        ? theme.components.favorite.active
+                        : "#fff"
+                    }
+                    fill={
+                      favorites.includes(item.id)
+                        ? theme.components.favorite.active
+                        : "none"
+                    }
+                  />
+                </button>
+              </div>
+              <div
+                style={{
+                  padding: "6px 10px",
+                  fontSize: 12,
+                  fontFamily: "'DM Sans', sans-serif",
+                  color: theme.components.badge.text,
+                  lineHeight: 1.35,
 
+                  // fixing caption height so everything's consistent
+                  height: 34,
+                  overflow: "hidden",
+                  whiteSpace: "nowrap",
+                  textOverflow: "ellipsis",
+                }}
+              >
+                {item.name}
+              </div>
+            </div>
           </div>
         ))}
         <ViewMoreCard section={section} onSectionClick={onSectionClick} />
@@ -495,14 +497,20 @@ export function ExploreScreen({
   const [searchLoading, setSearchLoading] = useState(false);
   const [modalItem, setModalItem] = useState<ExhibitItem | null>(null);
   const [visibleCount, setVisibleCount] = useState(10);
-  const [pinnedSections, setPinnedSections] = useState<string[]>([]);
+  const [pinnedSections, setPinnedSections] = useState<string[]>(() => {
+    try {
+      const saved = localStorage.getItem(PINNED_SECTIONS_KEY);
+      return saved ? (JSON.parse(saved) as string[]) : [];
+    } catch {
+      return [];
+    }
+  });
 
   useEffect(() => {
     try {
-      // Clear legacy cached pins so Explore always starts unpinned.
-      localStorage.removeItem(PINNED_SECTIONS_KEY);
+      localStorage.setItem(PINNED_SECTIONS_KEY, JSON.stringify(pinnedSections));
     } catch {}
-  }, []);
+  }, [pinnedSections]);
 
   useEffect(() => {
     getExhibitSections()
@@ -606,9 +614,21 @@ export function ExploreScreen({
   return (
     <div style={styles.page}>
       {/* ── Sticky header: title + search bar ── */}
-      <div style={{ position: "sticky", top: 0, zIndex: 20,
-        background: theme.colors.bg, paddingBottom: 8, paddingTop:0, marginBottom: 8 }}>
-        <h1 data-tour="explore-heading" style={{ ...styles.title, marginBottom: 8 }}>
+      <div
+        style={{
+          position: "sticky",
+          top: 0,
+          zIndex: 20,
+          background: theme.colors.bg,
+          paddingBottom: 8,
+          paddingTop: 0,
+          marginBottom: 8,
+        }}
+      >
+        <h1
+          data-tour="explore-heading"
+          style={{ ...styles.title, marginBottom: 8 }}
+        >
           {isSearching ? "Search Results" : "Explore"}
         </h1>
         <div data-tour="explore-search">
@@ -637,105 +657,182 @@ export function ExploreScreen({
         </div>
       )}
 
-      {isSearching && !searchLoading && displaySearchResults !== null && displaySearchResults.length === 0 && (
-        <div
-          style={{
-            background: theme.components.badge.background,
-            borderRadius: 8,
-            padding: "24px 20px",
-            textAlign: "center",
-            fontFamily: "'DM Sans', sans-serif",
-          }}
-        >
-          <p
+      {isSearching &&
+        !searchLoading &&
+        displaySearchResults !== null &&
+        displaySearchResults.length === 0 && (
+          <div
             style={{
-              margin: "0 0 6px",
-              fontWeight: 600,
-              color: theme.components.badge.text,
+              background: theme.components.badge.background,
+              borderRadius: 8,
+              padding: "24px 20px",
+              textAlign: "center",
+              fontFamily: "'DM Sans', sans-serif",
             }}
           >
-            No results found
-          </p>
-          <p
-            style={{
-              margin: 0,
-              fontSize: 13,
-              color: theme.components.badge.mutedText,
-            }}
-          >
-            Try a different keyword or tag
-          </p>
-        </div>
-      )}
+            <p
+              style={{
+                margin: "0 0 6px",
+                fontWeight: 600,
+                color: theme.components.badge.text,
+              }}
+            >
+              No results found
+            </p>
+            <p
+              style={{
+                margin: 0,
+                fontSize: 13,
+                color: theme.components.badge.mutedText,
+              }}
+            >
+              Try a different keyword or tag
+            </p>
+          </div>
+        )}
 
-      {isSearching && !searchLoading && displaySearchResults !== null && displaySearchResults.length > 0 && (
-        <>
-          <p style={{ margin: "0 0 12px", fontSize: 13,
-            fontFamily: "'DM Sans', sans-serif",
-            color: theme.components.badge.mutedText }}>
-            {displaySearchResults!.length} result
-            {displaySearchResults!.length !== 1 ? "s" : ""} found
-          </p>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
-            {visibleSearchResults!.map((item) => (
+      {isSearching &&
+        !searchLoading &&
+        displaySearchResults !== null &&
+        displaySearchResults.length > 0 && (
+          <>
+            <p
+              style={{
+                margin: "0 0 12px",
+                fontSize: 13,
+                fontFamily: "'DM Sans', sans-serif",
+                color: theme.components.badge.mutedText,
+              }}
+            >
+              {displaySearchResults!.length} result
+              {displaySearchResults!.length !== 1 ? "s" : ""} found
+            </p>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
+                gap: 12,
+              }}
+            >
+              {visibleSearchResults!.map((item) => (
+                <div
+                  key={item.id}
+                  onClick={() => setModalItem(forYouToExhibitItem(item))}
+                  style={{
+                    border: `1px solid ${theme.components.card.border}`,
+                    borderRadius: 8,
+                    overflow: "hidden",
+                    background: theme.components.card.background,
+                    cursor: "pointer",
+                  }}
+                >
+                  <div style={{ position: "relative" }}>
+                    {item.imageUrl ? (
+                      <img
+                        src={item.imageUrl}
+                        alt={item.title}
+                        style={{
+                          width: "100%",
+                          aspectRatio: "1/1",
+                          objectFit: "contain",
+                          backgroundColor:
+                            theme.components.image?.background ?? "#f5f5f0",
+                          display: "block",
+                        }}
+                        onError={(e) => {
+                          e.currentTarget.onerror = null;
+                          e.currentTarget.src =
+                            getFallbackImageForAspect("1/1");
+                        }}
+                      />
+                    ) : (
+                      <Placeholder
+                        label="No Image"
+                        aspectRatio="1/1"
+                        style={{ borderRadius: 0 }}
+                      />
+                    )}
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onToggleFavorite(item.id);
+                      }}
+                      style={{
+                        position: "absolute",
+                        top: 8,
+                        right: 8,
+                        background: "rgba(0,0,0,0.35)",
+                        backdropFilter: "blur(4px)",
+                        border: "none",
+                        borderRadius: "50%",
+                        width: 32,
+                        height: 32,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        cursor: "pointer",
+                      }}
+                    >
+                      <Heart
+                        size={16}
+                        strokeWidth={2.2}
+                        color={
+                          favorites.includes(item.id)
+                            ? theme.components.favorite.active
+                            : "#fff"
+                        }
+                        fill={
+                          favorites.includes(item.id)
+                            ? theme.components.favorite.active
+                            : "none"
+                        }
+                      />
+                    </button>
+                  </div>
+                  <div
+                    style={{
+                      padding: "8px 10px",
+                      fontSize: 13,
+                      fontWeight: 600,
+                      color: theme.components.badge.text,
+                      fontFamily: "'DM Sans', sans-serif",
+                      lineHeight: 1.3,
+                    }}
+                  >
+                    {item.title}
+                  </div>
+                </div>
+              ))}
+            </div>
+            {displaySearchResults!.length > visibleCount && (
               <div
-                key={item.id}
-                onClick={() => setModalItem(forYouToExhibitItem(item))}
                 style={{
-                  border: `1px solid ${theme.components.card.border}`,
-                  borderRadius: 8,
-                  overflow: "hidden",
-                  background: theme.components.card.background,
-                  cursor: "pointer",
+                  marginTop: 16,
+                  display: "flex",
+                  justifyContent: "center",
                 }}
               >
-                <div style={{ position: "relative" }}>
-                  {item.imageUrl ? (
-                    <img src={item.imageUrl} alt={item.title}
-                      style={{ width: "100%", aspectRatio: "1/1",
-                        objectFit: "contain",
-                        backgroundColor: theme.components.image?.background ?? "#f5f5f0",
-                        display: "block" }}
-                      onError={(e) => { e.currentTarget.onerror = null;
-                        e.currentTarget.src = getFallbackImageForAspect("1/1"); }} />
-                  ) : (
-                    <Placeholder label="No Image" aspectRatio="1/1" style={{ borderRadius: 0 }} />
-                  )}
-                  <button
-                    onClick={(e) => { e.stopPropagation(); onToggleFavorite(item.id); }}
-                    style={{ position: "absolute", top: 8, right: 8,
-                      background: "rgba(0,0,0,0.35)", backdropFilter: "blur(4px)",
-                      border: "none", borderRadius: "50%", width: 32, height: 32,
-                      display: "flex", alignItems: "center", justifyContent: "center",
-                      cursor: "pointer" }}>
-                    <Heart size={16} strokeWidth={2.2}
-                      color={favorites.includes(item.id) ? theme.components.favorite.active : "#fff"}
-                      fill={favorites.includes(item.id) ? theme.components.favorite.active : "none"} />
-                  </button>
-                </div>
-                <div style={{ padding: "8px 10px", fontSize: 13, fontWeight: 600,
-                  color: theme.components.badge.text,
-                  fontFamily: "'DM Sans', sans-serif", lineHeight: 1.3 }}>
-                  {item.title}
-                </div>
+                <button
+                  onClick={() => setVisibleCount((prev) => prev + 10)}
+                  style={{
+                    padding: "10px 24px",
+                    borderRadius: 6,
+                    border: "none",
+                    cursor: "pointer",
+                    fontSize: 14,
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontWeight: 600,
+                    background: theme.components.badge.background,
+                    color: theme.components.badge.text,
+                  }}
+                >
+                  Load more ({displaySearchResults!.length - visibleCount}{" "}
+                  remaining)
+                </button>
               </div>
-            ))}
-          </div>
-          {displaySearchResults!.length > visibleCount && (
-            <div style={{ marginTop: 16, display: "flex", justifyContent: "center" }}>
-              <button
-                onClick={() => setVisibleCount((prev) => prev + 10)}
-                style={{ padding: "10px 24px", borderRadius: 6, border: "none",
-                  cursor: "pointer", fontSize: 14,
-                  fontFamily: "'DM Sans', sans-serif", fontWeight: 600,
-                  background: theme.components.badge.background,
-                  color: theme.components.badge.text }}>
-                Load more ({displaySearchResults!.length - visibleCount} remaining)
-              </button>
-            </div>
-          )}
-        </>
-      )}
+            )}
+          </>
+        )}
 
       {!isSearching && (
         <>
