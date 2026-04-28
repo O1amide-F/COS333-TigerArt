@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Info, ClipboardList } from "lucide-react";
+import { Info, ClipboardList, LogOut } from "lucide-react";
 import { NAV_ITEMS } from "../data";
 import { theme } from "../theme";
 import type { NavId } from "../types";
@@ -10,6 +10,7 @@ type BottomNavProps = {
   disabledNavIds?: NavId[];
   onStartTour?: () => void;
   onStartSurvey?: () => void;
+  onLogout?: () => void;
 };
 
 function useIsDesktop() {
@@ -129,6 +130,7 @@ export function BottomNav({
   disabledNavIds = [],
   onStartTour,
   onStartSurvey,
+  onLogout,
 }: BottomNavProps) {
   const isDesktop = useIsDesktop();
 
@@ -140,6 +142,7 @@ export function BottomNav({
         disabledNavIds={disabledNavIds}
         onStartTour={onStartTour}
         onStartSurvey={onStartSurvey}
+        onLogout={onLogout}
       />
     );
   }
@@ -151,6 +154,7 @@ export function BottomNav({
       disabledNavIds={disabledNavIds}
       onStartTour={onStartTour}
       onStartSurvey={onStartSurvey}
+      onLogout={onLogout}
     />
   );
 }
@@ -164,6 +168,7 @@ function SidebarNav({
   disabledNavIds = [],
   onStartTour,
   onStartSurvey,
+  onLogout,
 }: BottomNavProps) {
   return (
     <div
@@ -254,7 +259,36 @@ function SidebarNav({
             </button>
           );
         })}
-
+        {onLogout && (
+          <button
+            onClick={onLogout}
+            aria-label="Logout"
+            style={{
+              background: "transparent",
+              border: "none",
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              gap: 14,
+              padding: "12px 24px",
+              borderRadius: 8,
+              margin: "0 12px",
+              opacity: 1,
+              transition: "opacity 0.2s, background 0.2s",
+            }}
+          >
+            <LogOut size={20} strokeWidth={1.9} color={theme.components.nav.icon} />
+            <span style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: 14,
+              fontWeight: 400,
+              color: theme.components.nav.icon,
+              letterSpacing: "0.01em",
+            }}>
+              Logout
+            </span>
+          </button>
+        )}
         {(onStartSurvey || onStartTour) && (
           <div style={{ marginTop: "auto", padding: "16px 12px 0", display: "flex", flexDirection: "column", gap: 8 }}>
             {onStartSurvey && <SurveyButton onClick={onStartSurvey} />}
@@ -275,6 +309,7 @@ function MobileNav({
   disabledNavIds = [],
   onStartTour,
   onStartSurvey,
+  onLogout,
 }: BottomNavProps) {
   return (
     <div
@@ -326,6 +361,23 @@ function MobileNav({
             </button>
           );
         })}
+        {onLogout && (
+          <button
+            onClick={onLogout}
+            aria-label="Logout"
+            style={{
+              background: theme.components.button.ghostBackground,
+              border: theme.components.button.ghostBorder,
+              cursor: "pointer",
+              opacity: theme.components.nav.inactiveOpacity,
+              transition: "opacity 0.2s",
+              padding: "4px 10px",
+            }}
+          >
+            <LogOut size={22} strokeWidth={1.9} color={theme.components.nav.icon} />
+          </button>
+        )}
+
       </div>
 
       {onStartSurvey && <SurveyButton onClick={onStartSurvey} compact />}
