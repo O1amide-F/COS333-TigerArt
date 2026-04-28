@@ -520,7 +520,7 @@ export function ExploreScreen({
 
   const handleTogglePin = (sectionName: string) => {
     if (isGuest) {
-      onRequireAccount?.("Create an account to pin exhibits.");
+      onRequireAccount?.("You have to login to pin exhibits.");
       return;
     }
     setPinnedSections((prev) => {

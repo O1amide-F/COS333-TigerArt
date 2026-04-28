@@ -69,7 +69,7 @@ function TigerArtAuthenticated({
   const [surveySelections, setSurveySelections] = useState<number[]>([]);
   const [showAccountPrompt, setShowAccountPrompt] = useState(false);
   const [accountPromptMessage, setAccountPromptMessage] = useState(
-    "Create an account to use this feature.",
+    " You have to login to use this feature.",
   );
   const [autoOpenSurvey, setAutoOpenSurvey] = useState(false);
 
@@ -179,7 +179,7 @@ function TigerArtAuthenticated({
   const toggleFavorite = async (id: number) => {
     const isFavorited = favorites.includes(id);
     if (isGuest) {
-      showMakeAccountPrompt("Create an account to save favorites.");
+      showMakeAccountPrompt("You have to login to save favorites.");
       return;
     }
     if (!userId) return;
