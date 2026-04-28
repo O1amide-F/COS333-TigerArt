@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Info } from "lucide-react";
+import { Info, ClipboardList } from "lucide-react";
 import { NAV_ITEMS } from "../data";
 import { theme } from "../theme";
 import type { NavId } from "../types";
@@ -9,6 +9,7 @@ type BottomNavProps = {
   onNavigate: (id: NavId) => void;
   disabledNavIds?: NavId[];
   onStartTour?: () => void;
+  onStartSurvey?: () => void;
 };
 
 function useIsDesktop() {
@@ -74,11 +75,60 @@ function TourButton({
   );
 }
 
+function SurveyButton({
+  onClick,
+  compact = false,
+}: {
+  onClick: () => void;
+  compact?: boolean;
+}) {
+  const [isHovered, setIsHovered] = useState(false);
+  const baseBackground = "#2a3f2e";
+  const hoverBackground = "#1a2f1e";
+
+  return (
+    <button
+      onClick={onClick}
+      aria-label="Retake survey"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      style={{
+        width: compact ? "auto" : "100%",
+        margin: compact ? "6px 12px 0" : 0,
+        padding: compact ? "10px 14px" : "12px 14px",
+        borderRadius: 12,
+        border: `1px solid ${isHovered ? "#0f1f11" : "#3a5040"}`,
+        backgroundColor: isHovered ? hoverBackground : baseBackground,
+        color: theme.components.nav.icon,
+        fontFamily: "'DM Sans', sans-serif",
+        fontSize: compact ? 13 : 14,
+        fontWeight: 700,
+        cursor: "pointer",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: 8,
+        transform: isHovered ? "translateY(-1px)" : "translateY(0)",
+        transition:
+          "transform 0.18s ease, background-color 0.18s ease, border-color 0.18s ease",
+      }}
+    >
+      <ClipboardList
+        size={compact ? 15 : 16}
+        strokeWidth={2.2}
+        color={theme.components.nav.icon}
+      />
+      Retake survey
+    </button>
+  );
+}
+
 export function BottomNav({
   activeNav,
   onNavigate,
   disabledNavIds = [],
   onStartTour,
+  onStartSurvey,
 }: BottomNavProps) {
   const isDesktop = useIsDesktop();
 
@@ -89,6 +139,7 @@ export function BottomNav({
         onNavigate={onNavigate}
         disabledNavIds={disabledNavIds}
         onStartTour={onStartTour}
+        onStartSurvey={onStartSurvey}
       />
     );
   }
@@ -99,6 +150,7 @@ export function BottomNav({
       onNavigate={onNavigate}
       disabledNavIds={disabledNavIds}
       onStartTour={onStartTour}
+      onStartSurvey={onStartSurvey}
     />
   );
 }
@@ -111,6 +163,7 @@ function SidebarNav({
   onNavigate,
   disabledNavIds = [],
   onStartTour,
+  onStartSurvey,
 }: BottomNavProps) {
   return (
     <div
@@ -202,9 +255,10 @@ function SidebarNav({
           );
         })}
 
-        {onStartTour && (
-          <div style={{ marginTop: "auto", padding: "16px 12px 0" }}>
-            <TourButton onClick={onStartTour} />
+        {(onStartSurvey || onStartTour) && (
+          <div style={{ marginTop: "auto", padding: "16px 12px 0", display: "flex", flexDirection: "column", gap: 8 }}>
+            {onStartSurvey && <SurveyButton onClick={onStartSurvey} />}
+            {onStartTour && <TourButton onClick={onStartTour} />}
           </div>
         )}
       </div>
@@ -220,6 +274,7 @@ function MobileNav({
   onNavigate,
   disabledNavIds = [],
   onStartTour,
+  onStartSurvey,
 }: BottomNavProps) {
   return (
     <div
@@ -273,6 +328,7 @@ function MobileNav({
         })}
       </div>
 
+      {onStartSurvey && <SurveyButton onClick={onStartSurvey} compact />}
       {onStartTour && <TourButton onClick={onStartTour} compact />}
     </div>
   );

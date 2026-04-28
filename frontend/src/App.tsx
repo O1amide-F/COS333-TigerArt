@@ -71,6 +71,7 @@ function TigerArtAuthenticated({
   const [accountPromptMessage, setAccountPromptMessage] = useState(
     "Create an account to use this feature.",
   );
+  const [autoOpenSurvey, setAutoOpenSurvey] = useState(false);
 
   useEffect(() => {
     if (!isGuest && screen !== "survey" && screen !== "exhibitDetail") {
@@ -98,6 +99,7 @@ function TigerArtAuthenticated({
   }, [showAccountPrompt]);
 
   const handleNav = (id: NavId) => {
+    if (id !== "settings") setAutoOpenSurvey(false); 
     if (isGuest && GUEST_RESTRICTED_NAV.includes(id)) {
       showMakeAccountPrompt();
       return;
@@ -314,7 +316,9 @@ function TigerArtAuthenticated({
         isGuest={isGuest}
         onStartTour={startTour}
         onRequireAccount={showMakeAccountPrompt}
+        autoOpenSurvey={autoOpenSurvey}
         onSave={() => {
+          setAutoOpenSurvey(false);
           if (templateContext.surveySelections.length === 3) {
             templateContext.setScreen("home");
             templateContext.setActiveNav("home");
@@ -351,6 +355,11 @@ function TigerArtAuthenticated({
                 onNavigate={handleNav}
                 disabledNavIds={isGuest ? GUEST_RESTRICTED_NAV : []}
                 onStartTour={startTour}
+                onStartSurvey={() => {
+                  setAutoOpenSurvey(true);
+                  setScreen("settings");
+                  setActiveNav("settings");
+                }}
               />
             </div>
           )}

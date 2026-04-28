@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { theme } from "../theme";
 import { SurveyFlow } from "../components/SurveyFlow";
 
@@ -15,6 +15,7 @@ type SettingsScreenProps = {
   userId: string | null;
   onStartTour: () => void;
   onRequireAccount?: () => void;
+  autoOpenSurvey?: boolean;
 };
 
 export function SettingsScreen({
@@ -25,9 +26,14 @@ export function SettingsScreen({
   userId,
   onStartTour,
   onRequireAccount,
+  autoOpenSurvey = false,
 }: SettingsScreenProps) {
-  const [showSurvey, setShowSurvey] = useState(false);
+  const [showSurvey, setShowSurvey] = useState(autoOpenSurvey);
   const [savedMessage, setSavedMessage] = useState(false);
+
+  useEffect(() => {
+    if (autoOpenSurvey) setShowSurvey(true);
+  }, [autoOpenSurvey]);
 
   const handleLoginScreen = () => {
     localStorage.removeItem("tigerart.screen");
