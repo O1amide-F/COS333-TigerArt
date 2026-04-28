@@ -266,7 +266,7 @@ def tag_object(objectid, classification, department, displaydate) -> list[float]
 SURVEY_QUESTIONS = [
     {
         "id": "era",
-        "prompt": "Which of these artworks speak to you?",
+        "prompt": "Which of these artwork eras do you like most?",
         "tags": ["ancient", "medieval", "early_modern", "19th_century", "early_20th", "modern"],
     },
     {
@@ -276,7 +276,7 @@ SURVEY_QUESTIONS = [
     },
     {
         "id": "geography",
-        "prompt": "Which cultural traditions interest you?",
+        "prompt": "Which of these geographical/cultural origins do you prefer?",
         "tags": ["european", "asian", "african_oceanic", "american", "ancient_americas", "ancient_mediterranean_islamic", "modern_global"],
     },
 ]
