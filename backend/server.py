@@ -230,7 +230,7 @@ DEPARTMENT_MAP = {
 }
 
 
-def tag_object(classification, department, displaydate) -> list[float]:
+def tag_object(objectid, classification, department, displaydate) -> list[float]:
     """
     Build a 21-dim binary feature vector for a single artwork.
     Multiple 1s are allowed (multi-hot encoding).
@@ -319,7 +319,7 @@ def build_user_vector(survey_answers: dict) -> list[float]:
 
 def dot_product(u: list[float], v: list[float]) -> float:
     assert len(u) == len(v), \
-        f'dot_product: vectors must be same length, got {len(u)} and {len(v)}
+        f'dot_product: vectors must be same length, got {len(u)} and {len(v)}'
     return sum(a * b for a, b in zip(u, v))
 
 
