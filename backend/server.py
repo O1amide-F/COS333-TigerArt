@@ -175,6 +175,8 @@ def parse_era(displaydate: str) -> str | None:
 
 
 def _year_to_era(year: int) -> str:
+    assert isinstance(year, (int, float)), \
+        f'_year_to_era: year must be a number, got {type(year)}'
     if year < 500:
         return "ancient"
     if year < 1500:
@@ -228,7 +230,7 @@ DEPARTMENT_MAP = {
 }
 
 
-def tag_object(objectid, classification, department, displaydate) -> list[float]:
+def tag_object(classification, department, displaydate) -> list[float]:
     """
     Build a 21-dim binary feature vector for a single artwork.
     Multiple 1s are allowed (multi-hot encoding).
@@ -252,6 +254,10 @@ def tag_object(objectid, classification, department, displaydate) -> list[float]
     if geo_tag:
         vec[DIM_INDEX[geo_tag]] = 1.0
 
+    assert len(vec) == N_DIMS, \
+        f'tag_object: vector must have {N_DIMS} dims, got {len(vec)}'
+    assert all(v in (0.0, 1.0) for v in vec), \
+        'tag_object: all vector values must be 0.0 or 1.0'
     return vec
 
 
@@ -283,6 +289,8 @@ SURVEY_QUESTIONS = [
 
 
 def build_user_vector(survey_answers: dict) -> list[float]:
+    assert isinstance(survey_answers, dict), \
+        'build_user_vector: survey_answers must be a dict'
     """
     survey_answers: {
         "era":            ["early_20th", "modern", "medieval"],
@@ -302,10 +310,16 @@ def build_user_vector(survey_answers: dict) -> list[float]:
             if tag in DIM_INDEX:
                 vec[DIM_INDEX[tag]] = weight
 
+    assert len(vec) == N_DIMS, \
+        f'build_user_vector: vector must have {N_DIMS} dims, got {len(vec)}'
+    assert all(0.0 <= v <= 1.0 for v in vec), \
+        'build_user_vector: all vector values must be in [0.0, 1.0]'
     return vec
 
 
 def dot_product(u: list[float], v: list[float]) -> float:
+    assert len(u) == len(v), \
+        f'dot_product: vectors must be same length, got {len(u)} and {len(v)}
     return sum(a * b for a, b in zip(u, v))
 
 
@@ -367,6 +381,10 @@ def save_user_vector(cur, user_id: str, vector: list[float]):
     preference_type = 'feature_vector'
     preference_value = JSON array string
     """
+    assert len(vector) == N_DIMS, \
+        f'save_user_vector: expected {N_DIMS}-dim vector, got {len(vector)}'
+    assert all(0.0 <= v <= 1.0 for v in vector), \
+        'save_user_vector: vector values must be in [0.0, 1.0]'
     cur.execute("""
         INSERT INTO user_preferences (user_id, preference_type, preference_value)
         VALUES (%s, 'feature_vector', %s)
@@ -401,6 +419,8 @@ def update_user_vector_from_artwork(cur, user_id: str, objectid: int, direction:
     Values are clamped to [0, 1].
     """
     LEARNING_RATE = 0.3
+    assert direction in (1.0, -1.0), \
+        f'update_user_vector_from_artwork: direction must be +1.0 or -1.0, got {direction}'
 
     user_vec = load_user_vector(cur, user_id)
     if user_vec is None:
@@ -432,7 +452,8 @@ def update_user_vector_from_artwork(cur, user_id: str, objectid: int, direction:
         ))
         for i in range(len(user_vec))
     ]
-
+    assert all(0.0 <= v <= 1.0 for v in new_vec), \
+        'update_user_vector_from_artwork: new_vec values out of [0, 1] bounds'
     save_user_vector(cur, user_id, new_vec)
 
 @app.route("/api/news")
