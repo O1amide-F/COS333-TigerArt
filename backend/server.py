@@ -435,61 +435,6 @@ def update_user_vector_from_artwork(cur, user_id: str, objectid: int, direction:
 
     save_user_vector(cur, user_id, new_vec)
 
-
-def get_for_you():
-    """Original non-personalised feed (kept for backwards compatibility)."""
-    conn = get_connection()
-    cur = conn.cursor()
-
-    # Checking how long each DB query takes (initiating)
-    db_start = time.time()
-    print("DB QUERY START: get_for_you", flush=True)
-
-    cur.execute("""
-        SELECT
-            a.objectid AS id,
-            a.title,
-            CONCAT_WS(' - ', a.medium, a.displaydate, a.displaymaker) AS about,
-                ai.image_url,
-                a.department,
-                a.classification,
-                a.displaydate,
-                a.displaymaker,
-                a.gallery_label_text,
-                a.on_view
-        FROM artworks a
-        LEFT JOIN artwork_images ai
-        ON a.objectid = ai.objectid
-        WHERE a.title IS NOT NULL
-        LIMIT 20;
-    """)
-
-    # Checking how long each DB query takes (ending timing)
-    print(f"DB QUERY END: get_for_you ({round(time.time() - db_start, 4)}s)", flush=True)
-
-
-    rows = cur.fetchall()
-    cur.close()
-    conn.close()
-
-    items = []
-    for row in rows:
-        items.append({
-            "id": row[0],
-            "title": row[1],
-            "about": row[2],
-            "imageUrl": row[3],
-            "department": row[4],
-            "classification": row[5],
-            "displaydate": row[6],
-            "displaymaker": row[7],
-            "gallery_label_text": row[8],
-            "on_view": row[9],
-        })
-
-    return jsonify(items)
-
-
 @app.route("/api/news")
 def get_news():
     conn = get_connection()
