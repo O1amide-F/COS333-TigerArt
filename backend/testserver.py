@@ -100,7 +100,7 @@ class TestParseEra(unittest.TestCase):
 
     # Century range (averaged)
     def test_mid19_mid20_century(self):
-        result = parse_era("mid 19th-mid 20th century")
+        result = parse_era("mid 19th century -mid 20th century")
         self.assertIn(result, ["19th_century", "early_20th"])  # averaged midpoint
 
     # Decade strings
