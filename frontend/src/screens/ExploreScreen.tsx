@@ -25,7 +25,7 @@ type ExploreScreenProps = {
 
 const styles = {
   page: {
-    padding: "16px 20px 100px",
+    padding: "0px 20px 100px",
     overflowY: "auto" as const,
     height: "100%",
   },
@@ -37,7 +37,7 @@ const styles = {
     letterSpacing: "0.06em",
     color: theme.components.badge.text,
     display: "inline-block",
-    padding: "6px 12px",
+    padding: "16px 0px",
     borderRadius: 4,
   },
   pinnedLabel: {
