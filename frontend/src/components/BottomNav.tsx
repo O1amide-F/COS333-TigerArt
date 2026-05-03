@@ -8,6 +8,7 @@ type BottomNavProps = {
   activeNav: NavId;
   onNavigate: (id: NavId) => void;
   disabledNavIds?: NavId[];
+  onDisabledClick?: (id: NavId) => void;
   onStartTour?: () => void;
   onStartSurvey?: () => void;
   onLogout?: () => void;
@@ -128,6 +129,7 @@ export function BottomNav({
   activeNav,
   onNavigate,
   disabledNavIds = [],
+  onDisabledClick,
   onStartTour,
   onStartSurvey,
   onLogout,
@@ -140,6 +142,7 @@ export function BottomNav({
         activeNav={activeNav}
         onNavigate={onNavigate}
         disabledNavIds={disabledNavIds}
+        onDisabledClick={onDisabledClick}
         onStartTour={onStartTour}
         onStartSurvey={onStartSurvey}
         onLogout={onLogout}
@@ -152,6 +155,7 @@ export function BottomNav({
       activeNav={activeNav}
       onNavigate={onNavigate}
       disabledNavIds={disabledNavIds}
+      onDisabledClick={onDisabledClick}
       onStartTour={onStartTour}
       onStartSurvey={onStartSurvey}
       onLogout={onLogout}
@@ -166,6 +170,7 @@ function SidebarNav({
   activeNav,
   onNavigate,
   disabledNavIds = [],
+  onDisabledClick,
   onStartTour,
   onStartSurvey,
   onLogout,
@@ -206,10 +211,13 @@ function SidebarNav({
           return (
             <button
               key={item.id}
-              onClick={() => onNavigate(item.id)}
+              onClick={() =>
+                isDisabled && onDisabledClick
+                  ? onDisabledClick(item.id)
+                  : onNavigate(item.id)
+              }
               data-tour={`nav-${item.id.replace(/_/g, "-")}`}
               aria-label={item.label}
-              aria-disabled={isDisabled}
               style={{
                 background:
                   isActive && !isDisabled
@@ -277,20 +285,34 @@ function SidebarNav({
               transition: "opacity 0.2s, background 0.2s",
             }}
           >
-            <LogOut size={20} strokeWidth={1.9} color={theme.components.nav.icon} />
-            <span style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 14,
-              fontWeight: 400,
-              color: theme.components.nav.icon,
-              letterSpacing: "0.01em",
-            }}>
+            <LogOut
+              size={20}
+              strokeWidth={1.9}
+              color={theme.components.nav.icon}
+            />
+            <span
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 14,
+                fontWeight: 400,
+                color: theme.components.nav.icon,
+                letterSpacing: "0.01em",
+              }}
+            >
               Logout
             </span>
           </button>
         )}
         {(onStartSurvey || onStartTour) && (
-          <div style={{ marginTop: "auto", padding: "16px 12px 0", display: "flex", flexDirection: "column", gap: 8 }}>
+          <div
+            style={{
+              marginTop: "auto",
+              padding: "16px 12px 0",
+              display: "flex",
+              flexDirection: "column",
+              gap: 8,
+            }}
+          >
             {onStartSurvey && <SurveyButton onClick={onStartSurvey} />}
             {onStartTour && <TourButton onClick={onStartTour} />}
           </div>
@@ -307,6 +329,7 @@ function MobileNav({
   activeNav,
   onNavigate,
   disabledNavIds = [],
+  onDisabledClick,
   onStartTour,
   onStartSurvey,
   onLogout,
@@ -336,7 +359,11 @@ function MobileNav({
           return (
             <button
               key={item.id}
-              onClick={() => onNavigate(item.id)}
+              onClick={() =>
+                isDisabled && onDisabledClick
+                  ? onDisabledClick(item.id)
+                  : onNavigate(item.id)
+              }
               data-tour={`nav-${item.id.replace(/_/g, "-")}`}
               style={{
                 background: theme.components.button.ghostBackground,
@@ -351,7 +378,6 @@ function MobileNav({
                 padding: "4px 10px",
               }}
               aria-label={item.label}
-              aria-disabled={isDisabled}
             >
               <item.icon
                 size={22}
@@ -374,10 +400,13 @@ function MobileNav({
               padding: "4px 10px",
             }}
           >
-            <LogOut size={22} strokeWidth={1.9} color={theme.components.nav.icon} />
+            <LogOut
+              size={22}
+              strokeWidth={1.9}
+              color={theme.components.nav.icon}
+            />
           </button>
         )}
-
       </div>
 
       {onStartSurvey && <SurveyButton onClick={onStartSurvey} compact />}

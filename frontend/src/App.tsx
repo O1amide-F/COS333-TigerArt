@@ -99,7 +99,7 @@ function TigerArtAuthenticated({
   }, [showAccountPrompt]);
 
   const handleNav = (id: NavId) => {
-    if (id !== "settings") setAutoOpenSurvey(false); 
+    if (id !== "settings") setAutoOpenSurvey(false);
     if (isGuest && GUEST_RESTRICTED_NAV.includes(id)) {
       showMakeAccountPrompt();
       return;
@@ -354,11 +354,16 @@ function TigerArtAuthenticated({
                 activeNav={activeNav}
                 onNavigate={handleNav}
                 disabledNavIds={isGuest ? GUEST_RESTRICTED_NAV : []}
-                onLogout={isGuest ? undefined : () => {
-                  localStorage.removeItem("tigerart.screen");
-                  localStorage.removeItem("tigerart.activeNav");
-                  window.location.href = "/logoutapp";
-                }}
+                onDisabledClick={() => showMakeAccountPrompt()}
+                onLogout={
+                  isGuest
+                    ? undefined
+                    : () => {
+                        localStorage.removeItem("tigerart.screen");
+                        localStorage.removeItem("tigerart.activeNav");
+                        window.location.href = "/logoutapp";
+                      }
+                }
                 onStartTour={startTour}
                 onStartSurvey={() => {
                   setAutoOpenSurvey(true);
