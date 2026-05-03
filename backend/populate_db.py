@@ -6,11 +6,11 @@ import json
 import os
 import shutil
 
-DB_NAME = "tigerart_db"
-DB_USER = "postgres"
-DB_PASSWORD = "cos333"
-DB_HOST = "localhost"
-DB_PORT = "5432"
+DB_NAME = os.environ.get("DB_NAME")
+DB_USER = os.environ.get("DB_USER")
+DB_PASSWORD = os.environ.get("DB_PASSWORD")
+DB_HOST = os.environ.get("DB_HOST")
+DB_PORT = os.environ.get("DB_PORT")
 
 OBJECTS_URL = "https://static.artmuseum.princeton.edu/collection-data-sets/objects.zip"
 MAKERS_URL = "https://static.artmuseum.princeton.edu/collection-data-sets/makers.zip"
