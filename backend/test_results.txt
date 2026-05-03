@@ -1,0 +1,281 @@
+test_explore_heading_loads (__main__.TestExploreScreen.test_explore_heading_loads)
+Explore screen should show the Explore heading. ... ok
+test_explore_search_bar_visible (__main__.TestExploreScreen.test_explore_search_bar_visible)
+Explore screen should show the search bar. ... ok
+test_favorites_empty_state (__main__.TestFavoritesScreen.test_favorites_empty_state)
+Favorites screen should render without crashing when empty. ... ERROR
+test_favorites_heading (__main__.TestFavoritesScreen.test_favorites_heading)
+Favorites screen should show 'Favorites' heading. ... ERROR
+test_favorites_search_bar_visible (__main__.TestFavoritesScreen.test_favorites_search_bar_visible)
+Favorites screen should have a search bar. ... ERROR
+test_explore_screen_loads (__main__.TestGuestMode.test_explore_screen_loads)
+Guest mode should open on Explore screen. ... ok
+test_navigate_to_news (__main__.TestGuestMode.test_navigate_to_news)
+Clicking news nav should show Latest News heading. ... ok
+test_navigate_to_settings (__main__.TestGuestMode.test_navigate_to_settings)
+Clicking settings nav should show Settings heading. ... ok
+test_guest_restricted_favorites_shows_prompt (__main__.TestGuestRestricted.test_guest_restricted_favorites_shows_prompt)
+Clicking Favorites as guest should show an account prompt. ... ERROR
+test_guest_restricted_home_shows_prompt (__main__.TestGuestRestricted.test_guest_restricted_home_shows_prompt)
+Clicking Home as guest should show an account prompt. ... ERROR
+test_guest_restricted_recently_viewed_shows_prompt (__main__.TestGuestRestricted.test_guest_restricted_recently_viewed_shows_prompt)
+Clicking Recently Viewed as guest should show an account prompt. ... ERROR
+test_guest_button_visible (__main__.TestLoginPage.test_guest_button_visible) ... ok
+test_login_button_visible (__main__.TestLoginPage.test_login_button_visible) ... ok
+test_welcome_heading_visible (__main__.TestLoginPage.test_welcome_heading_visible) ... ok
+test_news_articles_load (__main__.TestNewsScreen.test_news_articles_load) ... ok
+test_news_heading (__main__.TestNewsScreen.test_news_heading) ... ok
+test_search_empty_no_crash (__main__.TestSearchBar.test_search_empty_no_crash)
+Typing and clearing search should not crash the app. ... ok
+test_search_input_visible (__main__.TestSearchBar.test_search_input_visible)
+The search input should be visible on the Explore screen. ... ok
+test_search_nonexistent (__main__.TestSearchBar.test_search_nonexistent)
+Searching a nonsense term should show no results. ... ok
+test_search_painting (__main__.TestSearchBar.test_search_painting)
+Searching 'painting' should show results or no-results message. ... ok
+test_guest_sees_locked_survey (__main__.TestSettingsScreen.test_guest_sees_locked_survey)
+Guest should see 'Locked' instead of 'Retake Survey'. ... ERROR
+test_preferences_card_visible (__main__.TestSettingsScreen.test_preferences_card_visible) ... ok
+test_settings_heading (__main__.TestSettingsScreen.test_settings_heading) ... ok
+test_tour_button_visible (__main__.TestSettingsScreen.test_tour_button_visible) ... ok
+
+======================================================================
+ERROR: test_favorites_empty_state (__main__.TestFavoritesScreen.test_favorites_empty_state)
+Favorites screen should render without crashing when empty.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/armita/COS333-TigerArt/backend/testserver.py", line 381, in tearDown
+    self._page.locator('[data-tour="nav-favorites"]').click()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/sync_api/_generated.py", line 15631, in click
+    self._sync(
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_locator.py", line 162, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_frame.py", line 566, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[data-tour=\"nav-favorites\"]")
+
+
+======================================================================
+ERROR: test_favorites_heading (__main__.TestFavoritesScreen.test_favorites_heading)
+Favorites screen should show 'Favorites' heading.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/armita/COS333-TigerArt/backend/testserver.py", line 381, in tearDown
+    self._page.locator('[data-tour="nav-favorites"]').click()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/sync_api/_generated.py", line 15631, in click
+    self._sync(
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_locator.py", line 162, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_frame.py", line 566, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[data-tour=\"nav-favorites\"]")
+
+
+======================================================================
+ERROR: test_favorites_search_bar_visible (__main__.TestFavoritesScreen.test_favorites_search_bar_visible)
+Favorites screen should have a search bar.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/armita/COS333-TigerArt/backend/testserver.py", line 381, in tearDown
+    self._page.locator('[data-tour="nav-favorites"]').click()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/sync_api/_generated.py", line 15631, in click
+    self._sync(
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_locator.py", line 162, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_frame.py", line 566, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[data-tour=\"nav-favorites\"]")
+
+
+======================================================================
+ERROR: test_guest_restricted_favorites_shows_prompt (__main__.TestGuestRestricted.test_guest_restricted_favorites_shows_prompt)
+Clicking Favorites as guest should show an account prompt.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/armita/COS333-TigerArt/backend/testserver.py", line 177, in test_guest_restricted_favorites_shows_prompt
+    self._assert_shows_prompt('nav-favorites')
+  File "/Users/armita/COS333-TigerArt/backend/testserver.py", line 166, in _assert_shows_prompt
+    self._page.locator(f'[data-tour="{nav_tour_id}"]').click()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/sync_api/_generated.py", line 15631, in click
+    self._sync(
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_locator.py", line 162, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_frame.py", line 566, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[data-tour=\"nav-favorites\"]")
+    - locator resolved to <button aria-disabled="true" aria-label="Favorites" data-tour="nav-favorites">…</button>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+      - waiting 100ms
+    58 × waiting for element to be visible, enabled and stable
+       - element is not enabled
+     - retrying click action
+       - waiting 500ms
+
+
+======================================================================
+ERROR: test_guest_restricted_home_shows_prompt (__main__.TestGuestRestricted.test_guest_restricted_home_shows_prompt)
+Clicking Home as guest should show an account prompt.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/armita/COS333-TigerArt/backend/testserver.py", line 173, in test_guest_restricted_home_shows_prompt
+    self._assert_shows_prompt('nav-home')
+  File "/Users/armita/COS333-TigerArt/backend/testserver.py", line 166, in _assert_shows_prompt
+    self._page.locator(f'[data-tour="{nav_tour_id}"]').click()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/sync_api/_generated.py", line 15631, in click
+    self._sync(
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_locator.py", line 162, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_frame.py", line 566, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[data-tour=\"nav-home\"]")
+    - locator resolved to <button aria-label="Home" data-tour="nav-home" aria-disabled="true">…</button>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+      - waiting 100ms
+    58 × waiting for element to be visible, enabled and stable
+       - element is not enabled
+     - retrying click action
+       - waiting 500ms
+
+
+======================================================================
+ERROR: test_guest_restricted_recently_viewed_shows_prompt (__main__.TestGuestRestricted.test_guest_restricted_recently_viewed_shows_prompt)
+Clicking Recently Viewed as guest should show an account prompt.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/armita/COS333-TigerArt/backend/testserver.py", line 181, in test_guest_restricted_recently_viewed_shows_prompt
+    self._assert_shows_prompt('nav-recently-viewed')
+  File "/Users/armita/COS333-TigerArt/backend/testserver.py", line 166, in _assert_shows_prompt
+    self._page.locator(f'[data-tour="{nav_tour_id}"]').click()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/sync_api/_generated.py", line 15631, in click
+    self._sync(
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_locator.py", line 162, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_frame.py", line 566, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("[data-tour=\"nav-recently-viewed\"]")
+    - locator resolved to <button aria-disabled="true" aria-label="Recently Viewed" data-tour="nav-recently-viewed">…</button>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+      - waiting 100ms
+    58 × waiting for element to be visible, enabled and stable
+       - element is not enabled
+     - retrying click action
+       - waiting 500ms
+
+
+======================================================================
+ERROR: test_guest_sees_locked_survey (__main__.TestSettingsScreen.test_guest_sees_locked_survey)
+Guest should see 'Locked' instead of 'Retake Survey'.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/armita/COS333-TigerArt/backend/testserver.py", line 325, in tearDown
+    self._enter_guest_mode()
+  File "/Users/armita/COS333-TigerArt/backend/testserver.py", line 68, in _enter_guest_mode
+    self._page.get_by_text('Continue as Guest').click()
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/sync_api/_generated.py", line 15631, in click
+    self._sync(
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_locator.py", line 162, in click
+    return await self._frame._click(self._selector, strict=True, **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_frame.py", line 566, in _click
+    await self._channel.send("click", self._timeout, locals_to_params(locals()))
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: Locator.click: Target page, context or browser has been closed
+
+----------------------------------------------------------------------
+Ran 24 tests in 266.429s
+
+FAILED (errors=7)
