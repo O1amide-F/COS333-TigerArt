@@ -98,20 +98,22 @@ export function SearchFilterBar({
     onClear();
   };
 
+  const [pendingFilters, setPendingFilters] = useState<string[]>(activeFilters);
+
   const toggleFilter = (tag: string) => {
-    onFiltersChange(
-      activeFilters.includes(tag)
-        ? activeFilters.filter((t) => t !== tag)
-        : [...activeFilters, tag]
+    setPendingFilters((prev) =>
+      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
     );
   };
 
-  const clearFilters = () => onFiltersChange([]);
+  const clearFilters = () => {
+    setPendingFilters([]);
+    onFiltersChange([]);
+  };
 
   const hasValue = value.trim().length > 0;
-  const filterCount = activeFilters.length;
+  const filterCount = showFilter ? pendingFilters.length : activeFilters.length;
   const showSortBtn = sortBy !== undefined && onSortChange !== undefined;
-  const currentSortLabel = SORT_OPTIONS.find((o) => o.value === sortBy)?.label ?? "Sort";
 
   return (
     <div style={{
@@ -260,7 +262,7 @@ export function SearchFilterBar({
                   </div>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
                     {group.tags.map(({ label, tag }) => {
-                      const isActive = activeFilters.includes(tag);
+                      const isActive = pendingFilters.includes(tag);
                       return (
                         <button
                           key={tag}
@@ -292,7 +294,10 @@ export function SearchFilterBar({
               <div style={{ padding: "8px 14px 0",
                 borderTop: `1px solid ${theme.components.divider.color}` }}>
                 <button
-                  onClick={() => setShowFilter(false)}
+                  onClick={() => {
+                    onFiltersChange(pendingFilters);
+                    setShowFilter(false);
+                  }}
                   style={{
                     width: "100%",
                     background: theme.components.button.primaryBackground,
@@ -301,7 +306,7 @@ export function SearchFilterBar({
                     fontFamily: "'DM Sans', sans-serif", fontSize: 13,
                     fontWeight: 600, cursor: "pointer",
                   }}>
-                  Apply{filterCount > 0 ? ` (${filterCount})` : ""}
+                  Apply{pendingFilters.length > 0 ? ` (${pendingFilters.length})` : ""}
                 </button>
               </div>
             </div>

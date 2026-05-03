@@ -269,191 +269,108 @@ export function RecentlyViewedScreen({
             Try a different search term
           </p>
         </div>
-      ) : displayCards.length > 0 ? (
-        <>
-          {isSearching && (
-            <p
-              style={{
-                margin: "0 0 12px",
-                fontSize: 13,
-                fontFamily: "'DM Sans', sans-serif",
-                color: theme.components.badge.mutedText,
-              }}
-            >
-              {displayCards.length} result{displayCards.length !== 1 ? "s" : ""}{" "}
-              found
-            </p>
-          )}
+) : displayCards.length > 0 ? (
+  <>
+    {isSearching && (
+      <p style={{
+        margin: "0 0 12px",
+        fontSize: 13,
+        fontFamily: "'DM Sans', sans-serif",
+        color: theme.components.badge.mutedText,
+      }}>
+        {displayCards.length} result{displayCards.length !== 1 ? "s" : ""} found
+      </p>
+    )}
 
-          {/* Featured hero card */}
-          {featuredCard && (
-            <div
-              data-tour="recently-viewed-card"
-              style={{ marginBottom: 10, cursor: "pointer" }}
-              onClick={() => handleCardClick(featuredCard)}
-            >
-              <div
-                style={{
-                  borderRadius: 8,
-                  overflow: "hidden",
-                  background: theme.components.card.background,
-                  height: "100%",
-                }}
-                >
-                  <div style={{ position: "relative" }}>
-                  {featuredCard.imageUrl ? (
-                    <img
-                      src={featuredCard.imageUrl}
-                      alt={featuredCard.title}
-                      style={{
-                        width: "100%",
-                        aspectRatio: "16 / 9",
-                        objectFit: "contain",
-                        backgroundColor: theme.components.image.background,
-                        display: "block",
-                        borderRadius: 4,
-                      }}
-                      onError={(e) => {
-                        e.currentTarget.onerror = null;
-                        e.currentTarget.src = getFallbackImageForAspect("16/9");
-                      }}
-                    />
-                  ) : (
-                    <Placeholder
-                      label="Unable to Render Image"
-                      aspectRatio="16/9"
-                    />
-                  )}
-                  <HeartButton itemId={featuredCard.id} />
-                </div>
-                <div style={{ 
-                  padding: "8px 10px", 
-                }}>
-                  <div
-                    style={{
-                      fontSize: 14,
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontWeight: 600,
-                      color: theme.components.badge.text,
-                      marginBottom: 4,
-                    }}
-                  >
-                    {featuredCard.title}
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-
-          <div
-            style={{
-              borderTop: `1px solid ${theme.components.divider.color}`,
-              paddingTop: 14,
-            }}
-          />
-
-          {/* 2-column grid */}
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: 12,
-              marginTop: 4,
-            }}
-          >
-            {gridCards.map((card) => (
-              <div
-                key={card.id}
-                style={{ cursor: "pointer" }}
-                onClick={() => handleCardClick(card)}
-              >
-                <div
-                style={{
-                  borderRadius: 8,
-                  overflow: "hidden",
-                  background: theme.components.card.background,
-                  height: "100%",
-                }}
-                >
-                  <div style={{ position: "relative" }}>
-                    {card.imageUrl ? (
-                      <img
-                        src={card.imageUrl}
-                        alt={card.title}
-                        style={{
-                          width: "100%",
-                          aspectRatio: "1 / 1",
-                          objectFit: "contain",
-                          backgroundColor: theme.components.image.background,
-                          display: "block",
-                        }}
-                        onError={(e) => {
-                          e.currentTarget.onerror = null;
-                          e.currentTarget.src = getFallbackImageForAspect("1/1");
-                        }}
-                      />
-                    ) : (
-                      <Placeholder
-                        label="Unable to Render Image"
-                        aspectRatio="1/1"
-                      />
-                    )}
-                    <HeartButton itemId={card.id} />
-                  </div>
-                  <div style={{ 
-                    background: theme.components.card.background,
-                    padding: "8px 10px", 
-                  }}>
-                    <div
-                      style={{
-                        fontSize: 13,
-                        fontFamily: "'DM Sans', sans-serif",
-                        fontWeight: 600,
-                        color: theme.components.badge.text,
-                      }}
-                    >
-                      {card.title}
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            ))}
+    {/* Featured hero card — only shown when NOT searching */}
+    {!isSearching && featuredCard && (
+      <div
+        data-tour="recently-viewed-card"
+        style={{ marginBottom: 10, cursor: "pointer" }}
+        onClick={() => handleCardClick(featuredCard)}
+      >
+        <div style={{ borderRadius: 8, overflow: "hidden",
+          background: theme.components.card.background }}>
+          <div style={{ position: "relative" }}>
+            {featuredCard.imageUrl ? (
+              <img src={featuredCard.imageUrl} alt={featuredCard.title}
+                style={{ width: "100%", aspectRatio: "16 / 9",
+                  objectFit: "contain",
+                  backgroundColor: theme.components.image.background,
+                  display: "block", borderRadius: 4 }}
+                onError={(e) => { e.currentTarget.onerror = null;
+                  e.currentTarget.src = getFallbackImageForAspect("16/9"); }}
+              />
+            ) : (
+              <Placeholder label="Unable to Render Image" aspectRatio="16/9" />
+            )}
+            <HeartButton itemId={featuredCard.id} />
           </div>
-
-          {hasMore && (
-            <div
-              style={{
-                marginTop: 16,
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
-              <button
-                data-tour="exhibit-detail-more"
-                onClick={() => setVisibleCount((prev) => prev + 6)}
-                onMouseOver={(e) => {
-                  e.currentTarget.style.background = "black";
-                  e.currentTarget.style.color = "#fff";
-                }}
-                onMouseOut={(e) => {
-                  e.currentTarget.style.background = theme.components.badge.background;
-                  e.currentTarget.style.color = theme.components.badge.text;
-                }}
-                style={{
-                  padding: "10px 16px",
-                  borderRadius: 6,
-                  cursor: "pointer",
-                  fontSize: 14,
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontWeight: 600,
-                }}
-              >
-                Click here to view more images
-              </button>
+          <div style={{ padding: "8px 10px" }}>
+            <div style={{ fontSize: 14, fontFamily: "'DM Sans', sans-serif",
+              fontWeight: 600, color: theme.components.badge.text, marginBottom: 4 }}>
+              {featuredCard.title}
             </div>
-          )}
-        </>
+          </div>
+        </div>
+      </div>
+    )}
+
+    {!isSearching && (
+      <div style={{ borderTop: `1px solid ${theme.components.divider.color}`,
+        paddingTop: 14 }} />
+    )}
+
+    {/* 2-column grid — all cards when searching, rest when not */}
+    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr",
+      gap: 12, marginTop: 4 }}>
+      {(isSearching ? displayCards : gridCards).map((card) => (
+        <div key={card.id} style={{ cursor: "pointer" }}
+          onClick={() => handleCardClick(card)}>
+          <div style={{ borderRadius: 8, overflow: "hidden",
+            background: theme.components.card.background, height: "100%" }}>
+            <div style={{ position: "relative" }}>
+              {card.imageUrl ? (
+                <img src={card.imageUrl} alt={card.title}
+                  style={{ width: "100%", aspectRatio: "1 / 1",
+                    objectFit: "contain",
+                    backgroundColor: theme.components.image.background,
+                    display: "block" }}
+                  onError={(e) => { e.currentTarget.onerror = null;
+                    e.currentTarget.src = getFallbackImageForAspect("1/1"); }}
+                />
+              ) : (
+                <Placeholder label="Unable to Render Image" aspectRatio="1/1" />
+              )}
+              <HeartButton itemId={card.id} />
+            </div>
+            <div style={{ background: theme.components.card.background,
+              padding: "8px 10px" }}>
+              <div style={{ fontSize: 13, fontFamily: "'DM Sans', sans-serif",
+                fontWeight: 600, color: theme.components.badge.text }}>
+                {card.title}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    {hasMore && !isSearching && (
+      <div style={{ marginTop: 16, display: "flex", justifyContent: "center" }}>
+        <button data-tour="exhibit-detail-more"
+          onClick={() => setVisibleCount((prev) => prev + 6)}
+          onMouseOver={(e) => { e.currentTarget.style.background = "black";
+            e.currentTarget.style.color = "#fff"; }}
+          onMouseOut={(e) => { e.currentTarget.style.background = theme.components.badge.background;
+            e.currentTarget.style.color = theme.components.badge.text; }}
+          style={{ padding: "10px 16px", borderRadius: 6, cursor: "pointer",
+            fontSize: 14, fontFamily: "'DM Sans', sans-serif", fontWeight: 600 }}>
+          Click here to view more images
+        </button>
+      </div>
+    )}
+  </>
       ) : (
         // Empty state
         <div
