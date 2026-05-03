@@ -1,4 +1,4 @@
-#TigerArt
+# TigerArt
 
 Technologies demonstrated: Python, Flask, JavaScript, AJAX, React, Webpack, Microsoft Entra ID authentication, PostgreSQL.
 
