@@ -9,6 +9,7 @@ type BottomNavProps = {
   onNavigate: (id: NavId) => void;
   disabledNavIds?: NavId[];
   onDisabledClick?: (id: NavId) => void;
+  isGuest?: boolean;
   onStartTour?: () => void;
   onStartSurvey?: () => void;
   onLogout?: () => void;
@@ -130,6 +131,7 @@ export function BottomNav({
   onNavigate,
   disabledNavIds = [],
   onDisabledClick,
+  isGuest = false,
   onStartTour,
   onStartSurvey,
   onLogout,
@@ -143,6 +145,7 @@ export function BottomNav({
         onNavigate={onNavigate}
         disabledNavIds={disabledNavIds}
         onDisabledClick={onDisabledClick}
+        isGuest={isGuest}
         onStartTour={onStartTour}
         onStartSurvey={onStartSurvey}
         onLogout={onLogout}
@@ -171,6 +174,7 @@ function SidebarNav({
   onNavigate,
   disabledNavIds = [],
   onDisabledClick,
+  isGuest = false,
   onStartTour,
   onStartSurvey,
   onLogout,
@@ -303,7 +307,7 @@ function SidebarNav({
             </span>
           </button>
         )}
-        {(onStartSurvey || onStartTour) && (
+        {((onStartSurvey && !isGuest) || onStartTour) && (
           <div
             style={{
               marginTop: "auto",
@@ -313,7 +317,9 @@ function SidebarNav({
               gap: 8,
             }}
           >
-            {onStartSurvey && <SurveyButton onClick={onStartSurvey} />}
+            {onStartSurvey && !isGuest && (
+              <SurveyButton onClick={onStartSurvey} />
+            )}
             {onStartTour && <TourButton onClick={onStartTour} />}
           </div>
         )}
@@ -330,6 +336,7 @@ function MobileNav({
   onNavigate,
   disabledNavIds = [],
   onDisabledClick,
+  isGuest = false,
   onStartTour,
   onStartSurvey,
   onLogout,
@@ -409,7 +416,9 @@ function MobileNav({
         )}
       </div>
 
-      {onStartSurvey && <SurveyButton onClick={onStartSurvey} compact />}
+      {onStartSurvey && !isGuest && (
+        <SurveyButton onClick={onStartSurvey} compact />
+      )}
       {onStartTour && <TourButton onClick={onStartTour} compact />}
     </div>
   );
