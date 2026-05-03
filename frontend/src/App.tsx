@@ -49,17 +49,39 @@ function TigerArtAuthenticated({
   initialUsername?: string;
   initialDisplayName?: string;
 }) {
-  const [screen, setScreen] = useState<Screen>(() => {
-    if (isGuest) return "explore";
+  function screenFromPathOrStorage(): Screen {
+    const seg = window.location.pathname.replace(/^\/+/, "");
+    const mapping: Record<string, Screen> = {
+      "": "home",
+      home: "home",
+      explore: "explore",
+      favorites: "favorites",
+      news: "news",
+      settings: "settings",
+      login: "login",
+      survey: "survey",
+      "recently-viewed": "recently_viewed",
+      recently_viewed: "recently_viewed",
+    };
+    if (mapping[seg]) return mapping[seg];
     const saved = localStorage.getItem("tigerart.screen") as Screen | null;
-    return saved && saved !== "survey" ? saved : "survey";
-  });
+    if (saved) return saved;
+    return isGuest ? "explore" : "survey";
+  }
+
+  const [screen, setScreen] = useState<Screen>(() => screenFromPathOrStorage());
   const [favorites, setFavorites] = useState<number[]>([]);
   const [recentlyViewed, setRecentlyViewed] = useState<number[]>([]);
   const [activeSection, setActiveSection] = useState<ExhibitSection | null>(
     null,
   );
   const [activeNav, setActiveNav] = useState<NavId>(() => {
+    // derive active nav from current screen or localStorage
+    const screenVal = screenFromPathOrStorage();
+    const found = (Object.keys(NAV_TO_SCREEN) as NavId[]).find(
+      (nid) => NAV_TO_SCREEN[nid] === screenVal,
+    );
+    if (found) return found;
     if (isGuest) return "explore";
     return (
       (localStorage.getItem("tigerart.activeNav") as NavId | null) ?? "home"
@@ -74,11 +96,21 @@ function TigerArtAuthenticated({
   const [autoOpenSurvey, setAutoOpenSurvey] = useState(false);
 
   useEffect(() => {
-    if (!isGuest && screen !== "survey" && screen !== "exhibitDetail") {
+    // persist screen/nav for all users (including guests) except transient views
+    if (screen !== "survey" && screen !== "exhibitDetail") {
       localStorage.setItem("tigerart.screen", screen);
       localStorage.setItem("tigerart.activeNav", activeNav);
     }
-  }, [screen, activeNav, isGuest]);
+    // keep the URL in sync with the active nav
+    try {
+      const navPath = activeNav.replace(/_/g, "-");
+      const url = navPath === "home" ? "/home" : `/${navPath}`;
+      if (window.location.pathname !== url)
+        window.history.replaceState({}, "", url);
+    } catch (e) {
+      // ignore
+    }
+  }, [screen, activeNav]);
 
   const username = isGuest ? "Guest" : initialUsername;
   const displayName = isGuest ? "Guest" : initialDisplayName || initialUsername;
@@ -105,7 +137,14 @@ function TigerArtAuthenticated({
       return;
     }
     setActiveNav(id);
-    setScreen(NAV_TO_SCREEN[id]);
+    const screenForNav = NAV_TO_SCREEN[id];
+    setScreen(screenForNav);
+    try {
+      const path = `/${id.replace(/_/g, "-")}`;
+      window.history.pushState({}, "", path);
+    } catch (e) {
+      // ignore
+    }
   };
 
   // ── Tour ──────────────────────────────────────────────────────────────────
@@ -361,9 +400,12 @@ function TigerArtAuthenticated({
                     : () => {
                         localStorage.removeItem("tigerart.screen");
                         localStorage.removeItem("tigerart.activeNav");
+                        localStorage.removeItem("tigerart.isGuest");
+                        localStorage.removeItem(GUEST_ID_STORAGE_KEY);
                         window.location.href = "/logoutapp";
                       }
                 }
+                isGuest={isGuest}
                 onStartTour={startTour}
                 onStartSurvey={() => {
                   setAutoOpenSurvey(true);
@@ -422,8 +464,12 @@ export default function TigerArt() {
   const [username, setUsername] = useState<string | null>(null);
   const [displayName, setDisplayName] = useState<string | null>(null);
   const [ready, setReady] = useState(false);
-  const [isGuest, setIsGuest] = useState(false);
-  const [guestId, setGuestId] = useState<string | null>(null);
+  const [isGuest, setIsGuest] = useState<boolean>(
+    () => localStorage.getItem("tigerart.isGuest") === "true",
+  );
+  const [guestId, setGuestId] = useState<string | null>(() =>
+    localStorage.getItem(GUEST_ID_STORAGE_KEY),
+  );
 
   useEffect(() => {
     fetch("/api/getusername", { credentials: "include" })
@@ -443,6 +489,23 @@ export default function TigerArt() {
   }, []);
 
   if (!ready) return null;
+  const currentPath = window.location.pathname.replace(/^\/+/, "");
+  if (currentPath === "login") {
+    return (
+      <LoginScreen
+        onGuestLogin={() => {
+          const localGuestId = getOrCreateGuestId();
+          localStorage.setItem("tigerart.isGuest", "true");
+          localStorage.setItem(GUEST_ID_STORAGE_KEY, localGuestId);
+          setGuestId(localGuestId);
+          setIsGuest(true);
+          // navigate into app as guest
+          window.history.replaceState({}, "", "/explore");
+        }}
+      />
+    );
+  }
+
   if (isGuest)
     return (
       <TigerArtAuthenticated
@@ -456,6 +519,7 @@ export default function TigerArt() {
       <LoginScreen
         onGuestLogin={() => {
           const localGuestId = getOrCreateGuestId();
+          localStorage.setItem("tigerart.isGuest", "true");
           setGuestId(localGuestId);
           setIsGuest(true);
         }}

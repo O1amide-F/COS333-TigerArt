@@ -408,8 +408,6 @@ def load_user_vector(cur, user_id: str) -> list[float] | None:
 # Endpoints
 # ---------------------------------------------------------------------------
 
-@app.route("/api/for-you")
-
 def update_user_vector_from_artwork(cur, user_id: str, objectid: int, direction: float):
     """
     Nudge the user's feature vector toward (direction=+1) or away from
@@ -455,6 +453,40 @@ def update_user_vector_from_artwork(cur, user_id: str, objectid: int, direction:
     assert all(0.0 <= v <= 1.0 for v in new_vec), \
         'update_user_vector_from_artwork: new_vec values out of [0, 1] bounds'
     save_user_vector(cur, user_id, new_vec)
+
+
+@app.route("/api/for-you")
+def get_for_you():
+    """
+    Non-personalised feed used for guests / fallback: return a small
+    collection of artworks with basic metadata.
+    """
+    conn = get_connection()
+    cur = conn.cursor()
+
+    cur.execute("""
+        SELECT a.objectid, a.title, a.medium, a.displaydate, a.displaymaker,
+               ai.image_url
+        FROM artworks a
+        LEFT JOIN artwork_images ai ON a.objectid = ai.objectid
+        WHERE a.title IS NOT NULL
+        ORDER BY a.objectid
+        LIMIT 20;
+    """)
+    rows = cur.fetchall()
+    items = []
+    for r in rows:
+        objectid, title, medium, displaydate, displaymaker, image_url = r
+        items.append({
+            "id": objectid,
+            "title": title or "Untitled",
+            "about": f"{medium or 'Unknown medium'} - {displaydate or 'Unknown date'} - {displaymaker or 'Unknown artist'}",
+            "imageUrl": image_url,
+        })
+
+    cur.close()
+    conn.close()
+    return jsonify(items)
 
 @app.route("/api/news")
 def get_news():

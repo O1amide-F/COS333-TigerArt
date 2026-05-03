@@ -164,8 +164,8 @@ class TestGuestRestricted(TigerArtTestCase):
         """Enter guest mode, click a restricted nav, assert prompt appears."""
         self._enter_guest_mode()
         self._page.locator(f'[data-tour="{nav_tour_id}"]').click()
-        time.sleep(DELAY)
         prompt = self._page.locator('[role="status"]')
+        prompt.wait_for(state='visible', timeout=5000)
         self.assertTrue(prompt.is_visible())
 
     def test_guest_restricted_home_shows_prompt(self):

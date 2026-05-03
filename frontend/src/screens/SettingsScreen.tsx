@@ -38,7 +38,15 @@ export function SettingsScreen({
   const handleLoginScreen = () => {
     localStorage.removeItem("tigerart.screen");
     localStorage.removeItem("tigerart.activeNav");
-    window.location.href = isGuest ? "/" : "/logoutapp";
+    if (isGuest) {
+      // guests go to login choice screen; clear guest state
+      localStorage.removeItem("tigerart.isGuest");
+      localStorage.removeItem("tigerart.localGuestId");
+      window.location.href = "/login";
+    } else {
+      // logged-in users logout
+      window.location.href = "/logoutapp";
+    }
   };
 
   const handleSurveySaved = () => {
@@ -126,13 +134,13 @@ export function SettingsScreen({
             </button>
           ) : (
             <button
-                onClick={() => {
-                  localStorage.removeItem("tigerart.screen");
-                  localStorage.removeItem("tigerart.activeNav");
-                  window.location.href = "/logoutentra";
-                }}
-                style={{
-                  display: "inline-flex",
+              onClick={() => {
+                localStorage.removeItem("tigerart.screen");
+                localStorage.removeItem("tigerart.activeNav");
+                window.location.href = "/logoutentra";
+              }}
+              style={{
+                display: "inline-flex",
                 alignItems: "center",
                 gap: 8,
                 background: theme.components.button.primaryBackground,
