@@ -416,10 +416,7 @@ function MobileNav({
         )}
       </div>
 
-      {onStartSurvey && !isGuest && (
-        <SurveyButton onClick={onStartSurvey} compact />
-      )}
-      {onStartTour && <TourButton onClick={onStartTour} compact />}
+      {/* Survey and Tour buttons are hidden in mobile mode (kept in desktop sidebar) */}
     </div>
   );
 }
