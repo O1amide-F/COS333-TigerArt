@@ -176,7 +176,7 @@ export const GUEST_TOUR_STEPS: StepMeta[] = [
     id: "explore-pin-details",
     target: "[data-tour='section-heading']",
     title: "Pin & Open Exhibits",
-    body: "Use the pin next to an exhibit section to keep it at the top. Tap an exhibit name to open its full details page.",
+    body: "Tap an exhibit name to open its full details page.",
     navTo: "explore",
   },
   {
