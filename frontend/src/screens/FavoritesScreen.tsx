@@ -74,7 +74,7 @@ export function FavoritesScreen({
       .then((data: ArtworkFromAPI[]) => setArtworks(data))
       .catch((e) => {
         console.error("Error fetching favorites:", e);
-        setError("Could not load favorites. Is the server running?");
+        setError("Something went wrong. Please try again later.");
       })
       .finally(() => setIsLoading(false));
   }, [userId, favorites]);

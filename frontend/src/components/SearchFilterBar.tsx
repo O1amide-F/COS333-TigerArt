@@ -386,7 +386,11 @@ export function SearchFilterBar({
             return (
               <button
                 key={tag}
-                onClick={() => toggleFilter(tag)}
+                onClick={() => {
+                  const updated = activeFilters.filter((t) => t !== tag);
+                  setPendingFilters(updated);
+                  onFiltersChange(updated);
+                }}
                 style={{
                   background: theme.components.button.primaryBackground,
                   color: theme.components.button.primaryText,
