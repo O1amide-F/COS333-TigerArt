@@ -147,6 +147,36 @@ function TigerArtAuthenticated({
     }
   };
 
+  // Keep app state in sync when the user uses the browser back/forward buttons
+  useEffect(() => {
+    const onPop = () => {
+      const seg = window.location.pathname.replace(/^\/+/, "");
+      const mapping: Record<string, Screen> = {
+        "": "home",
+        home: "home",
+        explore: "explore",
+        favorites: "favorites",
+        news: "news",
+        settings: "settings",
+        login: "login",
+        survey: "survey",
+        "recently-viewed": "recently_viewed",
+        recently_viewed: "recently_viewed",
+      };
+      const newScreen = mapping[seg] ?? (isGuest ? "explore" : "home");
+      // derive active nav from screen
+      const found = (Object.keys(NAV_TO_SCREEN) as NavId[]).find(
+        (nid) => NAV_TO_SCREEN[nid] === newScreen,
+      );
+      const newActiveNav = found ?? (isGuest ? "explore" : "home");
+      setScreen(newScreen);
+      setActiveNav(newActiveNav);
+    };
+
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, [isGuest]);
+
   // ── Tour ──────────────────────────────────────────────────────────────────
   const {
     status: tourStatus,
