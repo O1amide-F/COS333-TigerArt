@@ -98,21 +98,18 @@ export function SearchFilterBar({
     onClear();
   };
 
-  const [pendingFilters, setPendingFilters] = useState<string[]>(activeFilters);
-
   const toggleFilter = (tag: string) => {
-    setPendingFilters((prev) =>
-      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
+    onFiltersChange(
+      activeFilters.includes(tag)
+        ? activeFilters.filter((t) => t !== tag)
+        : [...activeFilters, tag]
     );
   };
 
-  const clearFilters = () => {
-    setPendingFilters([]);
-    onFiltersChange([]);
-  };
+  const clearFilters = () => onFiltersChange([]);
 
   const hasValue = value.trim().length > 0;
-  const filterCount = showFilter ? pendingFilters.length : activeFilters.length;
+  const filterCount = activeFilters.length;
   const showSortBtn = sortBy !== undefined && onSortChange !== undefined;
 
   return (
@@ -222,9 +219,12 @@ export function SearchFilterBar({
                 background: theme.components.card.background,
                 border: `1px solid ${theme.components.card.border}`,
                 borderRadius: 10, boxShadow: "0 4px 20px rgba(0,0,0,0.12)",
-                zIndex: 100, width: 240, maxHeight: 360, overflowY: "auto",
-                padding: "12px 0",
+                zIndex: 100, width: 240, maxHeight: 360,
+                display: "flex", flexDirection: "column",  // add these
+                overflow: "hidden",  // change from overflowY: "auto"
+                padding: 0,  // remove padding, handle per section
               }}>
+              <div style={{ overflowY: "auto", flex: 1, padding: "12px 0" }}>
               {/* Header */}
               <div style={{
                 display: "flex", alignItems: "center",
@@ -262,7 +262,7 @@ export function SearchFilterBar({
                   </div>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
                     {group.tags.map(({ label, tag }) => {
-                      const isActive = pendingFilters.includes(tag);
+                      const isActive = activeFilters.includes(tag);
                       return (
                         <button
                           key={tag}
@@ -289,15 +289,15 @@ export function SearchFilterBar({
                   </div>
                 </div>
               ))}
-
+              </div>
               {/* Apply button */}
               <div style={{ padding: "8px 14px 0",
-                borderTop: `1px solid ${theme.components.divider.color}` }}>
+                borderTop: `1px solid ${theme.components.divider.color}`,
+                background: theme.components.card.background,
+                flexShrink: 0,
+                }}>
                 <button
-                  onClick={() => {
-                    onFiltersChange(pendingFilters);
-                    setShowFilter(false);
-                  }}
+                  onClick={() => setShowFilter(false)}
                   style={{
                     width: "100%",
                     background: theme.components.button.primaryBackground,
@@ -306,7 +306,7 @@ export function SearchFilterBar({
                     fontFamily: "'DM Sans', sans-serif", fontSize: 13,
                     fontWeight: 600, cursor: "pointer",
                   }}>
-                  Apply{pendingFilters.length > 0 ? ` (${pendingFilters.length})` : ""}
+                  Apply{filterCount > 0 ? ` (${filterCount})` : ""}
                 </button>
               </div>
             </div>
@@ -386,11 +386,7 @@ export function SearchFilterBar({
             return (
               <button
                 key={tag}
-                onClick={() => {
-                  const updated = activeFilters.filter((t) => t !== tag);
-                  setPendingFilters(updated);
-                  onFiltersChange(updated);
-                }}
+                onClick={() => toggleFilter(tag)}
                 style={{
                   background: theme.components.button.primaryBackground,
                   color: theme.components.button.primaryText,
