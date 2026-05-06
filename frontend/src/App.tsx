@@ -15,7 +15,6 @@ import { NewsScreen } from "./screens/NewsScreen";
 import { SettingsScreen } from "./screens/SettingsScreen";
 import { SurveyScreen } from "./screens/SurveyScreen";
 import { LoginScreen } from "./screens/LoginScreen";
-import { goToBackendAuthPath } from "./utils/authRedirect";
 import { theme } from "./theme";
 import type { ExhibitSection, NavId, Screen } from "./types";
 
@@ -50,39 +49,17 @@ function TigerArtAuthenticated({
   initialUsername?: string;
   initialDisplayName?: string;
 }) {
-  function screenFromPathOrStorage(): Screen {
-    const seg = window.location.pathname.replace(/^\/+/, "");
-    const mapping: Record<string, Screen> = {
-      "": "home",
-      home: "home",
-      explore: "explore",
-      favorites: "favorites",
-      news: "news",
-      settings: "settings",
-      login: "login",
-      survey: "survey",
-      "recently-viewed": "recently_viewed",
-      recently_viewed: "recently_viewed",
-    };
-    if (mapping[seg]) return mapping[seg];
+  const [screen, setScreen] = useState<Screen>(() => {
+    if (isGuest) return "explore";
     const saved = localStorage.getItem("tigerart.screen") as Screen | null;
-    if (saved) return saved;
-    return isGuest ? "explore" : "survey";
-  }
-
-  const [screen, setScreen] = useState<Screen>(() => screenFromPathOrStorage());
+    return saved && saved !== "survey" ? saved : "survey";
+  });
   const [favorites, setFavorites] = useState<number[]>([]);
   const [recentlyViewed, setRecentlyViewed] = useState<number[]>([]);
   const [activeSection, setActiveSection] = useState<ExhibitSection | null>(
     null,
   );
   const [activeNav, setActiveNav] = useState<NavId>(() => {
-    // derive active nav from current screen or localStorage
-    const screenVal = screenFromPathOrStorage();
-    const found = (Object.keys(NAV_TO_SCREEN) as NavId[]).find(
-      (nid) => NAV_TO_SCREEN[nid] === screenVal,
-    );
-    if (found) return found;
     if (isGuest) return "explore";
     return (
       (localStorage.getItem("tigerart.activeNav") as NavId | null) ?? "home"
@@ -97,21 +74,11 @@ function TigerArtAuthenticated({
   const [autoOpenSurvey, setAutoOpenSurvey] = useState(false);
 
   useEffect(() => {
-    // persist screen/nav for all users (including guests) except transient views
-    if (screen !== "survey" && screen !== "exhibitDetail") {
+    if (!isGuest && screen !== "survey" && screen !== "exhibitDetail") {
       localStorage.setItem("tigerart.screen", screen);
       localStorage.setItem("tigerart.activeNav", activeNav);
     }
-    // keep the URL in sync with the active nav
-    try {
-      const navPath = activeNav.replace(/_/g, "-");
-      const url = navPath === "home" ? "/home" : `/${navPath}`;
-      if (window.location.pathname !== url)
-        window.history.replaceState({}, "", url);
-    } catch (e) {
-      // ignore
-    }
-  }, [screen, activeNav]);
+  }, [screen, activeNav, isGuest]);
 
   const username = isGuest ? "Guest" : initialUsername;
   const displayName = isGuest ? "Guest" : initialDisplayName || initialUsername;
@@ -138,45 +105,8 @@ function TigerArtAuthenticated({
       return;
     }
     setActiveNav(id);
-    const screenForNav = NAV_TO_SCREEN[id];
-    setScreen(screenForNav);
-    try {
-      const path = `/${id.replace(/_/g, "-")}`;
-      window.history.pushState({}, "", path);
-    } catch (e) {
-      // ignore
-    }
+    setScreen(NAV_TO_SCREEN[id]);
   };
-
-  // Keep app state in sync when the user uses the browser back/forward buttons
-  useEffect(() => {
-    const onPop = () => {
-      const seg = window.location.pathname.replace(/^\/+/, "");
-      const mapping: Record<string, Screen> = {
-        "": "home",
-        home: "home",
-        explore: "explore",
-        favorites: "favorites",
-        news: "news",
-        settings: "settings",
-        login: "login",
-        survey: "survey",
-        "recently-viewed": "recently_viewed",
-        recently_viewed: "recently_viewed",
-      };
-      const newScreen = mapping[seg] ?? (isGuest ? "explore" : "home");
-      // derive active nav from screen
-      const found = (Object.keys(NAV_TO_SCREEN) as NavId[]).find(
-        (nid) => NAV_TO_SCREEN[nid] === newScreen,
-      );
-      const newActiveNav = found ?? (isGuest ? "explore" : "home");
-      setScreen(newScreen);
-      setActiveNav(newActiveNav);
-    };
-
-    window.addEventListener("popstate", onPop);
-    return () => window.removeEventListener("popstate", onPop);
-  }, [isGuest]);
 
   // ── Tour ──────────────────────────────────────────────────────────────────
   const {
@@ -433,7 +363,7 @@ function TigerArtAuthenticated({
                         localStorage.removeItem("tigerart.activeNav");
                         localStorage.removeItem("tigerart.isGuest");
                         localStorage.removeItem(GUEST_ID_STORAGE_KEY);
-                        goToBackendAuthPath("/logoutapp");
+                        window.location.href = "/logoutapp";
                       }
                 }
                 isGuest={isGuest}
@@ -520,23 +450,6 @@ export default function TigerArt() {
   }, []);
 
   if (!ready) return null;
-  const currentPath = window.location.pathname.replace(/^\/+/, "");
-  if (currentPath === "login") {
-    return (
-      <LoginScreen
-        onGuestLogin={() => {
-          const localGuestId = getOrCreateGuestId();
-          localStorage.setItem("tigerart.isGuest", "true");
-          localStorage.setItem(GUEST_ID_STORAGE_KEY, localGuestId);
-          setGuestId(localGuestId);
-          setIsGuest(true);
-          // navigate into app as guest
-          window.history.replaceState({}, "", "/explore");
-        }}
-      />
-    );
-  }
-
   if (isGuest)
     return (
       <TigerArtAuthenticated
@@ -550,8 +463,8 @@ export default function TigerArt() {
       <LoginScreen
         onGuestLogin={() => {
           const localGuestId = getOrCreateGuestId();
-          localStorage.setItem("tigerart.isGuest", "true");
           setGuestId(localGuestId);
+          localStorage.setItem("tigerart.isGuest", "true");
           setIsGuest(true);
         }}
       />

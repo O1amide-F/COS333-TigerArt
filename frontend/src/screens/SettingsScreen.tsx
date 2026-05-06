@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { theme } from "../theme";
 import { SurveyFlow } from "../components/SurveyFlow";
-import { goToBackendAuthPath } from "../utils/authRedirect";
 
 type SettingsScreenProps = {
   username: string;
@@ -39,15 +38,7 @@ export function SettingsScreen({
   const handleLoginScreen = () => {
     localStorage.removeItem("tigerart.screen");
     localStorage.removeItem("tigerart.activeNav");
-    if (isGuest) {
-      // guests go to login choice screen; clear guest state
-      localStorage.removeItem("tigerart.isGuest");
-      localStorage.removeItem("tigerart.localGuestId");
-      goToBackendAuthPath("/login");
-    } else {
-      // logged-in users logout
-      goToBackendAuthPath("/logoutapp");
-    }
+    window.location.href = isGuest ? "/" : "/logoutapp";
   };
 
   const handleSurveySaved = () => {
@@ -138,7 +129,7 @@ export function SettingsScreen({
               onClick={() => {
                 localStorage.removeItem("tigerart.screen");
                 localStorage.removeItem("tigerart.activeNav");
-                goToBackendAuthPath("/logoutentra");
+                window.location.href = "/logoutentra";
               }}
               style={{
                 display: "inline-flex",
