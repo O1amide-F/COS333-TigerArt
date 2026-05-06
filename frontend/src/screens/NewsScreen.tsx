@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Placeholder } from "../components/Placeholder";
+import { ExternalLink } from "lucide-react";
 import { getFallbackImageForAspect } from "../assets/fallbackImage";
 import { getNewsItems } from "../new_data";
 import type { NewsItem } from "../types";
@@ -130,7 +131,7 @@ export function NewsScreen() {
                 textDecoration: "none",
               }}
             >
-              Read More →
+              Read More <ExternalLink size={16} style={{ marginLeft: 4, marginBottom: 4, verticalAlign: "middle" }} />
             </a>
           )}
         </div>
