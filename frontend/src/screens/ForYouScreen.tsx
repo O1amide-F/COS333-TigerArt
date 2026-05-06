@@ -8,7 +8,7 @@
 //   • FAVORITE_TOGGLED — only on a new favorite (not unfavorite) during like-photos
 //   • MODAL_OPENED — each time a modal opens during open-modals step
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { Heart } from "lucide-react";
 import { SearchFilterBar } from "../components/SearchFilterBar";
 import { Placeholder } from "../components/Placeholder";
@@ -21,6 +21,7 @@ import {
 } from "../hooks/useTour";
 import type { ForYouItem, ExhibitItem } from "../types";
 import { theme } from "../theme";
+import { itemMatchesFilters } from "../utils/filterUtils";
 
 const API_BASE = "/api";
 
@@ -191,6 +192,7 @@ export function ForYouScreen({
   const handleFiltersChange = (filters: string[]) => {
     setActiveFilters(filters);
     setVisibleCount(10);
+    if (searchResults !== null) return; // let useMemo handle it
     if (!filters.length) {
       setFilterResults(null);
       return;
@@ -200,8 +202,14 @@ export function ForYouScreen({
       .then((d: ForYouItem[]) => setFilterResults(d))
       .catch(() => setFilterResults(null));
   };
-
-  const displayItems = searchResults ?? filterResults ?? mergedItems;
+  const displayItems = useMemo(() => {
+    const base = searchResults ?? filterResults ?? mergedItems;
+    if (activeFilters.length === 0 || !searchResults) return base;
+    return base.filter((item) =>
+      itemMatchesFilters(item, activeFilters)
+    );
+  }, [searchResults, filterResults, mergedItems, activeFilters]);
+  
   const isSearching = searchResults !== null || filterResults !== null;
   const visibleItems = isSearching
     ? displayItems.slice(0, visibleCount)

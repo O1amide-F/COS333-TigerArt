@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo} from "react";
 import { Heart, Pin, ArrowRight } from "lucide-react";
 import { Placeholder } from "../components/Placeholder";
 import { getFallbackImageForAspect } from "../assets/fallbackImage";
@@ -8,7 +8,6 @@ import { ArtworkModal } from "../components/ArtworkModal";
 import { getExhibitSections } from "../new_data";
 import { theme } from "../theme";
 import type { ExhibitSection, ExhibitItem, ForYouItem } from "../types";
-import { useMemo } from "react";
 
 const PINNED_SECTIONS_KEY = "tigerart_pinned_sections";
 const API_BASE = "/api";
@@ -595,6 +594,7 @@ export function ExploreScreen({
   const handleFiltersChange = (filters: string[]) => {
     setActiveFilters(filters);
     setVisibleCount(10);
+    if (searchResults !== null) return; // let useMemo handle filtering
     if (filters.length === 0) {
       setFilterResults(null);
       return;
@@ -605,7 +605,13 @@ export function ExploreScreen({
       .then((data: ForYouItem[]) => setFilterResults(data))
       .catch(() => setFilterResults(null));
   };
-  const displaySearchResults = searchResults ?? filterResults;
+  const displaySearchResults = useMemo(() => {
+    const base = searchResults ?? filterResults;
+    if (!base) return null;
+    if (activeFilters.length === 0) return base;
+    return base.filter((item) => itemMatchesFilters(item, activeFilters));
+  }, [searchResults, filterResults, activeFilters]);
+
   const isSearching = searchResults !== null || filterResults !== null;
   const visibleSearchResults = displaySearchResults
     ? displaySearchResults.slice(0, visibleCount)
