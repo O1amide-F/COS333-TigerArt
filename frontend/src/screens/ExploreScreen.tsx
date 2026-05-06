@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo} from "react";
+import { useEffect, useState, useMemo } from "react";
 import { Heart, Pin, ArrowRight } from "lucide-react";
 import { Placeholder } from "../components/Placeholder";
 import { getFallbackImageForAspect } from "../assets/fallbackImage";
@@ -9,8 +9,17 @@ import { getExhibitSections } from "../new_data";
 import { theme } from "../theme";
 import type { ExhibitSection, ExhibitItem, ForYouItem } from "../types";
 
-const PINNED_SECTIONS_KEY = "tigerart_pinned_sections";
 const API_BASE = "/api";
+
+function getPinnedSectionsStorageKey(
+  userId: string | null,
+  isGuest: boolean,
+): string {
+  if (isGuest || !userId) {
+    return ""; // Empty key means don't use localStorage for guests
+  }
+  return `tigerart_pinned_sections_${userId}`;
+}
 
 type ExploreScreenProps = {
   userId: string | null;
@@ -496,20 +505,38 @@ export function ExploreScreen({
   const [searchLoading, setSearchLoading] = useState(false);
   const [modalItem, setModalItem] = useState<ExhibitItem | null>(null);
   const [visibleCount, setVisibleCount] = useState(10);
+  const storageKey = getPinnedSectionsStorageKey(userId, isGuest);
   const [pinnedSections, setPinnedSections] = useState<string[]>(() => {
+    if (!storageKey) return []; // Guests always start with empty
     try {
-      const saved = localStorage.getItem(PINNED_SECTIONS_KEY);
+      const saved = localStorage.getItem(storageKey);
       return saved ? (JSON.parse(saved) as string[]) : [];
     } catch {
       return [];
     }
   });
 
+  // Load pinned sections when userId or isGuest changes (e.g., login/logout)
   useEffect(() => {
+    if (!storageKey) {
+      setPinnedSections([]);
+    } else {
+      try {
+        const saved = localStorage.getItem(storageKey);
+        setPinnedSections(saved ? (JSON.parse(saved) as string[]) : []);
+      } catch {
+        setPinnedSections([]);
+      }
+    }
+  }, [storageKey]);
+
+  // Save pinned sections whenever they change
+  useEffect(() => {
+    if (!storageKey) return; // Don't save for guests
     try {
-      localStorage.setItem(PINNED_SECTIONS_KEY, JSON.stringify(pinnedSections));
+      localStorage.setItem(storageKey, JSON.stringify(pinnedSections));
     } catch {}
-  }, [pinnedSections]);
+  }, [pinnedSections, storageKey]);
 
   useEffect(() => {
     getExhibitSections()
