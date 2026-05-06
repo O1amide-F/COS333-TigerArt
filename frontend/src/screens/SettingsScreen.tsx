@@ -38,6 +38,8 @@ export function SettingsScreen({
   const handleLoginScreen = () => {
     localStorage.removeItem("tigerart.screen");
     localStorage.removeItem("tigerart.activeNav");
+    localStorage.removeItem("tigerart.isGuest");
+    localStorage.removeItem("tigerart.localGuestId");
     window.location.href = isGuest ? "/" : "/logoutapp";
   };
 
