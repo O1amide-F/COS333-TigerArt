@@ -186,7 +186,7 @@ export function SurveyFlow({
           marginBottom: 20,
         }}
       >
-        <p style={{ margin: "0 0 4px", fontWeight: 600 }}>{question.prompt}</p>
+        <h2 style={{ margin: "0 0 4px", fontWeight: 600 }}>{question.prompt}</h2>
         <p style={{ margin: 0, color: theme.components.badge.mutedText }}>
           {remaining > 0
             ? `Select ${remaining} more image${remaining !== 1 ? "s" : ""}`
@@ -349,7 +349,14 @@ export function SurveyFlow({
             gap: 6,
           }}
         >
-          {submitting ? "Saving…" : isLastStep ? completeLabel : "Next"}
+          {submitting ? "Saving…" : isLastStep ? completeLabel : (
+            <>
+              Next
+              <span style={{ position: "absolute", width: 1, height: 1, overflow: "hidden", clip: "rect(0,0,0,0)", whiteSpace: "nowrap" }}>
+                , question {currentStep + 2} of {totalSteps}
+              </span>
+            </>
+          )}
           {!isLastStep && canAdvance && (
             <ChevronRight size={16} strokeWidth={2.5} />
           )}

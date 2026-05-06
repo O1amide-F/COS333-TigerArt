@@ -27,10 +27,10 @@ export function SurveyScreen({
             fontFamily: "'DM Sans', sans-serif" }}>
             {displayName || username || "Guest"}
           </div>
-          <h2 style={{ margin: 0, fontSize: 22, fontFamily: "'Playfair Display', serif",
+          <h1 style={{ margin: 0, fontSize: 24, fontFamily: "'Playfair Display', serif",
             fontWeight: 700, color: theme.components.badge.text }}>
             Survey Preferences
-          </h2>
+          </h1>
         </div>
       </div>
 
