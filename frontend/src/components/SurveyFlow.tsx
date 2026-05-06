@@ -310,7 +310,7 @@ export function SurveyFlow({
           <button
             onClick={() => setCurrentStep((s) => s - 1)}
             style={{
-              background: "none",
+              background: theme.components.button.disabledBackground,
               border: `1px solid ${theme.components.divider.color}`,
               borderRadius: 6,
               padding: "10px 20px",
@@ -320,7 +320,11 @@ export function SurveyFlow({
               cursor: "pointer",
             }}
           >
-            Back
+            Back 
+             <span style={{ position: "absolute", width: 1, height: 1, overflow: "hidden", clip: "rect(0,0,0,0)", whiteSpace: "nowrap" }}>
+              , Question {currentStep} of {totalSteps}
+            </span>
+
           </button>
         ) : (
           <div />
@@ -349,11 +353,18 @@ export function SurveyFlow({
             gap: 6,
           }}
         >
-          {submitting ? "Saving…" : isLastStep ? completeLabel : (
+          {submitting ? "Saving…" : isLastStep ? (
+            <>
+              {completeLabel}              
+              <span style={{ position: "absolute", width: 1, height: 1, overflow: "hidden", clip: "rect(0,0,0,0)", whiteSpace: "nowrap" }}>
+                , Continue to your personalized homepage
+              </span>
+            </>
+          ) : (
             <>
               Next
               <span style={{ position: "absolute", width: 1, height: 1, overflow: "hidden", clip: "rect(0,0,0,0)", whiteSpace: "nowrap" }}>
-                , question {currentStep + 2} of {totalSteps}
+                , Question {currentStep + 2} of {totalSteps}
               </span>
             </>
           )}
