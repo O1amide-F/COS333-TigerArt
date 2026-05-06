@@ -56,7 +56,7 @@ export function NewsScreen() {
                 style={{
                   width: "100%",
                   aspectRatio: "16/7",
-                  objectFit: "contain",
+                  objectFit: "cover",
                   backgroundColor: theme.components.image.newsBackground,
                   display: "block",
                 }}
