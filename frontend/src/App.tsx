@@ -15,6 +15,7 @@ import { NewsScreen } from "./screens/NewsScreen";
 import { SettingsScreen } from "./screens/SettingsScreen";
 import { SurveyScreen } from "./screens/SurveyScreen";
 import { LoginScreen } from "./screens/LoginScreen";
+import { goToBackendAuthPath } from "./utils/authRedirect";
 import { theme } from "./theme";
 import type { ExhibitSection, NavId, Screen } from "./types";
 
@@ -432,7 +433,7 @@ function TigerArtAuthenticated({
                         localStorage.removeItem("tigerart.activeNav");
                         localStorage.removeItem("tigerart.isGuest");
                         localStorage.removeItem(GUEST_ID_STORAGE_KEY);
-                        window.location.href = "/logoutapp";
+                        goToBackendAuthPath("/logoutapp");
                       }
                 }
                 isGuest={isGuest}

@@ -1,10 +1,10 @@
 import { theme } from "../theme";
+import { goToBackendAuthPath } from "../utils/authRedirect";
 const puamLogo = new URL("../assets/PUAMloginlogo.png", import.meta.url).href;
 
 export function LoginScreen({ onGuestLogin }: { onGuestLogin?: () => void }) {
   const handleLogin = () => {
-    // go to the login selection/flow page
-    window.location.href = "/login";
+    goToBackendAuthPath("/login");
   };
 
   return (

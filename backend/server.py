@@ -1,4 +1,4 @@
-from flask import Flask, abort, jsonify, request, send_from_directory, g
+from flask import Flask, abort, jsonify, request, send_from_directory, g, session
 from datetime import datetime
 import psycopg2
 import json
@@ -6,8 +6,8 @@ import re
 import os
 import requests
 import dotenv
-import auth
 import time
+import auth
 
 DB_NAME = os.getenv("DB_NAME", "tigerart_db")
 DB_USER = os.getenv("DB_USER", "postgres")
@@ -30,17 +30,6 @@ auth.init(app)
 
 #-----------------------------------------------------------------------
 
-@app.before_request
-def log_request():
-    g.start_time = time.time()
-    print(f"REQUEST: {request.method} {request.path}", flush=True)
-
-@app.after_request
-def log_response(response):
-    duration = round(time.time() - g.start_time, 4)
-    print(f"RESPONSE: {response.status_code} ({duration}s)", flush=True)
-    return response
-
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def serve_index(path):
@@ -60,10 +49,9 @@ def serve_index(path):
 
 @app.route('/api/getusername', methods=['GET'])
 def get_username():
-
     if not auth.is_authenticated():
         abort(403)
-    
+
     return auth.get_username()
 
 
@@ -1117,7 +1105,6 @@ def remove_favorite(user_id, objectid):
     conn = get_connection()
     cur = conn.cursor()
     try:
-
         # Checking how long each DB query takes (initiating)
         db_start = time.time()
         print("DB QUERY START: remove_favorite", flush=True)
