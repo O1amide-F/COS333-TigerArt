@@ -61,13 +61,6 @@ def main():
     """)
 
     cur.execute("""
-        CREATE TABLE IF NOT EXISTS users (
-            user_id SERIAL PRIMARY KEY,
-            name TEXT
-        );
-    """)
-
-    cur.execute("""
         CREATE TABLE IF NOT EXISTS user_preferences (
             id SERIAL PRIMARY KEY,
             user_id TEXT,
@@ -82,18 +75,10 @@ def main():
             id SERIAL PRIMARY KEY,
             user_id TEXT,
             objectid BIGINT
+            UNIQUE (user_id, objectid)
         );
     """)
 
-    cur.execute("""
-        CREATE TABLE IF NOT EXISTS recommendation_cache (
-            id SERIAL PRIMARY KEY,
-            user_id INTEGER,
-            objectid BIGINT,
-            reason TEXT,
-            score FLOAT
-        );
-    """)
 
     cur.execute("""
         CREATE TABLE IF NOT EXISTS news_items (
