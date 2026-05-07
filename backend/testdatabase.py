@@ -5,7 +5,7 @@
 # Tests for DB helper functions in server.py, using the real PostgreSQL DB.
 # Follows lecture examples
 #
-# Run with: python -m coverage run -p testdatabase.py
+# Run with: python3 -m coverage run --source=server,auth -p testdatabase.py
 # -----------------------------------------------------------------------
 
 import unittest
@@ -296,6 +296,194 @@ class TestFavoritesDB(unittest.TestCase):
         self._expected_count = 0
 
 # -----------------------------------------------------------------------
+
+class TestStress(unittest.TestCase):
+    """
+    Stress tests for TigerArt DB operations.
+    Tests with large quantities of data and a variety of unexpected inputs.
+    Follows the same pattern as the other test classes.
+    """
+ 
+    TEST_OBJECTID = 8176
+ 
+    def setUp(self):
+        self._expected_count = None
+        self._user_id = None
+ 
+        conn = get_connection()
+        cur = conn.cursor()
+        cur.execute(
+            "DELETE FROM saved_artworks WHERE user_id = %s",
+            (TEST_USER,)
+        )
+        conn.commit()
+        cur.close()
+        conn.close()
+ 
+    def tearDown(self):
+        if self._user_id is None:
+            return
+ 
+        conn = get_connection()
+        cur = conn.cursor()
+        cur.execute(
+            "SELECT COUNT(*) FROM saved_artworks WHERE user_id = %s",
+            (self._user_id,)
+        )
+        count = cur.fetchone()[0]
+        cur.close()
+        conn.close()
+ 
+        self.assertEqual(count, self._expected_count)
+ 
+        conn = get_connection()
+        cur = conn.cursor()
+        cur.execute(
+            "DELETE FROM saved_artworks WHERE user_id = %s",
+            (TEST_USER,)
+        )
+        conn.commit()
+        cur.close()
+        conn.close()
+ 
+    def test_rapid_toggle_ends_removed(self):
+        """Toggling the same artwork 50 times should end with it removed."""
+        conn = get_connection()
+        cur = conn.cursor()
+        for i in range(50):
+            if i % 2 == 0:
+                cur.execute(
+                    "INSERT INTO saved_artworks (user_id, objectid) VALUES (%s, %s) "
+                    "ON CONFLICT DO NOTHING",
+                    (TEST_USER, self.TEST_OBJECTID)
+                )
+            else:
+                cur.execute(
+                    "DELETE FROM saved_artworks WHERE user_id = %s AND objectid = %s",
+                    (TEST_USER, self.TEST_OBJECTID)
+                )
+        conn.commit()
+        cur.close()
+        conn.close()
+ 
+        self._user_id = TEST_USER
+        self._expected_count = 0
+ 
+    def test_rapid_toggle_ends_saved(self):
+        """Toggling the same artwork 51 times should end with it saved."""
+        conn = get_connection()
+        cur = conn.cursor()
+        for i in range(51):
+            if i % 2 == 0:
+                cur.execute(
+                    "INSERT INTO saved_artworks (user_id, objectid) VALUES (%s, %s) "
+                    "ON CONFLICT DO NOTHING",
+                    (TEST_USER, self.TEST_OBJECTID)
+                )
+            else:
+                cur.execute(
+                    "DELETE FROM saved_artworks WHERE user_id = %s AND objectid = %s",
+                    (TEST_USER, self.TEST_OBJECTID)
+                )
+        conn.commit()
+        cur.close()
+        conn.close()
+ 
+        self._user_id = TEST_USER
+        self._expected_count = 1
+ 
+    def test_many_favorites_all_stored(self):
+        """Adding 100 distinct favorites should result in exactly 100 rows."""
+        conn = get_connection()
+        cur = conn.cursor()
+        cur.execute("SELECT objectid FROM artworks LIMIT 100")
+        objectids = [row[0] for row in cur.fetchall()]
+ 
+        for oid in objectids:
+            cur.execute(
+                "INSERT INTO saved_artworks (user_id, objectid) VALUES (%s, %s) "
+                "ON CONFLICT DO NOTHING",
+                (TEST_USER, oid)
+            )
+        conn.commit()
+        cur.close()
+        conn.close()
+ 
+        self._user_id = TEST_USER
+        self._expected_count = len(objectids)
+ 
+    def test_insert_same_artwork_100_times_still_one_row(self):
+        """Inserting the same artwork 100 times should still result in 1 row."""
+        conn = get_connection()
+        cur = conn.cursor()
+        for _ in range(100):
+            cur.execute(
+                "INSERT INTO saved_artworks (user_id, objectid) VALUES (%s, %s) "
+                "ON CONFLICT DO NOTHING",
+                (TEST_USER, self.TEST_OBJECTID)
+            )
+        conn.commit()
+        cur.close()
+        conn.close()
+ 
+        self._user_id = TEST_USER
+        self._expected_count = 1
+ 
+    def test_sql_injection_in_user_id_stored_safely(self):
+        """A SQL injection string as user_id should be stored safely as plain text."""
+        malicious_user = "'; DROP TABLE saved_artworks; --"
+        conn = get_connection()
+        cur = conn.cursor()
+        cur.execute(
+            "INSERT INTO saved_artworks (user_id, objectid) VALUES (%s, %s) "
+            "ON CONFLICT DO NOTHING",
+            (malicious_user, self.TEST_OBJECTID)
+        )
+        conn.commit()
+ 
+        cur.execute(
+            "SELECT COUNT(*) FROM saved_artworks WHERE user_id = %s",
+            (malicious_user,)
+        )
+        count = cur.fetchone()[0]
+ 
+        cur.execute(
+            "DELETE FROM saved_artworks WHERE user_id = %s",
+            (malicious_user,)
+        )
+        conn.commit()
+        cur.close()
+        conn.close()
+ 
+        self.assertEqual(count, 1)
+ 
+    def test_many_vector_saves_last_one_wins(self):
+        """Saving 50 different vectors for the same user should keep only the last."""
+        conn = get_connection()
+        cur = conn.cursor()
+ 
+        for i in range(50):
+            vec = [float(i) / 50.0] * N_DIMS
+            save_user_vector(cur, TEST_USER, vec)
+            conn.commit()
+ 
+        loaded = load_user_vector(cur, TEST_USER)
+        cur.close()
+        conn.close()
+ 
+        expected = 49.0 / 50.0
+        for val in loaded:
+            self.assertAlmostEqual(val, expected, places=5)
+ 
+        conn = get_connection()
+        cur = conn.cursor()
+        cur.execute(
+            "DELETE FROM user_preferences WHERE user_id = %s",
+            (TEST_USER,)
+        )
+        conn.commit()
+        cur.close()
+        conn.close()
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
