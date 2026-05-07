@@ -13,7 +13,6 @@ DB_HOST = os.environ.get("DB_HOST")
 DB_PORT = os.environ.get("DB_PORT")
 
 OBJECTS_URL = "https://static.artmuseum.princeton.edu/collection-data-sets/objects.zip"
-MAKERS_URL = "https://static.artmuseum.princeton.edu/collection-data-sets/makers.zip"
 NEWS_URL = "https://artmuseum.princeton.edu/api/tiger-art-news"
 
 def main():
@@ -27,7 +26,7 @@ def main():
     cur = conn.cursor()
 
     # Clear old data first
-    cur.execute("TRUNCATE TABLE artwork_tags, artwork_images, makers, artworks RESTART IDENTITY CASCADE;")
+    cur.execute("TRUNCATE TABLE artwork_tags, artwork_images, artworks RESTART IDENTITY CASCADE;")
     conn.commit()
 
     # Remove old extracted folders/files if they exist
@@ -95,44 +94,6 @@ def main():
                     INSERT INTO artwork_tags (objectid, tag_type, tag_value)
                     VALUES (%s, %s, %s);
                 """, (objectid, "medium", medium))
-
-    # -------- MAKERS --------
-    response = requests.get(MAKERS_URL)
-
-    if response.status_code != 200:
-        print("Error downloading makers:", response.status_code)
-        return
-
-    with open("makers.zip", "wb") as f:
-        f.write(response.content)
-
-    with zipfile.ZipFile("makers.zip", "r") as zip_ref:
-        zip_ref.extractall("makers_data")
-
-    for filename in sorted(os.listdir("makers_data")):
-        if filename.endswith(".json"):
-            filepath = os.path.join("makers_data", filename)
-
-            with open(filepath, "r", encoding="utf-8") as f:
-                maker = json.load(f)
-
-            makerid = maker.get("makerid")
-
-            if makerid is None:
-                print("Skipping maker with no makerid:", maker.get("displayname"))
-                continue
-
-            displayname = maker.get("displayname")
-            nationality = maker.get("nationality")
-            begin_date = maker.get("begindate")
-            end_date = maker.get("enddate")
-            bio = maker.get("displaybio")
-
-            cur.execute("""
-                INSERT INTO makers
-                (makerid, displayname, nationality, begin_date, end_date, bio)
-                VALUES (%s, %s, %s, %s, %s, %s);
-            """, (makerid, displayname, nationality, begin_date, end_date, bio))
 
     # -------- NEWS ----------
     response = requests.get(NEWS_URL)

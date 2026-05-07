@@ -32,17 +32,6 @@ def main():
     """)
 
     cur.execute("""
-        CREATE TABLE IF NOT EXISTS makers (
-            makerid BIGINT PRIMARY KEY,
-            displayname TEXT,
-            nationality TEXT,
-            begin_date INT,
-            end_date INT,
-            bio TEXT
-        );
-    """)
-
-    cur.execute("""
         CREATE TABLE IF NOT EXISTS artwork_images (
             id SERIAL PRIMARY KEY,
             objectid BIGINT,
