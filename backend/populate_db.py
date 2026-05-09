@@ -67,15 +67,25 @@ def main():
             medium = obj.get("medium")
             displaydate = obj.get("displaydate")
             on_view = obj.get("on_view")
+            texts = obj.get("texts", [])
 
             if not on_view:
                 continue
 
+            gallery_label_text = None
+            for text_entry in texts:
+                if (
+                    text_entry.get("textpurpose") == "Gallery Label"
+                    and text_entry.get("texttype") == "Online"
+                ):
+                    gallery_label_text = text_entry.get("textentryhtml")
+                    break
+
             cur.execute("""
                 INSERT INTO artworks
-                (objectid, title, displaymaker, department, classification, medium, displaydate, on_view)
-                VALUES (%s, %s, %s, %s, %s, %s, %s, %s);
-            """, (objectid, title, displaymaker, department, classification, medium, displaydate, on_view))
+                (objectid, title, displaymaker, department, classification, medium, displaydate, on_view, gallery_label_text)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s);
+            """, (objectid, title, displaymaker, department, classification, medium, displaydate, on_view, gallery_label_text))
 
             if classification:
                 cur.execute("""
