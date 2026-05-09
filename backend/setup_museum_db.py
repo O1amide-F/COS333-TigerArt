@@ -27,7 +27,8 @@ def main():
             classification TEXT,
             medium TEXT,
             displaydate TEXT,
-            on_view BOOLEAN
+            on_view BOOLEAN,
+            gallery_label_text TEXT
         );
     """)
 
@@ -54,7 +55,7 @@ def main():
             id SERIAL PRIMARY KEY,
             user_id TEXT,
             preference_type TEXT,
-            preference_value TEXT
+            preference_value TEXT,
             UNIQUE (user_id, preference_type)
         );
     """)
@@ -63,7 +64,7 @@ def main():
         CREATE TABLE IF NOT EXISTS saved_artworks (
             id SERIAL PRIMARY KEY,
             user_id TEXT,
-            objectid BIGINT
+            objectid BIGINT,
             UNIQUE (user_id, objectid)
         );
     """)
@@ -72,8 +73,11 @@ def main():
     cur.execute("""
         CREATE TABLE IF NOT EXISTS news_items (
             id SERIAL PRIMARY KEY,
-            name TEXT,
-            sub TEXT
+            title TEXT,
+            uuid TEXT UNIQUE,
+            published_date DATE,
+            image_url TEXT,
+            article_url TEXT
         );
     """)
 
@@ -81,7 +85,7 @@ def main():
         CREATE TABLE IF NOT EXISTS recently_viewed (
             id        SERIAL PRIMARY KEY,
             user_id   TEXT NOT NULL,
-            objectid  INT NOT NULL,
+            objectid  BIGINT NOT NULL,
             viewed_at TIMESTAMP DEFAULT NOW(),
             UNIQUE (user_id, objectid)
         );
