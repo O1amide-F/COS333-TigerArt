@@ -13,17 +13,17 @@ This is a one-server app. The React front end is built into `backend/static` and
 
 - Register your app (`http://localhost:5001`) with Microsoft Entra ID.
   - Browse to `https://entra.microsoft.com` and sign in with your Princeton account.
-  - In the left panel, click on "Entra ID" to expand that item.
+  - In the left panel, use the light gray panel for navigation. (Do not use the black icon button at the very top of that sidebar/panel.) In the light gray sidebar, click “Entra ID.”
   - Under "Entra ID", click on "App registrations".
   - Click on "+ New Registration".
   - For "Name" enter `TigerArt`.
   - For "Redirect URI" choose `Web` and enter `http://localhost:5001/getAToken`.
   - Click "Register".
   - Note the Application (client) ID.
-  - Click on the link immediately under "Client credentials".
+  - Click on the link immediately next to "Client credentials".
   - Click on "+ New client secret".
   - For "Description" enter `Princeton COS 333: TigerArt`.
-  - For "Expires" choose a helpful date
+  - For "Expires" choose a helpful date (Recommended is choosing: 180 days/6 months)
   - Click "Add".
   - Note the client secret.
 
