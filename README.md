@@ -20,10 +20,10 @@ This is a one-server app. The React front end is built into `backend/static` and
   - For "Redirect URI" choose `Web` and enter `http://localhost:5001/getAToken`.
   - Click "Register".
   - Note the Application (client) ID.
-  - Click on the link immediately under "Client credentials".
+  - Click on the link immediately next to "Client credentials".
   - Click on "+ New client secret".
   - For "Description" enter `Princeton COS 333: TigerArt`.
-  - For "Expires" choose a helpful date
+  - For "Expires" choose a helpful date (Recommended is choosing: 180 days/6 months)
   - Click "Add".
   - Note the client secret.
 
