@@ -28,7 +28,7 @@ This is a one-server app. The React front end is built into `backend/static` and
   - Note the client secret.
 
 - Define the environment variables used by the backend. A `.env` file in `backend/` is the easiest way to do this.
-  - these will be provided seperately
+  - The .env file will be provided to you if you have the correct authority
 
 - Install the JavaScript modules.
   - `cd frontend`
