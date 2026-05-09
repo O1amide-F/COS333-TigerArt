@@ -13,7 +13,7 @@ This is a one-server app. The React front end is built into `backend/static` and
 
 - Register your app (`http://localhost:5001`) with Microsoft Entra ID.
   - Browse to `https://entra.microsoft.com` and sign in with your Princeton account.
-  - In the left panel, click on "Entra ID" to expand that item.
+  - In the left panel, use the light gray panel for navigation. (Do not use the black icon button at the very top of that sidebar/panel.) In the light gray sidebar, click “Entra ID.”
   - Under "Entra ID", click on "App registrations".
   - Click on "+ New Registration".
   - For "Name" enter `TigerArt`.
