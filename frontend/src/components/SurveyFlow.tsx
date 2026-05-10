@@ -189,7 +189,9 @@ export function SurveyFlow({
         <h2 style={{ margin: "0 0 4px", fontWeight: 600 }}>{question.prompt}</h2>
         <p style={{ margin: 0, color: theme.components.badge.mutedText }}>
           {remaining > 0
-            ? `Select ${remaining} more image${remaining !== 1 ? "s" : ""}`
+            ? selectedTags.length === 0
+              ? `Select ${question.selectCount} images from below`
+              : `Select ${remaining} more image${remaining !== 1 ? "s" : ""}`
             : "Great choices! Click continue to proceed."}
         </p>
       </div>

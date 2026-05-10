@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Info, ClipboardList, LogOut } from "lucide-react";
-import { NAV_ITEMS } from "../data";
+import { NAV_ITEMS } from "../new_data";
 import { theme } from "../theme";
 import type { NavId } from "../types";
 
