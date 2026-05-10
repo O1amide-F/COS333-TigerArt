@@ -582,16 +582,8 @@ export function ExploreScreen({
   });
 
   const filteredSections = useMemo(() => {
-    if (activeFilters.length === 0) return sections;
-    return sections
-      .map((section) => ({
-        ...section,
-        items: section.items.filter((item) =>
-          itemMatchesFilters(item, activeFilters),
-        ),
-      }))
-      .filter((section) => section.items.length > 0);
-  }, [sections, activeFilters]);
+    return sections; 
+  }, [sections]);
 
   const pinnedList = pinnedSections
     .map((name) => filteredSections.find((s) => s.name === name))
@@ -635,7 +627,7 @@ export function ExploreScreen({
   const displaySearchResults = useMemo(() => {
     const base = searchResults ?? filterResults;
     if (!base) return null;
-    if (activeFilters.length === 0) return base;
+    if (activeFilters.length === 0 || !searchResults) return base;
     return base.filter((item) => itemMatchesFilters(item, activeFilters));
   }, [searchResults, filterResults, activeFilters]);
 
